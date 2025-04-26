@@ -1,0 +1,40 @@
+HEA_crusade = {
+	color = rgb { 225 225 225 }
+	color_ui = rgb { 225 225 225 }
+}
+HEA_forgiveness = {
+	color = rgb { 225 225 225 }
+	color_ui = rgb { 225 225 225 }
+}
+HEA_content = {
+	color = rgb { 225 225 225 }
+	color_ui = rgb { 225 225 225 }
+}
+ROT_cascadia = {
+	color = rgb { 225 225 225 }
+	color_ui = rgb { 225 225 225 }
+}
+MUR_peace = {
+	color = rgb { 225 225 225 }
+	color_ui = rgb { 225 225 225 }
+}
+MUR_war = {
+	color = rgb { 225 225 225 }
+	color_ui = rgb { 225 225 225 }
+}
+ROT_knights = {
+	color = rgb { 225 225 225 }
+	color_ui = rgb { 225 225 225 }
+}
+ROT_jacobia = {
+	color = rgb { 225 225 225 }
+	color_ui = rgb { 225 225 225 }
+}
+ROT_rot = {
+	color = rgb { 225 225 225 }
+	color_ui = rgb { 225 225 225 }
+}
+BDT_seraphim = {
+	color = rgb { 225 225 225 }
+	color_ui = rgb { 225 225 225 }
+}

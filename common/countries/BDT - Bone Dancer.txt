@@ -1,0 +1,3 @@
+graphical_culture = heavens_gfx
+graphical_culture_2d = triabl_cultist_2d
+color = { 93 248 191 }

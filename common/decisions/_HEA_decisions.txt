@@ -1,0 +1,3715 @@
+########The 10th Crusade
+HEA_the_tenth_crusade = {
+		
+		    HEA_arming_faithful = {
+
+		icon = decision_cross
+
+		
+		visible = { tag = HEA }
+
+		fire_only_once = no
+
+		modifier = { }
+
+		days_remove = 60
+		days_re_enable = 30
+
+		cost = 50
+
+		complete_effect = {
+
+		add_manpower = 500
+
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	}
+
+
+
+# HEA Conversion Decisions - By HappyNTH #
+# hea_conversion = {
+# 	hea_slow_conversion = { # Converts provinces one by one
+# 		target_root_trigger = {
+# 			has_completed_focus = hea_nf_forgive_sins
+# 		}
+# 		visible = {
+# 			NOT = { FROM = { is_subject_of = HEA } }
+# 			FROM = { exists = yes }
+# 			NOT = { is_puppet = yes }
+# 		}
+# 		target_trigger = {
+# 			FROM = {
+# 				OR = {
+# 					tag = PHA
+# 					tag = LON
+# 					tag = TOC
+# 					# To add extra targets just use tag = TAG here and in the binding decision
+# 				}
+# 			}
+# 		}
+# 		targets = { PHA LON TOC }
+# 		available = {
+# 			NOT = {
+# 				FROM = { is_subject_of = HEA }
+# 				has_war_with = FROM
+# 			}
+# 			NOT = {
+# 				custom_trigger_tooltip = {
+# 					tooltip = hea_not_converted_state_tt
+# 					FROM = {
+# 						all_owned_state = {
+# 							OR = {
+# 								is_impassable = yes
+# 								has_state_flag = hea_converted
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 			custom_trigger_tooltip = {
+# 				tooltip = ncn_eligible_tt
+# 				FROM = {
+# 					any_owned_state = {
+# 						any_neighbor_state = {
+# 							OR = {
+# 								has_state_flag = hea_converted
+# 								is_owned_and_controlled_by = HEA
+# 							}
+# 							is_impassable = no
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+
+# 		days_remove = 100
+# 		cost = 40
+# 		ai_will_do = {
+# 			factor = 1
+# 			modifier = {
+# 				add = 14
+# 				has_political_power > 151 # AI will always assign designers/advisors at 150pp, so once they pass this threshold they have filled their advisors
+# 			}
+# 		}
+
+# 		remove_effect = {
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] hea_slow_conversion (decision) remove entered"
+# 			}
+# 			FROM = {
+# 				random_owned_state = {
+# 					limit = {
+# 						any_neighbor_state = {
+# 							OR = {
+# 								has_state_flag = hea_converted
+# 								is_owned_and_controlled_by = HEA
+# 							}
+# 						}
+# 						NOT = { has_state_flag = hea_converted }
+# 						is_impassable = no
+# 					}
+# 					set_state_flag = hea_converted
+# 					custom_effect_tooltip = hea_converted_state_tt
+# 				}
+# 				#country_event = { id = }
+# 			}
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] hea_slow_conversion (decision) remove exited"
+# 			}
+# 		}
+# 	}
+
+# 	hea_inquisition =  {
+# 		target_root_trigger = {
+# 			has_completed_focus = hea_nf_vengance
+# 		}
+# 		visible = {
+# 			NOT = { FROM = { is_subject_of = HEA } }
+# 			FROM = { exists = yes }
+# 			NOT = { is_puppet = yes }
+# 		}
+# 		target_trigger = {
+# 			FROM = {
+# 				OR = {
+# 					tag = PHA
+# 					tag = LON
+# 					tag = TOC
+# 					# To add extra targets just use tag = TAG here and in the binding decision
+# 				}
+# 			}
+# 		}
+# 		targets = { PHA LON TOC }
+# 		available = {
+# 			NOT = {
+# 				FROM = { is_subject_of = HEA }
+# 				has_war_with = FROM
+# 			}
+# 			NOT = {
+# 				custom_trigger_tooltip = {
+# 					tooltip = hea_not_converted_state_tt
+# 					FROM = {
+# 						all_owned_state = {
+# 							OR = {
+# 								is_impassable = yes
+# 								has_state_flag = hea_converted
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 			custom_trigger_tooltip = {
+# 				tooltip = ncn_eligible_tt
+# 				FROM = {
+# 					any_owned_state = {
+# 						any_neighbor_state = {
+# 							OR = {
+# 								has_state_flag = hea_converted
+# 								is_owned_and_controlled_by = HEA
+# 							}
+# 							is_impassable = no
+# 						}
+# 					}
+# 				}
+# 			}
+# 			has_manpower > 49
+# 		}
+
+# 		days_remove = 20
+# 		cost = 20
+
+# 		ai_will_do = {
+# 			factor = 1
+# 			modifier = {
+# 				add = 14
+# 				has_political_power > 151 # AI will always assign designers/advisors at 150pp, so once they pass this threshold they have filled their advisors
+# 			}
+# 			modifier = {
+# 				factor = 0
+# 				has_manpower < 500
+# 			}
+# 		}
+
+# 		complete_effect = {
+# 			add_manpower = -50
+# 		}
+
+# 		remove_effect = {
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] hea_inquisition (decision) remove entered"
+# 			}
+# 			FROM = {
+# 				random_owned_state = {
+# 					limit = {
+# 						any_neighbor_state = {
+# 							OR = {
+# 								has_state_flag = hea_converted
+# 								is_owned_and_controlled_by = HEA
+# 							}
+# 						}
+# 						NOT = { has_state_flag = hea_converted }
+# 						is_impassable = no
+# 					}
+# 					set_state_flag = hea_converted
+# 					custom_effect_tooltip = hea_converted_state_tt
+# 				}
+# 				#country_event = { id = }
+# 			}
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] hea_inquisition (decision) remove exited"
+# 			}
+# 		}
+# 	}
+
+# 	hea_bind_to_us = { # Puppets a country when all the provinces are conquered
+# 		target_root_trigger = {
+# 			OR = {
+# 				has_completed_focus = hea_nf_forgive_sins
+# 				has_completed_focus = hea_nf_vengance
+# 			}
+# 		}
+# 		visible = {
+# 			NOT = { FROM = { is_subject_of = HEA } }
+# 			FROM = { exists = yes }
+# 			NOT = { is_puppet = yes }
+# 		}
+# 		target_trigger = {
+# 			FROM = {
+# 				OR = {
+# 					tag = PHA
+# 					tag = TOC
+# 					tag = LON
+# 					# To add extra targets just use tag = TAG here and in the convertion decision
+# 				}
+# 			}
+# 		}
+# 		targets = { PHA LON TOC }
+# 		available = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = hea_convert_state_tt
+# 				FROM = {
+# 					any_owned_state = {
+# 						has_state_flag = hea_converted
+# 					}
+# 				}
+# 			}
+# 			NOT = {
+# 				FROM = { has_war = yes } # To prevent game crashing issues
+# 				has_country_flag = binding_someone
+# 			}
+# 		}
+# 		fixed_random_seed = no
+
+# 		days_remove = 50
+# 		days_re_enable = 50
+# 		cost = 60
+# 		#fire_only_once = no
+
+# 		ai_will_do = {
+# 			factor = 10
+# 			modifier = {
+# 				factor = 0
+# 				FROM = {
+# 					any_owned_state = {
+# 						is_impassable = no
+# 						NOT = { has_state_flag = hea_converted }
+# 					}
+# 				}
+# 			}
+# 		}
+
+# 		complete_effect = {
+# 			set_country_flag = binding_someone
+# 			custom_effect_tooltip = impassable_states_dont_matter
+# 		}
+
+# 		remove_effect = {
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] hea_bind_to_us (decision) remove entered"
+# 			}
+# 			custom_effect_tooltip = binding_warning_tt
+# 			hidden_effect = {
+# 				set_temp_variable = { hea_num_converted_owned_states = 0 }
+# 				set_temp_variable = { hea_num_impassable_states = 0 }
+# 				FROM = {
+# 					every_owned_state = {
+# 						limit = {
+# 							is_owned_by = FROM
+# 							has_state_flag = hea_converted
+# 							is_impassable = no
+# 						}
+# 						add_to_temp_variable = { hea_num_converted_owned_states = 1 }
+# 					}
+# 					every_owned_state = {
+# 						limit = {
+# 							is_owned_by = FROM
+# 							is_impassable = yes
+# 						}
+# 						add_to_temp_variable = { hea_num_impassable_states = 1 }
+# 					}
+# 					set_temp_variable = { lower_value = num_owned_states }
+# 					subtract_from_temp_variable = { lower_value = hea_num_impassable_states }
+# 					divide_temp_variable = { hea_num_converted_owned_states = lower_value?1 }
+# 					multiply_temp_variable = { hea_num_converted_owned_states = 100 }
+# 					set_temp_variable = { hea_success_chance = random }
+# 					multiply_temp_variable = { hea_success_chance = 100 }
+# 					if = {
+# 						limit = { check_variable = { hea_num_converted_owned_states > hea_success_chance } }
+# 						country_event = { id = nf_event_hea.8 }
+# 					}
+# 					else = {
+# 						HEA = { country_event = { id = nf_event_hea.83 } }
+# 					}
+# 				}
+# 				clear_variable = hea_num_impassable_states
+# 				clear_variable = hea_num_converted_owned_states
+# 				clr_country_flag = binding_someone
+# 			}
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] hea_bind_to_us (decision) remove exited"
+# 			}
+# 		}
+# 	}
+# }
+
+#####################
+##Michael's Crusade##
+#####################
+hea_michael_crusade_cat = {
+	hea_michael_crusade_murtaugh = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+		available = {
+			has_completed_focus = hea_trees_and_faithless
+		}
+		visible = {
+			AND = {
+				MUR = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_michaels_crusade
+			}
+		}
+		complete_effect = {
+			will_lead_to_war_with = MUR
+			MUR = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	hea_michael_crusade_timberline = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+		available = {
+			has_completed_focus = hea_savages_and_heretics
+		}
+		visible = {
+			AND = {
+				TIM = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_michaels_crusade
+			}
+		}
+		complete_effect = {
+			will_lead_to_war_with = TIM
+			TIM = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	hea_michael_crusade_anointed = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+		available = {
+			has_completed_focus = hea_trees_and_faithless
+		}
+		visible = {
+			AND = {
+				ANO = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_michaels_crusade
+			}
+		}
+		complete_effect = {
+			will_lead_to_war_with = ANO
+			ANO = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	hea_michael_crusade_lonetree = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+		available = {
+			has_completed_focus = hea_trees_and_faithless
+		}
+		visible = {
+			AND = {
+				LON = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_michaels_crusade
+			}
+		}
+		complete_effect = {
+			will_lead_to_war_with = LON
+			LON = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	hea_michael_crusade_shoshone = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+		available = {
+			has_completed_focus = hea_savages_and_heretics
+		}
+		visible = {
+			AND = {
+				SHO = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_michaels_crusade
+			}
+		}
+		complete_effect = {
+			will_lead_to_war_with = SHO
+			SHO = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	hea_michael_crusade_boners = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+		available = {
+			has_completed_focus = hea_trees_and_faithless
+		}
+		visible = {
+			AND = {
+				BDT = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_michaels_crusade
+			}
+		}
+		complete_effect = {
+			will_lead_to_war_with = BDT
+			BDT = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	hea_michael_crusade_yellowpark = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+		available = {
+			has_completed_focus = hea_savages_and_heretics
+		}
+		visible = {
+			AND = {
+				ROS = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_michaels_crusade
+			}
+		}
+		complete_effect = {
+			will_lead_to_war_with = ROS
+			ROS = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+}
+##########################
+##Monsters of the Wastes-Vengeance Path##
+##########################
+hea_monsters_of_the_wastes_cat = {
+	##The Dead Are Walking
+	#TLP-The Last Patrol
+	hea_monsters_last_patrol = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = TLP
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = TLP
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				TLP = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = TLP
+			TLP = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_ghouls = 1
+				}
+			}
+		}
+	}
+	#TOC-The Old Country
+	hea_monsters_old_country = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = TOC
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = TOC
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				TOC = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = TOC
+			TOC = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_ghouls = 1
+				}
+			}
+		}
+	}
+	#WHD-Withered Dogs
+	hea_monsters_withered_dogs = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = WHD
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = WHD
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				WHD = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = WHD
+			WHD = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_ghouls = 1
+				}
+			}
+		}
+	}
+	#LUM-Luminous Ones
+	hea_monsters_luminous_ones = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = LUM
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = LUM
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				LUM = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = LUM
+			LUM = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_ghouls = 1
+				}
+			}
+		}
+	}
+	#GLW-Glowbugs
+	hea_monsters_glowbugs = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = GLW
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = GLW
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				GLW = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = GLW
+			GLW = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_ghouls = 1
+				}
+			}
+		}
+	}
+	#GLC-Glow's Cradle
+	hea_monsters_glow_cradle = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = GLC
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = GLC
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				GLC = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = GLC
+			GLC = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_ghouls = 1
+				}
+			}
+		}
+	}
+	#COM-Pioneer Company
+	hea_monsters_pioneer_company = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = COM
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = COM
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				COM = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+				COM = {
+					has_completed_focus = COM_sol_stars_and_stripes
+				}
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = COM
+			COM = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_ghouls = 1
+				}
+			}
+		}
+	}
+	#LAP-Crow Creek
+	hea_monsters_crow_creek = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = LAP
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = LAP
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				LAP = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = LAP
+			LAP = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_ghouls = 1
+				}
+			}
+		}
+	}
+	#CES-Ceasar's Legion
+	hea_monsters_ceasar_legion = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = CES
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = CES
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				CES = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+				CES = {
+					has_completed_focus = ces_drusus_leads
+				}
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = CES
+			CES = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_ghouls = 1
+				}
+			}
+		}
+	}
+	#SIN-Sinaloa Cartel
+	hea_monsters_sinaloa_cartel = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = SIN
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = SIN
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				SIN = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = SIN
+			SIN = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_ghouls = 1
+				}
+			}
+		}
+	}
+	#BLO-Beltran-Levya
+	hea_monsters_beltran_levya = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = BLO
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = BLO
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				BLO = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = BLO
+			BLO = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_ghouls = 1
+				}
+			}
+		}
+	}
+	#CAF-Chiapas
+	hea_monsters_chiapas = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = CAF
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = CAF
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				CAF = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = CAF
+			CAF = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_ghouls = 1
+				}
+			}
+		}
+	}
+	#KAM-Kamlo
+	hea_monsters_kamlo = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = KAM
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = KAM
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				KAM = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = KAM
+			KAM = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_ghouls = 1
+				}
+			}
+		}
+	}
+	#VLT-Vault City
+	hea_monsters_vault_city = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = VLT
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = VLT
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				VLT = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+				VLT = {
+					has_completed_focus = vlt_a_renewal
+				}
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = VLT
+			VLT = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_ghouls = 1
+				}
+			}
+		}
+	}
+	#NEW-New Reno-Ghouls
+	hea_monsters_new_reno_ghouls = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = NEW
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = NEW
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				NEW = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+				NEW = {
+					has_completed_focus = new_brokenbrothers
+				}
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = NEW
+			NEW = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_ghouls = 1
+				}
+			}
+		}
+	}
+	#BRA-Kingdom of Manitoba
+	hea_monsters_manitoba = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = BRA
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = BRA
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				BRA = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+				BRA = {
+					has_country_leader = {
+						ruling_only = yes
+						character = BRA_king_gunn
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = BRA
+			BRA = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_ghouls = 1
+				}
+			}
+		}
+	}
+	#URA-Rad Hazards
+	hea_monsters_rad_hazards = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = URA
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = URA
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				URA = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = URA
+			URA = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_ghouls = 1
+				}
+			}
+		}
+	}
+	#RES-The Reservation
+	hea_monsters_reservations = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = RES
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = RES
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				RES = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = RES
+			RES = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_ghouls = 1
+				}
+			}
+		}
+	}
+	##Cain's Empire
+	#WBH-Washington Brotherhood
+	hea_monsters_washington_brotherhood = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = WBH
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = WBH
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				WBH = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = WBH
+			WBH = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_cains = 1
+				}
+			}
+		}
+	}
+	##Horde of Nephilim
+	#TCA-The Cause
+	hea_monsters_the_cause = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = TCA
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = TCA
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				TCA = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+				TCA = {
+					has_completed_focus = tca_appoint_big_betty
+				}
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = TCA
+			TCA = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_mutants = 1
+				}
+			}
+		}
+	}
+	#MXS-Max Sec
+	hea_monsters_max_sec = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = MXS
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = MXS
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				MXS = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+				MXS = {
+					has_government = ruler
+				}
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = MXS
+			MXS = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_mutants = 1
+				}
+			}
+		}
+	}
+	#TRL-Troll Warren
+	hea_monsters_troll_warren = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = TRL
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = TRL
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				TRL = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = TRL
+			TRL = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_mutants = 1
+				}
+			}
+		}
+	}
+	#NEW-New Reno-Mutants
+	hea_monsters_new_reno_mutants = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = NEW
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = NEW
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				NEW = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+				NEW = {
+					has_completed_focus = new_brokenpurge
+				}
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = NEW
+			NEW = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_mutants = 1
+				}
+			}
+		}
+	}
+	#SLN-S'Lanter
+	hea_monsters_slanter = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = SLN
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = SLN
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				SLN = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = SLN
+			SLN = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_mutants = 1
+				}
+			}
+		}
+	}
+	#STN-Stoon Dandies
+	hea_monsters_stoon_dandies = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = STN
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = STN
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				STN = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+				STN = {
+					has_completed_focus = stn_mutant_patriot
+				}
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = STN
+			STN = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_mutants = 1
+				}
+			}
+		}
+	}
+	#DED-Deadline
+	hea_monsters_deadline = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = DED
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = DED
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				DED = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = DED
+			DED = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_mutants = 1
+				}
+			}
+		}
+	}
+	#UTO-Utobitha
+	hea_monsters_utobitha = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = UTO
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = UTO
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				UTO = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = UTO
+			UTO = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_mutants = 1
+				}
+			}
+		}
+	}
+	#JCT-Jacobstown
+	hea_monsters_jacobstown = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = JCT
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = JCT
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				JCT = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = JCT
+			JCT = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_mutants = 1
+				}
+			}
+		}
+	}
+	#PRO-Far son
+	hea_monsters_far_son = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = PRO
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = PRO
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				PRO = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = PRO
+			PRO = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_mutants = 1
+				}
+			}
+		}
+	}
+	#SHA-Shale's Army
+	hea_monsters_shale_army = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = SHA
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = SHA
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				SHA = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = SHA
+			SHA = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_mutants = 1
+				}
+			}
+		}
+	}
+	#UOA-Unity of Austin
+	hea_monsters_unity_austin = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = UOA
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = UOA
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				UOA = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = UOA
+			UOA = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_mutants = 1
+				}
+			}
+		}
+	}
+	#IMO-Ironmongers
+	hea_monsters_ironmongers = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = IMO
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = IMO
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				IMO = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = IMO
+			IMO = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_mutants = 1
+				}
+			}
+		}
+	}
+	#CRH-Crusher's Army
+	hea_monsters_crusher_army = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = CRH
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = CRH
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				CRH = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = CRH
+			CRH = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_mutants = 1
+				}
+			}
+		}
+	}
+	##Leviathans dwelling in the Coast
+	#MLT-Mirelurk Tribe
+	hea_monsters_mirelurk_tribe = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = MLT
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = MLT
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				MLT = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = MLT
+			MLT = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_mirelurks = 1
+				}
+			}
+		}
+	}
+	#DIS-The Apostles
+	hea_monsters_the_apostles = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = DIS
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = DIS
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				DIS = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = DIS
+			DIS = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_mirelurks = 1
+				}
+			}
+		}
+	}
+	##Steel Puppets
+	#TVT-TV Town
+	hea_monsters_tv_town = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = TVT
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = TVT
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				TVT = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = TVT
+			TVT = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_robots = 1
+				}
+			}
+		}
+	}
+	#MDM-Middlemark
+	hea_monsters_middlemark = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = MDM
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = MDM
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				MDM = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = MDM
+			MDM = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_robots = 1
+				}
+			}
+		}
+	}
+	#PLT-Pleasantdale
+	hea_monsters_pleasantdale = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = PLT
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = PLT
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				PLT = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+				PLT = {
+					has_completed_focus = plt_appeal_to_hope
+				}
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = PLT
+			PLT = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_robots = 1
+				}
+			}
+		}
+	}
+	#TPA-The Gateway
+	hea_monsters_gateway = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = TPA
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = TPA
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				TPA = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = TPA
+			TPA = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_robots = 1
+				}
+			}
+		}
+	}
+	#BGR-Big Grass
+	hea_monsters_big_grass = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = BGR
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = BGR
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				BGR = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = BGR
+			BGR = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_robots = 1
+				}
+			}
+		}
+	}
+	#RAD-Reclaimation Army Depot
+	hea_monsters_army_depot = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = RAD
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = RAD
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				RAD = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = RAD
+			RAD = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_robots = 1
+				}
+			}
+		}
+	}
+	#ROB-Robot City
+	hea_monsters_robot_city = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = ROB
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = ROB
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				ROB = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = ROB
+			ROB = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_robots = 1
+				}
+			}
+		}
+	}
+	#ODY-ODYSSEUS
+	hea_monsters_odysseus = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = ODY
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = ODY
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				ODY = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = ODY
+			ODY = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_robots = 1
+				}
+			}
+		}
+	}
+	#WDN-WARDEN
+	hea_monsters_warden = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = WDN
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = WDN
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				WDN = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = WDN
+			WDN = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_robots = 1
+				}
+			}
+		}
+	}
+	#BRT-Broken Hearts
+	hea_monsters_broken_hearts = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = BRT
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = BRT
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				BRT = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = BRT
+			BRT = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_robots = 1
+				}
+			}
+		}
+	}
+	#TTM-Twin Mothers
+	hea_monsters_twin_mothers = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = TTM
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = TTM
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				TTM = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = TTM
+			TTM = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_robots = 1
+				}
+			}
+		}
+	}
+	#TUB-Tubeheads
+	hea_monsters_tubeheads = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = TUB
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = TUB
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				TUB = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = TUB
+			TUB = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_robots = 1
+				}
+			}
+		}
+	}
+	#ARM-Santa Anna's Mexico
+	hea_monsters_santa_anna = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = ARM
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = ARM
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				ARM = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = ARM
+			ARM = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_robots = 1
+				}
+			}
+		}
+	}
+	#ZAP-Zapata's Mexico
+	hea_monsters_zapata = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = ZAP
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = ZAP
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				ZAP = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = ZAP
+			ZAP = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_robots = 1
+				}
+			}
+		}
+	}
+	#MAX-Maximilian's Mexico
+	hea_monsters_maximilian = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = MAX
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = MAX
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				MAX = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = MAX
+			MAX = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_robots = 1
+				}
+			}
+		}
+	}
+	#MOC-Aztec's Mexico
+	hea_monsters_aztec = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = MOC
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = MOC
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				MOC = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = MOC
+			MOC = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_robots = 1
+				}
+			}
+		}
+	}
+	#TLA-Tlalocan
+	hea_monsters_tlalocan = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = TLA
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = TLA
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				TLA = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = TLA
+			TLA = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_robots = 1
+				}
+			}
+		}
+	}
+	#PET-Petro Chico
+	hea_monsters_petro_chico = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = PET
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = PET
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				PET = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = PET
+			PET = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_robots = 1
+				}
+			}
+		}
+	}
+	##The Red Devils
+	#STC-Strathcommune
+	hea_monsters_strathcommune = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = STC
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = STC
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				STC = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = STC
+			STC = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_communists = 1
+				}
+			}
+		}
+	}
+	#LOI-Loid's Ministry
+	hea_monsters_loid_ministry = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = LOI
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = LOI
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				LOI = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = LOI
+			LOI = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_communists = 1
+				}
+			}
+		}
+	}
+	#RDS-Redding
+	hea_monsters_redding = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				HEA =  {
+					is_neighbor_of = RDS
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = RDS
+					}
+				}
+			}
+		}
+		visible = {
+			AND = {
+				RDS = { all_core_land_owned_by_prev_sphere = no }
+				has_completed_focus = hea_monsters_of_the_wastes
+				RDS = {
+					has_government = people
+				}
+			}
+		}
+
+		complete_effect = {
+			will_lead_to_war_with = RDS
+			RDS = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					hea_monsters_communists = 1
+				}
+			}
+		}
+	}
+}
+
+#########################################
+##Theological Assembly-Forgiveness Path##
+#########################################
+hea_theological_assembly_sharing_cat = {
+	
+}
+
+###############
+##Water Mills##
+###############
+hea_taming_river_cat = {
+	#18-Innocence Lost
+	hea_water_mills_18_1 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			has_full_control_of_state = 18
+			num_of_available_civilian_factories > 0
+			NOT = {
+				has_country_flag = hea_building_water_mills
+			}
+		}
+		visible = {
+			has_completed_focus = hea_water_mills
+		}
+
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = hea_building_water_mills
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_to_variable = {	hea_river_resource_water = 15}
+			set_country_flag = hea_water_mills_built_18_1
+			clr_country_flag = hea_building_water_mills
+			custom_effect_tooltip = hea_water_mills_18_1_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 18
+			}
+		}
+	}
+	hea_water_mills_18_2 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			has_full_control_of_state = 18
+			num_of_available_civilian_factories > 0
+			NOT = {
+				has_country_flag = hea_building_water_mills
+			}
+		}
+		visible = {
+			has_completed_focus = hea_water_mills
+			has_country_flag = hea_water_mills_built_18_1
+		}
+
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = hea_building_water_mills
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			subtract_from_variable = { hea_river_resource_water = 5}
+			add_to_variable = { hea_river_resource_energy = 8}
+			clr_country_flag = hea_building_water_mills
+			clr_country_flag = hea_water_mills_built_18_1
+			set_country_flag = hea_water_mills_built_18_2
+			custom_effect_tooltip = hea_water_mills_18_2_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 18
+			}
+		}
+	}
+	hea_water_mills_18_3 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			has_full_control_of_state = 18
+			num_of_available_civilian_factories > 0
+			NOT = {
+				has_country_flag = hea_building_water_mills
+			}
+		}
+		visible = {
+			has_completed_focus = hea_water_mills
+			has_country_flag = hea_water_mills_built_18_2
+		}
+
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = hea_building_water_mills
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			subtract_from_variable = { hea_river_resource_water = 5}
+			subtract_from_variable = { hea_river_resource_energy = 3}
+			add_to_variable = { hea_river_stability = 0.025}
+			add_to_variable = { hea_river_monthly_pop = 0.05}
+			add_to_variable = { hea_river_non_core_manpower = 0.05}
+			clr_country_flag = hea_building_water_mills
+			clr_country_flag = hea_water_mills_built_18_2
+			custom_effect_tooltip = hea_water_mills_18_3_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 18
+			}
+		}
+	}
+	#116-Eastern Passage
+	hea_water_mills_116_1 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			has_full_control_of_state = 116
+			num_of_available_civilian_factories > 0
+			NOT = {
+				has_country_flag = hea_building_water_mills
+			}
+		}
+		visible = {
+			has_completed_focus = hea_water_mills
+		}
+
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = hea_building_water_mills
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_to_variable = {	hea_river_resource_water = 15}
+			set_country_flag = hea_water_mills_built_116_1
+			clr_country_flag = hea_building_water_mills
+			custom_effect_tooltip = hea_water_mills_116_1_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 116
+			}
+		}
+	}
+	hea_water_mills_116_2 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			has_full_control_of_state = 116
+			num_of_available_civilian_factories > 0
+			NOT = {
+				has_country_flag = hea_building_water_mills
+			}
+		}
+		visible = {
+			has_completed_focus = hea_water_mills
+			has_country_flag = hea_water_mills_built_116_1
+		}
+
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = hea_building_water_mills
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			subtract_from_variable = { hea_river_resource_water = 5}
+			add_to_variable = { hea_river_resource_energy = 8}
+			clr_country_flag = hea_building_water_mills
+			clr_country_flag = hea_water_mills_built_116_1
+			set_country_flag = hea_water_mills_built_116_2
+			custom_effect_tooltip = hea_water_mills_116_2_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 116
+			}
+		}
+	}
+	hea_water_mills_116_3 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			has_full_control_of_state = 116
+			num_of_available_civilian_factories > 0
+			NOT = {
+				has_country_flag = hea_building_water_mills
+			}
+		}
+		visible = {
+			has_completed_focus = hea_water_mills
+			has_country_flag = hea_water_mills_built_116_2
+		}
+
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = hea_building_water_mills
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			subtract_from_variable = { hea_river_resource_water = 5}
+			subtract_from_variable = { hea_river_resource_energy = 3}
+			add_to_variable = { hea_river_stability = 0.025}
+			add_to_variable = { hea_river_monthly_pop = 0.05}
+			add_to_variable = { hea_river_non_core_manpower = 0.05}
+			clr_country_flag = hea_building_water_mills
+			clr_country_flag = hea_water_mills_built_116_2
+			custom_effect_tooltip = hea_water_mills_116_3_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 116
+			}
+		}
+	}
+	#278-Windy Isolation
+	hea_water_mills_278_1 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			has_full_control_of_state = 278
+			num_of_available_civilian_factories > 0
+			NOT = {
+				has_country_flag = hea_building_water_mills
+			}
+		}
+		visible = {
+			has_completed_focus = hea_water_mills
+		}
+
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = hea_building_water_mills
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_to_variable = {	hea_river_resource_water = 15}
+			set_country_flag = hea_water_mills_built_278_1
+			clr_country_flag = hea_building_water_mills
+			custom_effect_tooltip = hea_water_mills_278_1_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 278
+			}
+		}
+	}
+	hea_water_mills_278_2 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			has_full_control_of_state = 278
+			num_of_available_civilian_factories > 0
+			NOT = {
+				has_country_flag = hea_building_water_mills
+			}
+		}
+		visible = {
+			has_completed_focus = hea_water_mills
+			has_country_flag = hea_water_mills_built_278_1
+		}
+
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = hea_building_water_mills
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			subtract_from_variable = { hea_river_resource_water = 5}
+			add_to_variable = { hea_river_resource_energy = 8}
+			clr_country_flag = hea_building_water_mills
+			clr_country_flag = hea_water_mills_built_278_1
+			set_country_flag = hea_water_mills_built_278_2
+			custom_effect_tooltip = hea_water_mills_278_2_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 278
+			}
+		}
+	}
+	hea_water_mills_278_3 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			has_full_control_of_state = 278
+			num_of_available_civilian_factories > 0
+			NOT = {
+				has_country_flag = hea_building_water_mills
+			}
+		}
+		visible = {
+			has_completed_focus = hea_water_mills
+			has_country_flag = hea_water_mills_built_278_2
+		}
+
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = hea_building_water_mills
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			subtract_from_variable = { hea_river_resource_water = 5}
+			subtract_from_variable = { hea_river_resource_energy = 3}
+			add_to_variable = { hea_river_stability = 0.025}
+			add_to_variable = { hea_river_monthly_pop = 0.05}
+			add_to_variable = { hea_river_non_core_manpower = 0.05}
+			clr_country_flag = hea_building_water_mills
+			clr_country_flag = hea_water_mills_built_278_2
+			custom_effect_tooltip = hea_water_mills_278_3_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 278
+			}
+		}
+	}
+	#198-Southern Gate
+	hea_water_mills_198_1 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			has_full_control_of_state = 198
+			num_of_available_civilian_factories > 0
+			NOT = {
+				has_country_flag = hea_building_water_mills
+			}
+		}
+		visible = {
+			has_completed_focus = hea_water_mills
+		}
+
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = hea_building_water_mills
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_to_variable = {	hea_river_resource_water = 15}
+			set_country_flag = hea_water_mills_built_198_1
+			clr_country_flag = hea_building_water_mills
+			custom_effect_tooltip = hea_water_mills_198_1_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 198
+			}
+		}
+	}
+	hea_water_mills_198_2 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			has_full_control_of_state = 198
+			num_of_available_civilian_factories > 0
+			NOT = {
+				has_country_flag = hea_building_water_mills
+			}
+		}
+		visible = {
+			has_completed_focus = hea_water_mills
+			has_country_flag = hea_water_mills_built_198_1
+		}
+
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = hea_building_water_mills
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			subtract_from_variable = { hea_river_resource_water = 5}
+			add_to_variable = { hea_river_resource_energy = 8}
+			clr_country_flag = hea_building_water_mills
+			clr_country_flag = hea_water_mills_built_198_1
+			set_country_flag = hea_water_mills_built_198_2
+			custom_effect_tooltip = hea_water_mills_198_2_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 198
+			}
+		}
+	}
+	hea_water_mills_198_3 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+
+		available = {
+			has_full_control_of_state = 198
+			num_of_available_civilian_factories > 0
+			NOT = {
+				has_country_flag = hea_building_water_mills
+			}
+		}
+		visible = {
+			has_completed_focus = hea_water_mills
+			has_country_flag = hea_water_mills_built_198_2
+		}
+
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = hea_building_water_mills
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			subtract_from_variable = { hea_river_resource_water = 5}
+			subtract_from_variable = { hea_river_resource_energy = 3}
+			add_to_variable = { hea_river_stability = 0.025}
+			add_to_variable = { hea_river_monthly_pop = 0.05}
+			add_to_variable = { hea_river_non_core_manpower = 0.05}
+			clr_country_flag = hea_building_water_mills
+			clr_country_flag = hea_water_mills_built_198_2
+			custom_effect_tooltip = hea_water_mills_198_3_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 198
+			}
+		}
+	}
+}
+######################
+##Taming The Heavens##
+######################
+hea_taming_heaven_cat = {
+	#276-Stagleap
+	hea_alchemist_276 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+		 
+		available = {
+			has_full_control_of_state = 276
+			NOT = {
+				has_country_flag = hea_capturing_scientists
+			}
+		}
+		visible = {
+			has_completed_focus = hea_lost_scientists
+		}
+
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = hea_capturing_scientists
+		}
+		remove_effect = {
+			add_to_variable = { hea_heaven_research = 0.025}
+			clr_country_flag = hea_capturing_scientists
+			set_country_flag = hea_captured_scientists_276
+			custom_effect_tooltip = hea_alchemist_276_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 276
+			}
+		}
+	}
+	#30-High Parishes
+	hea_alchemist_30 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+		 
+		available = {
+			has_full_control_of_state = 30
+			NOT = {
+				has_country_flag = hea_capturing_scientists
+			}
+		}
+		visible = {
+			has_completed_focus = hea_lost_scientists
+		}
+
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = hea_capturing_scientists
+		}
+		remove_effect = {
+			add_to_variable = { hea_heaven_research = 0.025}
+			clr_country_flag = hea_capturing_scientists
+			set_country_flag = hea_captured_scientists_30
+			custom_effect_tooltip = hea_alchemist_30_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 30
+			}
+		}
+	}
+	#700-Elk Ridge
+	hea_alchemist_700 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+		 
+		available = {
+			has_full_control_of_state = 700
+			NOT = {
+				has_country_flag = hea_capturing_scientists
+			}
+		}
+		visible = {
+			has_completed_focus = hea_lost_scientists
+		}
+
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = hea_capturing_scientists
+		}
+		remove_effect = {
+			add_to_variable = { hea_heaven_research = 0.025}
+			clr_country_flag = hea_capturing_scientists
+			set_country_flag = hea_captured_scientists_700
+			custom_effect_tooltip = hea_alchemist_700_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 700
+			}
+		}
+	}
+	#949-Strawberry Mountain
+	hea_alchemist_949 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+		 
+		available = {
+			has_full_control_of_state = 949
+			NOT = {
+				has_country_flag = hea_capturing_scientists
+			}
+		}
+		visible = {
+			has_completed_focus = hea_lost_scientists
+		}
+
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = hea_capturing_scientists
+		}
+		remove_effect = {
+			add_to_variable = { hea_heaven_research = 0.025}
+			clr_country_flag = hea_capturing_scientists
+			set_country_flag = hea_captured_scientists_949
+			custom_effect_tooltip = hea_alchemist_949_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 949
+			}
+		}
+	}	
+	#950-Rock Creek
+	hea_alchemist_950 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+		 
+		available = {
+			has_full_control_of_state = 950
+			NOT = {
+				has_country_flag = hea_capturing_scientists
+			}
+		}
+		visible = {
+			has_completed_focus = hea_lost_scientists
+		}
+
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = hea_capturing_scientists
+		}
+		remove_effect = {
+			add_to_variable = { hea_heaven_research = 0.025}
+			clr_country_flag = hea_capturing_scientists
+			set_country_flag = hea_captured_scientists_950
+			custom_effect_tooltip = hea_alchemist_950_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 950
+			}
+		}
+	}
+	#Final-Research facility
+	hea_alchemist_final_research = {
+		icon = x
+		cost = 150
+		fire_only_once = yes
+		 
+		available = {
+			has_country_flag = hea_captured_scientists_950
+			has_country_flag = hea_captured_scientists_949
+			has_country_flag = hea_captured_scientists_30
+			has_country_flag = hea_captured_scientists_276
+			has_country_flag = hea_captured_scientists_700
+			num_of_available_civilian_factories > 3
+		}
+		visible = {
+			has_completed_focus = hea_lost_scientists
+			NOT = {
+				has_country_flag = hea_alchemist_final
+			}
+		}
+
+		days_remove = 100
+		modifier = {
+			civilian_factory_use = 4
+		}
+		complete_effect = {
+			set_country_flag = hea_alchemist_final
+		}
+		remove_effect = {
+			add_to_variable = { hea_heaven_research = 0.075}
+			clr_country_flag = hea_captured_scientists_950
+			clr_country_flag = hea_captured_scientists_949
+			clr_country_flag = hea_captured_scientists_30
+			clr_country_flag = hea_captured_scientists_276
+			clr_country_flag = hea_captured_scientists_700
+			custom_effect_tooltip = hea_alchemist_final_research_tt
+		}
+		cancel_trigger = {
+		}
+	}
+	hea_alchemist_final_resource = {
+		icon = x
+		custom_cost_trigger = {
+			set_temp_variable = { temp_cap_cost = 300 }
+			check_variable = {
+				caps_number_display > temp_cap_cost
+			}
+		}
+		custom_cost_text = "caps_decisions_cost_text"
+		fire_only_once = yes
+		 
+		available = {
+			has_country_flag = hea_captured_scientists_950
+			has_country_flag = hea_captured_scientists_949
+			has_country_flag = hea_captured_scientists_30
+			has_country_flag = hea_captured_scientists_276
+			has_country_flag = hea_captured_scientists_700
+			num_of_available_civilian_factories > 3
+		}
+		visible = {
+			has_completed_focus = hea_lost_scientists
+			NOT = {
+				has_country_flag = hea_alchemist_final
+			}
+		}
+
+		days_remove = 100
+		modifier = {
+			civilian_factory_use = 4
+		}
+		complete_effect = {
+			set_country_flag = hea_alchemist_final
+			set_temp_variable = { caps_to_add = -300 }
+			add_caps = yes
+		}
+		remove_effect = {
+			add_to_variable = { hea_heaven_resource_circuitry = 40}
+			add_to_variable = { hea_heaven_resource_advanced = 40}
+			clr_country_flag = hea_captured_scientists_950
+			clr_country_flag = hea_captured_scientists_949
+			clr_country_flag = hea_captured_scientists_30
+			clr_country_flag = hea_captured_scientists_276
+			clr_country_flag = hea_captured_scientists_700
+			custom_effect_tooltip = hea_alchemist_final_resource_tt
+		}
+		cancel_trigger = {
+		}
+	}
+}
+################
+##Steam Smiths##
+################
+hea_taming_land_cat = {
+	#1385-Western Tunnel
+	hea_smiths_1385_1 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+		 
+		available = {
+			has_full_control_of_state = 1385
+			NOT = {
+				has_country_flag = hea_building_smiths
+			}
+			num_of_available_civilian_factories > 1
+		}
+		visible = {
+			has_completed_focus = hea_steam_smiths
+		}
+
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 2
+		}
+		complete_effect = {
+			set_country_flag = hea_building_smiths
+		}
+		remove_effect = {
+			add_to_variable = { hea_land_resource_metal = 20}
+			clr_country_flag = hea_building_smiths
+			set_country_flag = hea_smiths_built_1385_1
+			custom_effect_tooltip = hea_smiths_1385_1_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 1385
+			}
+		}
+	}
+	hea_smiths_1385_2 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+		 
+		available = {
+			has_full_control_of_state = 1385
+			NOT = {
+				has_country_flag = hea_building_smiths
+			}
+			num_of_available_civilian_factories > 1
+		}
+		visible = {
+			has_completed_focus = hea_steam_smiths
+			has_country_flag = hea_smiths_built_1385_1
+		}
+
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 2
+		}
+		complete_effect = {
+			set_country_flag = hea_building_smiths
+		}
+		remove_effect = {
+			subtract_from_variable = { hea_land_resource_metal = 10}
+			add_to_variable = { hea_land_resource_composites = 10}
+			clr_country_flag = hea_building_smiths
+			clr_country_flag = hea_smiths_built_1385_1
+			set_country_flag = hea_smiths_built_1385_2
+			custom_effect_tooltip = hea_smiths_1385_2_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 1385
+			}
+		}
+	}
+	#198-Southern Gate
+	hea_smiths_198_1 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+		 
+		available = {
+			has_full_control_of_state = 198
+			NOT = {
+				has_country_flag = hea_building_smiths
+			}
+			num_of_available_civilian_factories > 1
+		}
+		visible = {
+			has_completed_focus = hea_steam_smiths
+		}
+
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 2
+		}
+		complete_effect = {
+			set_country_flag = hea_building_smiths
+		}
+		remove_effect = {
+			add_to_variable = { hea_land_resource_metal = 20}
+			clr_country_flag = hea_building_smiths
+			set_country_flag = hea_smiths_built_198_1
+			custom_effect_tooltip = hea_smiths_198_1_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 198
+			}
+		}
+	}
+	hea_smiths_198_2 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+		 
+		available = {
+			has_full_control_of_state = 198
+			NOT = {
+				has_country_flag = hea_building_smiths
+			}
+			num_of_available_civilian_factories > 1
+		}
+		visible = {
+			has_completed_focus = hea_steam_smiths
+			has_country_flag = hea_smiths_built_198_1
+		}
+
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 2
+		}
+		complete_effect = {
+			set_country_flag = hea_building_smiths
+		}
+		remove_effect = {
+			subtract_from_variable = { hea_land_resource_metal = 10}
+			add_to_variable = { hea_land_resource_composites = 10}
+			clr_country_flag = hea_building_smiths
+			clr_country_flag = hea_smiths_built_198_1
+			set_country_flag = hea_smiths_built_198_2
+			custom_effect_tooltip = hea_smiths_198_2_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 198
+			}
+		}
+	}
+	#276-Stagleap
+	hea_smiths_276_1 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+		 
+		available = {
+			has_full_control_of_state = 276
+			NOT = {
+				has_country_flag = hea_building_smiths
+			}
+			num_of_available_civilian_factories > 1
+		}
+		visible = {
+			has_completed_focus = hea_steam_smiths
+		}
+
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 2
+		}
+		complete_effect = {
+			set_country_flag = hea_building_smiths
+		}
+		remove_effect = {
+			add_to_variable = { hea_land_resource_metal = 20}
+			clr_country_flag = hea_building_smiths
+			set_country_flag = hea_smiths_built_276_1
+			custom_effect_tooltip = hea_smiths_276_1_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 198
+			}
+		}
+	}
+	hea_smiths_276_2 = {
+		icon = x
+		cost = 30
+		fire_only_once = yes
+		 
+		available = {
+			has_full_control_of_state = 276
+			NOT = {
+				has_country_flag = hea_building_smiths
+			}
+			num_of_available_civilian_factories > 1
+		}
+		visible = {
+			has_completed_focus = hea_steam_smiths
+			has_country_flag = hea_smiths_built_276_1
+		}
+
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 2
+		}
+		complete_effect = {
+			set_country_flag = hea_building_smiths
+		}
+		remove_effect = {
+			subtract_from_variable = { hea_land_resource_metal = 10}
+			add_to_variable = { hea_land_resource_composites = 10}
+			clr_country_flag = hea_building_smiths
+			clr_country_flag = hea_smiths_built_276_1
+			set_country_flag = hea_smiths_built_276_2
+			custom_effect_tooltip = hea_smiths_276_2_tt
+		}
+		cancel_trigger = {
+			NOT = {
+				has_full_control_of_state = 276
+			}
+		}
+	}
+	#Final-Steam Smiths
+	hea_smiths_final = {
+		icon = x
+		cost = 75
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = hea_smiths_built_1385_2
+			has_country_flag = hea_smiths_built_198_2
+			has_country_flag = hea_smiths_built_276_2
+			num_of_available_civilian_factories > 3
+		}
+		visible = {
+			has_completed_focus = hea_steam_smiths
+		}
+
+		days_remove = 100
+		modifier = {
+			civilian_factory_use = 4
+		}
+		complete_effect = {
+			clr_country_flag = hea_smiths_built_1385_2
+			clr_country_flag = hea_smiths_built_198_2
+			clr_country_flag = hea_smiths_built_276_2
+		}
+		remove_effect = {
+			subtract_from_variable = { hea_land_resource_composites = 15}
+			add_to_variable = { hea_land_output = 0.1}
+			add_ideas = hea_steam_smiths_weapon
+			custom_effect_tooltip = hea_smiths_final_tt
+		}
+	}
+}

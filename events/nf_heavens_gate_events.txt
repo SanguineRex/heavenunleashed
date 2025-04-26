@@ -1,0 +1,674 @@
+add_namespace = nf_event_hea
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.1" }
+	id = nf_event_hea.1
+	title = nf_event_hea.1.t
+	desc = nf_event_hea.1.d
+	picture = GFX_event_HEA_crucifixion
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_event_hea.1.a
+		add_ideas = hea_startup_militant
+		custom_effect_tooltip = Ephesians
+		ai_chance = {
+			base = 50
+		}
+	}
+	option = {
+		name = nf_event_hea.1.b
+		add_ideas = hea_startup_agriculture
+		custom_effect_tooltip = Isaiah
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.2" }
+	id = nf_event_hea.2
+	title = nf_event_hea.2.t
+	desc = nf_event_hea.2.d
+	picture = GFX_event_NCN_new_canaan
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_event_hea.2.a
+		add_ideas = hea_startup_stationary_pilgrims
+		custom_effect_tooltip = Genesis
+		ai_chance = {
+			base = 50
+		}
+	}
+	option = {
+		name = nf_event_hea.2.b
+		add_ideas = hea_startup_traveling_pilgrims
+		custom_effect_tooltip = Psalm
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.3" }
+	id = nf_event_hea.3
+	title = nf_event_hea.3.t
+	desc = nf_event_hea.3.d
+	picture = GFX_event_HEA_church
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_event_hea.3.a
+		add_ideas = hea_startup_let_them_in
+		custom_effect_tooltip = Corinthians
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = nf_event_hea.3.b
+		add_ideas = hea_startup_better_be_careful
+		custom_effect_tooltip = Luke
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.4" }
+	id = nf_event_hea.4
+	title = nf_event_hea.4.t
+	desc = nf_event_hea.4.d
+	picture = GFX_event_HEA_shadowy_cabal
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_event_hea.4.a
+		custom_effect_tooltip = hea_innocence_lost_tt
+		if = {
+			limit = { has_idea = hea_startup_let_them_in }
+			add_ideas = hea_innocence_lost_idea
+		}
+
+		if = {
+			limit = { has_idea = hea_startup_better_be_careful }
+			add_ideas = hea_innocence_lost_idea_lessend
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+
+
+####High CHapel Question
+
+
+
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.100" }
+	id = nf_event_hea.100
+	title = nf_event_hea.100.t
+	desc = nf_event_hea.100.desc
+	picture = GFX_event_HEA_crusade
+
+	is_triggered_only = yes
+
+	option = { 
+		trigger = {
+		has_completed_focus = hea_nf_fog_of_mercy
+        }
+		name = nf_event_hea.100.a
+		hidden_effect = {
+		country_event = { id = nf_event_hea.101 days = 2}
+		}
+	}
+	option = { 
+		trigger = {
+		has_completed_focus = hea_nf_boilers_of_justice
+        }
+		name = nf_event_hea.100.b
+	create_wargoal =
+				{ 
+				type = annex_everything target = HGH
+				}
+	}
+}
+
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.101" }
+	id = nf_event_hea.101
+	title = nf_event_hea.101.t
+	desc = nf_event_hea.101.desc
+	picture = GFX_event_HEA_crusade
+
+	is_triggered_only = yes
+
+	option = { 
+		name = nf_event_hea.101.a
+		create_wargoal =
+				{ type = annex_everything target = HGH }
+		
+	}
+	
+}
+####New Canaan
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.266" }
+	id = nf_event_hea.266
+	title = nf_event_hea.266.t
+	desc = nf_event_hea.266.desc
+	picture = GFX_event_HEA_bishop2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = nf_event_hea.266.a
+	HEA = { country_event = { id = nf_event_hea.267 } }
+		
+	}
+	option = {
+		name = nf_event_hea.266.b
+	HEA = { country_event = { id = nf_event_hea.268 } }
+		
+	}
+		option = { 
+		name = nf_event_hea.266.c
+	HEA = { country_event = { id = nf_event_hea.269 } }
+		
+	}
+}
+
+
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.267" }
+	id = nf_event_hea.267
+	title = nf_event_hea.267.t
+	desc = nf_event_hea.267.desc
+	picture = GFX_event_HEA_bishop2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = nf_event_hea.267.a
+		HEA = {
+			add_to_faction = NCN
+		}
+		
+	}
+}
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.268" }
+	id = nf_event_hea.268
+	title = nf_event_hea.268.t
+	desc = nf_event_hea.268.desc
+	picture = GFX_event_HEA_bishop2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = nf_event_hea.268.a
+		HEA = {
+			give_guarantee = NCN
+			give_military_access = NCN
+		}
+		NCN = {
+		give_military_access = HEA	
+		}
+		
+	}
+}
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.269" }
+	id = nf_event_hea.269
+	title = nf_event_hea.269.t
+	desc = nf_event_hea.269.desc
+	picture = GFX_event_HEA_bishop2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = nf_event_hea.269.a
+		HEA = {
+			give_guarantee = NCN
+		}
+		
+	}
+
+}
+####Lonetree
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.266" }
+	id = nf_event_hea.270
+	title = nf_event_hea.270.t
+	desc = nf_event_hea.270.desc
+	picture = GFX_event_HEA_bishop2
+
+	is_triggered_only = yes
+
+	option = { 
+		name = nf_event_hea.270.a
+		custom_effect_tooltip = hea_lonetree_tt
+		HEA = {
+			give_guarantee = LON
+		}
+		LON = {
+		give_military_access = HEA	
+		}
+		
+	}
+
+}
+
+###Hand-dogs
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.525" }
+	id = nf_event_hea.525
+	title = nf_event_hea.525.t
+	desc = nf_event_hea.525.desc
+	picture = GFX_event_sub_generic_city
+
+	is_triggered_only = yes
+
+	option = { 
+		name = nf_event_hea.525.a
+		HEA = {
+				add_state_core = 525
+				}
+				custom_effect_tooltip = hea_colorado_tt
+				525 = {
+				set_temp_variable = { pop_add = -27859 }
+				add_state_population_no_state_name = yes
+			}
+	}
+
+}
+###Chained Witches
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.266" }
+	id = nf_event_hea.890
+	title = nf_event_hea.890.t
+	desc = nf_event_hea.890.desc
+	picture = GFX_event_HEA_shadowy_cabal
+
+	is_triggered_only = yes
+
+	option = { 
+		name = nf_event_hea.890.a
+		HEA = {
+				add_state_core = 890
+				}
+		add_manpower = 10000
+			890 = {
+				set_temp_variable = { pop_add = -17638 }
+				add_state_population_no_state_name = yes
+			}
+				set_province_name = { id = 12215 name = "Deus Vult"}
+	}
+}
+#####Approaching Utah Tribes
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.266" }
+	id = nf_event_hea.271
+	title = nf_event_hea.271.t
+	desc = nf_event_hea.271.desc
+	picture = GFX_event_HEA_bishop2
+
+	is_triggered_only = yes
+
+	option = {
+	trigger = {
+		TAG = SOR
+		
+	}		
+		name = nf_event_hea.271.a
+		HEA = {
+			add_to_faction = SOR
+		}
+		
+	}
+		option = { 
+			trigger = {
+		TAG = TAR
+		
+	}
+		name = nf_event_hea.271.b
+		HEA = {
+			add_to_faction = TAR
+		}
+		
+	}
+		option = { 
+			trigger = {
+		TAG = TAR
+		
+	}
+		name = nf_event_hea.271.c
+		HEA = {
+			give_guarantee = TAR
+		}
+		
+	}
+			option = { 
+				trigger = {
+		TAG = DEA
+
+	}
+		name = nf_event_hea.271.d
+		HEA = {
+			add_to_faction = DEA
+		}
+		
+	}
+		option = { 
+			trigger = {
+		TAG = DEA
+		
+	}
+		name = nf_event_hea.271.e
+		HEA = {
+			give_guarantee = DEA
+		}
+		
+	}
+			option = { 
+				trigger = {
+		TAG = CRZ
+		
+	}
+		name = nf_event_hea.271.f
+		HEA = {
+			add_to_faction = CRZ
+		}
+		
+	}
+		option = { 
+			trigger = {
+		TAG = CRZ
+		
+	}
+		name = nf_event_hea.271.g
+		HEA = {
+			give_guarantee = CRZ
+		}
+		
+	}
+			option = { 
+				trigger = {
+		TAG = UIN
+		
+	}
+		name = nf_event_hea.271.h
+		HEA = {
+			add_to_faction = UIN
+		}
+		
+	}
+		option = { 
+			trigger = {
+		TAG = UIN
+		
+	}
+		name = nf_event_hea.271.i
+		HEA = {
+			give_guarantee = UIN
+		}
+		
+	}
+
+}
+######News Event
+
+news_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.266" }
+	id = nf_event_hea.300
+	title = nf_event_hea.300.t
+	desc = nf_event_hea.300.desc
+	picture = GFX_event_HEA_crusade
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	option = { 
+	trigger = {
+		NOT = { 
+		TAG = HEA
+		}
+	}
+		name = nf_event_hea.300.a
+		
+	}
+			option = { 
+	trigger = {
+		TAG = HEA
+		
+	}
+		name = nf_event_hea.300.b
+		
+	}
+
+}
+
+news_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.266" }
+	id = nf_event_hea.301
+	title = nf_event_hea.301.t
+	desc = nf_event_hea.301.desc
+	picture = GFX_event_HEA_bishop2
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	option = { 
+	trigger = {
+		NOT = { 
+		TAG = HEA
+		}
+	}
+		name = nf_event_hea.301.a
+		
+	}
+			option = { 
+	trigger = {
+		TAG = HEA
+		
+	}
+		name = nf_event_hea.301.b
+		
+	}
+
+}
+
+
+
+######Seraphim Event Line
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.400" }
+	id = nf_event_hea.400
+	title = nf_event_hea.400.t
+	desc = nf_event_hea.400.desc
+	picture = GFX_event_HEA_bishop2
+
+	is_triggered_only = yes
+	
+
+	option = { 	
+	name = nf_event_hea.400.a
+		add_political_power = 75
+	}
+
+}
+
+###Redemption
+
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.266" }
+	id = nf_event_hea.411
+	title = nf_event_hea.411.t
+	desc = nf_event_hea.411.desc
+	picture = GFX_event_HEA_bishop2
+
+	is_triggered_only = yes
+	
+
+	option = { 	
+		name = nf_event_hea.411.a
+		add_manpower = 1000
+		set_country_flag = hea_forgiveness_path
+		mark_focus_tree_layout_dirty = yes
+	}
+
+}
+
+
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.266" }
+	id = nf_event_hea.412
+	title = nf_event_hea.412.t
+	desc = nf_event_hea.412.desc
+	picture = GFX_event_HEA_bishop2
+
+	is_triggered_only = yes
+	
+
+	option = { 	
+	name = nf_event_hea.412.a
+	}
+
+}
+###Vengeance
+
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.266" }
+	id = nf_event_hea.401
+	title = nf_event_hea.401.t
+	desc = nf_event_hea.401.desc
+	picture = GFX_event_HEA_bishop2
+
+	is_triggered_only = yes
+	
+
+	option = { 	
+		name = nf_event_hea.401.a
+		set_country_flag = hea_vengance_path
+		mark_focus_tree_layout_dirty = yes
+		swap_ideas = {
+			add_idea = hea_rampant_militarism
+			remove_idea = hea_innocence_lost_idea
+		}
+	}
+
+}
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.402" }
+	id = nf_event_hea.402
+	title = nf_event_hea.402.t
+	desc = nf_event_hea.402.desc
+	picture = GFX_event_HEA_bishop2
+
+	is_triggered_only = yes
+	
+
+	option = { 	
+		name = nf_event_hea.402.a
+	}
+}
+####Conquered Cities
+#High Chapel
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.600
+	title = nf_event_hea.600.t
+	desc = nf_event_hea.600.desc
+	picture = GFX_event_HEA_bishop2
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 172
+	}
+	option = { 	
+		name = nf_event_hea.600.a
+		country_event = { id = nf_event_hea.601 days = 1 }
+	}
+}
+#Amelia's Flag
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.601
+	title = nf_event_hea.601.t
+	desc = nf_event_hea.601.desc
+	picture = GFX_event_HEA_bishop2
+	is_triggered_only = yes
+	option = { 	
+		name = nf_event_hea.601.a
+	}
+}
+#Murtaugh
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.602
+	title = nf_event_hea.602.t
+	desc = nf_event_hea.602.desc
+	picture = GFX_event_HEA_bishop2
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 303
+	}
+	option = { 	
+		name = nf_event_hea.602.a
+	}
+}
+##Theological Assembly-Forgiveness Path
+#Ghouls
+country_event = {
+	id = nf_event_hea.501
+	title = nf_event_hea.501.t
+	desc = nf_event_hea.501.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_event_hea.501.a #"It's Complicated"
+		add_to_variable = { hea_theological_diplomacy_distance = 100}
+	}
+}
+#Lambs Astray
+country_event = {
+	id = nf_event_hea.502
+	title = nf_event_hea.502.t
+	desc = nf_event_hea.502.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_event_hea.502.a #Keep Theological Assembly to ourselves
+		add_to_variable = { hea_theological_stability = 0.05}
+		add_to_variable = { hea_theological_pp_gain_factor = 0.05}
+		add_to_variable = { hea_theological_defensive_war = 0.2}
+		custom_effect_tooltip = nf_event_hea.502.a_tt
+	}
+	option = {
+		name = nf_event_hea.502.b #Share Theological Assembly to everyone
+		set_country_flag = hea_theological_sharing
+		add_to_variable = { hea_theological_diplomacy_distance = 50}
+		add_to_variable = { hea_theological_research = 0.05}
+		add_to_variable = { hea_theological_pp_gain_factor = -0.05}
+		add_to_variable = { hea_theological_monthly_pop = 0.05}
+		add_to_variable = { hea_theological_war_support = -0.05}
+		add_to_variable = { hea_theological_offensive_war = -0.2}
+		custom_effect_tooltip = nf_event_hea.502.b_tt
+	}
+}
+

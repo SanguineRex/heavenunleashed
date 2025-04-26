@@ -1,0 +1,229 @@
+﻿l_english:
+ # decisions
+  hea_conversion:0 "Convert the Unfaithful"
+  hea_conversion_desc:0 "The people around us are unenlightened in the eyes of the lord. We must send out our missionaries to convert these sinners where they live, and slowly our influence and the influence of the lord will spread."
+  hea_slow_conversion:0 "Conversion Mission to [From.GetNameDef]"
+
+  hea_inquisition:0 "Send the Inquisitors to [From.GetNameDef]"
+
+  hea_bind_to_us:0 "Bind [From.GetNameDef] to Us!"
+  hea_bind_to_us_desc:0 "Our conversion missions have done their work, and we are ready to attempt to bring them closer to us and in to our fold."
+
+  HEA_the_tenth_crusade:0 "§tThe Tenth Crusade"
+  HEA_arming_faithful:0 "Arming the Faithful"
+  HEA_arming_faithful_desc:0 "There are countless loyal prepared to kill in the name of the lord, we must simply look and arm them..."
+
+  #decisions-michael's crusade
+  hea_michael_crusade_cat:0 "§RMichael's Crusades§!"
+  hea_muchael_crusade_cat_desc:0 "placeholder"
+  hea_michael_crusade_murtaugh:0 "Crusade against §7[MUR.GetNameWithFlag]§!"
+  hea_michael_crusade_timberline:0 "Crusade against §8[TIM.GetNameWithFlag]§!"
+  hea_michael_crusade_anointed:0 "Crusade against §R[ANO.GetNameWithFlag]§!"
+  hea_michael_crusade_lonetree:0 "Crusade against §Y[LON.GetNameWithFlag]§!"
+  hea_michael_crusade_shoshone:0 "Crusade against §4[SHO.GetNameWithFlag]§!"
+  hea_michael_crusade_boners:0 "Crusade against §0[BDT.GetNameWithFlag]§!"
+  hea_michael_crusade_yellowpark:0 "Crusade against §L[ROS.GetNameWithFlag]§!"
+
+##Decisions-Taming the Rivers
+hea_taming_river_cat:0 "Taming the §BRivers§!"
+hea_taming_river_cat_desc:0 "The §BRivers§! floating near §W[HEA.GetNameWithFlag]§! can be taken advantage of, constructing watermills all along our Eastern territories can help us gather energy, though not strictly necessary, the power from the mills could help future projects..."
+hea_building_water_mills:0 "Already constructing water mills"
+#18-Innocence Lost
+hea_water_mills_18_1:0 "Build water mills in [18.GetName]"
+hea_water_mills_18_1_tt:0 "§YThis will give us 15£resources_strip|1 and unlock further upgrades for the water mill"
+hea_water_mills_18_2:0 "Convert the water mills in [18.GetName]"
+hea_water_mills_18_2_tt:0 "§YThis will give us 8£resources_strip|2 in exchange for 5£resources_strip|1 and unlock the final upgrade for the water mill"
+hea_water_mills_18_3:0 "Build bathhouses in [18.GetName]"
+hea_water_mills_18_3_tt:0 "§YThis will give us 2,5% Stability, 5% Monthly Population Growth, 5% Non-core Manpower in exchange for 5£resources_strip|1 and 3£resources_strip|2"
+#116-Eastern Passage
+hea_water_mills_116_1:0 "Build water mills in [116.GetName]"
+hea_water_mills_116_1_tt:0 "§YThis will give us 15£resources_strip|1 and unlock further upgrades for the water mill"
+hea_water_mills_116_2:0 "Convert the water mills in [116.GetName]"
+hea_water_mills_116_2_tt:0 "§YThis will give us 8£resources_strip|2 in exchange for 5£resources_strip|1 and unlock the final upgrade for the water mill"
+hea_water_mills_116_3:0 "Build bathhouses in [116.GetName]"
+hea_water_mills_116_3_tt:0 "§YThis will give us 2,5% Stability, 5% Monthly Population Growth, 5% Non-core Manpower in exchange for 5£resources_strip|1 and 3£resources_strip|2"
+#278-Windy Isolation
+hea_water_mills_278_1:0 "Build water mills in [278.GetName]"
+hea_water_mills_278_1_tt:0 "§YThis will give us 15£resources_strip|1 and unlock further upgrades for the water mill"
+hea_water_mills_278_2:0 "Convert the water mills in [278.GetName]"
+hea_water_mills_278_2_tt:0 "§YThis will give us 8£resources_strip|2 in exchange for 5£resources_strip|1 and unlock the final upgrade for the water mill"
+hea_water_mills_278_3:0 "Build bathhouses in [278.GetName]"
+hea_water_mills_278_3_tt:0 "§YThis will give us 2,5% Stability, 5% Monthly Population Growth, 5% Non-core Manpower in exchange for 5£resources_strip|1 and 3£resources_strip|2"
+#198-Southern Gate
+hea_water_mills_198_1:0 "Build water mills in [198.GetName]"
+hea_water_mills_198_1_tt:0 "§YThis will give us 15£resources_strip|1 and unlock further upgrades for the water mill"
+hea_water_mills_198_2:0 "Convert the water mills in [198.GetName]"
+hea_water_mills_198_2_tt:0 "§YThis will give us 8£resources_strip|2 in exchange for 5£resources_strip|1 and unlock the final upgrade for the water mill"
+hea_water_mills_198_3:0 "Build bathhouses in [198.GetName]"
+hea_water_mills_198_3_tt:0 "§YThis will give us 2,5% Stability, 5% Monthly Population Growth, 5% Non-core Manpower in exchange for 5£resources_strip|1 and 3£resources_strip|2"
+
+##Decisions-Taming the Lands
+hea_taming_land_cat:0 "Taming the §8Lands§!"
+hea_taming_land_cat_desc:0 "God gifted us Earth to do what we will and we have conquered it in truth...yet have we tamed it? No, in truth, we simply reside in it but those of Heaven's Gate were chosen by the lord. We will use science, the nucleus, and all of its ardent people to bring the land to heel."
+hea_building_smiths:0 "Already constructing steam smiths"
+
+#1385-Western Tunnel
+hea_smiths_1385_1:0 "Build steam smiths in [1385.GetName]"
+hea_smiths_1385_1_tt:0 "§YThis will give us 20£resources_strip|3 and unlock further upgrades for the steam smith"
+hea_smiths_1385_2:0 "Upgrade the steam smiths in [1385.GetName]"
+hea_smiths_1385_2_tt:0 "§YThis will give us 10£resources_strip|4 in exchange for 10£resources_strip|3 and unlock a requirement for the final steam smiths decision"
+hea_smiths_built_1385_2:0 "Steam smiths upgraded in [1385.GetName]"
+#198-Southern Gate
+hea_smiths_198_1:0 "Build steam smiths in [198.GetName]"
+hea_smiths_198_1_tt:0 "§YThis will give us 20£resources_strip|3 and unlock further upgrades for the steam smith"
+hea_smiths_198_2:0 "Upgrade the steam smiths in [198.GetName]"
+hea_smiths_198_2_tt:0 "§YThis will give us 10£resources_strip|4 in exchange for 10£resources_strip|3 and unlock a requirement for the final steam smiths decision"
+hea_smiths_built_198_2:0 "Steam smiths upgraded in [198.GetName]"
+#276-Stagleap
+hea_smiths_276_1:0 "Build steam smiths in [276.GetName]"
+hea_smiths_276_1_tt:0 "§YThis will give us 20£resources_strip|3 and unlock further upgrades for the steam smith"
+hea_smiths_276_2:0 "Upgrade the steam smiths in [276.GetName]"
+hea_smiths_276_2_tt:0 "§YThis will give us 10£resources_strip|4 in exchange for 10£resources_strip|3 and unlock a requirement for the final steam smiths decision"
+hea_smiths_built_276_2:0 "Steam smiths upgraded in [276.GetName]"
+
+#Steam smiths-final
+hea_smiths_final:0 "Construct new steam smiths weapons"
+hea_smiths_final_tt:0 "§YThis will give us 10% Factory Output and a National Spirit improving our weapons's reliability in exchange for 15£resources_strip|4"
+
+##Decisions-Taming the Heavens
+hea_taming_heaven_cat:0 "Taming the §4Heavens§!"
+hea_taming_heaven_cat_desc:0 "How can we say to be close to God when we huddle beneath the mountains? Should we not endeavor to master what was given to us? Of course we should! WE are the chosen of God, WE were gifted the Nucleus, WE are the masters of our minds, and WE shall tame the Heaven's themselves..."
+hea_capturing_scientists:0 "Already capturing scientists"
+
+hea_alchemist_276:0 "Scientists from [276.GetName]"
+hea_alchemist_276_tt:0 "§YThis will give us 2.5% Research Bonus"
+hea_captured_scientists_276:0 "Scientists captured from [276.GetName]"
+
+hea_alchemist_30:0 "Scientists from [30.GetName]"
+hea_alchemist_30_tt:0 "§YThis will give us 2.5% Research Bonus"
+hea_captured_scientists_30:0 "Scientists captured from [30.GetName]"
+
+hea_alchemist_700:0 "Scientists from [700.GetName]"
+hea_alchemist_700_tt:0 "§YThis will give us 2.5% Research Bonus"
+hea_captured_scientists_700:0 "Scientists captured from [700.GetName]"
+
+hea_alchemist_949:0 "Scientists from [949.GetName]"
+hea_alchemist_949_tt:0 "§YThis will give us 2.5% Research Bonus"
+hea_captured_scientists_949:0 "Scientists captured from [949.GetName]"
+
+hea_alchemist_950:0 "Scientists from [950.GetName]"
+hea_alchemist_950_tt:0 "§YThis will give us 2.5% Research Bonus"
+hea_captured_scientists_950:0 "Scientists captured from [950.GetName]"
+
+hea_alchemist_final_research:0 "§YOR:§!Heaven's Gate Research Team"
+hea_alchemist_final_research_tt:0 "§YThis will give us 7.5% Research Bonus but lock us out of §YHeaven's Gate Advanced Resources Team§!"
+
+hea_alchemist_final_resource:0 "§YOR:§!Heaven's Gate Advanced Resources Team"
+hea_alchemist_final_resource_tt:0 "§YThis will give us 40£resources_strip|5 and 40£resources_strip|6 but lock us out of §YHeaven's Gate Research Team§!"
+
+##########################
+##Monsters of the Wastes##
+##########################
+hea_monsters_of_the_wastes_cat:0 "§RMonsters of the Wastes§!"
+hea_monsters_of_the_wastes_cat_desc:0 "§t    "As I live,” declares the Lord God, “Surely because My flock has become a prey, My flock has even become food for all the beasts of the field for lack of a shepherd, and My shepherds did not search for My flock, but rather the shepherds fed themselves and did not feed My flock.\n   - Ezekiel 34:8"
+
+##The Dead are Walking
+hea_monsters_last_patrol:0 "§LPurge [TLP.GetNameWithFlag]"
+hea_monsters_old_country:0 "§LPurge [TOC.GetNameWithFlag]"
+hea_monsters_withered_dogs:0 "§LPurge [WHD.GetNameWithFlag]"
+hea_monsters_luminous_ones:0 "§LPurge [LUM.GetNameWithFlag]"
+hea_monsters_glowbugs:0 "§LPurge [GLW.GetNameWithFlag]"
+hea_monsters_glow_cradle:0 "§LPurge [GLC.GetNameWithFlag]"
+hea_monsters_pioneer_company:0 "§LPurge [COM.GetNameWithFlag]"
+hea_monsters_crow_creek:0 "§LPurge [LAP.GetNameWithFlag]"
+hea_monsters_ceasar_legion:0 "§LPurge [CES.GetNameWithFlag]"
+hea_monsters_sinaloa_cartel:0 "§LPurge [SIN.GetNameWithFlag]"
+hea_monsters_beltran_levya:0 "§LPurge [BLO.GetNameWithFlag]"
+hea_monsters_chiapas:0 "§LPurge [CAF.GetNameWithFlag]"
+hea_monsters_kamlo:0 "§LPurge [KAM.GetNameWithFlag]"
+hea_monsters_vault_city:0 "§LPurge [VLT.GetNameWithFlag]"
+hea_monsters_new_reno_ghouls:0 "§LPurge [NEW.GetNameWithFlag]"
+hea_monsters_manitoba:0 "§LPurge [BRA.GetNameWithFlag]"
+hea_monsters_rad_hazards:0 "§LPurge [URA.GetNameWithFlag]"
+hea_monsters_reservations:0 "§LPurge [RES.GetNameWithFlag]"
+hea_monsters_ghouls:0 "§LGhouls Targets Purged"
+
+##Cain's Empire
+hea_monsters_washington_brotherhood:0 "§1Purge [WBH.GetNameWithFlag]"
+hea_monsters_cains:0 "§1Purged [WBH.GetNameWithFlag]"
+
+##Horde of Nephilim
+hea_monsters_the_cause:0 "§GPurge [TCA.GetNameWithFlag]"
+hea_monsters_max_sec:0 "§GPurge [MXS.GetNameWithFlag]"
+hea_monsters_troll_warren:0 "§GPurge [TRL.GetNameWithFlag]"
+hea_monsters_new_reno_mutants:0 "§GPurge [NEW.GetNameWithFlag]"
+hea_monsters_slanter:0 "§GPurge [SLN.GetNameWithFlag]"
+hea_monsters_stoon_dandies:0 "§GPurge [STN.GetNameWithFlag]"
+hea_monsters_deadline:0 "§GPurge [DED.GetNameWithFlag]"
+hea_monsters_utobitha:0 "§GPurge [UTO.GetNameWithFlag]"
+hea_monsters_jacobstown:0 "§GPurge [JCT.GetNameWithFlag]"
+hea_monsters_far_son:0 "§GPurge [PRO.GetNameWithFlag]"
+hea_monsters_shale_army:0 "§GPurge [SHA.GetNameWithFlag]"
+hea_monsters_unity_austin:0 "§GPurge [UOA.GetNameWithFlag]"
+hea_monsters_ironmongers:0 "§GPurge [IMO.GetNameWithFlag]"
+hea_monsters_crusher_army:0 "§GPurge [CRH.GetNameWithFlag]"
+hea_monsters_mutants:0 "§GMutants Targets Purged"
+
+##Leviathans dwelling in the Coast
+hea_monsters_mirelurk_tribe:0 "§4Purge [MLT.GetNameWithFlag]"
+hea_monsters_the_apostles:0 "§4Purge [DIS.GetNameWithFlag]"
+hea_monsters_mirelurks:0 "§4Mirelurks Targets Purged"
+
+##Steel Puppets
+hea_monsters_tv_town:0 "§gPurge [TVT.GetNameWithFlag]"
+hea_monsters_middlemark:0 "§gPurge [MDM.GetNameWithFlag]"
+hea_monsters_pleasantdale:0 "§gPurge [PLT.GetNameWithFlag]"
+hea_monsters_gateway:0 "§gPurge [TPA.GetNameWithFlag]"
+hea_monsters_big_grass:0 "§gPurge [BGR.GetNameWithFlag]"
+hea_monsters_army_depot:0 "§gPurge [RAD.GetNameWithFlag]"
+hea_monsters_robot_city:0 "§gPurge [ROB.GetNameWithFlag]"
+hea_monsters_odysseus:0 "§gPurge [ODY.GetNameWithFlag]"
+hea_monsters_warden:0 "§gPurge [WDN.GetNameWithFlag]"
+hea_monsters_broken_hearts:0 "§gPurge [BRT.GetNameWithFlag]"
+hea_monsters_twin_mothers:0 "§gPurge [TTM.GetNameWithFlag]"
+hea_monsters_tubeheads:0 "§gPurge [TUB.GetNameWithFlag]"
+hea_monsters_santa_anna:0 "§gPurge [ARM.GetNameWithFlag]"
+hea_monsters_zapata:0 "§gPurge [ZAP.GetNameWithFlag]"
+hea_monsters_maximilian:0 "§gPurge [MAX.GetNameWithFlag]"
+hea_monsters_aztec:0 "§gPurge [MOC.GetNameWithFlag]"
+hea_monsters_tlalocan:0 "§gPurge [TLA.GetNameWithFlag]"
+hea_monsters_petro_chico:0 "§gPurge [PET.GetNameWithFlag]"
+hea_monsters_robots:0 "§gRobots Targets Purged"
+
+##The Red Devils
+hea_monsters_strathcommune:0 "§RPurge [STC.GetNameWithFlag]"
+hea_monsters_loid_ministry:0 "§RPurge [LOI.GetNameWithFlag]"
+hea_monsters_redding:0 "§RPurge [RDS.GetNameWithFlag]"
+hea_monsters_communists:0 "§RCommunists Targets Purged"
+
+ # tooltips
+  hea_converted_state_tt:0 "The state will be converted"
+  hea_not_converted_state_tt:0 "We have not converted a state they own"
+  hea_convert_state_tt:0 "We have converted some or all of their states."
+  hea_bind_to_us_attempt_tt:0 "We will attempt to bind their state to ours!"
+  binding_someone:0 "Not already Binding Another to us."
+  binding_warning_tt:0 "The more of the targets states we have converted, the better the chance we have of success - but be warned, failure will undo our conversion work in a number of states!"
+  impassable_states_dont_matter:0 "§RNote: Impassable states do not matter when converting someone.§!"
+###################################
+# Spreading the Faith
+###################################
+
+HEA_findcathedrals: "§YFind Cathedrals§!"
+HEA_findcathedrals_desc: "A Cathedral and its Shepherds are prepared to spread the word by your leave..."
+HEA_spreadthegoodword: "§YEducate the Masses§!"
+hea_spreadthewordtt: "Our priests will set forth and spread the word! The wasteland will know the holy gospel."
+
+spreadthewordhea: "Spreading the Word!"
+spreadthewordhea_tt: "Spreading the Word!"
+spreadthewordhea_tt_delayed: "[!spreadthewordhea_click]Requires:\n[!spreadthewordhea_click_enabled]"
+spreadthewordhea_tt: "Spreading the Word!"
+spreadthewordhea_tt_delayed: "This state's populace has rejoined the flock.\n§RRemoving the Cathedral will uncore the state.§!"
+
+spreadthewordhea_ttt: " - costs 2 §YEnergy§! to maintain."
+spreadthewordhea_architect_tt: "Costs 2 §YEnergy§! to maintain."
+hea_cathedral: "Steam Cathedral"
+hea_cathedral_desc: "Allows a populace to be §Gconverted§!"
+modifier_production_speed_hea_cathedral: "§YSteam Cathedral§! production speed"
+modifier_production_speed_hea_cathedral_desc: ""
+modifier_production_speed_hea_cathedral_factor: "§YSteam Cathedral§! production speed"
+modifier_production_speed_hea_cathedral: ""

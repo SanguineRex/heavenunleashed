@@ -1,0 +1,18 @@
+spriteTypes = {
+	##############################################################################
+	####  COUNTRY EVENTS need to be event_[name].dds        ######################
+	##############################################################################
+
+	spriteType = {
+		name = "GFX_event_hea_bathhouse_event"
+		texturefile = "gfx/event_pictures/hea_bathhouse_event.dds"
+	}
+	spriteType = {
+		name = "GFX_event_hea_bathhouse_event"
+		texturefile = "gfx/event_pictures/hea_bathhouse_event.dds"
+	}
+	spriteType = {
+		name = "GFX_event_hea_bathhouse_event"
+		texturefile = "gfx/event_pictures/hea_bathhouse_event.dds"
+	}
+}

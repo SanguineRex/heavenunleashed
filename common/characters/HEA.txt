@@ -1,0 +1,71 @@
+characters = {
+	HEA_saint_michael = {
+		name = "Saint Michael"
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_HEA_leader
+			}
+		}
+		field_marshal = {
+			traits = {
+				intelligent_trait
+				pain_train_trait
+				strong_trait
+			}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = 10143
+		}
+		country_leader = {
+			desc = MICHAEL_DESC
+			ideology = benevolent_dictatorship
+			traits = {
+				isolationist_trait
+			}
+			expire = "3000.01.01.01"
+			id = 10141
+		}
+	}
+	HEA_steammaiden_mira = {
+		name = "Steam-Maiden Mira"
+		portraits = {
+			army = {
+				large = GFX_Portrait_HEA_Generic_4
+			}
+		}
+		corps_commander = {
+			traits = {
+				perceptive_trait
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 10144
+		}
+	}
+	HEA_mother_magdalene = {
+		name = "Mother Magdalene"
+		portraits = {
+			army = {
+				large = GFX_Portrait_HEA_Generic_5
+			}
+		}
+		corps_commander = {
+			traits = {
+				lucky_trait
+				bloody_mess_trait
+			}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = 10145
+		}
+	}
+}

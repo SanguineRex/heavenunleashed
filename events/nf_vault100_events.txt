@@ -1,0 +1,1081 @@
+﻿add_namespace = nf_toc
+add_namespace = nf_rot
+add_namespace = nf_wardens
+add_namespace = nf_infinity
+add_namespace = nf_brigid
+
+##############################
+### THE OLD COUNTRY EVENTS ###
+##############################
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_toc.1" }
+	id = nf_toc.1
+	title = nf_toc.1.t
+	desc = nf_toc.1.d
+	picture = GFX_event_sub_generic_tunnel
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_toc.1.a
+		add_equipment_to_stockpile = {
+			type = ballistic_equipment_1
+			amount = 250
+			producer = USA
+		}
+		random_owned_state = {
+			add_resource = {
+				type = metal
+				amount = 4
+			}
+		}
+	}
+	option = {
+		name = nf_toc.1.b
+		random_owned_state = {
+			add_resource = {
+				type = water
+				amount = 6
+			}
+		}
+		random_owned_state = {
+			add_resource = {
+				type = energy
+				amount = 6
+			}
+		}
+	}
+	option = {
+		name = nf_toc.1.c
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_toc.2" }
+	id = nf_toc.2
+	title = nf_toc.2.t
+	desc = nf_toc.2.d
+	picture = GFX_event_TOC_warden_flag_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_toc.2.a
+		add_ideas = toc_trust_warden_authority
+	}
+	option = {
+		name = nf_toc.2.b
+		add_country_leader_trait = TOC_grozdan_resolute
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_toc.3" }
+	id = nf_toc.3
+	title = nf_toc.3.t
+	desc = nf_toc.3.d
+	picture = GFX_event_TOC_warden_stand
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_toc.3.a
+		add_timed_idea = {
+			idea = toc_julius_plan
+			days = 425
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_valid_state_for_2_arms_factories = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	option = {
+		name = nf_toc.3.b
+		add_timed_idea = {
+			idea = toc_grozdan_plan
+			days = 425
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_valid_state_for_2_civilian_factories = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_toc.4" }
+	id = nf_toc.4
+	title = nf_toc.4.t
+	desc = nf_toc.4.d
+	picture = GFX_event_generic_caravan_game
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_toc.4.a
+		complete_national_focus = TOC_wardens_takeover
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				is_ally_with = WBH
+			}
+		}
+
+	}
+	option = {
+		name = nf_toc.4.b
+		complete_national_focus = TOC_grozdan_stays_aloft
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_toc.5" }
+	id = nf_toc.5
+	title = nf_toc.5.t
+	desc = nf_toc.5.d
+	picture = GFX_event_BRK_raider2
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_toc.5.a
+		add_political_power = 75
+	}
+}
+
+news_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_toc.6" }
+	id = nf_toc.6
+	title = nf_toc.6.t
+	desc = nf_toc.6.d
+	picture = GFX_event_fallout_moon
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_toc.6.a
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_toc.7" }
+	id = nf_toc.7
+	title = nf_toc.7.t
+	desc = nf_toc.7.d
+	picture = GFX_event_sla_ghostfarm
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_toc.7.a
+		complete_national_focus = TOC_wardens_side
+	}
+	option = {
+		name = nf_toc.7.b
+		complete_national_focus = TOC_lionhearted
+	}
+}
+
+news_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_toc.8" }
+	id = nf_toc.8
+	title = nf_toc.8.t
+	desc = nf_toc.8.d
+	picture = GFX_event_generic_raider_1
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_toc.8.a
+		army_experience = 50
+	}
+}
+
+unit_leader_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_toc.9" }
+	id = nf_toc.9
+	title = nf_toc.9.t
+	desc = nf_toc.9.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_toc.9.a
+	}
+}
+
+news_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_toc.10" }
+	id = nf_toc.10
+	title = nf_toc.10.t
+	desc = nf_toc.10.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_toc.10.a
+		remove_state_core = 738
+		transfer_state = 556
+		transfer_state = 424
+		transfer_state = 609
+		transfer_state = 737
+		TOC = {
+			puppet = OLY
+		}
+		VIC = {
+			transfer_state = 738
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_toc.11" }
+	id = nf_toc.11
+	title = nf_toc.11.t
+	desc = nf_toc.11.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_toc.11.a
+		ai_chance = {
+			base = 1
+		}
+		OLY = {
+			news_event = {
+				id = nf_toc.10
+			}
+		}
+	}
+	option = {
+		name = nf_toc.11.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+##############################
+### THE OLD COUNTRY EVENTS ###
+### WARDENS GRAND RETURN   ###
+##############################
+
+news_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_wardens.1" }
+	id = nf_wardens.1
+	title = nf_wardens.1.t
+	desc = nf_wardens.1.d
+	picture = GFX_event_TOC_warden_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_wardens.1.a
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_wardens.2" }
+	id = nf_wardens.2
+	title = nf_wardens.2.t
+	desc = nf_wardens.2.d
+	picture = GFX_event_ROT_showdown
+
+	is_triggered_only = yes
+
+	option = { #Samson
+		name = nf_wardens.2.a
+		set_country_flag = toc_shudder_extra_fly
+	}
+	option = { #Brigid
+		name = nf_wardens.2.b
+		set_country_flag = toc_shudder_less_fly
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_wardens.3" }
+	id = nf_wardens.3
+	title = nf_wardens.3.t
+	desc = nf_wardens.3.d
+	picture = GFX_event_TOC_warden_breach
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_wardens.3.a
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_wardens.4" }
+	id = nf_wardens.4
+	title = nf_wardens.4.t
+	desc = nf_wardens.4.d
+	picture = GFX_event_TOC_warden_breach
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_wardens.4.a
+		custom_effect_tooltip = "We will gain Anya Koester as an incredibly skilled Corps Commander. Throughout the Wardens campaign, we may receive units or buffs!"
+		set_country_flag = PMR_anya_koester_flag
+		TOC = {
+			country_event = {
+				id = nf_wardens.8
+				days = 7
+			}
+		}
+	}
+	option = {
+		name = nf_wardens.4.b
+		add_equipment_to_stockpile = {
+			type = ballistic_equipment_2
+			amount = 300
+			producer = USA
+		}
+		add_equipment_to_stockpile = {
+			type = ballistic_equipment_3
+			amount = 200
+			producer = USA
+		}
+		add_equipment_to_stockpile = {
+			type = ballistic_equipment_4
+			amount = 50
+			producer = USA
+		}
+	}
+}
+
+news_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_wardens.5" }
+	id = nf_wardens.5
+	title = nf_wardens.5.t
+	desc = nf_wardens.5.d
+	picture = GFX_event_TOC_warden_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_wardens.5.a
+		BEL = {
+			ROOT = {
+				core_owned_states_of_prev = yes
+			}
+		}
+		remove_country_leader_trait = TOC_winterbreaker_locked
+		add_country_leader_trait = TOC_winterbreaker
+		if = {
+			limit = {
+				PMR = {
+					exists = yes
+					has_country_flag = PMR_anya_koester_flag
+				}
+			}
+			hidden_effect = {
+				PMR = {
+					load_oob = PMR_anya_repeatable
+				}
+			}
+			custom_effect_tooltip = anya_strengthen_tt
+		}
+	}
+}
+
+news_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_wardens.6" }
+	id = nf_wardens.6
+	title = nf_wardens.6.t
+	desc = nf_wardens.6.d
+	picture = GFX_event_TOC_warden_breach
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_wardens.6.a
+		PMR = {
+			ROOT = {
+				core_owned_states_of_prev = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_wardens.7" }
+	id = nf_wardens.7
+	title = nf_wardens.7.t
+	desc = nf_wardens.7.d
+	picture = GFX_event_TOC_warden_retreat
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_wardens.7.a
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_wardens.8" }
+	id = nf_wardens.8
+	title = nf_wardens.8.t
+	desc = nf_wardens.8.d
+	picture = GFX_event_TOC_warden_breach
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_wardens.8.a
+	}
+}
+
+#########################
+### ROTPURGERS EVENTS ###
+#########################
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.1" }
+	id = nf_rot.1
+	title = nf_rot.1.t
+	desc = nf_rot.1.d
+	picture = GFX_event_sub_generic_tunnel
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.1.a
+		418 = {
+			add_resource = {
+				type = water
+				amount = 5
+			}
+			add_resource = {
+				type = metal
+				amount = 3
+			}
+		}
+	}
+	option = {
+		name = nf_rot.1.b
+		add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 350
+				producer = USA
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.2" }
+	id = nf_rot.2
+	title = nf_rot.2.t
+	desc = nf_rot.2.d
+	picture = GFX_event_BRK_raider2
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.2.a
+		418 = {
+			add_resource = {
+				type = water
+				amount = 3
+			}
+			add_resource = {
+				type = energy
+				amount = 3
+			}
+		}
+	}
+	option = {
+		name = nf_rot.2.b
+		add_offsite_building = {
+			type = arms_factory
+			level = 2
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.3" }
+	id = nf_rot.3
+	title = nf_rot.3.t
+	desc = nf_rot.3.d
+	picture = GFX_event_ROT_samson
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.3.a
+		add_manpower = 350
+	}
+	option = {
+		name = nf_rot.3.b
+		346 = {
+			add_building_construction = {
+				type = bunker
+				level = 3
+				instant_build = yes
+				province = {
+					id = 7202
+				}
+			}
+		}
+		418 = {
+			add_building_construction = {
+				type = bunker2
+				level = 3
+				instant_build = yes
+				province = {
+					id = 4001
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.4" }
+	id = nf_rot.4
+	title = nf_rot.4.t
+	desc = nf_rot.4.d
+	picture = GFX_event_ROT_showdown
+
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			NOT = { is_in_faction_with = HEA }
+		}
+		name = nf_rot.4.a
+		country_event = {
+			id = nf_rot.8
+		}
+		ai_chance = {
+			modifier = {
+				OR = {
+					ROT_has_ai_behavior_grand_inquisition = yes
+					ROT_has_ai_behavior_wishmaidens = yes
+				}
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = nf_rot.4.b
+		country_event = {
+			id = nf_rot.6
+		}
+		ai_chance = {
+			modifier = {
+				OR = {
+					ROT_has_ai_behavior_infinity_knights = yes
+					ROT_has_ai_behavior_wishmaidens = yes
+				}
+				factor = 0
+			}
+		}
+	}
+	option = {
+			trigger = {
+			NOT = { is_in_faction_with = HEA }
+		}
+		name = nf_rot.4.c
+		country_event = {
+			id = nf_rot.7
+		}
+		ai_chance = {
+			modifier = {
+				OR = {
+					ROT_has_ai_behavior_infinity_knights = yes
+					ROT_has_ai_behavior_grand_inquisition = yes
+				}
+				factor = 0
+			}
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.5" }
+	id = nf_rot.5
+	title = nf_rot.5.t
+	desc = nf_rot.5.d
+	picture = GFX_event_ROT_wishmaiden_generic
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.5.a
+		custom_effect_tooltip = women_are_fucking_badass_pog_tt
+		custom_effect_tooltip = women_are_fucking_badass_tt
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.6" }
+	id = nf_rot.6
+	title = nf_rot.6.t
+	desc = nf_rot.6.d
+	picture = GFX_event_ROT_jacobia_generic
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.6.a
+		complete_national_focus = ROT_jacobia
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.7" }
+	id = nf_rot.7
+	title = nf_rot.7.t
+	desc = nf_rot.7.d
+	picture = GFX_event_ROT_wishmaiden_lady
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.7.a
+		complete_national_focus = ROT_ladyofthelake
+		add_ideas = all_female_leadership
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.8" }
+	id = nf_rot.8
+	title = nf_rot.8.t
+	desc = nf_rot.8.d
+	picture = GFX_event_ROT_samson
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.8.a
+		complete_national_focus = ROT_samson
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.9" }
+	id = nf_rot.9
+	title = nf_rot.9.t
+	desc = nf_rot.9.d
+	picture = GFX_event_BDT_geck
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.9.a
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.10" }
+	id = nf_rot.10
+	title = nf_rot.10.t
+	desc = nf_rot.10.d
+	picture = GFX_event_sub_generic_war_room
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.10.a
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.11" }
+	id = nf_rot.11
+	title = nf_rot.11.t
+	desc = nf_rot.11.d
+	picture = GFX_event_sub_generic_war_room
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.11.a
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.12" }
+	id = nf_rot.12
+	title = nf_rot.12.t
+	desc = nf_rot.12.d
+	picture = GFX_event_sub_generic_war_room
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.12.a
+	}
+}
+
+country_event = { #A Motherly Gaze upon All Things Pure Of Heart
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.13" }
+	id = nf_rot.13
+	title = nf_rot.13.t
+	desc = nf_rot.13.d
+	picture = GFX_event_ROT_wishmaiden_lady
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.13.a
+		custom_effect_tooltip = force_adoption_got_me_like_tt
+	}
+}
+
+#this was taken out due to postgame additions in 4.x
+#country_event = { #Warriors Of A Similar Caliber
+#	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.14" }
+#	id = nf_rot.14
+#	title = nf_rot.14.t
+#	desc = nf_rot.14.d
+#	picture = GFX_event_ROT_sistermaidens
+
+#	is_triggered_only = yes
+
+#	option = {
+#		name = nf_rot.14.a
+#	}
+#}
+
+country_event = { #An Infinite Audience
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.15" }
+	id = nf_rot.15
+	title = nf_rot.15.t
+	desc = nf_rot.15.d
+	picture = GFX_event_ROT_samson
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.15.a
+		custom_effect_tooltip = samson_touches_balls_tt
+		hidden_effect = {
+			random_list = {
+				70 = {
+					country_event = {
+						id = nf_rot.103
+					}
+				}
+				30 = {
+					country_event = {
+						id = nf_rot.102
+					}
+				}
+			}
+		}
+	}
+}
+
+
+country_event = { #A Woman's Worth
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.16" }
+	id = nf_rot.16
+	title = nf_rot.16.t
+	desc = nf_rot.16.d
+	picture = GFX_event_ROT_jacobia_generic
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.16.a
+		add_stability = 0.05
+		capital_scope = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+	option = {
+		name = nf_rot.16.b
+		add_political_power = 100
+		hidden_effect = {
+			set_country_flag = rot_gabrielle_keen_dead_asf
+		}
+	}
+}
+
+news_event = { #Wishmaidens Brutality
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.18" }
+	id = nf_rot.18
+	title = nf_rot.18.t
+	desc = nf_rot.18.d
+	picture = GFX_event_ROT_wishmaiden_lady
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.18.a
+	}
+}
+
+country_event = { #Galahadria lore
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.19" }
+	id = nf_rot.19
+	title = nf_rot.19.t
+	desc = nf_rot.19.d
+	picture = GFX_event_ROT_wishmaiden_lady
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.19.a
+	}
+}
+
+#########################
+### ROTPURGERS EVENTS ###
+### 8-BALL SHENANIGANS###
+#########################
+
+country_event = { #Samson, The Truest Demigopd
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.17" }
+	id = nf_rot.17
+	title = nf_rot.17.t
+	desc = nf_rot.17.d
+	picture = GFX_event_ROT_samson_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.17.a
+	}
+}
+
+country_event = { #BALL! BALL! BALL!
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.100" }
+	id = nf_rot.100
+	title = nf_rot.100.t
+	desc = nf_rot.100.d
+	picture = GFX_event_ROT_8_ball
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.100.a
+		random_neighbor_country = {
+			ROOT = {
+				grant_wargoals_on_core_states_of_prev = yes
+			}
+		}
+	}
+}
+
+country_event = { #BALL! BALL! BALL!
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.101" }
+	id = nf_rot.101
+	title = nf_rot.101.t
+	desc = nf_rot.101.d
+	picture = GFX_event_ROT_8_ball
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.101.a
+		add_political_power = 50
+		add_command_power = 5
+	}
+}
+
+country_event = { #BALL! BALL! BALL!
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.102" }
+	id = nf_rot.102
+	title = nf_rot.102.t
+	desc = nf_rot.102.d
+	picture = GFX_event_ROT_8_ball
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.102.a
+		country_event = {
+			id = nf_rot.15
+		}
+	}
+}
+
+country_event = { #BALL! BALL! BALL!
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rot.103" }
+	id = nf_rot.103
+	title = nf_rot.103.t
+	desc = nf_rot.103.d
+	picture = GFX_event_ROT_8_ball
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rot.103.a
+		add_stability = 0.05
+		capital_scope = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+}
+
+#########################
+### ROTPURGERS EVENTS ###
+### BRIGIDS QUEST	  ###
+#########################
+
+news_event = { #The Death of the Lady
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_brigid.1" }
+	id = nf_brigid.1
+	title = nf_brigid.1.t
+	desc = nf_brigid.1.d
+	picture = GFX_event_ROT_wishmaiden_generic
+
+	is_triggered_only = yes
+
+	option = { #A calamity has befallen the tribe!
+		name = nf_brigid.1.a
+		add_country_leader_role = {
+			character = "ROT_brigit"
+			country_leader = {
+				ideology=tribal_council
+				expire="3000.01.01.01"
+				traits = {
+					ROT_brigid_trait_1_locked
+					ROT_brigid_trait_2_locked
+					ROT_brigid_trait_3_locked
+				}
+			}
+			promote_leader = yes
+		}
+		custom_effect_tooltip = wishmaidens_decisions_tt
+		set_country_flag = ROT_lady_death_flag
+	}
+}
+
+country_event = { #Assemble the Shamans
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_brigid.2" }
+	id = nf_brigid.2
+	title = nf_brigid.2.t
+	desc = nf_brigid.2.d
+	picture = GFX_event_ROT_wishmaiden_generic
+
+	is_triggered_only = yes
+
+	option = { #This will require deliberation...
+		name = nf_brigid.2.a
+	}
+}
+
+country_event = { #Brigid calls for The Clerics of the Wishing Well to assemble
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_brigid.3" }
+	id = nf_brigid.3
+	title = nf_brigid.3.t
+	desc = nf_brigid.3.d
+	picture = GFX_event_ROT_wishmaiden_generic
+
+	is_triggered_only = yes
+
+	option = { #Strange things are afoot in Spokane.
+		name = nf_brigid.3.a
+		remove_country_leader_trait = ROT_brigid_trait_1_locked
+		add_country_leader_trait = ROT_brigid_runechild
+		set_country_flag = rot_friends_til_the_end_flag
+	}
+}
+
+country_event = { #Vault 45
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_brigid.4" }
+	id = nf_brigid.4
+	title = nf_brigid.4.t
+	desc = nf_brigid.4.d
+	picture = GFX_event_ROT_vault_45
+
+	is_triggered_only = yes
+
+	option = { #Avalon...
+		name = nf_brigid.4.a
+		country_event = {
+			id = nf_brigid.5
+		}
+	}
+}
+
+country_event = { #Vault 45 - Depths
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_brigid.5" }
+	id = nf_brigid.5
+	title = nf_brigid.5.t
+	desc = nf_brigid.5.d
+	picture = GFX_event_ROT_vault_45
+
+	is_triggered_only = yes
+
+	option = { #Descend
+		name = nf_brigid.5.a
+		country_event = {
+			id = nf_brigid.6
+		}
+	}
+}
+
+country_event = { #Vault 45 - What They Wrought
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_brigid.6" }
+	id = nf_brigid.6
+	title = nf_brigid.6.t
+	desc = nf_brigid.6.d
+	picture = GFX_event_ROT_vault_45
+
+	is_triggered_only = yes
+
+	option = { #Long live the Wishmaidens!
+		name = nf_brigid.6.a
+		remove_country_leader_trait = ROT_brigid_trait_3_locked
+		add_country_leader_trait = ROT_brigid_she_who_stared_into_the_abyss
+		capital_scope = {
+			add_resource = {
+				type = metal
+				amount = 5
+			}
+		}
+		custom_effect_tooltip = wishmaidens_no_more_suffering_tt
+		set_cosmetic_tag = ROT_wishmaidens_good
+	}
+}

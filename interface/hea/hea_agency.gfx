@@ -1,0 +1,28 @@
+spriteTypes = {
+
+	###########################
+	####### Heaven's Gate #####
+	###########################
+
+	spriteType = {
+	noOfFrames = 2
+		name = "GFX_agency_logo_HEA"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_HEA.dds"
+	}
+		spriteType = {
+	noOfFrames = 2
+		name = "GFX_agency_logo_HEA2"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_HEA2.dds"
+	}
+			spriteType = {
+	noOfFrames = 2
+		name = "GFX_agency_logo_HEA3"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_HEA3.dds"
+	}
+			spriteType = {
+	noOfFrames = 2
+		name = "GFX_agency_logo_HEA4"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_HEA4.dds"
+	}
+
+}

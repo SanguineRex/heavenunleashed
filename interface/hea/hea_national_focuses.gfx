@@ -1,0 +1,1139 @@
+spriteTypes = {
+
+	###########################
+	####### Heavens Gate #####
+	###########################
+	
+	#######Placeholder Focuses
+	spriteType = {
+		name = "GFX_goal_hea_evil_placeholder"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_evil_placeholder.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_hea_good_placeholder"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_good_placeholder.dds"
+	}
+		spriteType = {
+		name = "GFX_goal_hea_faith_placeholder"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_faith_placeholder.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_hea_war_placeholder"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_war_placeholder.dds"
+	}
+		spriteType = {
+		name = "GFX_goal_hea_construction_placeholder"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_construction_placeholder.dds"
+	}
+		spriteType = {
+		name = "GFX_goal_hea_air_placeholder"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_air_placeholder.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_hea_inquisition_placeholder"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_inquisition_placeholder.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_hea_economy_placeholder"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_economy_placeholder.dds"
+	}	
+	#########
+	
+	
+	spriteType = {
+		name = "GFX_goal_HEA_crusading_orders"
+		texturefile = "gfx/interface/goals/unique/HEA/order.dds"
+	}
+		spriteType = {
+		name = "GFX_goal_HEA_wardens"
+		texturefile = "gfx/interface/goals/unique/HEA/wardens.dds"
+	}
+		spriteType = {
+		name = "GFX_goal_HEA_executioners"
+		texturefile = "gfx/interface/goals/unique/HEA/executioners.dds"
+	}
+		spriteType = {
+		name = "GFX_goal_HEA_peters_peak"
+		texturefile = "gfx/interface/goals/unique/HEA/peters_peak.dds"
+	}
+		spriteType = {
+		name = "GFX_goal_HEA_peters_retreat"
+		texturefile = "gfx/interface/goals/unique/HEA/peters_retreat.dds"
+	}
+			spriteType = {
+		name = "GFX_goal_HEA_butchers_of_war"
+		texturefile = "gfx/interface/goals/unique/HEA/butcher.dds"
+	}
+			spriteType = {
+		name = "GFX_goal_HEA_bastion_against_hordes"
+		texturefile = "gfx/interface/goals/unique/HEA/bastion_against_hordes.dds"
+	}
+			spriteType = {
+		name = "GFX_goal_HEA_juggernaut"
+		texturefile = "gfx/interface/goals/unique/HEA/juggernaut.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_battle_smiths"
+		texturefile = "gfx/interface/goals/unique/HEA/battle_smiths.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_exploring_vault"
+		texturefile = "gfx/interface/goals/unique/HEA/exploring_vault.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_foundries"
+		texturefile = "gfx/interface/goals/unique/HEA/foundries.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_rallying_horn"
+		texturefile = "gfx/interface/goals/unique/HEA/rallying_horn.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_helping_refugees"
+		texturefile = "gfx/interface/goals/unique/HEA/helping_refugees.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_rebuilding_innocence"
+		texturefile = "gfx/interface/goals/unique/HEA/rebuilding_innocence.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_monsters_outside_heaven"
+		texturefile = "gfx/interface/goals/unique/HEA/monsters_outside_heaven.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_battle_doctor"
+		texturefile = "gfx/interface/goals/unique/HEA/battle_doctor.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_gabriels_forgiveness"
+		texturefile = "gfx/interface/goals/unique/HEA/gabriels_forgiveness.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_michaels_crusade"
+		texturefile = "gfx/interface/goals/unique/HEA/michaels_crusade.dds"
+	}
+
+					spriteType = {
+		name = "GFX_goal_HEA_consulting_knowledge"
+		texturefile = "gfx/interface/goals/unique/HEA/consulting_knowledge.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_artisan"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_artisan.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_artisan2"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_artisan2.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_better_building"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_better_building.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_mines"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_mines.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_mines2"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_mines2.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_more_craftsmen"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_more_craftsmen.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_more_smiths"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_more_smiths.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_refinement"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_refinement.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_water_mills"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_water_mills.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_water1"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_water1.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_water2"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_water2.dds"
+	}
+
+					spriteType = {
+		name = "GFX_goal_HEA_hea_expand_tunnels"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_expand_tunnels.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_serfdom_in_steam_age"
+		texturefile = "gfx/interface/goals/unique/HEA/serfdom_in_steam_age.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_modern_horses"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_modern_horses.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_air_focus"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_air_focus.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_cleric"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_cleric.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_steam_powered_cities"
+		texturefile = "gfx/interface/goals/unique/HEA/steam_powered_cities.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_nephilim"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_nephilim.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_immortal"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_immortal.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_humanity_protected"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_humanity_protected.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_red_devil"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_red_devil.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_leviathans"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_leviathans.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_terrible_world"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_terrible_world.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_steel_menace"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_steel_menace.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_dead_walking"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_dead_walking.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_crusade_sho"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_crusade_sho.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_crusade_ham"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_crusade_ham.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_crusade_lon"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_crusade_lon.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_crusade_ano"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_crusade_ano.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_crusade_mur"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_crusade_mur.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_crusade_bdt"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_crusade_bdt.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_core_bdt"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_core_bdt.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_core_ano"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_core_ano.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_core_mur"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_core_mur.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_core_sho"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_core_sho.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_core_ham"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_core_ham.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_core_lon"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_core_lon.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_crusade_ncn"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_crusade_ncn.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_crusade_eht"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_crusade_eht.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_crusade_pets"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_crusade_pets.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_true_crusaders"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_true_crusaders.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_archangel_michael"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_archangel_michael.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_old_world_failures"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_old_world_failures.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_war_god"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_war_god.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_the_bear"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_the_bear.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_city_of_sin"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_city_of_sin.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_mexico_heretics"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_mexico_heretics.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_false_gods"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_false_gods.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_charging_colorado"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_charging_colorado.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_lone_star"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_lone_star.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_crusader_boy"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_crusader_boy.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_sword_of_god"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_sword_of_god.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_peter_training"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_peter_training.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_artillery"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_artillery.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_peter_air"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_peter_air.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_peter_armor"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_peter_armor.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_peter_beacons"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_peter_beacons.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_peter_doctor"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_peter_doctor.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_peter_guns"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_peter_guns.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_peter_road"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_peter_road.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_peter_room"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_peter_room.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_hea_peter_smith"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_peter_smith.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_peter_firstknights"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_peter_firstknights.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_peter_recruits"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_peter_recruits.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_peter_desert"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_peter_desert.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_peter_eht"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_peter_eht.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_mur_knights_standard"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_mur_knights_standard.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_peter_reatreat_minor"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_peter_reatreat_minor.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hea_new_kingdom"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_new_kingdom.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hea_christian_tribals"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_christian_tribals.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hea_tribal_agreement"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_tribal_agreement.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hea_meeting_tribals"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_meeting_tribals.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hea_diplomacy"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_diplomacy.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hea_building_wall"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_building_wall.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hea_dockyard"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_dockyard.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hea_new_flock"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_new_flock.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hea_theological_debate"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_theological_debate.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hea_caravan"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_caravan.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hea_assessing_situation"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_assessing_situation.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hea_priests_flock"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_priests_flock.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hea_peter_great_order"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_peter_great_order.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hea_peter_charge"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_peter_charge.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_new_cathedral"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_new_cathedral.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_merchant_kingdom"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_merchant_kingdom.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_beacon_of_christianity"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_beacon_of_christianity.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_anns_flock"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_anns_flock.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_ann_the_shepherd"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_ann_the_shepherd.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hea_warrior_kingdom"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_warrior_kingdom.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_nucleus"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_nucleus.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_eas_sho"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_eas_sho.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_sword3"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_sword3.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_the_guard"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_the_guard.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_armor2"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_armor2.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_armor1"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_armor1.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_armor3"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_armor3.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_second_stance"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_second_stance.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_first_stance"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_first_stance.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_third_stance"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_third_stance.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_sword1"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_sword1.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_sword2"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_sword2.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_guard_reborn"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_guard_reborn.dds"
+	}
+			spriteType = {
+		name = "GFX_goal_HEA_hea_tankss"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_tankss.dds"
+	}
+			spriteType = {
+		name = "GFX_goal_HEA_hea_crusader"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_crusader.dds"
+	}
+			spriteType = {
+		name = "GFX_goal_HEA_hea_sentinel"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_sentinel.dds"
+	}
+			spriteType = {
+		name = "GFX_goal_HEA_hea_big_tank"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_big_tank.dds"
+	}
+			spriteType = {
+		name = "GFX_goal_HEA_hea_bigger_shells"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_bigger_shells.dds"
+	}
+			spriteType = {
+		name = "GFX_goal_HEA_hea_crusader_order"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_crusader_order.dds"
+	}
+			spriteType = {
+		name = "GFX_goal_HEA_hea_sentinel_order"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_sentinel_order.dds"
+	}
+			spriteType = {
+		name = "GFX_goal_HEA_hea_tank_barrel"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_tank_barrel.dds"
+	}
+			spriteType = {
+		name = "GFX_goal_HEA_hea_tank_treads"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_tank_treads.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_the_north"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_the_north.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_burning_witch"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_burning_witch.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_inquisition_headquarters"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_inquisition_headquarters.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_billowing_chapel"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_billowing_chapel.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_hea_foundingzion"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_foundingzion.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_hea_whitelegsavages"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_whitelegsavages.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_hea_approachoutliers"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_approachoutliers.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_hea_approachcan"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_approachcan.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_hea_inviteham"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_inviteham.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_hea_invitelon"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_invitelon.dds"
+	}
+	######
+				spriteType = {
+		name = "GFX_goal_HEA_hea_tankline"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_tankline.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_stainedglass"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_stainedglass.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_slapatank"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_slapatank.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_judasvengeance"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_judasvengeance.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_judasreforged"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_judasreforged.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_judasfoundry"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_judasfoundry.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_inspirationpast"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_inspirationpast.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_innocencelost"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_innocencelost.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_experiencedtechs"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_experiencedtechs.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_effigiesandshells"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_effigiesandshells.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_hea_constructshrine"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_constructshrine.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_HEA_building_damconstruct"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_building_damconstruct.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_HEA_building_bridge"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_building_bridge.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_HEA_building_dam"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_building_dam.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_HEA_building_steambarge"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_building_steambarge.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_HEA_building_science"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_building_science.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_building_mines"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_building_mines.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_HEA_building_watermills"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_building_watermills.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_HEA_building_nucleus"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_building_nucleus.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_hea_taming_heaven"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_taming_heaven.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_closertoheaven"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_closertoheaven.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_peasantlevy"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_peasantlevy.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_knightsofpeasants"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_knightsofpeasants.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_warcometh"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_warcometh.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_preparingforwar"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_preparingforwar.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_building_steamwonder"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_building_steamwonder.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_building_steamhome"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_building_steamhome.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_building_pipe"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_building_pipe.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_building_cooks"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_building_cooks.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_building_spring"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_building_spring.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_building_ferry"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_building_ferry.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_air_dominion"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_air_dominion.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_air_knights"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_air_knights.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_air_grace"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_air_grace.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_hellswrath"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_hellswrath.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_heavensreach"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_heavensreach.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_air_payload"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_air_payload.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_air_weatherrange"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_air_weatherrange.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_air_holybombshells"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_air_holybombshells.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_air_speed"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_air_speed.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_heavensmight"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_heavensmight.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_air_judgement"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_air_judgement.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_air_steamdeath"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_air_steamdeath.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_reformingtheguard"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_reformingtheguard.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_hea_rabidbeasts"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_rabidbeasts.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_hea_roadcult"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_roadcult.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_hea_angelofpeace"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_angelofpeace.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_hea_councilcelebrate"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_councilcelebrate.dds"
+	}
+	
+	#####Rotpurgers
+					spriteType = {
+		name = "GFX_goal_rot_northern_knights"
+		texturefile = "gfx/interface/goals/unique/HEA/rot_northern_knights.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_rot_judas_priest"
+		texturefile = "gfx/interface/goals/unique/HEA/rot_judas_priest.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_rot_masters_of_north"
+		texturefile = "gfx/interface/goals/unique/HEA/rot_masters_of_north.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_rot_rotten_kings"
+		texturefile = "gfx/interface/goals/unique/HEA/rot_rotten_kings.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_rot_nurgle_knights"
+		texturefile = "gfx/interface/goals/unique/HEA/rot_nurgle_knights.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_rot_jacobia_reign"
+		texturefile = "gfx/interface/goals/unique/HEA/rot_jacobia_reign.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_hea_jacobia_king"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_jacobia_king.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_rot_killing_cain"
+		texturefile = "gfx/interface/goals/unique/HEA/rot_killing_cain.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_rot_northern_crusades"
+		texturefile = "gfx/interface/goals/unique/HEA/rot_northern_crusade.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_rot_dogs_of_war"
+		texturefile = "gfx/interface/goals/unique/HEA/rot_dogs_of_war.dds"
+	}
+								spriteType = {
+		name = "GFX_goal_rot_preparing_knights"
+		texturefile = "gfx/interface/goals/unique/HEA/rot_preparing_knights.dds"
+	}
+								spriteType = {
+		name = "GFX_goal_rot_old_country"
+		texturefile = "gfx/interface/goals/unique/HEA/rot_old_country.dds"
+	}
+								spriteType = {
+		name = "GFX_goal_rot_bounty_hunters"
+		texturefile = "gfx/interface/goals/unique/HEA/rot_bounty_hunters.dds"
+	}
+								spriteType = {
+		name = "GFX_goal_rot_northern_wardens"
+		texturefile = "gfx/interface/goals/unique/HEA/rot_northern_wardens.dds"
+	}
+								spriteType = {
+		name = "GFX_goal_rot_steamways"
+		texturefile = "gfx/interface/goals/unique/HEA/rot_steamways.dds"
+	}
+									spriteType = {
+		name = "GFX_goal_rot_crusade_cain"
+		texturefile = "gfx/interface/goals/unique/HEA/rot_crusade_cain.dds"
+	}
+										spriteType = {
+		name = "GFX_goal_rot_rot_knights"
+		texturefile = "gfx/interface/goals/unique/HEA/rot_rot_knights.dds"
+	}
+	
+	###########################
+	#######Murtaugh Reformers##
+	###########################
+				spriteType = {
+		name = "GFX_goal_HEA_mur_brokentower"
+		texturefile = "gfx/interface/goals/unique/HEA/mur_brokentower.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_mur_evacuateburley"
+		texturefile = "gfx/interface/goals/unique/HEA/mur_evacuateburley.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_ano_schism"
+		texturefile = "gfx/interface/goals/unique/HEA/ano_schism.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_mur_schism"
+		texturefile = "gfx/interface/goals/unique/HEA/mur_schism.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_HEA_mur_saints"
+		texturefile = "gfx/interface/goals/unique/HEA/mur_saints.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_mur_standhighchapel"
+		texturefile = "gfx/interface/goals/unique/HEA/mur_standhighchapel.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_mur_archangelmichael"
+		texturefile = "gfx/interface/goals/unique/HEA/mur_archangelmichael.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_mur_lookingforallies"
+		texturefile = "gfx/interface/goals/unique/HEA/mur_lookingforallies.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_mur_armingfaithful"
+		texturefile = "gfx/interface/goals/unique/HEA/mur_armingfaithful.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_mur_trainingfaithful"
+		texturefile = "gfx/interface/goals/unique/HEA/mur_trainingfaithful.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_mur_inwards"
+		texturefile = "gfx/interface/goals/unique/HEA/mur_inwards.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_mur_easternfront"
+		texturefile = "gfx/interface/goals/unique/HEA/mur_easternfront.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_mur_poorsituation"
+		texturefile = "gfx/interface/goals/unique/HEA/mur_poorsituation.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_mur_constructwalls"
+		texturefile = "gfx/interface/goals/unique/HEA/mur_constructwalls.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_mur_preparewar"
+		texturefile = "gfx/interface/goals/unique/HEA/mur_preparewar.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_mur_highchapelaid"
+		texturefile = "gfx/interface/goals/unique/HEA/mur_highchapelaid.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_mur_shoshonetrade"
+		texturefile = "gfx/interface/goals/unique/HEA/mur_shoshonetrade.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_mur_eastporttrade"
+		texturefile = "gfx/interface/goals/unique/HEA/mur_eastporttrade.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_mur_barnabas"
+		texturefile = "gfx/interface/goals/unique/HEA/mur_barnabas.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_mur_standalone"
+		texturefile = "gfx/interface/goals/unique/HEA/mur_standalone.dds"
+	}
+					spriteType = {
+		name = "GFX_goal_HEA_mur_reluctant"
+		texturefile = "gfx/interface/goals/unique/HEA/mur_reluctant.dds"
+	}
+	
+	#########High Chapel############
+						spriteType = {
+		name = "GFX_goal_HEA_hgh_heavensgate"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_heavensgate.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hgh_schism"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_schism.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hgh_afternuke"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_afternuke.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_hgh_matron"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_matron.dds"
+	}
+
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_borderguard"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_borderguard.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_contesting_heaven"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_contesting_heaven.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_judge"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_judge.dds"
+	}
+								spriteType = {
+		name = "GFX_goal_HEA_hgh_childrenrefuge"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_childrenrefuge.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_begforgiveness"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_begforgiveness.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_constructingwall"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_constructingwall.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_anointedrefusal"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_anointedrefusal.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_anointedneutrality"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_anointedneutrality.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_southernbulwark"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_southernbulwark.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_sailorvets"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_sailorvets.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_crackshots"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_crackshots.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_fleetfeetvets"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_fleetfeetvets.dds"
+	}
+								spriteType = {
+		name = "GFX_goal_HEA_hgh_shepherdann"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_shepherdann.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_shepherds"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_shepherds.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_executecrusaders"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_executecrusaders.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_anointedjudas"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_anointedjudas.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_raisingmurtaugh"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_raisingmurtaugh.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_truegod"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_truegod.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_burnbonedancers"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_burnbonedancers.dds"
+	}
+								spriteType = {
+		name = "GFX_goal_HEA_hgh_bonedancers"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_bonedancers.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_fleetdeath"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_fleetdeath.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_piercing"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_piercing.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_fleetwheels"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_fleetwheels.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_nicearise"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_nicearise.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_trumpetsofwar"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_trumpetsofwar.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_saints"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_saints.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_waywardflock"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_waywardflock.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_alms"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_alms.dds"
+	}
+								spriteType = {
+		name = "GFX_goal_HEA_hgh_contestedwaters"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_contestedwaters.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_mariner"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_mariner.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_raisefleets"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_raisefleets.dds"
+	}
+							spriteType = {
+		name = "GFX_goal_HEA_hgh_contesting"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_contesting.dds"
+	}
+								spriteType = {
+		name = "GFX_goal_HEA_hgh_fallback"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_fallback.dds"
+	}
+								spriteType = {
+		name = "GFX_goal_HEA_hgh_schismdecision"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_schismdecision.dds"
+	}
+								spriteType = {
+		name = "GFX_goal_HEA_hgh_border"
+		texturefile = "gfx/interface/goals/unique/HEA/hgh_border.dds"
+	}
+
+	#########Lord's Anointed################
+						spriteType = {
+		name = "GFX_goal_HEA_ano_sheep"
+		texturefile = "gfx/interface/goals/unique/HEA/ano_sheep.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_ano_leavevault"
+		texturefile = "gfx/interface/goals/unique/HEA/ano_leavevault.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_ano_orissa"
+		texturefile = "gfx/interface/goals/unique/HEA/ano_orissa.dds"
+	}
+						spriteType = {
+		name = "GFX_goal_HEA_ano_schism"
+		texturefile = "gfx/interface/goals/unique/HEA/ano_schism.dds"
+	}
+	
+	####Heaven's Kingdom###
+			spriteType = {
+		name = "GFX_goal_HEA_hea_heavens_kingdom"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_heavens_kingdom.dds"
+	}
+				spriteType = {
+		name = "GFX_goal_BDT_seraphlords"
+		texturefile = "gfx/interface/goals/unique/HEA/BDT_seraphlords.dds"
+	}
+}

@@ -1,0 +1,1648 @@
+ideas = {
+	country = {
+		utah_war_offense_idea = {
+			picture = generic_infantry_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				support_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+			modifier = {
+				training_time_army_factor = -0.05
+				army_strength_factor = 0.05
+			}
+		}
+		utah_warbands_idea = {
+			picture = generic_raids
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				conscription = 0.03
+			}
+		}
+		utah_war_offense_idea_2 = {
+			picture = generic_infantry_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				support_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+			modifier = {
+				training_time_army_factor = -0.05
+				army_strength_factor = 0.05
+				planning_speed = 0.15
+				army_speed_factor = 0.1
+			}
+		}
+		utah_war_defense_idea = {
+			picture = FRA_fortification_focus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_bunker_factor = 0.1
+				production_speed_bunker2_factor = 0.05
+				exodus_national_appeal = 0.05
+				caps_raider_target_bonus = 0.05
+			}
+		}
+		utah_war_defense_idea_2 = {
+			picture = FRA_fortification_focus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				max_dig_in = 4
+				resistance_growth_on_our_occupied_states = 0.15
+				production_speed_bunker_factor = 0.1
+				production_speed_bunker2_factor = 0.05
+				exodus_national_appeal = 0.05
+				caps_raider_target_bonus = 0.05
+			}
+		}
+		utah_war_defense_idea_3 = {
+			picture = FRA_fortification_focus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				max_dig_in = 4
+				resistance_growth_on_our_occupied_states = 0.15
+				production_speed_bunker_factor = 0.1
+				production_speed_bunker2_factor = 0.05
+				production_speed_coastal_bunker_factor = 0.05
+				exodus_national_appeal = 0.05
+				caps_raider_target_bonus = 0.05
+			}
+		}
+		utah_scouts_idea = {
+			picture = generic_recon
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				intel_from_combat_factor = 0.25
+				recon_factor = 0.25
+				decryption_factor = 0.05
+			}
+		}
+		utah_holy_war_idea = {
+			picture = fra_scw_intervation_republicans_focus
+			allowed = {
+				has_war = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.15
+				surrender_limit = 0.05
+			}
+		}
+		utah_water_idea = {
+			picture = escort_effort_focus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				naval_speed_factor = 0.15
+				industrial_capacity_dockyard = 0.1
+				diplomacy_distance_factor = 0.1
+			}
+		}
+		utah_nomadic_idea = {
+			picture = prc_the_long_march
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				conscription = -0.02
+				weekly_manpower = 10
+				production_factory_start_efficiency_factor = 0.1
+				global_building_slots_factor = -0.1
+			}
+		}
+		utah_city_idea = {
+			picture = generic_central_management
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				MONTHLY_POPULATION = 0.2
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+		utah_food_idea = {
+			picture = generic_agrarian_reform
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				country_resource_water = 5
+			}
+		}
+		utah_resources_idea = {
+			picture = generic_exploit_mines
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+		}
+		utah_food_idea_1 = {
+			picture = aztlan_land_distribution
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				country_resource_water = 8
+				industrial_capacity_factory = 0.1
+			}
+		}
+		utah_work_idea = {
+			picture = generic_production_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				political_power_gain = 0.05
+			}
+		}
+		utah_work_idea_1 = {
+			picture = generic_production_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				political_power_gain = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+		utah_veneration_idea = {
+			picture = generic_pp_unity_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				global_building_slots_factor = 0.15
+			}
+		}
+		utah_religious_idea = {
+			picture = generic_morale_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				war_stability_factor = 0.2
+			}
+		}
+		utah_tribal_idea = {
+			picture = generic_religion
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				conscription = 0.03
+				resistance_growth_on_our_occupied_states = 0.25
+			}
+		}
+		utah_inward_idea = {
+			picture = generic_morale_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+		utah_outward_idea = {
+			picture = generic_morale_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+			}
+			research_bonus = {
+				infantry_tech_category = 0.1
+			}
+		}
+		utah_missionaries_idea = {
+			picture = pantheon_ncn
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.35
+			}
+		}
+		utah_learning_from_god_idea = {
+			picture = generic_research_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		utah_new_mormon_idea = {
+			picture = pantheon_ncn
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_gain = 0.25
+			}
+		}
+		utah_reaching_unconverted_idea = {
+			picture = generic_democratic_drift_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				resistance_damage_to_garrison = -0.05
+				non_core_manpower = 0.1
+			}
+		}
+		utah_war_wht_idea = {
+			picture = chi_war_of_resistance2
+			allowed = {
+			}
+			removal_cost = -1
+			targeted_modifier = {
+				tag = WHT
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.1
+			}
+		}
+		utah_war_ces_idea = {
+			picture = chi_war_of_resistance2
+			allowed = {
+			}
+			removal_cost = -1
+			targeted_modifier = {
+				tag = CES
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.1
+			}
+		}
+		utah_feats_of_strength_idea = {
+			picture = generic_infantry_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_army_factor = 0.1
+				experience_gain_army = 0.05
+				army_attack_factor = 0.1
+			}
+		}
+		utah_subjugation_idea = {
+			picture = pantheon_legion
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.1
+				resistance_damage_to_garrison = -0.25
+			}
+		}
+		utah_unwilling_idea = {
+			picture = legion_crucifixion
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = -10
+				surrender_limit = 0.1
+			}
+			targeted_modifier = {
+				tag = NCN
+				attack_bonus_against = 0.05
+			}
+		}
+		utah_goingalone = {
+			picture = generic_morale_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.05
+			}
+		}
+		utah_tradition = {
+			picture = generic_religion
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.05
+				political_power_factor = 0.1
+			}
+			research_bonus = {
+				tribal_tech_category = 0.1
+			}
+		}
+		utah_outsidersexpelled = {
+			picture = generic_prc_low_popular_support3
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.05
+				MONTHLY_POPULATION = -0.15
+				army_org_factor = 0.1
+			}
+		}
+		utah_tribalequality = {
+			picture = generic_pp_unity_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.15
+				conscription = 0.005
+			}
+		}
+		utah_trueneutral = {
+			picture = generic_neutrality_drift_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				resistance_growth_on_our_occupied_states = 0.1
+				enemy_justify_war_goal_time = 0.2
+			}
+		}
+		utah_tolerate = {
+			picture = generic_neutrality_drift_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				resistance_growth_on_our_occupied_states = 0.1
+				enemy_justify_war_goal_time = 0.35
+				non_core_manpower = 0.1
+				trade_opinion_factor = 0.25
+			}
+		}
+		utah_lonely = {
+			picture = saf_history_of_segregation
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				enemy_justify_war_goal_time = 0.1
+				justify_war_goal_time = 0.15
+				resistance_damage_to_garrison = -0.1
+			}
+		}
+		utah_exterminatus = {
+			picture = saf_history_of_segregation_2
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				justify_war_goal_time = -0.1
+				resistance_damage_to_garrison = -0.25
+				non_core_manpower = -0.1
+				offence = 0.1
+			}
+		}
+		utah_religious_our_faith_questioned = {
+			picture = generic_religion
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = -0.25
+				political_power_factor = 0.05
+				trade_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
+				party_popularity_stability_factor = 0.15
+			}
+		}
+		utah_religious_fundamental_beliefs = {
+			picture = hol_the_foundations_of_defense
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				trade_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
+				drift_defence_factor = 0.5
+				surrender_limit = 0.1
+				stability_factor = 0.1
+				party_popularity_stability_factor = 0.15
+			}
+		}
+		utah_religious_latest_interpretations = {
+			picture = generic_constitutional_guarantees
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = -0.25
+				political_power_factor = 0.15
+				trade_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
+				party_popularity_stability_factor = 0.15
+			}
+		}
+		utah_religious_prozletize_to_people = {
+			picture = generic_army_war_college
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				opinion_gain_monthly_factor = 0.25
+				opinion_gain_monthly_same_ideology_factor = 0.5
+				improve_relations_maintain_cost_factor = -0.25
+				compliance_gain = 0.02
+				research_speed_factor = 0.05
+			}
+		}
+		utah_religious_expanded_sect = {
+			picture = generic_army_war_college
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				opinion_gain_monthly_factor = 0.25
+				opinion_gain_monthly_same_ideology_factor = 0.5
+				improve_relations_maintain_cost_factor = -0.25
+				compliance_gain = 0.02
+				conscription_factor = 0.1
+				research_speed_factor = 0.1
+			}
+		}
+		utah_religious_restriction_on_books = {
+			picture = saf_history_of_segregation
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.25
+			}
+		}
+		utah_religious_fanatic_book_burning = {
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.05
+				political_power_gain = 0.3
+				mobilization_speed = 0.3
+				resistance_growth_on_our_occupied_states = 0.5
+			}
+		}
+		utah_religious_new_revelations_idea = {
+			picture = jap_supremacy_of_technology
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			research_bonus = {
+				industry = 0.05
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				diplomacy_distance_factor = 0.05
+			}
+		}
+		utah_religious_holy_war = {
+			picture = FRA_national_mobilization_focus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				justify_war_goal_time = -0.25
+				conscription = 0.015
+			}
+		}
+		utah_religious_supporting_fellows = {
+			picture = generic_volunteer_expedition_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				send_volunteer_divisions_required = -0.4
+				send_volunteer_factor = 0.2
+				send_volunteers_tension = -0.3
+			}
+		}
+		utah_hgh_fallback_fortifying = {
+			picture = FRA_fortification_focus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_bunker_factor = 0.1
+				production_speed_bunker2_factor = 0.1
+				max_dig_in_factor = 0.1
+			}
+		}
+		utah_hgh_loyalty = {
+			picture = ast_classify_aliens
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				resistance_growth_on_our_occupied_states = 0.25
+				resistance_damage_to_garrison = -0.25
+				stability_factor = 0.05
+			}
+		}
+		utah_hgh_final_effort = {
+			picture = ast_all_in
+			allowed = {
+				NOT = {
+					has_war_with = HEA
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.25
+				industrial_capacity_factory = 0.25
+				consumer_goods_expected_value = -0.1
+				weekly_manpower = 25
+				stability_factor = -0.25
+			}
+		}
+		utah_hgh_boat_builders = {
+			picture = generic_build_ships
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_dockyard = 0.1
+			}
+			research_bonus = {
+				naval_tech_category = 0.1
+			}
+		}
+		utah_hgh_sturdy_ships = {
+			picture = generic_build_ships
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_dockyard = 0.1
+				trade_opinion_factor = 0.1
+			}
+			equipment_bonus = {
+				ship_hull_light = {
+					max_strength = 0.15
+					armor_value = 0.05
+				}
+				ship_hull_medium = {
+					max_strength = 0.15
+					armor_value = 0.05
+				}
+				ship_hull_heavy = {
+					max_strength = 0.15
+					armor_value = 0.05
+				}
+			}
+			research_bonus = {
+				naval_tech_category = 0.1
+			}
+		}
+		utah_hgh_capitulated_to_hgh = {
+			picture = generic_surrender
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_dockyard = -0.15
+				production_speed_dockyard_factor = -0.25
+			}
+		}
+		hgh_hea_offensive = {
+			picture = ast_volunteer_defence_corps
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.1
+			}
+		}
+		utah_charity = {
+			picture = generic_food_neutral
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.001
+			}
+		}
+		utah_diligence = {
+			picture = generic_production_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		utah_MUR_refugee_intake = {
+			picture = prc_the_long_march2
+			allowed = {
+				country_exists = ANO
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = 0.3
+				production_speed_infrastructure_factor = 0.15
+				stability_factor = -0.05
+				war_support_factor = -0.1
+				political_power_gain = 0.05
+			}
+		}
+		utah_ANO_refugees_flee = {
+			picture = prc_the_long_march
+			allowed = {
+				country_exists = MUR
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.3
+				stability_factor = -0.05
+			}
+		}
+		utah_MUR_open_to_trade = {
+			picture = can_wartime_prices_and_trade_board
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.1
+				trade_laws_cost_factor = -0.15
+			}
+			targeted_modifier = {
+				tag = HAM
+				trade_opinion_factor = 0.3
+			}
+		}
+		utah_MUR_glass_blowing_expertise = {
+			picture = generic_exploit_mines
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				industrial_capacity_factory = 0.05
+			}
+		}
+		utah_MUR_defensive_strategy = {
+			picture = ast_naval_auxiliary_patrol
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_infantry_defence_factor = 0.05
+				defensive_war_stability_factor = 0.1
+				org_loss_at_low_org_factor = -0.05
+			}
+		}
+		utah_MUR_refocus_on_military = {
+			picture = generic_military_draft
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_dockyard = -0.3
+				industrial_capacity_factory = 0.15
+				training_time_army_factor = -0.1
+			}
+		}
+		utah_MUR_protecting_the_river = {
+			picture = generic_build_ships
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_dockyard = 0.1
+				production_speed_bunker_factor = 0.05
+				production_speed_coastal_bunker_factor = 0.1
+			}
+		}
+		utah_MUR_glass_trade = {
+			picture = can_wartime_prices_and_trade_board
+			allowed = {
+			}
+			removal_cost = -1
+			targeted_modifier = {
+				tag = HAM
+				trade_cost_for_target_factor = -0.25
+				extra_trade_to_target_factor = 0.1
+			}
+		}
+		utah_MUR_aggressive_hammond = {
+			picture = chi_war_of_resistance3
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+				enemy_justify_war_goal_time = 0.25
+			}
+			targeted_modifier = {
+				tag = HAM
+				defense_bonus_against = 0.1
+			}
+		}
+		mur_ano_offensive = {
+			picture = hun_secret_rearmament
+			allowed = {
+			}
+			removal_cost = -1
+			targeted_modifier = {
+				tag = ANO
+				attack_bonus_against = 0.15
+			}
+		}
+		mur_ano_defensive = {
+			picture = generic_fortify_the_borders
+			allowed = {
+			}
+			removal_cost = -1
+			targeted_modifier = {
+				tag = ANO
+				defense_bonus_against = 0.1
+			}
+		}
+		utah_HAM_payment = {
+			picture = generic_consumer_goods_red_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				caps_flat_income_modifier = 5
+			}
+		}
+		utah_HAM_payment_reverse = {
+			picture = generic_consumer_goods_red_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				caps_flat_income_modifier = -5
+			}
+		}
+		utah_HAM_glass_production = {
+			picture = generic_central_management
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.05
+			}
+		}
+		utah_HAM_glass_production_2 = {
+			picture = generic_central_management
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.1
+			}
+		}
+		utah_HAM_glass_production_3 = {
+			picture = generic_central_management
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				local_resources_factor = 0.15
+			}
+		}
+		utah_HAM_glass_production_halted = {
+			picture = great_depression
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.2
+				local_resources_factor = -0.05
+				consumer_goods_expected_value = 0.1
+			}
+		}
+		utah_HAM_glass_production_slow = {
+			picture = generic_local_self_management
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				local_resources_factor = -0.05
+				consumer_goods_expected_value = 0.05
+			}
+		}
+		utah_HAM_trade_with_MUR = {
+			picture = generic_flexible_foreign_policy
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				trade_laws_cost_factor = -0.5
+				trade_opinion_factor = 0.15
+			}
+		}
+		utah_HAM_trade_with_MUR_2 = {
+			picture = generic_flexible_foreign_policy
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				trade_laws_cost_factor = -0.5
+				trade_opinion_factor = 0.3
+				caps_income_modifier = 0.075
+			}
+		}
+		utah_HAM_trade_with_MUR_3 = {
+			picture = generic_flexible_foreign_policy
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				trade_laws_cost_factor = -0.5
+				trade_opinion_factor = 0.45
+				caps_income_modifier = 0.15
+			}
+		}
+		utah_ANO_crusades_of_old = {
+			picture = HEA_idea_one_prophet
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				planning_speed = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		utah_ANO_crusades_of_old_2 = {
+			name = utah_ANO_crusades_of_old
+			picture = HEA_idea_one_prophet
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				planning_speed = 0.15
+				army_org_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		utah_ANO_the_warriors_call = {
+			picture = generic_manpower_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				conscription = 0.1
+				army_org_Factor = -0.05
+			}
+		}
+		utah_ANO_naval_invasion = {
+			picture = generic_naval_invasion
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.05
+				amphibious_invasion = 0.2
+				invasion_preparation = -0.3
+			}
+		}
+		utah_ANO_united_front_idea = {
+			picture = x
+			allowed = {
+			}
+			removal_cost = -1
+			targeted_modifier = {
+				tag = HEA
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.15
+			}
+		}
+		utah_dirty_waters = {
+			#Sullied
+			picture = hol_prepare_the_inundation_lines
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy_factor = -0.1
+				army_core_defence_factor = -0.2
+				army_core_attack_factor = -0.1
+				conscription_factor = -0.02
+			}
+		}
+		utah_clean_waters = {
+			picture = hol_prepare_the_inundation_lines
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				naval_speed_factor = 0.25
+				naval_coordination = 0.1
+				experience_gain_navy_factor = 0.1
+			}
+		}
+		utah_schism = {
+			picture = MEX_church_power_2
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				political_power_factor = -0.25
+			}
+		}
+		utah_schism_mended = {
+			picture = MEX_church_power_5
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.1
+			}
+		}
+		utah_BRI_tungsten_production = {
+			picture = generic_central_management
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				army_attack_factor = 0.03
+			}
+		}
+		utah_FAR_terror_of_the_canaanites = {
+			picture = generic_army_war_college
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.05
+				war_support_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = NCN
+				attack_bonus_against = 0.05
+			}
+		}
+		utah_FAR_gold_veins = {
+			picture = generic_central_management
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.03
+				local_resources_factor = 0.05
+			}
+		}
+		pantheon_sunstroke = {
+			picture = pantheon_sun
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = -25
+			}
+		}
+		pantheon_false_science = {
+			picture = jap_duplicate_research
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.05
+			}
+		}
+		pantheon_true_science = {
+			picture = generic_research_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		pantheon_sacrifices = {
+			picture = chi_war_of_resistance3
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.02
+				MONTHLY_POPULATION = -0.25
+			}
+		}
+		pantheon_gifts = {
+			picture = generic_foreign_capital
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.03
+			}
+		}
+		pantheon_moderation = {
+			picture = consumer_goods_red_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.02
+			}
+		}
+		pantheon_ascetic = {
+			picture = consumer_goods_red_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				mobilization_speed = -0.75
+			}
+		}
+		pantheon_reckless = {
+			picture = generic_blood
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				experience_loss_factor = 0.25
+			}
+		}
+		pantheon_rest_from_war = {
+			picture = the_war_to_end_all_wars
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				justify_war_goal_time = 0.5
+				enemy_justify_war_goal_time = 0.25
+			}
+		}
+		pantheon_legion_influence = {
+			picture = pantheon_legion
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				elites_acceptance = 50
+				ruler_acceptance = 50
+				drift_defence_factor = -0.5
+			}
+		}
+		pantheon_ncn_influence = {
+			picture = pantheon_ncn
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				people_acceptance = 75
+				drift_defence_factor = -0.5
+			}
+		}
+		pantheon_burnt_tongues = {
+			picture = generic_food_bad
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = -20
+				MONTHLY_POPULATION = -0.1
+			}
+		}
+		pantheon_wet = {
+			picture = generic_food_bad
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_speed_factor = -0.05
+				supply_consumption_factor = 0.05
+				local_resources_factor = 0.1
+			}
+		}
+		pantheon_stormchasers = {
+			picture = air_war_plans_division
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				air_weather_penalty = 0.25
+				air_accidents_factor = 0.05
+			}
+		}
+		pantheon_open_warfare = {
+			picture = generic_intel_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+			}
+		}
+		pantheon_night_warfare = {
+			picture = generic_intel_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				land_night_attack = 0.15
+				army_attack_factor = -0.1
+			}
+		}
+		pantheon_elite_focus = {
+			picture = generic_infantry_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				training_time_factor = 0.1
+			}
+		}
+		pantheon_sun = {
+			picture = pantheon_sun
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+			}
+		}
+		pantheon_sun_sunspots = {
+			picture = pantheon_sun
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.05
+				army_morale_factor = 0.15
+			}
+		}
+		pantheon_moon = {
+			picture = pantheon_moon
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+			}
+		}
+		pantheon_moon_nightmissions = {
+			picture = pantheon_moon
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_speed_factor = 0.15
+				dig_in_speed_factor = -0.05
+			}
+		}
+		pantheon_land = {
+			picture = pantheon_land
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+			}
+		}
+		pantheon_land_rest = {
+			picture = pantheon_land
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				mobilization_speed = -0.5
+				weekly_manpower = 20
+				MONTHLY_POPULATION = 0.25
+			}
+		}
+		pantheon_mountain = {
+			picture = pantheon_mountain
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+			}
+		}
+		pantheon_mountain_autarky = {
+			picture = pantheon_mountain
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				min_export = -0.25
+				production_factory_efficiency_gain_factor = -0.1
+			}
+		}
+		pantheon_ncn = {
+			picture = pantheon_ncn
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+			}
+		}
+		pantheon_ncn_gifts = {
+			picture = jap_supremacy_of_will
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = 0.05
+				consumer_goods_expected_value = 0.02
+			}
+		}
+		pantheon_legion = {
+			picture = pantheon_legion
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+			}
+		}
+		pantheon_legion_drums = {
+			picture = generic_legion_flag
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				justify_war_goal_time = -0.25
+				mobilization_speed = 0.1
+				stability_factor = -0.05
+			}
+		}
+		pantheon_sor = {
+			picture = pantheon_sor
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+			}
+		}
+		pantheon_sor_training = {
+			picture = generic_manpower_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_army_factor = 0.2
+				supply_consumption_factor = 0.1
+			}
+		}
+		pantheon_tar = {
+			picture = pantheon_tar
+			allowed = {
+			}
+			removal_cost = -1
+		}
+		pantheon_tar_ultraviolence = {
+			picture = pantheon_tar
+			allowed = {
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				infantry = {
+					casualty_trickleback = 0.05
+					breakthrough = 0.3
+					instant = yes
+				}
+			}
+		}
+		pantheon_tar_warshops = {
+			picture = man_five_year_plan_industry
+			allowed = {
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+			}
+		}
+		pantheon_crz = {
+			picture = pantheon_crz
+			allowed = {
+			}
+			removal_cost = -1
+		}
+		pantheon_crz_purification = {
+			picture = pantheon_crz
+			allowed = {
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				demolitions_equipment = {
+					soft_attack = 0.15
+					hard_attack = 0.1
+					instant = yes
+				}
+			}
+		}
+		pantheon_crz_flamer = {
+			picture = generic_flamer
+			allowed = {
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				demolitions_equipment = {
+					build_cost_ic = -0.5
+					instant = yes
+				}
+			}
+		}
+		pantheon_dea = {
+			picture = pantheon_dea
+			allowed = {
+			}
+			removal_cost = -1
+		}
+		pantheon_dea_gods_work = {
+			picture = pantheon_dea
+			allowed = {
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.25
+					default_morale = 0.25
+					instant = yes
+				}
+			}
+		}
+		pantheon_dea_legate = {
+			picture = generic_army_war_college
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_leader_start_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_start_planning_level = 1
+				army_leader_start_logistics_level = 1
+			}
+		}
+		pantheon_uin = {
+			picture = pantheon_uin
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+			}
+		}
+		pantheon_uin_wind = {
+			picture = pantheon_uin
+			allowed = {
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				fighter = {
+					air_bombing = 0.25
+					air_agility = 0.1
+					instant = yes
+				}
+			}
+		}
+		pantheon_uin_gilder = {
+			picture = generic_glider
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				air_ace_generation_chance_factor = 0.1
+			}
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = -0.25
+					instant = yes
+				}
+			}
+		}
+		pantheon_lon = {
+			picture = pantheon_lon
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+			}
+		}
+		pantheon_lon_shadows = {
+			picture = pantheon_lon
+			allowed = {
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				spec_ops = {
+					max_organisation = 0.25
+					default_morale = 0.25
+					instant = yes
+				}
+			}
+		}
+		pantheon_lon_elite = {
+			picture = eng_special_air_service
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				special_forces_min = 50
+				special_forces_attack_factor = 0.05
+				special_forces_defence_factor = 0.05
+				#special_forces_cap = 0.1
+			}
+		}
+		saint_orissa = {
+			picture = HEA_idea_precursers
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				ruler_drift = 0.01
+			}
+		}
+		saint_barnabus = {
+			picture = HEA_idea_precursers
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				decryption_factor = 0.2
+				research_speed_factor = 0.05
+				people_drift = 0.02
+				stability_factor = 0.05
+			}
+		}
+		saint_barnabus_2 = {
+			picture = HEA_idea_precursers
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				decryption_factor = 0.2
+				research_speed_factor = 0.10
+				people_drift = 0.03
+				consumer_goods_factor = 0.05
+				stability_factor = 0.10
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+		saint_barnabus_3 = {
+			picture = HEA_idea_precursers
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				decryption_factor = 0.25
+				research_speed_factor = 0.15
+				people_drift = 0.05
+				consumer_goods_factor = 0.05
+				stability_factor = 0.15
+				production_speed_industrial_complex_factor = 0.10
+			}
+		}
+		saint_arthur = {
+			picture = HEA_idea_precursers
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				guarantee_cost = -0.5
+				guarantee_tension = -0.25
+				political_power_factor = 0.05
+				elites_drift = 0.01
+			}
+		}
+		saint_light = {
+			picture = pantheon_sun
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				industry_repair_factor = 0.5
+				production_speed_buildings_factor = 0.05
+				intellectuals_drift = 0.01
+			}
+		}
+		sickness_of_soot = {
+			picture = generic_catastrophe
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+			}
+		}
+			MUR_fleetflat = {
+			picture = service_rifle
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.05
+				army_speed_factor = 0.05
+			}
+		}
+			MUR_warriors = {
+			picture = service_rifle
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.05
+				attrition = -0.05
+			}
+		}
+			MUR_warriors2 = {
+			picture = service_rifle
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.10
+				army_attack_factor = 0.05
+				army_morale_factor = 0.05
+				attrition = -0.05
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+﻿
+
+division_template = {
+	name = "Highland Flatfoot"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
+	}
+}
+units = {
+	division = {
+		name = "Fleetfoot Volunteers"
+		location = 4472
+		division_template = "Highland Flatfoot"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+}
+
+

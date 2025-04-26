@@ -1,0 +1,17 @@
+intelligence_agency = {
+
+	picture = GFX_agency_logo_HEA
+	names = { "Watching Eye" }
+	
+	default = { tag = HEA }
+	available = { original_tag = HEA }
+}
+
+intelligence_agency = {
+
+	picture = GFX_agency_logo_HEA3
+	names = { "Watching Eye" }
+
+	available = { original_tag = HEA }
+}
+

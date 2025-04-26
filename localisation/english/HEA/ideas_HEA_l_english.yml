@@ -1,0 +1,332 @@
+﻿l_english:
+  hea_steam_powered_weapons:0 "Steam Core Powered Weapons"
+  hea_steam_powered_weapons_desc:0 "In the old world along the Northwest commune there was a great deal of investment put into a ingenious creation known as the Steam Core.\nOriginally, it was put forward by the Northwest Commonwealth during the old war during the prototyping stages of the AER project as a potential candidate, it was rejected in favour of designs using MF cells. Despite this, the economics of the region had become too reliant on the rejected fission core (aptly known as steam cores) design, and thus development of the weapons fueled on steam cores continued.\nThese steam cores give all of our equipment a powerful kickback in the strength they give out, yet also come with certain rare failure incidents."
+
+  hea_divided_leadership:0 "Divided Leadership"
+  hea_divided_leadership_desc:0 "Saint Michael stands above all others as a leader, a mouthpiece for God himself who can not lead us astray!"
+
+  hea_steam_power:0 "Blessing of Steam"
+  hea_steam_power_desc:0 "Steam is a blessing, a blessing that has allowed us to survive where so many other have failed."
+
+hea_rebirth_steam:0 "Rebirth of the Gate"
+hea_rebirth_steam_desc:0 "The Gate is reborn! With its renewal, the blessing of Steam grows stronger!"
+
+  hea_startup_militant:0 "Ephesians 6:11"
+  hea_startup_militant_desc:0 "Put on the full armour of God, so that you can take your stand against the Devil's schemes."
+
+  hea_startup_agriculture:0 "Isaiah 1:19"
+  hea_startup_agriculture_desc:0 "If you are willing and obedient, you will eat the good things of the land;"
+
+  hea_startup_stationary_pilgrims:0 "Genesis 13:15"
+  hea_startup_stationary_pilgrims_desc:0 "For all the land which you see, I will give it to you and to your descendants forever."
+
+  hea_startup_traveling_pilgrims:0 "Psalm 23:4"
+  hea_startup_traveling_pilgrims_desc:0 "Even though I walk through the darkest valley,I will fear no evil, for you are with me; your rod and your staff, they comfort me."
+
+  hea_startup_let_them_in:0 "Corinthians 12:2"
+  hea_startup_let_them_in_desc:0 "You know that when you were pagans, you were led astray to the mute idols, however you were led."
+
+  hea_startup_better_be_careful:0 "Luke 12:30"
+  hea_startup_better_be_careful_desc:0 "For all these things the nations of the world eagerly seek; but your Father knows that you need these things."
+
+  hea_theocratic_elite:0 "Theocratic Elite"
+  hea_theocratic_elite_desc:0 "The men who speak the word of God are held above all others in our society, for reasons clear to all."
+
+  hea_theocratic_elite_good:0 "Theocratic Elite"
+  hea_theocratic_elite_good_desc:0 "The men who speak the word of God are held above all others in our society, for reasons clear to all."
+
+  hea_theocratic_elite_good_1:0 "Theocratic Elite"
+  hea_theocratic_elite_good_1_desc:0 "The men who speak the word of God are held above all others in our society, for reasons clear to all."
+
+  hea_theocratic_elite_contested:0 "Theocratic Elite Challenged"
+  hea_theocratic_elite_contested_desc:0 "The Theocratic Elite have struggled as of late, often dealing with formal challenges to their once immense authority."
+
+  hea_theocratic_elite_marginalized:0 "Theocratic Elite Marginalized"
+  hea_theocratic_elite_marginalized_desc:0 "The Theocratic elite are a shadow of their former selves, with marginal power over the people in the wake of the prophets ascension."
+
+  hea_one_prophet:0 "One Prophet"
+  hea_one_prophet_desc:0 "There is but one prophet, one leader, and his name is Saint Michael."
+
+  hea_innocence_lost_idea:0 "Innocence Lost Incident"
+  hea_innocence_lost_idea_desc:0 "The massacre at Innocence Lost has left a scar on our people. Words lead to violence, violence lead to death, and little remains of what was once a peaceful community."
+
+  hea_innocence_lost_idea_lessend:0 "Crisis lessened"
+  hea_innocence_lost_idea_lessend_desc:0 "Through careful word and manipulation, the souls of Innocence Lost were saved. The Crisis and threat remains, but blood has not yet been spilt."
+
+  hea_rampant_militarism:0 "Rampant Militarism"
+  hea_rampant_militarism_desc:0 "The people of Heaven's Gates move further and further from their peaceful ways with each passing month, taking up arms to protect themselves and the will of God."
+
+  hea_rampant_militarism_1:0 "Steam Pilgrims"
+  hea_rampant_militarism_1_desc:0 "The people of Heaven's Gates move further and further from their peaceful ways with each passing month, taking up arms to protect themselves and the will of God."
+
+  hea_rampant_militarism_2:0 "Pilgrim Warriors"
+  hea_rampant_militarism_2_desc:0 "The people of Heaven's Gates move further and further from their peaceful ways with each passing month, taking up arms to protect themselves and the will of God."
+
+hea_rampant_militarism_3:0 "True Crusaders"
+hea_rampant_militarism_3_desc:0 "We have proved to the world that the Lord's strength is great, the people of Heaven's Gate are loyal to Michael and the Lord, may the Gods have mercy to those who cannot say the same."
+
+  hea_boilers_of_justice:0 "Boilers of Justice"
+  hea_boilers_of_justice_desc:0 "The Boilers of Heaven's Gate are the ultimate baptism, boiling water to scald both the soul and body of sin and bile. Few survive such baptisms, yet all who enter are purified."
+
+#  hea_rampant_fright:0 "Rampant Fright"
+#  hea_rampant_fright_desc:0 "Fear has taken hold in the hearts and minds of the people of Heaven's Gate, with God being the only solace they can find."
+
+  hea_reconcilliation:0 "Tribal Reconciliation"
+  hea_reconcilliation_desc:0 "The Tribals have had a strained relationship with us for many years, yet we are beginning to rebuilt that which was lost. Trust returns to Heaven's Gate."
+
+  hea_reconcilliation_1:0 "Welcome to the Fold"
+  hea_reconcilliation_1_desc:0 "Those who have embraced us may return. Those who have forgotten may return. All may return to the embrace of God should they seek it."
+
+  hea_school_of_steam:0 "School of Steam"
+  hea_school_of_steam_desc:0 "The power of steam has changed us for the better, and as our understanding of the fusion-powered steam generators grow, so too does our ability to cope with the world around us."
+
+  hea_air_knight:0 "Flying Orders"
+  hea_air_knight_desc:0 "Like the Knights that once roamed the lands in the name of God, our pilots have formed into orders. Guarding the faith from in high, champions clad in steel and riding with God at their side."
+
+  hea_general_staff:0 "Priestly Officers"
+  hea_general_staff_desc:0 "Priests are often thought of as peaceful souls, yet when needed? Such a man can inspire warriors and soldiers in ways that few could understand. God walks with them into battle."
+
+  hea_mobility:0 "School of Mobility"
+  hea_mobility_desc:0 "The power of the steam-fusion engine should not be underestimated, and our growing mastery of it gives us numerous advantages over our foes."
+
+  hea_age_of_steam_idea:0 "Age of Steam"
+  hea_age_of_steam_idea_desc:0 "The Age of Steam is upon us! Let all who look upon the gate know what we have become, and what we shall bring to this world!"
+
+  hea_conscription:0 "Widespread Conscription"
+  hea_conscription_desc:0 "All are called to battle and protect the last kingdom of God! Woe be onto the foes who beholds our mighty host!"
+
+  hea_crusaders:0 "Crusader Forces"
+  hea_crusaders_desc:0 "The Crusaders are a new generation of soldier, wielding both weapon and faith against those who would challenge the Saint."
+
+  hea_grand_cathedral:0 "Grand Cathedral"
+  hea_grand_cathedral_desc:0 "The Grand Cathedral is among the greatest of all structures built after the fall, four stories of shaped marble and steel piping. A symbol worthy of both God and his Saint."
+   
+  hea_orders1:0 "Holy Order"
+  hea_orders1_desc:0 "There are dozen of knightly orders, some wish to protect the Faithful, while others wish to bring the war to the foot of the Pagans before Innocence can ever be repeated, whoever won the great debate will surely combine these great orders into a tool to carry out their will..."
+  
+  hea_orders2A:0 "Holy Order: Sinner's Bane"
+  hea_orders2A_desc:0 "We are to banish the wicked, and cleanse the land with Holy Steam, for Michael wills it."
+  
+  hea_orders3A:0 "§RHoly Order: Juggernauts of War"
+  hea_orders3A_desc:0 "Our purpose is clear: purge the faithless, cleanse the mutant, and do so with Holy Steam"
+  
+  hea_orders2D:0 "Holy Order: Faithful's Shield"
+  hea_orders2D_desc:0 "The flock in Heaven's Gate is secure, but there are faithful yet threatened, by monsters and men, we will not allow this to go on!"
+  
+  hea_orders3D:0 "§2Holy Order: Bastion of Hope"
+  hea_orders3D_desc:0 "Our purpose is clear: protect the innocent, slay the monsters, and ensure the will of the Lord is learned by all."
+  
+  hea_peters_retreat:0 "Order's Dwelling"
+  hea_peters_retreat_desc:0 "Peter's Retreat is a mighty bastion, created with technology forbidden to all but the echelons of Heaven's Gate, it is meant to train new warriors for the Order, but it was built to weather monumental attacks. For what is a Knightly Order without a Mighty Fortress to house them?"
+
+hea_peters_retreat1A:0 "Order Dwelling: Sinner's Bane"
+hea_peters_retreat1A_desc:0 "To live amongst the knights of Peter's Retreat is considered a great honor, so great that many veteran guard members often attempt fool hardy maneuvers in the desire to impress their knight counterparts. Sadly, while enemy lines rarely stand against assaults made by your ranks, your ranks die in the droves..."
+
+hea_peters_retreat1D:0 "Order Dwelling: Faithful's Shield"
+hea_peters_retreat1D_desc:0 "It is not rare to see a bunk in Peter's Retreat without a knight, their virtuous nature often leads them to making valiant sacrifices in the name of their lesser kin. The common folk of Heaven's Gate adore the knights for their actions, and are often seen attempting to enlist so they could aid the great men in this vaunted order."
+
+hea_peters_military1:0 "Peter's Retreat: Military Aid"
+hea_peters_military1_desc:0 "Though it took some time, we found artisans skilled in smithing weapons, it'll surely be of aid to the front lines."
+
+hea_peters_military2:0 "Peter's Retreat: Military Aid"
+hea_peters_military2_desc:0 "Along with improved Gun manufacturing, the Power Armor our warriors wear now have dedicated teams to producing them!"
+
+hea_peters_military3:0 "Peter's Retreat: Military Smiths"
+hea_peters_military3_desc:0 "The Smiths we have are masters at their craft! Courtesy of how often they are forced to create new armor for our Knights"
+
+hea_peters_military4:0 "Peter's Retreat: Military Smiths"
+hea_peters_military4_desc:0 "Some of our smiths have taken to helping 'train' the knights, though this does create a bit of a rivalry between the two groups, these new warriors have found their training time cut in half! That and they can get up after a real mean hit faster than before..."
+
+hea_peters_civilians1:0 "Peter's Retreat: Civilian Aid"
+hea_peters_civilians1_desc:0 "Now that we have trained medical professionals directly monitoring our knights, it's far less likely that defeat in battle means death, a welcome boon to warriors who fight for the lord"
+
+hea_peters_civilians2:0 "Peter's Retreat: Civilian Aid"
+hea_peters_civilians2_desc:0 "Now that their rooms are furnished, their life expectancy is higher (though not by much), our knights find themselves enjoying returns to Peter's Retreat, and often fight that much harder to ensure that they can indeed return..."
+
+hea_peters_civilians3:0 "Peter's Retreat: Civilian Aid"
+hea_peters_civilians3:0 "With the beacons in their armor, clerics on hand, and comfortable rooms to return to, the knights are stronger, faster, and more often to live than ever before!"
+
+hea_peters_rebuilt:0 "Peter's Retreat: Order's Home"
+hea_peters_rebuilt_desc:0 "Peter's Retreat is a home for our knights, where they can rest, train, and be outfitted for their Holy Wars."
+
+angel_of_peace1:0 "Herald of Peace"
+angel_of_peace1_desc:0 "A Prophet needs not allow his skill for war to go unused, but perhaps...it can be used in defense of the faithful?"
+
+angel_of_peace2:0 "Saint of Peace"
+angel_of_peace2_desc:0 "The faithful prosper, the faithful live, and Michael knows its his place to defend, not subjugate, them."
+
+angel_of_peace3:0 "§Arbiter of Peace"
+angel_of_peace3_desc:0 "§2Blessed are the peacemakers, because they will be called sons of God"
+
+archangel_michael1:0 "Archangel Michael"
+archangel_michael1_desc:0 "The Right Hand of God descends"
+
+archangel_michael2:0 "Archangel Michael"
+archangel_michael2_desc:0 "The wicked flee in terror, while the righteousness rejoice, salvation comes."
+
+archangel_michael3:0 "§RArchangel Michael"
+archangel_michael3_desc:0 "§RArchangel Michael Given Flesh to Destroy the Enemies of §2The Father Above"
+
+hea_battle_priests:0 "Battle Priests"
+hea_battle_priests_desc:0 "While the Priests are sworn not to fight, they ensure that the troops will stay and fight longer than they would have ever expected (Though whether that be because of their skill with Medicine or their affinity with the Spiritual ailments). They won't lift an arm in their defence, but there are more than a few thankful souls that are willing to do so in their name"
+
+hea_bathhouse:0 "Bath Houses"
+hea_bathhouse_desc:0 "The peasants appreciate the bath houses...and so do our noses."
+
+hea_book:0 "Ancient Books"
+hea_book_desc:0 "Hey were these books just sitting there...there's a lot of stuff in these things..."
+
+hea_battle_smiths:0 "Battle Smiths"
+hea_battle_smiths_desc:0 "These smiths ensure that equipment doesn't malfunction, break, and even provide a few bullets now and there to help keep the army fighting until long after their original supplies run out. Sadly they aren't skilled at fighting, but their aid to the standard army more than makes up for their faults..."
+
+HEA_old_world_failures:0 "Old World Technology"
+HEA_old_world_failures_desc:0 "Thanks to the secrets we uncovered, after defeating the primary remnants of the Old World, though the Old World had its failures, they were the original creators of Power Armor..."
+
+hea_vault_tec:0 "Vault-Tec's Tech!"
+hea_vault_tec_desc:0 "With examples from some of the few vaults that still yet see use, before our arrival at least, we can begin dismantling them and discover just how these people managed to survive underground..."
+
+hea_medical_sin:0 "Drug Peddler's Techniques"
+hea_medical_sin_desc:0 "The dregs of the Den, Reno, and New Vegas were all skilled in peddling poison, looking at their technique its such a shame, for where they saw poison to peddle, we see advanced ways to easily produce medical supplies."
+
+hea_aztec_techniques:0 "Farming Techniques of the Aztlan"
+hea_aztec_techniques_desc:0 "They were savages, heretics who worshipped false gods, and warriors who died in the droves against our number, but their farms were surprisingly advanced, and we would do well to learn how to replicate their techniques, it will take some time of course, our clerics will need to purify them, rid the false Gods' taint."
+
+hea_cursed_knowledge:0 "False God's Teachings"
+hea_cursed_knowledge_desc:0 "Diana believed herself a God, yet did she truly create miracles? As our learned Clerics study her land, and the teachings she imparted upon her followers, we've realized that her teachings were simple science...something that our Clerics known enough of, but this is a common failure of the flock, to not understand the difference between science and divinity.§t Thankfully, they have us to teach them it."
+
+hea_dead_mars:0 "Mars is Dead!"
+hea_dead_mars_desc:0 "His legions shattered, his divinity shown bare for the world, there are no mortal Gods, there is just one God that watches over us, and his armies shattered the Legion, and will continue to shatter any who dare believe they can triumph over the Warriors of Christ almighty."
+
+hea_bigger_tex:0 "Everything was Bigger in Texas"
+hea_bigger_tex_desc:0 "Even their guns! Looking at their weaponry, we've discovered that their guns were bigger than our own. While more costly to produce, the bang produced certainly gave our troops a pause..."
+
+hea_two_headed_bear:0 "Two-Headed Bear's Teachings"
+hea_two_headed_bear_desc:0 "The NCR was bloated, corruption seeped to the bone, but they were a land formed by heroes, and to ignore that they were the only bastion against Ceaser's Hordes would be foolhardy. They fell to us in the end, but how many joined us of their own volition?"
+
+hea_steamdreadnoughts:0 "Dreadnoughts of the Gate"
+hea_steamdreadnoughts_desc:0 "When the men of faith and steel march, a beast wrought of iron and steam bellows it cry."
+
+hea_judasfoundrybus:0 "Judas' Tanks: Foundry Team"
+hea_judasfoundrybus_desc:0 "They're the best in Judas' Foundry and their team is only growing! Somehow..."
+
+hea_pastinspiration:0 "Inspiration from the Past"
+hea_pastinspiration_desc:0 "The Engineers of yesterday had to scrap their plans because it wasn't feasible in their time; that is not the case for us."
+
+hea_judas_engineersexperienced:0 "Judas' Foundry Engineers, Experienced"
+hea_judas_engineersexperienced_desc:0 "The engineers of Judas' Foundry have gotten well used to creating behemoths that blow apart the enemies of the gate..."
+
+hea_shrinetanks:0 "Shrine Tank"
+hea_shrinetanks_desc:0 "Its expensive, it slows down our armored divisions, its costly to repair, but its a damn fine motivation for our frontline troops."
+
+hea_innocencelost_foundry:0 "Foundry of Innocence Lost"
+hea_innocencelost_foundry_desc:0 "It used to be a place of worship, where all who believed who come, now it sends shrines to the heathens and monsters of the waste..."
+
+hea_biggertank1:0 "Bigger Barrel"
+hea_biggertank2:0 "Bigger Chassis"
+hea_biggertank3:0 "Bigger Shells"
+hea_biggertank4:0 "Behemoths of War"
+hea_biggertank4_desc:0 "And God Wept, for peace was no longer an option."
+
+hea_frozen_crusaders:0 "Frozen Crusaders"
+hea_frozen_crusaders_desc:0 "The North may wear at our warriors bones, tear at our spirit, but we've conquered one of the Great bastions of the north, the others will soon follow suit!"
+
+hea_close_air1:0 "Avenging Angels"
+hea_close_air1_desc:0 "Then I heard a loud voice from the temple saying to the seven angels, "Go, pour out the seven bowls of God's wrath on the earth." - Revelation 16:1"
+
+hea_close_air2:0 "Avenging Angels"
+hea_close_air2_desc:0 "Then I heard a loud voice from the temple saying to the seven angels, "Go, pour out the seven bowls of God's wrath on the earth." - Revelation 16:1"
+
+hea_close_air3:0 "Avenging Angels"
+hea_close_air3_desc:0 "Then I heard a loud voice from the temple saying to the seven angels, "Go, pour out the seven bowls of God's wrath on the earth." - Revelation 16:1"
+
+hea_air_control1:0 "Dominion of the Heavens"
+hea_air_control1_desc:0 "The heavens declare the glory of God; the skies proclaim the work of his hands - Psalm 19:1"
+
+hea_air_control2:0 "Dominion of the Heavens"
+hea_air_control2_desc:0 "The heavens declare the glory of God; the skies proclaim the work of his hands - Psalm 19:1"
+
+hea_air_control3:0 "Dominion of the Heavens"
+hea_air_control3_desc:0 "The heavens declare the glory of God; the skies proclaim the work of his hands - Psalm 19:1"
+
+hea_air_reach:0 "Dominion of the Heavens"
+hea_air_reach_desc:0 "The heavens declare the glory of God; the skies proclaim the work of his hands - Psalm 19:1"
+
+hea_air_death:0 "Avenging Angels"
+hea_air_death_desc:0 "Then I heard a loud voice from the temple saying to the seven angels, "Go, pour out the seven bowls of God's wrath on the earth." - Revelation 16:1"
+
+hea_air_death1:0 "Heaven's Wrath"
+hea_air_death1_desc:0 " For the wrath of God is revealed from heaven against all ungodliness and unrighteousness of men - Romans 1:18"
+
+hea_air_death2:0 "Heaven's Wrath"
+hea_air_death2_desc:0 "For the wrath of God is revealed from heaven against all ungodliness and unrighteousness of men - Romans 1:18"
+
+hea_air_death3:0 "Heaven's Wrath"
+hea_air_death3_desc:0 "For the wrath of God is revealed from heaven against all ungodliness and unrighteousness of men - Romans 1:18"
+
+hea_the_guard2:0 "Warriors of God"
+hea_the_guard2_desc:0 "They are not knights, not men with generations of warrior-heritage, or fancy technology that can atomize a man in an instant (though that would be nice to have), they are warriors of God, with Plated Armor, rigourously trained, and well armed!"
+
+hea_judas_engineers:0 "Judas' Foundry Engineers"
+
+HEA_wardens_of_humanity1:0 "Wardens of Humanity"
+HEA_wardens_of_humanity1_desc:0 "But the Lord is faithful. He will establish you and guard you against the evil one. - Thessalonians 3:3"
+
+HEA_wardens_of_humanity2:0 "Wardens of Humanity"
+HEA_wardens_of_humanity2_desc:0 "For everyone who has been born of God overcomes the world. And this is the victory that has overcome the world—our faith. - John 5:4"
+
+####Mur Ideas
+
+mur_order1:0 "Murtaugh Order: Beginning"
+mur_order1_desc:0 "The Murtaugh Order is nothing more than hopeful veterans, novices, and stern instructors from Heaven's Gate, it has potential, but it will take time before it is truly realized."
+
+mur_order2:0 "Murtaugh Order: Heaven's Gate Aid"
+mur_order2_desc:0 "With aid from Heaven's Gate, the order will be able to grow stronger and well trained. Though their aid is welcome, the Order still needs to grow self sufficient"
+
+mur_order3:0 "Murtaugh Order: Eighties Warden"
+mur_order3_desc:0 "The Order has been tasked with dealing with the Eighties, not in any offensive manner, but they must hold the line against any possible incursions, though this means they won't be at pushing forward like most knights,  their lines will be unbreakable."
+
+mur_order4:0 "Murtaugh Order: Unbreakable Wall"
+mur_order4_desc:0 "They are skilled at holding any line for the Sentinels are stalwart in their duty to hold back any incursions into holy land"
+
+mur_order5:0 "Murtaugh Order: Desert Sentinels"
+mur_order5_desc:0 "The Desert Sentinels are excellent warriors, whose skill at holding back enemy incursions is spoken of in legend...or they soon will be!"
+
+fort_mcdermitt1:0 "Fort McDermitt"
+fort_mcdermitt1_desc:0 "Fort McDermitt's walls are not as impressible, nor as unassailable as Peters Retreat, but they will hold the Martaugh Order well enough"
+
+fort_mcdermitt2:0 "Fort McDermitt"
+fort_mcdermitt2_desc:0 "Smiths now reside in Fort McDermitt's walls, and with their aid, its now easier to produce the armor our knights wear."
+
+fort_mcdermitt3:0 "Fort McDermitt"
+fort_mcdermitt3_desc:0 "Clerics, Smiths, and rooms to rest in! Along with nice, strong walls, Fort McDermitt will never rival Peters Retreat, but this comfortable little holdout holds the Order well enough, and with clerics at hand, ensures that their members survive more injuries than most."
+
+murtaugh_order:0 "Murtaugh Order: Desert Sentinels"
+murtaugh_order_desc:0 "The Desert Sentinels stand at the ready, prepared to fight, kill, and die in the Lord's name...though with the smiths and clerics we've employed, that's hopefully not necessary"
+
+shosho_rebels:0 "Shosho Rebels"
+shosho_rebels_desc:0 "They trusted Father Michael, not Presbyter Ann, to protect them against the Wastes"
+
+HEA_control_I80:0 "Heaven's Gate I-80"
+HEA_control_I80_desc:0 "Heaven's Gate watches over I-80, with a stout wall, and knights encased in heavy plate, armed with venerable steam, they almost want the Eighties to try."
+
+HEA_control_I80_trickle:0 "Heaven's Gate I-80"
+HEA_control_I80_trickle_desc:0 "Murtaugh's hold on I-80 means that we get some of the goods that come from it as well! interestingly enough, there are even people who travel so far North to see if Heaven's Gate is as illustrious as the stories stay...all those who do often choose to live here."
+
+mur_skeleton_cathedral:0 "Skeleton Cathedral"
+mur_skeleton_cathedral_desc:0 "It'll take a long time before the Cathedral is finished, but is that not the wonder of constructing one? That it took generations to create? Each generation adding their own love of the Lord, their own hardships, strengths, and very essence into the foundation of this majestic structure of the Lord."
+
+
+#######Rotpurger Ideas
+
+##Heaven's Gate Taming The Rivers, Lands and Heavens
+hea_dynamic_taming_rivers:0 "Taming the §BRivers§!"
+hea_dynamic_taming_rivers_desc:0 "The §BRivers§! of the Wasteland are the lifeblood of any trading empire, truthfully, we aren't one, but if we ever hope to spread the Light of the Lord all across this blightful land, then the waters of §W[HEA.GetNameWithFlag]§! will need to be tamed."
+
+hea_dynamic_taming_lands:0 "Taming the §8Lands§!"
+hea_dynamic_taming_lands_desc:0 "Pipelines act as highways and methods to extend the blessing to all of the faithful, crops are planted and harvested by the faithful using ancient skills, and our smiths ensure our warriors can ensure the peace is kept...but why should we stop at adequate?"
+hea_steam_smiths_weapon:0 "Steam Smiths Weapons"
+
+hea_dynamic_taming_heavens:0 "Taming the §4Heavens§!"
+hea_dynamic_taming_heavens_desc:0 "The Stagleap Mountains have been our protectors and guardians since our ancestors settled in the Nucleus but even after two hundred years we haven't truly settled the spires and crags, until now..."
+
+guard_rebornHEA:0 "Guard Reborn"

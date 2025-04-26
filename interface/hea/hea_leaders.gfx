@@ -1,0 +1,13 @@
+spriteTypes = {
+#MUR
+	spriteType = {
+		name = "GFX_Portrait_MUR_shepherd"
+		textureFile = "gfx/leaders/MUR/portrait_mur_shephard.dds"
+	}
+	
+#HEA
+		spriteType = {
+		name = "GFX_Portrait_HEA_Seraphim"
+		textureFile = "gfx/leaders/HEA/Seraphim.dds"
+	}
+}

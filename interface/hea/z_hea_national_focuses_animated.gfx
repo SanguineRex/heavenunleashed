@@ -1,0 +1,12 @@
+#Do not use the shine generator with this file, it doesn't work.
+#Instead, manually create the shines.
+spriteTypes = {
+	frameAnimatedSpriteType = {
+		name = "GFX_goal_animated_house"
+		texturefile = "gfx/interface/goals/unique/VEG/house_animated.dds"
+		noOfFrames = 24
+		animation_rate_fps = 6
+		looping = yes
+		play_on_show = yes
+	}
+}

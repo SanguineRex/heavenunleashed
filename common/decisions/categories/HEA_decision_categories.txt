@@ -1,0 +1,79 @@
+hea_tenth_crusade = {
+	allowed = { tag = HEA }
+			visible = {
+			has_country_flag = HEA_crusader_state
+		}
+	icon = GFX_decision_category_hea_conversion
+	priority = {
+		base = 10
+	}
+}
+
+
+hea_conversion = {
+	allowed = { tag = HEA }
+	icon = GFX_decision_category_hea_conversion
+	priority = {
+		base = 10
+	}
+}
+#####################
+##Michael's Crusade##
+#####################
+hea_michael_crusade_cat = {
+	allowed = {
+		original_tag = HEA
+	}
+	icon = x
+	priority = 999
+}
+##########################
+##Monsters of the Wastes##
+##########################
+hea_monsters_of_the_wastes_cat = {
+	allowed = {
+		original_tag = HEA
+	}
+	icon = x
+	priority = 998
+}
+##########################
+##Monsters of the Wastes##
+##########################
+hea_theological_assembly_sharing_cat = {
+	allowed = {
+		original_tag = HEA
+	}
+	icon = x
+	priority = 997
+}
+###############
+##Water Mills##
+###############
+hea_taming_river_cat = {
+	allowed = {
+		original_tag = HEA
+	}
+	icon = x
+	priority = 899
+}
+#########################
+##Alchemist and Hermits##
+#########################
+hea_taming_heaven_cat = {
+	allowed = {
+		original_tag = HEA
+	}
+	icon = x
+	priority = 898
+}
+###############
+##Steam Smith##
+###############
+hea_taming_land_cat = {
+	allowed = {
+		original_tag = HEA
+	}
+	icon = x
+	priority = 897
+}

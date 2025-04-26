@@ -1,0 +1,155 @@
+ideas = {
+	mobilization_laws = {
+		law = yes
+
+		hea_conscription_armed_elite = {
+			picture = tbh_voluntairy_deputization
+			cost = 150
+			removal_cost = -1
+			level = 5
+			allowed = {
+				# Seems to be unfinished and not localised, likely a holdover from the previous HEA tree work @Tran
+				# original_tag = HEA
+				always = no
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			modifier = {
+				conscription = 0.02
+				mobilization_speed = 0.5
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			default = yes
+
+		}
+	}
+
+	economy = {
+		law = yes
+
+		hea_economy_righteous_cause = {
+			picture = tbh_provisions_for_protection
+			allowed = {
+				# Seems to be unfinished and not localised, likely a holdover from the previous HEA tree work @Tran
+				# original_tag = HEA
+				always = no
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.25
+				justify_war_goal_time = -0.20
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
+	}
+
+	undesirables_recruitment_laws = {
+		law = yes
+		undesirables_hea_1 = {
+			allowed = {
+				# Seems to be unfinished and not localised, likely a holdover from the previous HEA tree work @Tran
+				# original_tag = HEA
+				always = no
+			}
+			available = {
+				threat > 0.1
+			}
+			cost = 150
+			removal_cost = -1
+			level = 1
+			picture = no_undesirables
+			modifier = {
+				conscription_factor = 0.25
+				non_core_manpower = 0.2
+				army_attack_factor = -0.025
+				army_defence_factor = -0.025
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			cancel_if_invalid = no
+			default = yes
+		}
+		undesirables_hea_2 = {
+			allowed = {
+				# Seems to be unfinished and not localised, likely a holdover from the previous HEA tree work @Tran
+				# original_tag = HEA
+				always = no
+			}
+			available = {
+				threat > 0.1
+			}
+			cost = 150
+			removal_cost = -1
+			level = 2
+			picture = no_undesirables
+			modifier = {
+				conscription_factor = 0.5
+				non_core_manpower = 0.4
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			cancel_if_invalid = no
+		}
+		undesirables_hea_3 = {
+			allowed = {
+				# Seems to be unfinished and not localised, likely a holdover from the previous HEA tree work @Tran
+				# original_tag = HEA
+				always = no
+			}
+			available = {
+				threat > 0.1
+			}
+			cost = 150
+			removal_cost = -1
+			level = 3
+			picture = no_undesirables
+			modifier = {
+				conscription_factor = 0.75
+				non_core_manpower = 0.6
+				army_attack_factor = -0.075
+				army_defence_factor = -0.075
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			cancel_if_invalid = no
+		}
+		undesirables_hea_4 = {
+			allowed = {
+				# Seems to be unfinished and not localised, likely a holdover from the previous HEA tree work @Tran
+				# original_tag = HEA
+				always = no
+			}
+			available = {
+				threat > 0.1
+			}
+			cost = 150
+			removal_cost = -1
+			level = 4
+			picture = no_undesirables
+			modifier = {
+				conscription_factor = 1
+				non_core_manpower = 0.8
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			cancel_if_invalid = no
+		}
+	}
+}

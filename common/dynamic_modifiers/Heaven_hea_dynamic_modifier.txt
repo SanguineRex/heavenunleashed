@@ -1,0 +1,54 @@
+#Heaven's Unleashed: Heaven's Gate dynamic modifiers
+#####################
+##Taming the Rivers##
+#####################
+hea_dynamic_taming_rivers = {
+	icon = GFX_idea_generic_coast_guard
+	country_resource_energy = hea_river_resource_energy
+	country_resource_water = hea_river_resource_water
+	army_speed_factor = hea_river_army_speed
+	production_speed_infrastructure_factor = hea_river_infrastructure_speed
+	stability_factor = hea_river_stability
+	monthly_population = hea_river_monthly_pop
+	non_core_manpower = hea_river_non_core_manpower
+}
+####################
+##Taming the Lands##
+####################
+hea_dynamic_taming_lands = {
+	icon = GFX_idea_mountain_gods
+	country_resource_metal = hea_land_resource_metal
+	country_resource_composites = hea_land_resource_composites
+	industrial_capacity_factory = hea_land_output
+	monthly_population = hea_land_monthly_pop
+	consumer_goods_factor = hea_land_consumer
+	global_building_slots_factor = hea_land_max_building_slot_factor
+	production_speed_buildings_factor = hea_land_building_speed
+}
+######################
+##Taming the Heavens##
+######################
+hea_dynamic_taming_heavens = {
+	icon = GFX_idea_generic_religion
+	research_speed_factor = hea_heaven_research
+	war_support_factor = hea_heaven_war_support
+	army_morale_factor = hea_heaven_recovery_rate_factor
+	breakthrough_factor = hea_heaven_break_through
+	conscription_factor = hea_heaven_conscript_factor
+	country_resource_circuitry = hea_heaven_resource_circuitry
+	country_resource_advanced = hea_heaven_resource_advanced
+}
+#########################################
+##Theological Assembly-Forgiveness Path##
+#########################################
+hea_dynamic_theological_assembly = {
+	icon = GFX_idea_generic_religion
+	war_support_factor = hea_theological_war_support
+	stability_factor = hea_theological_stability
+	research_speed_factor = hea_theological_research
+	monthly_population = hea_theological_monthly_pop
+	political_power_factor = hea_theological_pp_gain_factor
+	diplomacy_distance = hea_theological_diplomacy_distance
+	offensive_war_stability_factor = hea_theological_offensive_war
+	defensive_war_stability_factor = hea_theological_defensive_war
+}

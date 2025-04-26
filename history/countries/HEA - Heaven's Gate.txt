@@ -1,0 +1,127 @@
+﻿#capital = 116
+capital = 1384
+oob = "HEA_2275"
+set_technology = {
+	basic_supply_transport_tech = 1
+	infantry_tech_level_tribal = 1
+	infantry_tech_level_settler = 1
+	infantry_tech_level_scientific = 1
+	special_forces_tech_level_tribal = 1
+	special_forces_tech_level_settler = 1
+	special_forces_tech_level_scientific = 1
+	power_armour_tech_level_tribal = 1
+	power_armour_tech_level_settler = 1
+	power_armour_tech_level_scientific = 1
+	support_tech_level_tribal = 1
+	support_tech_level_settler = 1
+	support_tech_level_scientific = 1
+	vehicles_tech_level_tribal = 1
+	vehicles_tech_level_settler = 1
+	air_tech_level_tribal = 1
+	air_tech_level_settler = 1
+	air_tech_level_scientific = 1
+	naval_tech_level_tribal = 1
+	naval_tech_level_settler = 1
+	tools_tech_level_tribal = 1
+	tools_tech_level_settler = 1
+	tools_tech_level_scientific = 1
+	habitation_tech_level_tribal = 1
+	habitation_tech_level_settler = 1
+	habitation_tech_level_scientific = 1
+	exploitation_tech_level_tribal = 1
+	exploitation_tech_level_settler = 1
+	exploitation_tech_level_scientific = 1
+	electronics_tech_level_tribal = 1
+	electronics_tech_level_settler = 1
+	electronics_tech_level_scientific = 1
+	tribal_civilization = 1
+	settled_civilization = 1
+	scientific_civilization = 1 #Heaven's Gate are predomidently a tech civilization, using things such as Steam Cores, Energy Weapons and Power Armor. They shouldn't have the same tech level as New Caanan.
+	tool_engineering = 1
+	basic_industry_tech = 1
+	pre_construction_industry_tech = 1
+	standard_weaponry_tech = 1
+	melee_weaponry_tech_1 = 1
+	support_weaponry = 1
+	demolitions_weaponry_tech = 1
+	fireteam_weaponry_tech = 1
+	bike_tech_1 = 1
+	spec_ops_equipment_tech_1 = 1
+	stripped_pa_tech = 1
+	weight_support_frame_pa_tech_1 = 1
+	weight_support_frame_pa_tech_2 = 1
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		nautics_tech_1 = 1
+		light_navy_hull_tech_1 = 1
+		waterproof_sealing_tech = 1
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		nautics_tech_non_mtg_1 = 1
+		light_navy_hull_tech_non_mtg_1 = 1
+		waterproof_sealing_tech_non_mtg = 1
+	}
+}
+
+set_stability = 0.5
+set_war_support = 0.2
+set_research_slots = 5
+set_country_flag = is_settler_nation
+set_country_flag = is_gate_area
+set_country_flag = grand_doctrine_ai
+set_country_flag = grand_infantry_doctrine_ai
+
+set_politics = {
+	ruling_party = ruler
+	elections_allowed = no
+}
+
+set_popularities = {
+	people = 0
+	elites = 35
+	intellectuals = 5
+	ruler = 60
+}
+
+add_ideas = {
+	hea_divided_leadership
+	hea_theocratic_elite
+	hea_steam_power
+	hea_steam_powered_weapons
+	volunteer_militia_conscription
+	
+}
+
+recruit_character = HEA_saint_michael
+recruit_character = HEA_steammaiden_mira
+recruit_character = HEA_mother_magdalene
+recruit_character = HEA_pastor_hughes
+recruit_character = HEA_priest_roberts
+recruit_character = HEA_canon_phillips
+
+create_or_join_children_of_the_gate = yes
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	create_operative_leader = {
+		name = "Seraphim"
+		gfx = GFX_Portrait_HEA_Seraphim
+		skill = 50
+		traits = { operative_heavyweight operative_speech }
+		bypass_recruitment = no
+		available_to_spy_master = no
+		nationalities = { HEA }
+	}
+}

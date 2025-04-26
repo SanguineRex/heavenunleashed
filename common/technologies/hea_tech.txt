@@ -1,0 +1,160 @@
+technologies = {
+	# Used in focuses trees
+	hea_cathedral_tech = {
+	dependencies = {
+			blocked_tech = 1
+		}
+		research_cost = 1
+
+		allow = {
+			always = no
+		}
+        enable_building = {
+            building = hea_cathedral
+            level = 1
+        }
+	}
+
+	hea_guardone = {
+		dependencies = {
+				blocked_tech = 1
+			}
+			research_cost = 1
+	
+			allow = {
+				always = no
+			}
+			category_leg_infantry = {
+				max_organisation = 5
+			}
+		}
+	hea_skillone = {
+		dependencies = {
+				blocked_tech = 1
+			}
+			research_cost = 1
+	
+			allow = {
+				always = no
+			}
+			category_leg_infantry = {
+				maximum_speed = 0.05
+			}
+		}
+	hea_skilltwo = {
+		dependencies = {
+				blocked_tech = 1
+			}
+			research_cost = 1
+	
+			allow = {
+				always = no
+			}
+			category_leg_infantry = {
+	
+			initiative = 0.05	
+			recon = 0.05
+			}
+		}
+	hea_skillthree = {
+		dependencies = {
+				blocked_tech = 1
+			}
+			research_cost = 1
+	
+			allow = {
+				always = no
+			}
+			category_leg_infantry = {
+				max_organisation = 5
+				ap_attack = 0.10
+				initiative = 0.05	
+				recon = 0.05
+			}
+		}
+	hea_swordone = {
+		dependencies = {
+				blocked_tech = 1
+			}
+			research_cost = 1
+	
+			allow = {
+				always = no
+			}
+			category_leg_infantry = {
+				reliability = -0.05
+				soft_attack = 0.05
+			}
+		}
+	hea_swordtwo = {
+		dependencies = {
+				blocked_tech = 1
+			}
+			research_cost = 1
+	
+			allow = {
+				always = no
+			}
+			category_leg_infantry = {
+				ap_attack = 0.05
+				soft_attack = 0.05
+			}
+	}
+	hea_swordthree = {
+		dependencies = {
+				blocked_tech = 1
+			}
+			research_cost = 1
+	
+			allow = {
+				always = no
+			}
+			category_leg_infantry = {
+				breakthrough = 0.05
+				reliability = -0.05
+				soft_attack = 0.05
+			}
+		}
+	hea_armorone = {
+		dependencies = {
+				blocked_tech = 1
+			}
+			research_cost = 1
+	
+			allow = {
+				always = no
+			}
+			category_leg_infantry = {
+				defense = 0.05
+			}
+		}
+	hea_armortwo = {
+		dependencies = {
+				blocked_tech = 1
+			}
+			research_cost = 1
+	
+			allow = {
+				always = no
+			}
+			category_leg_infantry = {
+				defense = 0.05
+				armor_value = 0.05
+			}
+		}
+	hea_armorthree = {
+		dependencies = {
+				blocked_tech = 1
+			}
+			research_cost = 1
+	
+			allow = {
+				always = no
+			}
+			category_leg_infantry = {
+				max_strength = 0.05
+				armor_value  = 0.05
+				defense = 0.05
+			}
+		}
+}

@@ -1,0 +1,1024 @@
+﻿add_namespace = nf_bonedancers
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.1" }
+	id = nf_bonedancers.1
+	title = nf_bonedancers.1.t
+	desc = nf_bonedancers.1.d
+	picture = GFX_event_BDT_geck
+	is_triggered_only = yes
+
+	option = {
+		name = nf_bonedancers.1.a
+		add_war_support = 0.1
+	}
+	option = {
+		name = nf_bonedancers.1.b
+		add_stability = 0.1
+	}
+	option = {
+		name = nf_bonedancers.1.c
+		add_stability = 0.05
+		add_war_support = 0.05
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.2" }
+	id = nf_bonedancers.2
+	title = nf_bonedancers.2.t
+	desc = nf_bonedancers.2.d
+	picture = GFX_event_BDT_odious_king
+	is_triggered_only = yes
+
+	option = {
+		name = nf_bonedancers.2.a
+		capital_scope = {
+			add_extra_state_shared_building_slots = 1
+		}
+		set_temp_variable = { caps_to_add = 200 }
+		add_caps = yes
+	}
+	option = {
+		name = nf_bonedancers.2.b
+		capital_scope = {
+			add_extra_state_shared_building_slots = 2
+		}
+		set_temp_variable = { caps_to_add = 100 }
+		add_caps = yes
+	}
+	option = {
+		name = nf_bonedancers.2.c
+		capital_scope = {
+			add_extra_state_shared_building_slots = 3
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.3" }
+	id = nf_bonedancers.3
+	title = nf_bonedancers.3.t
+	desc = nf_bonedancers.3.d
+	picture = GFX_event_BDT_crimson_forest
+	is_triggered_only = yes
+
+	option = {
+		name = nf_bonedancers.3.a
+		set_temp_variable = { caps_to_add = 200 }
+		add_caps = yes
+	}
+	option = {
+		name = nf_bonedancers.3.b
+		capital_scope = {
+			add_resource = {
+				type = metal
+				amount = 8
+			}
+		}
+	}
+}
+
+#Treaty of Bend: Initial
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.4" }
+	id = nf_bonedancers.4
+	title = nf_bonedancers.4.t
+	desc = nf_bonedancers.4.d
+	picture = GFX_event_car_1
+	is_triggered_only = yes
+
+	option = {
+		name = nf_bonedancers.4.a
+		log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.4.a"
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 50
+				has_country_flag = bdt_diplomatic_outlook_flag
+			}
+		}
+		FROM = {
+			country_event = nf_bonedancers.5
+		}
+		custom_effect_tooltip = bdt_treaty_of_bend_bdt_tt
+		effect_tooltip = {
+			random_country = {
+				limit = {
+					original_tag = BDT
+				}
+				every_owned_state = {
+					limit = { is_claimed_by = TRL }
+					remove_claim_by = TRL
+				}
+				diplomatic_relation = {
+					country = TRL
+					relation = non_aggression_pact
+					active = yes
+				}
+				capital_scope = {
+					set_temp_variable = {
+						pop_add = -2000
+					}
+					add_state_population = yes
+					add_resource = {
+						type = metal
+						amount = -16
+					}
+				}
+				set_country_flag = treaty_of_bend
+				add_stability = -0.25
+			}
+			FROM = {
+				every_owned_state = {
+					limit = { is_claimed_by = BDT }
+					remove_claim_by = BDT
+				}
+				diplomatic_relation = {
+					country = BDT
+					relation = non_aggression_pact
+					active = yes
+				}
+				capital_scope = {
+					set_temp_variable = {
+						pop_add = 2000
+					}
+					add_state_population = yes
+					add_resource = {
+						type = metal
+						amount = 16
+					}
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 6
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 6
+				}
+			}
+		}
+	}
+	option = {
+		name = nf_bonedancers.4.b
+		log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.4b"
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 50
+				NOT = { has_country_flag = bdt_diplomatic_outlook_flag }
+			}
+		}
+		army_experience = 20
+		every_unit_leader = {
+			add_attack = 2
+		}
+	}
+}
+
+#Treaty of Bend: Offer
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.5" }
+	id = nf_bonedancers.5
+	title = nf_bonedancers.5.t
+	desc = nf_bonedancers.5.d
+	picture = GFX_event_car_1
+	is_triggered_only = yes
+	option = {
+		name = nf_bonedancers.5.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 50
+				NOT = {
+					OR = {
+						has_wargoal_against = FROM
+						is_justifying_wargoal_against = FROM
+						FROM = {
+							has_wargoal_against = ROOT
+						}
+						FROM = {
+							is_justifying_wargoal_against = ROOT
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			country_event = nf_bonedancers.6
+		}
+		custom_effect_tooltip = bdt_treaty_of_bend_trl_tt
+		effect_tooltip = {
+			capital_scope = {
+				set_temp_variable = {
+					pop_add = 2000
+				}
+				add_state_population = yes
+				add_resource = {
+					type = metal
+					amount = 16
+				}
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 6
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 6
+			}
+		}
+	}
+	option = {
+		name = nf_bonedancers.5.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 100
+				OR = {
+					has_wargoal_against = FROM
+					is_justifying_wargoal_against = FROM
+					FROM = {
+						has_wargoal_against = ROOT
+					}
+					FROM = {
+						is_justifying_wargoal_against = ROOT
+					}
+				}
+			}
+		}
+		FROM = {
+			country_event = nf_bonedancers.7
+		}
+	}
+}
+
+#Treaty Accepted
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.6" }
+	id = nf_bonedancers.6
+	title = nf_bonedancers.6.t
+	desc = nf_bonedancers.6.d
+	picture = GFX_event_car_1
+	is_triggered_only = yes
+	option = {
+		name = nf_bonedancers.6.a
+		add_stability = 0.05
+		every_owned_state = {
+			limit = { is_claimed_by = FROM }
+			remove_claim_by = FROM
+		}
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+			active = yes
+		}
+		capital_scope = {
+			set_temp_variable = {
+				pop_add = -2000
+			}
+			add_state_population = yes
+			add_resource = {
+				type = metal
+				amount = -16
+			}
+		}
+		set_country_flag = treaty_of_bend
+		add_stability = -0.25
+		FROM = {
+			every_owned_state = {
+				limit = { is_claimed_by = ROOT }
+				remove_claim_by = ROOT
+			}
+			diplomatic_relation = {
+				country = ROOT
+				relation = non_aggression_pact
+				active = yes
+			}
+			capital_scope = {
+				set_temp_variable = {
+					pop_add = 2000
+				}
+				add_state_population = yes
+				add_resource = {
+					type = metal
+					amount = 16
+				}
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 6
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 6
+			}
+		}
+	}
+}
+
+#Treaty Rejected
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.7" }
+	id = nf_bonedancers.7
+	title = nf_bonedancers.7.t
+	desc = nf_bonedancers.7.d
+	picture = GFX_event_car_1
+	is_triggered_only = yes
+	option = {
+		name = nf_bonedancers.7.a
+		add_stability = -0.05
+	}
+}
+
+#Request to Join the Northern League?
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.8" }
+	id = nf_bonedancers.8
+	title = nf_bonedancers.8.t
+	desc = nf_bonedancers.8.d
+	picture = GFX_event_WBH_immortal
+	is_triggered_only = yes
+
+	option = {
+		name = nf_bonedancers.8.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 50
+				NOT = {
+					OR = {
+						has_wargoal_against = FROM
+						is_justifying_wargoal_against = FROM
+						FROM = {
+							has_wargoal_against = ROOT
+						}
+						FROM = {
+							is_justifying_wargoal_against = ROOT
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			create_or_join_northern_league = yes
+		}
+	}
+	option = {
+		name = nf_bonedancers.8.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 100
+				OR = {
+					has_wargoal_against = FROM
+					is_justifying_wargoal_against = FROM
+					FROM = {
+						has_wargoal_against = ROOT
+					}
+					FROM = {
+						is_justifying_wargoal_against = ROOT
+					}
+				}
+			}
+		}
+		FROM = {
+			country_event = nf_bonedancers.9
+		}
+	}
+}
+
+#Join offer rejected
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.9" }
+	id = nf_bonedancers.9
+	title = nf_bonedancers.9.t
+	desc = nf_bonedancers.9.d
+	picture = GFX_event_WBH_immortal
+	is_triggered_only = yes
+	option = {
+		name = nf_bonedancers.9.a
+		complete_national_focus = bdt_realm_of_bone
+	}
+}
+
+#Crimson Acolytes Flavor
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.10" }
+	id = nf_bonedancers.10
+	title = nf_bonedancers.10.t
+	desc = nf_bonedancers.10.d
+	picture = GFX_event_BDT_odious_king
+	is_triggered_only = yes
+	option = {
+		name = nf_bonedancers.10.a
+		add_popularity = {
+			ideology = intellectuals
+			popularity = 0.10
+		}
+	}
+}
+
+#Seraph Lords Flavor
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.11" }
+	id = nf_bonedancers.11
+	title = nf_bonedancers.11.t
+	desc = nf_bonedancers.11.d
+	picture = GFX_event_HEA_bishop2
+	is_triggered_only = yes
+	option = {
+		name = nf_bonedancers.11.a
+		add_popularity = {
+			ideology = people
+			popularity = 0.10
+		}
+	}
+}
+
+#Hea question of Robots
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.12" }
+	id = nf_bonedancers.12
+	title = nf_bonedancers.12.t
+	desc = nf_bonedancers.12.d
+	picture = GFX_event_HEA_bishop2
+	is_triggered_only = yes
+
+	option = {
+		name = nf_bonedancers.12.a
+		set_technology = {
+			robotics_tech_level_tribal = 1
+			robotics_tech_level_settler = 1
+		}
+		custom_effect_tooltip = bdt_hea_angered
+		set_country_flag = angered_hea
+		add_stability = -0.10
+	}
+	option = {
+		name = nf_bonedancers.12.b
+		add_political_power = -300
+		custom_effect_tooltip = bdt_hea_pleased
+	}
+}
+
+#Hea question of sinners
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.13" }
+	id = nf_bonedancers.13
+	title = nf_bonedancers.13.t
+	desc = nf_bonedancers.13.d
+	picture = GFX_event_HEA_bishop2
+	is_triggered_only = yes
+
+	option = {
+		name = nf_bonedancers.13.a
+		add_manpower = 1500
+		custom_effect_tooltip = bdt_hea_angered
+		set_country_flag = angered_hea
+	}
+	option = {
+		name = nf_bonedancers.13.b
+		add_stability = -0.15
+		custom_effect_tooltip = bdt_hea_pleased
+	}
+}
+
+#Should join hea?
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.14" }
+	id = nf_bonedancers.14
+	title = nf_bonedancers.14.t
+	desc = nf_bonedancers.14.d
+	picture = GFX_event_HEA_bishop1
+	is_triggered_only = yes
+
+	option = {
+		name = nf_bonedancers.14.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 50
+				NOT = {
+					OR = {
+						FROM = {
+							has_country_flag = angered_hea
+						}
+						has_wargoal_against = FROM
+						is_justifying_wargoal_against = FROM
+						FROM = {
+							has_wargoal_against = ROOT
+						}
+						FROM = {
+							is_justifying_wargoal_against = ROOT
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			country_event = nf_bonedancers.15 #Invite
+		}
+	}
+	option = {
+		name = nf_bonedancers.14.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 100
+				OR = {
+					FROM = {
+						has_country_flag = angered_hea
+					}
+					has_wargoal_against = FROM
+					is_justifying_wargoal_against = FROM
+					FROM = {
+						has_wargoal_against = ROOT
+					}
+					FROM = {
+						is_justifying_wargoal_against = ROOT
+					}
+				}
+			}
+		}
+		FROM = {
+			country_event = nf_bonedancers.16 #Refuse
+		}
+	}
+}
+
+#Join Hea
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.15" }
+	id = nf_bonedancers.15
+	title = nf_bonedancers.15.t
+	desc = nf_bonedancers.15.d
+	picture = GFX_event_HEA_bishop1
+	is_triggered_only = yes
+	option = {
+		name = nf_bonedancers.15.a
+		add_stability = 0.15
+		add_popularity = {
+			ideology = people
+			popularity = 0.10
+		}
+		set_country_flag = hea_accepted
+	}
+}
+
+#Refusued by Hea
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.16" }
+	id = nf_bonedancers.16
+	title = nf_bonedancers.16.t
+	desc = nf_bonedancers.16.d
+	picture = GFX_event_HEA_crusade
+	is_triggered_only = yes
+	option = {
+		name = nf_bonedancers.16.a
+		add_stability = -0.1
+		set_country_flag = hea_refused
+	}
+}
+
+#Offer to buy TIM coast
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.17" }
+	id = nf_bonedancers.17
+	title = nf_bonedancers.17.t
+	desc = nf_bonedancers.17.d
+	picture = GFX_event_car_1
+	is_triggered_only = yes
+
+	option = {
+		name = nf_bonedancers.17.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 50
+				NOT = {
+					OR = {
+						has_wargoal_against = FROM
+						is_justifying_wargoal_against = FROM
+						FROM = {
+							has_wargoal_against = ROOT
+						}
+						FROM = {
+							is_justifying_wargoal_against = ROOT
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			country_event = nf_bonedancers.18 #Accept
+		}
+	}
+	option = {
+		name = nf_bonedancers.17.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 100
+				OR = {
+					has_wargoal_against = FROM
+					is_justifying_wargoal_against = FROM
+					FROM = {
+						has_wargoal_against = ROOT
+					}
+					FROM = {
+						is_justifying_wargoal_against = ROOT
+					}
+				}
+			}
+		}
+		FROM = {
+			country_event = nf_bonedancers.19 #Refuse
+		}
+	}
+}
+
+#Accept
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.18" }
+	id = nf_bonedancers.18
+	title = nf_bonedancers.18.t
+	desc = nf_bonedancers.18.d
+	picture = GFX_event_car_1
+	is_triggered_only = yes
+	option = {
+		name = nf_bonedancers.18.a
+		transfer_state = 53
+		transfer_state = 277
+		transfer_state = 587
+		transfer_state = 952
+		hidden_effect = {
+			53 = {
+				remove_core_of = FROM
+				remove_claim_by = FROM
+			}
+			277 = {
+				remove_core_of = FROM
+				remove_claim_by = FROM
+			}
+			587 = {
+				remove_core_of = FROM
+				remove_claim_by = FROM
+			}
+			952 = {
+				remove_core_of = FROM
+				remove_claim_by = FROM
+			}
+		}
+		add_political_power = -500
+		FROM = {
+			custom_effect_tooltip = TIM_move_industry_inland
+			capital_scope = {
+				set_temp_variable = {
+					pop_add = 8000
+				}
+				add_state_population = yes
+				add_extra_state_shared_building_slots = 8
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 8
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 8
+			}
+		}
+	}
+}
+
+#Refuse
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.19" }
+	id = nf_bonedancers.19
+	title = nf_bonedancers.19.t
+	desc = nf_bonedancers.19.d
+	picture = GFX_event_car_1
+	is_triggered_only = yes
+	option = {
+		name = nf_bonedancers.19.a
+		FROM = {
+			ROOT = {
+				grant_wargoals_on_core_states_of_prev = yes
+			}
+		}
+	}
+}
+
+#Unlocking HEA mainframe branch
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.20" }
+	id = nf_bonedancers.20
+	title = nf_bonedancers.20.t
+	desc = nf_bonedancers.20.d
+
+	is_triggered_only = yes
+	option = {
+		name = nf_bonedancers.20.1
+		country_event = nf_bonedancers.24
+	}
+
+	option = {
+		name = nf_bonedancers.20.2
+		country_event = nf_bonedancers.24
+	}
+
+	option = {
+		name = nf_bonedancers.20.3
+		ai_chance = {
+			base = 100 #Its a challenge for the player, not the AI.
+		}
+		country_event = nf_bonedancers.21
+	}
+
+	option = {
+		name = nf_bonedancers.20.4
+		country_event = nf_bonedancers.24
+	}
+
+	option = {
+		name = nf_bonedancers.20.5
+		country_event = nf_bonedancers.24
+	}
+
+	option = {
+		name = nf_bonedancers.20.6
+		country_event = nf_bonedancers.24
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.21" }
+	id = nf_bonedancers.21
+	title = nf_bonedancers.21.t
+	desc = nf_bonedancers.21.d
+
+	is_triggered_only = yes
+	option = {
+		name = nf_bonedancers.21.1
+		country_event = nf_bonedancers.24
+	}
+
+	option = {
+		name = nf_bonedancers.21.2
+		country_event = nf_bonedancers.24
+	}
+
+	option = {
+		name = nf_bonedancers.21.3
+		country_event = nf_bonedancers.24
+	}
+
+	option = {
+		name = nf_bonedancers.21.4
+		country_event = nf_bonedancers.24
+	}
+
+	option = {
+		name = nf_bonedancers.21.5
+		ai_chance = {
+			base = 100 #Its a challenge for the player, not the AI.
+		}
+		country_event = nf_bonedancers.22
+	}
+
+	option = {
+		name = nf_bonedancers.21.6
+		country_event = nf_bonedancers.24
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.22" }
+	id = nf_bonedancers.22
+	title = nf_bonedancers.22.t
+	desc = nf_bonedancers.22.d
+
+	is_triggered_only = yes
+	option = {
+		name = nf_bonedancers.22.1
+		country_event = nf_bonedancers.24
+	}
+
+	option = {
+		name = nf_bonedancers.22.2
+		country_event = nf_bonedancers.24
+	}
+
+	option = {
+		name = nf_bonedancers.22.3
+		country_event = nf_bonedancers.24
+	}
+
+	option = {
+		name = nf_bonedancers.22.4
+		country_event = nf_bonedancers.24
+	}
+
+	option = {
+		name = nf_bonedancers.22.5
+		country_event = nf_bonedancers.24
+	}
+
+	option = {
+		name = nf_bonedancers.22.6
+		ai_chance = {
+			base = 100 #Its a challenge for the player, not the AI.
+		}
+		country_event = nf_bonedancers.23
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.23" }
+	id = nf_bonedancers.23
+	title = nf_bonedancers.23.t
+	desc = nf_bonedancers.23.d
+
+	is_triggered_only = yes
+	option = {
+		name = nf_bonedancers.23.1
+		add_research_slot = 1
+		add_ideas = hea_steam_power
+		set_country_flag = bdt_secrets_of_the_gate_decision_flag
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.24" }
+	id = nf_bonedancers.24
+	title = nf_bonedancers.24.t
+	desc = nf_bonedancers.24.d
+
+	is_triggered_only = yes
+	option = {
+		name = nf_bonedancers.24.1
+	}
+}
+
+#Corrupting the Steam
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.25" }
+	id = nf_bonedancers.25
+	title = nf_bonedancers.25.t
+	desc = nf_bonedancers.25.d
+	picture = GFX_event_BDT_odious_king
+
+	is_triggered_only = yes
+	option = {
+		name = nf_bonedancers.25.1
+		add_state_core = 278
+		custom_effect_tooltip = bdt_80_percent_reduction_for_hea_lands
+		hidden_effect = {
+			every_owned_state = {
+				limit = {
+					is_core_of = HEA
+					NOT = { is_core_of = BDT }
+				}
+				set_variable = { coring_cost_targeted_state_factor@BDT = -0.80 }
+			}
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.26" }
+	id = nf_bonedancers.26
+	title = nf_bonedancers.26.t
+	desc = nf_bonedancers.26.d
+	picture = GFX_event_generic_snow_city
+
+	is_triggered_only = yes
+	option = {
+		name = nf_bonedancers.26.1
+		add_political_power = -100
+		country_event = nf_bonedancers.27
+	}
+	option = {
+		name = nf_bonedancers.26.2
+		69 = {
+			add_extra_state_shared_building_slots = 8
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.27" }
+	id = nf_bonedancers.27
+	title = nf_bonedancers.27.t
+	desc = nf_bonedancers.27.d
+	picture = GFX_event_BDT_great_northern_hotel
+
+	is_triggered_only = yes
+	option = {
+		name = nf_bonedancers.27.1
+			add_stability = -0.35
+			country_event = nf_bonedancers.28
+	}
+	option = {
+		name = nf_bonedancers.27.2
+			add_stability = 0.2
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.28" }
+	id = nf_bonedancers.28
+	title = nf_bonedancers.28.t
+	desc = nf_bonedancers.28.d
+	picture = GFX_event_BDT_red_room
+
+	is_triggered_only = yes
+	option = {
+		name = nf_bonedancers.28.1
+		add_country_leader_trait = bdt_fire_walker
+		if = {
+			limit = {
+				NOT = { has_country_flag = achievement_bdt_twin_peaks }
+			}
+			set_country_flag = achievement_bdt_twin_peaks
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_bonedancers.29" }
+	id = nf_bonedancers.29
+	title = nf_bonedancers.29.t
+	desc = nf_bonedancers.29.d
+	picture = GFX_event_BDT_red_room
+
+	is_triggered_only = yes
+	option = {
+		name = nf_bonedancers.29.a
+		custom_effect_tooltip = bdt_fire_walker_op_description
+		hidden_effect = {
+			set_politics = {
+				ruling_party = intellectuals
+			}
+			add_popularity = {
+				ideology = intellectuals
+				popularity = 1
+			}
+			add_manpower = 5000
+			capital_scope = {
+				add_resource = {
+					type = water
+					amount = 30
+				}
+				add_resource = {
+					type = metal
+					amount = 30
+				}
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 8
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 8
+			}
+			hidden_effect = { load_oob = BDT_Woodsmen }
+			set_research_slots = 5
+			set_cosmetic_tag = BDT_Black_Lodge
+			add_country_leader_trait = bdt_fire_walker_op
+			remove_country_leader_trait = bdt_last_of_the_cathedral
+			set_technology = { oregon_psyker_nullification_training = 1 }
+			set_technology = { oregon_psyker_mental_stimulants = 1 }
+			set_technology = { oregon_psyker_ancient_traditions = 1 }
+			set_technology = { scientific_civilization = 1 }
+			add_ideas = bdt_psyonic_mastery_4
+			remove_ideas = bdt_seraph_pilgrims
+			remove_ideas = bdt_odious_king
+			set_country_leader_portrait = {
+				portrait = "GFX_Portrait_BDT_odious_king_animated"
+			}
+			set_country_leader_description = {
+				desc = "bdt_fire_walker_op_description"
+			}
+			add_field_marshal_role = {
+				character = BDT_bob_harmon_gamerule
+				traits = {
+					lucky_trait
+					bloody_mess_trait
+					strong_trait
+					strong_back_trait
+					savage_leader_trait
+				}
+				skill = 9
+				attack_skill = 9
+				defense_skill = 9
+				planning_skill = 9
+				logistics_skill = 9
+				legacy_id = -1
+			}
+		}
+	}
+}

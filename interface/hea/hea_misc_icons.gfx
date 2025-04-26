@@ -1,0 +1,10 @@
+spriteTypes = {
+		spriteType = {
+			name = "GFX_converted_state_hea"
+			texturefile = "gfx/interface/icons/converted_state_hea.dds"
+		}
+		spriteType = {
+			name = "GFX_non_converted_state_hea"
+			texturefile = "gfx/interface/icons/non_converted_state_hea.dds"
+		}
+	}

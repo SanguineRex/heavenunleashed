@@ -157,7 +157,6 @@
   pantheon_lon_elite:0 "Shadowstriders"
   pantheon_lon_shadows:0 "Liberation Of the Night"
   #pantheon_
-
   #pantheon_:0 ""
 
   saint_orissa:0 "The Teachings of Saint Orissa"
@@ -166,6 +165,10 @@
   saint_barnabus_3:0 "The Revelations of Saint Barnabus"
   saint_arthur:0 "The Exhortations of Saint Arthur"
   saint_light:0 "The Illumination of the Light"
-MUR_fleetflat:0 "Murtaugh Fleetfoot"
-MUR_warriors:0 "Sons and Daughters of Murtaugh"
-MUR_warriors2:0 "Defenders of Murtaugh"
+ MUR_fleetflat:0 "Murtaugh Fleetfoot"
+ MUR_warriors:0 "Sons and Daughters of Murtaugh"
+ MUR_warriors2:0 "Defenders of Murtaugh"
+  HGH_pilgrims:0 "Pilgrims of the Rivers and Land"
+  HGH_pilgrims_desc:0 "The faithful believe in High Chapel but faith will only bolster them for so long amidst the growing tension."
+ HGH_navyresearch_ideabuff:0 "Faith of River and God"
+ HGH_shipwrightblessing:0 "Shipwrights Blessing"

@@ -591,12 +591,14 @@ country_event = {
 	id = nf_event_hea.600
 	title = nf_event_hea.600.t
 	desc = nf_event_hea.600.desc
-	picture = GFX_event_HEA_bishop2
+	picture = GFX_event_hea_hgh_burning
 	fire_only_once = yes
 	trigger = {
 		tag = HEA
+		has_completed_focus = hea_nf_reject_elite_1
 		owns_state = 172
-	}
+		}
+	
 	option = { 	
 		name = nf_event_hea.600.a
 		country_event = { id = nf_event_hea.601 days = 1 }
@@ -608,7 +610,7 @@ country_event = {
 	id = nf_event_hea.601
 	title = nf_event_hea.601.t
 	desc = nf_event_hea.601.desc
-	picture = GFX_event_HEA_bishop2
+	picture = GFX_event_hea_flag_amelia
 	is_triggered_only = yes
 	option = { 	
 		name = nf_event_hea.601.a
@@ -620,14 +622,451 @@ country_event = {
 	id = nf_event_hea.602
 	title = nf_event_hea.602.t
 	desc = nf_event_hea.602.desc
-	picture = GFX_event_HEA_bishop2
+	picture = GFX_event_hea_elijahs_flag
 	fire_only_once = yes
 	trigger = {
 		tag = HEA
+		has_completed_focus = hea_nf_reject_elite_1
 		owns_state = 303
 	}
 	option = { 	
 		name = nf_event_hea.602.a
+	}
+}
+#Lord's Anointed
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.603
+	title = nf_event_hea.603.t
+	desc = nf_event_hea.603.desc
+	picture = GFX_event_hea_ezekias_flag
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 484
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.603.a
+	}
+}
+#Schism Ended
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.604
+	title = nf_event_hea.604.t
+	desc = nf_event_hea.604.desc
+	picture = GFX_event_hea_schism_fixed
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 484
+		owns_state = 303
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.604.a
+	}
+}
+#Vault City
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.605
+	title = nf_event_hea.605.t
+	desc = nf_event_hea.605.desc
+	picture = GFX_event_hea_amelia_flag_relic
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 291
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.605.a
+	}
+}
+#NCR
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.606
+	title = nf_event_hea.606.t
+	desc = nf_event_hea.606.desc
+	picture = GFX_event_hea_leahs_flag
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 253
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.606.a
+	}
+}
+#The Brotherhood
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.607
+	title = nf_event_hea.607.t
+	desc = nf_event_hea.607.desc
+	picture = GFX_event_brotherhood_HEA
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 157
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.607.a
+	}
+}
+#New Canaan
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.608
+	title = nf_event_hea.608.t
+	desc = nf_event_hea.608.desc
+	picture = GFX_event_hea_elias_flag
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 551
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.608.a
+	}
+}
+#New Vegas
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.609
+	title = nf_event_hea.609.t
+	desc = nf_event_hea.609.desc
+	picture = GFX_event_hea_junias_flag
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 211
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.609.a
+	}
+}
+#Ceaser's Legion
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.610
+	title = nf_event_hea.610.t
+	desc = nf_event_hea.610.desc
+	picture = GFX_event_hea_cassian_flag
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 520
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.610.a
+	}
+}
+#The Eighties
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.611
+	title = nf_event_hea.611.t
+	desc = nf_event_hea.611.desc
+	picture = GFX_event_hea_amelia_flag_relic
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 478
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.611.a
+	}
+}
+#New Reno
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.612
+	title = nf_event_hea.612.t
+	desc = nf_event_hea.612.desc
+	picture = GFX_event_claras_flag
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 285
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.612.a
+	}
+}
+#The Shi
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.613
+	title = nf_event_hea.613.t
+	desc = nf_event_hea.613.desc
+	picture = GFX_event_hea_amelia_flag_relic
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 163
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.613.a
+	}
+}
+#Eureka
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.614
+	title = nf_event_hea.614.t
+	desc = nf_event_hea.614.desc
+	picture = GFX_event_hea_amelia_flag_relic
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 39
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.614.a
+	}
+}
+#MacArthur
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.615
+	title = nf_event_hea.615.t
+	desc = nf_event_hea.615.desc
+	picture = GFX_event_hea_amelia_flag_relic
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 656
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.615.a
+		country_event = { id = nf_event_hea.616 days = 56 }
+	}
+}
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.616
+	title = nf_event_hea.616.t
+	desc = nf_event_hea.616.desc
+	picture = GFX_event_HEA_westand
+	is_triggered_only = yes
+	option = { 	
+		name = nf_event_hea.616.a
+	}
+}
+#Twin Mothers (Rework later)
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.617
+	title = nf_event_hea.617.t
+	desc = nf_event_hea.617.desc
+	picture = GFX_event_TTM_repository
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 38
+		owns_state = 554
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.617.a
+	}
+}
+#Hand Dogs
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.618
+	title = nf_event_hea.618.t
+	desc = nf_event_hea.618.desc
+	picture = GFX_event_hea_amelia_flag_relic
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 525
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.618.a
+	}
+}
+#Lanius Cohort
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.619
+	title = nf_event_hea.619.t
+	desc = nf_event_hea.619.desc
+	picture = GFX_event_assemble_the_legion
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 5
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.619.a
+		country_event = { id = nf_event_hea.6191 }
+	}
+}
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.6191
+	title = nf_event_hea.6191.t
+	desc = nf_event_hea.6191.desc
+	picture = GFX_event_hea_cassian_flag
+	is_triggered_only = yes
+	option = { 	
+		name = nf_event_hea.6191.a
+	}
+}
+#Texas
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.620
+	title = nf_event_hea.620.t
+	desc = nf_event_hea.620.desc
+	picture = GFX_event_tex_dont_mess
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 892
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.620.a
+		country_event = { id = nf_event_hea.6201 }
+	}
+}
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.6201
+	title = nf_event_hea.6201.t
+	desc = nf_event_hea.6201.desc
+	picture = GFX_event_hea_star_shining_bright
+	is_triggered_only = yes
+	option = { 	
+		name = nf_event_hea.6201.a
+	}
+}
+#Rio Grande Republic
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.621
+	title = nf_event_hea.621.t
+	desc = nf_event_hea.621.desc
+	picture = GFX_event_hea_amelia_flag_relic
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 746
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.621.a
+	}
+}
+#Gente Del Sol
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.622
+	title = nf_event_hea.622.t
+	desc = nf_event_hea.622.desc
+	picture = GFX_event_gente_de_sol_villa
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 471
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.622.a
+	}
+}
+#Ejercitos Mexico (Santa Anna)
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.623
+	title = nf_event_hea.623.t
+	desc = nf_event_hea.623.desc
+	picture = GFX_event_firing_sentry_bot
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 755
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.623.a
+		country_event = { id = nf_event_hea.6231 }
+	}
+}
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.6231
+	title = nf_event_hea.6231.t
+	desc = nf_event_hea.6231.desc
+	picture = GFX_event_hea_amelia_flag_relic
+	is_triggered_only = yes
+	option = { 	
+		name = nf_event_hea.6231.a
+	}
+}
+#Loid's Ministry
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.624
+	title = nf_event_hea.624.t
+	desc = nf_event_hea.624.desc
+	picture = GFX_event_hea_amelia_flag_relic
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 1149
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.624.a
+	}
+}
+#Washington Brotherhood
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.625
+	title = nf_event_hea.625.t
+	desc = nf_event_hea.625.desc
+	picture = GFX_event_hea_washington_husks
+	fire_only_once = yes
+	trigger = {
+		tag = HEA
+		owns_state = 84
+		has_completed_focus = hea_nf_reject_elite_1
+	}
+	option = { 	
+		name = nf_event_hea.625.a
+		country_event = { id = nf_event_hea.6251 }
+	}
+}
+country_event = { 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.600" }
+	id = nf_event_hea.6251
+	title = nf_event_hea.6251.t
+	desc = nf_event_hea.6251.desc
+	picture = GFX_event_hea_amelia_flag_relic
+	is_triggered_only = yes
+	option = { 	
+		name = nf_event_hea.6251.a
 	}
 }
 ##Theological Assembly-Forgiveness Path

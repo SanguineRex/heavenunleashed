@@ -157,4 +157,23 @@ technologies = {
 				defense = 0.05
 			}
 		}
+		hgh_maritimers = {
+			dependencies = {
+					blocked_tech = 1
+				}
+				research_cost = 1
+		
+				allow = {
+					always = no
+				}
+				category_leg_infantry = {
+					reliability = 0.05
+					max_organisation  = 1
+					defense = 0.05
+					river = {
+						attack = 0.05
+						defence = 0.10
+					}
+				}
+			}
 }

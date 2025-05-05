@@ -1644,5 +1644,33 @@ ideas = {
 				attrition = -0.05
 			}
 		}
+	
+		HGH_pilgrims = {
+			picture = service_rifle
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = 250
+			}
+		}
+		HGH_navyresearch_ideabuff = {
+			picture = x
+			allowed = {
+			}
+			removal_cost = -1
+			research_bonus = {
+				naval_tech_category = 0.10
+			}
+		}
+		HGH_shipwrightblessing = {
+			picture = x
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_dockyard = 0.10
+			}
+		}
 	}
 }

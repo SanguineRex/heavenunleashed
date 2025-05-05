@@ -1,0 +1,3272 @@
+﻿add_namespace = nf_utah
+add_namespace = nf_pantheon
+
+country_event = {
+	# origin
+	id = nf_utah.1
+	title = nf_utah.1.t
+	desc = nf_utah.1.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#religious
+		name = nf_utah.1.a
+		add_ideas = utah_religious_idea
+	}
+	option = {
+		#tribal
+		name = nf_utah.1.b
+		add_ideas = utah_tribal_idea
+	}
+}
+
+country_event = {
+	#tribal god lore
+	id = nf_utah.2
+	title = nf_utah.2.t
+	desc = nf_utah.2.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		name = nf_utah.2.a
+		trigger = {
+			tag = SOR
+		}
+		custom_effect_tooltip = utah_unlock_god_tt
+		clear_array = pantheon_array
+		add_to_array = {
+			pantheon_array = 1
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 7
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 2
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 3
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 4
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		if = {
+			limit = { is_ai = yes }
+			clear_pantheon_modifiers = yes
+			set_variable = { selected_pantheon_god = 7 }
+			add_dynamic_modifier = { modifier = pantheon_sor_modifier }
+			add_ideas = pantheon_sor
+			activate_mission = utah_pantheon_timeout
+		}
+	}
+	option = {
+		name = nf_utah.2.b
+		trigger = {
+			tag = TAR
+		}
+		custom_effect_tooltip = utah_unlock_god_tt
+		clear_array = pantheon_array
+		add_to_array = {
+			pantheon_array = 1
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 8
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 2
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 3
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 4
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		if = {
+			limit = { is_ai = yes }
+			clear_pantheon_modifiers = yes
+			set_variable = { selected_pantheon_god = 8 }
+			add_dynamic_modifier = { modifier = pantheon_tar_modifier }
+			add_ideas = pantheon_tar
+			activate_mission = utah_pantheon_timeout
+		}
+	}
+	option = {
+		name = nf_utah.2.c
+		trigger = {
+			tag = CRZ
+		}
+		custom_effect_tooltip = utah_unlock_god_tt
+		clear_array = pantheon_array
+		add_to_array = {
+			pantheon_array = 1
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 9
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 2
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 3
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 4
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		if = {
+			limit = { is_ai = yes }
+			clear_pantheon_modifiers = yes
+			set_variable = { selected_pantheon_god = 9 }
+			add_dynamic_modifier = { modifier = pantheon_crz_modifier }
+			add_ideas = pantheon_crz
+			activate_mission = utah_pantheon_timeout
+		}
+	}
+	option = {
+		name = nf_utah.2.d
+		trigger = {
+			tag = DEA
+		}
+		custom_effect_tooltip = utah_unlock_god_tt
+		clear_array = pantheon_array
+		add_to_array = {
+			pantheon_array = 1
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 2
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 3
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 4
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		if = {
+			limit = { is_ai = yes }
+			clear_pantheon_modifiers = yes
+			set_variable = { selected_pantheon_god = 3 }
+			add_dynamic_modifier = { modifier = pantheon_land_modifier }
+			add_ideas = pantheon_land
+			activate_mission = utah_pantheon_timeout
+		}
+	}
+	option = {
+		name = nf_utah.2.e
+		trigger = {
+			tag = UIN
+		}
+		custom_effect_tooltip = utah_unlock_god_tt
+		clear_array = pantheon_array
+		add_to_array = {
+			pantheon_array = 1
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 11
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 2
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 3
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 4
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		if = {
+			limit = { is_ai = yes }
+			clear_pantheon_modifiers = yes
+			set_variable = { selected_pantheon_god = 1 }
+			add_dynamic_modifier = { modifier = pantheon_sun_modifier }
+			add_ideas = pantheon_sun
+			activate_mission = utah_pantheon_timeout
+		}
+	}
+	option = {
+		name = nf_utah.2.f
+		trigger = {
+			tag = LON
+		}
+		custom_effect_tooltip = utah_unlock_god_tt
+		clear_array = pantheon_array
+		add_to_array = {
+			pantheon_array = 1
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 12
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 2
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 3
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 4
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		if = {
+			limit = { is_ai = yes }
+			clear_pantheon_modifiers = yes
+			set_variable = { selected_pantheon_god = 12 }
+			add_dynamic_modifier = { modifier = pantheon_lon_modifier }
+			add_ideas = pantheon_lon
+			activate_mission = utah_pantheon_timeout
+		}
+	}
+	option = {
+		name = nf_utah.2.g
+		trigger = {
+			tag = ANO
+		}
+		add_ideas = saint_orissa
+	}
+	option = {
+		name = nf_utah.2.h
+		trigger = {
+			tag = MUR
+		}
+		add_ideas = saint_barnabus
+	}
+	option = {
+		name = nf_utah.2.i
+		trigger = {
+			tag = HGH
+		}
+		add_ideas = saint_arthur
+	}
+	option = {
+		name = nf_utah.2.j
+		trigger = {
+			tag = HAM
+		}
+		add_ideas = saint_light
+	}
+}
+
+country_event = {
+	#inward or outward focus
+	id = nf_utah.3
+	title = nf_utah.3.t
+	desc = nf_utah.3.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#inward
+		name = nf_utah.3.a
+		add_timed_idea = {
+			idea = utah_inward_idea
+			days = 365
+		}
+		random_owned_state = {
+			limit = {
+				is_valid_state_for_civilian_factory = yes
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	option = {
+		#outward
+		name = nf_utah.3.b
+		add_timed_idea = {
+			idea = utah_outward_idea
+			days = 365
+		}
+		random_owned_state = {
+			limit = {
+				is_valid_state_for_civilian_factory = yes
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_utah.6" }
+	id = nf_utah.6
+	title = nf_utah.6.t
+	desc = nf_utah.6.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		name = nf_utah.6.a
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_utah.7" }
+	id = nf_utah.7
+	title = nf_utah.7.t
+	desc = nf_utah.7.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		name = nf_utah.7.a
+		add_manpower = 1700
+	}
+}
+
+country_event = {
+	#white legs request for autonomy
+	id = nf_utah.10
+	title = nf_utah.10.t
+	desc = nf_utah.10.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		# haha no
+		name = nf_utah.10.a
+		FROM = {
+			country_event = {
+				id = nf_utah.11
+				days = 3
+			}
+		}
+	}
+	option = {
+		# haha sure
+		name = nf_utah.10.b
+		end_puppet = FROM
+		add_political_power = 70
+	}
+}
+
+country_event = {
+	#white legs response
+	id = nf_utah.11
+	title = nf_utah.11.t
+	desc = nf_utah.11.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		# fine
+		name = nf_utah.11.a
+		add_stability = -0.05
+	}
+	option = {
+		# revolt!
+		name = nf_utah.11.b
+		WHT = {
+			end_puppet = ROOT
+		}
+		leave_current_faction = yes
+		WHT = {
+			country_event = {
+				id = nf_utah.12
+			}
+		}
+	}
+}
+
+country_event = {
+	#tribe revolts
+	id = nf_utah.12
+	title = nf_utah.12.t
+	desc = nf_utah.12.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		# oh no u dont
+		name = nf_utah.12.a
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+}
+
+country_event = {
+	#legion annexation
+	id = nf_utah.15
+	title = nf_utah.15.t
+	desc = nf_utah.15.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		# ofc
+		name = nf_utah.15.a
+		every_state = {
+			limit = {
+				is_core_of = FROM
+			}
+			add_core_of = ROOT
+		}
+		annex_country = {
+			target = FROM
+			transfer_troops = yes
+		}
+	}
+	option = {
+		# no thanks
+		name = nf_utah.15.b
+	}
+}
+
+country_event = {
+	#legion faction ownership
+	id = nf_utah.20
+	title = nf_utah.20.t
+	desc = nf_utah.20.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		# ofc
+		name = nf_utah.20.a
+		set_autonomy = {
+			target = ROOT
+			autonomy_state = autonomy_dominion
+		}
+	}
+	option = {
+		# no thanks
+		name = nf_utah.20.b
+		ROOT = {
+			country_event = {
+				id = nf_utah.21
+			}
+		}
+	}
+}
+
+country_event = {
+	#no dice
+	id = nf_utah.21
+	title = nf_utah.21.t
+	desc = nf_utah.21.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		# lame
+		name = nf_utah.21.a
+		add_political_power = -35
+	}
+}
+
+country_event = {
+	#
+	id = nf_utah.22
+	title = nf_utah.22.t
+	desc = nf_utah.22.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		# ofc
+		name = nf_utah.22.a
+	}
+	option = {
+		# no thanks
+		name = nf_utah.20.b
+	}
+}
+
+country_event = {
+	#tribe requests to join grand confederation
+	id = nf_utah.30
+	title = nf_utah.30.t
+	desc = nf_utah.30.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		# ofc
+		name = nf_utah.30.a
+		join_great_confederation = yes
+	}
+	option = {
+		# no thanks
+		name = nf_utah.30.b
+	}
+}
+
+country_event = {
+	#pantheon loyalty
+	id = nf_pantheon.0
+	title = nf_pantheon.0.t
+	desc = nf_pantheon.0.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		name = nf_pantheon.0.a
+		if = {
+			limit = {
+				check_variable = {
+					pantheon_loyalty_var < 0.2
+				}
+			}
+			add_to_variable = {
+				pantheon_loyalty_var = 0.025
+			}
+		}
+		set_temp_variable = {
+			pantheon_loyalty_print_temp = pantheon_loyalty_var
+		}
+		multiply_temp_variable = {
+			pantheon_loyalty_print_temp = 100
+		}
+		set_variable = {
+			pantheon_loyalty_print = pantheon_loyalty_print_temp
+		}
+		country_event = {
+			id = nf_pantheon.0
+			days = 150
+		}
+	}
+}
+
+#event setup
+country_event = {
+	#
+	id = nf_pantheon.1
+	title = nf_pantheon.1.t
+	desc = nf_pantheon.1.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		country_event = {
+			id = nf_pantheon.1
+			days = 70
+		}
+	}
+	option = {
+		name = nf_pantheon.1.a
+		trigger = {
+			has_idea = pantheon_sun
+		}
+		random_list = {
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_sun_event_1
+				}
+				country_event = {
+					id = nf_pantheon.10
+					days = 75
+				}
+				set_country_flag = pantheon_sun_event_1
+				clr_country_flag = pantheon_sun_event_2
+				clr_country_flag = pantheon_sun_event_3
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_sun_event_2
+				}
+				country_event = {
+					id = nf_pantheon.11
+					days = 75
+				}
+				set_country_flag = pantheon_sun_event_2
+				clr_country_flag = pantheon_sun_event_1
+				clr_country_flag = pantheon_sun_event_3
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_sun_event_3
+				}
+				country_event = {
+					id = nf_pantheon.12
+					days = 75
+				}
+				set_country_flag = pantheon_sun_event_3
+				clr_country_flag = pantheon_sun_event_1
+				clr_country_flag = pantheon_sun_event_2
+			}
+		}
+	}
+	option = {
+		name = nf_pantheon.1.b
+		trigger = {
+			has_idea = pantheon_moon
+		}
+		random_list = {
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_moon_event_1
+				}
+				country_event = {
+					id = nf_pantheon.20
+					days = 75
+				}
+				set_country_flag = pantheon_moon_event_1
+				clr_country_flag = pantheon_moon_event_2
+				clr_country_flag = pantheon_moon_event_3
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_moon_event_2
+				}
+				country_event = {
+					id = nf_pantheon.21
+					days = 75
+				}
+				set_country_flag = pantheon_moon_event_2
+				clr_country_flag = pantheon_moon_event_1
+				clr_country_flag = pantheon_moon_event_3
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_moon_event_3
+				}
+				country_event = {
+					id = nf_pantheon.22
+					days = 75
+				}
+				set_country_flag = pantheon_moon_event_3
+				clr_country_flag = pantheon_moon_event_1
+				clr_country_flag = pantheon_moon_event_2
+			}
+		}
+	}
+	option = {
+		name = nf_pantheon.1.c
+		trigger = {
+			has_idea = pantheon_land
+		}
+		random_list = {
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_land_event_1
+				}
+				country_event = {
+					id = nf_pantheon.30
+					days = 75
+				}
+				set_country_flag = pantheon_land_event_1
+				clr_country_flag = pantheon_land_event_2
+				clr_country_flag = pantheon_land_event_3
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_land_event_2
+				}
+				country_event = {
+					id = nf_pantheon.31
+					days = 75
+				}
+				set_country_flag = pantheon_land_event_2
+				clr_country_flag = pantheon_land_event_1
+				clr_country_flag = pantheon_land_event_3
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_land_event_3
+				}
+				country_event = {
+					id = nf_pantheon.32
+					days = 75
+				}
+				set_country_flag = pantheon_land_event_3
+				clr_country_flag = pantheon_land_event_1
+				clr_country_flag = pantheon_land_event_2
+			}
+		}
+	}
+	option = {
+		name = nf_pantheon.1.d
+		trigger = {
+			has_idea = pantheon_mountain
+		}
+		random_list = {
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_mountain_event_1
+				}
+				country_event = {
+					id = nf_pantheon.40
+					days = 75
+				}
+				set_country_flag = pantheon_mountain_event_1
+				clr_country_flag = pantheon_mountain_event_2
+				clr_country_flag = pantheon_mountain_event_3
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_mountain_event_2
+				}
+				country_event = {
+					id = nf_pantheon.41
+					days = 75
+				}
+				set_country_flag = pantheon_mountain_event_2
+				clr_country_flag = pantheon_mountain_event_1
+				clr_country_flag = pantheon_mountain_event_3
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_mountain_event_3
+				}
+				country_event = {
+					id = nf_pantheon.42
+					days = 75
+				}
+				set_country_flag = pantheon_mountain_event_3
+				clr_country_flag = pantheon_mountain_event_1
+				clr_country_flag = pantheon_mountain_event_2
+			}
+		}
+	}
+	option = {
+		name = nf_pantheon.1.g
+		trigger = {
+			has_idea = pantheon_sor
+		}
+		random_list = {
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_sor_event_1
+				}
+				country_event = {
+					id = nf_pantheon.70
+					days = 75
+				}
+				set_country_flag = pantheon_sor_event_1
+				clr_country_flag = pantheon_sor_event_2
+				clr_country_flag = pantheon_sor_event_3
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_sor_event_2
+				}
+				country_event = {
+					id = nf_pantheon.71
+					days = 75
+				}
+				set_country_flag = pantheon_sor_event_2
+				clr_country_flag = pantheon_sor_event_1
+				clr_country_flag = pantheon_sor_event_3
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_sor_event_3
+				}
+				country_event = {
+					id = nf_pantheon.72
+					days = 75
+				}
+				set_country_flag = pantheon_sor_event_3
+				clr_country_flag = pantheon_sor_event_1
+				clr_country_flag = pantheon_sor_event_2
+			}
+		}
+	}
+	option = {
+		name = nf_pantheon.1.h
+		trigger = {
+			has_idea = pantheon_tar
+		}
+		random_list = {
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_tar_event_1
+				}
+				country_event = {
+					id = nf_pantheon.80
+					days = 75
+				}
+				set_country_flag = pantheon_tar_event_1
+				clr_country_flag = pantheon_tar_event_2
+				clr_country_flag = pantheon_tar_event_3
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_tar_event_2
+				}
+				country_event = {
+					id = nf_pantheon.81
+					days = 75
+				}
+				set_country_flag = pantheon_tar_event_2
+				clr_country_flag = pantheon_tar_event_1
+				clr_country_flag = pantheon_tar_event_3
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_tar_event_3
+				}
+				country_event = {
+					id = nf_pantheon.82
+					days = 75
+				}
+				set_country_flag = pantheon_tar_event_3
+				clr_country_flag = pantheon_tar_event_1
+				clr_country_flag = pantheon_tar_event_2
+			}
+		}
+	}
+	option = {
+		name = nf_pantheon.1.i
+		trigger = {
+			has_idea = pantheon_dea
+		}
+		random_list = {
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_dea_event_1
+				}
+				country_event = {
+					id = nf_pantheon.90
+					days = 75
+				}
+				set_country_flag = pantheon_dea_event_1
+				clr_country_flag = pantheon_dea_event_2
+				clr_country_flag = pantheon_dea_event_3
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_dea_event_2
+				}
+				country_event = {
+					id = nf_pantheon.91
+					days = 75
+				}
+				set_country_flag = pantheon_dea_event_2
+				clr_country_flag = pantheon_dea_event_1
+				clr_country_flag = pantheon_dea_event_3
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_dea_event_3
+				}
+				country_event = {
+					id = nf_pantheon.92
+					days = 75
+				}
+				set_country_flag = pantheon_dea_event_3
+				clr_country_flag = pantheon_dea_event_1
+				clr_country_flag = pantheon_dea_event_2
+			}
+		}
+	}
+	option = {
+		name = nf_pantheon.1.j
+		trigger = {
+			has_idea = pantheon_crz
+		}
+		random_list = {
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_crz_event_1
+				}
+				country_event = {
+					id = nf_pantheon.100
+					days = 75
+				}
+				set_country_flag = pantheon_crz_event_1
+				clr_country_flag = pantheon_crz_event_2
+				clr_country_flag = pantheon_crz_event_3
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_crz_event_2
+				}
+				country_event = {
+					id = nf_pantheon.101
+					days = 75
+				}
+				set_country_flag = pantheon_crz_event_2
+				clr_country_flag = pantheon_crz_event_1
+				clr_country_flag = pantheon_crz_event_3
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_crz_event_3
+				}
+				country_event = {
+					id = nf_pantheon.102
+					days = 75
+				}
+				set_country_flag = pantheon_crz_event_3
+				clr_country_flag = pantheon_crz_event_1
+				clr_country_flag = pantheon_crz_event_2
+			}
+		}
+	}
+	option = {
+		name = nf_pantheon.1.k
+		trigger = {
+			has_idea = pantheon_uin
+		}
+		random_list = {
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_uin_event_1
+				}
+				country_event = {
+					id = nf_pantheon.110
+					days = 75
+				}
+				set_country_flag = pantheon_uin_event_1
+				clr_country_flag = pantheon_uin_event_2
+				clr_country_flag = pantheon_uin_event_3
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_uin_event_2
+				}
+				country_event = {
+					id = nf_pantheon.111
+					days = 75
+				}
+				set_country_flag = pantheon_uin_event_2
+				clr_country_flag = pantheon_uin_event_1
+				clr_country_flag = pantheon_uin_event_3
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_uin_event_3
+				}
+				country_event = {
+					id = nf_pantheon.112
+					days = 75
+				}
+				set_country_flag = pantheon_uin_event_3
+				clr_country_flag = pantheon_uin_event_1
+				clr_country_flag = pantheon_uin_event_2
+			}
+		}
+	}
+	option = {
+		name = nf_pantheon.1.l
+		trigger = {
+			has_idea = pantheon_lon
+		}
+		random_list = {
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_lon_event_1
+				}
+				country_event = {
+					id = nf_pantheon.120
+					days = 75
+				}
+				set_country_flag = pantheon_lon_event_1
+				clr_country_flag = pantheon_lon_event_2
+				clr_country_flag = pantheon_lon_event_3
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_lon_event_2
+				}
+				country_event = {
+					id = nf_pantheon.121
+					days = 75
+				}
+				set_country_flag = pantheon_lon_event_2
+				clr_country_flag = pantheon_lon_event_1
+				clr_country_flag = pantheon_lon_event_3
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					has_country_flag = pantheon_lon_event_3
+				}
+				country_event = {
+					id = nf_pantheon.122
+					days = 75
+				}
+				set_country_flag = pantheon_lon_event_3
+				clr_country_flag = pantheon_lon_event_1
+				clr_country_flag = pantheon_lon_event_2
+			}
+		}
+	}
+}
+
+#SOL
+country_event = {
+	#Eclipse
+	id = nf_pantheon.10
+	title = nf_pantheon.10.t
+	desc = nf_pantheon.10.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#oh god oh fuck
+		name = nf_pantheon.10.a
+		add_stability = -0.05
+	}
+	option = {
+		#it's not THAT bad
+		name = nf_pantheon.10.b
+		add_political_power = -75
+		custom_effect_tooltip = utah_pantheon_mood_negative_large_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.25
+		}
+	}
+}
+
+country_event = {
+	#protection from the sun
+	id = nf_pantheon.11
+	title = nf_pantheon.11.t
+	desc = nf_pantheon.11.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#sunglasses r illegal
+		name = nf_pantheon.11.a
+		add_timed_idea = {
+			idea = pantheon_sunstroke
+			days = 90
+		}
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+	option = {
+		#sunglasses r ok
+		name = nf_pantheon.11.b
+		add_timed_idea = {
+			idea = pantheon_sunstroke
+			days = 45
+		}
+		custom_effect_tooltip = utah_pantheon_mood_negative_medium_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.1
+		}
+	}
+}
+
+country_event = {
+	#false lights
+	id = nf_pantheon.12
+	title = nf_pantheon.12.t
+	desc = nf_pantheon.12.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#electricity is false light
+		name = nf_pantheon.12.a
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+		add_timed_idea = {
+			idea = pantheon_false_science
+			days = 60
+		}
+	}
+	option = {
+		#electricity aint so bad
+		name = nf_pantheon.12.b
+		custom_effect_tooltip = utah_pantheon_mood_negative_medium_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.1
+		}
+		add_tech_bonus = {
+			bonus = 0.2
+			uses = 1
+			category = electronics
+		}
+	}
+}
+
+#LUNA
+country_event = {
+	#other moons?
+	id = nf_pantheon.20
+	title = nf_pantheon.20.t
+	desc = nf_pantheon.20.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#there is only one moon
+		name = nf_pantheon.20.a
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+		add_timed_idea = {
+			idea = pantheon_false_science
+			days = 30
+		}
+	}
+	option = {
+		#its possible
+		name = nf_pantheon.20.b
+		custom_effect_tooltip = utah_pantheon_mood_negative_medium_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.1
+		}
+		add_timed_idea = {
+			idea = pantheon_true_science
+			days = 75
+		}
+	}
+}
+
+country_event = {
+	#new moon
+	id = nf_pantheon.21
+	title = nf_pantheon.21.t
+	desc = nf_pantheon.21.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#boo
+		name = nf_pantheon.21.a
+		add_stability = -0.005
+	}
+}
+
+country_event = {
+	# full moon
+	id = nf_pantheon.22
+	title = nf_pantheon.22.t
+	desc = nf_pantheon.22.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#yay
+		name = nf_pantheon.22.a
+		add_stability = 0.005
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+}
+
+#TERRA
+country_event = {
+	#poor harvest
+	id = nf_pantheon.30
+	title = nf_pantheon.30.t
+	desc = nf_pantheon.30.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#sacrifice what's left
+		name = nf_pantheon.30.a
+		add_timed_idea = {
+			idea = pantheon_sacrifices
+			days = 70
+		}
+		custom_effect_tooltip = utah_pantheon_mood_negative_small_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+	option = {
+		#ration our food stores
+		name = nf_pantheon.30.b
+		add_political_power = -35
+		custom_effect_tooltip = utah_pantheon_mood_negative_large_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.2
+		}
+	}
+}
+
+country_event = {
+	#plentiful harvest
+	id = nf_pantheon.31
+	title = nf_pantheon.31.t
+	desc = nf_pantheon.31.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#sacrifice it
+		name = nf_pantheon.31.a
+		add_political_power = 5
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+	option = {
+		#share evenly
+		name = nf_pantheon.31.b
+		add_political_power = 55
+	}
+}
+
+country_event = {
+	#new crops?
+	id = nf_pantheon.32
+	title = nf_pantheon.32.t
+	desc = nf_pantheon.32.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#no
+		name = nf_pantheon.32.a
+		add_stability = 0.005
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+	option = {
+		#ye
+		name = nf_pantheon.32.b
+		add_tech_bonus = {
+			bonus = 0.2
+			uses = 1
+			category = agriculture_tech
+		}
+	}
+}
+
+#MESA
+country_event = {
+	#restricting sites
+	id = nf_pantheon.40
+	title = nf_pantheon.40.t
+	desc = nf_pantheon.40.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#open to all
+		name = nf_pantheon.40.a
+		custom_effect_tooltip = utah_pantheon_mood_medium_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.1
+		}
+		add_stability = -0.035
+	}
+	option = {
+		#restrict access
+		name = nf_pantheon.40.b
+		add_political_power = -45
+		custom_effect_tooltip = utah_pantheon_mood_negative_large_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.25
+		}
+	}
+}
+
+country_event = {
+	#wealthy individual
+	id = nf_pantheon.41
+	title = nf_pantheon.41.t
+	desc = nf_pantheon.41.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#give his wealth to the people
+		name = nf_pantheon.41.a
+		add_timed_idea = {
+			idea = pantheon_gifts
+			days = 65
+		}
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+	option = {
+		#give his wealth to the mountain
+		name = nf_pantheon.41.b
+		add_political_power = -25
+		custom_effect_tooltip = utah_pantheon_mood_large_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.2
+		}
+	}
+}
+
+country_event = {
+	#we are too prosperous
+	id = nf_pantheon.42
+	title = nf_pantheon.42.t
+	desc = nf_pantheon.42.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#encourage moderation
+		name = nf_pantheon.42.a
+		add_timed_idea = {
+			idea = pantheon_moderation
+			days = 60
+		}
+	}
+	option = {
+		#encourage asceticism
+		name = nf_pantheon.42.b
+		add_timed_idea = {
+			idea = pantheon_ascetic
+			days = 60
+		}
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+}
+
+#SOR
+country_event = {
+	#hidden weapons cache
+	id = nf_pantheon.70
+	title = nf_pantheon.70.t
+	desc = nf_pantheon.70.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#
+		name = nf_pantheon.70.a
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 55
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 25
+		}
+	}
+}
+
+country_event = {
+	#survival vs community
+	id = nf_pantheon.71
+	title = nf_pantheon.71.t
+	desc = nf_pantheon.71.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#
+		name = nf_pantheon.71.a
+		add_war_support = 0.01
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+	option = {
+		#veneration
+		name = nf_pantheon.71.b
+		add_stability = 0.01
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+}
+
+country_event = {
+	#trespassers in the cave
+	id = nf_pantheon.72
+	title = nf_pantheon.72.t
+	desc = nf_pantheon.72.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#let them die from traps
+		name = nf_pantheon.72.a
+		add_manpower = -25
+	}
+	option = {
+		#stop and execute them!
+		name = nf_pantheon.72.b
+		add_manpower = -85
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+}
+
+#TAR
+country_event = {
+	#ambush vs head on
+	id = nf_pantheon.80
+	title = nf_pantheon.80.t
+	desc = nf_pantheon.80.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#all that matters is the battle
+		name = nf_pantheon.80.a
+		add_timed_idea = {
+			idea = pantheon_reckless
+			days = 65
+		}
+		custom_effect_tooltip = utah_pantheon_mood_medium_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.1
+		}
+	}
+	option = {
+		#sometimes strategy is importnat
+		name = nf_pantheon.80.b
+		add_tech_bonus = {
+			bonus = 0.15
+			uses = 1
+			category = cat_land_doctrine
+		}
+		custom_effect_tooltip = utah_pantheon_mood_negative_large_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.2
+		}
+	}
+}
+
+country_event = {
+	#tired of conflict
+	id = nf_pantheon.81
+	title = nf_pantheon.81.t
+	desc = nf_pantheon.81.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#we can take a break
+		name = nf_pantheon.81.a
+		add_timed_idea = {
+			idea = pantheon_rest_from_war
+			days = 70
+		}
+		custom_effect_tooltip = utah_pantheon_mood_negative_large_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.2
+		}
+	}
+	option = {
+		#give thme a final rest
+		name = nf_pantheon.81.b
+		add_manpower = -20
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+}
+
+country_event = {
+	#cowardly general
+	id = nf_pantheon.82
+	title = nf_pantheon.82.t
+	desc = nf_pantheon.82.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#rmeove him
+		name = nf_pantheon.82.a
+		random_unit_leader = {
+			retire = yes
+		}
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+		add_war_support = 0.02
+	}
+	option = {
+		#trust his judgement
+		name = nf_pantheon.82.b
+		add_war_support = -0.01
+		custom_effect_tooltip = utah_pantheon_mood_negative_medium_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.1
+		}
+	}
+}
+
+#DEA
+country_event = {
+	#forgiveness?
+	id = nf_pantheon.90
+	title = nf_pantheon.90.t
+	desc = nf_pantheon.90.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#redemption is possible
+		name = nf_pantheon.90.a
+		custom_effect_tooltip = utah_pantheon_mood_negative_small_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.05
+		}
+		add_stability = -0.01
+	}
+	option = {
+		#there can be no redemption
+		name = nf_pantheon.90.b
+		add_political_power = -50
+		add_manpower = -1
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+}
+
+country_event = {
+	#mormon influence
+	id = nf_pantheon.91
+	title = nf_pantheon.91.t
+	desc = nf_pantheon.91.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#ok
+		name = nf_pantheon.91.a
+		add_timed_idea = {
+			idea = pantheon_ncn_influence
+			days = 60
+		}
+		add_political_power = -85
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+	option = {
+		#no
+		name = nf_pantheon.91.b
+		add_stability = 0.01
+	}
+}
+
+country_event = {
+	#legion influence
+	id = nf_pantheon.92
+	title = nf_pantheon.92.t
+	desc = nf_pantheon.92.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#ok
+		name = nf_pantheon.92.a
+		add_timed_idea = {
+			idea = pantheon_legion_influence
+			days = 60
+		}
+		add_political_power = 75
+	}
+	option = {
+		#no
+		name = nf_pantheon.92.b
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+}
+
+#CRZ
+country_event = {
+	#explosion!
+	id = nf_pantheon.100
+	title = nf_pantheon.100.t
+	desc = nf_pantheon.100.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#we can do better
+		name = nf_pantheon.100.a
+		random_owned_state = {
+			damage_building = {
+				type = infrastructure
+				damage = 0.5
+			}
+		}
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+	option = {
+		#we can do WAY better
+		name = nf_pantheon.100.b
+		random_owned_state = {
+			remove_building = {
+				type = infrastructure
+				level = 1
+			}
+		}
+		custom_effect_tooltip = utah_pantheon_mood_large_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.2
+		}
+	}
+}
+
+country_event = {
+	#rain
+	id = nf_pantheon.101
+	title = nf_pantheon.101.t
+	desc = nf_pantheon.101.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#sounds tasty
+		name = nf_pantheon.101.a
+		add_timed_idea = {
+			idea = pantheon_wet
+			days = 60
+		}
+		custom_effect_tooltip = utah_pantheon_mood_negative_small_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+}
+
+country_event = {
+	#improving the flames?
+	id = nf_pantheon.102
+	title = nf_pantheon.102.t
+	desc = nf_pantheon.102.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#let them tinker
+		name = nf_pantheon.102.a
+		add_tech_bonus = {
+			bonus = 0.2
+			uses = 1
+			category = support_demolitions_flamer_tech_category
+		}
+		custom_effect_tooltip = utah_pantheon_mood_negative_medium_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.1
+		}
+	}
+	option = {
+		#burn the heretical flamers
+		name = nf_pantheon.102.b
+		add_equipment_to_stockpile = {
+			type = demolitions_equipment
+			amount = -100
+		}
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+}
+
+#UIN
+country_event = {
+	#wind turbines
+	id = nf_pantheon.110
+	title = nf_pantheon.110.t
+	desc = nf_pantheon.110.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#send him away
+		name = nf_pantheon.110.a
+		add_political_power = 35
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+	option = {
+		#intriguing
+		name = nf_pantheon.110.b
+		random_owned_state = {
+			add_resource = {
+				type = energy
+				amount = 1
+			}
+		}
+		custom_effect_tooltip = utah_pantheon_mood_negative_large_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.25
+		}
+	}
+}
+
+country_event = {
+	#flying in a thunderstorm?
+	id = nf_pantheon.111
+	title = nf_pantheon.111.t
+	desc = nf_pantheon.111.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#a great idea
+		name = nf_pantheon.111.a
+		add_timed_idea = {
+			idea = pantheon_stormchasers
+			days = 65
+		}
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+	option = {
+		#u guys are idiots
+		name = nf_pantheon.111.b
+		add_political_power = -15
+		custom_effect_tooltip = utah_pantheon_mood_negative_medium_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.1
+		}
+	}
+}
+
+country_event = {
+	#basejumping from dangerous areas
+	id = nf_pantheon.112
+	title = nf_pantheon.112.t
+	desc = nf_pantheon.112.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#prohibit
+		name = nf_pantheon.112.a
+		custom_effect_tooltip = utah_pantheon_mood_negative_medium_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.1
+		}
+	}
+	option = {
+		#let them
+		name = nf_pantheon.112.b
+		add_manpower = -5
+		add_equipment_to_stockpile = {
+			type = fighter_equipment_1
+			amount = -20
+		}
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+}
+
+#LON
+country_event = {
+	#attacking in the open?
+	id = nf_pantheon.120
+	title = nf_pantheon.120.t
+	desc = nf_pantheon.120.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#sounds good
+		name = nf_pantheon.120.a
+		add_timed_idea = {
+			idea = pantheon_open_warfare
+			days = 75
+		}
+		custom_effect_tooltip = utah_pantheon_mood_negative_medium_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.1
+		}
+	}
+	option = {
+		#madness
+		name = nf_pantheon.120.b
+		add_timed_idea = {
+			idea = pantheon_night_warfare
+			days = 75
+		}
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+}
+
+country_event = {
+	#traditional army
+	id = nf_pantheon.121
+	title = nf_pantheon.121.t
+	desc = nf_pantheon.121.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#relax recruitment standards
+		name = nf_pantheon.121.a
+		add_manpower = 175
+		custom_effect_tooltip = utah_pantheon_mood_negative_medium_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.1
+		}
+	}
+	option = {
+		#elites only
+		name = nf_pantheon.121.b
+		add_timed_idea = {
+			idea = pantheon_elite_focus
+			days = 50
+		}
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+}
+
+country_event = {
+	#heretical noise
+	id = nf_pantheon.122
+	title = nf_pantheon.122.t
+	desc = nf_pantheon.122.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#it was an accident
+		name = nf_pantheon.122.a
+		add_political_power = -25
+		custom_effect_tooltip = utah_pantheon_mood_negative_medium_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.1
+		}
+	}
+	option = {
+		#silence them permanently
+		name = nf_pantheon.122.b
+		add_manpower = -1
+		add_stability = -0.015
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+}
+
+country_event = {
+	#veneration vs survival
+	id = nf_pantheon.200
+	title = nf_pantheon.200.t
+	desc = nf_pantheon.200.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#survival
+		name = nf_pantheon.200.a
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+		}
+		custom_effect_tooltip = utah_pantheon_mood_negative_large_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.2
+		}
+	}
+	option = {
+		#veneration
+		name = nf_pantheon.200.b
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+}
+
+country_event = {
+	#heretical cooking
+	id = nf_pantheon.201
+	title = nf_pantheon.201.t
+	desc = nf_pantheon.201.desc
+	#picture = GFX_event_brain
+	is_triggered_only = yes
+	option = {
+		#sounds tasty
+		name = nf_pantheon.201.a
+		add_tech_bonus = {
+			bonus = 0.15
+			uses = 1
+			category = agriculture_tech
+		}
+		custom_effect_tooltip = utah_pantheon_mood_negative_medium_tt
+		subtract_from_variable = {
+			pantheon_mood_var = 0.1
+		}
+	}
+	option = {
+		#NO!
+		name = nf_pantheon.201.b
+		add_timed_idea = {
+			idea = pantheon_burnt_tongues
+			days = 70
+		}
+		custom_effect_tooltip = utah_pantheon_mood_small_tt
+		add_to_variable = {
+			pantheon_mood_var = 0.05
+		}
+	}
+}
+
+#HGH
+country_event = {
+	#event to capitulate navy to hgh
+	id = nf_utah.140
+	title = nf_utah.140.t
+	desc = nf_utah.140.desc
+	is_triggered_only = yes
+	option = {
+		name = nf_utah.140.a
+		HGH = {
+			country_event = nf_utah.141
+		}
+		add_ideas = {
+			utah_hgh_capitulated_to_hgh
+		}
+	}
+	option = {
+		name = nf_utah.140.b
+		HGH = {
+				country_event = nf_utah.142
+		}
+	}
+}
+
+country_event = {
+	#ano accept response
+	id = nf_utah.141
+	title = nf_utah.141.t
+	desc = nf_utah.141.desc
+	is_triggered_only = yes
+	option = {
+		name = nf_utah.141.a
+		if = {
+			limit = {
+				FROM = {
+					has_navy_size = {
+						size > 1
+					}
+				}
+			}
+			FROM = {
+				transfer_navy = {
+					target = ROOT
+				}
+			}
+		}
+		else = {
+			add_political_power = 40
+		}
+	}
+}
+
+country_event = {
+	#ano denies response
+	id = nf_utah.142
+	title = nf_utah.142.t
+	desc = nf_utah.142.desc
+	is_triggered_only = yes
+	option = {
+		name = nf_utah.142
+		add_war_support = 0.05
+		create_wargoal = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+}
+
+country_event = {
+	#The Great Debate
+	id = nf_utah.150
+	title = nf_utah.150.t
+	desc = nf_utah.150.desc
+	is_triggered_only = yes
+	option = {
+		#make many concessions to HGH
+		name = nf_utah.150.a
+		add_popularity = {
+			ideology = elites
+			popularity = 0.5
+		}
+		add_stability = -0.1
+		add_to_variable = {
+			good_boy_points = 10
+		}
+	}
+	option = {
+		#compromise our faith with hgh
+		name = nf_utah.150.b
+		add_popularity = {
+			ideology = elites
+			popularity = 0.35
+		}
+		add_stability = -0.05
+		add_to_variable = {
+			good_boy_points = 5
+		}
+	}
+	option = {
+		#ensure the indepence of our faith
+		name = nf_utah.150.c
+		add_popularity = {
+			ideology = elites
+			popularity = 0.05
+		}
+		add_stability = 0.01
+		add_to_variable = {
+			good_boy_points = 2
+		}
+	}
+}
+
+country_event = {
+	#event to determine faction/puppeting murtaugh
+	id = nf_utah.160
+	title = nf_utah.160.t
+	desc = nf_utah.160.desc
+	is_triggered_only = yes
+	option = {
+		#send offer for joining in a faction
+		name = nf_utah.160.a
+		trigger = {
+			check_variable = {
+				good_boy_points > 15
+			}
+		}
+		HGH = {
+			country_event = nf_utah.161
+		}
+	}
+	option = {
+		#send offer for becoming a puppet
+		name = nf_utah.160.b
+		trigger = {
+			check_variable = {
+				good_boy_points > 10
+			}
+		}
+		HGH = {
+			country_event = nf_utah.162
+		}
+	}
+	option = {
+		#send an agreement of non agression
+		name = nf_utah.160.c
+		HGH = {
+			country_event = nf_utah.163
+		}
+	}
+}
+
+country_event = {
+	#response to murtaugh requesting a faction
+	id = nf_utah.161
+	title = nf_utah.161.t
+	desc = nf_utah.161.desc
+	is_triggered_only = yes
+	option = {
+		#accept murtaugh into faction
+		name = nf_utah.161.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				has_opinion = {
+					target = MUR
+					value > 20
+				}
+				factor = 2
+			}
+			modifier = {
+				MUR = {
+					check_variable = {
+						good_boy_points > 20
+					}
+				}
+				factor = 100
+			}
+		}
+		if = {
+			limit = {
+				is_in_faction = yes
+			}
+			MUR = {
+				join_prev_faction = yes
+			}
+		}
+		else = {
+			create_or_join_faithful = yes
+			MUR = {
+				join_prev_faction = yes
+			}
+		}
+		MUR = {
+			country_event = nf_utah.164
+		}
+	}
+	option = {
+		#decline MUR into faction
+		name = nf_utah.161.b
+		MUR = {
+			country_event = nf_utah.165
+		}
+	}
+}
+
+country_event = {
+	#response to request for becoming a puppet
+	id = nf_utah.162
+	title = nf_utah.162.t
+	desc = nf_utah.162.desc
+	is_triggered_only = yes
+	option = {
+		#accept murtaugh as a puppet
+		name = nf_utah.162.a
+		ai_chance = {
+			factor = 100
+		}
+		set_autonomy = {
+			target = MUR
+			autonomy_state = autonomy_dominion
+		}
+		MUR = {
+			country_event = nf_utah.164
+		}
+	}
+	option = {
+		#decline murtaugh as a puppet
+		name = nf_utah.162.b
+		MUR = {
+			country_event = nf_utah.165
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_utah.163" }
+	id = nf_utah.163
+	title = nf_utah.163.t
+	desc = nf_utah.163.desc
+	is_triggered_only = yes
+	option = {
+		name = nf_utah.163.a
+		ai_chance = {
+			factor = 90
+			modifier = {
+				has_opinion = {
+					target = MUR
+					value > 10
+				}
+				factor = 100
+			}
+		}
+		diplomatic_relation = {
+			country = MUR
+			relation = non_aggression_pact
+		}
+		MUR = {
+			country_event = nf_utah.164
+		}
+	}
+	option = {
+		name = nf_utah.163.b
+		MUR = {
+			country_event = nf_utah.165
+		}
+	}
+}
+
+country_event = {
+	#response to accepting agreement
+	id = nf_utah.164
+	title = nf_utah.164.t
+	desc = nf_utah.164.desc
+	is_triggered_only = yes
+	option = {
+		name = nf_utah.164.a
+		MUR_presbyter_ann = {
+			set_character_name = MUR_PRESBYTER_ANN_TWICE_BAPTISED_NAME
+		}
+		add_country_leader_role = {
+			character = MUR_presbyter_ann
+			promote_leader = yes
+			country_leader = {
+				desc = MUR_PRESBYTER_ANN_DESC
+				ideology = kritocracy
+				traits = {
+					beloved_leader
+				}
+				expire = "3000.01.01.01"
+				id = -1
+			}
+		}
+		add_political_power = 75
+	}
+}
+
+country_event = {
+	#response to declining agreement
+	id = nf_utah.165
+	title = nf_utah.165.t
+	desc = nf_utah.165.desc
+	is_triggered_only = yes
+	option = {
+		name = nf_utah.165.a
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_utah.169" }
+	id = nf_utah.169
+	title = nf_utah.169.t
+	desc = nf_utah.169.desc
+	is_triggered_only = yes
+	option = {
+		#
+		name = nf_utah.169.a
+		if = {
+			limit = {
+				has_completed_focus = utah_HAM_glass_houses
+			}
+			swap_ideas = {
+				remove_idea = utah_HAM_glass_production_2
+				add_idea = utah_HAM_glass_production_halted
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = utah_HAM_glass_production
+				add_idea = utah_HAM_glass_production_halted
+			}
+		}
+	}
+}
+
+country_event = {
+	#Charlestone Purchase
+	id = nf_utah.170
+	title = nf_utah.170.t
+	desc = nf_utah.170.desc
+	is_triggered_only = yes
+	option = {
+		name = nf_utah.170.a
+		add_political_power = -150
+		add_timed_idea = {
+			idea = utah_HAM_payment
+			days = 365
+		}
+		73 = {
+			add_core_of = HAM
+		}
+		406 = {
+			add_core_of = HAM
+		}
+		HAM = {
+			transfer_state = 73
+			transfer_state = 406
+			add_timed_idea = {
+				idea = utah_HAM_payment_reverse
+				days = 365
+			}
+		}
+	}
+	option = {
+		name = nf_utah.170.b
+		add_war_support = 0.05
+		HAM = {
+			country_event = {
+				id = nf_utah.171
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	#eas refuse
+	id = nf_utah.171
+	title = nf_utah.171.t
+	desc = nf_utah.171.desc
+	is_triggered_only = yes
+	option = {
+		name = nf_utah.171.a
+		73 = {
+			add_core_of = HAM
+		}
+		406 = {
+			add_core_of = HAM
+		}
+		declare_war_on = {
+			target = EAS
+			type = take_state_focus
+		}
+		ai_chance = {
+			factor = 3
+		}
+	}
+	option = {
+		name = nf_utah.171.b
+		add_political_power = -35
+	}
+}
+
+country_event = {
+	#more demands
+	id = nf_utah.172
+	title = nf_utah.172.t
+	desc = nf_utah.172.desc
+	is_triggered_only = yes
+	option = {
+		name = nf_utah.172.a
+		HAM = {
+			transfer_state = 263
+			transfer_state = 375
+			puppet = EAS
+		}
+	}
+	option = {
+		name = nf_utah.172.b
+		add_war_support = 0.1
+		HAM = {
+			country_event = nf_utah.173
+		}
+	}
+}
+
+country_event = {
+	#eas refuse again
+	id = nf_utah.173
+	title = nf_utah.173.t
+	desc = nf_utah.173.desc
+	is_triggered_only = yes
+	option = {
+		name = nf_utah.173.a
+		declare_war_on = {
+			target = EAS
+			type = take_state_focus
+		}
+	}
+}
+
+country_event = {
+	#invite mur to ham faction
+	id = nf_utah.174
+	title = nf_utah.174.t
+	desc = nf_utah.174.desc
+	is_triggered_only = yes
+	option = {
+		#join
+		name = nf_utah.174.a
+		MUR = {
+			join_glass_league = yes
+		}
+		ai_chance = {
+			factor = 3
+		}
+	}
+	option = {
+		#leave
+		name = nf_utah.174.b
+		diplomatic_relation = {
+			country = HAM
+			relation = guarantee
+			active = yes
+		}
+		HAM = {
+			diplomatic_relation = {
+				country = MUR
+				relation = guarantee
+				active = yes
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				HAM = { is_ai = no }
+			}
+		}
+	}
+}
+
+country_event = {
+	#united front decision invisible
+	id = nf_utah.175
+	title = nf_utah.175.t
+	desc = nf_utah.175.desc
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		every_other_country = {
+			limit = {
+				NOT = {
+					has_war_with = ROOT
+					is_in_faction = yes
+				}
+				has_war_with = HEA
+			}
+			country_event = {
+				id = nf_utah.176
+			}
+		}
+	}
+}
+
+country_event = {
+	#united front
+	id = nf_utah.176
+	title = nf_utah.176.t
+	desc = nf_utah.176.desc
+	is_triggered_only = yes
+	option = {
+		#join
+		name = nf_utah.176.a
+		join_from_faction = yes
+		if = {
+			limit = {
+				OR = {
+					original_tag = ANO
+					original_tag = HGH
+				}
+				NOT = { has_country_flag = achievement_united_front_against_heaven }
+			}
+			set_country_flag = achievement_united_front_against_heaven
+		}
+	}
+	option = {
+		#leave
+		name = nf_utah.176.b
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_utah.180" }
+	id = nf_utah.180
+	title = nf_utah.180.t
+	desc = nf_utah.180.desc
+	is_triggered_only = yes
+	option = {
+		name = nf_utah.180.a
+		MUR = {
+			country_event = nf_utah.181
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_utah.181" }
+	id = nf_utah.181
+	title = nf_utah.181.t
+	desc = nf_utah.181.desc
+	is_triggered_only = yes
+	option = {
+		name = nf_utah.181.a
+		ANO = {
+			country_event = nf_utah.182
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					HGH = { is_ai = no }
+					HEA = { is_ai = no }
+					ANO = { is_ai = no }
+					HAM = { is_ai = no }
+				}
+			}
+		}
+	}
+	option = {
+		name = nf_utah.181.b
+		ANO = {
+			country_event = nf_utah.183
+		}
+		ai_chance = {
+			base = 3
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_utah.182" }
+	id = nf_utah.182
+	title = nf_utah.182.t
+	desc = nf_utah.182.desc
+	is_triggered_only = yes
+	option = {
+		#
+		name = nf_utah.182.a
+		add_political_power = -25
+		add_war_support = 0.05
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_utah.183" }
+	id = nf_utah.183
+	title = nf_utah.183.t
+	desc = nf_utah.183.desc
+	is_triggered_only = yes
+	option = {
+		name = nf_utah.183.a
+		add_political_power = -250
+		add_stability = 0.1
+		# add_timed_idea = {
+		#		idea = utah_integration
+		#		days = 365
+		# }
+	}
+	option = {
+		name = nf_utah.183.b
+		add_political_power = -125
+		add_stability = 0.05
+		# add_timed_idea = {
+		#		idea = utah_integration
+		#		days = 200
+		# }
+	}
+	option = {
+		name = nf_utah.183.c
+		add_political_power = -50
+		add_stability = -0.15
+		add_war_support = 0.05
+		every_state = {
+			limit = {
+				OR = {
+					state = 436
+					state = 303
+					state = 74
+				}
+			}
+			add_claim_by = ANO
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				MUR = { is_ai = no }
+			}
+		}
+		# add_timed_idea = {
+		#		idea = utah_integration
+		#		days = 70
+		# }
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_utah.185" }
+	id = nf_utah.185
+	title = nf_utah.185.t
+	desc = nf_utah.185.desc
+	is_triggered_only = yes
+	option = {
+		#accept ANO request to relinquish protection over MUR
+		name = nf_utah.185.a
+		diplomatic_relation = {
+			country = MUR
+			relation = guarantee
+			active = no
+		}
+	}
+	option = {
+		#join their war
+		name = nf_utah.185.b
+		diplomatic_relation = {
+			country = MUR
+			relation = guarantee
+			active = no
+		}
+		create_wargoal = {
+			target = MUR
+			type = annex_everything
+		}
+		ANO = {
+			country_event = nf_utah.186
+		}
+	}
+	option = {
+		name = nf_utah.185.c
+		ANO = {
+			country_event = nf_utah.187
+		}
+	}
+}
+
+country_event = {
+	#hgh joins
+	id = nf_utah.186
+	title = nf_utah.186.t
+	desc = nf_utah.186.desc
+	is_triggered_only = yes
+	option = {
+		#happy with MUR no longer being protected by HGH
+		name = nf_utah.186.a
+		add_war_support = 0.05
+	}
+}
+
+country_event = {
+	#hgh refuses
+	id = nf_utah.187
+	title = nf_utah.187.t
+	desc = nf_utah.187.desc
+	is_triggered_only = yes
+	option = {
+		#annoyed with HGH continuing to protect MUR
+		name = nf_utah.187.a
+		if = {
+			limit = {
+				is_in_faction_with = HGH
+			}
+			leave_current_faction = yes
+		}
+		diplomatic_relation = {
+			country = HGH
+			relation = guarantee
+			active = no
+		}
+		diplomatic_relation = {
+			country = HGH
+			relation = military_access
+			active = no
+		}
+		add_stability = -0.05
+		add_war_support = 0.1
+	}
+}
+
+country_event = {
+	# Tar Walkers survive the Sickness-of-Soot
+	id = nf_utah.188
+	title = nf_utah.188.t
+	desc = nf_utah.188.desc
+	is_triggered_only = yes
+	option = {
+		name = nf_utah.188.a
+		remove_ideas = sickness_of_soot
+		hidden_effect = {
+			clear_variable = soot_weight
+			clear_variable = soot_weight_delta
+			clear_variable = soot_remaining_weeks
+			clear_variable = soot_conscription_malus
+			clear_variable = soot_attack_malus
+			clear_variable = soot_defence_malus
+			remove_dynamic_modifier = {
+				modifier = sickness_of_soot_modifier
+			}
+		}
+		add_stability = 0.10
+		if = {
+			limit = {
+				has_tech = med_company_tech_6
+			}
+		}
+		else_if = {
+			limit = {
+				has_tech = med_company_tech_5
+			}
+			set_technology = { med_company_tech_6 = 1 }
+		}
+		else_if = {
+			limit = {
+				has_tech = med_company_tech_4
+			}
+			set_technology = { med_company_tech_5 = 1 }
+		}
+		else_if = {
+			limit = {
+				has_tech = med_company_tech_3
+			}
+			set_technology = { med_company_tech_4 = 1 }
+		}
+		else_if = {
+			limit = {
+				has_tech = med_company_tech_2
+			}
+			set_technology = { med_company_tech_3 = 1 }
+		}
+		else_if = {
+			limit = {
+				has_tech = med_company_tech_1
+			}
+			set_technology = { med_company_tech_2 = 1 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_tech = med_company_tech_1 }
+			}
+			set_technology = { med_company_tech_1 = 1 }
+		}
+	}
+}
+
+country_event = {
+	# The Dead Horses learn of the Burned Man.
+	id = nf_utah.189
+	title = nf_utah.189.t
+	desc = nf_utah.189.desc
+	is_triggered_only = yes
+	option = {
+		name = nf_utah.189.a
+		custom_effect_tooltip = dead_horses_learn_of_burned_man_tt
+		clear_array = pantheon_array
+		add_to_array = {
+			pantheon_array = 1
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 10
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 2
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 3
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		add_to_array = {
+			pantheon_array = 4
+		}
+		add_to_array = {
+			pantheon_array = 0
+		}
+		if = {
+			limit = { is_ai = yes }
+			clear_pantheon_modifiers = yes
+			set_variable = { selected_pantheon_god = 10 }
+			add_dynamic_modifier = { modifier = pantheon_dea_modifier }
+			add_ideas = pantheon_dea
+			activate_mission = utah_pantheon_timeout
+		}
+	}
+}
+# vim: set ft=pdx ts=2 sw=2 tw=79 :
+####High Chapel Events
+country_event = {
+
+	id = nf_utah.200
+	title = nf_utah.200.t
+	desc = nf_utah.200.desc
+	is_triggered_only = yes
+	option = {
+		name = nf_utah.200.a
+		add_political_power = 20
+		add_stability = 0.05
+	}
+}
+country_event = {
+
+	id = nf_utah.201
+	title = nf_utah.201.t
+	desc = nf_utah.201.desc
+	is_triggered_only = yes
+	option = {
+		name = nf_utah.201.a
+		add_stability = 0.10
+		add_ideas = { HGH_pilgrims }
+
+	}
+}
+country_event = {
+
+	id = nf_utah.202
+	title = nf_utah.202.t
+	desc = nf_utah.202.desc
+	is_triggered_only = yes
+	option = {
+		name = nf_event.202.a
+		add_war_support = -0.05
+		add_stability = -0.05
+	}
+}
+country_event = {
+
+	id = nf_utah.203
+	title = nf_utah.203.t
+	desc = nf_utah.203.desc
+	is_triggered_only = yes
+	option = {
+		name = nf_event_hgh.203.a
+		army_experience = 25
+		add_tech_bonus = {
+			name = infantry_weapons_tech_category
+			bonus = 0.25
+			uses = 2
+		}
+	}
+}

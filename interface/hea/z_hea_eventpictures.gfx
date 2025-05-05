@@ -4,15 +4,67 @@ spriteTypes = {
 	##############################################################################
 
 	spriteType = {
-		name = "GFX_event_hea_bathhouse_event"
-		texturefile = "gfx/event_pictures/hea_bathhouse_event.dds"
+		name = "GFX_event_hea_leahs_flag"
+		texturefile = "gfx/event_pictures/leahs_flag.dds"
 	}
 	spriteType = {
 		name = "GFX_event_hea_bathhouse_event"
 		texturefile = "gfx/event_pictures/hea_bathhouse_event.dds"
 	}
 	spriteType = {
-		name = "GFX_event_hea_bathhouse_event"
-		texturefile = "gfx/event_pictures/hea_bathhouse_event.dds"
+		name = "GFX_event_hea_junias_flag"
+		texturefile = "gfx/event_pictures/junias_flag.dds"
+	}
+	spriteType = {
+		name = "GFX_event_hea_flag_amelia"
+		texturefile = "gfx/event_pictures/flag_amelia.dds"
+	}
+	spriteType = {
+		name = "GFX_event_hea_ezekias_flag"
+		texturefile = "gfx/event_pictures/ezekias_flag.dds"
+	}
+	spriteType = {
+		name = "GFX_event_hea_elijahs_flag"
+		texturefile = "gfx/event_pictures/elijahs_flag.dds"
+	}
+	spriteType = {
+		name = "GFX_event_hea_elias_flag"
+		texturefile = "gfx/event_pictures/elias_flag.dds"
+	}
+	spriteType = {
+		name = "GFX_event_hea_cassian_flag"
+		texturefile = "gfx/event_pictures/cassian_flag.dds"
+	}
+	spriteType = {
+		name = "GFX_event_hea_amelia_flag_relic"
+		texturefile = "gfx/event_pictures/amelia_flag_relic.dds"
+	}
+	spriteType = {
+		name = "GFX_event_hea_hgh_burning"
+		texturefile = "gfx/event_pictures/hgh_burning.dds"
+	}
+	spriteType = {
+		name = "GFX_event_hea_schism_fixed"
+		texturefile = "gfx/event_pictures/schism_fixed.dds"
+	}
+	spriteType = {
+		name = "GFX_event_brotherhood_HEA"
+		texturefile = "gfx/event_pictures/brotherhood_HEA.dds"
+	}
+	spriteType = {
+		name = "GFX_event_claras_flag"
+		texturefile = "gfx/event_pictures/claras_flag.dds"
+	}
+	spriteType = {
+		name = "GFX_event_HEA_westand"
+		texturefile = "gfx/event_pictures/HEA_westand.dds"
+	}
+	spriteType = {
+		name = "GFX_event_hea_star_shining_bright"
+		texturefile = "gfx/event_pictures/hea_star_shining_bright.dds"
+	}
+	spriteType = {
+		name = "GFX_event_hea_washington_husks"
+		texturefile = "gfx/event_pictures/hea_washington_husks.dds"
 	}
 }

@@ -388,16 +388,37 @@
   nf_utah.189.desc:0 "Our tribe has begun hearing strange rumors of a Burned Man, and our people take strength in his message of just righteousness. Perhaps we'd do well to learn from his example?"
   nf_utah.189.a:0 "We shall stand up and look at what's come for us."
 
-####Murtaugh Events
+ ####Murtaugh Events
 
-nf_event_mur.11.t:0 "Saint Barnabus, the Kind"
-nf_event_mur.11.desc:0 "Saint Orissa led the citizens of Eden to a bloody conflict, thousands brayed for blood when they saw the beautiful world the Lord created tarnished by man's greed, and thousands died over the course of two centuries of crusades. \n\n However, while Saint Orissa is known to all the budding crusaders of Utah, it's Saint Barnabus who dared to think of anything but senseless violence. Amidst the first bloody crusade, a faithful servant amongst rabid zealots learned to heal, he gave alms to those conquered, mending still aching wounds, he bridged the chasm between rebellious communities with prayer, understanding, and aid, asking for nothing in return. It is no surprise to many that it was during Saint Barnabus' time that many willingly joined the Children of Eden. \n\n However, in a cruel twist of irony, those same men who joined due to his comforting embrace, would lead crusades in the name of the Lord. Saint Barnabus would die an unsung hero, it would take a chance of fate, a young woman, and an old derelict home filled with holotapes, for his teachings to grace the wasteland once more."
-nf_event_mur.11.a:0 "A True Saint"
+ nf_event_mur.11.t:0 "Saint Barnabus, the Kind"
+ nf_event_mur.11.desc:0 "Saint Orissa led the citizens of Eden to a bloody conflict, thousands brayed for blood when they saw the beautiful world the Lord created tarnished by man's greed, and thousands died over the course of two centuries of crusades. \n\n However, while Saint Orissa is known to all the budding crusaders of Utah, it's Saint Barnabus who dared to think of anything but senseless violence. Amidst the first bloody crusade, a faithful servant amongst rabid zealots learned to heal, he gave alms to those conquered, mending still aching wounds, he bridged the chasm between rebellious communities with prayer, understanding, and aid, asking for nothing in return. It is no surprise to many that it was during Saint Barnabus' time that many willingly joined the Children of Eden. \n\n However, in a cruel twist of irony, those same men who joined due to his comforting embrace, would lead crusades in the name of the Lord. Saint Barnabus would die an unsung hero, it would take a chance of fate, a young woman, and an old derelict home filled with holotapes, for his teachings to grace the wasteland once more."
+ nf_event_mur.11.a:0 "A True Saint"
 
-nf_event_mur.12.t:0 "Saint Cynthia, the Reformer"
-nf_event_mur.12.desc:0 "The young woman who found Saint Barnabus' lessons, was elated, for nigh two centuries, her people killed, and killed, and killed. Over Sixty Crusades, Crusades in the name of a Father who would weep to see his children kill each other for naught but misplaced belief. As the chosen heir to Amon, she knew that, above all, she could change the fate of the Children of Eden, for the better. \n\n Many took to Cynthia's teachings with great-haste, wishing to see their children grow into farmers, architects, priests, or whatever they so wish...not be another number that died in the name of the Lord. \n\n §tHowever, not all wished for change. §!\n\n Two months, it took two months before violence broke out, and the hopes of Saint Cynthia went up in flames alongside her corpse. Presbyter Ann took all those who would flee with her, which amounted to thousands, and fled West. She would never have a chance to mourn her wife in full, for the flock looked to her to lead them in these trying times."
-nf_event_mur.12.a:0 "Poor Saint Cynthia...lost too young."
+ nf_event_mur.12.t:0 "Saint Cynthia, the Reformer"
+ nf_event_mur.12.desc:0 "The young woman who found Saint Barnabus' lessons, was elated, for nigh two centuries, her people killed, and killed, and killed. Over Sixty Crusades, Crusades in the name of a Father who would weep to see his children kill each other for naught but misplaced belief. As the chosen heir to Amon, she knew that, above all, she could change the fate of the Children of Eden, for the better. \n\n Many took to Cynthia's teachings with great-haste, wishing to see their children grow into farmers, architects, priests, or whatever they so wish...not be another number that died in the name of the Lord. \n\n §tHowever, not all wished for change. §!\n\n Two months, it took two months before violence broke out, and the hopes of Saint Cynthia went up in flames alongside her corpse. Presbyter Ann took all those who would flee with her, which amounted to thousands, and fled West. She would never have a chance to mourn her wife in full, for the flock looked to her to lead them in these trying times."
+ nf_event_mur.12.a:0 "Poor Saint Cynthia...lost too young."
 
-nf_event_mur.13.t:0 "The Desperate Odyssey"
-nf_event_mur.13.desc:0 "They ran across the river, before turning north, to the only haven they knew. At Aberdeen were they met by Pastor Samuel, who stared at them with sorrow in his face, that sorrow did not stop him from refusing to allow them entry, so fearful was he of Amon and his zealots...and so they ran. Again and again they ran. Shoshone hated them due to the zealotry of High Chapel, Heaven's Gate, and their ancient forefathers. Eastport demanded subservience and New Hammond's flock was as mad as Amon's. So they settled, some in the ruins of Burley, others in the Twin Falls, seeking safety amidst the wild straits, but Presbyter Ann and her loyal flock build a city anew, and they would call it..."
-nf_event_mur.13.a:0 "...Murtaugh"
+ nf_event_mur.13.t:0 "The Desperate Odyssey"
+ nf_event_mur.13.desc:0 "They ran across the river, before turning north, to the only haven they knew. At Aberdeen were they met by Pastor Samuel, who stared at them with sorrow in his face, that sorrow did not stop him from refusing to allow them entry, so fearful was he of Amon and his zealots...and so they ran. Again and again they ran. Shoshone hated them due to the zealotry of High Chapel, Heaven's Gate, and their ancient forefathers. Eastport demanded subservience and New Hammond's flock was as mad as Amon's. So they settled, some in the ruins of Burley, others in the Twin Falls, seeking safety amidst the wild straits, but Presbyter Ann and her loyal flock build a city anew, and they would call it..."
+ nf_event_mur.13.a:0 "...Murtaugh"
+
+ #####High Chapel Events
+ nf_utah.200.t:0 "In the Beginning, There was Water"
+ nf_utah.200.desc:0 "The world ended in fire. But in the ruins, they came not with guns, but scriptures. Not with flags, but hope. The Great River flowed still, its banks home to preachers, sinners, builders, and broken wanderers. \n\n They built shrines from driftwood, carved psalms into rusted plates. And in time, they built High Chapel—not from conquest, but congregation. \n\n The first sermons were whispered, not shouted. The first baptisms were tearful, not grand. Now, generations later, Pastor Samuel lights a lantern at the edge of the river and wonders: can a faith born in quiet truly survive the age of screaming steel"
+ nf_utah.200.a:0 "We were forged in flood, not fire."
+
+ nf_utah.201.t:0 "The Temples of New Nicea"
+ nf_utah.201.desc:0 "Nicea is not merely old stone and whispered scripture. Beneath its surface, great temples pulse with light and liturgy. Some survived the fire of the world before—the rest were carved anew by the faithful hands of those who remembered. \n\n Priests walk its halls in silence, broken only by song. Pilgrims sleep in its courtyards, wrapped in hope and patchwork quilts. The gospel flows like incense, thick and unrelenting. \n\nPastor Samuel walks its grand nave alone before the Council meets, and places his hand upon the altar of Saint Elias. "If these stones must guide us," he says, "let them not be silent.""
+ nf_utah.201.a:0 "The rivers bring pilgrims, but the temples gives them purpose."
+
+ nf_utah.202.t:0 "Cracks in the Riverbed"
+ nf_utah.202.desc:0 "The Pentecostal Kingdom fell not in war, but in weeping. Saint Cynthia's body burned before the smoke had cleared. Presbyter Ann fled with the disillusioned. Father Amon declared a crusade. \n\n Samuel remembers the night Ann came to Aberdeen. She begged for shelter. He denied her. Not from cruelty, but fear. Now, decades later, both sides grow louder—and the river runs redder. \n\n The Council stirs. Some say High Chapel must choose a side. Samuel knows the river will not forgive him twice."
+ nf_utah.202.a:0 "Soon...High Chapel will choose what to do."
+
+ nf_utah.203.t:0 "Steam on the Wind"
+ nf_utah.hgh.203.desc:0 "The river whispers of war. Steamships prowl further up its spine. Knights in scorched armor preach salvation with bayonets. \n\n Heaven’s Gate was once like us—faithful, firm, and faltering. But now they burn their doubts and call the flame holy. The shrine town they lost was a tragedy. But what came after? That was a choice. \n\n A courier \n\n arrives with a missive from Michael’s court. It is not a declaration. Not yet. Just a message: "Steel does not drift, Pastor. It marches.""
+ nf_utah.hgh.203.a:0 "Then let the water rise to meet it."
+
+ nf_utah.1.t:0 ""
+ nf_utah.hgh.1.desc:0 ""
+ nf_utah.hgh.1.a:0 "”"

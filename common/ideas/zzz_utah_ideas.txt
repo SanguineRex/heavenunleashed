@@ -1510,12 +1510,17 @@ ideas = {
 			allowed = {
 			}
 			removal_cost = -1
-			equipment_bonus = {
-				spec_ops = {
-					max_organisation = 0.25
-					default_morale = 0.25
-					instant = yes
-				}
+			#equipment_bonus = { #The stats given are unit category buff/modifiers, won't work in national spirits/ideas - @Deez
+			#	spec_ops = {
+			#		max_organisation = 0.25
+			#		default_morale = 0.25
+			#		instant = yes
+			#	}
+			#}
+			modifier = { #Added these in as compensation - @Deez
+				special_forces_attack_factor = 0.05
+				special_forces_defence_factor = 0.05
+				army_morale_factor = 0.1
 			}
 		}
 		pantheon_lon_elite = {

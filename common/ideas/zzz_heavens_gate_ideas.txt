@@ -320,7 +320,8 @@ ideas = {
 			modifier = {
 				air_accidents_factor = -0.2
 				air_weather_penalty = -0.2
-				air_air_superiority_agility_factor = 0.2
+				#air_air_superiority_agility_factor = 0.2 #Not sure what's the intended modifier here, this one is invalid - @Deez
+				air_agility_factor = 0.05 #Added this one as compensation, 5% Agility boost to air - @Deez
 			}
 		}
 
@@ -509,7 +510,7 @@ ideas = {
 				}
 			}
 		}
-			hea_battle_priests = {
+		hea_battle_priests = {
 			picture = battle_priests
 			allowed = {
 			}
@@ -531,7 +532,7 @@ ideas = {
 				}
 			}
 		}
-			hea_bathhouse = {
+		hea_bathhouse = {
 			picture = hea_bathhouse
 			allowed = {
 			}
@@ -540,7 +541,7 @@ ideas = {
 				   stability_factor = 0.05
 			}
 		}
-			hea_book = {
+		hea_book = {
 			picture = hea_book
 			allowed = {
 			}
@@ -552,7 +553,7 @@ ideas = {
 			
 		}
 		
-				angel_of_peace1 = {
+		angel_of_peace1 = {
 			picture = HEA_idea_one_prophet
 			allowed = {
 			}
@@ -563,13 +564,13 @@ ideas = {
 				stability_factor = 0.25
 				war_support_factor = 0
 				army_morale_factor = 0.05
-				army_defence_factor_factor = 0.05
+				army_defence_factor = 0.05
 				special_forces_cap = 0.05
 			} 
 			
 		}
 			
-				angel_of_peace2 = {
+		angel_of_peace2 = {
 			picture = HEA_idea_one_prophet
 			allowed = {
 			}
@@ -580,13 +581,13 @@ ideas = {
 				stability_factor = 0.25
 				production_speed_buildings_factor = 0.05
 				army_morale_factor = 0.10
-				army_defence_factor_factor = 0.10
+				army_defence_factor = 0.10
 				special_forces_cap = 0.10
 			} 
 			
 		}
 			
-				angel_of_peace3 = {
+		angel_of_peace3 = {
 			picture = HEA_idea_one_prophet
 			allowed = {
 			}
@@ -597,7 +598,7 @@ ideas = {
 				stability_factor = 0.25
 				production_speed_buildings_factor = 0.1
 				army_morale_factor = 0.20
-				army_defence_factor_factor = 0.25
+				army_defence_factor = 0.25
 				special_forces_cap = 0.15
 			} 
 			
@@ -1132,372 +1133,322 @@ ideas = {
 			}
 		}
 	}
-	hea_judas_engineers = {
-		picture = hea_tanks
-		allowed = {
-		}
-		remove_cost = 1
-		equipment_bonus = {
-			tank_equipment = {
-				build_cost_ic = -0.05
-		instant = yes
+		hea_judas_engineers = {
+			picture = hea_tanks
+			allowed = {
 			}
-
-	}
-
-}
-hea_judasfoundrybus = {
-	picture = hea_tanks
-	allowed = {
-	}
-	remove_cost = 1
-	equipment_bonus = {
-		tank_equipment = {
-			build_cost_ic = 0.05
-			breakthrough = 0.05
-			armor_value = 0.05
-	instant = yes
+			#remove_cost = 1
+			equipment_bonus = {
+				tank_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
 		}
-
-}
-
-}
-hea_judas_engineersexperienced = {
-
-	picture = hea_tanks
-	allowed = {
-	}
-	remove_cost = 1
-	equipment_bonus = {
-		tank_equipment = {
-			build_cost_ic = -0.10
-			breakthrough = 0.05
-			reliability = 0.05
-	instant = yes
+		hea_judasfoundrybus = {
+			picture = hea_tanks
+			allowed = {
+			}
+			#remove_cost = 1
+			equipment_bonus = {
+				tank_equipment = {
+					build_cost_ic = 0.05
+					breakthrough = 0.05
+					armor_value = 0.05
+				instant = yes
+				}
+			}
 		}
-
-}
-
-}
-hea_shrinetanks = {
-
-	picture = hea_tanks
-	allowed = {
-	}
-	remove_cost = 1
-	modifier = {
-	army_morale_factor = 0.25
-	army_org_factor = 0.10
-	breakthrough_factor = 0.05
-	org_loss_at_low_org_factor = -0.10
-	}
-	equipment_bonus = {
-		tank_equipment = {
-			build_cost_ic = 0.15
-			reliability = -0.10
-			maximum_speed = -0.05
-	instant = yes
+		hea_judas_engineersexperienced = {
+			picture = hea_tanks
+			allowed = {
+			}
+			#remove_cost = 1
+			equipment_bonus = {
+				tank_equipment = {
+					build_cost_ic = -0.10
+					breakthrough = 0.05
+					reliability = 0.05
+				instant = yes
+				}
+			}
 		}
-
-}
-
-}
-hea_pastinspiration = {
-
-	picture = hea_tanks
-	allowed = {
-	}
-	remove_cost = 1
-	research_bonus = {
-		armor = 0.25
-	}
-	equipment_bonus = {
-		tank_equipment = {
-			build_cost_ic = 0.05
-			maximum_speed = -0.05
-			armor_value = 0.10
-	instant = yes
+		hea_shrinetanks = {
+			picture = hea_tanks
+			allowed = {
+			}
+			#remove_cost = 1
+			modifier = {
+				army_morale_factor = 0.25
+				army_org_factor = 0.10
+				breakthrough_factor = 0.05
+				org_loss_at_low_org_factor = -0.10
+			}
+			equipment_bonus = {
+				tank_equipment = {
+					build_cost_ic = 0.15
+					reliability = -0.10
+					maximum_speed = -0.05
+					instant = yes
+				}
+			}
 		}
-
-}
-
-}
-hea_steamdreadnoughts = {
-
-	picture = hea_tanks
-	allowed = {
-	}
-	remove_cost = 1
-	modifier = {
-		army_armor_attack_factor = 0.05
-		army_armor_defence_factor = 0.05
-	}
-
-}
-hea_innocencelost_foundry = {
-
-	picture = hea_tanks
-	allowed = {
-	}
-	remove_cost = 1
-	modifier = {
-		recruitable_population = -0.05
-		army_armor_attack_factor = 0.10
-		army_armor_defence_factor = 0.10
-	}
-
-}
-hea_biggertank1 = {
-
-	picture = hea_tanks
-	allowed = {
-	}
-	remove_cost = 1
-	equipment_bonus = {
-		tank_equipment = {
-			build_cost_ic = 0.05
-			soft_attack = 0.05
-			hard_attack = 0.05
-	instant = yes
+		hea_pastinspiration = {
+			picture = hea_tanks
+			allowed = {
+			}
+			#remove_cost = 1
+			research_bonus = {
+				armor = 0.25
+			}
+			equipment_bonus = {
+				tank_equipment = {
+					build_cost_ic = 0.05
+					maximum_speed = -0.05
+					armor_value = 0.10
+				instant = yes
+				}
+			}
 		}
-
-}
-}
-hea_biggertank2 = {
-
-	picture = hea_tanks
-	allowed = {
-	}
-	remove_cost = 1
-	equipment_bonus = {
-		tank_equipment = {
-			build_cost_ic = 0.10
-			soft_attack = 0.05
-			hard_attack = 0.05
-			armor_value = 0.05
-			max_strength = 0.10
-	instant = yes
+		hea_steamdreadnoughts = {
+			picture = hea_tanks
+			allowed = {
+			}
+			#remove_cost = 1
+			modifier = {
+				army_armor_attack_factor = 0.05
+				army_armor_defence_factor = 0.05
+			}
 		}
-
-}
-}
-hea_biggertank3 = {
-
-	picture = hea_tanks
-	allowed = {
-	}
-	remove_cost = 1
-	equipment_bonus = {
-		tank_equipment = {
-			build_cost_ic = 0.15
-			soft_attack = 0.05
-			hard_attack = 0.05
-			ap_attack = 0.05
-			breakthrough = 0.10
-			armor_value = 0.05
-			max_strength = 0.10
-	instant = yes
+		hea_innocencelost_foundry = {
+			picture = hea_tanks
+			allowed = {
+			}
+			#remove_cost = 1
+			modifier = {
+				recruitable_population = -0.05
+				army_armor_attack_factor = 0.10
+				army_armor_defence_factor = 0.10
+			}
 		}
-
-}
-}
-hea_biggertank4 = {
-
-	picture = hea_tanks
-	allowed = {
-	}
-	remove_cost = 1
-	equipment_bonus = {
-		tank_equipment = {
-			build_cost_ic = 0.20
-			soft_attack = 0.10
-			hard_attack = 0.10
-			ap_attack = 0.10
-			breakthrough = 0.10
-			armor_value = 0.10
-			max_strength = 0.20
-	instant = yes
+		hea_biggertank1 = {
+			picture = hea_tanks
+			allowed = {
+			}
+			#remove_cost = 1
+			equipment_bonus = {
+				tank_equipment = {
+					build_cost_ic = 0.05
+					soft_attack = 0.05
+					hard_attack = 0.05
+					instant = yes
+				}
+			}
 		}
-
-}
-}
-hea_close_air1 = {
-
-	picture = hea_air
-	allowed = {
-	}
-	remove_cost = 1
-	modifier = {
-		air_maximum_speed_factor = 0.10
-		air_agility_factor = 0.10
-	}
-
-}
-hea_close_air2 = {
-
-	picture = hea_air
-	allowed = {
-	}
-	remove_cost = 1
-	modifier = {
-		air_maximum_speed_factor = 0.10
-		air_agility_factor = 0.10
-		air_cas_efficiency = 0.10
-	}
-
-}
-hea_close_air3 = {
-
-	picture = hea_air
-	allowed = {
-	}
-	remove_cost = 1
-	modifier = {
-		air_maximum_speed_factor = 0.10
-		air_agility_factor = 0.10
-		air_cas_present_factor = 0.10
-		air_cas_efficiency = 0.20
-	}
-
-}	
-hea_air_control1 = {
-
-	picture = hea_air
-	allowed = {
-	}
-	remove_cost = 1
-	modifier = {
-		air_superiority_efficiency = 0.10
-		air_accidents_factor = -0.10
-
-	}
-
-}	
-hea_air_control2 = {
-
-	picture = hea_air
-	allowed = {
-	}
-	remove_cost = 1
-	modifier = {
-	air_superiority_efficiency = 0.10
-	air_accidents_factor = -0.10
-	paratrooper_weight_factor = -0.25
-	paradrop_organization_factor = 0.10
-	}
-
-}
-hea_air_control3 = {
-
-	picture = hea_air
-	allowed = {
-	}
-	remove_cost = 1
-	modifier = {
-		air_superiority_efficiency = 0.20
-		air_escort_efficiency = 0.10
-		air_superiority_detect_factor = 0.10
-		air_accidents_factor = -0.10
-		paratrooper_weight_factor = -0.25
-		paradrop_organization_factor = 0.10
-
-	}
-
-}
-hea_air_death1 = {
-
-	picture = hea_air
-	allowed = {
-	}
-	remove_cost = 1
-	modifier = {
-	air_night_penalty = -0.10
-	air_range_factor = 0.10
-	air_weather_penalty = -0.10
-	}
-
-}
-hea_air_death2 = {
-
-	picture = hea_air
-	allowed = {
-	}
-	remove_cost = 1
-	modifier = {
-		air_night_penalty = -0.10
-		air_range_factor = 0.10
-		air_weather_penalty = -0.10
-		air_bombing_targetting = 0.10
-		port_strike = 0.10
-	}
-
-}
-hea_air_death3 = {
-
-	picture = hea_air
-	allowed = {
-	}
-	remove_cost = 1
-	modifier = {
-		air_night_penalty = -0.10
-		air_range_factor = 0.10
-		air_weather_penalty = -0.10
-		air_bombing_targetting = 0.20
-		port_strike = 0.20
-	}
-
-}
-hea_air_reach = {
-
-	picture = hea_air
-	allowed = {
-	}
-	remove_cost = 1
-	modifier = {
-		air_night_penalty = -0.25
-		air_range_factor = 0.25
-		air_weather_penalty = -0.25
-		air_bombing_targetting = 0.20
-		port_strike = 0.20
-		air_superiority_efficiency = 0.20
-		air_escort_efficiency = 0.10
-		air_superiority_detect_factor = 0.10
-		air_accidents_factor = -0.10
-		paratrooper_weight_factor = -0.25
-		paradrop_organization_factor = 0.10
-		air_maximum_speed_factor = 0.25
-		air_agility_factor = 0.10
-		air_cas_present_factor = 0.10
-		air_cas_efficiency = 0.20
-	}
-
-}
-hea_air_death = {
-
-	picture = hea_air
-	allowed = {
-	}
-	remove_cost = 1
-	modifier = {
-		air_night_penalty = -0.10
-		air_range_factor = 0.10
-		air_weather_penalty = -0.10
-		air_bombing_targetting = 0.40
-		port_strike = 0.25
-		air_superiority_efficiency = 0.25
-		air_escort_efficiency = 0.10
-		air_superiority_detect_factor = 0.10
-		air_accidents_factor = -0.10
-		paratrooper_weight_factor = -0.25
-		paradrop_organization_factor = 0.10
-		air_maximum_speed_factor = 0.10
-		air_agility_factor = 0.10
-		air_cas_present_factor = 0.25
-		air_cas_efficiency = 0.25
-
-	}
-
-}
+		hea_biggertank2 = {
+			picture = hea_tanks
+			allowed = {
+			}
+			#remove_cost = 1
+			equipment_bonus = {
+				tank_equipment = {
+					build_cost_ic = 0.10
+					soft_attack = 0.05
+					hard_attack = 0.05
+					armor_value = 0.05
+					max_strength = 0.10
+					instant = yes
+				}
+			}
+		}
+		hea_biggertank3 = {
+			picture = hea_tanks
+			allowed = {
+			}
+			#remove_cost = 1
+			equipment_bonus = {
+				tank_equipment = {
+					build_cost_ic = 0.15
+					soft_attack = 0.05
+					hard_attack = 0.05
+					ap_attack = 0.05
+					breakthrough = 0.10
+					armor_value = 0.05
+					max_strength = 0.10
+					instant = yes
+				}
+			}
+		}
+		hea_biggertank4 = {
+			picture = hea_tanks
+			allowed = {
+			}
+			#remove_cost = 1
+			equipment_bonus = {
+				tank_equipment = {
+					build_cost_ic = 0.20
+					soft_attack = 0.10
+					hard_attack = 0.10
+					ap_attack = 0.10
+					breakthrough = 0.10
+					armor_value = 0.10
+					max_strength = 0.20
+					instant = yes
+				}
+			}
+		}
+		hea_close_air1 = {
+			picture = hea_air
+			allowed = {
+			}
+			#remove_cost = 1
+			modifier = {
+				air_maximum_speed_factor = 0.10
+				air_agility_factor = 0.10
+			}
+		}
+		hea_close_air2 = {
+			picture = hea_air
+			allowed = {
+			}
+			#remove_cost = 1
+			modifier = {
+				air_maximum_speed_factor = 0.10
+				air_agility_factor = 0.10
+				air_cas_efficiency = 0.10
+			}
+		}
+		hea_close_air3 = {
+			picture = hea_air
+			allowed = {
+			}
+			#remove_cost = 1
+			modifier = {
+				air_maximum_speed_factor = 0.10
+				air_agility_factor = 0.10
+				air_cas_present_factor = 0.10
+				air_cas_efficiency = 0.20
+			}
+		}	
+		hea_air_control1 = {
+			picture = hea_air
+			allowed = {
+			}
+			#remove_cost = 1
+			modifier = {
+				air_superiority_efficiency = 0.10
+				air_accidents_factor = -0.10
+			}
+		}	
+		hea_air_control2 = {
+			picture = hea_air
+			allowed = {
+			}
+			#remove_cost = 1
+			modifier = {
+			air_superiority_efficiency = 0.10
+			air_accidents_factor = -0.10
+			paratrooper_weight_factor = -0.25
+			paradrop_organization_factor = 0.10
+			}
+		}
+		hea_air_control3 = {
+			picture = hea_air
+			allowed = {
+			}
+			#remove_cost = 1
+			modifier = {
+				air_superiority_efficiency = 0.20
+				air_escort_efficiency = 0.10
+				air_superiority_detect_factor = 0.10
+				air_accidents_factor = -0.10
+				paratrooper_weight_factor = -0.25
+				paradrop_organization_factor = 0.10
+			}
+		}
+		hea_air_death1 = {
+			picture = hea_air
+			allowed = {
+			}
+			#remove_cost = 1
+			modifier = {
+				air_night_penalty = -0.10
+				air_range_factor = 0.10
+				air_weather_penalty = -0.10
+			}
+		}
+		hea_air_death2 = {
+			picture = hea_air
+			allowed = {
+			}
+			#remove_cost = 1
+			modifier = {
+				air_night_penalty = -0.10
+				air_range_factor = 0.10
+				air_weather_penalty = -0.10
+				air_bombing_targetting = 0.10
+				port_strike = 0.10
+			}
+		}
+		hea_air_death3 = {
+			picture = hea_air
+			allowed = {
+			}
+			#remove_cost = 1
+			modifier = {
+				air_night_penalty = -0.10
+				air_range_factor = 0.10
+				air_weather_penalty = -0.10
+				air_bombing_targetting = 0.20
+				port_strike = 0.20
+			}
+		}
+		hea_air_reach = {
+			picture = hea_air
+			allowed = {
+			}
+			#remove_cost = 1
+			modifier = {
+				air_night_penalty = -0.25
+				air_range_factor = 0.25
+				air_weather_penalty = -0.25
+				air_bombing_targetting = 0.20
+				port_strike = 0.20
+				air_superiority_efficiency = 0.20
+				air_escort_efficiency = 0.10
+				air_superiority_detect_factor = 0.10
+				air_accidents_factor = -0.10
+				paratrooper_weight_factor = -0.25
+				paradrop_organization_factor = 0.10
+				air_maximum_speed_factor = 0.25
+				air_agility_factor = 0.10
+				air_cas_present_factor = 0.10
+				air_cas_efficiency = 0.20
+			}
+		}
+		hea_air_death = {
+			picture = hea_air
+			allowed = {
+			}
+			#remove_cost = 1
+			modifier = {
+				air_night_penalty = -0.10
+				air_range_factor = 0.10
+				air_weather_penalty = -0.10
+				air_bombing_targetting = 0.40
+				port_strike = 0.25
+				air_superiority_efficiency = 0.25
+				air_escort_efficiency = 0.10
+				air_superiority_detect_factor = 0.10
+				air_accidents_factor = -0.10
+				paratrooper_weight_factor = -0.25
+				paradrop_organization_factor = 0.10
+				air_maximum_speed_factor = 0.10
+				air_agility_factor = 0.10
+				air_cas_present_factor = 0.25
+				air_cas_efficiency = 0.25
+			}
+		}
 		hea_medical_sin = {
 			picture = generic_medicine
 			allowed = {
@@ -1513,10 +1464,8 @@ hea_air_death = {
 				}
 			}
 		}
-		}
-
-
 	}
+}
 
 
 

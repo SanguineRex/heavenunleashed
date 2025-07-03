@@ -1,12 +1,9 @@
 ########The 10th Crusade
-HEA_the_tenth_crusade = {
-		
-		    HEA_arming_faithful = {
-
+HEA_the_tenth_crusade = {	
+	HEA_arming_faithful = {
 		icon = decision_cross
-
 		
-		visible = { tag = HEA }
+		visible = { original_tag = HEA }
 
 		fire_only_once = no
 
@@ -18,18 +15,14 @@ HEA_the_tenth_crusade = {
 		cost = 50
 
 		complete_effect = {
-
-		add_manpower = 500
-
+			add_manpower = 500
 		}
 
 		ai_will_do = {
 			base = 0
 		}
 	}
-	}
-
-
+}
 
 # HEA Conversion Decisions - By HappyNTH #
 # hea_conversion = {
@@ -346,160 +339,84 @@ HEA_the_tenth_crusade = {
 ##Michael's Crusade##
 #####################
 hea_michael_crusade_cat = {
-	hea_michael_crusade_murtaugh = {
-		icon = x
-		cost = 30
-		fire_only_once = yes
-		available = {
-			has_completed_focus = hea_trees_and_faithless
-		}
-		visible = {
-			AND = {
-				MUR = { all_core_land_owned_by_prev_sphere = no }
-				has_completed_focus = hea_michaels_crusade
+	#If you need explaination lmk Rex, I tried to make comments and explain these but not sure if it's clear enough to understand. These codes are way better than the ones I've written before XD - @Deez
+	hea_michael_crusade_trees_faithless_dynamic_decision = { #Trees and Faithless crusades
+		icon = GFX_decision_border_war
+		cost = 30 #PP Cost
+		days_remove = 20 #Duration before granting wargoal so AI can prep
+		days_re_enable = 30 #In case of some fuckery happen, I put this here so the decision can reappear and player fight again (such as a 2 vs target which split the target but the player want ALL territories)
+
+		#target_root_trigger = { #Put the needed check for ROOT/Heaven's Gate side here - This is like a part of the normal visible = {} check we used before I also disabled these cause I figured out I can just optimize it by putting the check the category itself, check HEA_decision_categories - @Deez
+		#
+		#}
+		targets = { SHO ROS TIM } #Put the targets TAGs here
+		#targets_dynamic = yes #This is in the event of these tag split into civil war dynamic tags for whatever reason - Disabled due to it actually found hidden OWB's dynamic tags for civil war (Example: Fusang, Free Folk etc) - @Deez
+		target_trigger = { #Put the needed check for the target's - This is like a part of the normal visible = {} check we used before
+			ROOT = { #ROOT is Heaven's Gate TAG
+				FROM = { #FROM is the tags in targets block
+					all_core_land_owned_by_prev_sphere = no #check if Heaven Gate already control the core target states
+					NOT = { has_war_with = ROOT } #Check if the target already at war
+				}
 			}
 		}
-		complete_effect = {
-			will_lead_to_war_with = MUR
-			MUR = {
+		target_non_existing = yes #To check if the target is alive or else it won't show up (Default is NO), changed it to YES so even if the targets dies Heaven's Gate can still reclaim the territories
+		available = { #Put the needed check for ROOT/Heaven's Gate to actually able to click the decision. The visible check only for showing to the player, this is the real check for player to know which focus needed to be completed to use the decisions
+			has_completed_focus = hea_trees_and_faithless
+		}
+
+		war_with_target_on_remove = yes #A Warning check so AI can prep, and real human players can see the warning notification
+		war_with_target_on_complete = yes #A Warning check so AI can prep, and real human players can see the warning notification, not working for some reason I'll need to talk with OWB's dev - @Deez
+		remove_effect = {
+			FROM = {
 				ROOT = {
-					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes #Grant wargoal of the target's core to ROOT/Heaven's Gate, thanks OWB for the advanced scripting to allow demand and stuff
 				}
 			}
 		}
 	}
-	hea_michael_crusade_timberline = {
-		icon = x
-		cost = 30
-		fire_only_once = yes
-		available = {
+	hea_michael_savages_heretics_dynamic_decision = { #Trees and Faithless crusades
+		icon = GFX_decision_border_war
+		cost = 30 #PP Cost
+		days_remove = 20 #Duration before granting wargoal so AI can prep
+		days_re_enable = 30 #In case of some fuckery happen, I put this here so the decision can reappear and player fight again (such as a 2 vs target which split the target but the player want ALL territories)
+
+		#target_root_trigger = { #Put the needed check for ROOT/Heaven's Gate side here - This is like a part of the normal visible = {} check we used before - I also disabled these cause I figured out I can just optimize it by putting the check the category itself, check HEA_decision_categories - @Deez
+		#
+		#}
+		targets = { MUR ANO BDT } #Put the targets TAGs here
+		#targets_dynamic = yes #This is in the event of these tag split into civil war dynamic tags for whatever reason - Disabled due to it actually found hidden OWB's dynamic tags for civil war (Example: Fusang, Free Folk etc) - @Deez
+		target_trigger = { #Put the needed check for the target's - This is like a part of the normal visible = {} check we used before
+			ROOT = { #ROOT is Heaven's Gate TAG
+				FROM = { #FROM is the tags in targets block
+					all_core_land_owned_by_prev_sphere = no #check if Heaven Gate already control the core target states
+					NOT = { has_war_with = ROOT } #Check if the target already at war
+				}
+			}
+		}
+		target_non_existing = yes #To check if the target is alive or else it won't show up (Default is NO), changed it to YES so even if the targets dies Heaven's Gate can still reclaim the territories
+		available = { #Put the needed check for ROOT/Heaven's Gate to actually able to click the decision. The visible check only for showing to the player, this is the real check for player to know which focus needed to be completed to use the decisions
 			has_completed_focus = hea_savages_and_heretics
-		}
-		visible = {
-			AND = {
-				TIM = { all_core_land_owned_by_prev_sphere = no }
-				has_completed_focus = hea_michaels_crusade
+			if = { #Special check for Boners in the case of them potentially joining Heaven's Gate
+				limit = {
+					FROM = { original_tag = BDT }
+				}
+				FROM = { 
+					NOT = { has_completed_focus = bdt_listen_to_the_pilgrims } #This is Boners's focus branching toward joining Heaven's Gate
+				}
 			}
 		}
-		complete_effect = {
-			will_lead_to_war_with = TIM
-			TIM = {
+
+		war_with_target_on_remove = yes #A Warning check so AI can prep, and real human players can see the warning notification, not working for some reason I'll need to talk with OWB's dev - @Deez
+		war_with_target_on_complete = yes #A Warning check so AI can prep, and real human players can see the warning notification, not working for some reason I'll need to talk with OWB's dev - @Deez
+		remove_effect = {
+			FROM = {
 				ROOT = {
-					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes #Grant wargoal of the target's core to ROOT/Heaven's Gate, thanks OWB for the advanced scripting to allow demand and stuff
 				}
 			}
 		}
 	}
-	hea_michael_crusade_anointed = {
-		icon = x
-		cost = 30
-		fire_only_once = yes
-		available = {
-			has_completed_focus = hea_trees_and_faithless
-		}
-		visible = {
-			AND = {
-				ANO = { all_core_land_owned_by_prev_sphere = no }
-				has_completed_focus = hea_michaels_crusade
-			}
-		}
-		complete_effect = {
-			will_lead_to_war_with = ANO
-			ANO = {
-				ROOT = {
-					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
-				}
-			}
-		}
-	}
-	hea_michael_crusade_lonetree = {
-		icon = x
-		cost = 30
-		fire_only_once = yes
-		available = {
-			has_completed_focus = hea_trees_and_faithless
-		}
-		visible = {
-			AND = {
-				LON = { all_core_land_owned_by_prev_sphere = no }
-				has_completed_focus = hea_michaels_crusade
-			}
-		}
-		complete_effect = {
-			will_lead_to_war_with = LON
-			LON = {
-				ROOT = {
-					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
-				}
-			}
-		}
-	}
-	hea_michael_crusade_shoshone = {
-		icon = x
-		cost = 30
-		fire_only_once = yes
-		available = {
-			has_completed_focus = hea_savages_and_heretics
-		}
-		visible = {
-			AND = {
-				SHO = { all_core_land_owned_by_prev_sphere = no }
-				has_completed_focus = hea_michaels_crusade
-			}
-		}
-		complete_effect = {
-			will_lead_to_war_with = SHO
-			SHO = {
-				ROOT = {
-					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
-				}
-			}
-		}
-	}
-	hea_michael_crusade_boners = {
-		icon = x
-		cost = 30
-		fire_only_once = yes
-		available = {
-			has_completed_focus = hea_trees_and_faithless
-		}
-		visible = {
-			AND = {
-				BDT = { all_core_land_owned_by_prev_sphere = no }
-				has_completed_focus = hea_michaels_crusade
-			}
-		}
-		complete_effect = {
-			will_lead_to_war_with = BDT
-			BDT = {
-				ROOT = {
-					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
-				}
-			}
-		}
-	}
-	hea_michael_crusade_yellowpark = {
-		icon = x
-		cost = 30
-		fire_only_once = yes
-		available = {
-			has_completed_focus = hea_savages_and_heretics
-		}
-		visible = {
-			AND = {
-				ROS = { all_core_land_owned_by_prev_sphere = no }
-				has_completed_focus = hea_michaels_crusade
-			}
-		}
-		complete_effect = {
-			will_lead_to_war_with = ROS
-			ROS = {
-				ROOT = {
-					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
-				}
-			}
-		}
-	}
+
 }
 ##########################
 ##Monsters of the Wastes-Vengeance Path##

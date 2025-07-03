@@ -1,14 +1,9 @@
-hea_tenth_crusade = {
-	allowed = { tag = HEA }
-			visible = {
-			has_country_flag = HEA_crusader_state
-		}
+HEA_the_tenth_crusade = {
+	allowed = { original_tag = HEA }
+	visible = { has_country_flag = HEA_crusader_state }
 	icon = GFX_decision_category_hea_conversion
-	priority = {
-		base = 10
-	}
+	priority = { base = 10 }
 }
-
 
 hea_conversion = {
 	allowed = { tag = HEA }
@@ -24,7 +19,10 @@ hea_michael_crusade_cat = {
 	allowed = {
 		original_tag = HEA
 	}
-	icon = x
+	visible = {
+		has_completed_focus = hea_michaels_crusade #The only visible check needed, optimization should be better now - @Deez
+	}
+	icon = GFX_decision_tempered_blade
 	priority = 999
 }
 ##########################

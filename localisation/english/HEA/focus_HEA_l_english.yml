@@ -366,8 +366,8 @@ HEAWEHAVETANKS:0 "We Got Tanks yall!"
 
 ##########Center Focuses
 
-hea_michaels_crusade:0 "§RProclaiming Michael's Crusade"
-hea_michaels_crusade_desc:0 "§R"Now at that time Michael, the great prince who stands guard over the sons of your people, will arise. \n And there will be a time of distress such as never occurred since there was a nation until that time; and at that time your people, everyone who is found written in the book, will be rescued.""
+hea_michaels_crusade: "§RProclaiming Michael's Crusade§!"
+hea_michaels_crusade_desc: "§R\"Now at that time Michael, the great prince who stands guard over the sons of your people, will arise. \n And there will be a time of distress such as never occurred since there was a nation until that time; and at that time your people, everyone who is found written in the book, will be rescued.\"§!"
 hea_gabriels_forgiveness:0 "§2Sanctuary for the Faithful"
 hea_gabriels_forgiveness_desc:0 "§2But the wisdom from above is first pure \n then peaceable, gentle, open to reason \n full of mercy and good fruits, impartial and sincere.\n And a harvest of righteousness is sown in peace by those who make peace."
 

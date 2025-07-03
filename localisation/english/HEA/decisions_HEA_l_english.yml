@@ -1,28 +1,23 @@
 ﻿l_english:
  # decisions
-  hea_conversion:0 "Convert the Unfaithful"
-  hea_conversion_desc:0 "The people around us are unenlightened in the eyes of the lord. We must send out our missionaries to convert these sinners where they live, and slowly our influence and the influence of the lord will spread."
-  hea_slow_conversion:0 "Conversion Mission to [From.GetNameDef]"
+hea_conversion: "Convert the Unfaithful"
+hea_conversion_desc: "The people around us are unenlightened in the eyes of the lord. We must send out our missionaries to convert these sinners where they live, and slowly our influence and the influence of the lord will spread."
+hea_slow_conversion: "Conversion Mission to [From.GetNameDef]"
 
-  hea_inquisition:0 "Send the Inquisitors to [From.GetNameDef]"
+hea_inquisition: "Send the Inquisitors to [From.GetNameDef]"
 
-  hea_bind_to_us:0 "Bind [From.GetNameDef] to Us!"
-  hea_bind_to_us_desc:0 "Our conversion missions have done their work, and we are ready to attempt to bring them closer to us and in to our fold."
+hea_bind_to_us: "Bind [From.GetNameDef] to Us!"
+hea_bind_to_us_desc: "Our conversion missions have done their work, and we are ready to attempt to bring them closer to us and in to our fold."
 
-  HEA_the_tenth_crusade:0 "§tThe Tenth Crusade"
-  HEA_arming_faithful:0 "Arming the Faithful"
-  HEA_arming_faithful_desc:0 "There are countless loyal prepared to kill in the name of the lord, we must simply look and arm them..."
+HEA_the_tenth_crusade: "§tThe Tenth Crusade"
+HEA_arming_faithful: "Arming the Faithful"
+HEA_arming_faithful_desc: "There are countless loyal prepared to kill in the name of the lord, we must simply look and arm them..."
 
   #decisions-michael's crusade
-  hea_michael_crusade_cat:0 "§RMichael's Crusades§!"
-  hea_muchael_crusade_cat_desc:0 "placeholder"
-  hea_michael_crusade_murtaugh:0 "Crusade against §7[MUR.GetNameWithFlag]§!"
-  hea_michael_crusade_timberline:0 "Crusade against §8[TIM.GetNameWithFlag]§!"
-  hea_michael_crusade_anointed:0 "Crusade against §R[ANO.GetNameWithFlag]§!"
-  hea_michael_crusade_lonetree:0 "Crusade against §Y[LON.GetNameWithFlag]§!"
-  hea_michael_crusade_shoshone:0 "Crusade against §4[SHO.GetNameWithFlag]§!"
-  hea_michael_crusade_boners:0 "Crusade against §0[BDT.GetNameWithFlag]§!"
-  hea_michael_crusade_yellowpark:0 "Crusade against §L[ROS.GetNameWithFlag]§!"
+hea_michael_crusade_cat: "§RMichael's Crusades§!"
+hea_michael_crusade_cat_desc: "SOMETHING SO I CAN TEST IF IT WORK WTF ITS NOT SHOWING"
+hea_michael_crusade_trees_faithless_dynamic_decision: "Crusade against §G[FROM.GetNameWithFlag]§!"
+hea_michael_savages_heretics_dynamic_decision: "Crusade against §R[FROM.GetNameWithFlag]§!"
 
 ##Decisions-Taming the Rivers
 hea_taming_river_cat:0 "Taming the §BRivers§!"

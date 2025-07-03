@@ -187,7 +187,7 @@
   bdt_fire_walker_op:0 "§RFire Walker§!"
   bdt_fire_walker_op_description:0 "§RTHROUGH THE DARKNESS OF FUTURE PAST\nTHE MAGICIAN LONGS TO SEE\nONE CHANCE OUT BETWEEN TWO WORLDS\nFIRE WALK WITH ME§!"
   bdt_lessons_of_the_cathedral_tt:0 "§gWe improve our teachings.§!\n"
-  bdt_25_percent_core_cost_reduction_tt:0 "Gain a permanent §G25%§! reduction in coring costs.\n"
+bdt_25_percent_core_cost_reduction_tt: "Gains a permanent §Y25%§! reduction in coring costs.\n"
   bdt_80_percent_reduction_for_hea_lands:0 "Gain a permanent local §G80%§! reduction in coring cost for all core land of §YHeaven's Gate§!.\n"
   bdt_hea_angered:0 "Heaven's Gate will be §Rangered§!."
   bdt_hea_pleased:0 "Heaven's Gate will be §Gpleased§!."

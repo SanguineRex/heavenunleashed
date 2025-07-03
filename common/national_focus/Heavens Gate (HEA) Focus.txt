@@ -593,157 +593,177 @@ focus_tree = {
 	#######################
 	##The Tenth Crusade!!##
 	#######################
-		focus = {
-			id = hea_michaels_crusade
-			icon = GFX_goal_HEA_michaels_crusade
-			cost = 30
-			x = -6
-			y = 4
-			relative_position_id = hea_nf_age_of_steam
-			
-			available = {
-				has_completed_focus = hea_nf_reject_elite_1
-			}
-			prerequisite = {
-				focus = hea_nf_embrace_militarism_1
-			}
+	focus = {
+		id = hea_michaels_crusade #Proclaiming Michael's Crusade
+		icon = GFX_goal_HEA_michaels_crusade
+		cost = 30
+		x = -6
+		y = 4
+		relative_position_id = hea_nf_age_of_steam
 
-			completion_reward = {	
-				set_country_flag = HEA_crusader_state
-				swap_ideas = {
-						add_idea = archangel_michael1
-						remove_idea = hea_one_prophet
+		prerequisite = {
+			focus = hea_nf_embrace_militarism_1
+		}
+		available = {
+			has_completed_focus = hea_nf_reject_elite_1
+		}
+
+		completion_reward = {	
+			set_country_flag = HEA_crusader_state
+			swap_ideas = {
+				add_idea = archangel_michael1
+				remove_idea = hea_one_prophet
+			}
+			hidden_effect = {
+				news_event = { id = nf_event_hea.300 }
+				set_country_leader_description = {
+					ideology = benevolent_dictatorship
+					desc = ANGEL_MICHAEL_DESC
 				}
-				hidden_effect = {
-					news_event = { id = nf_event_hea.300 }
-					set_country_leader_description = {
-						ideology = benevolent_dictatorship
-						desc = ANGEL_MICHAEL_DESC
-					}
-					set_country_leader_name = {
-						ideology = benevolent_dictatorship
-						name  = "Steam Father Michael" #This is extremely bad for localization/translation, will discuss to change this using loc key instead - @Deez
-					}
+				set_country_leader_name = {
+					ideology = benevolent_dictatorship
+					name  = "Steam Father Michael" #This is extremely bad for localization/translation, will discuss to change this using loc key instead - @Deez
 				}
 			}
 		}
-		focus = {
-		id = hea_nf_foreign_ministryA
+	}
+	focus = {
+		id = hea_nf_foreign_ministryA #Embassy of Christ
 		icon = GFX_goal_HEA_focus_embassy_of_christ
 		cost = 60
 		x = 0
 		y = 2
 		relative_position_id = hea_michaels_crusade
-		prerequisite = {
-			focus = hea_michaels_crusade
-		}
 
+		prerequisite = { 
+			focus = hea_michaels_crusade 
+		}
 
 		completion_reward = {
-			
 			set_variable = { coring_cost_country_factor = -0.25 }
 			custom_effect_tooltip = bdt_25_percent_core_cost_reduction_tt
-
 		}
 	}
-		focus = {
-		id = hea_target_canaan
+	focus = {
+		id = hea_target_canaan #Claiming New Jerusalem
 		icon = GFX_goal_HEA_hea_crusade_ncn
 		cost = 20
 		x = 0
 		y = 3
 		relative_position_id = hea_michaels_crusade
-		available = {
-		}
+
 		prerequisite = {
 			focus = hea_nf_foreign_ministryA
 		}
-		completion_reward = {create_wargoal = {
-			type = annex_everything
-			target = NCN
-			expire = 45
+		available = {
+			ANO = { all_core_land_owned_by_prev_sphere = yes } #This is needed to guarantee the player will border NCN for a proper land invasion - @Deez
+		}
+
+		bypass = {
+			NCN = { all_core_land_owned_by_prev_sphere = yes }
+		}
+		
+		will_lead_to_war_with = NCN
+		completion_reward = {
+			NCN = {
+				ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes }
 			}
 		}
 	}
-			focus = {
-		id = hea_target_canaans_pets
+	focus = {
+		id = hea_target_canaans_pets #New Canaan's Pets
 		icon = GFX_goal_HEA_hea_crusade_pets
 		cost = 20
 		x = -1
 		y = 4
 		relative_position_id = hea_michaels_crusade
-			available = {
-			266 = {
-				is_owned_and_controlled_by = ROOT
-			}
 
-		}
 		prerequisite = {
-			
 			focus = hea_target_canaan
-			
 		}
+		available = {
+			NCN = { all_core_land_owned_by_prev_sphere = yes }
+		}
+
+		bypass = {
+			CRZ = { all_core_land_owned_by_prev_sphere = yes }
+			TAR = { all_core_land_owned_by_prev_sphere = yes }
+			UIN = { all_core_land_owned_by_prev_sphere = yes }
+			SOR = { all_core_land_owned_by_prev_sphere = yes }
+			DEA = { all_core_land_owned_by_prev_sphere = yes }
+		}
+		
+		will_lead_to_war_with = CRZ
+		will_lead_to_war_with = TAR
+		will_lead_to_war_with = UIN
+		will_lead_to_war_with = SOR
+		will_lead_to_war_with = DEA
 		completion_reward = {
-			create_wargoal =
-				{ type = annex_everything target = CRZ }
-				create_wargoal =
-				{ type = annex_everything target = TAR }
-				create_wargoal =
-				{ type = annex_everything target = UIN }
-					create_wargoal =
-				{ type = annex_everything target = SOR }
-				create_wargoal =
-				{ type = annex_everything target = DEA }
+			CRZ = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
+			TAR = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
+			UIN = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
+			SOR = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
+			DEA = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
 		}
 	}
-		focus = {
-		id = hea_target_tribal_cults
+	focus = {
+		id = hea_target_tribal_cults #Road Cults
 		icon = GFX_goal_HEA_hea_crusade_eht
 		cost = 20
 		x = 1
 		y = 4
 		relative_position_id = hea_michaels_crusade
-			available = {
-			266 = {
-				is_owned_and_controlled_by = ROOT
-			}
 
-		}
 		prerequisite = {
 			focus = hea_target_canaan
 		}
+		available = {
+			NCN = { all_core_land_owned_by_prev_sphere = yes }
+		}
+
+		bypass = {
+			SKY = { all_core_land_owned_by_prev_sphere = yes }
+			WHT = { all_core_land_owned_by_prev_sphere = yes }
+			EHT = { all_core_land_owned_by_prev_sphere = yes }
+		}
+
+		will_lead_to_war_with = SKY
+		will_lead_to_war_with = WHT
+		will_lead_to_war_with = EHT
 		completion_reward = {
-			
-			create_wargoal =
-				{ type = annex_everything target = SKY }
-				create_wargoal =
-				{ type = annex_everything target = WHT }
-				create_wargoal =
-				{ type = annex_everything target = EHT }
-		
+			SKY = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
+			WHT = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
+			EHT = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
 		}
 	}
-		focus = {
-		id = hea_archangel_michael
+	focus = {
+		id = hea_archangel_michael #Archangel Michael
 		icon = GFX_goal_HEA_hea_archangel_michael
 		cost = 45
 		x = 0
 		y = 5
 		relative_position_id = hea_michaels_crusade
-		prerequisite = {
-			focus = hea_target_tribal_cults
+
+		prerequisite = { focus = hea_target_tribal_cults }
+		prerequisite = { focus = hea_target_canaans_pets }
+		available = {
+			NCN = { all_core_land_owned_by_prev_sphere = yes }
+			CRZ = { all_core_land_owned_by_prev_sphere = yes }
+			TAR = { all_core_land_owned_by_prev_sphere = yes }
+			UIN = { all_core_land_owned_by_prev_sphere = yes }
+			SOR = { all_core_land_owned_by_prev_sphere = yes }
+			DEA = { all_core_land_owned_by_prev_sphere = yes }
+			SKY = { all_core_land_owned_by_prev_sphere = yes }
+			WHT = { all_core_land_owned_by_prev_sphere = yes }
+			EHT = { all_core_land_owned_by_prev_sphere = yes }
 		}
-		prerequisite = {
-			focus = hea_target_canaans_pets
-		}
+
 		completion_reward = {
 			set_cosmetic_tag = HEA_crusade
 			swap_ideas = {
 				add_idea = archangel_michael2
 				remove_idea = archangel_michael1
-				
 			}
-		
 		}
 	}
 		focus = {
@@ -1106,7 +1126,7 @@ focus_tree = {
 
 	#######First Targets
 	focus = {
-		id = hea_trees_and_faithless
+		id = hea_trees_and_faithless #Trees and Faithless
 		icon = GFX_goal_HEA_hea_core_lon
 		cost = 30
 		x = -3
@@ -1114,17 +1134,27 @@ focus_tree = {
 		relative_position_id = hea_michaels_crusade
 			available = {
 		}
+
 		prerequisite = {
 			focus = hea_michaels_crusade
 		}
 
+		bypass = {
+			ROS = { all_core_land_owned_by_prev_sphere = yes }
+			SHO = { all_core_land_owned_by_prev_sphere = yes }
+			TIM = { all_core_land_owned_by_prev_sphere = yes }
+		}
+
+		will_lead_to_war_with = ROS #For some reason my attack warning triggers in the decisions don't work in OWB, gonna use this focus to send the warning notifications instead - @Deez
+		will_lead_to_war_with = SHO
+		will_lead_to_war_with = TIM
 		completion_reward = {
 			custom_effect_tooltip = hea_trees_and_faithless_tt
 		}
 	}		
 	
 	focus = {
-		id = hea_savages_and_heretics
+		id = hea_savages_and_heretics #Heretics and Failed Conquests
 		icon = GFX_goal_HEA_hea_core_mur
 		cost = 30
 		x = 3
@@ -1132,10 +1162,20 @@ focus_tree = {
 		relative_position_id = hea_michaels_crusade
 			available = {
 		}
+
 		prerequisite = {
 			focus = hea_michaels_crusade
 		}
 
+		bypass = {
+			MUR = { all_core_land_owned_by_prev_sphere = yes }
+			ANO = { all_core_land_owned_by_prev_sphere = yes }
+			BDT = { all_core_land_owned_by_prev_sphere = yes }
+		}
+
+		will_lead_to_war_with = MUR #For some reason my attack warning triggers in the decisions don't work in OWB, gonna use this focus to send the warning notifications instead - @Deez
+		will_lead_to_war_with = ANO
+		will_lead_to_war_with = BDT
 		completion_reward = {
 			custom_effect_tooltip = hea_savages_and_heretics_tt
 		}

@@ -682,8 +682,8 @@ hea_target_tribal_cults_desc:0 "There are cults that ride in great metal machine
 hea_true_crusaders:0 "True Crusaders"
 hea_true_crusaders_desc:0 "The warriors of Heaven's Gate have been tried and tested against countless heretics, heathens, and traitors, and they have not been found wanting. The Crusade is long from over, but Heaven's Gate can be assured that its warriors will not take a step back against the enemies of the Lord"
 
-hea_archangel_michael:0 "§RArchangel Michael"
-hea_archangel_michael_desc:0 "§RBlessed Michael, the archangel, defend us in the hour of conflict. \n Be our safeguard against the wickedness and snares of the devil\n and do thou, O Prince of the heavenly host, \n by the power of God thrust Satan down to hell\n and with him those other wicked spirits \n who wander through the world for the ruin of souls"
+hea_archangel_michael: "§RArchangel Michael§!"
+hea_archangel_michael_desc: "§RBlessed Michael, the archangel, defend us in the hour of conflict. \n Be our safeguard against the wickedness and snares of the devil\n and do thou, O Prince of the heavenly host, \n by the power of God thrust Satan down to hell\n and with him those other wicked spirits \n who wander through the world for the ruin of souls.§!"
 
 hea_vault_tec_calling:0 "Traitors to the Faith"
 hea_vault_tec_calling_desc:0 "Vault-Tec turned its back on how many faithful? How many burned because they were greedy? While the sinners lived, the faithful burned, but we did not die, no we perserved, and we did not forget. \n When we conquer them, we will strip their vaults, ridding the world of the foolish belief that salvation lies underground."

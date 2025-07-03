@@ -626,13 +626,13 @@ hea_steam_heavensreach_desc:0 "With technology, faith, and blessed atom, our ang
 
 ##############10th Crusade Focuses
 
-hea_trees_and_faithless:0 "Trees and Faithless"
-hea_trees_and_faithless_desc:0 "They hide in homes of pine, refusing to pledge their faith to the father above, or worse, quarelling, amongst themselves! Tribals, heretics, and Cowards the lot of them! In the name of the Father, Michael will tame those wild lands."
-hea_trees_and_faithless_tt:0 "§GGrant decisions to declare crusades against:\n-[ROS.GetNameWithFlag]\n-[SHO.GetNameWithFlag]\n-[TIM.GetNameWithFlag]"
+hea_trees_and_faithless: "§GTrees and Faithless§!"
+hea_trees_and_faithless_desc: "They hide in homes of pine, refusing to pledge their faith to the father above, or worse, quarelling, amongst themselves! Tribals, heretics, and Cowards the lot of them! In the name of the Father, Michael will tame those wild lands."
+hea_trees_and_faithless_tt: "Unlocks §Ydecisions§! to declare crusades against:\n- [ROS.GetNameWithFlag]\n- [SHO.GetNameWithFlag]\n- [TIM.GetNameWithFlag]"
 
-hea_savages_and_heretics:0 "Heretics and Failed Conquests"
-hea_savages_and_heretics_desc:0 "Amon will fall in line or die. Presbyter will die for starting this entire mess, and if Cain hasn't convinced those accursed heretics to worship the true faith of Steam and Christ, then he too will face our wrath."
-hea_savages_and_heretics_tt:0 "§RGrant decisions to declare crusades against:\n-[MUR.GetNameWithFlag]\n-[ANO.GetNameWithFlag]\n-[BDT.GetNameWithFlag]"
+hea_savages_and_heretics: "§RHeretics and Failed Conquests§!"
+hea_savages_and_heretics_desc: "Amon will fall in line or die. Presbyter will die for starting this entire mess, and if Cain hasn't convinced those accursed heretics to worship the true faith of Steam and Christ, then he too will face our wrath."
+hea_savages_and_heretics_tt: "Unlocks §Ydecisions§! to declare crusades against:\n- [MUR.GetNameWithFlag]\n- [ANO.GetNameWithFlag]\n- [BDT.GetNameWithFlag]"
 
 hea_target_ano:0 "Crush the Anointed"
 hea_target_ano_desc:0 "Who anointed them? I do not recall convening and announcing amongst a great council that the Lord had chosen Amon or his flock. If he is so inclined to be among the chosen few, then they will join Heaven's Gate after proving their worth."

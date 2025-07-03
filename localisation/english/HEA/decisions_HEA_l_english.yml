@@ -13,11 +13,18 @@ HEA_the_tenth_crusade: "§tThe Tenth Crusade"
 HEA_arming_faithful: "Arming the Faithful"
 HEA_arming_faithful_desc: "There are countless loyal prepared to kill in the name of the lord, we must simply look and arm them..."
 
-  #decisions-michael's crusade
+#################################
+##DECISIONS - Michael's Crusade##
+#################################
+###Main Category
 hea_michael_crusade_cat: "§RMichael's Crusades§!"
-hea_michael_crusade_cat_desc: "SOMETHING SO I CAN TEST IF IT WORK WTF ITS NOT SHOWING"
+hea_michael_crusade_cat_desc: "\"Now at that time Michael, the great prince who stands guard over the sons of your people, will arise. \n\n And there will be a time of distress such as never occurred since there was a nation until that time; and at that time your people, everyone who is found written in the book, will be rescued.\""
+##Trees and Faithless - Dynamic Wargoals
 hea_michael_crusade_trees_faithless_dynamic_decision: "Crusade against §G[FROM.GetNameWithFlag]§!"
+hea_michael_crusade_trees_faithless_dynamic_decision_desc: "They hide in homes of pine, refusing to pledge their faith to the father above, or worse, quarelling, amongst themselves! Tribals, heretics, and Cowards the lot of them! In the name of the Father, Michael will tame those wild lands."
+##Savages and Heretics - Dynamic Wargoals
 hea_michael_savages_heretics_dynamic_decision: "Crusade against §R[FROM.GetNameWithFlag]§!"
+hea_michael_savages_heretics_dynamic_decision_desc: "Amon will fall in line or die. Presbyter will die for starting this entire mess, and if Cain hasn't convinced those accursed heretics to worship the true faith of Steam and Christ, then he too will face our wrath."
 
 ##Decisions-Taming the Rivers
 hea_taming_river_cat:0 "Taming the §BRivers§!"

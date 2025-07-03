@@ -594,38 +594,39 @@ focus_tree = {
 	##The Tenth Crusade!!##
 	#######################
 		focus = {
-		id = hea_michaels_crusade
-		icon = GFX_goal_HEA_michaels_crusade
-		cost = 30
-		x = -6
-		y = 4
-		relative_position_id = hea_nf_age_of_steam
-		available = {
-			has_completed_focus = hea_nf_reject_elite_1
-		}
-		prerequisite = {
-			focus = hea_nf_embrace_militarism_1
-		}
-
-		completion_reward = {	
-		set_country_flag = HEA_crusader_state
-		swap_ideas = {
-				add_idea = archangel_michael1
-				remove_idea = hea_one_prophet
+			id = hea_michaels_crusade
+			icon = GFX_goal_HEA_michaels_crusade
+			cost = 30
+			x = -6
+			y = 4
+			relative_position_id = hea_nf_age_of_steam
+			
+			available = {
+				has_completed_focus = hea_nf_reject_elite_1
 			}
-			hidden_effect = {
+			prerequisite = {
+				focus = hea_nf_embrace_militarism_1
+			}
+
+			completion_reward = {	
+				set_country_flag = HEA_crusader_state
+				swap_ideas = {
+						add_idea = archangel_michael1
+						remove_idea = hea_one_prophet
+				}
+				hidden_effect = {
 					news_event = { id = nf_event_hea.300 }
-set_country_leader_description = {
-	ideology = benevolent_dictatorship
-	desc = ANGEL_MICHAEL_DESC
-}
-set_country_leader_name = {
-	ideology = benevolent_dictatorship
-	name  = "Steam Father Michael"
-}
+					set_country_leader_description = {
+						ideology = benevolent_dictatorship
+						desc = ANGEL_MICHAEL_DESC
+					}
+					set_country_leader_name = {
+						ideology = benevolent_dictatorship
+						name  = "Steam Father Michael" #This is extremely bad for localization/translation, will discuss to change this using loc key instead - @Deez
+					}
+				}
+			}
 		}
-		}
-	}
 		focus = {
 		id = hea_nf_foreign_ministryA
 		icon = GFX_goal_HEA_focus_embassy_of_christ

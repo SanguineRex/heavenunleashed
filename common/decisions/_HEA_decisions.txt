@@ -1,5 +1,5 @@
 ########The 10th Crusade
-HEA_the_tenth_crusade = {	
+HEA_the_tenth_crusade = {	#Is this a cheat decision or sth? - @Deez
 	HEA_arming_faithful = {
 		icon = decision_cross
 		

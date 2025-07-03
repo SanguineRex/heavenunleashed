@@ -373,6 +373,10 @@ hea_michael_crusade_cat = {
 				}
 			}
 		}
+
+		ai_will_do = { #I'm not well verse in AI scripting so just gonna be something basic, at least they will choose the decision instead of ignoring, again idk why anyone would install this mod and play something else, I'm looking at you Beezus - @Deez
+			base = 1
+		}
 	}
 	hea_michael_savages_heretics_dynamic_decision = { #Trees and Faithless crusades
 		icon = GFX_decision_border_war
@@ -414,6 +418,10 @@ hea_michael_crusade_cat = {
 					grant_wargoals_on_core_states_of_prev_force_ai_war = yes #Grant wargoal of the target's core to ROOT/Heaven's Gate, thanks OWB for the advanced scripting to allow demand and stuff
 				}
 			}
+		}
+
+		ai_will_do = { #I'm not well verse in AI scripting so just gonna be something basic, at least they will choose the decision instead of ignoring, again idk why anyone would install this mod and play something else, I'm looking at you Beezus - @Deez
+			base = 1
 		}
 	}
 

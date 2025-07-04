@@ -371,29 +371,41 @@ hea_michaels_crusade_desc: "§R\"Now at that time Michael, the great prince who 
 hea_gabriels_forgiveness:0 "§2Sanctuary for the Faithful"
 hea_gabriels_forgiveness_desc:0 "§2But the wisdom from above is first pure \n then peaceable, gentle, open to reason \n full of mercy and good fruits, impartial and sincere.\n And a harvest of righteousness is sown in peace by those who make peace."
 
-hea_monsters_of_the_wastes:0 "§tA Terrible Land"
-hea_monsters_of_the_wastes_desc:0 "§t"As I live,” declares the Lord God, “surely because My flock has become a prey, My flock has even become food for all the beasts of the field for lack of a shepherd, and My shepherds did not search for My flock, but rather the shepherds fed themselves and did not feed My flock. \n - Ezekiel 34:8 "
+hea_monsters_of_the_wastes: "§tA Terrible Land§!"
+hea_monsters_of_the_wastes_desc: "§t\"As I live,\" declares the Lord God, \"surely because My flock has become a prey, My flock has even become food for all the beasts of the field for lack of a shepherd, and My shepherds did not search for My flock, but rather the shepherds fed themselves and did not feed My flock.\" \n - Ezekiel 34:8§!"
+hea_monsters_of_the_wastes_tt: "Unlocks §YDecisions§! to §RCleanse the lands§!."
 
-hea_the_dead_walk:0 "§LThe Dead are Walking"
-hea_the_dead_walk_desc:0 "§LFor if we live, we live to the Lord, and if we die, we die to the Lord. So then, whether we live or whether we die, we are the Lord's. \n -Romans 14:8 \n These wayward souls who are neither dead nor alive need be put to rest, so that their souls can wander ever forward to purgatory or nirvana"
+hea_the_dead_walk: "§LThe Dead are Walking§!"
+hea_the_dead_walk_desc: "§LFor if we live, we live to the Lord, and if we die, we die to the Lord. So then, whether we live or whether we die, we are the Lord's. \n -Romans 14:8 \n These wayward souls who are neither dead nor alive need be put to rest, so that their souls can wander ever forward to purgatory or nirvana§!"
+hea_the_dead_walk_trig_tt: "§RPurged§! at least §Y2§! §LGhouls§! targets"
+hea_the_dead_walk_tt: "The §LDead§! no longer walk this earth."
 
-hea_cains_empire:0 "§1Cain's Empire"
-hea_cains_empire_desc:0 "§1"When thou tillest the ground, it shall not henceforth yield unto thee her strength; a fugitive and a vagabond shalt thou be in the earth.” - Genesis 4:12. \n Cain lives, and forces captured lambs of the Lord to work and toil the land in his stead...we will put this old sinner to rest, his dinner with the Lucifer is long since overdue."
+hea_cains_empire: "§1Cain's Empire§!"
+hea_cains_empire_desc: "§1\"When thou tillest the ground, it shall not henceforth yield unto thee her strength; a fugitive and a vagabond shalt thou be in the earth.\" - Genesis 4:12. \n Cain lives, and forces captured lambs of the Lord to work and toil the land in his stead...we will put this old sinner to rest, his dinner with the Lucifer is long since overdue.§!"
+hea_cains_empire_tt: "His §1Empire§! falls."
 
-hea_leviathans_of_the_north:0 "§4Leviathans dwelling in the Coast"
-hea_leviathans_of_the_north_desc:0 "§4In that day the LORD with his sore and great and strong sword shall punish leviathan the piercing serpent, even leviathan that crooked serpent; and he shall slay the dragon that is in the sea.\n -Isaiah 27:1 \n The creatures of the sea wage open war, and men worship them freely, the Lord has not yet banished them, for are we, the faithful, not the Lord's sword?"
+hea_nephilim_horde: "§GHorde of Nephilim§!"
+hea_nephilim_horde_desc: "§G \"For if God spared not the angels that sinned, but cast them down to hell, and delivered them into chains of darkness, to be reserved unto judgment;\" \n -Peters 2:4 \n There they stand, the Nephilim, unbound by chains, and waging war in bloody conquest as the Lord knew they would, the full might of Heaven's Gate will meet the Nephilim and save the flock.§!"
+hea_nephilim_horde_trig_tt: "§RPurged§! at least §Y2§! §GMutants§! targets"
+hea_nephilim_horde_tt: "The §GHorde§! are no more."
 
-hea_nephilim_horde:0 "§GHorde of Nephilim"
-hea_nephilim_horde_desc:0 "§G "For if God spared not the angels that sinned, but cast them down to hell, and delivered them into chains of darkness, to be reserved unto judgment;” \n -Peters 2:4 \n There they stand, the Nephilim, unbound by chains, and waging war in bloody conquest as the Lord knew they would, the full might of Heaven's Gate will meet the Nephilim and save the flock."
+hea_leviathans_of_the_north: "§4Leviathans dwelling in the Coast§!"
+hea_leviathans_of_the_north_desc: "§4In that day the LORD with his sore and great and strong sword shall punish leviathan the piercing serpent, even leviathan that crooked serpent; and he shall slay the dragon that is in the sea.\n -Isaiah 27:1 \n The creatures of the sea wage open war, and men worship them freely, the Lord has not yet banished them, for are we, the faithful, not the Lord's sword?§!"
+hea_leviathans_of_the_north_trigg_tt: "§RPurged§! at least §Y1§! §4Mirelurk§! targets"
+hea_leviathans_of_the_north_tt: "§4Leviathans§! no longer lurk the sea."
 
-hea_red_devils_of_the_north:0 "§RThe Red Devils"
-hea_red_devils_of_the_north_desc:0 "§R"Freedom lies in being bold.” \n -Robert Frost \n There was a threat spoken of in great length before the bombs fell, the Socialists, the Communist, the Red Devils. The armies of the Lord will be bold today, for §2Fre§Wed§tom §Rfrom the Red Devil's machinations. "
+hea_steel_puppets: "§gSteel Puppets§!"
+hea_steel_puppets_desc: " \n §gHeaven's Gate welcomes all lost sheep to the flock, but those who would twist theiry body with metal, or were not born of a womb at all? They were not lovingly crafted by the Father, they're an abomination of the Old World, and we need only look around to see what wonders the Old World has to offer.§!"
+hea_steel_puppets_trigg_tt: "§RPurged§! at least §Y2§! §gRobots§! targets"
+hea_steel_puppets_tt: "The §gPuppets§! now rest forever."
 
-hea_steel_puppets:0 "§gSteel Puppets"
-hea_steel_puppets_desc:0 " \n §gHeaven's Gate welcomes all lost sheep to the flock, but those who would twist theiry body with metal, or were not born of a womb at all? They were not lovingly crafted by the Father, they're an abomination of the Old World, and we need only look around to see what wonders the Old World has to offer."
+hea_red_devils_of_the_north: "§RThe Red Devils§!"
+hea_red_devils_of_the_north_desc: "§R\"Freedom lies in being bold.\" \n -Robert Frost \n There was a threat spoken of in great length before the bombs fell, the Socialists, the Communist, the Red Devils. The armies of the Lord will be bold today, for §2Fre§!§Wed§!§tom§! §Rfrom the Red Devil's machinations.§!"
+hea_red_devils_of_the_north_trigg_tt: "§RPurged§! at least §Y1§! §RCommunist§! targets"
+hea_red_devils_of_the_north_tt: "The §RReds§! shall bleed."
 
-hea_triumphant_nation:0 "§YTriumph over the monsters..."
-hea_triumphant_nation_desc:0 "§Y"Let Us make man in Our image, according to Our likeness; let them have dominion over the fish of the sea, over the birds of the air, and over the cattle, over all the earth and over every creeping thing that creeps on the earth." \n- Genesis 1:26"
+hea_triumphant_nation: "§YTriumph over the monsters...§!"
+hea_triumphant_nation_desc: "§Y\"Let Us make man in Our image, according to Our likeness; let them have dominion over the fish of the sea, over the birds of the air, and over the cattle, over all the earth and over every creeping thing that creeps on the earth.\" \n- Genesis 1:26§!"
 
 #####End of Center Focuses
 

@@ -1110,7 +1110,7 @@ focus_tree = {
 		prerequisite = { focus = hea_claiming_colorado }
 		prerequisite = { focus = hea_vault_tec_calling }
 		prerequisite = { focus = hea_mexico_heretics }
-		
+
 		completion_reward = {
 			swap_ideas = {
 				add_idea = archangel_michael3
@@ -1892,7 +1892,7 @@ set_country_leader_name = {
 	#########################################
 	##Start
 	focus = {
-		id = hea_monsters_of_the_wastes
+		id = hea_monsters_of_the_wastes #A Terrible Land
 		icon = GFX_goal_HEA_hea_terrible_world
 		cost = 60
 		x = 1
@@ -1910,32 +1910,21 @@ set_country_leader_name = {
 		completion_reward = {
 			add_ideas = HEA_wardens_of_humanity1
 			hidden_effect = {
-				set_variable = {
-					hea_monsters_ghouls = 0
-				}
-				set_variable = {
-					hea_monsters_cains = 0
-				}
-				set_variable = {
-					hea_monsters_mutants = 0
-				}
-				set_variable = {
-					hea_monsters_mirelurks = 0
-				}
-				set_variable = {
-					hea_monsters_robots = 0
-				}
-				set_variable = {
-					hea_monsters_communists = 0
-				}
+				set_variable = { hea_monsters_ghouls = 0 }
+				set_variable = { hea_monsters_mutants = 0 }
+				set_variable = { hea_monsters_mirelurks = 0 }
+				set_variable = { hea_monsters_robots = 0 }
+				set_variable = { hea_monsters_communists = 0 }
 			}
+			custom_effect_tooltip = hea_monsters_of_the_wastes_tt
 		}
 	}
+
 	#Ghouls
 	focus = {
-		id = hea_the_dead_walk
+		id = hea_the_dead_walk #The Dead are Walking
 		icon = GFX_goal_HEA_hea_dead_walking
-		cost = 30
+		cost = 20
 		x = 0
 		y = 1
 		relative_position_id = hea_monsters_of_the_wastes
@@ -1943,28 +1932,28 @@ set_country_leader_name = {
 		allow_branch = {
 			has_country_flag = hea_vengance_path
 		}
-		available = {
-			has_no_unused_wargoals = yes
-			custom_trigger_tooltip = {
-				tooltip = "Crusaded against atleast 5 Ghouls Targets"
-				check_variable = {
-					hea_monsters_ghouls > 4
-				}
-			}
-		}
+
 		prerequisite = {
 			focus = hea_monsters_of_the_wastes
 		}
-
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = hea_the_dead_walk_trig_tt
+				check_variable = {
+					hea_monsters_ghouls > 2
+				}
+			}
+		}
+		
 		completion_reward = {
 			custom_effect_tooltip = hea_the_dead_walk_tt
 		}
 	}
 	#Washington Brotherhood
 	focus = {
-		id = hea_cains_empire
+		id = hea_cains_empire #Cain's Empire
 		icon = GFX_goal_HEA_hea_immortal
-		cost = 45
+		cost = 20
 		x = 0
 		y = 1
 		relative_position_id = hea_the_dead_walk
@@ -1972,28 +1961,26 @@ set_country_leader_name = {
 		allow_branch = {
 			has_country_flag = hea_vengance_path
 		}
-		available = {
-			has_no_unused_wargoals = yes
-			custom_trigger_tooltip = {
-				tooltip = "Crusaded against [WBH.GetNameWithFlag]"
-				check_variable = {
-					hea_monsters_cains > 0
-				}
-			}
-		}
+
 		prerequisite = {
 			focus = hea_monsters_of_the_wastes
 		}
-
+		available = {
+			WBH = { all_core_land_owned_by_prev_sphere = yes }
+		}
+		
 		completion_reward = {
 			custom_effect_tooltip = hea_cains_empire_tt
+			hidden_effect = {
+				WBH = { every_core_state = { add_manpower = -5000 } }
+			}
 		}
 	}
 	#Mutants
 	focus = {
-		id = hea_nephilim_horde
+		id = hea_nephilim_horde #Horde of Nephilim
 		icon = GFX_goal_HEA_hea_nephilim
-		cost = 30
+		cost = 20
 		x = 0
 		y = 1
 		relative_position_id = hea_cains_empire
@@ -2001,28 +1988,28 @@ set_country_leader_name = {
 		allow_branch = {
 			has_country_flag = hea_vengance_path
 		}
-		available = {
-			has_no_unused_wargoals = yes
-			custom_trigger_tooltip = {
-				tooltip = "Crusaded against atleast 4 Mutants Targets"
-				check_variable = {
-					hea_monsters_mutants > 3
-				}
-			}
-		}
+
 		prerequisite = {
 			focus = hea_monsters_of_the_wastes
 		}
-
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = hea_nephilim_horde_trig_tt
+				check_variable = {
+					hea_monsters_mutants > 2
+				}
+			}
+		}
+		
 		completion_reward = {
 			custom_effect_tooltip = hea_nephilim_horde_tt
 		}
 	}
 	#Mirelurks
 	focus = {
-		id = hea_leviathans_of_the_north
+		id = hea_leviathans_of_the_north #Leviathans dwelling in the Coast
 		icon = GFX_goal_HEA_hea_leviathans
-		cost = 30
+		cost = 20
 		x = 0
 		y = 1
 		relative_position_id = hea_nephilim_horde
@@ -2030,17 +2017,17 @@ set_country_leader_name = {
 		allow_branch = {
 			has_country_flag = hea_vengance_path
 		}
+
+		prerequisite = {
+			focus = hea_monsters_of_the_wastes
+		}
 		available = {
-			has_no_unused_wargoals = yes
 			custom_trigger_tooltip = {
-				tooltip = "Crusaded against at least 1 Mirelurks Target"
+				tooltip = hea_leviathans_of_the_north_trigg_tt
 				check_variable = {
 					hea_monsters_mirelurks > 0
 				}
 			}
-		}
-		prerequisite = {
-			focus = hea_monsters_of_the_wastes
 		}
 
 		completion_reward = {
@@ -2049,9 +2036,9 @@ set_country_leader_name = {
 	}
 	#Robots
 	focus = {
-		id = hea_steel_puppets
+		id = hea_steel_puppets #Steel Puppets
 		icon = GFX_goal_HEA_hea_steel_menace
-		cost = 30
+		cost = 20
 		x = 0
 		y = 1
 		relative_position_id = hea_leviathans_of_the_north
@@ -2059,27 +2046,28 @@ set_country_leader_name = {
 		allow_branch = {
 			has_country_flag = hea_vengance_path
 		}
-		available = {
-			has_no_unused_wargoals = yes
-			custom_trigger_tooltip = {
-				tooltip = "Crusaded against atleast 4 Robots Targets"
-				check_variable = {
-					hea_monsters_robots > 3
-				}
-			}
-		}
+
 		prerequisite = {
 			focus = hea_monsters_of_the_wastes
 		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = hea_steel_puppets_trigg_tt
+				check_variable = {
+					hea_monsters_robots > 1
+				}
+			}
+		}
+		
 		completion_reward = {
 			custom_effect_tooltip = hea_steel_puppets_tt
 		}
 	}
 	#Communists
 	focus = {
-		id = hea_red_devils_of_the_north
+		id = hea_red_devils_of_the_north #The Red Devils
 		icon = GFX_goal_HEA_hea_red_devil
-		cost = 30
+		cost = 20
 		x = 0
 		y = 1
 		relative_position_id = hea_steel_puppets
@@ -2087,17 +2075,17 @@ set_country_leader_name = {
 		allow_branch = {
 			has_country_flag = hea_vengance_path
 		}
+
+		prerequisite = {
+			focus = hea_monsters_of_the_wastes
+		}
 		available = {
-			has_no_unused_wargoals = yes
 			custom_trigger_tooltip = {
-				tooltip = "Crusaded against atleast 1 Communist Target"
+				tooltip = hea_red_devils_of_the_north_trigg_tt
 				check_variable = {
 					hea_monsters_communists > 0
 				}
 			}
-		}
-		prerequisite = {
-			focus = hea_monsters_of_the_wastes
 		}
 
 		completion_reward = {
@@ -2106,7 +2094,7 @@ set_country_leader_name = {
 	}
 	##End
 	focus = {
-		id = hea_triumphant_nation
+		id = hea_triumphant_nation #Triumph over the monsters...
 		icon = GFX_goal_HEA_hea_humanity_protected
 		cost = 30
 		x = 0
@@ -2116,23 +2104,21 @@ set_country_leader_name = {
 		allow_branch = {
 			has_country_flag = hea_vengance_path
 		}
-		prerequisite = {
-			focus = hea_the_dead_walk
-			focus = hea_cains_empire
-			focus = hea_nephilim_horde
-			focus = hea_leviathans_of_the_north
-			focus = hea_steel_puppets
-			focus = hea_red_devils_of_the_north
-		}
+
+		prerequisite = { focus = hea_the_dead_walk }
+		prerequisite = { focus = hea_cains_empire }
+		prerequisite = { focus = hea_nephilim_horde }
+		prerequisite = { focus = hea_leviathans_of_the_north }
+		prerequisite = { focus = hea_steel_puppets }
+		prerequisite = { focus = hea_red_devils_of_the_north }	
 
 		completion_reward = {
 			swap_ideas = { 
 				remove_idea = HEA_wardens_of_humanity1 
 				add_idea = HEA_wardens_of_humanity2
-				}
+			}
 		}
 	}
-
 
 	####################
 	##Forgiveness Path##

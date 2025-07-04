@@ -32,7 +32,10 @@ hea_monsters_of_the_wastes_cat = {
 	allowed = {
 		original_tag = HEA
 	}
-	icon = x
+	visible = {
+		has_completed_focus = hea_monsters_of_the_wastes
+	}
+	icon = GFX_decision_tempered_blade
 	priority = 998
 }
 ##########################

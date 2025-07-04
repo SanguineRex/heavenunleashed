@@ -627,6 +627,59 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = hea_trees_and_faithless #Trees and Faithless
+		icon = GFX_goal_HEA_hea_core_lon
+		cost = 30
+		x = -3
+		y = 1
+		relative_position_id = hea_michaels_crusade
+
+		prerequisite = {
+			focus = hea_michaels_crusade
+		}
+
+		bypass = {
+			ROS = { all_core_land_owned_by_prev_sphere = yes }
+			SHO = { all_core_land_owned_by_prev_sphere = yes }
+			TIM = { all_core_land_owned_by_prev_sphere = yes }
+		}
+
+		will_lead_to_war_with = ROS #For some reason my attack warning triggers in the decisions don't work in OWB, gonna use this focus to send the warning notifications instead - @Deez
+		will_lead_to_war_with = SHO
+		will_lead_to_war_with = TIM
+		completion_reward = {
+			custom_effect_tooltip = hea_trees_and_faithless_tt
+		}
+	}		
+
+	focus = {
+		id = hea_savages_and_heretics #Heretics and Failed Conquests
+		icon = GFX_goal_HEA_hea_core_mur
+		cost = 30
+		x = 3
+		y = 1
+		relative_position_id = hea_michaels_crusade
+
+		prerequisite = {
+			focus = hea_michaels_crusade
+		}
+
+		bypass = {
+			MUR = { all_core_land_owned_by_prev_sphere = yes }
+			ANO = { all_core_land_owned_by_prev_sphere = yes }
+			BDT = { all_core_land_owned_by_prev_sphere = yes }
+		}
+
+		will_lead_to_war_with = MUR #For some reason my attack warning triggers in the decisions don't work in OWB, gonna use this focus to send the warning notifications instead - @Deez
+		will_lead_to_war_with = ANO
+		will_lead_to_war_with = BDT
+		completion_reward = {
+			custom_effect_tooltip = hea_savages_and_heretics_tt
+		}
+	}
+
 	focus = {
 		id = hea_nf_foreign_ministryA #Embassy of Christ
 		icon = GFX_goal_HEA_focus_embassy_of_christ
@@ -766,35 +819,59 @@ focus_tree = {
 			}
 		}
 	}
-		focus = {
-		id = hea_vault_tec_calling
+
+	focus = {
+		id = hea_vault_tec_calling #Traitors to the Faith
 		icon = GFX_goal_HEA_hea_crusader_boy
 		cost = 20
 		x = -4
 		y = 6
 		relative_position_id = hea_michaels_crusade
-		available = {
-			OR = {
-				291 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			1201 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			496 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			}
-		}
+
 		prerequisite = {
 			focus = hea_archangel_michael
 		}
-		completion_reward = {
-		add_ideas = hea_vault_tec
-	}
+		available = {
+			OR = {
+				VLT = { all_core_land_owned_by_prev_sphere = yes }
+				VTS = { all_core_land_owned_by_prev_sphere = yes }
+				CLK = { all_core_land_owned_by_prev_sphere = yes }
+				VLS = { all_core_land_owned_by_prev_sphere = yes }
+				EXE = { all_core_land_owned_by_prev_sphere = yes }
+			}
 		}
-			focus = {
-		id = hea_true_crusaders
+
+		completion_reward = {
+			add_ideas = hea_vault_tec
+		}
+	}
+
+	focus = {
+		id = hea_cities_of_sin #Cities of Sin
+		icon = GFX_goal_HEA_hea_city_of_sin
+		cost = 20
+		x = -2
+		y = 6
+		relative_position_id = hea_michaels_crusade
+
+		prerequisite = {
+			focus = hea_archangel_michael
+		}
+		available = {
+			OR = {
+				TDN = { all_core_land_owned_by_prev_sphere = yes }
+				NEW = { all_core_land_owned_by_prev_sphere = yes }
+				VEG = { all_core_land_owned_by_prev_sphere = yes }
+			}
+		}
+		
+		completion_reward = {
+			add_ideas = hea_medical_sin
+		}
+	}
+
+	focus = {
+		id = hea_true_crusaders #True Crusaders
 		icon = GFX_goal_HEA_hea_true_crusaders
 		cost = 20
 		x = 0
@@ -808,156 +885,82 @@ focus_tree = {
 				add_idea = hea_rampant_militarism_3
 				remove_idea = hea_rampant_militarism_2
 			}
-	
-		
 		}
 	}
-		focus = {
-		id = hea_cities_of_sin
-		icon = GFX_goal_HEA_hea_city_of_sin
-		cost = 20
-		x = -2
-		y = 6
-		relative_position_id = hea_michaels_crusade
-		available = {
-			OR = {
-				211 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			285 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			57 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			}
-		}
-		prerequisite = {
-			focus = hea_archangel_michael
-		}
-		completion_reward = {
-			add_ideas = hea_medical_sin
 
-		}
-	}
-		focus = {
-		id = hea_old_world_failures
-		icon = GFX_goal_HEA_hea_old_world_failures
-		cost = 20
-		x = 0
-		y = 8
-		relative_position_id = hea_michaels_crusade
-		available = {
-			OR = {
-				656 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			1023 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			157 = {
-				is_owned_and_controlled_by = ROOT
-			}
-				412 = {
-				is_owned_and_controlled_by = ROOT
-			}
-				84 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			}
-		}
-		prerequisite = {
-			focus = hea_archangel_michael
-		}
-		completion_reward = {
-			add_ideas = HEA_old_world_failures
-		}
-	}
-		focus = {
-		id = hea_mexico_heretics
+	focus = {
+		id = hea_mexico_heretics #Heretics and Savages
 		icon = GFX_goal_HEA_hea_mexico_heretics
 		cost = 20
 		x = 2
 		y = 6
 		relative_position_id = hea_michaels_crusade
-		available = {
-			OR = {
-				863 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			788 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			}
-		}
+
 		prerequisite = {
 			focus = hea_archangel_michael
 		}
+		available = {
+			OR = {
+				ATE = { all_core_land_owned_by_prev_sphere = yes }
+				ITZ = { all_core_land_owned_by_prev_sphere = yes }
+				TDT = { all_core_land_owned_by_prev_sphere = yes }
+			}
+		}
+
 		completion_reward = {
 			add_ideas = hea_aztec_techniques
 		}
 	}
-		focus = {
-		id = hea_claiming_colorado
+
+	focus = {
+		id = hea_claiming_colorado #Charge onwards, to Colorado
 		icon = GFX_goal_HEA_hea_charging_colorado
 		cost = 20
 		x = 4
 		y = 6
 		relative_position_id = hea_michaels_crusade
-		available = {
-			OR = {
-				525 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			}
-		}
+
 		prerequisite = {
 			focus = hea_archangel_michael
 		}
+		available = {
+			HAN = { all_core_land_owned_by_prev_sphere = yes }
+		}
+		
 		completion_reward = {
-			HEA = { country_event = { id = nf_event_hea.525 } }
+			country_event = nf_event_hea.525
 		}
 	}
-		focus = {
-		id = hea_false_gods
+
+	focus = {
+		id = hea_false_gods #False Goddess
 		icon = GFX_goal_HEA_hea_false_gods
 		cost = 20
 		x = -3
 		y = 7
 		relative_position_id = hea_michaels_crusade
-		available = {
-			OR = {
-				554 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			}
-		}
+
 		prerequisite = {
 			focus = hea_archangel_michael
 		}
+		available = {
+			TTM = { all_core_land_owned_by_prev_sphere = yes }
+		}
+		
 		completion_reward = {
 			add_ideas = hea_cursed_knowledge
 		}
 	}
-		focus = {
-		id = hea_war_god
+
+	focus = {
+		id = hea_war_god #A God that bleeds?
 		icon = GFX_goal_HEA_hea_war_god
 		cost = 20
 		x = -1
 		y = 7
 		relative_position_id = hea_michaels_crusade
 		available = {
-			OR = {
-				520 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			5 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			516 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			}
+			CES = { all_core_land_owned_by_prev_sphere = yes }
 		}
 		prerequisite = {
 			focus = hea_archangel_michael
@@ -966,218 +969,152 @@ focus_tree = {
 			add_ideas = hea_dead_mars
 		}
 	}
-		focus = {
-		id = hea_lone_star_shines_no_longer
-		icon = GFX_goal_HEA_hea_lone_star
-		cost = 20
-		x = 3
-		y = 7
-		relative_position_id = hea_michaels_crusade
-		available = {
-			OR = {
-				796 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			892 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			921 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			}
-		}
-		prerequisite = {
-			focus = hea_archangel_michael
-		}
-		completion_reward = {
-				add_ideas = hea_bigger_tex
-		
-		}
-	}
-		focus = {
-		id = hea_tackling_the_bear
+
+	focus = {
+		id = hea_tackling_the_bear #The two-headed Bear
 		icon = GFX_goal_HEA_hea_the_bear
 		cost = 20
 		x = 1
 		y = 7
 		relative_position_id = hea_michaels_crusade
-		available = {
-			OR = {
-				253 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			350 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			}
-		}
+
 		prerequisite = {
 			focus = hea_archangel_michael
 		}
+		available = {
+			NCR = { all_core_land_owned_by_prev_sphere = yes }
+		}
+		
 		completion_reward = {
 			add_ideas = hea_two_headed_bear
-				HEA = {
-				add_state_core = 543
-				add_state_core = 141
-				add_state_core = 548
-				add_state_core = 605
-				}
+			#HEA = { #I disabled this cause it felt out of place - @Deez
+			#	add_state_core = 543
+			#	add_state_core = 141
+			#	add_state_core = 548
+			#	add_state_core = 605
+			#}
 		}
 	}
-		focus = {
-		id = hea_the_chained_witches
-		icon = GFX_goal_HEA_hea_burning_witch
+
+	focus = {
+		id = hea_lone_star_shines_no_longer #Lone Star's Fall
+		icon = GFX_goal_HEA_hea_lone_star
 		cost = 20
-		x = 2
-		y = 8
+		x = 3
+		y = 7
 		relative_position_id = hea_michaels_crusade
+
 		prerequisite = {
 			focus = hea_archangel_michael
 		}
 		available = {
-				890 = {
-				is_owned_and_controlled_by = ROOT
+			OR = {
+				LNS = { all_core_land_owned_by_prev_sphere = yes }
+				TBH = { all_core_land_owned_by_prev_sphere = yes }
 			}
-			NOT = { country_exists = CHC }
-			
 		}
+		
 		completion_reward = {
-		HEA = { country_event = { id = nf_event_hea.890 } }
+			add_ideas = hea_bigger_tex
 		}
 	}
-		focus = {
-		id = hea_frozen_north
+
+	focus = {
+		id = hea_frozen_north #The Frozen North
 		icon = GFX_goal_HEA_hea_the_north
 		cost = 20
 		x = -2
 		y = 8
 		relative_position_id = hea_michaels_crusade
-		available = {
-			OR = {
-				1105 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			1319 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			}
-		}
+
 		prerequisite = {
 			focus = hea_archangel_michael
 		}
+		available = {
+			OR = {
+				MTC = { all_core_land_owned_by_prev_sphere = yes }
+				BRA = { all_core_land_owned_by_prev_sphere = yes }
+			}
+		}
+		
 		completion_reward = {
 			add_ideas = hea_frozen_crusaders
 		}
 	}
+
+	focus = {
+		id = hea_old_world_failures #Old World Failures
+		icon = GFX_goal_HEA_hea_old_world_failures
+		cost = 20
+		x = 0
+		y = 8
+		relative_position_id = hea_michaels_crusade
+
+		prerequisite = {
+			focus = hea_archangel_michael
+		}
+		available = {
+			OR = {
+				MCA = { all_core_land_owned_by_prev_sphere = yes }
+				WBH = { all_core_land_owned_by_prev_sphere = yes }
+				TCA = { all_core_land_owned_by_prev_sphere = yes }
+				BOS = { all_core_land_owned_by_prev_sphere = yes }
+				MXH = { all_core_land_owned_by_prev_sphere = yes }
+				MXC = { all_core_land_owned_by_prev_sphere = yes }
+				MNC = { all_core_land_owned_by_prev_sphere = yes }
+				#ACH = { all_core_land_owned_by_prev_sphere = yes } #Disabled due Alamo Chapter being a dynamic tag
+			}
+		}
+		
+		completion_reward = {
+			add_ideas = HEA_old_world_failures
+		}
+	}
+
+	focus = {
+		id = hea_the_chained_witches #The Chained Witches
+		icon = GFX_goal_HEA_hea_burning_witch
+		cost = 20
+		x = 2
+		y = 8
+		relative_position_id = hea_michaels_crusade
+
+		prerequisite = {
+			focus = hea_archangel_michael
+		}
+		available = {
+			CHC = { all_core_land_owned_by_prev_sphere = yes }
+		}
+
+		completion_reward = {
+			country_event = nf_event_hea.890
+		}
+	}
 	
-		focus = {
+	focus = { #The Lord's Sword
 		id = hea_right_hand_of_god
 		icon = GFX_goal_HEA_hea_sword_of_god
 		cost = 60
 		x = 0
 		y = 10
 		relative_position_id = hea_michaels_crusade
-		prerequisite = {
-			focus = hea_false_gods
-		}
-			prerequisite = {
-			focus = hea_frozen_north
-		}
-			prerequisite = {
-			focus = hea_the_chained_witches
-		}
-		prerequisite = {
-			focus = hea_cities_of_sin
-		}
-		prerequisite = {
-			focus = hea_war_god
-		}
-		prerequisite = {
-			focus = hea_lone_star_shines_no_longer
-		}
-			prerequisite = {
-			focus = hea_old_world_failures
-		}
-		prerequisite = {
-			focus = hea_tackling_the_bear
-		}
-		prerequisite = {
-			focus = hea_claiming_colorado
-		}
-			prerequisite = {
-			focus = hea_vault_tec_calling
-		}
-		prerequisite = {
-			focus = hea_mexico_gods_and_heretics
-		}
+
+		prerequisite = { focus = hea_false_gods }
+		prerequisite = { focus = hea_frozen_north }
+		prerequisite = { focus = hea_the_chained_witches }
+		prerequisite = { focus = hea_cities_of_sin }
+		prerequisite = { focus = hea_war_god }
+		prerequisite = { focus = hea_lone_star_shines_no_longer }
+		prerequisite = { focus = hea_old_world_failures }
+		prerequisite = { focus = hea_tackling_the_bear }
+		prerequisite = { focus = hea_claiming_colorado }
+		prerequisite = { focus = hea_vault_tec_calling }
+		prerequisite = { focus = hea_mexico_heretics }
 		completion_reward = {
 			swap_ideas = {
 				add_idea = archangel_michael3
 				remove_idea = archangel_michael2
-				
 			}
-		
-		}
-	}
-
-
-	
-
-
-	#######First Targets
-	focus = {
-		id = hea_trees_and_faithless #Trees and Faithless
-		icon = GFX_goal_HEA_hea_core_lon
-		cost = 30
-		x = -3
-		y = 1
-		relative_position_id = hea_michaels_crusade
-			available = {
-		}
-
-		prerequisite = {
-			focus = hea_michaels_crusade
-		}
-
-		bypass = {
-			ROS = { all_core_land_owned_by_prev_sphere = yes }
-			SHO = { all_core_land_owned_by_prev_sphere = yes }
-			TIM = { all_core_land_owned_by_prev_sphere = yes }
-		}
-
-		will_lead_to_war_with = ROS #For some reason my attack warning triggers in the decisions don't work in OWB, gonna use this focus to send the warning notifications instead - @Deez
-		will_lead_to_war_with = SHO
-		will_lead_to_war_with = TIM
-		completion_reward = {
-			custom_effect_tooltip = hea_trees_and_faithless_tt
-		}
-	}		
-	
-	focus = {
-		id = hea_savages_and_heretics #Heretics and Failed Conquests
-		icon = GFX_goal_HEA_hea_core_mur
-		cost = 30
-		x = 3
-		y = 1
-		relative_position_id = hea_michaels_crusade
-			available = {
-		}
-
-		prerequisite = {
-			focus = hea_michaels_crusade
-		}
-
-		bypass = {
-			MUR = { all_core_land_owned_by_prev_sphere = yes }
-			ANO = { all_core_land_owned_by_prev_sphere = yes }
-			BDT = { all_core_land_owned_by_prev_sphere = yes }
-		}
-
-		will_lead_to_war_with = MUR #For some reason my attack warning triggers in the decisions don't work in OWB, gonna use this focus to send the warning notifications instead - @Deez
-		will_lead_to_war_with = ANO
-		will_lead_to_war_with = BDT
-		completion_reward = {
-			custom_effect_tooltip = hea_savages_and_heretics_tt
 		}
 	}
 	

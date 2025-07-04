@@ -691,8 +691,8 @@ hea_vault_tec_calling_desc:0 "Vault-Tec turned its back on how many faithful? Ho
 hea_cities_of_sin:0 "Cities of Sin"
 hea_cities_of_sin_desc:0 "There are three cities those degeneracy have reached us, having learned of them, we know we cannot do anything but burn them down \n If we are wise, perhaps we can use their decadance to further our own goals..."
 
-hea_old_world_failures:0 "§ROld World Failures"
-hea_old_world_failures_desc:0 "§2There are traces of America left, the nation which our forefathers once called home, they are but vestiges of the once great Empire, and what an empire it was. §W No matter, they will not elude the Lord's judgement \n §ROnce we cleanse at least one of the primary holdouts of those foolish few who think themselves great for claiming american heritage, we may even be able to replicate what worthwhile technology they had..."
+hea_old_world_failures: "§ROld World Failures§!"
+hea_old_world_failures_desc: "§2There are traces of America left, the nation which our forefathers once called home, they are but vestiges of the once great Empire, and what an empire it was.§! §W No matter, they will not elude the Lord's judgement§! \n §ROnce we cleanse at least one of the primary holdouts of those foolish few who think themselves great for claiming american heritage, we may even be able to replicate what worthwhile technology they had...§!"
 
 hea_mexico_heretics:0 "Heretics and Savages"
 hea_mexico_heretics_desc:0 "In Mexico, we see men worshipping false gods, and courting Lucifer by spreading poison to the children of the waste. We will cleanse the filth from the land, for who are they to take advantage of the Lord's flock? \n Who knows, these infidels may even know something of worth."
@@ -718,8 +718,8 @@ hea_the_chained_witches_desc:0 "They are tainted, witches, the servants of the d
 hea_frozen_north:0 "The Frozen North"
 hea_frozen_north_desc:0 "There are men who lived in the North, who believe themselves worthy of escaping the judgement of the faithful, but they are wrong, they kill, they steal, they live like kings while the flock die like rats, the holy crusade will not be warded off by a little cold, our mighty arms will shatter aside the nations of the north, for the people they so cruely oppresse."
 
-hea_right_hand_of_god:0 "§RThe Lord's Sword"
-hea_right_hand_of_god_desc:0 "§R"However, I will tell you what is inscribed in the writing of truth. Yet there is no one who stands firmly with me against these forces except Michael, your prince." \n -Daniel 10:21"
+hea_right_hand_of_god: "§RThe Lord's Sword§!"
+hea_right_hand_of_god_desc: "§R\"However, I will tell you what is inscribed in the writing of truth. Yet there is no one who stands firmly with me against these forces except Michael, your prince.\" \n -Daniel 10:21§!"
 
 ###################End of 10th Crusade
 

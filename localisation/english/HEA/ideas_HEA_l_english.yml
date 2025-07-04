@@ -164,8 +164,8 @@ archangel_michael1_desc:0 "The Right Hand of God descends"
 archangel_michael2:0 "Archangel Michael"
 archangel_michael2_desc:0 "The wicked flee in terror, while the righteousness rejoice, salvation comes."
 
-archangel_michael3:0 "§RArchangel Michael"
-archangel_michael3_desc:0 "§RArchangel Michael Given Flesh to Destroy the Enemies of §2The Father Above"
+archangel_michael3: "§RArchangel Michael§!"
+archangel_michael3_desc: "§RArchangel Michael Given Flesh to Destroy the Enemies of§! §2The Father Above§!"
 
 hea_battle_priests:0 "Battle Priests"
 hea_battle_priests_desc:0 "While the Priests are sworn not to fight, they ensure that the troops will stay and fight longer than they would have ever expected (Though whether that be because of their skill with Medicine or their affinity with the Spiritual ailments). They won't lift an arm in their defence, but there are more than a few thankful souls that are willing to do so in their name"

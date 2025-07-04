@@ -1091,8 +1091,8 @@ focus_tree = {
 		}
 	}
 	
-	focus = { #The Lord's Sword
-		id = hea_right_hand_of_god
+	focus = { 
+		id = hea_right_hand_of_god #The Lord's Sword
 		icon = GFX_goal_HEA_hea_sword_of_god
 		cost = 60
 		x = 0
@@ -1110,6 +1110,7 @@ focus_tree = {
 		prerequisite = { focus = hea_claiming_colorado }
 		prerequisite = { focus = hea_vault_tec_calling }
 		prerequisite = { focus = hea_mexico_heretics }
+		
 		completion_reward = {
 			swap_ideas = {
 				add_idea = archangel_michael3

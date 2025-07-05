@@ -330,3 +330,11 @@ hea_dynamic_taming_heavens:0 "Taming the §4Heavens§!"
 hea_dynamic_taming_heavens_desc:0 "The Stagleap Mountains have been our protectors and guardians since our ancestors settled in the Nucleus but even after two hundred years we haven't truly settled the spires and crags, until now..."
 
 guard_rebornHEA:0 "Guard Reborn"
+
+#####################
+##Foreign Relations##
+#####################
+hea_foreign_relation_dynamic_modifier: "Missionary Missions"
+hea_foreign_relation_idea_0: "Missionary Missions"
+hea_foreign_relation_idea_expand: "Missionary Missions"
+hea_foreign_relation_idea_final: "Missionary Missions"

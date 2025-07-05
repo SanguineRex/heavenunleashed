@@ -405,11 +405,14 @@ hea_michael_crusade_cat = {
 					FROM = { original_tag = BDT }
 				}
 				FROM = { 
-					NOT = { has_completed_focus = bdt_listen_to_the_pilgrims } #This is Boners's focus branching toward joining Heaven's Gate
+					OR = {
+						has_completed_focus = bdt_hail_to_the_king #Heretics
+						has_completed_focus = bdt_road_warriors_of_the_eighty_four #Heretics
+						has_completed_focus = bdt_excommunication #Got fucking rejected by HEA lmao - @Deez
+					} 
 				}
 			}
 		}
-
 		war_with_target_on_remove = yes #A Warning check so AI can prep, and real human players can see the warning notification, not working for some reason I'll need to talk with OWB's dev - @Deez
 		war_with_target_on_complete = yes #A Warning check so AI can prep, and real human players can see the warning notification, not working for some reason I'll need to talk with OWB's dev - @Deez
 		remove_effect = {

@@ -832,6 +832,19 @@ hea_steam_wonderland_tt:0 "§YThis will give us 3% War Support and 3% Recruitabl
 hea_billowing_inquisition:0 "§RThe Billowing Inquisition"
 hea_billowing_inquisition_desc:0 ""
 
+
+#######################
+###Foreign Relations### 
+#######################
+# Need you to write focus loc here Rex - @Deez
+###Rotpurgers 
+HEA_foreign_relation_rot_tt: "Completing this §YFocus§! will put §O[ROT.GetNameWithFlag]§! on the path to become our §4ally§!."
+HEA_foreign_relation_rot_equipment_tt: "Completing this §YFocus§! will speed up §O[ROT.GetNameWithFlag]§!'s progress of becoming our §4ally§!."
+HEA_foreign_relation_rot_manpower_tt: "Completing this §YFocus§! will speed up §O[ROT.GetNameWithFlag]§!'s progress of becoming our §4ally§!."
+
+###Bone Dancers
+HEA_foreign_relation_bdt_tt: "Completing this §YFocus§! will put §0[BDT.GetNameWithFlag]§! on the path to become our §4ally§!."
+
 #######End of the Billowing Grand
 
 #########Final Focus

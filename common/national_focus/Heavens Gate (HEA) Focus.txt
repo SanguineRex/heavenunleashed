@@ -4864,6 +4864,412 @@ focus = {
 			}
 		}
 	}
+###############################################
+##Foreign Relations/Interactions Focus Branch##
+###############################################
+	focus = {
+		id = HEA_foreign_relation_start
+		icon = GFX_goal_HEA_peters_retreat
+		cost = 20
+		x = 35
+		y = 5
 
-	
+		available = {
+			has_completed_focus = hea_nf_innocence_lost
+		}
+
+		completion_reward = {
+			ROT = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
+				}
+			}
+			BDT = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
+				}
+			}
+			effect_tooltip = { #Just for showing due to the variable not being set before completing this focus
+				add_ideas = hea_foreign_relation_idea_0
+			}
+			hidden_effect = { #The real magic happens here - @Deez
+				set_variable = {
+					var = hea_volunteer_size_var
+					value = 2
+				}
+				set_variable = {
+					var = hea_experience_gain_army_var
+					value = 0
+				}
+				set_variable = {
+					var = hea_civilian_factory_use_var
+					value = 0
+				}
+				add_dynamic_modifier = {
+					modifier = hea_foreign_relation_dynamic_modifier
+				}
+			}
+		}
+	}
+
+	###Rotpurgers###
+	focus = {
+		id = HEA_foreign_relation_rot
+		icon = GFX_goal_HEA_peters_retreat
+		cost = 30
+		x = -2
+		y = 1
+		relative_position_id = HEA_foreign_relation_start
+
+		prerequisite = {
+			focus = HEA_foreign_relation_start
+		}
+		available = {
+			ROT = {
+				exists = yes
+				NOT = {
+					OR = {
+						has_completed_focus = ROT_samson
+						has_completed_focus = ROT_ladyofthelake
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_to_variable = {
+				var = hea_experience_gain_army_var
+				value = 0.03
+			}
+			add_to_variable = {
+				var = hea_civilian_factory_use_var
+				value = 2
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_expand
+				}
+			}
+			custom_effect_tooltip = HEA_foreign_relation_rot_tt
+		}
+	}
+
+	focus = {
+		id = HEA_foreign_relation_rot_equipment
+		icon = GFX_goal_HEA_peters_retreat
+		cost = 15
+		x = -1
+		y = 1
+		relative_position_id = HEA_foreign_relation_rot
+
+		prerequisite = {
+			focus = HEA_foreign_relation_rot
+		}
+		available = {
+			ROT = {
+				has_volunteers_amount_from = {
+					tag = ROOT
+					count > 1
+				}
+			}
+			has_equipment = { infantry_equipment > 299 }
+			has_equipment = { support_equipment > 29 }
+		}
+		bypass = {
+			ROT = { is_in_faction_with = ROOT }
+		}
+
+		completion_reward = {
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 300
+				target = ROT
+			}
+			send_equipment = {
+				equipment = support_equipment
+				amount = 30
+				target = ROT
+			}
+			if = { #If ROT already have the spirit this focus will reduce the timed idea time
+				limit = {
+					ROT = { has_idea = rot_rage_against_the_dying_of_the_light }
+				}
+				ROT = {
+					modify_timed_idea = {
+						idea = rot_rage_against_the_dying_of_the_light
+						days = -200
+					}
+				}
+			}
+			custom_effect_tooltip = HEA_foreign_relation_rot_equipment_tt
+		}
+	}
+
+	focus = {
+		id = HEA_foreign_relation_rot_manpower
+		icon = GFX_goal_HEA_peters_retreat
+		cost = 15
+		x = 1
+		y = 1
+		relative_position_id = HEA_foreign_relation_rot
+
+		prerequisite = {
+			focus = HEA_foreign_relation_rot
+		}
+		available = {
+			ROT = {
+				has_volunteers_amount_from = {
+					tag = ROOT
+					count > 1
+				}
+			}
+			has_manpower > 199
+		}
+		bypass = {
+			ROT = { is_in_faction_with = ROOT }
+		}
+
+		completion_reward = {
+			add_manpower = -200
+			ROT = {
+				add_manpower = 200
+			}
+			if = { #If ROT already have the spirit this focus will reduce the timed idea time
+				limit = {
+					ROT = { has_idea = rot_rage_against_the_dying_of_the_light }
+				}
+				ROT = {
+					modify_timed_idea = {
+						idea = rot_rage_against_the_dying_of_the_light
+						days = -200
+					}
+				}
+			}
+			custom_effect_tooltip = HEA_foreign_relation_rot_manpower_tt
+		}
+	}
+
+	focus = {
+		id = HEA_foreign_relation_rot_final
+		icon = GFX_goal_HEA_peters_retreat
+		cost = 30
+		x = 0
+		y = 2
+		relative_position_id = HEA_foreign_relation_rot
+
+		prerequisite = { focus = HEA_foreign_relation_rot_equipment }
+		prerequisite = { focus = HEA_foreign_relation_rot_manpower }
+		available = {
+			ROT = { is_in_faction_with = ROOT }
+		}
+
+		completion_reward = {
+			add_to_variable = {
+				var = hea_volunteer_size_var
+				value = 1
+			}
+			add_to_variable = {
+				var = hea_experience_gain_army_var
+				value = 0.02
+			}
+			add_political_power = 30
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_final
+				}
+			}
+			add_tech_bonus = {
+				name = HEA_foreign_relation_rot_final
+				bonus = 0.25
+				uses = 2
+				category = support_demolitions_tech_category
+			}
+		}
+	}
+
+	###Bone Dancers###
+		focus = {
+		id = HEA_foreign_relation_bdt
+		icon = GFX_goal_HEA_peters_retreat
+		cost = 30
+		x = 2
+		y = 1
+		relative_position_id = HEA_foreign_relation_start
+
+		prerequisite = {
+			focus = HEA_foreign_relation_start
+		}
+		available = {
+			BDT = {
+				exists = yes
+				OR = {
+					NOT = {
+						has_completed_focus = bdt_hail_to_the_king #Heretics
+						has_completed_focus = bdt_road_warriors_of_the_eighty_four #Heretics
+						has_completed_focus = bdt_excommunication #Rejected LMAO
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_to_variable = {
+				var = hea_experience_gain_army_var
+				value = 0.03
+			}
+			add_to_variable = {
+				var = hea_civilian_factory_use_var
+				value = 2
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_expand
+				}
+			}
+			BDT = {
+				add_popularity = {
+					ideology = People
+					popularity = 0.05
+				}
+			}
+			custom_effect_tooltip = HEA_foreign_relation_bdt_tt
+		}
+	}
+
+	focus = {
+		id = HEA_foreign_relation_bdt_equipment
+		icon = GFX_goal_HEA_peters_retreat
+		cost = 15
+		x = -1
+		y = 1
+		relative_position_id = HEA_foreign_relation_bdt
+
+		prerequisite = {
+			focus = HEA_foreign_relation_bdt
+		}
+		available = {
+			BDT = {
+				has_volunteers_amount_from = {
+					tag = ROOT
+					count > 1
+				}
+			}
+			has_equipment = { infantry_equipment > 299 }
+			has_equipment = { support_equipment > 29 }
+		}
+		bypass = {
+			BDT = { is_in_faction_with = ROOT }
+		}
+
+		completion_reward = {
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 300
+				target = BDT
+			}
+			send_equipment = {
+				equipment = support_equipment
+				amount = 30
+				target = BDT
+			}
+			army_experience = 15
+			BDT = {
+				add_popularity = {
+					ideology = People
+					popularity = 0.05
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HEA_foreign_relation_bdt_manpower
+		icon = GFX_goal_HEA_peters_retreat
+		cost = 15
+		x = 1
+		y = 1
+		relative_position_id = HEA_foreign_relation_bdt
+
+		prerequisite = {
+			focus = HEA_foreign_relation_bdt
+		}
+		available = {
+			BDT = {
+				has_volunteers_amount_from = {
+					tag = ROOT
+					count > 1
+				}
+			}
+			has_manpower > 199
+		}
+		bypass = {
+			BDT = { is_in_faction_with = ROOT }
+		}
+
+		completion_reward = {
+			add_manpower = -200
+			BDT = {
+				add_manpower = 200
+			}
+			army_experience = 15
+			BDT = {
+				add_popularity = {
+					ideology = People
+					popularity = 0.05
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HEA_foreign_relation_bdt_final
+		icon = GFX_goal_HEA_peters_retreat
+		cost = 30
+		x = 0
+		y = 2
+		relative_position_id = HEA_foreign_relation_bdt
+
+		prerequisite = { focus = HEA_foreign_relation_bdt_equipment }
+		prerequisite = { focus = HEA_foreign_relation_bdt_manpower }
+		available = {
+			BDT = { is_in_faction_with = ROOT }
+		}
+
+		completion_reward = {
+			add_to_variable = {
+				var = hea_volunteer_size_var
+				value = 1
+			}
+			add_to_variable = {
+				var = hea_experience_gain_army_var
+				value = 0.02
+			}
+			add_political_power = 30
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_final
+				}
+			}
+			add_tech_bonus = {
+				name = HEA_foreign_relation_bdt_final
+				bonus = 0.25
+				uses = 3
+				category = vehicle_tech_category
+			}
+		}
+	}
 }

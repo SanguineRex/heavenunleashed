@@ -1464,8 +1464,30 @@ ideas = {
 				}
 			}
 		}
+		#Foreign Relations ideas
+		hea_foreign_relation_idea_0 = { #Just to show stuff as tooltip, look way better compared to writing the tooltip manually
+			picture = generic_medicine
+			modifier = {
+				send_volunteer_size = 2
+				improve_relations_maintain_cost_factor = -0.3
+			}
+		}
+		hea_foreign_relation_idea_expand = { #Use swap_idea to display tooltip when expand to new foreign target
+			picture = generic_medicine
+			modifier = {
+				experience_gain_army = 0.03
+				civilian_factory_use = 2
+				send_volunteer_size = 2
+				improve_relations_maintain_cost_factor = -0.3
+			}
+		}
+		hea_foreign_relation_idea_final = { #Use swap_idea to display tooltip when finish applying a target into faction
+			picture = generic_medicine
+			modifier = {
+				send_volunteer_size = 3
+				experience_gain_army = 0.02
+				improve_relations_maintain_cost_factor = -0.3
+			}
+		}
 	}
 }
-
-
-

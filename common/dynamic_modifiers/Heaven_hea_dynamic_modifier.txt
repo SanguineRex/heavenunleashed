@@ -52,3 +52,16 @@ hea_dynamic_theological_assembly = {
 	offensive_war_stability_factor = hea_theological_offensive_war
 	defensive_war_stability_factor = hea_theological_defensive_war
 }
+#####################
+##Foreign Relations##
+#####################
+hea_foreign_relation_dynamic_modifier = {
+	icon = GFX_idea_pantheon_sun
+	send_volunteer_size = hea_volunteer_size_var
+	experience_gain_army = hea_experience_gain_army_var
+	civilian_factory_use = hea_civilian_factory_use_var
+	improve_relations_maintain_cost_factor = -0.3
+	hidden_modifier = {
+        send_volunteer_divisions_required = -10 #To allow sending volunteers without divisions count requirement - @Deez
+    }
+}

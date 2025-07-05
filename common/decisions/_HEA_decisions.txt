@@ -590,7 +590,7 @@ hea_monsters_of_the_wastes_cat = {
 			add_to_variable = { hea_monsters_robots = 1 }
 			FROM = {
 				set_country_flag = hea_purged_flag
-				every_core_state = {g
+				every_core_state = {
 					add_manpower = -5000
 				}
 			}

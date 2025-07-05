@@ -588,6 +588,7 @@ country_event = {
 				OR = {
 					ROT_has_ai_behavior_grand_inquisition = yes
 					ROT_has_ai_behavior_wishmaidens = yes
+					HEA = { has_completed_focus = HEA_foreign_relation_rot }
 				}
 				factor = 0
 			}
@@ -621,6 +622,7 @@ country_event = {
 				OR = {
 					ROT_has_ai_behavior_infinity_knights = yes
 					ROT_has_ai_behavior_grand_inquisition = yes
+					HEA = { has_completed_focus = HEA_foreign_relation_rot }
 				}
 				factor = 0
 			}

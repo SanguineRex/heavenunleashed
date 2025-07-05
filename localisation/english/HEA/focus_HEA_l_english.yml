@@ -366,34 +366,46 @@ HEAWEHAVETANKS:0 "We Got Tanks yall!"
 
 ##########Center Focuses
 
-hea_michaels_crusade:0 "§RProclaiming Michael's Crusade"
-hea_michaels_crusade_desc:0 "§R"Now at that time Michael, the great prince who stands guard over the sons of your people, will arise. \n And there will be a time of distress such as never occurred since there was a nation until that time; and at that time your people, everyone who is found written in the book, will be rescued.""
+hea_michaels_crusade: "§RProclaiming Michael's Crusade§!"
+hea_michaels_crusade_desc: "§R\"Now at that time Michael, the great prince who stands guard over the sons of your people, will arise. \n And there will be a time of distress such as never occurred since there was a nation until that time; and at that time your people, everyone who is found written in the book, will be rescued.\"§!"
 hea_gabriels_forgiveness:0 "§2Sanctuary for the Faithful"
 hea_gabriels_forgiveness_desc:0 "§2But the wisdom from above is first pure \n then peaceable, gentle, open to reason \n full of mercy and good fruits, impartial and sincere.\n And a harvest of righteousness is sown in peace by those who make peace."
 
-hea_monsters_of_the_wastes:0 "§tA Terrible Land"
-hea_monsters_of_the_wastes_desc:0 "§t"As I live,” declares the Lord God, “surely because My flock has become a prey, My flock has even become food for all the beasts of the field for lack of a shepherd, and My shepherds did not search for My flock, but rather the shepherds fed themselves and did not feed My flock. \n - Ezekiel 34:8 "
+hea_monsters_of_the_wastes: "§tA Terrible Land§!"
+hea_monsters_of_the_wastes_desc: "§t\"As I live,\" declares the Lord God, \"surely because My flock has become a prey, My flock has even become food for all the beasts of the field for lack of a shepherd, and My shepherds did not search for My flock, but rather the shepherds fed themselves and did not feed My flock.\" \n - Ezekiel 34:8§!"
+hea_monsters_of_the_wastes_tt: "Unlocks §YDecisions§! to §RCleanse the lands§!."
 
-hea_the_dead_walk:0 "§LThe Dead are Walking"
-hea_the_dead_walk_desc:0 "§LFor if we live, we live to the Lord, and if we die, we die to the Lord. So then, whether we live or whether we die, we are the Lord's. \n -Romans 14:8 \n These wayward souls who are neither dead nor alive need be put to rest, so that their souls can wander ever forward to purgatory or nirvana"
+hea_the_dead_walk: "§LThe Dead are Walking§!"
+hea_the_dead_walk_desc: "§LFor if we live, we live to the Lord, and if we die, we die to the Lord. So then, whether we live or whether we die, we are the Lord's. \n -Romans 14:8 \n These wayward souls who are neither dead nor alive need be put to rest, so that their souls can wander ever forward to purgatory or nirvana§!"
+hea_the_dead_walk_trig_tt: "§RPurged§! at least §Y2§! §LGhouls§! targets"
+hea_the_dead_walk_tt: "The §LDead§! no longer walk this earth."
 
-hea_cains_empire:0 "§1Cain's Empire"
-hea_cains_empire_desc:0 "§1"When thou tillest the ground, it shall not henceforth yield unto thee her strength; a fugitive and a vagabond shalt thou be in the earth.” - Genesis 4:12. \n Cain lives, and forces captured lambs of the Lord to work and toil the land in his stead...we will put this old sinner to rest, his dinner with the Lucifer is long since overdue."
+hea_cains_empire: "§1Cain's Empire§!"
+hea_cains_empire_desc: "§1\"When thou tillest the ground, it shall not henceforth yield unto thee her strength; a fugitive and a vagabond shalt thou be in the earth.\" - Genesis 4:12. \n Cain lives, and forces captured lambs of the Lord to work and toil the land in his stead...we will put this old sinner to rest, his dinner with the Lucifer is long since overdue.§!"
+hea_cains_empire_tt: "His §1Empire§! falls."
 
-hea_leviathans_of_the_north:0 "§4Leviathans dwelling in the Coast"
-hea_leviathans_of_the_north_desc:0 "§4In that day the LORD with his sore and great and strong sword shall punish leviathan the piercing serpent, even leviathan that crooked serpent; and he shall slay the dragon that is in the sea.\n -Isaiah 27:1 \n The creatures of the sea wage open war, and men worship them freely, the Lord has not yet banished them, for are we, the faithful, not the Lord's sword?"
+hea_nephilim_horde: "§GHorde of Nephilim§!"
+hea_nephilim_horde_desc: "§G \"For if God spared not the angels that sinned, but cast them down to hell, and delivered them into chains of darkness, to be reserved unto judgment;\" \n -Peters 2:4 \n There they stand, the Nephilim, unbound by chains, and waging war in bloody conquest as the Lord knew they would, the full might of Heaven's Gate will meet the Nephilim and save the flock.§!"
+hea_nephilim_horde_trig_tt: "§RPurged§! at least §Y2§! §GMutants§! targets"
+hea_nephilim_horde_tt: "The §GHorde§! are no more."
 
-hea_nephilim_horde:0 "§GHorde of Nephilim"
-hea_nephilim_horde_desc:0 "§G "For if God spared not the angels that sinned, but cast them down to hell, and delivered them into chains of darkness, to be reserved unto judgment;” \n -Peters 2:4 \n There they stand, the Nephilim, unbound by chains, and waging war in bloody conquest as the Lord knew they would, the full might of Heaven's Gate will meet the Nephilim and save the flock."
+hea_leviathans_of_the_north: "§4Leviathans dwelling in the Coast§!"
+hea_leviathans_of_the_north_desc: "§4In that day the LORD with his sore and great and strong sword shall punish leviathan the piercing serpent, even leviathan that crooked serpent; and he shall slay the dragon that is in the sea.\n -Isaiah 27:1 \n The creatures of the sea wage open war, and men worship them freely, the Lord has not yet banished them, for are we, the faithful, not the Lord's sword?§!"
+hea_leviathans_of_the_north_trigg_tt: "§RPurged§! at least §Y1§! §4Mirelurk§! targets"
+hea_leviathans_of_the_north_tt: "§4Leviathans§! no longer lurk the sea."
 
-hea_red_devils_of_the_north:0 "§RThe Red Devils"
-hea_red_devils_of_the_north_desc:0 "§R"Freedom lies in being bold.” \n -Robert Frost \n There was a threat spoken of in great length before the bombs fell, the Socialists, the Communist, the Red Devils. The armies of the Lord will be bold today, for §2Fre§Wed§tom §Rfrom the Red Devil's machinations. "
+hea_steel_puppets: "§gSteel Puppets§!"
+hea_steel_puppets_desc: " \n §gHeaven's Gate welcomes all lost sheep to the flock, but those who would twist theiry body with metal, or were not born of a womb at all? They were not lovingly crafted by the Father, they're an abomination of the Old World, and we need only look around to see what wonders the Old World has to offer.§!"
+hea_steel_puppets_trigg_tt: "§RPurged§! at least §Y2§! §gRobots§! targets"
+hea_steel_puppets_tt: "The §gPuppets§! now rest forever."
 
-hea_steel_puppets:0 "§gSteel Puppets"
-hea_steel_puppets_desc:0 " \n §gHeaven's Gate welcomes all lost sheep to the flock, but those who would twist theiry body with metal, or were not born of a womb at all? They were not lovingly crafted by the Father, they're an abomination of the Old World, and we need only look around to see what wonders the Old World has to offer."
+hea_red_devils_of_the_north: "§RThe Red Devils§!"
+hea_red_devils_of_the_north_desc: "§R\"Freedom lies in being bold.\" \n -Robert Frost \n There was a threat spoken of in great length before the bombs fell, the Socialists, the Communist, the Red Devils. The armies of the Lord will be bold today, for §2Fre§!§Wed§!§tom§! §Rfrom the Red Devil's machinations.§!"
+hea_red_devils_of_the_north_trigg_tt: "§RPurged§! at least §Y1§! §RCommunist§! targets"
+hea_red_devils_of_the_north_tt: "The §RReds§! shall bleed."
 
-hea_triumphant_nation:0 "§YTriumph over the monsters..."
-hea_triumphant_nation_desc:0 "§Y"Let Us make man in Our image, according to Our likeness; let them have dominion over the fish of the sea, over the birds of the air, and over the cattle, over all the earth and over every creeping thing that creeps on the earth." \n- Genesis 1:26"
+hea_triumphant_nation: "§YTriumph over the monsters...§!"
+hea_triumphant_nation_desc: "§Y\"Let Us make man in Our image, according to Our likeness; let them have dominion over the fish of the sea, over the birds of the air, and over the cattle, over all the earth and over every creeping thing that creeps on the earth.\" \n- Genesis 1:26§!"
 
 #####End of Center Focuses
 
@@ -626,13 +638,13 @@ hea_steam_heavensreach_desc:0 "With technology, faith, and blessed atom, our ang
 
 ##############10th Crusade Focuses
 
-hea_trees_and_faithless:0 "Trees and Faithless"
-hea_trees_and_faithless_desc:0 "They hide in homes of pine, refusing to pledge their faith to the father above, or worse, quarelling, amongst themselves! Tribals, heretics, and Cowards the lot of them! In the name of the Father, Michael will tame those wild lands."
-hea_trees_and_faithless_tt:0 "§GGrant decisions to declare crusades against:\n-[ROS.GetNameWithFlag]\n-[SHO.GetNameWithFlag]\n-[TIM.GetNameWithFlag]"
+hea_trees_and_faithless: "§GTrees and Faithless§!"
+hea_trees_and_faithless_desc: "They hide in homes of pine, refusing to pledge their faith to the father above, or worse, quarelling, amongst themselves! Tribals, heretics, and Cowards the lot of them! In the name of the Father, Michael will tame those wild lands."
+hea_trees_and_faithless_tt: "Unlocks §Ydecisions§! to declare crusades against:\n- [ROS.GetNameWithFlag]\n- [SHO.GetNameWithFlag]\n- [TIM.GetNameWithFlag]"
 
-hea_savages_and_heretics:0 "Heretics and Failed Conquests"
-hea_savages_and_heretics_desc:0 "Amon will fall in line or die. Presbyter will die for starting this entire mess, and if Cain hasn't convinced those accursed heretics to worship the true faith of Steam and Christ, then he too will face our wrath."
-hea_savages_and_heretics_tt:0 "§RGrant decisions to declare crusades against:\n-[MUR.GetNameWithFlag]\n-[ANO.GetNameWithFlag]\n-[BDT.GetNameWithFlag]"
+hea_savages_and_heretics: "§RHeretics and Failed Conquests§!"
+hea_savages_and_heretics_desc: "Amon will fall in line or die. Presbyter will die for starting this entire mess, and if Cain hasn't convinced those accursed heretics to worship the true faith of Steam and Christ, then he too will face our wrath."
+hea_savages_and_heretics_tt: "Unlocks §Ydecisions§! to declare crusades against:\n- [MUR.GetNameWithFlag]\n- [ANO.GetNameWithFlag]\n- [BDT.GetNameWithFlag]"
 
 hea_target_ano:0 "Crush the Anointed"
 hea_target_ano_desc:0 "Who anointed them? I do not recall convening and announcing amongst a great council that the Lord had chosen Amon or his flock. If he is so inclined to be among the chosen few, then they will join Heaven's Gate after proving their worth."
@@ -682,8 +694,8 @@ hea_target_tribal_cults_desc:0 "There are cults that ride in great metal machine
 hea_true_crusaders:0 "True Crusaders"
 hea_true_crusaders_desc:0 "The warriors of Heaven's Gate have been tried and tested against countless heretics, heathens, and traitors, and they have not been found wanting. The Crusade is long from over, but Heaven's Gate can be assured that its warriors will not take a step back against the enemies of the Lord"
 
-hea_archangel_michael:0 "§RArchangel Michael"
-hea_archangel_michael_desc:0 "§RBlessed Michael, the archangel, defend us in the hour of conflict. \n Be our safeguard against the wickedness and snares of the devil\n and do thou, O Prince of the heavenly host, \n by the power of God thrust Satan down to hell\n and with him those other wicked spirits \n who wander through the world for the ruin of souls"
+hea_archangel_michael: "§RArchangel Michael§!"
+hea_archangel_michael_desc: "§RBlessed Michael, the archangel, defend us in the hour of conflict. \n Be our safeguard against the wickedness and snares of the devil\n and do thou, O Prince of the heavenly host, \n by the power of God thrust Satan down to hell\n and with him those other wicked spirits \n who wander through the world for the ruin of souls.§!"
 
 hea_vault_tec_calling:0 "Traitors to the Faith"
 hea_vault_tec_calling_desc:0 "Vault-Tec turned its back on how many faithful? How many burned because they were greedy? While the sinners lived, the faithful burned, but we did not die, no we perserved, and we did not forget. \n When we conquer them, we will strip their vaults, ridding the world of the foolish belief that salvation lies underground."
@@ -691,8 +703,8 @@ hea_vault_tec_calling_desc:0 "Vault-Tec turned its back on how many faithful? Ho
 hea_cities_of_sin:0 "Cities of Sin"
 hea_cities_of_sin_desc:0 "There are three cities those degeneracy have reached us, having learned of them, we know we cannot do anything but burn them down \n If we are wise, perhaps we can use their decadance to further our own goals..."
 
-hea_old_world_failures:0 "§ROld World Failures"
-hea_old_world_failures_desc:0 "§2There are traces of America left, the nation which our forefathers once called home, they are but vestiges of the once great Empire, and what an empire it was. §W No matter, they will not elude the Lord's judgement \n §ROnce we cleanse at least one of the primary holdouts of those foolish few who think themselves great for claiming american heritage, we may even be able to replicate what worthwhile technology they had..."
+hea_old_world_failures: "§ROld World Failures§!"
+hea_old_world_failures_desc: "§2There are traces of America left, the nation which our forefathers once called home, they are but vestiges of the once great Empire, and what an empire it was.§! §W No matter, they will not elude the Lord's judgement§! \n §ROnce we cleanse at least one of the primary holdouts of those foolish few who think themselves great for claiming american heritage, we may even be able to replicate what worthwhile technology they had...§!"
 
 hea_mexico_heretics:0 "Heretics and Savages"
 hea_mexico_heretics_desc:0 "In Mexico, we see men worshipping false gods, and courting Lucifer by spreading poison to the children of the waste. We will cleanse the filth from the land, for who are they to take advantage of the Lord's flock? \n Who knows, these infidels may even know something of worth."
@@ -718,8 +730,8 @@ hea_the_chained_witches_desc:0 "They are tainted, witches, the servants of the d
 hea_frozen_north:0 "The Frozen North"
 hea_frozen_north_desc:0 "There are men who lived in the North, who believe themselves worthy of escaping the judgement of the faithful, but they are wrong, they kill, they steal, they live like kings while the flock die like rats, the holy crusade will not be warded off by a little cold, our mighty arms will shatter aside the nations of the north, for the people they so cruely oppresse."
 
-hea_right_hand_of_god:0 "§RThe Lord's Sword"
-hea_right_hand_of_god_desc:0 "§R"However, I will tell you what is inscribed in the writing of truth. Yet there is no one who stands firmly with me against these forces except Michael, your prince." \n -Daniel 10:21"
+hea_right_hand_of_god: "§RThe Lord's Sword§!"
+hea_right_hand_of_god_desc: "§R\"However, I will tell you what is inscribed in the writing of truth. Yet there is no one who stands firmly with me against these forces except Michael, your prince.\" \n -Daniel 10:21§!"
 
 ###################End of 10th Crusade
 
@@ -819,6 +831,19 @@ hea_steam_wonderland_tt:0 "§YThis will give us 3% War Support and 3% Recruitabl
 
 hea_billowing_inquisition:0 "§RThe Billowing Inquisition"
 hea_billowing_inquisition_desc:0 ""
+
+
+#######################
+###Foreign Relations### 
+#######################
+# Need you to write focus loc here Rex - @Deez
+###Rotpurgers 
+HEA_foreign_relation_rot_tt: "Completing this §YFocus§! will put §O[ROT.GetNameWithFlag]§! on the path to become our §4ally§!."
+HEA_foreign_relation_rot_equipment_tt: "Completing this §YFocus§! will speed up §O[ROT.GetNameWithFlag]§!'s progress of becoming our §4ally§!."
+HEA_foreign_relation_rot_manpower_tt: "Completing this §YFocus§! will speed up §O[ROT.GetNameWithFlag]§!'s progress of becoming our §4ally§!."
+
+###Bone Dancers
+HEA_foreign_relation_bdt_tt: "Completing this §YFocus§! will put §0[BDT.GetNameWithFlag]§! on the path to become our §4ally§!."
 
 #######End of the Billowing Grand
 

@@ -1114,10 +1114,10 @@ spriteTypes = {
 		name = "GFX_goal_HEA_ano_sheep"
 		texturefile = "gfx/interface/goals/unique/HEA/ano_sheep.dds"
 	}
-						spriteType = {
-		name = "GFX_goal_HEA_ano_leavevault"
-		texturefile = "gfx/interface/goals/unique/HEA/ano_leavevault.dds"
-	}
+	#spriteType = { #Disabled, can't find the file - @Deez
+	#	name = "GFX_goal_HEA_ano_leavevault"
+	#	texturefile = "gfx/interface/goals/unique/HEA/ano_leavevault.dds"
+	#}
 						spriteType = {
 		name = "GFX_goal_HEA_ano_orissa"
 		texturefile = "gfx/interface/goals/unique/HEA/ano_orissa.dds"

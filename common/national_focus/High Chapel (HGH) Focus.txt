@@ -1,0 +1,1013 @@
+focus_tree = {
+	id = hgh_beginning_tree
+	country = {
+		factor = 0
+		modifier = {
+				tag = HGH
+			add = 20
+		}
+	}
+	default = no
+	
+	###History Focuses
+	
+		focus = {
+		id = hgh_beginning
+		icon = GFX_goal_HEA_hgh_afternuke
+		cost = 7
+		x = 14
+		y = 1
+		available = {
+			
+		}
+	
+		completion_reward = {
+			country_event = nf_utah.200
+		}
+		
+	}
+			focus = {
+		id = hgh_nicea
+		icon = GFX_goal_HEA_hgh_matron
+		cost = 7
+		x = 14
+		y = 2
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_beginning
+			}
+		completion_reward = {
+		country_event = nf_utah.201
+				
+		}
+		
+	}
+			focus = {
+		id = hgh_schism
+		icon = GFX_goal_HEA_hgh_schism
+		cost = 7
+		x = 14
+		y = 3
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_nicea
+			}
+		completion_reward = {
+		country_event = nf_utah.202
+				
+		}
+		
+	}
+			focus = {
+		id = hgh_steam
+		icon = GFX_goal_HEA_hgh_heavensgate
+		cost = 7
+		x = 14
+		y = 4
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_schism
+			}
+		completion_reward = {
+		country_event = nf_utah.203
+				
+		}
+		
+	}
+	
+	
+	###Contesting the Rivers
+		focus = {
+		id = hgh_contesting_water
+		icon = GFX_goal_HEA_hgh_contesting
+		cost = 30
+		x = 10
+		y = 5
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_steam
+			}
+		completion_reward = {
+		add_war_support = 0.05
+		navy_experience = 25
+		add_timed_idea = {
+			idea = HGH_navyresearch_ideabuff
+			days = 180
+		}
+		}
+		
+	}
+			focus = {
+		id = hgh_raising_fleets
+		icon = GFX_goal_HEA_hgh_raisefleets
+		cost = 30
+		x = 9
+		y = 6
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_contesting_water
+			}
+		completion_reward = {
+			172 = {
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+		add_timed_idea = {
+			idea = HGH_shipwrightblessing
+			days = 180
+		}
+		}
+		
+	}
+			focus = {
+		id = hgh_preparing_mariners
+		icon = GFX_goal_HEA_hgh_mariner
+		cost = 30
+		x = 11
+		y = 6
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_contesting_water
+			}
+		completion_reward = {
+		set_technology = {
+			hgh_maritimers = 1
+		}
+				
+		}
+		
+	}
+			focus = {
+		id = hgh_contested_waters
+		icon = GFX_goal_HEA_hgh_contestedwaters
+		cost = 30
+		x = 10
+		y = 7
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_raising_fleets
+			}
+		prerequisite = {
+			focus = hgh_preparing_mariners
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+	#####Arming the Fleetfoot
+		focus = {
+		id = hgh_fleetwheels
+		icon = GFX_goal_HEA_hgh_fleetwheels
+		cost = 30
+		x = 18
+		y = 5
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_steam
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+			focus = {
+		id = hgh_crackshots
+		icon = GFX_goal_HEA_hgh_crackshots
+		cost = 30
+		x = 17
+		y = 6
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_fleetwheels
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+			focus = {
+		id = hgh_piercing_rifles
+		icon = GFX_goal_HEA_hgh_piercing
+		cost = 30
+		x = 19
+		y = 6
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_fleetwheels
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+			focus = {
+		id = hgh_fleetdeath
+		icon = GFX_goal_HEA_hgh_fleetdeath
+		cost = 30
+		x = 18
+		y = 7
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_piercing_rifles
+			}
+		prerequisite = {
+			focus = hgh_crackshots
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+	####Praying to God
+			focus = {
+		id = hgh_spreading_alms
+		icon = GFX_goal_HEA_hgh_alms
+		cost = 30
+		x = 14
+		y = 5
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_steam
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+			focus = {
+		id = hgh_aid_waywardflock
+		icon = GFX_goal_HEA_hgh_waywardflock
+		cost = 30
+		x = 13
+		y = 6
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_spreading_alms
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+			focus = {
+		id = hgh_praiseoldsaints
+		icon = GFX_goal_HEA_hgh_saints
+		cost = 30
+		x = 15
+		y = 6
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_spreading_alms
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+			focus = {
+		id = hgh_raising_nicea
+		icon = GFX_goal_HEA_hgh_nicearise
+		cost = 7
+		x = 14
+		y = 7
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_praiseoldsaints
+			}
+			prerequisite = {
+			focus = hgh_aid_waywardflock
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+	
+	####Proactive War
+	
+		focus = {
+		id = hgh_spreading_the_warfront
+		icon = GFX_goal_HEA_hgh_trumpetsofwar
+		cost = 30
+		x = 12
+		y = 8
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_raising_nicea
+			}
+			prerequisite = {
+			focus = hgh_contested_waters
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+	#Expand the War Front
+		focus = {
+		id = hgh_tackling_the_cultists
+		icon = GFX_goal_HEA_hgh_bonedancers
+		cost = 30
+		x = 11
+		y = 9
+		available = {
+			
+		}
+		mutually_exclusive = {
+		focus = hgh_raising_murtaugh_high	
+		}
+		prerequisite = {
+			focus = hgh_spreading_the_warfront
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+			focus = {
+		id = hgh_root_and_stem
+		icon = GFX_goal_HEA_hgh_burnbonedancers
+		cost = 30
+		x = 11
+		y = 10
+		available = {
+			
+		}
+
+		prerequisite = {
+			focus = hgh_tackling_the_cultists
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+			focus = {
+		id = hgh_a_new_god
+		icon = GFX_goal_HEA_hgh_truegod
+		cost = 90
+		x = 11
+		y = 11
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_root_and_stem
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+	#Aid Murtaugh's War against the Anointed
+		focus = {
+		id = hgh_raising_murtaugh_high
+		icon = GFX_goal_HEA_hgh_raisingmurtaugh
+		cost = 30
+		x = 13
+		y = 9
+		available = {
+			
+		}
+		mutually_exclusive = {
+		focus = hgh_tackling_the_cultists	
+		}
+		prerequisite = {
+			focus = hgh_spreading_the_warfront
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+			focus = {
+		id = hgh_anointed_moles
+		icon = GFX_goal_HEA_hgh_anointedjudas
+		cost = 30
+		x = 13
+		y = 10
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_raising_murtaugh_high
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+			focus = {
+		id = hgh_crusaders_lost
+		icon = GFX_goal_HEA_hgh_executecrusaders
+		cost = 30
+		x = 13
+		y = 11
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_anointed_moles
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+	##Expanded Warfront
+		focus = {
+		id = hgh_high_chapel_shepherds
+		icon = GFX_goal_HEA_hgh_shepherds
+		cost = 30
+		x = 12
+		y = 12
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_crusaders_lost
+			focus = hgh_a_new_god
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+	####The Southern Schism
+	
+	focus = {
+		id = hgh_diplomacy
+		icon = GFX_goal_HEA_hgh_schismdecision
+		cost = 30
+		x = 16
+		y = 8
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_raising_nicea
+			}
+			prerequisite = {
+			focus = hgh_fleetdeath
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+	#Murtaugh Alliance
+		focus = {
+		id = hgh_murtaugh_fold
+		icon = GFX_goal_HEA_hgh_shepherdann
+		cost = 30
+		x = 15
+		y = 9
+		mutually_exclusive = {
+		focus = hgh_annointed_neutrality	
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_diplomacy
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+				focus = {
+		id = hgh_fleetfoot_trainers
+		icon = GFX_goal_HEA_hgh_fleetfeetvets
+		cost = 30
+		x = 15
+		y = 10
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_murtaugh_fold
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+					focus = {
+		id = hgh_veteran_sailors
+		icon = GFX_goal_HEA_hgh_sailorvets
+		cost = 30
+		x = 15
+		y = 11
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_fleetfoot_trainers
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+		focus = {
+		id = hgh_southern_bulwark
+		icon = GFX_goal_HEA_hgh_southernbulwark
+		cost = 30
+		x = 15
+		y = 12
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_veteran_sailors
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+	
+	#Leave Murtaugh and the Anointed be
+		focus = {
+		id = hgh_annointed_neutrality
+		icon = GFX_goal_HEA_hgh_anointedneutrality
+		cost = 15
+		x = 18
+		y = 9
+		available = {
+			
+		}
+		mutually_exclusive = {
+		focus = hgh_murtaugh_fold	
+		}
+		prerequisite = {
+			focus = hgh_diplomacy
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+	##Ano Refused Offer
+		focus = {
+		id = hgh_ano_refusal
+		icon = GFX_goal_HEA_hgh_anointedrefusal
+		cost = 15
+		x = 17
+		y = 10
+		available = {
+			
+		}
+
+		prerequisite = {
+			focus = hgh_annointed_neutrality
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+			focus = {
+		id = hgh_southern_wall
+		icon = GFX_goal_HEA_hgh_constructingwall
+		cost = 45
+		x = 17
+		y = 11
+		available = {
+			
+		}
+
+		prerequisite = {
+			focus = hgh_ano_refusal
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+	##Ano Agreed
+			focus = {
+		id = hgh_ano_agreement
+		icon = GFX_goal_HEA_hgh_begforgiveness
+		cost = 15
+		x = 19
+		y = 10
+		available = {
+			
+		}
+
+		prerequisite = {
+			focus = hgh_annointed_neutrality
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+		focus = {
+		id = hgh_murtaugh_refugees
+		icon = GFX_goal_HEA_hgh_childrenrefuge
+		cost = 30
+		x = 19
+		y = 11
+		available = {
+			
+		}
+
+		prerequisite = {
+			focus = hgh_annointed_neutrality
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+	##End of that
+			focus = {
+		id = hgh_southern_mess
+		icon = GFX_goal_HEA_hgh_schism
+		cost = 30
+		x = 18
+		y = 12
+		available = {
+			
+		}
+		prerequisite = {
+			focus = hgh_southern_wall
+			focus = hgh_murtaugh_refugees
+			}
+		completion_reward = {
+		
+				
+		}
+		
+	}
+	#######Heaven Contested
+	focus = {
+		id = utah_HGH_heaven_contested
+		icon = GFX_goal_HEA_hgh_heavensgate
+		cost = 60
+		x = 14
+		y = 13
+			prerequisite = {
+			focus = hgh_southern_mess
+			focus = hgh_southern_bulwark
+		}
+		prerequisite = {
+			focus = hgh_high_chapel_shepherds
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = HEA
+				modifier = HGH_hea_opinion
+			}
+			reverse_add_opinion_modifier = {
+				target = HEA
+				modifier = HGH_hea_opinion
+			}
+			add_war_support = 0.1
+			add_command_power = 25
+		}
+		available = {
+			OR = {
+				NOT = {
+					has_completed_focus = utah_HGH_the_great_river
+				}
+				has_completed_focus = utah_HGH_revoke_water_way_rights
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HEA = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					MUR = { is_ai = no }
+					ANO = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_HGH_inquisitors_passing_border
+		icon = GFX_goal_HEA_hgh_border
+		cost = 60
+		x = 15
+		y = 14
+		completion_reward = {
+			hidden_effect = {
+				172 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+				198 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+				435 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+				280 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = fortify_hea_border
+			division_template = {
+				name = "Mountain Pass Protectors"
+				regiments = {
+					militia = {
+						x = 0
+						y = 0
+					}
+					militia = {
+						x = 0
+						y = 1
+					}
+					militia = {
+						x = 0
+						y = 2
+					}
+					militia = {
+						x = 1
+						y = 0
+					}
+					militia = {
+						x = 1
+						y = 1
+					}
+					militia = {
+						x = 1
+						y = 2
+					}
+				}
+			}
+			962 = {
+				create_unit = {
+					division = "name = \"Leadore Guards\" division_template = \"Mountain Pass Protectors\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"May Guards\" division_template = \"Mountain Pass Protectors\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+					owner = ROOT
+				}
+			}
+		}
+		prerequisite = {
+			focus = utah_HGH_heaven_contested
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HEA = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					MUR = { is_ai = no }
+					ANO = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_HGH_fallback_fortresses
+		icon = GFX_goal_HEA_hgh_fallback
+		cost = 60
+		x = 15
+		y = 15
+		completion_reward = {
+			unlock_decision_tooltip = walls_of_jericho
+			add_ideas = {
+				utah_hgh_fallback_fortifying
+			}
+		}
+		prerequisite = {
+			focus = utah_HGH_inquisitors_passing_border
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HEA = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					MUR = { is_ai = no }
+					ANO = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_HGH_root_out_sympathisers
+		icon = GFX_goal_HEA_hgh_judge
+		cost = 60
+		x = 13
+		y = 14
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						is_owned_by = HEA
+					}
+				}
+				set_temp_variable = {
+					pop_add = -650
+				}
+				add_state_population_no_state_name = yes
+			}
+			add_ideas = utah_hgh_loyalty
+		}
+		prerequisite = {
+			focus = utah_HGH_heaven_contested
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HEA = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					MUR = { is_ai = no }
+					ANO = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_HGH_final_effort
+		icon = GFX_goal_HEA_hgh_borderguard
+		cost = 60
+		x = 13
+		y = 15
+		completion_reward = {
+			add_timed_idea = {
+				idea = utah_hgh_final_effort
+				days = 365
+			}
+			add_war_support = 0.05
+		}
+		prerequisite = {
+			focus = utah_HGH_root_out_sympathisers
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HEA = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					MUR = { is_ai = no }
+					ANO = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_HGH_war_in_heaven
+		icon = GFX_goal_HEA_hgh_contesting_heaven
+		cost = 60
+		x = 14
+		y = 16
+		
+		completion_reward = {
+			create_wargoal = {
+			type = annex_everything
+			target = HEA
+			expire = 45
+			}
+			add_command_power = 25
+		}
+		prerequisite = {
+			focus = utah_HGH_final_effort
+			focus = utah_HGH_fallback_fortresses
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HEA = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					MUR = { is_ai = no }
+					ANO = { is_ai = no }
+				}
+			}
+		}
+	}
+	
+		
+			focus = {
+		id = bdt_future_tec_geck_research_facility
+		icon = GFX_goal_BDT_geck_corrupted
+		cost = 7
+		x = 30
+		y = 10
+		completion_reward = {
+			
+			set_cosmetic_tag = BDT_seraphim
+		}
+	}
+}

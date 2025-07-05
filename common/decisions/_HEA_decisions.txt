@@ -449,7 +449,7 @@ hea_monsters_of_the_wastes_cat = {
 		target_trigger = { 
 			FROM = {
 				NOT = {
-					any_core_state = { has_state_flag = HEA_purged_state_flag }
+					has_country_flag = hea_purged_flag
 				}
 			}
 		}
@@ -463,8 +463,8 @@ hea_monsters_of_the_wastes_cat = {
 		remove_effect = {
 			add_to_variable = { hea_monsters_ghouls = 1 }
 			FROM = {
+				set_country_flag = hea_purged_flag
 				every_core_state = {
-					set_state_flag = HEA_purged_state_flag
 					add_manpower = -5000
 				}
 			}
@@ -491,7 +491,7 @@ hea_monsters_of_the_wastes_cat = {
 		target_trigger = { 
 			FROM = {
 				NOT = {
-					any_core_state = { has_state_flag = HEA_purged_state_flag }
+					has_country_flag = hea_purged_flag
 				}
 			}
 		}
@@ -505,8 +505,8 @@ hea_monsters_of_the_wastes_cat = {
 		remove_effect = {
 			add_to_variable = { hea_monsters_mutants = 1 }
 			FROM = {
+				set_country_flag = hea_purged_flag
 				every_core_state = {
-					set_state_flag = HEA_purged_state_flag
 					add_manpower = -5000
 				}
 			}
@@ -533,7 +533,7 @@ hea_monsters_of_the_wastes_cat = {
 		target_trigger = { 
 			FROM = {
 				NOT = {
-					any_core_state = { has_state_flag = HEA_purged_state_flag }
+					has_country_flag = hea_purged_flag
 				}
 			}
 		}
@@ -547,8 +547,8 @@ hea_monsters_of_the_wastes_cat = {
 		remove_effect = {
 			add_to_variable = { hea_monsters_mirelurks = 1 }
 			FROM = {
+				set_country_flag = hea_purged_flag
 				every_core_state = {
-					set_state_flag = HEA_purged_state_flag
 					add_manpower = -5000
 				}
 			}
@@ -575,7 +575,7 @@ hea_monsters_of_the_wastes_cat = {
 		target_trigger = { 
 			FROM = {
 				NOT = {
-					any_core_state = { has_state_flag = HEA_purged_state_flag }
+					has_country_flag = hea_purged_flag
 				}
 			}
 		}
@@ -589,8 +589,8 @@ hea_monsters_of_the_wastes_cat = {
 		remove_effect = {
 			add_to_variable = { hea_monsters_robots = 1 }
 			FROM = {
-				every_core_state = {
-					set_state_flag = HEA_purged_state_flag
+				set_country_flag = hea_purged_flag
+				every_core_state = {g
 					add_manpower = -5000
 				}
 			}
@@ -617,7 +617,7 @@ hea_monsters_of_the_wastes_cat = {
 		target_trigger = { 
 			FROM = {
 				NOT = {
-					any_core_state = { has_state_flag = HEA_purged_state_flag }
+					has_country_flag = hea_purged_flag
 				}
 			}
 		}
@@ -631,8 +631,8 @@ hea_monsters_of_the_wastes_cat = {
 		remove_effect = {
 			add_to_variable = { hea_monsters_communists = 1 }
 			FROM = {
+				set_country_flag = hea_purged_flag
 				every_core_state = {
-					set_state_flag = HEA_purged_state_flag
 					add_manpower = -5000
 				}
 			}

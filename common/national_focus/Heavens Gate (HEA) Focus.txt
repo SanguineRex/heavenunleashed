@@ -4879,6 +4879,7 @@ focus = {
 		}
 
 		completion_reward = {
+			capital_scope = { add_manpower = -2000 }
 			ROT = {
 				add_opinion_modifier = {
 					target = ROOT
@@ -4915,6 +4916,14 @@ focus = {
 					var = hea_civilian_factory_use_var
 					value = 0
 				}
+				set_variable = {
+					var = hea_diplomacy_distance_var
+					value = 200
+				}
+				set_variable = {
+					var = hea_diplomacy_distance_factor_var
+					value = 0
+				}
 				add_dynamic_modifier = {
 					modifier = hea_foreign_relation_dynamic_modifier
 				}
@@ -4945,6 +4954,10 @@ focus = {
 		}
 
 		completion_reward = {
+			capital_scope = { add_manpower = -250 }
+			ROT = {
+				capital_scope = { add_manpower = 250 }
+			}
 			add_to_variable = {
 				var = hea_experience_gain_army_var
 				value = 0.03
@@ -4989,6 +5002,10 @@ focus = {
 		}
 
 		completion_reward = {
+			capital_scope = { add_manpower = -250 }
+			ROT = {
+				capital_scope = { add_manpower = 250 }
+			}
 			send_equipment = {
 				equipment = infantry_equipment
 				amount = 300
@@ -5039,9 +5056,11 @@ focus = {
 		}
 
 		completion_reward = {
+			capital_scope = { add_manpower = -250 }
 			add_manpower = -200
 			ROT = {
 				add_manpower = 200
+				capital_scope = { add_manpower = 250 }
 			}
 			if = { #If ROT already have the spirit this focus will reduce the timed idea time
 				limit = {
@@ -5073,6 +5092,10 @@ focus = {
 		}
 
 		completion_reward = {
+			capital_scope = { add_manpower = -250 }
+			ROT = {
+				capital_scope = { add_manpower = 250 }
+			}
 			add_to_variable = {
 				var = hea_volunteer_size_var
 				value = 1
@@ -5080,6 +5103,10 @@ focus = {
 			add_to_variable = {
 				var = hea_experience_gain_army_var
 				value = 0.02
+			}
+			add_to_variable = {
+				var = hea_diplomacy_distance_factor_var
+				value = 0.2
 			}
 			add_political_power = 30
 			effect_tooltip = {
@@ -5135,11 +5162,13 @@ focus = {
 					add_idea = hea_foreign_relation_idea_expand
 				}
 			}
+			capital_scope = { add_manpower = -250 }
 			BDT = {
 				add_popularity = {
 					ideology = People
 					popularity = 0.05
 				}
+				capital_scope = { add_manpower = 250 }
 			}
 			custom_effect_tooltip = HEA_foreign_relation_bdt_tt
 		}
@@ -5171,6 +5200,7 @@ focus = {
 		}
 
 		completion_reward = {
+			capital_scope = { add_manpower = -250 }
 			send_equipment = {
 				equipment = infantry_equipment
 				amount = 30
@@ -5187,6 +5217,7 @@ focus = {
 					ideology = People
 					popularity = 0.05
 				}
+				capital_scope = { add_manpower = 250 }
 			}
 		}
 	}
@@ -5216,9 +5247,11 @@ focus = {
 		}
 
 		completion_reward = {
+			capital_scope = { add_manpower = -250 }
 			add_manpower = -200
 			BDT = {
 				add_manpower = 200
+				capital_scope = { add_manpower = 250 }
 			}
 			army_experience = 15
 			BDT = {
@@ -5245,6 +5278,10 @@ focus = {
 		}
 
 		completion_reward = {
+			capital_scope = { add_manpower = -250 }
+			BDT = {
+				capital_scope = { add_manpower = 250 }
+			}
 			add_to_variable = {
 				var = hea_volunteer_size_var
 				value = 1
@@ -5252,6 +5289,10 @@ focus = {
 			add_to_variable = {
 				var = hea_experience_gain_army_var
 				value = 0.02
+			}
+			add_to_variable = {
+				var = hea_diplomacy_distance_factor_var
+				value = 0.2
 			}
 			add_political_power = 30
 			effect_tooltip = {

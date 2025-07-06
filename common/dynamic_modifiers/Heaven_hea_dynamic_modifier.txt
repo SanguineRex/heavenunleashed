@@ -60,7 +60,8 @@ hea_foreign_relation_dynamic_modifier = {
 	send_volunteer_size = hea_volunteer_size_var
 	experience_gain_army = hea_experience_gain_army_var
 	civilian_factory_use = hea_civilian_factory_use_var
-	improve_relations_maintain_cost_factor = -0.3
+	diplomacy_distance = hea_diplomacy_distance_var
+	diplomacy_distance_factor = hea_diplomacy_distance_factor_var
 	hidden_modifier = {
         send_volunteer_divisions_required = -10 #To allow sending volunteers without divisions count requirement - @Deez
     }

@@ -837,42 +837,38 @@ hea_lost_scientists_tt:0 "§YThis will give us 1% War Support and unlock Decisio
 ###Foreign Relations### 
 #######################
 
-  HEA_foreign_relation_start:0 "§YThe Flock and the Flame"
-  HEA_foreign_relation_start_desc:0 "§YWe bring two gifts to the Wasteland: the warmth of the Fold, and the cleansing fire of revelation.§!\nTo the lost and the broken, we offer belonging. To the misguided and the proud, we offer correction. Missionaries go forth bearing scripture and sacrament, yet behind them ride knights bearing sword and fire.\n§YLet all who remain hear the call: join the Flock, or face the Flame."
+HEA_foreign_relation_start: "§YThe Flock and the Flame§!"
+HEA_foreign_relation_start_desc: "§YWe bring two gifts to the Wasteland: the warmth of the Fold, and the cleansing fire of revelation.§!\nTo the lost and the broken, we offer belonging. To the misguided and the proud, we offer correction. Missionaries go forth bearing scripture and sacrament, yet behind them ride knights bearing sword and fire.\n§YLet all who remain hear the call: join the Flock, or face the Flame.§!"
 
-  HEA_foreign_relation_rot:0 "§tScripture for the Scorned"
-  HEA_foreign_relation_rot_desc:0 "The Rotpurgers wage a holy war of their own, guided by prophets of vengeance and blood-soaked ritual. But zeal without truth is only madness by another name. Our missionaries march not unguarded, nor unarmed. The Vault may have cast them out, but we offer something greater: purpose, purity, and a cause that burns brighter than revenge. §tLet them kneel, not to us, but to the Truth we bring."
-
-  HEA_foreign_relation_rot_equipment:0 "The Gospel and the Gun"
-  HEA_foreign_relation_rot_equipment_desc:0 "Lo, the Fold did not send only preachers.\nWe sent fire to warm the cold hands of the faithful.\nWe sent lead to answer the heretic’s howl.\n We sent steel, and powder, and promise.\n\nThe Rotpurgers rise, not as orphans of a broken vault,\nbut as crusaders anointed in smoke and scripture.\nTheir wrath is no longer their own.\nIt is ours: sharpened, loaded, and unleashed.\n\nLet the Old Country tremble.\nFor the Word now walks beside the gun."
-
-  HEA_foreign_relation_rot_manpower:0 "Let the Faithful Bleed Together"
-  HEA_foreign_relation_rot_manpower_desc:0 "No bond is deeper than blood shed for the same flame.\nWe do not command them. We walk beside them.\nTheir war is now our witness. Their dead, our martyrs.\n\nKnights of the Gate now stand shoulder to shoulder with the Rotpurgers,\nbearing no heraldry but righteousness, \nno orders but scripture,\nno fear but failure in the eyes of the Kingdom.\n\nLet them bleed beside our own.\nLet them see we are more than words and banners.\nLet the faithful bleed together,\nand let the wicked learn what unity in purpose truly means."
-
-  HEA_foreign_relation_rot_final:0 "Ashes to Ashes, Flesh to Faith"
-  HEA_foreign_relation_rot_final_desc:0 "Once cast out. Now called home.\nThey were children of the Vault, exiled in hate and flame.\nBut they have shed the name of exile.\nThey have cast off wrath without meaning.\nAnd they have answered.\n\nThrough war and witness, through blood and belief, the Rotpurgers have earned their place—not as vassals, but as Children of the Gate.\nThey walk the Wasteland as our kin.\nTheir dead are remembered in our prayers.\nTheir banners are dipped in the same holy flame.\n\nFrom ash, they have risen.\nFrom flesh, they have found faith.\nThe Fold grows stronger—not by conquest, but by covenant."
-
-  HEA_foreign_relation_bdt:0 "§3Among the Bones, we Buid"
-  HEA_foreign_relation_bdt_desc:0 "The Seraph Lords were not sent to conquer. In the shadow of the Bone Dancers' rites, they have held their sermons. Now, we send more. Supplies, scribes, and steam-fed strength cross the mountains, not with fanfare, but with purpose. The Gospel is already there. Our duty now is to ensure it takes hold. §3What we build will outlast the drums."
-
-  HEA_foreign_relation_bdt_equipment:0 "Tincture and Testament"
-  HEA_foreign_relation_bdt_equipment_desc:0 "We come with neither sword nor sermon alone.\nOur hands bear balm, and our breath carries prayer.\nWe bind wounds with steam-pressed gauze,\nand speak scripture over the dying.\n\nIn huts of bone and smoke, the Seraph Lords kneel;\ncleaning rot, calming fever,\nleaving behind not converts,\nbut those who remember who soothed their pain.\n\nLet no tribe say the Gate gave only fire.\nFor we anointed them first with tincture, and testament."
-
-  HEA_foreign_relation_bdt_manpower:0 "Standard of the Seraphim"
-  HEA_foreign_relation_bdt_manpower_desc:0 "Once they healed. Now they lead.\nThe banner of the Seraph Lords rides with the Bone Dancers' host,\n its silk stitched with scripture, its steel frame scorched with righteous fire.\n\nOur warriors do not command.\nThey fight, they bleed, and they are seen.\nThe faithful take note. The wavering draw near.\nAnd the old ways tremble beneath the weight of revelation.\n\nThis is no longer foreign aid.\nThis is prophecy made visible."
-
-  HEA_foreign_relation_bdt_final:0 "Rise, Seraphim"
-  HEA_foreign_relation_bdt_final_desc:0 "From whisper to word,\nFrom word to fire,\nFrom fire to throne.\n\nThe Seraph Lords have knelt, bled, healed, and preached.\nNow, they are lifted. Crowned not by gold, but by belief.\nThe Bone Dancers do not resist them.\nThey follow.\n\nThe drums have not stopped.\nBut now, they beat to the cadence of scripture.\nThe songs still echo.\n But now, they sing of steam, of sanctity, of salvation.\n\nLet no man doubt their rise.\ntLet the Seraphim stand. Let the Fold rejoice."
-
-
-# Need you to write focus loc here Rex - @Deez
-###Rotpurgers 
+###Rotpurgers
+HEA_foreign_relation_rot: "§tScripture for the Scorned§!"
+HEA_foreign_relation_rot_desc: "§OThe Rotpurgers§! wage a holy war of their own, guided by prophets of vengeance and blood-soaked ritual. But zeal without truth is only madness by another name. Our missionaries march not unguarded, nor unarmed. The Vault may have cast them out, but we offer something greater: purpose, purity, and a cause that burns brighter than revenge. §tLet them kneel, not to us, but to the Truth we bring.§!"
 HEA_foreign_relation_rot_tt: "Completing this §YFocus§! will put §O[ROT.GetNameWithFlag]§! on the path to become our §4ally§!."
+
+HEA_foreign_relation_rot_equipment: "The Gospel and the Gun"
+HEA_foreign_relation_rot_equipment_desc: "Lo, the Fold did not send only preachers.\nWe sent fire to warm the cold hands of the faithful.\nWe sent lead to answer the heretic’s howl.\n We sent steel, and powder, and promise.\n\nThe Rotpurgers rise, not as orphans of a broken vault,\nbut as crusaders anointed in smoke and scripture.\nTheir wrath is no longer their own.\nIt is ours: sharpened, loaded, and unleashed.\n\nLet the Old Country tremble.\nFor the Word now walks beside the gun."
 HEA_foreign_relation_rot_equipment_tt: "Completing this §YFocus§! will speed up §O[ROT.GetNameWithFlag]§!'s progress of becoming our §4ally§!."
+
+HEA_foreign_relation_rot_manpower: "Let the Faithful Bleed Together"
+HEA_foreign_relation_rot_manpower_desc: "No bond is deeper than blood shed for the same flame.\nWe do not command them. We walk beside them.\nTheir war is now our witness. Their dead, our martyrs.\n\nKnights of the Gate now stand shoulder to shoulder with the Rotpurgers,\nbearing no heraldry but righteousness, \nno orders but scripture,\nno fear but failure in the eyes of the Kingdom.\n\nLet them bleed beside our own.\nLet them see we are more than words and banners.\nLet the faithful bleed together,\nand let the wicked learn what unity in purpose truly means."
 HEA_foreign_relation_rot_manpower_tt: "Completing this §YFocus§! will speed up §O[ROT.GetNameWithFlag]§!'s progress of becoming our §4ally§!."
 
+HEA_foreign_relation_rot_final: "Ashes to Ashes, Flesh to Faith"
+HEA_foreign_relation_rot_final_desc: "Once cast out. Now called home.\nThey were children of the Vault, exiled in hate and flame.\nBut they have shed the name of exile.\nThey have cast off wrath without meaning.\nAnd they have answered.\n\nThrough war and witness, through blood and belief, the Rotpurgers have earned their place—not as vassals, but as Children of the Gate.\nThey walk the Wasteland as our kin.\nTheir dead are remembered in our prayers.\nTheir banners are dipped in the same holy flame.\n\nFrom ash, they have risen.\nFrom flesh, they have found faith.\nThe Fold grows stronger—not by conquest, but by covenant."
+
 ###Bone Dancers
+HEA_foreign_relation_bdt: "§3Among the Bones, we Build§!"
+HEA_foreign_relation_bdt_desc: "§4The Seraph Lords§! were not sent to conquer. In the shadow of the §0Bone Dancers§!' rites, they have held their sermons. Now, we send more. Supplies, scribes, and steam-fed strength cross the mountains, not with fanfare, but with purpose. The Gospel is already there. Our duty now is to ensure it takes hold. §3What we build will outlast the drums.§!"
 HEA_foreign_relation_bdt_tt: "Completing this §YFocus§! will put §0[BDT.GetNameWithFlag]§! on the path to become our §4ally§!."
+
+HEA_foreign_relation_bdt_equipment: "Tincture and Testament"
+HEA_foreign_relation_bdt_equipment_desc: "We come with neither sword nor sermon alone.\nOur hands bear balm, and our breath carries prayer.\nWe bind wounds with steam-pressed gauze,\nand speak scripture over the dying.\n\nIn huts of bone and smoke, the Seraph Lords kneel;\ncleaning rot, calming fever,\nleaving behind not converts,\nbut those who remember who soothed their pain.\n\nLet no tribe say the Gate gave only fire.\nFor we anointed them first with tincture, and testament."
+
+HEA_foreign_relation_bdt_manpower: "Standard of the Seraphim"
+HEA_foreign_relation_bdt_manpower_desc: "Once they healed. Now they lead.\nThe banner of the Seraph Lords rides with the Bone Dancers' host,\n its silk stitched with scripture, its steel frame scorched with righteous fire.\n\nOur warriors do not command.\nThey fight, they bleed, and they are seen.\nThe faithful take note. The wavering draw near.\nAnd the old ways tremble beneath the weight of revelation.\n\nThis is no longer foreign aid.\nThis is prophecy made visible."
+
+HEA_foreign_relation_bdt_final: "Rise, Seraphim"
+HEA_foreign_relation_bdt_final_desc: "From whisper to word,\nFrom word to fire,\nFrom fire to throne.\n\nThe Seraph Lords have knelt, bled, healed, and preached.\nNow, they are lifted. Crowned not by gold, but by belief.\nThe Bone Dancers do not resist them.\nThey follow.\n\nThe drums have not stopped.\nBut now, they beat to the cadence of scripture.\nThe songs still echo.\n But now, they sing of steam, of sanctity, of salvation.\n\nLet no man doubt their rise.\ntLet the Seraphim stand. Let the Fold rejoice."
 
 #######End of the Billowing Grand
 

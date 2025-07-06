@@ -4938,10 +4938,8 @@ focus = {
 			ROT = {
 				exists = yes
 				NOT = {
-					OR = {
-						has_completed_focus = ROT_samson
-						has_completed_focus = ROT_ladyofthelake
-					}
+					has_completed_focus = ROT_samson
+					has_completed_focus = ROT_ladyofthelake
 				}
 			}
 		}
@@ -5114,12 +5112,10 @@ focus = {
 		available = {
 			BDT = {
 				exists = yes
-				OR = {
-					NOT = {
-						has_completed_focus = bdt_hail_to_the_king #Heretics
-						has_completed_focus = bdt_road_warriors_of_the_eighty_four #Heretics
-						has_completed_focus = bdt_excommunication #Rejected LMAO
-					}
+				NOT = {
+					has_completed_focus = bdt_hail_to_the_king #Heretics
+					has_completed_focus = bdt_road_warriors_of_the_eighty_four #Heretics
+					has_completed_focus = bdt_excommunication #Rejected LMAO
 				}
 			}
 		}
@@ -5168,7 +5164,7 @@ focus = {
 				}
 			}
 			has_equipment = { infantry_equipment > 29 }
-			has_equipment = { support_equipment > 290 }
+			has_equipment = { support_equipment > 299 }
 		}
 		bypass = {
 			BDT = { is_in_faction_with = ROOT }

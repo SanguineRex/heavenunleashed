@@ -2583,6 +2583,16 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = bdt_question_of_syncretism
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			swap_ideas = {
 				add_idea = bdt_the_seraph_lords_3

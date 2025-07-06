@@ -559,6 +559,16 @@ focus_tree = {
 			NOT = { has_global_flag = MLP_harmony_and_unity_enabled_global_flag }
 		}
 		relative_position_id = bdt_the_crimson_forest
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			add_political_power = 150
 		}
@@ -574,6 +584,16 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = bdt_holding_down_the_fort
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			add_stability = -0.15
 			every_owned_state = {
@@ -592,6 +612,16 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = bdt_he_who_showed_the_way
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			capital_scope = {
 				set_temp_variable = {
@@ -612,6 +642,16 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = bdt_he_who_showed_the_way
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			capital_scope = {
 				add_extra_state_shared_building_slots = 4
@@ -632,6 +672,16 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = bdt_he_who_showed_the_way
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			add_to_variable = { geck_count = 1 }
 			add_to_variable = { malfunctioning_geck_count = 1 }
@@ -693,6 +743,16 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = bdt_holding_down_the_fort
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			every_owned_state = {
 				limit = {
@@ -716,6 +776,16 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = bdt_pilgrims_of_the_steam
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			add_offsite_building = {
 				type = arms_factory
@@ -738,6 +808,16 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = bdt_pilgrims_of_the_steam
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			add_stability = 0.1
 		}
@@ -756,6 +836,16 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = bdt_pilgrims_of_the_steam
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			add_manpower = 1000
 		}
@@ -801,6 +891,16 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = bdt_a_dark_gift
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			add_political_power = 150
 		}
@@ -1447,10 +1547,7 @@ focus_tree = {
 			factor = 0
 			modifier = {
 				add = 1
-				AND = {
-					BDT_has_ai_behavior_odious_king = yes
-					NOT = { HEA = { has_completed_focus = HEA_foreign_relation_bdt } }
-				}	
+				BDT_has_ai_behavior_odious_king = yes
 			}
 		}
 		x = -4
@@ -2088,10 +2185,15 @@ focus_tree = {
 			factor = 0
 			modifier = {
 				add = 1
-				OR = {
-					BDT_has_ai_behavior_seraph_lords = yes
-					HEA = { has_completed_focus = HEA_foreign_relation_bdt }
-				}	
+				BDT_has_ai_behavior_seraph_lords = yes
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
 			}
 		}
 		x = 4
@@ -2119,6 +2221,16 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = bdt_listen_to_the_pilgrims
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			add_popularity = {
 				ideology = intellectuals
@@ -2142,6 +2254,16 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = bdt_cleansing_the_crimson_forest
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			add_tech_bonus = {
 				bonus = 0.75
@@ -2161,6 +2283,16 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = bdt_cleansing_the_crimson_forest
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			add_stability = 0.1
 			country_event = nf_bonedancers.13
@@ -2180,6 +2312,16 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = bdt_cleansing_the_crimson_forest
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			remove_ideas = bdt_odious_king
 			add_political_power = 150
@@ -2217,6 +2359,16 @@ focus_tree = {
 		x = 6
 		y = 1
 		relative_position_id = bdt_listen_to_the_pilgrims
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			add_ideas = bdt_the_seraph_lords_1
 		}
@@ -2232,6 +2384,16 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = bdt_council_of_pilgrims
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			add_tech_bonus = {
 				bonus = 0.5
@@ -2253,6 +2415,16 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = bdt_council_of_pilgrims
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			remove_opinion_modifier = {
 				target = HEA
@@ -2280,6 +2452,16 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = bdt_council_of_pilgrims
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			add_offsite_building = {
 				type = arms_factory
@@ -2305,6 +2487,16 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = bdt_striking_at_the_source
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			swap_ideas = {
 				add_idea = bdt_the_seraph_lords_2
@@ -2354,6 +2546,16 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = bdt_coming_of_the_seraphs
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_bdt_manpower }
+			}
+		}
 		completion_reward = {
 			HEA = {
 				country_event = nf_bonedancers.14

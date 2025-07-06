@@ -526,6 +526,14 @@ focus_tree = {
 		}
 		ai_will_do = {
 			base = 10
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_rot_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_rot_manpower }
+			}
 		}
 		relative_position_id = vault100_consider_it_asskicked
 		x = 0
@@ -1248,6 +1256,16 @@ focus_tree = {
 		relative_position_id = ROT_jacobia
 		x = -1
 		y = 1
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_rot_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_rot_manpower }
+			}
+		}
 		completion_reward = {
 			add_war_support = 0.15
 			army_experience = 50
@@ -1263,6 +1281,16 @@ focus_tree = {
 		relative_position_id = ROT_jacobia
 		x = -2
 		y = 2
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_rot_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_rot_manpower }
+			}
+		}
 		completion_reward = {
 			capital_scope = {
 				if = {
@@ -1315,6 +1343,16 @@ focus_tree = {
 		prerequisite = {
 			focus = ROT_jacobia
 		}
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_rot_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_rot_manpower }
+			}
+		}
 		relative_position_id = ROT_jacobia
 		x = 1
 		y = 1
@@ -1336,6 +1374,16 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = ROT_rage_of_the_machine_2
+		}
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_rot_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_rot_manpower }
+			}
 		}
 		relative_position_id = ROT_rage_of_the_machine_1
 		x = 1
@@ -1397,6 +1445,16 @@ focus_tree = {
 			focus = ROT_jacobia_factories
 			focus = ROT_jacobia_equipment
 		}
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_rot_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_rot_manpower }
+			}
+		}
 		relative_position_id = ROT_recruit_them_all
 		x = 0
 		y = 1
@@ -1412,6 +1470,21 @@ focus_tree = {
 				ROOT = {
 					grant_wargoals_on_core_states_of_prev = yes
 				}
+			}
+			YAK = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+			if = {
+				limit = {
+					OLY = { has_war_with = WBH }
+				}
+				OLY = {
+					ROOT = {
+						grant_wargoals_on_core_states_of_prev = yes
+					}
+				}				
 			}
 		}
 	}
@@ -1697,6 +1770,16 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = ROT_the_great_crusade_seattle
+		}
+		ai_will_do = {
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_rot_equipment }
+			}
+			modifier = {
+				factor = 20
+				HEA = { has_completed_focus = HEA_foreign_relation_rot_manpower }
+			}
 		}
 		relative_position_id = ROT_the_great_crusade_seattle
 		x = 0

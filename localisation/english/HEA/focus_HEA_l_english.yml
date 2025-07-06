@@ -863,9 +863,11 @@ HEA_foreign_relation_bdt_tt: "Completing this §YFocus§! will put §0[BDT.GetNa
 
 HEA_foreign_relation_bdt_equipment: "Tincture and Testament"
 HEA_foreign_relation_bdt_equipment_desc: "We come with neither sword nor sermon alone.\nOur hands bear balm, and our breath carries prayer.\nWe bind wounds with steam-pressed gauze,\nand speak scripture over the dying.\n\nIn huts of bone and smoke, the Seraph Lords kneel;\ncleaning rot, calming fever,\nleaving behind not converts,\nbut those who remember who soothed their pain.\n\nLet no tribe say the Gate gave only fire.\nFor we anointed them first with tincture, and testament."
+HEA_foreign_relation_bdt_equipment_tt: "Completing this §YFocus§! will speed up §0[ROT.GetNameWithFlag]§!'s progress of becoming our §4ally§!."
 
 HEA_foreign_relation_bdt_manpower: "Standard of the Seraphim"
 HEA_foreign_relation_bdt_manpower_desc: "Once they healed. Now they lead.\nThe banner of the Seraph Lords rides with the Bone Dancers' host,\n its silk stitched with scripture, its steel frame scorched with righteous fire.\n\nOur warriors do not command.\nThey fight, they bleed, and they are seen.\nThe faithful take note. The wavering draw near.\nAnd the old ways tremble beneath the weight of revelation.\n\nThis is no longer foreign aid.\nThis is prophecy made visible."
+HEA_foreign_relation_bdt_manpower_tt: "Completing this §YFocus§! will speed up §0[ROT.GetNameWithFlag]§!'s progress of becoming our §4ally§!."
 
 HEA_foreign_relation_bdt_final: "Rise, Seraphim"
 HEA_foreign_relation_bdt_final_desc: "From whisper to word,\nFrom word to fire,\nFrom fire to throne.\n\nThe Seraph Lords have knelt, bled, healed, and preached.\nNow, they are lifted. Crowned not by gold, but by belief.\nThe Bone Dancers do not resist them.\nThey follow.\n\nThe drums have not stopped.\nBut now, they beat to the cadence of scripture.\nThe songs still echo.\n But now, they sing of steam, of sanctity, of salvation.\n\nLet no man doubt their rise.\ntLet the Seraphim stand. Let the Fold rejoice."

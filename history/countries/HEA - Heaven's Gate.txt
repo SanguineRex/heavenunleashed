@@ -45,6 +45,7 @@ set_technology = {
 	support_weaponry = 1
 	demolitions_weaponry_tech = 1
 	fireteam_weaponry_tech = 1
+	ballistic_weaponry_tech_1 = 1
 	bike_tech_1 = 1
 	spec_ops_equipment_tech_1 = 1
 	stripped_pa_tech = 1

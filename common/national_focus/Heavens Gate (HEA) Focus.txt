@@ -5260,6 +5260,7 @@ focus = {
 				}
 				capital_scope = { add_manpower = 250 }
 			}
+			custom_effect_tooltip = HEA_foreign_relation_bdt_equipment_tt
 		}
 	}
 
@@ -5301,6 +5302,7 @@ focus = {
 					popularity = 0.05
 				}
 			}
+			custom_effect_tooltip = HEA_foreign_relation_bdt_manpower_tt
 		}
 	}
 

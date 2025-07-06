@@ -123,41 +123,41 @@
   hea_nf_age_of_steam:0 "A New Age"
   hea_nf_age_of_steam_desc:0 "The Steam-Fusion reactors have taken us far and beyond what any might have expected, allowing our military to reach heights previously thought impossible by all but the greatest of nations or technophiles. The blessing of steam allowed us to become what we are, and with that blessing? We shall usher in an new age, "
 
-hea_digging_deep:0 "Building up Heaven's Gate"
-hea_digging_deep_desc:0 "Heaven's Gate has plenty of resources that go untapped, or forgotten, when our people could do well to use them. Veins of ore, rivers forgotten, and plenty of educated men that go ignored in favor of our warriors, no longer. The Father above gave us this land, we do him a disservice by not appreciating it fully."
+  hea_digging_deep:0 "Building up Heaven's Gate"
+  hea_digging_deep_desc:0 "Heaven's Gate has plenty of resources that go untapped, or forgotten, when our people could do well to use them. Veins of ore, rivers forgotten, and plenty of educated men that go ignored in favor of our warriors, no longer. The Father above gave us this land, we do him a disservice by not appreciating it fully."
 
-hea_scrap1:0 "Prophet Hollow Mines"
-hea_scrap1_desc:0 "The surveys we sent to Prophet Hollow have discovered vast stores of Iron, we can open mines and give some of the less fortunate in our midst a job, allowing them to be of service for Heaven's Gate and make a living."
+  hea_scrap1:0 "Prophet Hollow Mines"
+  hea_scrap1_desc:0 "The surveys we sent to Prophet Hollow have discovered vast stores of Iron, we can open mines and give some of the less fortunate in our midst a job, allowing them to be of service for Heaven's Gate and make a living."
 
-hea_scrap2:0 "Barnabus' Mine"
-hea_scrap2_desc:0 "To our fortune, Barmabus appears to have been hiding its own pockets of Iron, we can open a mine immediately! Allowing our stores of metal to grow even greater...potentially opening up avenues to creating rarer metals. "
+  hea_scrap2:0 "Barnabus' Mine"
+  hea_scrap2_desc:0 "To our fortune, Barmabus appears to have been hiding its own pockets of Iron, we can open a mine immediately! Allowing our stores of metal to grow even greater...potentially opening up avenues to creating rarer metals. "
 
-hea_composite:0 "Smiths of the Steam"
-hea_composite_desc:0 "Our newly expanded stores of metal will be funneled to the smiths of the Steam, depriving us of Iron, but the smiths assure us, the materials they forge with the metal will allow us to create very advanced weapons of war, which will undoubtedly help our warriors, no matter who wins the Great Debate..."
+  hea_composite:0 "Smiths of the Steam"
+  hea_composite_desc:0 "Our newly expanded stores of metal will be funneled to the smiths of the Steam, depriving us of Iron, but the smiths assure us, the materials they forge with the metal will allow us to create very advanced weapons of war, which will undoubtedly help our warriors, no matter who wins the Great Debate..."
 
-hea_elec:0 "Water Mills"
-hea_elec_desc:0 "The rivers floating near Heaven's Gate can be taken advantage of, constructing watermills all along our Eastern territories can help us gather energy, though not strictly necessary, the power from the mills could help future projects..."
+  hea_elec:0 "Water Mills"
+  hea_elec_desc:0 "The rivers floating near Heaven's Gate can be taken advantage of, constructing watermills all along our Eastern territories can help us gather energy, though not strictly necessary, the power from the mills could help future projects..."
 
-hea_water1:0 "Purifying the Wells"
-hea_water1_desc:0 "Though it will take some time, many wells on the fringes of our territory have been corrupted by radiation and biological contaminations. Thankfully the Father above protected the Nucleus with Holy Steam, but he cannot do all the work for us, and so it falls to the faithful to fix the mistakes of man, with the power gained from the mills, we can construct machines that will purify the forsaken wells."
+  hea_water1:0 "Purifying the Wells"
+  hea_water1_desc:0 "Though it will take some time, many wells on the fringes of our territory have been corrupted by radiation and biological contaminations. Thankfully the Father above protected the Nucleus with Holy Steam, but he cannot do all the work for us, and so it falls to the faithful to fix the mistakes of man, with the power gained from the mills, we can construct machines that will purify the forsaken wells."
 
-hea_water2:0 "Purifying Eastern Rivers"
-hea_water2_desc:0 "An intellectual mind among the clergy has had the wonderful idea, to reroute the power gained from the water mills (what's left) into machines that would purify the water from the river. A great idea to be sure! One we will enact immediately. With so much water perhaps we could even open some bath houses..."
+  hea_water2:0 "Purifying Eastern Rivers"
+  hea_water2_desc:0 "An intellectual mind among the clergy has had the wonderful idea, to reroute the power gained from the water mills (what's left) into machines that would purify the water from the river. A great idea to be sure! One we will enact immediately. With so much water perhaps we could even open some bath houses..."
 
-hea_consulting_knowledge:0 "Consulting the Tomes"
-hea_consulting_knowledge_desc:0 "We have thousands of books filled with knowledge from time forgotten, with these books, we could maybe even teach some of our younger members how to create components we normally have to scavenge or trade for."
+  hea_consulting_knowledge:0 "Consulting the Tomes"
+  hea_consulting_knowledge_desc:0 "We have thousands of books filled with knowledge from time forgotten, with these books, we could maybe even teach some of our younger members how to create components we normally have to scavenge or trade for."
 
-hea_circuitry:0 "Artisans of Circuitry"
-hea_circuitry_desc:0 "Our plans have worked! Though its a slow process, we are now producing Circuitry for some of the more advanced hardware in the Knights armor and other important machinery."
+  hea_circuitry:0 "Artisans of Circuitry"
+  hea_circuitry_desc:0 "Our plans have worked! Though its a slow process, we are now producing Circuitry for some of the more advanced hardware in the Knights armor and other important machinery."
 
-hea_advanced:0 "Artisans for Advanced Components"
-hea_advanced_desc:0 "We have artisans who can now create components specifically for hard to maintain hardware, including machinery important to the Nucleus!"
+  hea_advanced:0 "Artisans for Advanced Components"
+  hea_advanced_desc:0 "We have artisans who can now create components specifically for hard to maintain hardware, including machinery important to the Nucleus!"
 
-hea_foundries_of_war:0 "Foundries of War"
-hea_foundries_of_war_desc:0 "There are a lot of peasants that still don't have a job, thankfully we have some materials left over after all our projects reached fruition, and can possibly buid foundries for our warriors, some might even be able to work on them afterwards! Provided they're skilled smiths."
+  hea_foundries_of_war:0 "Foundries of War"
+  hea_foundries_of_war_desc:0 "There are a lot of peasants that still don't have a job, thankfully we have some materials left over after all our projects reached fruition, and can possibly buid foundries for our warriors, some might even be able to work on them afterwards! Provided they're skilled smiths."
 
-hea_center_of_trade:0 "Worker's Guild"
-hea_center_of_trade_desc:0 "There are a lot of peasants that still don't have a job, thankfully we have some materials left over after all our projects reached fruition, we'll supply them with tools, a building permit, and what resources we have left. Another worker's guild to help with future construction efforts is only a boon."
+  hea_center_of_trade:0 "Worker's Guild"
+  hea_center_of_trade_desc:0 "There are a lot of peasants that still don't have a job, thankfully we have some materials left over after all our projects reached fruition, we'll supply them with tools, a building permit, and what resources we have left. Another worker's guild to help with future construction efforts is only a boon."
 
   hea_nf_industry:0 "Developing the Gate"
   hea_nf_industry_desc:0 "The Gate is the seat of our power, from which all of our influence and faith stems. Building the city further is the utmost priority of our people, for once the gate is built to its fullest, will the lands around it truly prosper as they did before the war. Only then can we begin rebuilding that which was loss."
@@ -226,8 +226,8 @@ hea_center_of_trade_desc:0 "There are a lot of peasants that still don't have a 
 
 ############Holy Order Focuses
 
-heavens_holy_orders:0 "§8Holy Orders of Heaven's Gate"
-heavens_holy_orders_desc:0 "§5 The Vapor Equitum don their holy plate, blessed by Steam and the Father above, preparing to show the world the might of the faithful. \n §8Proclaim this among the nations: Prepare for war! Rouse the warriors! Let all the fighting men draw near and attack. \n - Joel 3:9"
+  heavens_holy_orders:0 "§8Holy Orders of Heaven's Gate"
+  heavens_holy_orders_desc:0 "§5 The Vapor Equitum don their holy plate, blessed by Steam and the Father above, preparing to show the world the might of the faithful. \n §8Proclaim this among the nations: Prepare for war! Rouse the warriors! Let all the fighting men draw near and attack. \n - Joel 3:9"
 
 HEA_order_headquarters:0 " §6 High in the Heavens"
 HEA_order_headquarters_desc:0 " §7 Though members of the Holy Orders are well used to dwelling where they are needed, the time has come for them to come together, Peter's Peak has been given the honor of being the bastion for these hallowed men. \n§6I lift up my eyes to the mountains–where does my help come from? \n - Psalm 121:1"
@@ -806,36 +806,65 @@ hea_lost_scientists:0 "Astray Alchemists and Hermits"
 hea_lost_scientists_desc:0 "Hundreds of scientists have abandoned the fold out of misguided belief or simple greed, thankfully the majority of them have simply fled to live quiet lives in the mountains, let's see if we can't convince them to return."
 hea_lost_scientists_tt:0 "§YThis will give us 1% War Support and unlock Decisions to 'invites' Scientists around the wasteland"
 
-hea_mountain_monestaries:0 "Michael's Vision"
-hea_mountain_monestaries_desc:0 "Michael has given us a prophecy: "To defend our faith, our populous will need to be conscripted. It will be a defensive force, meant to deter any and all invaders. We will NOT have another Innocence tragedy!" The prophet speaks truth, we need to defend our lands. Let us just hope Michael doesn't have any other plans for this 'militia'."
-hea_mountain_monestaries_tt:0 "§YThis will give us 1% War Support and 5% Recruitable Population Factor"
+  hea_mountain_monestaries:0 "Michael's Vision"
+  hea_mountain_monestaries_desc:0 "Michael has given us a prophecy: "To defend our faith, our populous will need to be conscripted. It will be a defensive force, meant to deter any and all invaders. We will NOT have another Innocence tragedy!" The prophet speaks truth, we need to defend our lands. Let us just hope Michael doesn't have any other plans for this 'militia'."
+  hea_mountain_monestaries_tt:0 "§YThis will give us 1% War Support and 5% Recruitable Population Factor"
 
-hea_shrines_to_reactor:0 "Soldiers of the Prophet"
-hea_shrines_to_reactor_desc:0 "News from Post: "The Council has now started conscriptions for people outside of the Nucleus. Will anyone be spared?" Those that work in the Post are scared that the Council and Prophet Michael might be going to the extreme, are we going to war again, they ask. No one knows who might be called up fight next. One thing is for sure, things are changing in Heaven's Gate."
-hea_shrines_to_reactor_tt:0 "§YThis will give us 1% War Support and 5% Recruitable Population Factor"
+  hea_shrines_to_reactor:0 "Soldiers of the Prophet"
+  hea_shrines_to_reactor_desc:0 "News from Post: "The Council has now started conscriptions for people outside of the Nucleus. Will anyone be spared?" Those that work in the Post are scared that the Council and Prophet Michael might be going to the extreme, are we going to war again, they ask. No one knows who might be called up fight next. One thing is for sure, things are changing in Heaven's Gate."
+  hea_shrines_to_reactor_tt:0 "§YThis will give us 1% War Support and 5% Recruitable Population Factor"
 
-hea_barnabus_reactor:0 "Funding from Heaven"
-hea_barnabus_reactor_desc:0 "News from the Council: "The mining division has discovered ore within the ceiling of the caves. Prophet Michael has decided to use these to better support our weapon departments. With all this support towards the militia there are bound to be some new recruits", the papers are going wild with all this talk about the support for the forces, lets just hope it stops there..."
-hea_barnabus_reactor_tt:0 "§YThis will give us 1% War Support, 2% Recruitable Population Factor and 5% Division Recovery Rate"
+  hea_barnabus_reactor:0 "Funding from Heaven"
+  hea_barnabus_reactor_desc:0 "News from the Council: "The mining division has discovered ore within the ceiling of the caves. Prophet Michael has decided to use these to better support our weapon departments. With all this support towards the militia there are bound to be some new recruits", the papers are going wild with all this talk about the support for the forces, lets just hope it stops there..."
+  hea_barnabus_reactor_tt:0 "§YThis will give us 1% War Support, 2% Recruitable Population Factor and 5% Division Recovery Rate"
 
-hea_hollows_bellow:0 "It didn't stop there..."
-hea_hollows_bellow_desc:0 "News from Prophet Michael: "I am but a Prophet, however, I know when we are scared and tired. Our defense consists of men of flesh and bone, but our scholars are prepared to bless them with Atom and technology. When we defend our lands, invaders will find men of flesh and bones with metal and steam to protect them!" The Prophet seems to hint that our men will have suits of metal and vehicles of destruction, but why would we need that to defend the Steam Core...aren't we safe enough?"
-hea_hollows_bellow_tt:0 "§YThis will give us 1% War Support, 5% Division Recovery Rate and 5% Division Breakthrough"
+  hea_hollows_bellow:0 "It didn't stop there..."
+  hea_hollows_bellow_desc:0 "News from Prophet Michael: "I am but a Prophet, however, I know when we are scared and tired. Our defense consists of men of flesh and bone, but our scholars are prepared to bless them with Atom and technology. When we defend our lands, invaders will find men of flesh and bones with metal and steam to protect them!" The Prophet seems to hint that our men will have suits of metal and vehicles of destruction, but why would we need that to defend the Steam Core...aren't we safe enough?"
+  hea_hollows_bellow_tt:0 "§YThis will give us 1% War Support, 5% Division Recovery Rate and 5% Division Breakthrough"
 
-hea_steam_wonderland:0 "Ever closer to Heaven"
-hea_steam_wonderland_desc:0 "News from the Council: "Men of Metal, Smiths, and Scholars alike, we are proud to call you our Defenders of The Steam. With your support on spreading the news of the creation of the army, we now can expand the factories and get you pious soldiers some well awaited gear. Council Signing off..." The people are now ready to defend or possibly attack foreign invaders."
-hea_steam_wonderland_tt:0 "§YThis will give us 3% War Support and 3% Recruitable Population Factor"
+  hea_steam_wonderland:0 "Ever closer to Heaven"
+  hea_steam_wonderland_desc:0 "News from the Council: "Men of Metal, Smiths, and Scholars alike, we are proud to call you our Defenders of The Steam. With your support on spreading the news of the creation of the army, we now can expand the factories and get you pious soldiers some well awaited gear. Council Signing off..." The people are now ready to defend or possibly attack foreign invaders."
+  hea_steam_wonderland_tt:0 "§YThis will give us 3% War Support and 3% Recruitable Population Factor"
 
 
 #########The Grand Inquisition
 
-hea_billowing_inquisition:0 "§RThe Billowing Inquisition"
-hea_billowing_inquisition_desc:0 ""
+  hea_billowing_inquisition:0 "§RThe Billowing Inquisition"
+  hea_billowing_inquisition_desc:0 ""
 
 
 #######################
 ###Foreign Relations### 
 #######################
+
+  HEA_foreign_relation_start:0 "§YThe Flock and the Flame"
+  HEA_foreign_relation_start_desc:0 "§YWe bring two gifts to the Wasteland: the warmth of the Fold, and the cleansing fire of revelation.§!\nTo the lost and the broken, we offer belonging. To the misguided and the proud, we offer correction. Missionaries go forth bearing scripture and sacrament, yet behind them ride knights bearing sword and fire.\n§YLet all who remain hear the call: join the Flock, or face the Flame."
+
+  HEA_foreign_relation_rot:0 "§tScripture for the Scorned"
+  HEA_foreign_relation_rot_desc:0 "The Rotpurgers wage a holy war of their own, guided by prophets of vengeance and blood-soaked ritual. But zeal without truth is only madness by another name. Our missionaries march not unguarded, nor unarmed. The Vault may have cast them out, but we offer something greater: purpose, purity, and a cause that burns brighter than revenge. §tLet them kneel, not to us, but to the Truth we bring."
+
+  HEA_foreign_relation_rot_equipment:0 "The Gospel and the Gun"
+  HEA_foreign_relation_rot_equipment_desc:0 "Lo, the Fold did not send only preachers.\nWe sent fire to warm the cold hands of the faithful.\nWe sent lead to answer the heretic’s howl.\n We sent steel, and powder, and promise.\n\nThe Rotpurgers rise, not as orphans of a broken vault,\nbut as crusaders anointed in smoke and scripture.\nTheir wrath is no longer their own.\nIt is ours: sharpened, loaded, and unleashed.\n\nLet the Old Country tremble.\nFor the Word now walks beside the gun."
+
+  HEA_foreign_relation_rot_manpower:0 "Let the Faithful Bleed Together"
+  HEA_foreign_relation_rot_manpower_desc:0 "No bond is deeper than blood shed for the same flame.\nWe do not command them. We walk beside them.\nTheir war is now our witness. Their dead, our martyrs.\n\nKnights of the Gate now stand shoulder to shoulder with the Rotpurgers,\nbearing no heraldry but righteousness, \nno orders but scripture,\nno fear but failure in the eyes of the Kingdom.\n\nLet them bleed beside our own.\nLet them see we are more than words and banners.\nLet the faithful bleed together,\nand let the wicked learn what unity in purpose truly means."
+
+  HEA_foreign_relation_rot_final:0 "Ashes to Ashes, Flesh to Faith"
+  HEA_foreign_relation_rot_final_desc:0 "Once cast out. Now called home.\nThey were children of the Vault, exiled in hate and flame.\nBut they have shed the name of exile.\nThey have cast off wrath without meaning.\nAnd they have answered.\n\nThrough war and witness, through blood and belief, the Rotpurgers have earned their place—not as vassals, but as Children of the Gate.\nThey walk the Wasteland as our kin.\nTheir dead are remembered in our prayers.\nTheir banners are dipped in the same holy flame.\n\nFrom ash, they have risen.\nFrom flesh, they have found faith.\nThe Fold grows stronger—not by conquest, but by covenant."
+
+  HEA_foreign_relation_bdt:0 "§3Among the Bones, we Buid"
+  HEA_foreign_relation_bdt_desc:0 "The Seraph Lords were not sent to conquer. In the shadow of the Bone Dancers' rites, they have held their sermons. Now, we send more. Supplies, scribes, and steam-fed strength cross the mountains, not with fanfare, but with purpose. The Gospel is already there. Our duty now is to ensure it takes hold. §3What we build will outlast the drums."
+
+  HEA_foreign_relation_bdt_equipment:0 "Tincture and Testament"
+  HEA_foreign_relation_bdt_equipment_desc:0 "We come with neither sword nor sermon alone.\nOur hands bear balm, and our breath carries prayer.\nWe bind wounds with steam-pressed gauze,\nand speak scripture over the dying.\n\nIn huts of bone and smoke, the Seraph Lords kneel;\ncleaning rot, calming fever,\nleaving behind not converts,\nbut those who remember who soothed their pain.\n\nLet no tribe say the Gate gave only fire.\nFor we anointed them first with tincture, and testament."
+
+  HEA_foreign_relation_bdt_manpower:0 "Standard of the Seraphim"
+  HEA_foreign_relation_bdt_manpower_desc:0 "Once they healed. Now they lead.\nThe banner of the Seraph Lords rides with the Bone Dancers' host,\n its silk stitched with scripture, its steel frame scorched with righteous fire.\n\nOur warriors do not command.\nThey fight, they bleed, and they are seen.\nThe faithful take note. The wavering draw near.\nAnd the old ways tremble beneath the weight of revelation.\n\nThis is no longer foreign aid.\nThis is prophecy made visible."
+
+  HEA_foreign_relation_bdt_final:0 "Rise, Seraphim"
+  HEA_foreign_relation_bdt_final_desc:0 "From whisper to word,\nFrom word to fire,\nFrom fire to throne.\n\nThe Seraph Lords have knelt, bled, healed, and preached.\nNow, they are lifted. Crowned not by gold, but by belief.\nThe Bone Dancers do not resist them.\nThey follow.\n\nThe drums have not stopped.\nBut now, they beat to the cadence of scripture.\nThe songs still echo.\n But now, they sing of steam, of sanctity, of salvation.\n\nLet no man doubt their rise.\ntLet the Seraphim stand. Let the Fold rejoice."
+
+
 # Need you to write focus loc here Rex - @Deez
 ###Rotpurgers 
 HEA_foreign_relation_rot_tt: "Completing this §YFocus§! will put §O[ROT.GetNameWithFlag]§! on the path to become our §4ally§!."

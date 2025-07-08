@@ -570,7 +570,7 @@ hea_monsters_of_the_wastes_cat = {
 		#target_root_trigger = { #Not needed, the check is in the decision category
 		#
 		#}
-		targets = { TVT MDM TPA BGR RAD ROB WDN TTM TUB ARM TLA PET PSH } #Robot nation or nations with robot leaders at start
+		targets = { TVT MDM TPA BGR RAD ROB TTM TUB ARM TLA PET PSH } #Robot nation or nations with robot leaders at start - WDN or WARDEN should've been on the list too, but they are a dynamic tag which causes some issue within OWB, have to disabled them for now
 		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
 		target_trigger = { 
 			FROM = {

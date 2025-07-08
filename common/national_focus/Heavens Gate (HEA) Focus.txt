@@ -617,11 +617,11 @@ focus_tree = {
 			hidden_effect = {
 				news_event = { id = nf_event_hea.300 }
 				set_country_leader_description = {
-					ideology = benevolent_dictatorship
+					ideology = ruler
 					desc = ANGEL_MICHAEL_DESC
 				}
 				set_country_leader_name = {
-					ideology = benevolent_dictatorship
+					ideology = ruler
 					name  = "Steam Father Michael" #This is extremely bad for localization/translation, will discuss to change this using loc key instead - @Deez
 				}
 			}
@@ -1059,7 +1059,8 @@ focus_tree = {
 				WBH = { all_core_land_owned_by_prev_sphere = yes }
 				TCA = { all_core_land_owned_by_prev_sphere = yes }
 				BOS = { all_core_land_owned_by_prev_sphere = yes }
-				MXH = { all_core_land_owned_by_prev_sphere = yes }
+				TBH = { all_core_land_owned_by_prev_sphere = yes }
+				MOJ = { all_core_land_owned_by_prev_sphere = yes }
 				MXC = { all_core_land_owned_by_prev_sphere = yes }
 				MNC = { all_core_land_owned_by_prev_sphere = yes }
 				#ACH = { all_core_land_owned_by_prev_sphere = yes } #Disabled due Alamo Chapter being a dynamic tag
@@ -1119,30 +1120,6 @@ focus_tree = {
 		}
 	}
 	
-	#############################################
-	####Servants of God!!!!!!!!##################
-	#############################################
-	
-	focus = {
-		id = hea_servants_of_god
-		icon = GFX_goal_HEA_hea_heavens_kingdom
-		cost = 60
-		x = 0
-		y = 4
-		relative_position_id = hea_triumphant_nation
-		prerequisite = {
-			focus = hea_beacon_of_christianity
-			focus = hea_right_hand_of_god
-		}
-		prerequisite = {
-			focus = hea_triumphant_nation
-			focus = hea_nf_forgive_end
-		}
-
-		completion_reward = {
-		set_cosmetic_tag = HEA_content
-		}
-	}
 	#############################################
 	####Bastion to the Flock!!!##################
 	#############################################
@@ -1228,11 +1205,11 @@ focus_tree = {
 						hidden_effect = {
 							news_event = { id = nf_event_hea.301 }
 set_country_leader_description = {
-	ideology = benevolent_dictatorship
+	ideology = ruler
 	desc = FATHER_MICHAEL_DESC
 }
 set_country_leader_name = {
-	ideology = benevolent_dictatorship
+	ideology = ruler
 	name  = "Father Michael"
 }
     }
@@ -1359,7 +1336,7 @@ set_country_leader_name = {
 					MUR = {
 				annex_country = { target = EAS transfer_troops = yes }
 				annex_country = { target = SHO transfer_troops = yes }
-				load_focus_tree = mur_heavens_gate
+				#load_focus_tree = mur_heavens_gate #Disabled for now due to disabled MUR content - @Deez
 				}
 				}
 		}
@@ -3185,7 +3162,7 @@ focus = {
 	#############################################
 	
 			###A better Heaven's Gate
-		focus = {
+	focus = {
 		id = hea_the_nucleus
 		icon = GFX_goal_HEA_HEA_building_nucleus
 		cost = 60
@@ -3195,19 +3172,19 @@ focus = {
 		prerequisite = {
 			focus = hea_nf_innocence_lost
 		}
+		available = {
+			has_completed_focus = hea_nf_age_of_steam
+		}
 
 		completion_reward = {
 			every_owned_state = {
 				limit = {
 					is_core_of = HEA
 				}
-			add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 2
 			}
 		}
 	}
-			available = {
-			has_completed_focus = hea_nf_age_of_steam
-		}
 
 	###Rivers
 		focus = {
@@ -3836,14 +3813,14 @@ focus = {
 				}
 				set_temp_variable = { development_to_add = 2 }
 				add_development_to_node = yes
-			swap_ideas = {
-				add_idea = hea_rebirth_steam
-				remove_idea = hea_steam_power
-			}
 			}
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] hea_nf_industry_5 exited"
+			}
+			swap_ideas = {
+				add_idea = hea_rebirth_steam
+				remove_idea = hea_steam_power
 			}
 		}
 	}
@@ -4441,7 +4418,7 @@ focus = {
 		
 		}
 	}
-				focus = {
+	focus = {
 		id = HEA_preparing_war
 		icon = GFX_goal_HEA_foundries
 		cost = 30
@@ -4453,17 +4430,17 @@ focus = {
 		}
 
 		completion_reward = {
-			278 {
+			278 = {
 			add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
-						level = 4
+						level = 2
 						instant_build = yes
 					}
 			}
 		}
 	}
-					focus = {
+	focus = {
 		id = HEA_raiding_bunkers
 		icon = GFX_goal_HEA_exploring_vault
 		cost = 30
@@ -4490,8 +4467,6 @@ focus = {
 				amount = 300
 				producer = USA
 			}
-			
-		
 		}
 	}
 					focus = {
@@ -4864,6 +4839,32 @@ focus = {
 			}
 		}
 	}
+
+	#############################################
+	####Servants of God!!!!!!!!##################
+	#############################################
+	
+	focus = {
+		id = hea_servants_of_god
+		icon = GFX_goal_HEA_hea_heavens_kingdom
+		cost = 60
+		x = 0
+		y = 4
+		relative_position_id = hea_triumphant_nation
+		prerequisite = {
+			focus = hea_beacon_of_christianity
+			focus = hea_right_hand_of_god
+		}
+		prerequisite = {
+			focus = hea_triumphant_nation
+			focus = hea_nf_forgive_end
+		}
+
+		completion_reward = {
+		set_cosmetic_tag = HEA_content
+		}
+	}
+
 ###############################################
 ##Foreign Relations/Interactions Focus Branch##
 ###############################################

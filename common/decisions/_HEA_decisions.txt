@@ -663,7 +663,7 @@ hea_taming_river_cat = {
 
 		available = {
 			has_full_control_of_state = 18
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 			NOT = {
 				has_country_flag = hea_building_water_mills
 			}
@@ -698,7 +698,7 @@ hea_taming_river_cat = {
 
 		available = {
 			has_full_control_of_state = 18
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 			NOT = {
 				has_country_flag = hea_building_water_mills
 			}
@@ -736,7 +736,7 @@ hea_taming_river_cat = {
 
 		available = {
 			has_full_control_of_state = 18
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 			NOT = {
 				has_country_flag = hea_building_water_mills
 			}
@@ -777,7 +777,7 @@ hea_taming_river_cat = {
 
 		available = {
 			has_full_control_of_state = 116
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 			NOT = {
 				has_country_flag = hea_building_water_mills
 			}
@@ -812,7 +812,7 @@ hea_taming_river_cat = {
 
 		available = {
 			has_full_control_of_state = 116
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 			NOT = {
 				has_country_flag = hea_building_water_mills
 			}
@@ -850,7 +850,7 @@ hea_taming_river_cat = {
 
 		available = {
 			has_full_control_of_state = 116
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 			NOT = {
 				has_country_flag = hea_building_water_mills
 			}
@@ -891,7 +891,7 @@ hea_taming_river_cat = {
 
 		available = {
 			has_full_control_of_state = 278
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 			NOT = {
 				has_country_flag = hea_building_water_mills
 			}
@@ -926,7 +926,7 @@ hea_taming_river_cat = {
 
 		available = {
 			has_full_control_of_state = 278
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 			NOT = {
 				has_country_flag = hea_building_water_mills
 			}
@@ -964,7 +964,7 @@ hea_taming_river_cat = {
 
 		available = {
 			has_full_control_of_state = 278
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 			NOT = {
 				has_country_flag = hea_building_water_mills
 			}
@@ -1005,7 +1005,7 @@ hea_taming_river_cat = {
 
 		available = {
 			has_full_control_of_state = 198
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 			NOT = {
 				has_country_flag = hea_building_water_mills
 			}
@@ -1040,7 +1040,7 @@ hea_taming_river_cat = {
 
 		available = {
 			has_full_control_of_state = 198
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 			NOT = {
 				has_country_flag = hea_building_water_mills
 			}
@@ -1078,7 +1078,7 @@ hea_taming_river_cat = {
 
 		available = {
 			has_full_control_of_state = 198
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 			NOT = {
 				has_country_flag = hea_building_water_mills
 			}
@@ -1288,7 +1288,7 @@ hea_taming_heaven_cat = {
 			has_country_flag = hea_captured_scientists_30
 			has_country_flag = hea_captured_scientists_276
 			has_country_flag = hea_captured_scientists_700
-			num_of_available_civilian_factories > 3
+			num_of_civilian_factories_available_for_projects > 3
 		}
 		visible = {
 			has_completed_focus = hea_lost_scientists
@@ -1333,7 +1333,7 @@ hea_taming_heaven_cat = {
 			has_country_flag = hea_captured_scientists_30
 			has_country_flag = hea_captured_scientists_276
 			has_country_flag = hea_captured_scientists_700
-			num_of_available_civilian_factories > 3
+			num_of_civilian_factories_available_for_projects > 3
 		}
 		visible = {
 			has_completed_focus = hea_lost_scientists
@@ -1380,7 +1380,7 @@ hea_taming_land_cat = {
 			NOT = {
 				has_country_flag = hea_building_smiths
 			}
-			num_of_available_civilian_factories > 1
+			num_of_civilian_factories_available_for_projects > 1
 		}
 		visible = {
 			has_completed_focus = hea_steam_smiths
@@ -1415,7 +1415,7 @@ hea_taming_land_cat = {
 			NOT = {
 				has_country_flag = hea_building_smiths
 			}
-			num_of_available_civilian_factories > 1
+			num_of_civilian_factories_available_for_projects > 1
 		}
 		visible = {
 			has_completed_focus = hea_steam_smiths
@@ -1454,7 +1454,7 @@ hea_taming_land_cat = {
 			NOT = {
 				has_country_flag = hea_building_smiths
 			}
-			num_of_available_civilian_factories > 1
+			num_of_civilian_factories_available_for_projects > 1
 		}
 		visible = {
 			has_completed_focus = hea_steam_smiths
@@ -1489,7 +1489,7 @@ hea_taming_land_cat = {
 			NOT = {
 				has_country_flag = hea_building_smiths
 			}
-			num_of_available_civilian_factories > 1
+			num_of_civilian_factories_available_for_projects > 1
 		}
 		visible = {
 			has_completed_focus = hea_steam_smiths
@@ -1528,7 +1528,7 @@ hea_taming_land_cat = {
 			NOT = {
 				has_country_flag = hea_building_smiths
 			}
-			num_of_available_civilian_factories > 1
+			num_of_civilian_factories_available_for_projects > 1
 		}
 		visible = {
 			has_completed_focus = hea_steam_smiths
@@ -1563,7 +1563,7 @@ hea_taming_land_cat = {
 			NOT = {
 				has_country_flag = hea_building_smiths
 			}
-			num_of_available_civilian_factories > 1
+			num_of_civilian_factories_available_for_projects > 1
 		}
 		visible = {
 			has_completed_focus = hea_steam_smiths
@@ -1601,7 +1601,7 @@ hea_taming_land_cat = {
 			has_country_flag = hea_smiths_built_1385_2
 			has_country_flag = hea_smiths_built_198_2
 			has_country_flag = hea_smiths_built_276_2
-			num_of_available_civilian_factories > 3
+			num_of_civilian_factories_available_for_projects > 3
 		}
 		visible = {
 			has_completed_focus = hea_steam_smiths

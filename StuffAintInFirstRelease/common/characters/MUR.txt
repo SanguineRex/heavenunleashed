@@ -1,0 +1,82 @@
+characters = {
+	MUR_presbyter_ann = {
+		name = MUR_PRESBYTER_ANN_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_MUR_leader
+			}
+		}
+		country_leader = {
+			desc = MUR_PRESBYTER_ANN_DESC
+			ideology = theodemocracy
+			traits = {
+				beloved_leader
+			}
+			expire = "3000.01.01.01"
+			id = -1
+		}
+		corps_commander = {
+			traits = {
+				agile_trait
+				strong_trait
+				fast_shot_trait
+			}
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+		MUR_shepherd_ann = {
+		name = MUR_shepherd_ann
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_MUR_shepherd
+			}
+		}
+		country_leader = {
+			desc = MUR_shepherd_ann_desc
+			ideology = theodemocracy
+			traits = {
+				beloved_leader
+				cult_of_personality
+			}
+			expire = "3000.01.01.01"
+			id = -1
+		}
+		field_marshal = {
+			traits = {
+				agile_trait
+				strong_trait
+				fast_shot_trait
+				life_giver_trait
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+		MUR_chief_techki = {
+		name = "Chief Techki"
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_SHO_chieftain
+			}
+		}
+		corps_commander = {
+			traits = {
+				intelligent_trait
+				agile_trait
+				skilled_trait
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+}

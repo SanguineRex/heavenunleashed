@@ -106,9 +106,9 @@ add_ideas = {
 recruit_character = HEA_saint_michael
 recruit_character = HEA_steammaiden_mira
 recruit_character = HEA_mother_magdalene
-recruit_character = HEA_pastor_hughes
-recruit_character = HEA_priest_roberts
-recruit_character = HEA_canon_phillips
+#recruit_character = HEA_pastor_hughes #Can't find this character - @Deez
+#recruit_character = HEA_priest_roberts #Can't find this character - @Deez
+#recruit_character = HEA_canon_phillips #Can't find this character - @Deez
 
 create_or_join_children_of_the_gate = yes
 

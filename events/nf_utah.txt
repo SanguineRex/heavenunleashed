@@ -1992,7 +1992,7 @@ country_event = {
 		#we can do better
 		name = nf_pantheon.100.a
 		random_owned_state = {
-			damage_building = {
+			damage_building = { #False Error - @Deez
 				type = infrastructure
 				damage = 0.5
 			}
@@ -2006,7 +2006,7 @@ country_event = {
 		#we can do WAY better
 		name = nf_pantheon.100.b
 		random_owned_state = {
-			remove_building = {
+			remove_building = { #False Error - @Deez
 				type = infrastructure
 				level = 1
 			}

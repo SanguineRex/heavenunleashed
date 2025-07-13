@@ -119,7 +119,7 @@ hea_alchemist_final_resource:0 "§YOR:§!Heaven's Gate Advanced Resources Team"
 hea_alchemist_final_resource_tt:0 "§YThis will give us 40£resources_strip|5 and 40£resources_strip|6 but lock us out of §YHeaven's Gate Research Team§!"
 
 ##########################
-##Monsters of the Wastes## TEST
+##Monsters of the Wastes##
 ##########################
 hea_monsters_of_the_wastes_cat: "§RMonsters of the Wastes§!"
 hea_monsters_of_the_wastes_cat_desc: "§t    \"As I live,\" declares the Lord God, \"Surely because My flock has become a prey, My flock has even become food for all the beasts of the field for lack of a shepherd, and My shepherds did not search for My flock, but rather the shepherds fed themselves and did not feed My flock.\"\n   - Ezekiel 34:8§! \n\n - §LGhouls targets purged: [?HEA.hea_monsters_ghouls]§!\n - §GMutants targets purged: [?HEA.hea_monsters_mutants]§!\n - §4Mirelurks targets purged: [?HEA.hea_monsters_mirelurks]§!\n - §gRobots targets purged: [?HEA.hea_monsters_robots]§!\n - §RCommunists targets purged: [?HEA.hea_monsters_communists]§!"

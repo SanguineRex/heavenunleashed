@@ -6,8 +6,13 @@ spriteTypes = {
 	}
 	
 #HEA
-		spriteType = {
+	spriteType = {
 		name = "GFX_Portrait_HEA_Seraphim"
 		textureFile = "gfx/leaders/HEA/Seraphim.dds"
+	}
+	#Bee Pope
+	spriteType = {
+		name = "GFX_Portrait_HEA_bee_pope_large"
+		textureFile = "gfx/leaders/HEA/portrait_hea_bee_pope_large.dds"
 	}
 }

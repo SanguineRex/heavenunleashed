@@ -5,9 +5,9 @@ on_actions = {
 			if = {
 				limit = {
 					original_tag = HEA #Check if ROOT is HEA first
-					has_completed_focus = hea_nf_age_of_steam
-					has_country_flag = hea_vengance_path
-					has_country_flag = hea_fervor_idle_phase_0
+					has_country_flag = hea_vengance_path #10th crusade path
+					has_completed_focus = hea_nf_age_of_steam #The focus that activate stuff
+					has_country_flag = hea_fervor_idle_phase_0 #Phase 0 Idlenesss
 					has_war = no #Only when HEA have no more enemy
 				}
 				activate_mission = hea_fervor_idle_1_warning

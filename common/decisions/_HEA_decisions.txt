@@ -433,216 +433,7 @@ hea_michael_crusade_cat = {
 ##Monsters of the Wastes-Vengeance Path##
 ##########################
 hea_monsters_of_the_wastes_cat = {
-	##The Dead Are Walking
-	hea_monsters_wastes_deads_dynamic_decision = {
-		icon = GFX_decision_jap_conquer_china
-		cost = 20 #PP Cost
-		days_remove = 20 #Duration before finish purging
-		days_re_enable = 10 #Just incase some fuckery happen mid purging and needed a repurge
-		fire_only_once = yes
-
-		#target_root_trigger = { #Not needed, the check is in the decision category
-		#
-		#}
-		targets = { TLP TOC WHD LUM GLW GLC RES SIN BLO CAF KAM URA } #Ghouls nation or nations with ghoul leaders at start
-		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
-		target_trigger = { 
-			FROM = {
-				NOT = {
-					has_country_flag = hea_purged_flag
-				}
-			}
-		}
-		target_non_existing = yes #Need this to actually purge the non-existing nation after being conquered
-		available = { 
-			ROOT = {
-				FROM = { all_core_land_owned_by_prev_sphere = yes }
-			}
-		}
-
-		remove_effect = {
-			add_to_variable = { hea_monsters_ghouls = 1 }
-			FROM = {
-				set_country_flag = hea_purged_flag
-				every_core_state = {
-					add_manpower = -5000
-				}
-			}
-		}
-
-		ai_will_do = { #I'm not well verse in AI scripting so just gonna be something basic, at least they will choose the decision instead of ignoring, again idk why anyone would install this mod and play something else, I'm looking at you Beezus - @Deez
-			base = 1
-		}
-	}
-
-	##Horde of Nephilim
-	hea_monsters_wastes_nephilim_dynamic_decision = {
-		icon = GFX_decision_jap_conquer_china
-		cost = 20 #PP Cost
-		days_remove = 20 #Duration before finish purging
-		days_re_enable = 10 #Just incase some fuckery happen mid purging and needed a repurge
-		fire_only_once = yes
-
-		#target_root_trigger = { #Not needed, the check is in the decision category
-		#
-		#}
-		targets = { TRL JCT SHA UOA IMO } #Super Mutant nation or nations with super mutant leaders at start
-		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
-		target_trigger = { 
-			FROM = {
-				NOT = {
-					has_country_flag = hea_purged_flag
-				}
-			}
-		}
-		target_non_existing = yes #Need this to actually purge the non-existing nation after being conquered
-		available = { 
-			ROOT = {
-				FROM = { all_core_land_owned_by_prev_sphere = yes }
-			}
-		}
-
-		remove_effect = {
-			add_to_variable = { hea_monsters_mutants = 1 }
-			FROM = {
-				set_country_flag = hea_purged_flag
-				every_core_state = {
-					add_manpower = -5000
-				}
-			}
-		}
-
-		ai_will_do = { #I'm not well verse in AI scripting so just gonna be something basic, at least they will choose the decision instead of ignoring, again idk why anyone would install this mod and play something else, I'm looking at you Beezus - @Deez
-			base = 1
-		}
-	}
-
-	##Leviathans dwelling in the Coast
-	hea_monsters_wastes_leviathans_dynamic_decision = {
-		icon = GFX_decision_jap_conquer_china
-		cost = 20 #PP Cost
-		days_remove = 20 #Duration before finish purging
-		days_re_enable = 10 #Just incase some fuckery happen mid purging and needed a repurge
-		fire_only_once = yes
-
-		#target_root_trigger = { #Not needed, the check is in the decision category
-		#
-		#}
-		targets = { MLT DIS RRR SLN DED PRO } #Mirelurk nation or nations with mirelurk leaders at start
-		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
-		target_trigger = { 
-			FROM = {
-				NOT = {
-					has_country_flag = hea_purged_flag
-				}
-			}
-		}
-		target_non_existing = yes #Need this to actually purge the non-existing nation after being conquered
-		available = { 
-			ROOT = {
-				FROM = { all_core_land_owned_by_prev_sphere = yes }
-			}
-		}
-
-		remove_effect = {
-			add_to_variable = { hea_monsters_mirelurks = 1 }
-			FROM = {
-				set_country_flag = hea_purged_flag
-				every_core_state = {
-					add_manpower = -5000
-				}
-			}
-		}
-
-		ai_will_do = { #I'm not well verse in AI scripting so just gonna be something basic, at least they will choose the decision instead of ignoring, again idk why anyone would install this mod and play something else, I'm looking at you Beezus - @Deez
-			base = 1
-		}
-	}
-
-	##Steel Puppets
-	hea_monsters_wastes_steel_dynamic_decision = {
-		icon = GFX_decision_jap_conquer_china
-		cost = 20 #PP Cost
-		days_remove = 20 #Duration before finish purging
-		days_re_enable = 10 #Just incase some fuckery happen mid purging and needed a repurge
-		fire_only_once = yes
-
-		#target_root_trigger = { #Not needed, the check is in the decision category
-		#
-		#}
-		targets = { TVT MDM TPA BGR RAD ROB TTM TUB ARM TLA PET PSH } #Robot nation or nations with robot leaders at start - WDN or WARDEN should've been on the list too, but they are a dynamic tag which causes some issue within OWB, have to disabled them for now
-		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
-		target_trigger = { 
-			FROM = {
-				NOT = {
-					has_country_flag = hea_purged_flag
-				}
-			}
-		}
-		target_non_existing = yes #Need this to actually purge the non-existing nation after being conquered
-		available = { 
-			ROOT = {
-				FROM = { all_core_land_owned_by_prev_sphere = yes }
-			}
-		}
-
-		remove_effect = {
-			add_to_variable = { hea_monsters_robots = 1 }
-			FROM = {
-				set_country_flag = hea_purged_flag
-				every_core_state = {
-					add_manpower = -5000
-				}
-			}
-		}
-
-		ai_will_do = { #I'm not well verse in AI scripting so just gonna be something basic, at least they will choose the decision instead of ignoring, again idk why anyone would install this mod and play something else, I'm looking at you Beezus - @Deez
-			base = 1
-		}
-	}
-
-	##The Red Devils
-	hea_monsters_wastes_red_dynamic_decision = {
-		icon = GFX_decision_jap_conquer_china
-		cost = 20 #PP Cost
-		days_remove = 20 #Duration before finish purging
-		days_re_enable = 10 #Just incase some fuckery happen mid purging and needed a repurge
-		fire_only_once = yes
-
-		#target_root_trigger = { #Not needed, the check is in the decision category
-		#
-		#}
-		targets = { STC LOI } #Communist nation or nations with communist leaders at start
-		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
-		target_trigger = { 
-			FROM = {
-				NOT = {
-					has_country_flag = hea_purged_flag
-				}
-			}
-		}
-		target_non_existing = yes #Need this to actually purge the non-existing nation after being conquered
-		available = { 
-			ROOT = {
-				FROM = { all_core_land_owned_by_prev_sphere = yes }
-			}
-		}
-
-		remove_effect = {
-			add_to_variable = { hea_monsters_communists = 1 }
-			FROM = {
-				set_country_flag = hea_purged_flag
-				every_core_state = {
-					add_manpower = -5000
-				}
-			}
-		}
-
-		ai_will_do = { #I'm not well verse in AI scripting so just gonna be something basic, at least they will choose the decision instead of ignoring, again idk why anyone would install this mod and play something else, I'm looking at you Beezus - @Deez
-			base = 1
-		}
-	}
-	hea_fervor_initial_warning = {
+	hea_fervor_initial_warning = { #Initial idle warning activated by completed A New Age
 		icon = GFX_decision_tempered_blade
 		days_mission_timeout = 2
 		is_good = no
@@ -686,7 +477,7 @@ hea_monsters_of_the_wastes_cat = {
 			set_country_flag = hea_fervor_idle_phase_0 #Which mean HEA went to war, set the idle phase back to 0- @Deez
 		}
 	}
-	hea_fervor_idle_1_warning = {
+	hea_fervor_idle_1_warning = { #First Stage Idle warning
 		icon = GFX_decision_tempered_blade
 		days_mission_timeout = 2
 		is_good = no
@@ -700,6 +491,7 @@ hea_monsters_of_the_wastes_cat = {
 			has_war = yes
 		}
 		timeout_effect = {
+			clr_country_flag = hea_fervor_idle_phase_0 #Move away from Phase 0 Idle
 			set_country_flag = hea_fervor_idle_phase_1 #Use this for scripted loc and revert penalties handled in on_actions
 			activate_mission = hea_fervor_idle_2_warning
 			add_to_variable = {
@@ -718,7 +510,7 @@ hea_monsters_of_the_wastes_cat = {
 			}
 		}
 	}
-	hea_fervor_idle_2_warning = {
+	hea_fervor_idle_2_warning = { #Second Stage Idle warning
 		icon = GFX_decision_tempered_blade
 		days_mission_timeout = 2
 		is_good = no
@@ -760,7 +552,7 @@ hea_monsters_of_the_wastes_cat = {
 			}
 		}
 	}
-	hea_fervor_idle_3_warning = {
+	hea_fervor_idle_3_warning = { #Third Stage Idle warning
 		icon = GFX_decision_tempered_blade
 		days_mission_timeout = 2
 		is_good = no
@@ -806,6 +598,210 @@ hea_monsters_of_the_wastes_cat = {
 					add_idea = hea_fervor_idea_template
 				}
 			}
+		}
+	}
+	##The Dead Are Walking
+	hea_monsters_wastes_deads_dynamic_decision = {
+		icon = GFX_decision_jap_conquer_china
+		cost = 20 #PP Cost
+		days_remove = 20 #Duration before finish purging
+		days_re_enable = 10 #Just incase some fuckery happen mid purging and needed a repurge
+		fire_only_once = yes
+
+		#target_root_trigger = { #Not needed, the check is in the decision category
+		#
+		#}
+		targets = { TLP TOC WHD LUM GLW GLC RES SIN BLO CAF KAM URA } #Ghouls nation or nations with ghoul leaders at start
+		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
+		target_trigger = { 
+			FROM = {
+				NOT = {
+					has_country_flag = hea_purged_flag
+				}
+			}
+		}
+		target_non_existing = yes #Need this to actually purge the non-existing nation after being conquered
+		available = { 
+			FROM = { all_core_land_owned_by_prev_sphere = yes }
+			has_war = no
+		}
+
+		remove_effect = {
+			add_to_variable = { hea_monsters_ghouls = 1 }
+			FROM = {
+				set_country_flag = hea_purged_flag
+				every_core_state = {
+					add_manpower = -5000
+				}
+			}
+		}
+
+		ai_will_do = { #I'm not well verse in AI scripting so just gonna be something basic, at least they will choose the decision instead of ignoring, again idk why anyone would install this mod and play something else, I'm looking at you Beezus - @Deez
+			base = 1
+		}
+	}
+
+	##Horde of Nephilim
+	hea_monsters_wastes_nephilim_dynamic_decision = {
+		icon = GFX_decision_jap_conquer_china
+		cost = 20 #PP Cost
+		days_remove = 20 #Duration before finish purging
+		days_re_enable = 10 #Just incase some fuckery happen mid purging and needed a repurge
+		fire_only_once = yes
+
+		#target_root_trigger = { #Not needed, the check is in the decision category
+		#
+		#}
+		targets = { TRL JCT SHA UOA IMO } #Super Mutant nation or nations with super mutant leaders at start
+		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
+		target_trigger = { 
+			FROM = {
+				NOT = {
+					has_country_flag = hea_purged_flag
+				}
+			}
+		}
+		target_non_existing = yes #Need this to actually purge the non-existing nation after being conquered
+		available = { 
+			FROM = { all_core_land_owned_by_prev_sphere = yes }
+			has_war = no
+		}
+
+		remove_effect = {
+			add_to_variable = { hea_monsters_mutants = 1 }
+			FROM = {
+				set_country_flag = hea_purged_flag
+				every_core_state = {
+					add_manpower = -5000
+				}
+			}
+		}
+
+		ai_will_do = { #I'm not well verse in AI scripting so just gonna be something basic, at least they will choose the decision instead of ignoring, again idk why anyone would install this mod and play something else, I'm looking at you Beezus - @Deez
+			base = 1
+		}
+	}
+
+	##Leviathans dwelling in the Coast
+	hea_monsters_wastes_leviathans_dynamic_decision = {
+		icon = GFX_decision_jap_conquer_china
+		cost = 20 #PP Cost
+		days_remove = 20 #Duration before finish purging
+		days_re_enable = 10 #Just incase some fuckery happen mid purging and needed a repurge
+		fire_only_once = yes
+
+		#target_root_trigger = { #Not needed, the check is in the decision category
+		#
+		#}
+		targets = { MLT DIS RRR SLN DED PRO } #Mirelurk nation or nations with mirelurk leaders at start
+		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
+		target_trigger = { 
+			FROM = {
+				NOT = {
+					has_country_flag = hea_purged_flag
+				}
+			}
+		}
+		target_non_existing = yes #Need this to actually purge the non-existing nation after being conquered
+		available = { 
+			FROM = { all_core_land_owned_by_prev_sphere = yes }
+			has_war = no
+		}
+
+		remove_effect = {
+			add_to_variable = { hea_monsters_mirelurks = 1 }
+			FROM = {
+				set_country_flag = hea_purged_flag
+				every_core_state = {
+					add_manpower = -5000
+				}
+			}
+		}
+
+		ai_will_do = { #I'm not well verse in AI scripting so just gonna be something basic, at least they will choose the decision instead of ignoring, again idk why anyone would install this mod and play something else, I'm looking at you Beezus - @Deez
+			base = 1
+		}
+	}
+
+	##Steel Puppets
+	hea_monsters_wastes_steel_dynamic_decision = {
+		icon = GFX_decision_jap_conquer_china
+		cost = 20 #PP Cost
+		days_remove = 20 #Duration before finish purging
+		days_re_enable = 10 #Just incase some fuckery happen mid purging and needed a repurge
+		fire_only_once = yes
+
+		#target_root_trigger = { #Not needed, the check is in the decision category
+		#
+		#}
+		targets = { TVT MDM TPA BGR RAD ROB TTM TUB ARM TLA PET PSH } #Robot nation or nations with robot leaders at start - WDN or WARDEN should've been on the list too, but they are a dynamic tag which causes some issue within OWB, have to disabled them for now
+		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
+		target_trigger = { 
+			FROM = {
+				NOT = {
+					has_country_flag = hea_purged_flag
+				}
+			}
+		}
+		target_non_existing = yes #Need this to actually purge the non-existing nation after being conquered
+		available = { 
+			FROM = { all_core_land_owned_by_prev_sphere = yes }
+			has_war = no
+		}
+
+		remove_effect = {
+			add_to_variable = { hea_monsters_robots = 1 }
+			FROM = {
+				set_country_flag = hea_purged_flag
+				every_core_state = {
+					add_manpower = -5000
+				}
+			}
+		}
+
+		ai_will_do = { #I'm not well verse in AI scripting so just gonna be something basic, at least they will choose the decision instead of ignoring, again idk why anyone would install this mod and play something else, I'm looking at you Beezus - @Deez
+			base = 1
+		}
+	}
+
+	##The Red Devils
+	hea_monsters_wastes_red_dynamic_decision = {
+		icon = GFX_decision_jap_conquer_china
+		cost = 20 #PP Cost
+		days_remove = 20 #Duration before finish purging
+		days_re_enable = 10 #Just incase some fuckery happen mid purging and needed a repurge
+		fire_only_once = yes
+
+		#target_root_trigger = { #Not needed, the check is in the decision category
+		#
+		#}
+		targets = { STC LOI } #Communist nation or nations with communist leaders at start
+		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
+		target_trigger = { 
+			FROM = {
+				NOT = {
+					has_country_flag = hea_purged_flag
+				}
+			}
+		}
+		target_non_existing = yes #Need this to actually purge the non-existing nation after being conquered
+		available = { 
+			FROM = { all_core_land_owned_by_prev_sphere = yes }
+			has_war = no
+		}
+
+		remove_effect = {
+			add_to_variable = { hea_monsters_communists = 1 }
+			FROM = {
+				set_country_flag = hea_purged_flag
+				every_core_state = {
+					add_manpower = -5000
+				}
+			}
+		}
+
+		ai_will_do = { #I'm not well verse in AI scripting so just gonna be something basic, at least they will choose the decision instead of ignoring, again idk why anyone would install this mod and play something else, I'm looking at you Beezus - @Deez
+			base = 1
 		}
 	}
 }

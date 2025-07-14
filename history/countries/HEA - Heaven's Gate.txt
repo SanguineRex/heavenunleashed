@@ -109,6 +109,7 @@ recruit_character = HEA_mother_magdalene
 #recruit_character = HEA_pastor_hughes #Can't find this character - @Deez
 #recruit_character = HEA_priest_roberts #Can't find this character - @Deez
 #recruit_character = HEA_canon_phillips #Can't find this character - @Deez
+recruit_character = HEA_bee_pope #BEEZUSSSSSSS
 
 create_or_join_children_of_the_gate = yes
 

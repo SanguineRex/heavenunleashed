@@ -123,7 +123,7 @@ hea_nf_vengance_tt: "This will put §g[HEA.GetNameWithFlag]§! on the path of §
 
 hea_nf_age_of_steam: "A New Age"
 hea_nf_age_of_steam_desc: "The Steam-Fusion reactors have taken us far and beyond what any might have expected, allowing our military to reach heights previously thought impossible by all but the greatest of nations or technophiles. The blessing of steam allowed us to become what we are, and with that blessing? We shall usher in an new age!"
-hea_nf_age_of_steam_fervor_tt: "If we don't launch a §RCrusade§! in §Y200§! days the people will question our rule!"
+hea_nf_age_of_steam_fervor_tt: "Add §YFervor:§! Grants §g[HEA.GetNameWithFlag]§! various §GBonuses§! during §YWartimes§! but also §RPenalties§! for being at §YPeace§! for too long.\n\nIf we don't launch a §RCrusade§! in §Y200§! days the people will question our rule!"
 
   hea_digging_deep:0 "Building up Heaven's Gate"
   hea_digging_deep_desc:0 "Heaven's Gate has plenty of resources that go untapped, or forgotten, when our people could do well to use them. Veins of ore, rivers forgotten, and plenty of educated men that go ignored in favor of our warriors, no longer. The Father above gave us this land, we do him a disservice by not appreciating it fully."

@@ -518,12 +518,13 @@ focus_tree = {
 					}
 				}
 				if = {
-					limit = { has_war = yes }
+					limit = { has_war = yes } #In case HEA already at war when this focus complete, issue raised by Beez - @Deez
 					add_to_variable = {
 						var = hea_fervor_war_support_factor_var
 						value = 0.1
 					}
-					set_country_flag = hea_fervor_war_support_bonus
+					set_country_flag = hea_fervor_idle_phase_0 #Set idleness stage to 0
+					set_country_flag = hea_fervor_war_support_bonus #bonus applied
 				}
 				activate_mission = hea_fervor_initial_warning
 				custom_effect_tooltip = hea_nf_age_of_steam_fervor_tt
@@ -1952,6 +1953,7 @@ set_country_leader_name = {
 					hea_monsters_ghouls > 1
 				}
 			}
+			has_war = no
 		}
 		
 		completion_reward = {
@@ -1976,6 +1978,7 @@ set_country_leader_name = {
 		}
 		available = {
 			WBH = { all_core_land_owned_by_prev_sphere = yes }
+			has_war = no
 		}
 		
 		completion_reward = {
@@ -2008,6 +2011,7 @@ set_country_leader_name = {
 					hea_monsters_mutants > 1
 				}
 			}
+			has_war = no
 		}
 		
 		completion_reward = {
@@ -2037,6 +2041,7 @@ set_country_leader_name = {
 					hea_monsters_mirelurks > 0
 				}
 			}
+			has_war = no
 		}
 
 		completion_reward = {
@@ -2066,6 +2071,7 @@ set_country_leader_name = {
 					hea_monsters_robots > 1
 				}
 			}
+			has_war = no
 		}
 		
 		completion_reward = {
@@ -2095,6 +2101,7 @@ set_country_leader_name = {
 					hea_monsters_communists > 0
 				}
 			}
+			has_war = no
 		}
 
 		completion_reward = {
@@ -2120,6 +2127,10 @@ set_country_leader_name = {
 		prerequisite = { focus = hea_leviathans_of_the_north }
 		prerequisite = { focus = hea_steel_puppets }
 		prerequisite = { focus = hea_red_devils_of_the_north }	
+
+		available = {
+			has_war = no
+		}
 
 		completion_reward = {
 			swap_ideas = { 

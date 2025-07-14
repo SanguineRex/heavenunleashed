@@ -338,3 +338,19 @@ hea_foreign_relation_dynamic_modifier: "Missionary Missions"
 hea_foreign_relation_idea_0: "Missionary Missions"
 hea_foreign_relation_idea_expand: "Missionary Missions"
 hea_foreign_relation_idea_final: "Missionary Missions"
+
+
+##########
+##Fervor##
+##########
+hea_fervor_scripted_loc_neutral: "Fervor: §WOrdinary§!"
+hea_fervor_scripted_loc_idle_phase_1: "Fervor: §gStagnations§!"
+hea_fervor_scripted_loc_idle_phase_2: "Fervor: §LDegradations§!"
+hea_fervor_scripted_loc_idle_phase_3: "Fervor: §0Corruptions§!"
+
+hea_fervor_dynamic_modifier: "[hea_fervor_scripted_loc]"
+hea_fervor_idea_template: "[hea_fervor_scripted_loc]"
+hea_fervor_idea_idle_1: "[hea_fervor_scripted_loc]"
+hea_fervor_idea_idle_2: "[hea_fervor_scripted_loc]"
+hea_fervor_idea_idle_3: "[hea_fervor_scripted_loc]"
+

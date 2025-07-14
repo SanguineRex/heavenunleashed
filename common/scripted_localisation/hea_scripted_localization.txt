@@ -1,0 +1,53 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+###Calcualte per battalion in division designer. Depricated
+
+defined_text = {
+    name = HEA_steam_heat_color_scripted_localization
+    text = {
+        trigger = { check_variable = { HEA.steam_heat > 8 } }
+        localization_key = steam_heat_red
+    }
+    text = {
+        trigger = { check_variable = { HEA.steam_heat > 4 } }
+        localization_key = steam_heat_yellow
+    }
+    text = {
+        localization_key = steam_heat_green
+    }
+}
+
+defined_text = {
+    name = hea_fervor_scripted_loc
+    text = {
+        trigger = { 
+            original_tag = HEA
+            has_country_flag = hea_fervor_idle_phase_3 
+        }
+        localization_key = hea_fervor_scripted_loc_idle_phase_3 #Fervor: Corruptions
+    }
+    text = {
+        trigger = { 
+            original_tag = HEA
+            has_country_flag = hea_fervor_idle_phase_2 
+        }
+        localization_key = hea_fervor_scripted_loc_idle_phase_2 #Fervor: Degradations
+    }
+    text = {
+        trigger = { 
+            original_tag = HEA
+            has_country_flag = hea_fervor_idle_phase_1
+        }
+        localization_key = hea_fervor_scripted_loc_idle_phase_1 #Fervor: Stagnations
+    }
+    text = {
+        localization_key = hea_fervor_scripted_loc_neutral #Fervor: Ordinary
+    }
+}

@@ -486,7 +486,7 @@ hea_monsters_of_the_wastes_cat = {
 		#target_root_trigger = { #Not needed, the check is in the decision category
 		#
 		#}
-		targets = { TRL SLN DED JCT PRO SHA UOA IMO } #Super Mutant nation or nations with super mutant leaders at start
+		targets = { TRL JCT SHA UOA IMO } #Super Mutant nation or nations with super mutant leaders at start
 		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
 		target_trigger = { 
 			FROM = {
@@ -528,7 +528,7 @@ hea_monsters_of_the_wastes_cat = {
 		#target_root_trigger = { #Not needed, the check is in the decision category
 		#
 		#}
-		targets = { MLT DIS RRR } #Mirelurk nation or nations with mirelurk leaders at start
+		targets = { MLT DIS RRR SLN DED PRO } #Mirelurk nation or nations with mirelurk leaders at start
 		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
 		target_trigger = { 
 			FROM = {
@@ -640,6 +640,172 @@ hea_monsters_of_the_wastes_cat = {
 
 		ai_will_do = { #I'm not well verse in AI scripting so just gonna be something basic, at least they will choose the decision instead of ignoring, again idk why anyone would install this mod and play something else, I'm looking at you Beezus - @Deez
 			base = 1
+		}
+	}
+	hea_fervor_initial_warning = {
+		icon = GFX_decision_tempered_blade
+		days_mission_timeout = 2
+		is_good = no
+		allowed = {
+			always = no #Handled by Focus
+		}
+		available = {
+			always = no #Not meant to be completed lol
+		}
+		cancel_trigger = {
+			has_war = yes
+		}
+
+		timeout_effect = { #Penalties
+			set_country_flag = hea_fervor_idle_phase_3 #set idle phase to 3
+			add_to_variable = {
+				var = hea_fervor_stability_factor_var #Stability -30%
+				value = -0.3
+			}
+			add_to_variable = {
+				var = hea_fervor_war_support_factor_var #War Support -30%
+				value = -0.3
+			}
+			add_to_variable = {
+				var = hea_fervor_stability_weekly_var #War Support Weekly -0.01%
+				value = -0.01
+			}
+			add_to_variable = {
+				var = hea_fervor_war_support_weekly_var #War Support Weekly -0.01
+				value = -0.01
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_template
+					add_idea = hea_fervor_idea_idle_3
+				}
+			}
+		}
+
+		cancel_effect = {
+			set_country_flag = hea_fervor_idle_phase_0 #Which mean HEA went to war, set the idle phase back to 0- @Deez
+		}
+	}
+	hea_fervor_idle_1_warning = {
+		icon = GFX_decision_tempered_blade
+		days_mission_timeout = 2
+		is_good = no
+		allowed = {
+			always = no #Handled by on_actions
+		}
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+			has_war = yes
+		}
+		timeout_effect = {
+			set_country_flag = hea_fervor_idle_phase_1 #Use this for scripted loc and revert penalties handled in on_actions
+			activate_mission = hea_fervor_idle_2_warning
+			add_to_variable = {
+				var = hea_fervor_stability_factor_var #Initial Stability -10%
+				value = -0.1
+			}
+			add_to_variable = {
+				var = hea_fervor_war_support_factor_var #Initia War Support -10%
+				value = -0.1
+			}
+			effect_tooltip = { #For displaying tooltips - @Deez
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_template
+					add_idea = hea_fervor_idea_idle_1
+				}
+			}
+		}
+	}
+	hea_fervor_idle_2_warning = {
+		icon = GFX_decision_tempered_blade
+		days_mission_timeout = 2
+		is_good = no
+		allowed = {
+			always = no #Handled by the previous idle warning mission
+		}
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+			has_war = yes
+		}
+		timeout_effect = {
+			clr_country_flag = hea_fervor_idle_phase_1 #Move away from phase 1
+			set_country_flag = hea_fervor_idle_phase_2 #Use this for scripted loc and revert penalties handled in on_actions
+			activate_mission = hea_fervor_idle_3_warning
+			add_to_variable = {
+				var = hea_fervor_stability_factor_var #Another Stability -10%
+				value = -0.1
+			}
+			add_to_variable = {
+				var = hea_fervor_war_support_factor_var #Another War Support -10%
+				value = -0.1
+			}
+			effect_tooltip = { #For displaying tooltips - @Deez
+				swap_ideas = { #The effects changes are the same so reuse this tooltip - @Deez
+					remove_idea = hea_fervor_idea_idle_1
+					add_idea = hea_fervor_idea_idle_2
+				}
+			}
+		}
+
+		cancel_effect = {
+			effect_tooltip = { #Just to display the reverted penalties
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_idle_1
+					add_idea = hea_fervor_idea_template
+				}
+			}
+		}
+	}
+	hea_fervor_idle_3_warning = {
+		icon = GFX_decision_tempered_blade
+		days_mission_timeout = 2
+		is_good = no
+		allowed = {
+			always = no #Handled by the previous idle warning mission
+		}
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+			has_war = yes
+		}
+		timeout_effect = {
+			clr_country_flag = hea_fervor_idle_phase_2 #Move away from phase 2
+			set_country_flag = hea_fervor_idle_phase_3 #Use this for scripted loc and revert penalties handled in on_actions
+			add_to_variable = {
+				var = hea_fervor_stability_factor_var #Another Stability -10%
+				value = -0.1
+			}
+			add_to_variable = {
+				var = hea_fervor_war_support_factor_var #Another War Support -10%
+				value = -0.1
+			}
+			add_to_variable = {
+				var = hea_fervor_stability_weekly_var #Stability Weekly -1%
+				value = -0.01
+			}
+			add_to_variable = {
+				var = hea_fervor_war_support_weekly_var #War Support Weekly -1%
+				value = -0.01
+			}
+			effect_tooltip = { #For displaying tooltips - @Deez
+				swap_ideas = { 
+					remove_idea = hea_fervor_idea_idle_2
+					add_idea = hea_fervor_idea_idle_3
+				}
+			}
+		}
+		cancel_effect = { 
+			effect_tooltip = { #Just to display the reverted penalties
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_idle_2
+					add_idea = hea_fervor_idea_template
+				}
+			}
 		}
 	}
 }

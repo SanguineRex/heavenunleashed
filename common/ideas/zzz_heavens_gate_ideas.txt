@@ -1490,5 +1490,35 @@ ideas = {
 				send_volunteer_size = 3
 			}
 		}
+		#########################
+		##Fervor-Crusdaing Time##
+		#########################
+		hea_fervor_idea_template = { #Base with no real effects
+			picture = pantheon_sun
+			#Lmao Nothing here - @Deez
+		}
+		hea_fervor_idea_idle_1 = { #First-Second level of being idle
+			picture = pantheon_sun
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1			
+			}
+		}
+		hea_fervor_idea_idle_2 = { #Second level of being idle
+			picture = pantheon_sun
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2			
+			}
+		}
+		hea_fervor_idea_idle_3 = { #Third level of being idle
+			picture = pantheon_sun
+			modifier = {
+				stability_factor = -0.3
+				war_support_factor = -0.3
+				stability_weekly = -0.01
+				war_support_weekly = -0.01
+			}
+		}
 	}
 }

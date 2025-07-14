@@ -118,6 +118,14 @@ hea_alchemist_final_research_tt:0 "§YThis will give us 7.5% Research Bonus but 
 hea_alchemist_final_resource:0 "§YOR:§!Heaven's Gate Advanced Resources Team"
 hea_alchemist_final_resource_tt:0 "§YThis will give us 40£resources_strip|5 and 40£resources_strip|6 but lock us out of §YHeaven's Gate Research Team§!"
 
+########################
+##Fervor-CrusadingTime##
+########################
+hea_fervor_initial_warning: "§0Deus vult!§!"
+hea_fervor_idle_1_warning: "§gDeus vult!§!"
+hea_fervor_idle_2_warning: "§LDeus vult!§!"
+hea_fervor_idle_3_warning: "§0Deus vult!§!"
+
 ##########################
 ##Monsters of the Wastes##
 ##########################

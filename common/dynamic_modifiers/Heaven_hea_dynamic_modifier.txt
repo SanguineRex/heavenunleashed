@@ -66,3 +66,21 @@ hea_foreign_relation_dynamic_modifier = {
         send_volunteer_divisions_required = -10 #To allow sending volunteers without divisions count requirement - @Deez
     }
 }
+################################
+##Fervor - Crusading time baby##
+################################
+hea_fervor_dynamic_modifier = {
+	icon = GFX_idea_pantheon_sun
+	stability_factor = hea_fervor_stability_factor_var
+	war_support_factor = hea_fervor_war_support_factor_var
+	stability_weekly = hea_fervor_stability_weekly_var
+	war_support_weekly = hea_fervor_war_support_weekly_var
+	army_attack_factor = hea_fervor_army_attack_factor_var
+	breakthrough_factor = hea_fervor_breakthrough_factor_var
+	supply_consumption_factor = hea_fervor_supply_consumption_factor_var
+	attrition = hea_fervor_attrition_var
+	army_morale_factor = hea_fervor_army_morale_factor_var
+	army_org_factor = hea_fervor_army_org_factor_var
+}
+
+

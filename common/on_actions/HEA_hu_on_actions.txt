@@ -1,0 +1,57 @@
+on_actions = {
+	# ROOT is winner, FROM is loser
+	on_peaceconference_ended = { #Idle mechanic when HEA finishes wars
+		effect = {
+			if = {
+				limit = {
+					original_tag = HEA #Check if ROOT is HEA first
+					has_completed_focus = hea_nf_age_of_steam
+					has_country_flag = hea_vengance_path
+					has_country_flag = hea_fervor_idle_phase_0
+					has_war = no #Only when HEA have no more enemy
+				}
+				activate_mission = hea_fervor_idle_1_warning
+				add_to_variable = { var = hea_fervor_war_support_factor_var value = -0.1 } #Remove Bonus of 10% War Support
+				clr_country_flag = hea_fervor_war_support_bonus #To prevent repeated declaring war getting war support stacked forever
+			}
+		}
+	}
+	on_declare_war = { #On declare instead of on war so the penalties only can be removed and initial war support bonus given if Heaven's Gate is the aggressor
+		effect = {
+			if = {
+				limit = { 
+					original_tag = HEA #Check if ROOT is HEA first
+					has_completed_focus = hea_nf_age_of_steam
+					has_country_flag = hea_vengance_path
+				} 
+				if = {
+					limit = { has_country_flag = hea_fervor_idle_phase_3 } #At Phase 3 Debuffs
+					clr_country_flag = hea_fervor_idle_phase_3 
+					add_to_variable = { var = hea_fervor_stability_factor_var value = 0.3 }
+					add_to_variable = { var = hea_fervor_war_support_factor_var value = 0.3 }
+					add_to_variable = { var = hea_fervor_stability_weekly_var value = 0.01 }
+					add_to_variable = { var = hea_fervor_war_support_weekly_var value = 0.01 }
+				}
+				else_if = {
+					limit = { has_country_flag = hea_fervor_idle_phase_2 } #At Phase 2 Debuffs
+					clr_country_flag = hea_fervor_idle_phase_2
+					add_to_variable = { var = hea_fervor_stability_factor_var value = 0.2 }
+					add_to_variable = { var = hea_fervor_war_support_factor_var value = 0.2 }
+				}
+				else = { #At Phase 1 Debuffs
+					clr_country_flag = hea_fervor_idle_phase_1
+					add_to_variable = { var = hea_fervor_stability_factor_var value = 0.1 }
+					add_to_variable = { var = hea_fervor_war_support_factor_var value = 0.1 }					
+				}
+				#Don't really need a Phase 0 cause it don't give any debuff to revert
+
+				set_country_flag = hea_fervor_idle_phase_0 #Set back to phase 0 idle
+				if = { #Giving 10% War Support Bonus
+					limit = { NOT = { has_country_flag = hea_fervor_war_support_bonus } } #Don't have war support bonus
+					set_country_flag = hea_fervor_war_support_bonus
+					add_to_variable = { var = hea_fervor_war_support_factor_var value = 0.1 } #Bonus of 10% War Support	
+				}
+			}
+		}
+	}
+}

@@ -225,6 +225,7 @@ focus_tree = {
 				log = "[GetDateText]: [Root.GetName] hea_nf_vengance entered"
 			}
 			country_event = { id = nf_event_hea.401 }
+			custom_effect_tooltip = hea_nf_vengance_tt
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] hea_nf_vengance exited"
@@ -498,6 +499,24 @@ focus_tree = {
 			swap_ideas = {
 				add_idea = hea_age_of_steam_idea
 				remove_idea = hea_rebirth_steam
+			}
+			if = {
+				limit = { has_country_flag = hea_vengance_path }
+				set_variable = { var = hea_fervor_stability_factor_var value = 0 } #Initialize the values here
+				set_variable = { var = hea_fervor_war_support_factor_var value = 0 }
+				set_variable = { var = hea_fervor_stability_weekly_var value = 0 }
+				set_variable = { var = hea_fervor_war_support_weekly_var value = 0 }
+				set_variable = { var = hea_fervor_army_attack_factor_var value = 0 }
+				set_variable = { var = hea_fervor_breakthrough_factor_var value = 0 }
+				set_variable = { var = hea_fervor_supply_consumption_factor_var value = 0 }
+				set_variable = { var = hea_fervor_attrition_var value = 0 }
+				set_variable = { var = hea_fervor_army_morale_factor_var value = 0 }
+				set_variable = { var = hea_fervor_army_org_factor_var value = 0 }
+				add_dynamic_modifier = {
+					modifier = hea_fervor_dynamic_modifier
+				}
+				activate_mission = hea_fervor_initial_warning
+				custom_effect_tooltip = hea_nf_age_of_steam_fervor_tt
 			}
 			if = {
 				limit = { has_global_flag = debug_logs }
@@ -1883,6 +1902,9 @@ set_country_leader_name = {
 		prerequisite = {
 			focus = hea_nf_embrace_militarism_1
 		}
+		available = {
+			has_completed_focus = hea_michaels_crusade
+		}
 
 		completion_reward = {
 			add_ideas = HEA_wardens_of_humanity1
@@ -1917,7 +1939,7 @@ set_country_leader_name = {
 			custom_trigger_tooltip = {
 				tooltip = hea_the_dead_walk_trig_tt
 				check_variable = {
-					hea_monsters_ghouls > 2
+					hea_monsters_ghouls > 1
 				}
 			}
 		}
@@ -1973,7 +1995,7 @@ set_country_leader_name = {
 			custom_trigger_tooltip = {
 				tooltip = hea_nephilim_horde_trig_tt
 				check_variable = {
-					hea_monsters_mutants > 2
+					hea_monsters_mutants > 1
 				}
 			}
 		}
@@ -5351,6 +5373,44 @@ focus = {
 				uses = 3
 				category = vehicle_tech_category
 			}
+		}
+	}
+	focus = {
+		id = HEA_foreign_relation_ano
+		icon = GFX_goal_HEA_peters_retreat
+		cost = 30
+		x = 0
+		y = 1
+		relative_position_id = HEA_foreign_relation_start
+
+		prerequisite = {
+			focus = HEA_foreign_relation_start
+		}
+		available = {
+			ANO = {
+				exists = yes
+				NOT = { has_completed_focus = utah_ANO_mediation }
+			}
+		}
+
+		completion_reward = {
+			capital_scope = { add_manpower = -250 }
+			ANO = { capital_scope = { add_manpower = 250 } }
+			add_to_variable = {
+				var = hea_experience_gain_army_var
+				value = 0.03
+			}
+			add_to_variable = {
+				var = hea_civilian_factory_use_var
+				value = 2
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_expand
+				}
+			}
+			custom_effect_tooltip = HEA_foreign_relation_ano_tt
 		}
 	}
 }

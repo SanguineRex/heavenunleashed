@@ -1,0 +1,6714 @@
+focus_tree = {
+	id = utah_nf
+	country = {
+		factor = 0
+		modifier = {
+			OR = {
+				original_tag = SOR
+				original_tag = TAR
+				original_tag = CRZ
+				original_tag = DEA
+				original_tag = UIN
+				original_tag = LON
+				original_tag = ANO
+				original_tag = MUR
+				original_tag = HGH
+				original_tag = HAM
+			}
+			add = 11
+		}
+	}
+	default = no
+	focus = {
+		id = utah_origin_1
+		icon = GFX_goal_generic_ideological_fury_focus
+		cost = 7
+		x = 14
+		y = 0
+		completion_reward = {
+			country_event = {
+				id = nf_utah.1
+			}
+		}
+	}
+	focus = {
+		id = utah_origin_2
+		icon = GFX_goal_generic_ideological_fury_focus
+		cost = 7
+		prerequisite = {
+			focus = utah_origin_1
+		}
+		x = 14
+		y = 1
+		completion_reward = {
+			country_event = {
+				id = nf_utah.2
+			}
+		}
+	}
+	focus = {
+		id = utah_origin_3
+		icon = GFX_goal_generic_ideological_fury_focus
+		cost = 7
+		prerequisite = {
+			focus = utah_origin_2
+		}
+		x = 14
+		y = 2
+		completion_reward = {
+			country_event = {
+				id = nf_utah.3
+			}
+		}
+	}
+	focus = {
+		id = utah_war
+		icon = GFX_goal_generic_military_industry_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_origin_3
+		}
+		relative_position_id = utah_origin_3
+		x = -9
+		y = 1
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_valid_state_for_2_arms_factories = yes
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_manpower = 250
+		}
+	}
+	focus = {
+		id = utah_war_offense
+		icon = GFX_goal_generic_war_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_war
+		}
+		relative_position_id = utah_war
+		x = -2
+		y = 1
+		completion_reward = {
+			army_experience = 35
+			add_manpower = 500
+		}
+	}
+	focus = {
+		id = utah_warrior_lifestyle
+		icon = GFX_goal_generic_supplies_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_war_offense
+		}
+		relative_position_id = utah_war_offense
+		x = -1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = support_tech_category
+			}
+			add_ideas = utah_war_offense_idea
+		}
+	}
+	focus = {
+		id = utah_creature_support
+		icon = GFX_goal_generic_creature_brahmin
+		cost = 60
+		prerequisite = {
+			focus = utah_warrior_lifestyle
+		}
+		available = {
+			has_tech = creatures_tech_level_tribal
+		}
+		relative_position_id = utah_warrior_lifestyle
+		x = -1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = beasts_tech_category
+			}
+			add_equipment_to_stockpile = {
+				type = beast_creature_equipment_2
+				amount = 400
+				producer = USA
+			}
+		}
+	}
+	focus = {
+		id = utah_creature_support_2
+		icon = GFX_goal_generic_creature_nightstalker
+		cost = 60
+		prerequisite = {
+			focus = utah_creature_support
+		}
+		relative_position_id = utah_creature_support
+		x = -1
+		y = 1
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_valid_state_for_arms_factory = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				bonus = 0.2
+				ahead_reduction = 1
+				uses = 1
+				category = beasts_tech_category
+			}
+			custom_effect_tooltip = spacer_tt
+			add_ideas = utah_creature_building_idea
+		}
+	}
+	focus = {
+		id = utah_canyon_warfare
+		icon = GFX_goal_generic_canyon_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_war_offense
+		}
+		relative_position_id = utah_war_offense
+		x = 1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = infantry_tech_category
+			}
+		}
+	}
+	focus = {
+		id = utah_warbands
+		icon = GFX_goal_generic_human_warriors
+		cost = 60
+		prerequisite = {
+			focus = utah_canyon_warfare
+		}
+		prerequisite = {
+			focus = utah_warrior_lifestyle
+		}
+		relative_position_id = utah_war_offense
+		x = 0
+		y = 2
+		completion_reward = {
+			add_ideas = utah_warbands_idea
+			division_template = {
+				name = "War Band"
+				regiments = {
+					infantry = {
+						x = 0
+						y = 0
+					}
+					infantry = {
+						x = 0
+						y = 1
+					}
+					infantry = {
+						x = 0
+						y = 2
+					}
+					infantry = {
+						x = 1
+						y = 0
+					}
+					infantry = {
+						x = 1
+						y = 1
+					}
+					infantry = {
+						x = 1
+						y = 2
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					impassable = no
+				}
+				create_unit = {
+					division = "name = \"War Band\" division_template = \"War Band\" start_experience_factor = 1.5 start_equipment_factor = 2.0"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"War Band\" division_template = \"War Band\" start_experience_factor = 1.5 start_equipment_factor = 2.0"
+					owner = ROOT
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_raiding_missions
+		icon = GFX_goal_BRK_drums_of_war
+		cost = 60
+		prerequisite = {
+			focus = utah_warbands
+		}
+		relative_position_id = utah_war_offense
+		x = -1
+		y = 3
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = utah_war_offense_idea
+				add_idea = utah_war_offense_idea_2
+			}
+		}
+	}
+	focus = {
+		id = utah_weapons_of_war
+		icon = GFX_goal_generic_regular_firearms_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_warbands
+		}
+		prerequisite = {
+			focus = utah_scouts
+		}
+		relative_position_id = utah_war_offense
+		x = 2
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = ballistic_weaponry_tech_category
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 800
+				producer = ROOT
+			}
+		}
+	}
+	focus = {
+		id = utah_honor_the_champions
+		icon = GFX_goal_BRK_council_of_warriors
+		cost = 60
+		prerequisite = {
+			focus = utah_raiding_missions
+		}
+		prerequisite = {
+			focus = utah_weapons_of_war
+		}
+		relative_position_id = utah_war_offense
+		x = 0
+		y = 4
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = officer_law_local_heroes
+				}
+				swap_ideas = {
+					remove_idea = officer_law_local_heroes
+					add_idea = officer_law_local_legends
+				}
+			}
+			else = {
+				add_political_power = 100
+			}
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = utah_war_defense
+		icon = GFX_goal_generic_bunkers_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_war
+		}
+		relative_position_id = utah_war
+		x = 2
+		y = 1
+		completion_reward = {
+			add_ideas = utah_war_defense_idea
+		}
+	}
+	focus = {
+		id = utah_ambush_strategies
+		icon = GFX_goal_TTM_Tribal_Vault_Girl
+		cost = 60
+		prerequisite = {
+			focus = utah_war_defense
+		}
+		relative_position_id = utah_war_defense
+		x = 0
+		y = 1
+		completion_reward = {
+			add_opinion_modifier = {
+				modifier = ouroboros_hounds_of_hecate_aid
+				target = ORO
+			}
+			add_tech_bonus = {
+				name = utah_ambush_strategies
+				bonus = 1
+				uses = 2
+				category = cat_terror_tactics
+				category = support_tech_category
+			}
+		}
+	}
+	focus = {
+		id = utah_scouts
+		icon = GFX_focus_prc_infiltration
+		cost = 60
+		prerequisite = {
+			focus = utah_ambush_strategies
+		}
+		relative_position_id = utah_war_defense
+		x = -1
+		y = 2
+		completion_reward = {
+			add_ideas = utah_scouts_idea
+		}
+	}
+	focus = {
+		id = utah_defense_in_depth
+		icon = GFX_goal_generic_walls_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_ambush_strategies
+		}
+		relative_position_id = utah_war_defense
+		x = 1
+		y = 2
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = utah_war_defense_idea
+				add_idea = utah_war_defense_idea_2
+			}
+		}
+	}
+	focus = {
+		id = utah_defending_the_rivers
+		icon = GFX_goal_generic_harbours_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_defense_in_depth
+		}
+		relative_position_id = utah_war_defense
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+		x = 1
+		y = 3
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = utah_war_defense_idea_2
+				add_idea = utah_war_defense_idea_3
+			}
+			random_owned_state = {
+				limit = {
+					is_valid_state_for_2_dockyards = yes
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_water_control
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 60
+		prerequisite = {
+			focus = utah_defending_the_rivers
+		}
+		relative_position_id = utah_war_defense
+		x = 1
+		y = 4
+		completion_reward = {
+			add_ideas = utah_water_idea
+		}
+	}
+	focus = {
+		id = utah_destroy_the_weak
+		icon = GFX_KHA_focus_slave_1
+		cost = 60
+		prerequisite = {
+			focus = utah_weapons_of_war
+		}
+		mutually_exclusive = {
+			focus = utah_spoils_of_victory
+		}
+		relative_position_id = utah_war_offense
+		x = 1
+		y = 5
+		completion_reward = {
+			every_owned_state = {
+				set_temp_variable = {
+					pop_add = -100
+				}
+				add_state_population_no_state_name = yes
+			}
+			add_manpower = 2000
+		}
+	}
+	focus = {
+		id = utah_spoils_of_victory
+		icon = GFX_focus_generic_concessions
+		cost = 60
+		prerequisite = {
+			focus = utah_weapons_of_war
+		}
+		mutually_exclusive = {
+			focus = utah_destroy_the_weak
+		}
+		relative_position_id = utah_war_offense
+		x = 3
+		y = 5
+		completion_reward = {
+			every_owned_state = {
+				damage_building = {
+					type = infrastructure
+					damage = 0.5
+				}
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 3
+			}
+			set_temp_variable = { caps_to_add = 100 }
+			add_caps = yes
+		}
+	}
+	focus = {
+		id = utah_holy_war
+		icon = GFX_goal_HEA_focus_declaration_of_crusade
+		cost = 60
+		prerequisite = {
+			focus = utah_destroy_the_weak
+			focus = utah_spoils_of_victory
+		}
+		available = {
+			has_war = yes
+		}
+		relative_position_id = utah_war_offense
+		x = 2
+		y = 6
+		completion_reward = {
+			custom_effect_tooltip = utah_holy_war_tt
+			add_to_variable = {
+				pantheon_loyalty_var = 0.05
+			}
+			add_to_variable = {
+				pantheon_mood_var = 0.2
+			}
+			add_timed_idea = {
+				idea = utah_holy_war_idea
+				days = 200
+			}
+		}
+	}
+	focus = {
+		id = utah_economy
+		icon = GFX_goal_generic_building_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_origin_3
+		}
+		relative_position_id = utah_origin_3
+		x = 7
+		y = 1
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_valid_state_for_2_civilian_factories = yes
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_temp_variable = { caps_to_add = 50 }
+			add_caps = yes
+		}
+	}
+	focus = {
+		id = utah_nomadic_life
+		icon = GFX_goal_generic_recruitment_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_economy
+		}
+		mutually_exclusive = {
+			focus = utah_city_life
+		}
+		relative_position_id = utah_economy
+		x = -1
+		y = 1
+		completion_reward = {
+			add_ideas = utah_nomadic_idea
+		}
+	}
+	focus = {
+		id = utah_city_life
+		icon = GFX_goal_generic_cities_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_economy
+		}
+		mutually_exclusive = {
+			focus = utah_nomadic_life
+		}
+		relative_position_id = utah_economy
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = utah_city_idea
+		}
+	}
+	focus = {
+		id = utah_sanctifying_the_land
+		icon = GFX_goal_generic_construction
+		cost = 60
+		prerequisite = {
+			focus = utah_nomadic_life
+			focus = utah_city_life
+		}
+		relative_position_id = utah_economy
+		x = 0
+		y = 2
+		completion_reward = {
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = utah_food_for_the_hungry
+		icon = GFX_goal_generic_food_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_sanctifying_the_land
+		}
+		relative_position_id = utah_economy
+		x = -2
+		y = 3
+		completion_reward = {
+			add_opinion_modifier = {
+				modifier = ouroboros_daughters_of_hecate_aid
+				target = ORO
+			}
+			add_ideas = utah_food_idea
+		}
+	}
+	focus = {
+		id = utah_bountiful_harvests
+		icon = GFX_KHA_focus_farm_agriculture
+		cost = 60
+		prerequisite = {
+			focus = utah_food_for_the_hungry
+		}
+		relative_position_id = utah_economy
+		x = -2
+		y = 4
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = utah_food_idea
+				add_idea = utah_food_idea_1
+			}
+		}
+	}
+	focus = {
+		id = utah_stewards_of_the_land
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_sanctifying_the_land
+		}
+		relative_position_id = utah_economy
+		x = 0
+		y = 3
+		completion_reward = {
+			add_ideas = utah_resources_idea
+		}
+	}
+	focus = {
+		id = utah_inherit_the_earth
+		icon = GFX_goal_generic_metal_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_stewards_of_the_land
+		}
+		relative_position_id = utah_economy
+		x = 0
+		y = 4
+		completion_reward = {
+			random_owned_state = {
+				add_resource = {
+					type = metal
+					amount = 16
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_work_for_the_idle
+		icon = GFX_goal_generic_construct_civilian
+		cost = 60
+		prerequisite = {
+			focus = utah_sanctifying_the_land
+		}
+		relative_position_id = utah_economy
+		x = 2
+		y = 3
+		completion_reward = {
+			add_ideas = utah_work_idea
+		}
+	}
+	focus = {
+		id = utah_fruits_of_labor
+		icon = GFX_goal_generic_consumer_goods
+		cost = 60
+		prerequisite = {
+			focus = utah_work_for_the_idle
+		}
+		relative_position_id = utah_economy
+		x = 2
+		y = 4
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = utah_work_idea
+				add_idea = utah_work_idea_1
+			}
+		}
+	}
+	focus = {
+		id = utah_venerate_the_old
+		icon = GFX_goal_generic_slums_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_bountiful_harvests
+			focus = utah_fruits_of_labor
+			focus = utah_inherit_the_earth
+		}
+		mutually_exclusive = {
+			focus = utah_improve_the_old
+		}
+		relative_position_id = utah_economy
+		x = -1
+		y = 5
+		completion_reward = {
+			add_ideas = utah_veneration_idea
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = utah_improve_the_old
+		icon = GFX_goal_generic_infrastructure2
+		cost = 60
+		prerequisite = {
+			focus = utah_bountiful_harvests
+			focus = utah_fruits_of_labor
+			focus = utah_inherit_the_earth
+		}
+		mutually_exclusive = {
+			focus = utah_venerate_the_old
+		}
+		relative_position_id = utah_economy
+		x = 1
+		y = 5
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					infrastructure < 9
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_new_discoveries
+		icon = GFX_focus_research
+		cost = 60
+		prerequisite = {
+			focus = utah_venerate_the_old
+			focus = utah_improve_the_old
+		}
+		relative_position_id = utah_economy
+		x = 0
+		y = 6
+		completion_reward = {
+			add_research_slot = 1
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		id = utah_precious_tools
+		icon = GFX_goal_generic_production
+		cost = 60
+		prerequisite = {
+			focus = utah_new_discoveries
+		}
+		relative_position_id = utah_economy
+		x = -3
+		y = 7
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = tool_tech
+			}
+		}
+	}
+	focus = {
+		id = utah_ancient_science
+		icon = GFX_goal_generic_communcation_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_new_discoveries
+		}
+		relative_position_id = utah_economy
+		x = -1
+		y = 7
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+	focus = {
+		id = utah_metal_men
+		icon = GFX_goal_generic_t51b_power_armour_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_new_discoveries
+		}
+		available = {
+			has_tech = spec_ops_equipment_tech_1
+		}
+		relative_position_id = utah_economy
+		x = 1
+		y = 7
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_tech = stripped_pa_tech
+					}
+				}
+				set_technology = {
+					stripped_pa_tech = 1
+				}
+			}
+			if = {
+				limit = {
+					has_tech = stripped_pa_tech
+				}
+				add_tech_bonus = {
+					bonus = 1
+					uses = 2
+					category = infantry_tech_category
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_where_eagles_dare
+		icon = GFX_goal_generic_air_doctrines_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_new_discoveries
+		}
+		relative_position_id = utah_economy
+		x = 3
+		y = 7
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_tech = glider_tech
+					}
+				}
+				set_technology = {
+					glider_tech = 1
+				}
+			}
+			if = {
+				limit = {
+					has_tech = glider_tech
+				}
+				add_tech_bonus = {
+					bonus = 1
+					uses = 2
+					category = air_tech_category
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_religion
+		icon = GFX_goal_religion_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_origin_3
+		}
+		available = {
+			has_selected_a_pantheon = yes
+		}
+		relative_position_id = utah_origin_3
+		allow_branch = {
+			NOT = {
+				tag = MUR
+				tag = HGH
+				tag = ANO
+				tag = HAM
+			}
+		}
+		x = 15
+		y = 1
+		completion_reward = {
+			if = {
+				limit = { has_selected_a_pantheon = yes }
+				custom_effect_tooltip = utah_pantheon_mood_large_tt
+				hidden_effect = {
+					add_to_variable = {
+						pantheon_mood_var = 0.25
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_religion_sun
+		icon = GFX_goal_sun_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_religion
+		}
+		available = {
+			has_idea = pantheon_sun
+		}
+		relative_position_id = utah_religion
+		x = -3
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_blessing_tt
+			add_to_variable = {
+				pantheon_sun_focus_var = -0.07
+			}
+			set_temp_variable = {
+				pantheon_sun_print_temp = pantheon_sun_focus_var
+			}
+			multiply_temp_variable = {
+				pantheon_sun_print_temp = 100
+			}
+			set_variable = {
+				pantheon_sun_print = pantheon_sun_print_temp
+			}
+		}
+	}
+	focus = {
+		id = utah_religion_sun_2
+		icon = GFX_goal_religion_2_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_religion_sun
+		}
+		available = {
+			has_idea = pantheon_sun
+			custom_trigger_tooltip = {
+				tooltip = pantheon_mood_check_tt
+				check_variable = {
+					pantheon_mood_var > 0.5
+				}
+			}
+		}
+		relative_position_id = utah_religion
+		x = -3
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_ritual_tt
+			unlock_decision_tooltip = utah_pantheon_sun_ritual_upgrade
+		}
+	}
+	focus = {
+		id = utah_religion_mountain
+		icon = GFX_goal_mountain_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_religion
+		}
+		available = {
+			has_idea = pantheon_mountain
+		}
+		relative_position_id = utah_religion
+		x = -2
+		y = 2
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_blessing_tt
+			add_to_variable = {
+				pantheon_mountain_focus_var = -0.03
+			}
+			set_temp_variable = {
+				pantheon_mountain_print_temp = pantheon_mountain_focus_var
+			}
+			multiply_temp_variable = {
+				pantheon_mountain_print_temp = 100
+			}
+			set_variable = {
+				pantheon_mountain_print = pantheon_mountain_print_temp
+			}
+		}
+	}
+	focus = {
+		id = utah_religion_mountain_2
+		icon = GFX_goal_religion_2_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_religion_mountain
+		}
+		available = {
+			has_idea = pantheon_mountain
+			custom_trigger_tooltip = {
+				tooltip = pantheon_mood_check_tt
+				check_variable = {
+					pantheon_mood_var > 0.5
+				}
+			}
+		}
+		relative_position_id = utah_religion
+		x = -2
+		y = 4
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_ritual_tt
+			unlock_decision_tooltip = utah_pantheon_mountain_ritual_upgrade
+		}
+	}
+	focus = {
+		id = utah_religion_land
+		icon = GFX_goal_land_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_religion
+		}
+		available = {
+			has_idea = pantheon_land
+		}
+		relative_position_id = utah_religion
+		x = 2
+		y = 2
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_blessing_tt
+			add_to_variable = {
+				pantheon_land_focus_var = -0.05
+			}
+			set_temp_variable = {
+				pantheon_land_print_temp = pantheon_land_focus_var
+			}
+			multiply_temp_variable = {
+				pantheon_land_print_temp = 100
+			}
+			set_variable = {
+				pantheon_land_print = pantheon_land_print_temp
+			}
+		}
+	}
+	focus = {
+		id = utah_religion_land_2
+		icon = GFX_goal_religion_2_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_religion_land
+		}
+		available = {
+			has_idea = pantheon_land
+			custom_trigger_tooltip = {
+				tooltip = pantheon_mood_check_tt
+				check_variable = {
+					pantheon_mood_var > 0.5
+				}
+			}
+		}
+		relative_position_id = utah_religion
+		x = 2
+		y = 4
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_ritual_tt
+			unlock_decision_tooltip = utah_pantheon_land_ritual_upgrade
+		}
+	}
+	focus = {
+		id = utah_religion_moon
+		icon = GFX_goal_moon_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_religion
+		}
+		available = {
+			has_idea = pantheon_moon
+		}
+		relative_position_id = utah_religion
+		x = 3
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_blessing_tt
+			add_to_variable = {
+				pantheon_moon_focus_var = 0.15
+			}
+			set_temp_variable = {
+				pantheon_moon_print_temp = pantheon_moon_focus_var
+			}
+			multiply_temp_variable = {
+				pantheon_moon_print_temp = 100
+			}
+			set_variable = {
+				pantheon_moon_print = pantheon_moon_print_temp
+			}
+		}
+	}
+	focus = {
+		id = utah_religion_moon_2
+		icon = GFX_goal_religion_2_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_religion_moon
+		}
+		available = {
+			has_idea = pantheon_moon
+			custom_trigger_tooltip = {
+				tooltip = pantheon_mood_check_tt
+				check_variable = {
+					pantheon_mood_var > 0.5
+				}
+			}
+		}
+		relative_position_id = utah_religion
+		x = 3
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_ritual_tt
+			unlock_decision_tooltip = utah_pantheon_moon_ritual_upgrade
+		}
+	}
+	focus = {
+		id = utah_religion_sor
+		icon = GFX_goal_sor_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_religion
+		}
+		allow_branch = {
+			original_tag = SOR
+		}
+		available = {
+			has_idea = pantheon_sor
+		}
+		relative_position_id = utah_religion
+		x = 0
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_blessing_tt
+			add_to_variable = {
+				pantheon_sor_focus_var = 0.05
+			}
+			set_temp_variable = {
+				pantheon_sor_print_temp = pantheon_sor_focus_var
+			}
+			multiply_temp_variable = {
+				pantheon_sor_print_temp = 100
+			}
+			set_variable = {
+				pantheon_sor_print = pantheon_sor_print_temp
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	focus = {
+		id = utah_religion_sor_2
+		icon = GFX_goal_generic_building_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_religion_sor
+		}
+		available = {
+			has_idea = pantheon_sor
+			custom_trigger_tooltip = {
+				tooltip = pantheon_mood_check_tt
+				check_variable = {
+					pantheon_mood_var > 0.5
+				}
+			}
+		}
+		relative_position_id = utah_religion
+		x = 0
+		y = 2
+		completion_reward = {
+			43 = {
+				set_temp_variable = {
+					pop_add = 500
+				}
+				add_state_population = yes
+				if = {
+					limit = {
+						is_valid_state_for_civilian_factory = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_religion_sor_3
+		icon = GFX_goal_religion_2_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_religion_sor_2
+		}
+		available = {
+			has_idea = pantheon_sor
+			custom_trigger_tooltip = {
+				tooltip = pantheon_mood_check_tt
+				check_variable = {
+					pantheon_mood_var > 0.7
+				}
+			}
+		}
+		relative_position_id = utah_religion
+		x = 0
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_ritual_tt
+			unlock_decision_tooltip = utah_pantheon_sor_ritual_upgrade
+		}
+	}
+	focus = {
+		id = utah_religion_tar
+		icon = GFX_goal_tar_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_religion
+		}
+		allow_branch = {
+			original_tag = TAR
+		}
+		available = {
+			has_idea = pantheon_tar
+		}
+		relative_position_id = utah_religion
+		x = 0
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_blessing_tt
+			add_to_variable = {
+				pantheon_tar_focus_var = 0.05
+			}
+			set_temp_variable = {
+				pantheon_tar_print_temp = pantheon_tar_focus_var
+			}
+			multiply_temp_variable = {
+				pantheon_tar_print_temp = 100
+			}
+			set_variable = {
+				pantheon_tar_print = pantheon_tar_print_temp
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	focus = {
+		id = utah_religion_tar_2
+		icon = GFX_goal_generic_military_industry_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_religion_tar
+		}
+		available = {
+			has_idea = pantheon_tar
+			custom_trigger_tooltip = {
+				tooltip = pantheon_mood_check_tt
+				check_variable = {
+					pantheon_mood_var > 0.5
+				}
+			}
+		}
+		relative_position_id = utah_religion
+		x = 0
+		y = 2
+		completion_reward = {
+			add_ideas = pantheon_tar_warshops
+			random_owned_state = {
+				limit = {
+					is_valid_state_for_arms_factory = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_religion_tar_3
+		icon = GFX_goal_religion_2_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_religion_tar_2
+		}
+		available = {
+			has_idea = pantheon_tar
+			custom_trigger_tooltip = {
+				tooltip = pantheon_mood_check_tt
+				check_variable = {
+					pantheon_mood_var > 0.7
+				}
+			}
+		}
+		relative_position_id = utah_religion
+		x = 0
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_ritual_tt
+			unlock_decision_tooltip = utah_pantheon_tar_ritual_upgrade
+		}
+	}
+	focus = {
+		id = utah_religion_crz
+		icon = GFX_goal_crz_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_religion
+		}
+		allow_branch = {
+			original_tag = CRZ
+		}
+		available = {
+			has_idea = pantheon_crz
+		}
+		relative_position_id = utah_religion
+		x = 0
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_blessing_tt
+			add_to_variable = {
+				pantheon_crz_focus_var = 0.05
+			}
+			set_temp_variable = {
+				pantheon_crz_print_temp = pantheon_crz_focus_var
+			}
+			multiply_temp_variable = {
+				pantheon_crz_print_temp = 100
+			}
+			set_variable = {
+				pantheon_crz_print = pantheon_crz_print_temp
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	focus = {
+		id = utah_religion_crz_2
+		icon = GFX_goal_generic_flamer_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_religion_crz
+		}
+		available = {
+			has_idea = pantheon_crz
+			custom_trigger_tooltip = {
+				tooltip = pantheon_mood_check_tt
+				check_variable = {
+					pantheon_mood_var > 0.5
+				}
+			}
+		}
+		relative_position_id = utah_religion
+		x = 0
+		y = 2
+		completion_reward = {
+			add_ideas = pantheon_crz_flamer
+		}
+	}
+	focus = {
+		id = utah_religion_crz_3
+		icon = GFX_goal_religion_2_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_religion_crz_2
+		}
+		available = {
+			has_idea = pantheon_crz
+			custom_trigger_tooltip = {
+				tooltip = pantheon_mood_check_tt
+				check_variable = {
+					pantheon_mood_var > 0.7
+				}
+			}
+		}
+		relative_position_id = utah_religion
+		x = 0
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_ritual_tt
+			unlock_decision_tooltip = utah_pantheon_crz_ritual_upgrade
+		}
+	}
+	focus = {
+		id = utah_religion_dea
+		icon = GFX_goal_dea_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_religion
+		}
+		allow_branch = {
+			original_tag = DEA
+		}
+		available = {
+			has_idea = pantheon_dea
+		}
+		relative_position_id = utah_religion
+		x = 0
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_blessing_tt
+			add_to_variable = {
+				pantheon_dea_focus_var = 0.05
+			}
+			set_temp_variable = {
+				pantheon_dea_print_temp = pantheon_dea_focus_var
+			}
+			multiply_temp_variable = {
+				pantheon_dea_print_temp = 100
+			}
+			set_variable = {
+				pantheon_dea_print = pantheon_dea_print_temp
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	focus = {
+		id = utah_religion_dea_2
+		icon = GFX_goal_NCN_45_Auto_Pistol
+		cost = 60
+		prerequisite = {
+			focus = utah_religion_dea
+		}
+		available = {
+			has_idea = pantheon_dea
+			custom_trigger_tooltip = {
+				tooltip = pantheon_mood_check_tt
+				check_variable = {
+					pantheon_mood_var > 0.5
+				}
+			}
+		}
+		relative_position_id = utah_religion
+		x = 0
+		y = 2
+		completion_reward = {
+			add_ideas = pantheon_dea_legate
+		}
+	}
+	focus = {
+		id = utah_religion_dea_3
+		icon = GFX_goal_religion_2_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_religion_dea_2
+		}
+		available = {
+			has_idea = pantheon_dea
+			custom_trigger_tooltip = {
+				tooltip = pantheon_mood_check_tt
+				check_variable = {
+					pantheon_mood_var > 0.7
+				}
+			}
+		}
+		relative_position_id = utah_religion
+		x = 0
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_ritual_tt
+			unlock_decision_tooltip = utah_pantheon_dea_ritual_upgrade
+		}
+	}
+	focus = {
+		id = utah_religion_uin
+		icon = GFX_goal_uin_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_religion
+		}
+		allow_branch = {
+			original_tag = UIN
+		}
+		available = {
+			has_idea = pantheon_uin
+		}
+		relative_position_id = utah_religion
+		x = 0
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_blessing_tt
+			add_to_variable = {
+				pantheon_uin_focus_var = 0.05
+			}
+			set_temp_variable = {
+				pantheon_uin_print_temp = pantheon_uin_focus_var
+			}
+			multiply_temp_variable = {
+				pantheon_uin_print_temp = 100
+			}
+			set_variable = {
+				pantheon_uin_print = pantheon_uin_print_temp
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	focus = {
+		id = utah_religion_uin_2
+		icon = GFX_goal_generic_airbases_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_religion_uin
+		}
+		available = {
+			has_idea = pantheon_uin
+			custom_trigger_tooltip = {
+				tooltip = pantheon_mood_check_tt
+				check_variable = {
+					pantheon_mood_var > 0.5
+				}
+			}
+		}
+		relative_position_id = utah_religion
+		x = 0
+		y = 2
+		completion_reward = {
+			add_ideas = pantheon_uin_gilder
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_religion_uin_3
+		icon = GFX_goal_religion_2_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_religion_uin_2
+		}
+		available = {
+			has_idea = pantheon_uin
+			custom_trigger_tooltip = {
+				tooltip = pantheon_mood_check_tt
+				check_variable = {
+					pantheon_mood_var > 0.7
+				}
+			}
+		}
+		relative_position_id = utah_religion
+		x = 0
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_ritual_tt
+			unlock_decision_tooltip = utah_pantheon_uin_ritual_upgrade
+		}
+	}
+	focus = {
+		id = utah_religion_lon
+		icon = GFX_goal_lon_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_religion
+		}
+		allow_branch = {
+			original_tag = LON
+		}
+		available = {
+			has_idea = pantheon_lon
+		}
+		relative_position_id = utah_religion
+		x = 0
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_blessing_tt
+			add_to_variable = {
+				pantheon_lon_focus_var = 0.05
+			}
+			set_temp_variable = {
+				pantheon_lon_print_temp = pantheon_lon_focus_var
+			}
+			multiply_temp_variable = {
+				pantheon_lon_print_temp = 100
+			}
+			set_variable = {
+				pantheon_lon_print = pantheon_lon_print_temp
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	focus = {
+		id = utah_religion_lon_2
+		icon = GFX_focus_eng_special_air_service
+		cost = 60
+		prerequisite = {
+			focus = utah_religion_lon
+		}
+		available = {
+			has_idea = pantheon_lon
+			custom_trigger_tooltip = {
+				tooltip = pantheon_mood_check_tt
+				check_variable = {
+					pantheon_mood_var > 0.5
+				}
+			}
+		}
+		relative_position_id = utah_religion
+		x = 0
+		y = 2
+		completion_reward = {
+			add_ideas = pantheon_lon_elite
+		}
+	}
+	focus = {
+		id = utah_religion_lon_3
+		icon = GFX_goal_religion_2_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_religion_lon_2
+		}
+		available = {
+			has_idea = pantheon_lon
+			custom_trigger_tooltip = {
+				tooltip = pantheon_mood_check_tt
+				check_variable = {
+					pantheon_mood_var > 0.7
+				}
+			}
+		}
+		relative_position_id = utah_religion
+		x = 0
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_ritual_tt
+			unlock_decision_tooltip = utah_pantheon_lon_ritual_upgrade
+		}
+	}
+	focus = {
+		#RIP
+		id = utah_religion_monotheism
+		icon = GFX_goal_religion_flag
+		cost = 60
+		prerequisite = {
+		}
+		allow_branch = {
+			always = no
+			NOT = {
+				tag = MUR
+				tag = HGH
+				tag = ANO
+				tag = HAM
+			}
+		}
+		available = {
+			#make it linked to this coz its too messy otherwise
+		}
+		relative_position_id = utah_religion
+		x = 0
+		y = 5
+		completion_reward = {
+		}
+	}
+	#
+	#NCN Focuses
+	#
+	focus = {
+		id = utah_ncn
+		icon = GFX_goal_utah_ncn_legion_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_origin_3
+		}
+		allow_branch = {
+			is_subject_of = NCN
+		}
+		relative_position_id = utah_origin_3
+		x = 0
+		y = 1
+		completion_reward = {
+			add_political_power = 75
+			add_opinion_modifier = {
+				target = NCN
+				modifier = utah_emissaries
+			}
+			reverse_add_opinion_modifier = {
+				target = NCN
+				modifier = utah_emissaries
+			}
+		}
+	}
+	focus = {
+		id = utah_accepting_missionaries
+		icon = GFX_goal_NCN_Northern_Missionaries
+		cost = 60
+		prerequisite = {
+			focus = utah_ncn
+		}
+		relative_position_id = utah_origin_3
+		x = -2
+		y = 2
+		completion_reward = {
+			add_manpower = 35
+			add_timed_idea = {
+				idea = utah_missionaries_idea
+				days = 280
+			}
+		}
+	}
+	focus = {
+		id = utah_new_gospel
+		icon = GFX_goal_NCN_Mormon_Book
+		cost = 60
+		prerequisite = {
+			focus = utah_ncn
+		}
+		relative_position_id = utah_origin_3
+		x = 0
+		y = 2
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = -0.05
+		}
+	}
+	focus = {
+		id = utah_learning_from_god
+		icon = GFX_goal_NCN_Generic
+		cost = 60
+		prerequisite = {
+			focus = utah_ncn
+		}
+		relative_position_id = utah_origin_3
+		x = 2
+		y = 2
+		completion_reward = {
+			add_ideas = utah_learning_from_god_idea
+		}
+	}
+	focus = {
+		id = utah_tribal_conversion
+		icon = GFX_goal_utah_submission_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_learning_from_god
+		}
+		prerequisite = {
+			focus = utah_new_gospel
+		}
+		prerequisite = {
+			focus = utah_accepting_missionaries
+		}
+		relative_position_id = utah_origin_3
+		x = 0
+		y = 3
+		completion_reward = {
+			if = {
+				limit = {
+					tag = SOR
+				}
+				clear_array = pantheon_array
+				add_to_array = {
+					pantheon_array = 1
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 7
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 2
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 5
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 3
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 4
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+			}
+			if = {
+				limit = {
+					tag = TAR
+				}
+				clear_array = pantheon_array
+				add_to_array = {
+					pantheon_array = 1
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 8
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 2
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 5
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 3
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 4
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+			}
+			if = {
+				limit = {
+					tag = CRZ
+				}
+				clear_array = pantheon_array
+				add_to_array = {
+					pantheon_array = 1
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 9
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 2
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 5
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 3
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 4
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+			}
+			if = {
+				limit = {
+					tag = DEA
+				}
+				clear_array = pantheon_array
+				add_to_array = {
+					pantheon_array = 1
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 10
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 2
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 5
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 3
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 4
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+			}
+			if = {
+				limit = {
+					tag = UIN
+				}
+				clear_array = pantheon_array
+				add_to_array = {
+					pantheon_array = 1
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 11
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 2
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 5
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 3
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 4
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+			}
+			if = {
+				limit = {
+					tag = LON
+				}
+				clear_array = pantheon_array
+				add_to_array = {
+					pantheon_array = 1
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 12
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 2
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 5
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 3
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 4
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+			}
+			#custom_effect_tooltip = utah_unlock_god_tt
+		}
+	}
+	focus = {
+		id = utah_new_missionaries
+		icon = GFX_goal_NCN_Zealous_Fervour
+		cost = 60
+		prerequisite = {
+			focus = utah_tribal_conversion
+		}
+		relative_position_id = utah_origin_3
+		x = -2
+		y = 4
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = utah_learning_from_god_idea
+				add_idea = utah_new_mormon_idea
+			}
+		}
+	}
+	focus = {
+		id = utah_reaching_the_unconverted
+		icon = GFX_goal_HEA_focus_tribals
+		cost = 60
+		prerequisite = {
+			focus = utah_tribal_conversion
+		}
+		relative_position_id = utah_origin_3
+		x = 0
+		y = 4
+		completion_reward = {
+			add_ideas = utah_reaching_unconverted_idea
+		}
+	}
+	focus = {
+		id = utah_lords_blessings
+		icon = GFX_goal_HEA_focus_precursers
+		cost = 60
+		prerequisite = {
+			focus = utah_tribal_conversion
+		}
+		relative_position_id = utah_origin_3
+		x = 2
+		y = 4
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_blessing_tt
+			add_to_variable = {
+				pantheon_ncn_focus_var = 0.05
+			}
+			set_temp_variable = {
+				pantheon_ncn_print_temp = pantheon_ncn_focus_var
+			}
+			multiply_temp_variable = {
+				pantheon_ncn_print_temp = 100
+			}
+			set_variable = {
+				pantheon_ncn_print = pantheon_ncn_print_temp
+			}
+		}
+	}
+	focus = {
+		id = utah_a_new_pantheon
+		icon = GFX_goal_religion_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_new_missionaries
+			focus = utah_reaching_the_unconverted
+			focus = utah_lords_blessings
+		}
+		# mutually_exclusive = {
+		#		focus = utah_new_world_saints
+		# }
+		relative_position_id = utah_origin_3
+		x = 0
+		y = 5
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_ritual_tt
+			#unlock_decision_tooltip = utah_pantheon_ncn_ritual_upgrade
+		}
+	}
+	#	focus = {
+	#		id = utah_no_gods_before_me
+	#		icon = GFX_goal_NCN_Hands_Of_God
+	#		cost = 60
+	#		prerequisite = {
+	#			focus = utah_new_missionaries
+	#			focus = utah_reaching_the_unconverted
+	#			focus = utah_lords_blessings
+	#		}
+	#		mutually_exclusive = {
+	#			focus = utah_a_new_pantheon
+	#		}
+	#
+	#		relative_position_id = utah_origin_3
+	#		x = 1
+	#		y = 5
+	#		completion_reward = {
+	#			#placeholder until religion proper gets added
+	#		}
+	#	}
+	focus = {
+		id = utah_cast_out_the_devil
+		icon = GFX_goal_NCN_By_The_Sword_And_The_Cross
+		cost = 60
+		prerequisite = {
+			#focus = utah_no_gods_before_me
+			focus = utah_a_new_pantheon
+		}
+		available = {
+			OR = {
+				has_war_with = WHT
+				has_war_with = CES
+			}
+		}
+		relative_position_id = utah_origin_3
+		x = 0
+		y = 6
+		completion_reward = {
+			if = {
+				limit = {
+					has_war_with = WHT
+				}
+				add_ideas = utah_war_wht_idea
+			}
+			if = {
+				limit = {
+					has_war_with = CES
+				}
+				add_ideas = utah_war_ces_idea
+			}
+		}
+	}
+	focus = {
+		id = utah_new_world_saints
+		icon = GFX_goal_NCN_The_Promise_of_Paradise_Eternal
+		cost = 20
+		prerequisite = {
+			focus = utah_cast_out_the_devil
+		}
+		# mutually_exclusive = {
+		#		focus = utah_a_new_pantheon
+		# }
+		available = {
+			has_war = no
+		}
+		relative_position_id = utah_origin_3
+		x = 0
+		y = 7
+		completion_reward = {
+			if = {
+				limit = {
+					is_subject_of = NCN
+				}
+				add_autonomy_ratio = {
+					value = 0.35
+				}
+			}
+			if = {
+				limit = {
+					has_tech = settled_civilization
+				}
+				add_political_power = 150
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_tech = settled_civilization
+					}
+				}
+				set_technology = {
+					settled_civilization = 1
+				}
+			}
+		}
+	}
+	#
+	#Legion
+	#
+	focus = {
+		id = utah_legion
+		icon = GFX_goal_ally_legion
+		cost = 60
+		prerequisite = {
+			focus = utah_origin_3
+		}
+		allow_branch = {
+			OR = {
+				is_subject_of = CES
+				is_subject_of = WHT
+			}
+		}
+		relative_position_id = utah_origin_3
+		x = 0
+		y = 1
+		completion_reward = {
+			add_political_power = 75
+			add_opinion_modifier = {
+				target = WHT
+				modifier = utah_emissaries
+			}
+			reverse_add_opinion_modifier = {
+				target = WHT
+				modifier = utah_emissaries
+			}
+		}
+	}
+	focus = {
+		id = utah_feats_of_strength
+		icon = GFX_goal_CES_servus_publicus
+		cost = 60
+		prerequisite = {
+			focus = utah_legion
+		}
+		relative_position_id = utah_origin_3
+		x = -2
+		y = 2
+		completion_reward = {
+			add_timed_idea = {
+				idea = utah_feats_of_strength_idea
+				days = 280
+			}
+		}
+	}
+	focus = {
+		id = utah_tales_of_destruction
+		icon = GFX_KHA_focus_reinforce
+		cost = 60
+		prerequisite = {
+			focus = utah_legion
+		}
+		relative_position_id = utah_origin_3
+		x = 0
+		y = 2
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = utah_gifts_of_conquest
+		icon = GFX_goal_CES_denarius
+		cost = 60
+		prerequisite = {
+			focus = utah_legion
+		}
+		relative_position_id = utah_origin_3
+		x = 2
+		y = 2
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = melee_equipment_1
+				amount = 250
+			}
+		}
+	}
+	focus = {
+		id = utah_submission
+		icon = GFX_goal_CES_submission
+		cost = 60
+		prerequisite = {
+			focus = utah_tales_of_destruction
+		}
+		prerequisite = {
+			focus = utah_feats_of_strength
+		}
+		prerequisite = {
+			focus = utah_gifts_of_conquest
+		}
+		relative_position_id = utah_origin_3
+		x = 0
+		y = 3
+		completion_reward = {
+			if = {
+				limit = {
+					tag = SOR
+				}
+				clear_array = pantheon_array
+				add_to_array = {
+					pantheon_array = 1
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 7
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 2
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 6
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 3
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 4
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+			}
+			if = {
+				limit = {
+					tag = TAR
+				}
+				clear_array = pantheon_array
+				add_to_array = {
+					pantheon_array = 1
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 8
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 2
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 6
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 3
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 4
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+			}
+			if = {
+				limit = {
+					tag = CRZ
+				}
+				clear_array = pantheon_array
+				add_to_array = {
+					pantheon_array = 1
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 9
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 2
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 6
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 3
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 4
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+			}
+			if = {
+				limit = {
+					tag = DEA
+				}
+				clear_array = pantheon_array
+				add_to_array = {
+					pantheon_array = 1
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 10
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 2
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 6
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 3
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 4
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+			}
+			if = {
+				limit = {
+					tag = UIN
+				}
+				clear_array = pantheon_array
+				add_to_array = {
+					pantheon_array = 1
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 11
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 2
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 6
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 3
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 4
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+			}
+			if = {
+				limit = {
+					tag = LON
+				}
+				clear_array = pantheon_array
+				add_to_array = {
+					pantheon_array = 1
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 12
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 2
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 6
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 3
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+				add_to_array = {
+					pantheon_array = 4
+				}
+				add_to_array = {
+					pantheon_array = 0
+				}
+			}
+			#custom_effect_tooltip = utah_unlock_god_tt
+		}
+	}
+	focus = {
+		id = utah_subjugating_the_weak
+		icon = GFX_KHA_focus_slave_1
+		cost = 60
+		prerequisite = {
+			focus = utah_submission
+		}
+		relative_position_id = utah_origin_3
+		x = -1
+		y = 4
+		completion_reward = {
+			add_ideas = utah_subjugation_idea
+		}
+	}
+	focus = {
+		id = utah_eliminating_the_unwilling
+		icon = GFX_goal_CES_crucifixion
+		cost = 60
+		prerequisite = {
+			focus = utah_submission
+		}
+		relative_position_id = utah_origin_3
+		x = 1
+		y = 4
+		completion_reward = {
+			add_timed_idea = {
+				idea = utah_unwilling_idea
+				days = 150
+			}
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = utah_the_blessing_of_mars
+		icon = GFX_goal_religion_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_eliminating_the_unwilling
+		}
+		prerequisite = {
+			focus = utah_subjugating_the_weak
+		}
+		available = {
+			551 = {
+				NOT = {
+					is_owned_by = NCN
+				}
+			}
+		}
+		relative_position_id = utah_origin_3
+		x = 0
+		y = 5
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_blessing_tt
+			add_to_variable = {
+				pantheon_legion_focus_var = 0.05
+			}
+			set_temp_variable = {
+				pantheon_legion_print_temp = pantheon_legion_focus_var
+			}
+			multiply_temp_variable = {
+				pantheon_legion_print_temp = 100
+			}
+			set_variable = {
+				pantheon_legion_print = pantheon_legion_print_temp
+			}
+		}
+	}
+	focus = {
+		id = utah_following_the_footsteps
+		icon = GFX_goal_WHT_generic_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_the_blessing_of_mars
+		}
+		mutually_exclusive = {
+			focus = utah_true_to_caesar
+		}
+		relative_position_id = utah_origin_3
+		x = -2
+		y = 6
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_ritual_tt
+			#unlock_decision_tooltip = utah_pantheon_ncn_ritual_upgrade
+		}
+	}
+	focus = {
+		id = utah_the_great_tribe
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 60
+		prerequisite = {
+			focus = utah_following_the_footsteps
+		}
+		relative_position_id = utah_origin_3
+		x = -2
+		y = 7
+		completion_reward = {
+			WHT = {
+				country_event = {
+					id = nf_utah.10
+					days = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_true_to_caesar
+		icon = GFX_goal_CES_generic_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_the_blessing_of_mars
+		}
+		mutually_exclusive = {
+			focus = utah_following_the_footsteps
+		}
+		relative_position_id = utah_origin_3
+		x = 1
+		y = 6
+		completion_reward = {
+			#change to cult of mars
+			if = {
+				limit = {
+					is_subject_of = WHT
+				}
+				WHT = {
+					end_puppet = ROOT
+				}
+			}
+			CES = {
+				puppet = ROOT
+			}
+			add_autonomy_ratio = {
+				value = 0.5
+			}
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = utah_87th_tribe
+		icon = GFX_focus_CZE_german_puppet
+		cost = 60
+		prerequisite = {
+			focus = utah_true_to_caesar
+		}
+		mutually_exclusive = {
+			focus = utah_utah_legion
+		}
+		relative_position_id = utah_origin_3
+		x = 0
+		y = 7
+		completion_reward = {
+			CES = {
+				country_event = {
+					id = nf_utah.15
+					days = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_utah_legion
+		icon = GFX_goal_CES_diplomatic
+		cost = 60
+		prerequisite = {
+			focus = utah_true_to_caesar
+		}
+		mutually_exclusive = {
+			focus = utah_87th_tribe
+		}
+		relative_position_id = utah_origin_3
+		x = 2
+		y = 7
+		completion_reward = {
+			CES = {
+				country_event = {
+					id = nf_utah.20
+					days = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_tribal
+		icon = GFX_goal_utah_ncn_legion_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_origin_3
+		}
+		allow_branch = {
+			NOT = {
+				OR = {
+					tag = ANO
+					tag = MUR
+					tag = HGH
+					OR = {
+						is_subject_of = WHT
+						is_subject_of = CES
+						is_subject_of = NCN
+					}
+				}
+			}
+		}
+		relative_position_id = utah_origin_3
+		x = 0
+		y = 1
+		completion_reward = {
+			add_political_power = 150
+			add_command_power = 10
+		}
+	}
+	focus = {
+		id = utah_rejecting_their_gifts
+		icon = GFX_goal_utah_rejection_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_tribal
+		}
+		relative_position_id = utah_origin_3
+		x = -1
+		y = 2
+		completion_reward = {
+			add_ideas = utah_goingalone
+			add_opinion_modifier = {
+				target = CES
+				modifier = rejected_emissaries
+			}
+		}
+	}
+	focus = {
+		id = utah_strength_of_tradition
+		icon = GFX_goal_generic_political_pressure
+		cost = 60
+		prerequisite = {
+			focus = utah_tribal
+		}
+		bypass = {
+			NOT = { has_tech = tribal_tech_access_tech }
+		}
+		relative_position_id = utah_origin_3
+		x = 1
+		y = 2
+		completion_reward = {
+			add_ideas = utah_tradition
+		}
+	}
+	focus = {
+		id = utah_expel_the_outsiders
+		icon = GFX_KHA_focus_backstab
+		cost = 60
+		prerequisite = {
+			focus = utah_strength_of_tradition
+		}
+		prerequisite = {
+			focus = utah_rejecting_their_gifts
+		}
+		relative_position_id = utah_origin_3
+		x = 0
+		y = 3
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = utah_goingalone
+				add_idea = utah_outsidersexpelled
+			}
+		}
+	}
+	focus = {
+		id = utah_loyalty_to_the_gods
+		icon = GFX_goal_religion_2_flag
+		cost = 60
+		prerequisite = {
+			focus = utah_expel_the_outsiders
+		}
+		relative_position_id = utah_origin_3
+		x = 1
+		y = 4
+		completion_reward = {
+			custom_effect_tooltip = utah_pantheon_sacrifice_tt
+			set_variable = {
+				pantheon_sacrifice_var = 125
+			}
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = utah_tribal_equality
+		icon = GFX_goal_generic_recruitment_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_expel_the_outsiders
+		}
+		relative_position_id = utah_origin_3
+		x = -1
+		y = 4
+		completion_reward = {
+			add_ideas = utah_tribalequality
+		}
+	}
+	focus = {
+		id = utah_apocalypse
+		icon = GFX_KHA_focus_war_path
+		cost = 60
+		prerequisite = {
+			focus = utah_tribal_equality
+		}
+		prerequisite = {
+			focus = utah_loyalty_to_the_gods
+		}
+		available = {
+			OR = {
+				NCN = {
+					has_war_with = WHT
+				}
+				threat > 0.35
+			}
+		}
+		relative_position_id = utah_origin_3
+		x = 0
+		y = 5
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = war_economy
+			add_ideas = closed_economy
+		}
+	}
+	focus = {
+		id = utah_neutral_ground
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_apocalypse
+		}
+		mutually_exclusive = {
+			#focus = utah_neutral_ground
+			focus = utah_join_the_daughters_of_hecate
+			focus = utah_isolation
+		}
+		relative_position_id = utah_origin_3
+		x = -2
+		y = 6
+		completion_reward = {
+			add_ideas = utah_trueneutral
+			add_ideas = utah_lonely
+			if = {
+				limit = {
+					has_country_leader_with_trait = isolationist
+				}
+				custom_effect_tooltip = {
+					localization_key = ROOT_CHANGE_TRAIT
+					CHANGE = LOSES
+					TRAIT = isolationist
+				}
+				hidden_effect = {
+					remove_country_leader_trait = isolationist
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_religious_tolerance
+		icon = GFX_goal_HEA_focus_precursers
+		cost = 60
+		prerequisite = {
+			focus = utah_neutral_ground
+		}
+		relative_position_id = utah_origin_3
+		x = -3
+		y = 7
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = utah_trueneutral
+				add_idea = utah_tolerate
+			}
+		}
+	}
+	focus = {
+		id = utah_tribal_confederation
+		icon = GFX_goal_tripartite_pact
+		cost = 60
+		prerequisite = {
+			focus = utah_neutral_ground
+		}
+		available = {
+			is_in_faction = no
+			is_subject = no
+			if = {
+				limit = {
+					great_confederation_exists = yes
+				}
+				at_peace_with_great_confederation = yes
+				#borders_great_federation = yes - specific exception to the 'lets avoid factions that dont border ally' rule, for flavor.
+			}
+		}
+		relative_position_id = utah_origin_3
+		x = -1
+		y = 7
+		completion_reward = {
+			create_or_join_great_confederation = yes
+		}
+	}
+	focus = {
+		id = utah_join_the_daughters_of_hecate
+		icon = GFX_goal_ORO_Pyramid
+		cost = 60
+		prerequisite = {
+			focus = utah_apocalypse
+		}
+		mutually_exclusive = {
+			focus = utah_neutral_ground
+			#focus = utah_join_the_daughters_of_hecate
+			focus = utah_isolation
+		}
+		relative_position_id = utah_apocalypse
+		x = 0
+		y = 1
+		available = {
+			NOT = {
+				has_country_leader_with_trait = dislikes_daughters_of_hecate
+			}
+			NOT = {
+				has_country_leader_with_trait = isolationist
+			}
+			is_in_faction = no
+			is_subject = no
+			borders_daughters_of_hecate = yes
+			at_peace_with_daughters_of_hecate = yes
+		}
+		completion_reward = {
+			ask_to_join_daughters_of_hecate = yes
+		}
+	}
+	focus = {
+		id = utah_isolation
+		icon = GFX_goal_generic_fortify_city
+		cost = 60
+		prerequisite = {
+			focus = utah_apocalypse
+		}
+		mutually_exclusive = {
+			focus = utah_neutral_ground
+			focus = utah_join_the_daughters_of_hecate
+			#focus = utah_isolation
+		}
+		relative_position_id = utah_origin_3
+		x = 2
+		y = 6
+		completion_reward = {
+			add_ideas = utah_lonely
+			if = {
+				limit = {
+					NOT = {
+						has_country_leader_with_trait = isolationist
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = ROOT_CHANGE_TRAIT
+					CHANGE = GAIN
+					TRAIT = isolationist
+				}
+				hidden_effect = {
+					add_country_leader_trait = isolationist
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_purge_heretics
+		icon = GFX_goal_generic_war_focus
+		cost = 60
+		prerequisite = {
+			focus = utah_isolation
+		}
+		relative_position_id = utah_origin_3
+		x = 1
+		y = 7
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = utah_lonely
+				add_idea = utah_exterminatus
+			}
+		}
+	}
+	focus = {
+		id = utah_crusade
+		icon = GFX_goal_HEA_focus_declaration_of_crusade
+		cost = 60
+		prerequisite = {
+			focus = utah_isolation
+		}
+		relative_position_id = utah_origin_3
+		x = 3
+		y = 7
+		completion_reward = {
+			custom_effect_tooltip = eht_ride_true_tt
+			hidden_effect = {
+				every_state = {
+					limit = { is_utah_state = yes }
+					add_claim_by = ROOT
+				}
+			}
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = utah_religious
+		icon = GFX_goal_religion_flag
+		cost = 60
+		x = 0
+		y = 1
+		relative_position_id = utah_origin_3
+		allow_branch = {
+			OR = {
+				tag = HGH
+				tag = MUR
+				tag = ANO
+			}
+			NOT = {
+				is_subject_of = NCN
+				is_subject_of = CES
+				is_subject_of = WHT
+			}
+		}
+		prerequisite = {
+			focus = utah_origin_3
+		}
+		completion_reward = {
+			add_ideas = {
+				utah_religious_our_faith_questioned
+			}
+			unlock_decision_category_tooltip = utah_religious_sermons
+		}
+	}
+	focus = {
+		id = utah_religious_fundamentalism
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 60
+		x = 2
+		y = 1
+		relative_position_id = utah_religious
+		completion_reward = {
+			if = {
+				limit = {
+					check_variable = {
+						var = base_manpower
+						value = 200
+						compare = not_equals
+					}
+				}
+				set_variable = {
+					var = base_manpower
+					value = 200
+				}
+			}
+			swap_ideas = {
+				remove_idea = utah_religious_our_faith_questioned
+				add_idea = utah_religious_fundamental_beliefs
+			}
+			add_to_variable = {
+				var = manpower_calculated_fundamental
+				value = base_manpower
+			}
+		}
+		mutually_exclusive = {
+			focus = utah_religious_new_interpretations
+		}
+		prerequisite = {
+			focus = utah_religious
+		}
+	}
+	focus = {
+		id = utah_religious_new_interpretations
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		cost = 60
+		x = -2
+		y = 1
+		relative_position_id = utah_religious
+		completion_reward = {
+			if = {
+				limit = {
+					check_variable = {
+						var = base_manpower
+						value = 200
+						compare = not_equals
+					}
+				}
+				set_variable = {
+					var = base_manpower
+					value = 200
+				}
+			}
+			swap_ideas = {
+				remove_idea = utah_religious_our_faith_questioned
+				add_idea = utah_religious_latest_interpretations
+			}
+			add_to_variable = {
+				var = manpower_calculated_new_interpretation
+				value = base_manpower
+			}
+		}
+		mutually_exclusive = {
+			focus = utah_religious_fundamentalism
+		}
+		prerequisite = {
+			focus = utah_religious
+		}
+	}
+	focus = {
+		id = utah_religious_hold_sermons
+		icon = GFX_focus_generic_treaty
+		cost = 60
+		x = -3
+		y = 2
+		relative_position_id = utah_religious
+		completion_reward = {
+			add_political_power = 100
+			unlock_decision_tooltip = utah_religious_sermons_masses
+		}
+		prerequisite = {
+			focus = utah_religious_new_interpretations
+		}
+	}
+	focus = {
+		id = utah_religious_prozletize_to_the_masses
+		icon = GFX_focus_generic_military_academy
+		cost = 60
+		x = -3
+		y = 3
+		relative_position_id = utah_religious
+		completion_reward = {
+			add_ideas = {
+				utah_religious_prozletize_to_people
+			}
+		}
+		prerequisite = {
+			focus = utah_religious_hold_sermons
+		}
+	}
+	focus = {
+		id = utah_religious_new_followers
+		icon = GFX_goal_generic_recruitment_focus
+		cost = 60
+		x = -3
+		y = 4
+		relative_position_id = utah_religious
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = utah_religious_prozletize_to_people
+				add_idea = utah_religious_expanded_sect
+			}
+			random_owned_controlled_state = {
+				set_temp_variable = { pop_add = 1500 }
+				add_state_population_no_state_name = yes
+			}
+		}
+		prerequisite = {
+			focus = utah_religious_prozletize_to_the_masses
+		}
+	}
+	focus = {
+		id = utah_religious_restrict_holy_books
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 60
+		x = 3
+		y = 2
+		relative_position_id = utah_religious
+		completion_reward = {
+			add_ideas = {
+				utah_religious_restriction_on_books
+			}
+		}
+		prerequisite = {
+			focus = utah_religious_fundamentalism
+		}
+	}
+	focus = {
+		id = utah_religious_fanaticism
+		icon = GFX_focus_mex_restore_the_army_of_christ
+		cost = 60
+		x = 3
+		y = 3
+		relative_position_id = utah_religious
+		completion_reward = {
+			add_war_support = 0.1
+			swap_ideas = {
+				remove_idea = utah_religious_restriction_on_books
+				add_idea = utah_religious_fanatic_book_burning
+			}
+		}
+		prerequisite = {
+			focus = utah_religious_restrict_holy_books
+		}
+	}
+	focus = {
+		id = utah_religious_proclaim_a_new_jerusalem
+		icon = GFX_goal_demand_sudetenland
+		cost = 60
+		x = 3
+		y = 4
+		relative_position_id = utah_religious
+		completion_reward = {
+			if = {
+				limit = {
+					check_variable = {
+						global.jerusalem_counter = 0
+					}
+				}
+				ROOT = {
+					capital_scope = {
+						set_state_name = STATE_UTAH_NEW_JERUSALEM_1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						global.jerusalem_counter = 1
+					}
+				}
+				ROOT = {
+					capital_scope = {
+						set_state_name = STATE_UTAH_NEW_JERUSALEM_2
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						global.jerusalem_counter = 2
+					}
+				}
+				ROOT = {
+					capital_scope = {
+						set_state_name = STATE_UTAH_NEW_JERUSALEM_3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						global.jerusalem_counter = 3
+					}
+				}
+				ROOT = {
+					capital_scope = {
+						set_state_name = STATE_UTAH_NEW_JERUSALEM_4
+					}
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = global.jerusalem_counter
+					value = 1
+				}
+			}
+			capital_scope = {
+				if = {
+					limit = {
+						is_valid_state_for_arms_factory = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				else = {
+					OWNER = {
+						add_offsite_building = { type = arms_factory level = 1 }
+					}
+				}
+			}
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+		prerequisite = {
+			focus = utah_religious_fanaticism
+		}
+	}
+	focus = {
+		id = utah_religious_the_great_scripture
+		icon = GFX_goal_HEA_focus_precursers
+		cost = 60
+		x = -1
+		y = 2
+		relative_position_id = utah_religious
+		completion_reward = {
+			add_stability = 0.1
+		}
+		prerequisite = {
+			focus = utah_religious_new_interpretations
+			focus = utah_religious_fundamentalism
+		}
+	}
+	focus = {
+		id = utah_religious_united_by_god
+		icon = GFX_goal_generic_generic_diplomatic_focus
+		cost = 60
+		x = 1
+		y = 2
+		relative_position_id = utah_religious
+		completion_reward = {
+			custom_effect_tooltip = utah_united_by_god_tt
+			add_political_power = 100
+			if = {
+				limit = {
+					AND = {
+						OR = {
+							AND = {
+								ROOT = {
+									has_completed_focus = utah_religious_fundamentalism
+								}
+								ANO = {
+									has_completed_focus = utah_religious_fundamentalism
+								}
+							}
+							AND = {
+								ROOT = {
+									has_completed_focus = utah_religious_new_interpretations
+								}
+								ANO = {
+									has_completed_focus = utah_religious_new_interpretations
+								}
+							}
+						}
+						NOT = {
+							original_tag = ANO
+						}
+					}
+				}
+				add_opinion_modifier = {
+					target = ANO
+					modifier = utah_missionaries
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						OR = {
+							AND = {
+								ROOT = {
+									has_completed_focus = utah_religious_fundamentalism
+								}
+								MUR = {
+									has_completed_focus = utah_religious_fundamentalism
+								}
+							}
+							AND = {
+								ROOT = {
+									has_completed_focus = utah_religious_new_interpretations
+								}
+								MUR = {
+									has_completed_focus = utah_religious_new_interpretations
+								}
+							}
+						}
+						NOT = {
+							original_tag = MUR
+						}
+					}
+				}
+				add_opinion_modifier = {
+					target = MUR
+					modifier = utah_missionaries
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						OR = {
+							AND = {
+								ROOT = {
+									has_completed_focus = utah_religious_fundamentalism
+								}
+								HAM = {
+									has_completed_focus = utah_religious_fundamentalism
+								}
+							}
+							AND = {
+								ROOT = {
+									has_completed_focus = utah_religious_new_interpretations
+								}
+								HAM = {
+									has_completed_focus = utah_religious_new_interpretations
+								}
+							}
+						}
+						NOT = {
+							original_tag = HAM
+						}
+					}
+				}
+				add_opinion_modifier = {
+					target = HAM
+					modifier = utah_missionaries
+				}
+			}
+		}
+		prerequisite = {
+			focus = utah_religious_new_interpretations
+			focus = utah_religious_fundamentalism
+		}
+	}
+	focus = {
+		id = utah_religious_syncretism
+		icon = GFX_goal_religion_2_flag
+		cost = 60
+		x = -1
+		y = 4
+		relative_position_id = utah_religious
+		completion_reward = {
+			add_political_power = 100
+			unlock_decision_tooltip = utah_religious_sermons_syncretism
+		}
+		mutually_exclusive = {
+			focus = utah_religious_heretics
+		}
+		prerequisite = {
+			focus = utah_religious_united_by_god
+			focus = utah_religious_the_great_scripture
+		}
+	}
+	focus = {
+		id = utah_religious_heretics
+		icon = GFX_goal_HEA_focus_embracing_violence
+		cost = 60
+		x = 1
+		y = 4
+		relative_position_id = utah_religious
+		completion_reward = {
+			add_command_power = 50
+			add_manpower = 500
+			unlock_decision_tooltip = utah_religious_sermons_heresy
+		}
+		mutually_exclusive = {
+			focus = utah_religious_syncretism
+		}
+		prerequisite = {
+			focus = utah_religious_united_by_god
+			focus = utah_religious_the_great_scripture
+		}
+	}
+	focus = {
+		id = utah_religious_new_revelations
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 60
+		x = -2
+		y = 5
+		relative_position_id = utah_religious
+		completion_reward = {
+			if = {
+				limit = {
+					ROOT = {
+						has_completed_focus = utah_religious_new_interpretations
+					}
+				}
+				add_manpower = manpower_calculated_new_interpretation
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						has_completed_focus = utah_religious_fundamentalism
+					}
+				}
+				add_manpower = manpower_calculated_fundamental
+			}
+			add_ideas = {
+				utah_religious_new_revelations_idea
+			}
+		}
+		prerequisite = {
+			focus = utah_religious_syncretism
+		}
+	}
+	focus = {
+		id = utah_religious_mass_baptism
+		icon = GFX_goal_generic_national_unity
+		cost = 60
+		x = -1
+		y = 6
+		relative_position_id = utah_religious
+		completion_reward = {
+			add_ideas = {
+				utah_religious_supporting_fellows
+			}
+		}
+		prerequisite = {
+			focus = utah_religious_syncretism
+		}
+	}
+	focus = {
+		id = utah_religious_remove_unbelievers
+		icon = GFX_focus_CZE_german_puppet
+		cost = 60
+		x = 2
+		y = 5
+		relative_position_id = utah_religious
+		completion_reward = {
+			if = {
+				limit = {
+					has_government = people
+					people < 1
+				}
+				add_popularity = {
+					ideology = people
+					popularity = 0.1
+				}
+			}
+			else_if = {
+				limit = {
+					has_government = ruler
+					ruler < 1
+				}
+				add_popularity = {
+					ideology = ruler
+					popularity = 0.1
+				}
+			}
+			else_if = {
+				limit = {
+					has_government = elites
+					elites < 1
+				}
+				add_popularity = {
+					ideology = elites
+					popularity = 0.1
+				}
+			}
+			else_if = {
+				limit = {
+					has_government = intellectuals
+					intellectuals < 1
+				}
+				add_popularity = {
+					ideology = intellectuals
+					popularity = 0.1
+				}
+			}
+			add_command_power = 50
+			add_stability = 0.05
+		}
+		prerequisite = {
+			focus = utah_religious_heretics
+		}
+	}
+	focus = {
+		id = utah_religious_final_crusade
+		icon = GFX_goal_HEA_focus_wings_of_the_angels
+		cost = 60
+		x = 1
+		y = 6
+		relative_position_id = utah_religious
+		completion_reward = {
+			if = {
+				limit = {
+					ROOT = {
+						has_completed_focus = utah_religious_new_interpretations
+					}
+				}
+				add_manpower = manpower_calculated_new_interpretation
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						has_completed_focus = utah_religious_fundamentalism
+					}
+				}
+				add_manpower = manpower_calculated_fundamental
+			}
+			add_ideas = {
+				utah_religious_holy_war
+			}
+		}
+		prerequisite = {
+			focus = utah_religious_heretics
+		}
+	}
+	focus = {
+		id = utah_ANO_unique
+		icon = GFX_goal_ano_flag
+		cost = 60
+		x = 14
+		y = 1
+		relative_position_id = utah_origin_3
+		allow_branch = {
+			original_tag = ANO
+		}
+		completion_reward = {
+			add_political_power = 150
+		}
+		prerequisite = {
+			focus = utah_origin_3
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = utah_ANO_the_heretic_reformists
+		icon = GFX_goal_mur_flag
+		cost = 60
+		x = -2
+		y = 1
+		relative_position_id = utah_ANO_unique
+		completion_reward = {
+			add_opinion_modifier = {
+				target = MUR
+				modifier = utah_MUR_ANO_hatred
+			}
+			MUR = { add_stability = -0.05 }
+			add_war_support = 0.05
+		}
+		prerequisite = {
+			focus = utah_ANO_unique
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				MUR = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HGH = { is_ai = no }
+					HAM = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_ANO_crusades
+		icon = GFX_focus_mex_restore_the_army_of_christ
+		cost = 60
+		x = -1
+		y = 1
+		relative_position_id = utah_ANO_the_heretic_reformists
+		completion_reward = {
+			add_ideas = {
+				utah_ANO_crusades_of_old
+			}
+		}
+		prerequisite = {
+			focus = utah_ANO_the_heretic_reformists
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				MUR = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HGH = { is_ai = no }
+					HAM = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_ANO_the_last_crusaders
+		icon = GFX_goal_HEA_focus_military_ordos
+		cost = 60
+		x = -1
+		y = 2
+		relative_position_id = utah_ANO_the_heretic_reformists
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = utah_ANO_crusades_of_old
+				add_idea = utah_ANO_crusades_of_old_2
+			}
+			hidden_effect = {
+				load_oob = ANO_crusader
+			}
+			custom_effect_tooltip = utah_ANO_spawns_a_crusader_division
+		}
+		prerequisite = {
+			focus = utah_ANO_crusades
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				MUR = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HGH = { is_ai = no }
+					HAM = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_ANO_the_northern_problem
+		icon = GFX_goal_generic_bunkers_focus
+		cost = 60
+		x = 1
+		y = 1
+		relative_position_id = utah_ANO_the_heretic_reformists
+		completion_reward = {
+			484 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 7521
+					instant_build = yes
+				}
+			}
+			354 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 8917
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 7437
+					instant_build = yes
+				}
+			}
+			384 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 4525
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 4524
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 8221
+					instant_build = yes
+				}
+			}
+		}
+		prerequisite = {
+			focus = utah_ANO_the_heretic_reformists
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				MUR = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HGH = { is_ai = no }
+					HAM = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_ANO_our_promised_land
+		icon = GFX_goal_generic_demand_territory
+		cost = 60
+		x = 1
+		y = 2
+		relative_position_id = utah_ANO_the_heretic_reformists
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = MUR
+				}
+				set_variable = {
+					coring_cost_targeted_state_factor@ANO = -0.5
+				}
+				custom_effect_tooltip = core_button_50_state_reduction_tt
+			}
+		}
+		prerequisite = {
+			focus = utah_ANO_the_northern_problem
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				MUR = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HGH = { is_ai = no }
+					HAM = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_ANO_crusade_against_MUR
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 60
+		x = 0
+		y = 3
+		relative_position_id = utah_ANO_the_heretic_reformists
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					has_completed_focus = utah_ANO_mediation
+				}
+				NOT = {
+					has_completed_focus = utah_ANO_unfinished_business
+				}
+				NOT = {
+					has_completed_focus = utah_ANO_walking_on_water
+				}
+			}
+		}
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+		}
+		bypass = {
+			MUR = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+
+		will_lead_to_war_with = MUR
+		completion_reward = {
+			MUR = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+		prerequisite = {
+			focus = utah_ANO_our_promised_land
+		}
+		prerequisite = {
+			focus = utah_ANO_the_last_crusaders
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				MUR = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HGH = { is_ai = no }
+					HAM = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_ANO_high_chapel
+		icon = GFX_goal_hgh_flag
+		cost = 60
+		x = 2
+		y = 1
+		relative_position_id = utah_ANO_unique
+		completion_reward = {
+			add_opinion_modifier = {
+				target = HGH
+				modifier = utah_ANO_diplomacy
+			}
+			reverse_add_opinion_modifier = {
+				target = HGH
+				modifier = utah_ANO_diplomacy
+			}
+			army_experience = 30
+			add_command_power = 50
+		}
+		prerequisite = {
+			focus = utah_ANO_unique
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HGH = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					MUR = { is_ai = no }
+					HAM = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_ANO_lords_navy
+		icon = GFX_goal_generic_occupy_states_coastal
+		cost = 60
+		x = -1
+		y = 1
+		relative_position_id = utah_ANO_high_chapel
+		completion_reward = {
+			navy_experience = 30
+			484 = {
+				if = {
+					limit = {
+						is_valid_state_for_2_dockyards = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = utah_ANO_respect_waters
+		}
+		prerequisite = {
+			focus = utah_ANO_high_chapel
+		}
+		prerequisite = {
+			focus = utah_ANO_the_heretic_reformists
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 2
+				HGH = { has_completed_focus = utah_HGH_revoke_water_way_rights }	# Less likely to be friendly with HGH if threatened
+			}
+		}
+	}
+	focus = {
+		id = utah_ANO_galilee_fleet
+		icon = GFX_goal_generic_wooden_ship
+		cost = 60
+		x = -1
+		y = 2
+		relative_position_id = utah_ANO_high_chapel
+		completion_reward = {
+			custom_effect_tooltip = utah_ANO_spawn_ark
+			hidden_effect = {
+				load_oob = "ANO_the_ark"
+			}
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 50
+			}
+		}
+		prerequisite = {
+			focus = utah_ANO_lords_navy
+		}
+	}
+	focus = {
+		id = utah_ANO_walking_on_water
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 60
+		x = -1
+		y = 3
+		relative_position_id = utah_ANO_high_chapel
+		completion_reward = {
+			add_ideas = utah_ANO_naval_invasion
+		}
+		prerequisite = {
+			focus = utah_ANO_galilee_fleet
+		}
+	}
+	focus = {
+		id = utah_ANO_respect_waters
+		icon = GFX_goal_generic_alliance
+		cost = 60
+		x = 1
+		y = 1
+		relative_position_id = utah_ANO_high_chapel
+		mutually_exclusive = {
+			focus = utah_ANO_lords_navy
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 50
+			484 = {
+				remove_building = {
+					type = dockyard
+					level = 1
+				}
+			}
+		}
+		prerequisite = {
+			focus = utah_ANO_high_chapel
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# One of the main nations this affects is a player
+				add = 3
+				OR = {
+					HGH = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					MUR = { is_ai = no }
+					HAM = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_ANO_military_collaboration
+		icon = GFX_goal_generic_common_firearms_focus
+		cost = 60
+		x = 1
+		y = 2
+		relative_position_id = utah_ANO_high_chapel
+		completion_reward = {
+			ANO = {
+				give_military_access = HGH
+				add_war_support = 0.05
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 600
+				}
+				add_manpower = 250
+			}
+			HGH = {
+				give_military_access = ANO
+				add_war_support = 0.05
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 600
+				}
+				add_manpower = 250
+			}
+		}
+		prerequisite = {
+			focus = utah_ANO_respect_waters
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# One of the main nations this affects is a player
+				add = 3
+				OR = {
+					HGH = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					MUR = { is_ai = no }
+					HAM = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_ANO_united_front
+		icon = GFX_goal_generic_land_doctrines_focus
+		cost = 60
+		x = 1
+		y = 3
+		relative_position_id = utah_ANO_high_chapel
+		completion_reward = {
+			unlock_decision_category_tooltip = utah_war_for_heaven
+			give_guarantee = HGH
+			add_ideas = utah_ANO_united_front_idea
+			HGH = {
+				give_guarantee = ANO
+				add_ideas = utah_ANO_united_front_idea
+			}
+		}
+		prerequisite = {
+			focus = utah_ANO_military_collaboration
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# One of the main nations this affects is a player
+				add = 3
+				OR = {
+					HGH = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					MUR = { is_ai = no }
+					HAM = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_ANO_mediation
+		icon = GFX_goal_generic_generic_diplomatic_focus
+		cost = 60
+		x = 0
+		y = 4
+		relative_position_id = utah_ANO_high_chapel
+		available = {
+			country_exists = HGH
+			HEA = { NOT = { has_completed_focus = HEA_foreign_relation_ano } }
+		}
+		bypass = {
+			NOT = {
+				country_exists = HGH
+			}
+		}
+		completion_reward = {
+			HGH = {
+				country_event = nf_utah.180
+			}
+		}
+		mutually_exclusive = {
+			focus = utah_ANO_unfinished_business
+		}
+		prerequisite = {
+			focus = utah_ANO_united_front
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				MUR = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HGH = { is_ai = no }
+					HAM = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_ANO_unfinished_business
+		icon = GFX_goal_generic_war_focus
+		cost = 60
+		x = 2
+		y = 4
+		relative_position_id = utah_ANO_high_chapel
+		available = {
+			country_exists = HGH
+		}
+		bypass = {
+			NOT = {
+				country_exists = HGH
+			}
+		}
+		completion_reward = {
+			HGH = {
+				country_event = nf_utah.185
+			}
+		}
+		mutually_exclusive = {
+			focus = utah_ANO_mediation
+		}
+		prerequisite = {
+			focus = utah_ANO_united_front
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Prefer if HGH is a player and MUR is not
+				add = 3
+				HGH = { is_ai = no }
+				NOT = { MUR = { is_ai = no } }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HAM = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_ANO_mending_the_schism
+		icon = GFX_goal_generic_national_unity
+		cost = 60
+		x = 2
+		y = 5
+		relative_position_id = utah_ANO_the_heretic_reformists
+		available = {
+			MUR = {
+				exists = no
+			}
+			303 = {
+				is_owned_and_controlled_by = ANO
+			}
+			OR = {
+				140 = {
+					is_owned_and_controlled_by = ANO
+				}
+				HGH = {
+					is_in_faction_with = ANO
+				}
+			}
+			has_war = no
+			is_subject = no
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = utah_schism
+				add_idea = utah_schism_mended
+			}
+		}
+		prerequisite = {
+			focus = utah_ANO_crusade_against_MUR
+		}
+		prerequisite = {
+			focus = utah_ANO_walking_on_water
+			focus = utah_ANO_mediation
+			focus = utah_ANO_unfinished_business
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = utah_HAM_unique
+		icon = GFX_goal_ham_flag
+		cost = 60
+		x = 15
+		y = 1
+		relative_position_id = utah_origin_3
+		allow_branch = {
+			original_tag = HAM
+		}
+		completion_reward = {
+			add_political_power = 150
+		}
+		prerequisite = {
+			focus = utah_origin_3
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = utah_HAM_glass_shortage
+		icon = GFX_focus_rom_parties_end
+		cost = 60
+		x = -3
+		y = 1
+		relative_position_id = utah_HAM_unique
+		available = {
+			has_idea = utah_HAM_glass_production_halted
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = utah_HAM_glass_production_halted
+				add_idea = utah_HAM_glass_production_slow
+			}
+		}
+		prerequisite = {
+			focus = utah_HAM_unique
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# One of the main nations this affects is a player
+				add = 3
+				OR = {
+					MUR = { is_ai = no }
+					EAS = { is_ai = no }
+				}
+			}
+			modifier = {	# One or multiple others that interact with us are players. Has extras due to MUR being a primary affected nation
+				add = 1
+				OR = {
+					HGH = { is_ai = no }
+					ANO = { is_ai = no }
+					EHT = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_HAM_eastport_glass
+		icon = GFX_focus_generic_self_management
+		cost = 60
+		x = -1
+		y = 1
+		relative_position_id = utah_HAM_glass_shortage
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 73
+						state = 367
+						state = 567
+						state = 375
+					}
+				}
+				add_claim_by = HAM
+			}
+			custom_effect_tooltip = utah_HAM_eastport_glass_tt
+			add_war_support = 0.1
+		}
+		prerequisite = {
+			focus = utah_HAM_glass_shortage
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				EAS = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					MUR = { is_ai = no }
+					EHT = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_HAM_demanding_supplies
+		icon = GFX_focus_CZE_german_puppet
+		cost = 60
+		x = -1
+		y = 2
+		bypass = {
+			NOT = {
+				country_exists = EAS
+			}
+		}
+		relative_position_id = utah_HAM_glass_shortage
+		completion_reward = {
+			EAS = {
+				country_event = nf_utah.170
+			}
+		}
+		prerequisite = {
+			focus = utah_HAM_eastport_glass
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				EAS = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					MUR = { is_ai = no }
+					EHT = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_HAM_demand_territory
+		icon = GFX_goal_generic_war_focus
+		cost = 60
+		x = -1
+		y = 3
+		bypass = {
+			OR = {
+				NOT = {
+					country_exists = EAS
+				}
+				AND = {
+					country_exists = EAS
+					EAS = {
+						is_subject_of = HAM
+					}
+				}
+			}
+		}
+		relative_position_id = utah_HAM_glass_shortage
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							73 = {
+								is_owned_by = HAM
+							}
+							375 = {
+								is_owned_by = HAM
+							}
+						}
+					}
+				}
+				EAS = {
+					country_event = {
+						id = nf_utah.172
+					}
+				}
+			}
+			73 = {
+				add_core_of = HAM
+			}
+			375 = {
+				add_core_of = HAM
+			}
+			unlock_decision_category_tooltip = utah_ham_glass_forging
+		}
+		prerequisite = {
+			focus = utah_HAM_demanding_supplies
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				EAS = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					MUR = { is_ai = no }
+					EHT = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_HAM_murtaugh_trade
+		icon = GFX_goal_mur_flag
+		cost = 60
+		x = 2
+		y = 1
+		relative_position_id = utah_HAM_glass_shortage
+		completion_reward = {
+			add_ideas = {
+				utah_HAM_trade_with_MUR
+			}
+		}
+		prerequisite = {
+			focus = utah_HAM_glass_shortage
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				MUR = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HGH = { is_ai = no }
+					ANO = { is_ai = no }
+					EHT = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_HAM_supply_and_demand
+		icon = GFX_goal_generic_trade
+		cost = 60
+		x = 2
+		y = 2
+		bypass = {
+			MUR = {
+				has_idea = utah_MUR_aggressive_hammond
+			}
+		}
+		relative_position_id = utah_HAM_glass_shortage
+		completion_reward = {
+			if = {
+				limit = {
+					MUR = {
+						NOT = {
+							has_idea = utah_MUR_aggressive_hammond
+						}
+					}
+				}
+				swap_ideas = {
+					remove_idea = utah_HAM_trade_with_MUR
+					add_idea = utah_HAM_trade_with_MUR_2
+				}
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+			MUR = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		prerequisite = {
+			focus = utah_HAM_murtaugh_trade
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				MUR = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HGH = { is_ai = no }
+					ANO = { is_ai = no }
+					EHT = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_HAM_reward_loyal_customer
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 60
+		x = 1
+		y = 3
+		relative_position_id = utah_HAM_glass_shortage
+		available = {
+			MUR = {
+				has_completed_focus = utah_MUR_rebuilding_roads
+			}
+		}
+		mutually_exclusive = {
+			focus = utah_HAM_force_mur_trade
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = utah_HAM_trade_with_MUR_2
+				add_idea = utah_HAM_trade_with_MUR_3
+			}
+			if = {
+				limit = {
+					MUR = {
+						NOT = {
+							is_in_faction = yes
+						}
+					}
+				}
+				create_or_join_glass_league = yes
+				MUR = {
+					country_event = nf_utah.174
+				}
+			}
+			else = {
+				diplomatic_relation = {
+					country = MUR
+					relation = guarantee
+					active = yes
+				}
+				MUR = {
+					diplomatic_relation = {
+						country = HAM
+						relation = guarantee
+						active = yes
+					}
+				}
+			}
+		}
+		prerequisite = {
+			focus = utah_HAM_supply_and_demand
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				MUR = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HGH = { is_ai = no }
+					ANO = { is_ai = no }
+					EHT = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_HAM_force_mur_trade
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 60
+		x = 3
+		y = 3
+		relative_position_id = utah_HAM_glass_shortage
+		available = {
+			has_country_flag = mur_stopped_trade
+		}
+		bypass = {
+			EAS = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		mutually_exclusive = {
+			focus = utah_HAM_reward_loyal_customer
+		}
+		completion_reward = {
+			EAS = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+		prerequisite = {
+			focus = utah_HAM_supply_and_demand
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				MUR = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HGH = { is_ai = no }
+					ANO = { is_ai = no }
+					EHT = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_HAM_restart_forges
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 60
+		x = 1
+		y = 4
+		relative_position_id = utah_HAM_glass_shortage
+		available = {
+			has_war = no
+			MUR = {
+				OR = {
+					has_completed_focus = utah_MUR_rebuilding_roads
+					is_subject_of = HAM
+					AND = {
+						exists = no
+						367 = {
+							is_owned_by = HAM
+						}
+					}
+				}
+			}
+			EAS = {
+				OR = {
+					is_subject_of = HAM
+					AND = {
+						exists = no
+						263 = {
+							is_owned_by = HAM
+						}
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_stability = 0.1
+			if = {
+				limit = {
+					has_completed_focus = utah_HAM_glass_houses
+				}
+				swap_ideas = {
+					remove_idea = utah_HAM_glass_production_slow
+					add_idea = utah_HAM_glass_production_2
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = utah_HAM_glass_production_slow
+					add_idea = utah_HAM_glass_production
+				}
+			}
+		}
+		prerequisite = {
+			focus = utah_HAM_reward_loyal_customer
+			focus = utah_HAM_force_mur_trade
+		}
+		prerequisite = {
+			focus = utah_HAM_demand_territory
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = utah_HAM_glass_houses
+		icon = GFX_goal_generic_construct_civilian
+		cost = 60
+		x = 3
+		y = 1
+		relative_position_id = utah_HAM_unique
+		available = {
+			NOT = {
+				OR = {
+					has_idea = utah_HAM_glass_production_halted
+					has_idea = utah_HAM_glass_production_slow
+				}
+			}
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = utah_HAM_glass_production
+				add_idea = utah_HAM_glass_production_2
+			}
+			170 = {
+				if = {
+					limit = {
+						is_valid_state_for_arms_factory = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		prerequisite = {
+			focus = utah_HAM_unique
+		}
+	}
+	focus = {
+		id = utah_HAM_improved_housing
+		icon = GFX_goal_generic_slums_focus
+		cost = 60
+		x = -1
+		y = 1
+		relative_position_id = utah_HAM_glass_houses
+		available = {
+			NOT = {
+				OR = {
+					has_idea = utah_HAM_glass_production_halted
+					has_idea = utah_HAM_glass_production_slow
+				}
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = habitation_category
+			}
+		}
+		prerequisite = {
+			focus = utah_HAM_glass_houses
+		}
+	}
+	focus = {
+		id = utah_HAM_glass_vendors
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 60
+		x = -1
+		y = 2
+		relative_position_id = utah_HAM_glass_houses
+		available = {
+			NOT = {
+				OR = {
+					has_idea = utah_HAM_glass_production_halted
+					has_idea = utah_HAM_glass_production_slow
+				}
+			}
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = utah_HAM_glass_production_2
+				add_idea = utah_HAM_glass_production_3
+			}
+			add_political_power = 50
+		}
+		prerequisite = {
+			focus = utah_HAM_improved_housing
+		}
+	}
+	focus = {
+		id = utah_HAM_transporting_glass
+		icon = GFX_goal_generic_infrastructure2
+		cost = 60
+		x = 1
+		y = 1
+		relative_position_id = utah_HAM_glass_houses
+		available = {
+			NOT = {
+				OR = {
+					has_idea = utah_HAM_glass_production_halted
+					has_idea = utah_HAM_glass_production_slow
+				}
+			}
+		}
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					infrastructure < 9
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		prerequisite = {
+			focus = utah_HAM_glass_houses
+		}
+	}
+	focus = {
+		id = utah_HAM_clear_out_ruins
+		icon = GFX_goal_generic_construction
+		cost = 60
+		x = 1
+		y = 2
+		relative_position_id = utah_HAM_glass_houses
+		available = {
+			NOT = {
+				OR = {
+					has_idea = utah_HAM_glass_production_halted
+					has_idea = utah_HAM_glass_production_slow
+				}
+			}
+		}
+		completion_reward = {
+			413 = {
+				add_extra_state_shared_building_slots = 2
+				add_resource = {
+					type = metal
+					amount = 12
+				}
+				add_resource = {
+					type = composites
+					amount = 3
+				}
+			}
+		}
+		prerequisite = {
+			focus = utah_HAM_transporting_glass
+		}
+	}
+	focus = {
+		id = utah_HAM_the_great_city_of_glass
+		icon = GFX_goal_generic_cities_focus
+		cost = 60
+		x = 0
+		y = 3
+		relative_position_id = utah_HAM_glass_houses
+		available = {
+			has_completed_focus = utah_HAM_restart_forges
+		}
+		completion_reward = {
+			capital_scope = {
+				set_state_name = STATE_170_HAM
+				if = {
+					limit = {
+						is_valid_state_for_3_civilian_factories = yes
+					}
+					add_extra_state_shared_building_slots = 5
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = achievement_HAM_glass }
+					NOT = { has_country_flag = inelligible_for_achievement_HAM_glass }
+				}
+				set_country_flag = achievement_HAM_glass
+			}
+		}
+		prerequisite = {
+			focus = utah_HAM_glass_vendors
+		}
+		prerequisite = {
+			focus = utah_HAM_clear_out_ruins
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = utah_MUR_unique
+		icon = GFX_goal_mur_flag
+		cost = 60
+		x = 14
+		y = 1
+		relative_position_id = utah_origin_3
+		allow_branch = {
+			original_tag = MUR
+		}
+		completion_reward = {
+			add_political_power = 150
+		}
+		prerequisite = {
+			focus = utah_origin_3
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = utah_MUR_glass_of_the_south
+		icon = GFX_goal_ham_flag
+		cost = 60
+		x = -3
+		y = 1
+		relative_position_id = utah_MUR_unique
+		completion_reward = {
+			unlock_decision_category_tooltip = utah_glass_trade_with_ham
+			add_opinion_modifier = {
+				target = HAM
+				modifier = MUR_ham_opinion
+			}
+			reverse_add_opinion_modifier = {
+				target = HAM
+				modifier = MUR_ham_opinion
+			}
+			add_offsite_building = { type = industrial_complex level = 2 }
+			HAM = {
+				set_temp_variable = { caps_to_add = 100 }
+				add_caps = yes
+			}
+			# add_ideas = utah_MUR_glass_trade
+		}
+		available = {
+			HAM = {
+				has_completed_focus = utah_HAM_glass_shortage
+			}
+		}
+		bypass = {
+			HAM = {
+				exists = no
+			}
+		}
+		prerequisite = {
+			focus = utah_MUR_unique
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HAM = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HGH = { is_ai = no }
+					ANO = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_MUR_rebuilding_roads
+		icon = GFX_goal_generic_infrastructure2
+		cost = 60
+		x = -4
+		y = 2
+		relative_position_id = utah_MUR_unique
+		mutually_exclusive = {
+			focus = utah_MUR_hammond_aggression
+		}
+		completion_reward = {
+			436 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+				}
+			}
+			303 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+				}
+			}
+			341 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+				}
+			}
+			530 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+				}
+			}
+		}
+		available = {
+			HAM = {
+				has_completed_focus = utah_HAM_murtaugh_trade
+			}
+		}
+		bypass = {
+			HAM = {
+				exists = no
+			}
+		}
+		prerequisite = {
+			focus = utah_MUR_glass_of_the_south
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HAM = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HGH = { is_ai = no }
+					ANO = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_MUR_hammond_aggression
+		icon = GFX_focus_rom_parties_end
+		cost = 60
+		x = -2
+		y = 2
+		relative_position_id = utah_MUR_unique
+		mutually_exclusive = {
+			focus = utah_MUR_rebuilding_roads
+		}
+		completion_reward = {
+			add_ideas = {
+				utah_MUR_aggressive_hammond
+			}
+			unlock_decision_tooltip = utah_end_trade_with_ham
+		}
+		available = {
+			HAM = {
+				has_completed_focus = utah_HAM_eastport_glass
+			}
+		}
+		bypass = {
+			HAM = {
+				exists = no
+			}
+		}
+		prerequisite = {
+			focus = utah_MUR_glass_of_the_south
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				factor = 0
+				HAM = { is_ai = no }
+			}
+		}
+	}
+	focus = {
+		id = utah_MUR_the_glass_blowing_corp
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 60
+		x = -3
+		y = 3
+		relative_position_id = utah_MUR_unique
+		available = {
+			170 = {
+				OR = {
+					is_owned_by = MUR
+					owner = {
+						is_subject_of = MUR
+					}
+					owner = {
+						is_in_faction_with = MUR
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_ideas = {
+				utah_MUR_glass_blowing_expertise
+			}
+		}
+		prerequisite = {
+			focus = utah_MUR_hammond_aggression
+			focus = utah_MUR_rebuilding_roads
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HAM = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HGH = { is_ai = no }
+					ANO = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_MUR_the_highest_chapel
+		icon = GFX_goal_hgh_flag
+		cost = 60
+		x = 0
+		y = 1
+		relative_position_id = utah_MUR_unique
+		bypass = {
+			OR = {
+				HGH = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = HGH
+				modifier = MUR_hgh_opinion
+			}
+			reverse_add_opinion_modifier = {
+				target = HGH
+				modifier = MUR_hgh_opinion
+			}
+			unlock_decision_category_tooltip = utah_hgh_interaction
+			#custom_effect_tooltip = unlock_decision_to_gain_hgh_favor
+		}
+		prerequisite = {
+			focus = utah_MUR_unique
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HGH = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HAM = { is_ai = no }
+					ANO = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_MUR_debate_of_ideas
+		icon = GFX_focus_generic_military_academy
+		cost = 60
+		x = 0
+		y = 2
+		relative_position_id = utah_MUR_unique
+		bypass = {
+			OR = {
+				HGH = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+		completion_reward = {
+			country_event = nf_utah.150
+			set_variable = {
+				good_boy_points = 0
+			}
+		}
+		prerequisite = {
+			focus = utah_MUR_the_highest_chapel
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HGH = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HAM = { is_ai = no }
+					ANO = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_MUR_defence_of_faithful
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 60
+		x = 0
+		y = 3
+		relative_position_id = utah_MUR_unique
+		bypass = {
+			OR = {
+				HGH = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+		completion_reward = {
+			country_event = nf_utah.160
+		}
+		prerequisite = {
+			focus = utah_MUR_debate_of_ideas
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HGH = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HAM = { is_ai = no }
+					ANO = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_MUR_river_preservation
+		icon = GFX_focus_secret_rearmament
+		cost = 60
+		x = -1
+		y = 4
+		relative_position_id = utah_MUR_unique
+		available = {
+			OR = {
+				is_in_faction_with = HGH
+				is_subject_of = HGH
+			}
+		}
+		completion_reward = {
+			add_ideas = {
+				utah_MUR_refocus_on_military
+			}
+			add_opinion_modifier = {
+				target = HGH
+				modifier = HGH_respect
+			}
+		}
+		mutually_exclusive = {
+			focus = utah_MUR_protect_the_rivers
+		}
+		prerequisite = {
+			focus = utah_MUR_defence_of_faithful
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HGH = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HAM = { is_ai = no }
+					ANO = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_MUR_protect_the_rivers
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 60
+		x = 1
+		y = 4
+		relative_position_id = utah_MUR_unique
+		available = {
+			NOT = {
+				OR = {
+					is_in_faction_with = HGH
+					is_subject_of = HGH
+				}
+			}
+		}
+		completion_reward = {
+			add_ideas = {
+				utah_MUR_protecting_the_river
+			}
+			add_opinion_modifier = {
+				target = HGH
+				modifier = HGH_disrespect
+			}
+		}
+		mutually_exclusive = {
+			focus = utah_MUR_river_preservation
+		}
+		prerequisite = {
+			focus = utah_MUR_defence_of_faithful
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HGH = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HAM = { is_ai = no }
+					ANO = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_MUR_self_anointed
+		icon = GFX_goal_ano_flag
+		cost = 60
+		x = 3
+		y = 1
+		relative_position_id = utah_MUR_unique
+		completion_reward = {
+			add_opinion_modifier = {
+				target = ANO
+				modifier = utah_MUR_ANO_hatred
+			}
+			every_state = {
+				limit = {
+					is_core_of = ANO
+				}
+				set_variable = {
+					coring_cost_targeted_state_factor@MUR = -0.5
+				}
+				custom_effect_tooltip = core_button_50_state_reduction_tt
+			}
+		}
+		prerequisite = {
+			focus = utah_MUR_unique
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				ANO = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HAM = { is_ai = no }
+					HGH = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_MUR_the_last_refuge_of_christ
+		icon = GFX_goal_generic_fortify_city
+		cost = 60
+		x = 3
+		y = 2
+		relative_position_id = utah_MUR_unique
+		completion_reward = {
+			add_ideas = {
+				utah_MUR_refugee_intake
+			}
+			ANO = {
+				add_ideas = {
+					utah_ANO_refugees_flee
+				}
+			}
+			unlock_decision_category_tooltip = utah_mur_ano_war
+			#custom_effect_tooltip = gives_decision_to_build_bunkers
+		}
+		prerequisite = {
+			focus = utah_MUR_self_anointed
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				ANO = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HAM = { is_ai = no }
+					HGH = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_MUR_defensive_plans
+		icon = GFX_goal_generic_defence
+		cost = 60
+		x = 3
+		y = 3
+		relative_position_id = utah_MUR_unique
+		completion_reward = {
+			add_ideas = {
+				utah_MUR_defensive_strategy
+			}
+			division_template = {
+				name = "The Willing"
+				regiments = {
+					militia = {
+						x = 0
+						y = 0
+					}
+					militia = {
+						x = 0
+						y = 1
+					}
+					militia = {
+						x = 0
+						y = 2
+					}
+					militia = {
+						x = 1
+						y = 0
+					}
+					militia = {
+						x = 1
+						y = 1
+					}
+					militia = {
+						x = 1
+						y = 2
+					}
+				}
+				support = {
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"The Willing\" division_template = \"The Willing\" start_experience_factor = 2.5 start_equipment_factor = 0.5"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"The Willing\" division_template = \"The Willing\" start_experience_factor = 2.5 start_equipment_factor = 0.5"
+					owner = ROOT
+				}
+			}
+		}
+		prerequisite = {
+			focus = utah_MUR_the_last_refuge_of_christ
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				ANO = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HAM = { is_ai = no }
+					HGH = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_MUR_riverside_combat
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		cost = 60
+		x = 3
+		y = 4
+		available = {
+			has_war_with = ANO
+		}
+		relative_position_id = utah_MUR_unique
+		completion_reward = {
+			custom_effect_tooltip = utah_MUR_unlocks_war_decisions_with_ANO
+		}
+		prerequisite = {
+			focus = utah_MUR_defensive_plans
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				ANO = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					HAM = { is_ai = no }
+					HGH = { is_ai = no }
+					HEA = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_MUR_mending_schism
+		icon = GFX_goal_generic_national_unity
+		cost = 60
+		x = 1
+		y = 5
+		available = {
+			ANO = {
+				OR = {
+					AND = {
+						exists = no
+						MUR = {
+							owns_state = 484
+						}
+					}
+					is_subject_of = MUR
+					AND = {
+						is_in_faction_with = MUR
+						MUR = {
+							is_subject = no
+						}
+					}
+				}
+			}
+		}
+		relative_position_id = utah_MUR_unique
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = utah_schism
+				add_idea = utah_schism_mended
+			}
+		}
+		prerequisite = {
+			focus = utah_MUR_riverside_combat
+			focus = utah_MUR_protect_the_rivers
+			focus = utah_MUR_river_preservation
+		}
+		ai_will_do = {
+			base = 5
+		}
+	}
+	focus = {
+		id = utah_HGH_unique
+		icon = GFX_goal_hgh_flag
+		cost = 60
+		x = 14
+		y = 1
+		relative_position_id = utah_origin_3
+		allow_branch = {
+			original_tag = HGH
+		}
+		completion_reward = {
+			add_political_power = 150
+		}
+		prerequisite = {
+			focus = utah_origin_3
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	focus = {
+		id = utah_HGH_heaven_contested
+		icon = GFX_goal_HEA_focus_political_action
+		cost = 60
+		x = -2
+		y = 1
+		relative_position_id = utah_HGH_unique
+		completion_reward = {
+			add_opinion_modifier = {
+				target = HEA
+				modifier = HGH_hea_opinion
+			}
+			reverse_add_opinion_modifier = {
+				target = HEA
+				modifier = HGH_hea_opinion
+			}
+			add_war_support = 0.1
+			add_command_power = 25
+		}
+		available = {
+			OR = {
+				NOT = {
+					has_completed_focus = utah_HGH_the_great_river
+				}
+				has_completed_focus = utah_HGH_revoke_water_way_rights
+			}
+		}
+		prerequisite = {
+			focus = utah_HGH_unique
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HEA = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					MUR = { is_ai = no }
+					ANO = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_HGH_inquisitors_passing_border
+		icon = GFX_goal_generic_construct_military
+		cost = 60
+		x = -1
+		y = 1
+		relative_position_id = utah_HGH_heaven_contested
+		completion_reward = {
+			hidden_effect = {
+				172 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+				198 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+				435 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+				280 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = fortify_hea_border
+			division_template = {
+				name = "Mountain Pass Protectors"
+				regiments = {
+					militia = {
+						x = 0
+						y = 0
+					}
+					militia = {
+						x = 0
+						y = 1
+					}
+					militia = {
+						x = 0
+						y = 2
+					}
+					militia = {
+						x = 1
+						y = 0
+					}
+					militia = {
+						x = 1
+						y = 1
+					}
+					militia = {
+						x = 1
+						y = 2
+					}
+				}
+			}
+			962 = {
+				create_unit = {
+					division = "name = \"Leadore Guards\" division_template = \"Mountain Pass Protectors\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"May Guards\" division_template = \"Mountain Pass Protectors\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+					owner = ROOT
+				}
+			}
+		}
+		prerequisite = {
+			focus = utah_HGH_heaven_contested
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HEA = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					MUR = { is_ai = no }
+					ANO = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_HGH_fallback_fortresses
+		icon = GFX_goal_generic_fortify_city
+		cost = 60
+		x = -1
+		y = 2
+		relative_position_id = utah_HGH_heaven_contested
+		completion_reward = {
+			unlock_decision_tooltip = walls_of_jericho
+			add_ideas = {
+				utah_hgh_fallback_fortifying
+			}
+		}
+		prerequisite = {
+			focus = utah_HGH_inquisitors_passing_border
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HEA = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					MUR = { is_ai = no }
+					ANO = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_HGH_root_out_sympathisers
+		icon = GFX_goal_HEA_focus_evolution_of_the_guard
+		cost = 60
+		x = 1
+		y = 1
+		relative_position_id = utah_HGH_heaven_contested
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						is_owned_by = HEA
+					}
+				}
+				set_temp_variable = {
+					pop_add = -45
+				}
+				add_state_population_no_state_name = yes
+			}
+			add_ideas = utah_hgh_loyalty
+		}
+		prerequisite = {
+			focus = utah_HGH_heaven_contested
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HEA = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					MUR = { is_ai = no }
+					ANO = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_HGH_final_effort
+		icon = GFX_goal_generic_secret_weapon
+		cost = 60
+		x = 1
+		y = 2
+		relative_position_id = utah_HGH_heaven_contested
+		completion_reward = {
+			add_timed_idea = {
+				idea = utah_hgh_final_effort
+				days = 365
+			}
+			add_war_support = 0.05
+		}
+		prerequisite = {
+			focus = utah_HGH_root_out_sympathisers
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HEA = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					MUR = { is_ai = no }
+					ANO = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_HGH_war_in_heaven
+		icon = GFX_goal_generic_war_focus
+		cost = 60
+		x = 0
+		y = 3
+		relative_position_id = utah_HGH_heaven_contested
+		available = {
+			has_war_with = HEA
+		}
+		bypass = {
+			HEA = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlocks_war_decisions_with_hea
+			add_command_power = 25
+			#unlock_decision_category_tooltip = utah_war_for_heaven
+		}
+		prerequisite = {
+			focus = utah_HGH_final_effort
+			focus = utah_HGH_fallback_fortresses
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Main nation this affects is a player
+				add = 3
+				HEA = { is_ai = no }
+			}
+			modifier = {	# One or multiple others that interact with us are players
+				add = 1
+				OR = {
+					MUR = { is_ai = no }
+					ANO = { is_ai = no }
+				}
+			}
+		}
+	}
+	focus = {
+		id = utah_HGH_the_great_river
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 60
+		x = 2
+		y = 1
+		relative_position_id = utah_HGH_unique
+		completion_reward = {
+			navy_experience = 25
+			capital_scope = {
+				if = {
+					limit = {
+						is_valid_state_for_2_dockyards = yes
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		available = {
+			OR = {
+				NOT = {
+					has_completed_focus = utah_HGH_heaven_contested
+				}
+				has_completed_focus = utah_HGH_war_in_heaven
+			}
+		}
+		prerequisite = {
+			focus = utah_HGH_unique
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Affects Murtaugh
+				add = 2
+				MUR = { is_ai = no }
+			}
+			modifier = {	# Affects Anointed
+				add = 2
+				ANO = { is_ai = no }
+			}
+		}
+	}
+	focus = {
+		id = utah_HGH_the_river_provides
+		icon = GFX_goal_generic_food_focus
+		cost = 60
+		x = -1
+		y = 1
+		relative_position_id = utah_HGH_the_great_river
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_resource = {
+					type = water
+					amount = 4
+				}
+				set_temp_variable = {
+					pop_add = 700
+				}
+				add_state_population_no_state_name = yes
+			}
+		}
+		prerequisite = {
+			focus = utah_HGH_the_great_river
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Affects Murtaugh
+				add = 2
+				MUR = { is_ai = no }
+			}
+			modifier = {	# Affects Anointed
+				add = 2
+				ANO = { is_ai = no }
+			}
+		}
+	}
+	focus = {
+		id = utah_HGH_protecting_water_ways
+		icon = GFX_focus_generic_coastal_fort
+		cost = 60
+		x = -1
+		y = 2
+		relative_position_id = utah_HGH_the_great_river
+		completion_reward = {
+			hidden_effect = {
+				every_owned_state = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = adds_forts_across_river
+			add_political_power = 100
+		}
+		prerequisite = {
+			focus = utah_HGH_the_river_provides
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Affects Murtaugh
+				add = 2
+				MUR = { is_ai = no }
+			}
+			modifier = {	# Affects Anointed
+				add = 2
+				ANO = { is_ai = no }
+			}
+		}
+	}
+	focus = {
+		id = utah_HGH_great_boat_builders
+		icon = GFX_goal_generic_harbours_focus
+		cost = 60
+		x = 1
+		y = 1
+		relative_position_id = utah_HGH_the_great_river
+		completion_reward = {
+			add_ideas = {
+				utah_hgh_boat_builders
+			}
+		}
+		prerequisite = {
+			focus = utah_HGH_the_great_river
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Affects Murtaugh
+				add = 2
+				MUR = { is_ai = no }
+			}
+			modifier = {	# Affects Anointed
+				add = 2
+				ANO = { is_ai = no }
+			}
+		}
+	}
+	focus = {
+		id = utah_HGH_sturdy_river_ships
+		icon = GFX_goal_generic_wooden_ship
+		cost = 60
+		x = 1
+		y = 2
+		relative_position_id = utah_HGH_the_great_river
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = utah_hgh_boat_builders
+				add_idea = utah_hgh_sturdy_ships
+			}
+		}
+		prerequisite = {
+			focus = utah_HGH_great_boat_builders
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Affects Murtaugh
+				add = 2
+				MUR = { is_ai = no }
+			}
+			modifier = {	# Affects Anointed
+				add = 2
+				ANO = { is_ai = no }
+			}
+		}
+	}
+	focus = {
+		id = utah_HGH_revoke_water_way_rights
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 60
+		x = 0
+		y = 3
+		relative_position_id = utah_HGH_the_great_river
+		will_lead_to_war_with = ANO
+		will_lead_to_war_with = MUR
+		bypass = {
+			MUR = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			ANO = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		completion_reward = {
+			MUR = {
+				country_event = nf_utah.140
+			}
+			ANO = {
+				country_event = nf_utah.140
+			}
+			custom_effect_tooltip = utah_HGH_revoke_water_way_rights_tt
+		}
+		prerequisite = {
+			focus = utah_HGH_protecting_water_ways
+			focus = utah_HGH_sturdy_river_ships
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {	# Affects Murtaugh
+				add = 2
+				MUR = { is_ai = no }
+			}
+			modifier = {	# Affects Anointed
+				add = 2
+				ANO = { is_ai = no }
+			}
+		}
+	}
+	focus = {
+		id = utah_HGH_cleansed_waters
+		icon = GFX_goal_generic_occupy_states_coastal
+		cost = 60
+		x = 0
+		y = 5
+		relative_position_id = utah_HGH_unique
+		available = {
+			is_subject = no
+			has_war = no
+			HEA = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			OR = {
+				ANO = {
+					has_idea = utah_hgh_capitulated_to_hgh
+				}
+				MUR = {
+					has_idea = utah_hgh_capitulated_to_hgh
+				}
+			}
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = utah_dirty_waters
+				add_idea = utah_clean_waters
+			}
+		}
+		prerequisite = {
+			focus = utah_HGH_war_in_heaven
+		}
+		prerequisite = {
+			focus = utah_HGH_revoke_water_way_rights
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+}
+# vim: set ft=pdx ts=2 sw=2 tw=79 :

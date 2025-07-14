@@ -41,8 +41,9 @@
   hea_nf_fog_of_mercy:0 "Mercy for the Wicked"
   hea_nf_fog_of_mercy_desc:0 "Those Pagans who once butchered Innocence fled from us for years, fearing what would happen when we caught them, fearing the wrath of our God. Yet when we found them? We offered mercy to all who would take it, and word of that mercy spread like wildfire through the land. In the eyes of all who look upon us, we are remembered for this kindness."
 
-  hea_nf_vengance:0 "An Eye for an Eye"
-  hea_nf_vengance_desc:0 "And have we forgotten the Plagues? The walls of Jericho? The drowned armies of the Pharaoh? Mercy goes to those who deserve it, and we can never forgive them for what they have done. Let it be known to all who remember Innocence, and to all who hear of it. The wicked will suffer the vengeance of the faithful."
+hea_nf_vengance: "An Eye for an Eye"
+hea_nf_vengance_desc: "And have we forgotten the Plagues? The walls of Jericho? The drowned armies of the Pharaoh? Mercy goes to those who deserve it, and we can never forgive them for what they have done. Let it be known to all who remember Innocence, and to all who hear of it. The wicked will suffer the vengeance of the faithful."
+hea_nf_vengance_tt: "This will put §g[HEA.GetNameWithFlag]§! on the path of §RVengeance§!."
 
   hea_nf_boilers_of_justice:0 "Boiled Alive"
   hea_nf_boilers_of_justice_desc:0 "Those Pagans once butchered Innocence fled for as far as their legs could take them, scattered to the wind and in a hundred directions. Once every few months, such a man or woman is caught and dragged back to Heaven's Gate, where they are forgiven, but after being punished for their sin. Baptised in boiling water, so that they might travel to heaven and beg the forgiveness of those they struck down."
@@ -120,8 +121,9 @@
   hea_nf_men_of_steam:0 "Steam-Power Armour"
   hea_nf_men_of_steam_desc:0 "Power armour is, at its core, a remarkably inefficient system of fighting a war. Only those with access to vast stockpiles of fusion cores and similar power sources are capable of moving such monstrous units. Using our own technology, we are capable of powering these rudimentary units with an ease and swiftness usually lost to those around us."
 
-  hea_nf_age_of_steam:0 "A New Age"
-  hea_nf_age_of_steam_desc:0 "The Steam-Fusion reactors have taken us far and beyond what any might have expected, allowing our military to reach heights previously thought impossible by all but the greatest of nations or technophiles. The blessing of steam allowed us to become what we are, and with that blessing? We shall usher in an new age, "
+hea_nf_age_of_steam: "A New Age"
+hea_nf_age_of_steam_desc: "The Steam-Fusion reactors have taken us far and beyond what any might have expected, allowing our military to reach heights previously thought impossible by all but the greatest of nations or technophiles. The blessing of steam allowed us to become what we are, and with that blessing? We shall usher in an new age!"
+hea_nf_age_of_steam_fervor_tt: "If we don't launch a §RCrusade§! in §Y200§! days the people will question our rule!"
 
   hea_digging_deep:0 "Building up Heaven's Gate"
   hea_digging_deep_desc:0 "Heaven's Gate has plenty of resources that go untapped, or forgotten, when our people could do well to use them. Veins of ore, rivers forgotten, and plenty of educated men that go ignored in favor of our warriors, no longer. The Father above gave us this land, we do him a disservice by not appreciating it fully."
@@ -837,12 +839,12 @@ hea_lost_scientists_tt:0 "§YThis will give us 1% War Support and unlock Decisio
 ###Foreign Relations### 
 #######################
 
-HEA_foreign_relation_start: "§YThe Flock and the Flame§!"
-HEA_foreign_relation_start_desc: "§YWe bring two gifts to the Wasteland: the warmth of the Fold, and the cleansing fire of revelation.§!\nTo the lost and the broken, we offer belonging. To the misguided and the proud, we offer correction. Missionaries go forth bearing scripture and sacrament, yet behind them ride knights bearing sword and fire.\n§YLet all who remain hear the call: join the Flock, or face the Flame.§!"
+HEA_foreign_relation_start: "§4The Flock and the Flame§!"
+HEA_foreign_relation_start_desc: "§4We bring two gifts to the Wasteland: the warmth of the Fold, and the cleansing fire of revelation.§!\nTo the lost and the broken, we offer belonging. To the misguided and the proud, we offer correction. Missionaries go forth bearing scripture and sacrament, yet behind them ride knights bearing sword and fire.\n§4Let all who remain hear the call: join the Flock, or face the Flame.§!"
 
 ###Rotpurgers
-HEA_foreign_relation_rot: "§tScripture for the Scorned§!"
-HEA_foreign_relation_rot_desc: "§OThe Rotpurgers§! wage a holy war of their own, guided by prophets of vengeance and blood-soaked ritual. But zeal without truth is only madness by another name. Our missionaries march not unguarded, nor unarmed. The Vault may have cast them out, but we offer something greater: purpose, purity, and a cause that burns brighter than revenge. §tLet them kneel, not to us, but to the Truth we bring.§!"
+HEA_foreign_relation_rot: "§OScripture for the Scorned§!"
+HEA_foreign_relation_rot_desc: "§OThe Rotpurgers§! wage a holy war of their own, guided by prophets of vengeance and blood-soaked ritual. But zeal without truth is only madness by another name. Our missionaries march not unguarded, nor unarmed. The Vault may have cast them out, but we offer something greater: purpose, purity, and a cause that burns brighter than revenge. §OLet them kneel, not to us, but to the Truth we bring.§!"
 HEA_foreign_relation_rot_tt: "Completing this §YFocus§! will put §O[ROT.GetNameWithFlag]§! on the path to become our §4ally§!."
 
 HEA_foreign_relation_rot_equipment: "The Gospel and the Gun"
@@ -857,8 +859,8 @@ HEA_foreign_relation_rot_final: "Ashes to Ashes, Flesh to Faith"
 HEA_foreign_relation_rot_final_desc: "Once cast out. Now called home.\nThey were children of the Vault, exiled in hate and flame.\nBut they have shed the name of exile.\nThey have cast off wrath without meaning.\nAnd they have answered.\n\nThrough war and witness, through blood and belief, the Rotpurgers have earned their place—not as vassals, but as Children of the Gate.\nThey walk the Wasteland as our kin.\nTheir dead are remembered in our prayers.\nTheir banners are dipped in the same holy flame.\n\nFrom ash, they have risen.\nFrom flesh, they have found faith.\nThe Fold grows stronger—not by conquest, but by covenant."
 
 ###Bone Dancers
-HEA_foreign_relation_bdt: "§3Among the Bones, we Build§!"
-HEA_foreign_relation_bdt_desc: "§4The Seraph Lords§! were not sent to conquer. In the shadow of the §0Bone Dancers§!' rites, they have held their sermons. Now, we send more. Supplies, scribes, and steam-fed strength cross the mountains, not with fanfare, but with purpose. The Gospel is already there. Our duty now is to ensure it takes hold. §3What we build will outlast the drums.§!"
+HEA_foreign_relation_bdt: "§0Among the Bones, we Build§!"
+HEA_foreign_relation_bdt_desc: "§0The Seraph Lords§! were not sent to conquer. In the shadow of the §0Bone Dancers§!' rites, they have held their sermons. Now, we send more. Supplies, scribes, and steam-fed strength cross the mountains, not with fanfare, but with purpose. The Gospel is already there. Our duty now is to ensure it takes hold. §0What we build will outlast the drums.§!"
 HEA_foreign_relation_bdt_tt: "Completing this §YFocus§! will put §0[BDT.GetNameWithFlag]§! on the path to become our §4ally§!."
 
 HEA_foreign_relation_bdt_equipment: "Tincture and Testament"
@@ -871,6 +873,9 @@ HEA_foreign_relation_bdt_manpower_tt: "Completing this §YFocus§! will speed up
 
 HEA_foreign_relation_bdt_final: "Rise, Seraphim"
 HEA_foreign_relation_bdt_final_desc: "From whisper to word,\nFrom word to fire,\nFrom fire to throne.\n\nThe Seraph Lords have knelt, bled, healed, and preached.\nNow, they are lifted. Crowned not by gold, but by belief.\nThe Bone Dancers do not resist them.\nThey follow.\n\nThe drums have not stopped.\nBut now, they beat to the cadence of scripture.\nThe songs still echo.\n But now, they sing of steam, of sanctity, of salvation.\n\nLet no man doubt their rise.\ntLet the Seraphim stand. Let the Fold rejoice."
+
+###Lord's Anointed
+HEA_foreign_relation_ano_tt: "Completing this §YFocus§! will prevent §R[ANO.GetNameWithFlag]§! from seeking peaceful mediation with §7[MUR.GetNameWithFlag]§!, causing a schism within §4[HGH.GetNameWithFlag]§!'s coalition against us."
 
 #######End of the Billowing Grand
 

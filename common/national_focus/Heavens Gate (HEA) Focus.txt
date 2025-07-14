@@ -512,8 +512,18 @@ focus_tree = {
 				set_variable = { var = hea_fervor_attrition_var value = 0 }
 				set_variable = { var = hea_fervor_army_morale_factor_var value = 0 }
 				set_variable = { var = hea_fervor_army_org_factor_var value = 0 }
-				add_dynamic_modifier = {
-					modifier = hea_fervor_dynamic_modifier
+				hidden_effect = {
+					add_dynamic_modifier = {
+						modifier = hea_fervor_dynamic_modifier
+					}
+				}
+				if = {
+					limit = { has_war = yes }
+					add_to_variable = {
+						var = hea_fervor_war_support_factor_var
+						value = 0.1
+					}
+					set_country_flag = hea_fervor_war_support_bonus
 				}
 				activate_mission = hea_fervor_initial_warning
 				custom_effect_tooltip = hea_nf_age_of_steam_fervor_tt

@@ -81,6 +81,8 @@ hea_fervor_dynamic_modifier = {
 	attrition = hea_fervor_attrition_var
 	army_morale_factor = hea_fervor_army_morale_factor_var
 	army_org_factor = hea_fervor_army_org_factor_var
+	resistance_target = hea_fervor_resistance_target_var
+	resistance_growth = hea_fervor_resistance_growth_var
 }
 
 

@@ -124,7 +124,7 @@ focus_tree = {
 	focus = {
 		id = hea_nf_innocence_lost_deal
 		icon = GFX_goal_HEA_focus_memories_of_innocence
-		cost = 45
+		cost = 30
 		x = 25
 		y = 4
 		
@@ -149,13 +149,17 @@ focus_tree = {
 	focus = {
 		id = hea_nf_forgive_sins
 		icon = GFX_goal_HEA_focus_learning_to_forgive
-		cost = 45
+		cost = 30
 		x = 1
 		y = 1
 		relative_position_id = hea_nf_innocence_lost_deal
 
 		prerequisite = {
 			focus = hea_nf_innocence_lost_deal
+		}
+
+		available = {
+			always = no
 		}
 
 		mutually_exclusive = {
@@ -206,7 +210,7 @@ focus_tree = {
 	focus = {
 		id = hea_nf_vengance
 		icon = GFX_goal_HEA_focus_an_eye_for_an_eye
-		cost = 25
+		cost = 30
 		x = -1
 		y = 1
 		relative_position_id = hea_nf_innocence_lost_deal
@@ -236,7 +240,7 @@ focus_tree = {
 	focus = {
 		id = hea_nf_boilers_of_justice
 		icon = GFX_goal_HEA_focus_boilers_of_justice
-		cost = 15
+		cost = 30
 		x = 0
 		y = 1
 		relative_position_id = hea_nf_vengance
@@ -261,7 +265,7 @@ focus_tree = {
 	focus = {
 		id = hea_nf_pol_action
 		icon = GFX_goal_HEA_focus_the_great_debate
-		cost = 60
+		cost = 30
 		x = 1
 		y = 1
 		relative_position_id = hea_nf_boilers_of_justice
@@ -421,7 +425,7 @@ focus_tree = {
 	focus = {
 		id = hea_nf_consolidate_pol
 		icon = GFX_goal_HEA_focus_political_action
-		cost = 60
+		cost = 30
 		x = 1
 		y = 1
 		relative_position_id = hea_nf_reject_elite_1
@@ -448,7 +452,7 @@ focus_tree = {
 	focus = {
 		id = hea_nf_grand_cathedral
 		icon = GFX_goal_HEA_focus_billowing_cathedral
-		cost = 120
+		cost = 60
 		x = 0
 		y = 1
 		relative_position_id = hea_nf_consolidate_pol
@@ -478,7 +482,7 @@ focus_tree = {
 	focus = {
 		id = hea_nf_age_of_steam
 		icon = GFX_goal_HEA_focus_a_new_age
-		cost = 105
+		cost = 60
 		x = 14
 		y = 11
 		prerequisite = {
@@ -512,6 +516,8 @@ focus_tree = {
 				set_variable = { var = hea_fervor_attrition_var value = 0 }
 				set_variable = { var = hea_fervor_army_morale_factor_var value = 0 }
 				set_variable = { var = hea_fervor_army_org_factor_var value = 0 }
+				set_variable = { var = hea_fervor_resistance_target_var value = 0 }
+				set_variable = { var = hea_fervor_resistance_growth_var value = 0 }
 				hidden_effect = {
 					add_dynamic_modifier = {
 						modifier = hea_fervor_dynamic_modifier
@@ -519,12 +525,15 @@ focus_tree = {
 				}
 				if = {
 					limit = { has_war = yes } #In case HEA already at war when this focus complete, issue raised by Beez - @Deez
-					add_to_variable = {
-						var = hea_fervor_war_support_factor_var
-						value = 0.1
-					}
 					set_country_flag = hea_fervor_idle_phase_0 #Set idleness stage to 0
 					set_country_flag = hea_fervor_war_support_bonus #bonus applied
+					add_to_variable = { var = hea_fervor_war_support_factor_var value = 0.1 } #10% War Support
+					add_to_variable = { var = hea_fervor_stability_factor_var value = 0.1 } #10% stability
+					set_variable = { var = hea_fervor_resistance_target_var value = -0.15 } #Resistance target reduced by 15%
+					set_variable = { var = hea_fervor_resistance_growth_var value = -0.2 } #Resistance growth reduced by 20%
+					#effect_tooltip = { #Faking the 10% war support gain during wartime
+					#	add_ideas = hea_fervor_idea_wartime_0
+					#}
 				}
 				activate_mission = hea_fervor_initial_warning
 				custom_effect_tooltip = hea_nf_age_of_steam_fervor_tt
@@ -538,7 +547,7 @@ focus_tree = {
 	focus = {
 		id = hea_nf_addres_militarism
 		icon = GFX_goal_HEA_focus_addres_militarism
-		cost = 20
+		cost = 30
 		x = 0
 		y = 1
 		relative_position_id = hea_nf_age_of_steam
@@ -565,18 +574,17 @@ focus_tree = {
 	focus = {
 		id = hea_nf_embrace_militarism
 		icon = GFX_goal_HEA_focus_embracing_violence
-		cost = 20
+		cost = 30
 		x = -1
 		y = 2
 		relative_position_id = hea_nf_age_of_steam
-			available = { 
-				has_completed_focus = hea_nf_reject_elite_1
-				}
+
 		prerequisite = {
 			focus = hea_nf_addres_militarism
 		}
-
-
+		mutually_exclusive = {
+			focus = hea_nf_fight_militarism
+		}
 
 		completion_reward = {
 			if = {
@@ -597,7 +605,7 @@ focus_tree = {
 	focus = {
 		id = hea_nf_embrace_militarism_1
 		icon = GFX_goal_HEA_focus_declaration_of_crusade
-		cost = 45
+		cost = 30
 		x = -1
 		y = 3
 		relative_position_id = hea_nf_age_of_steam
@@ -1156,18 +1164,17 @@ focus_tree = {
 	focus = {
 		id = hea_nf_fight_militarism
 		icon = GFX_goal_HEA_focus_the_rise_of_mercy
-		cost = 60
+		cost = 30
 		x = 1
 		y = 2
 		relative_position_id = hea_nf_age_of_steam
-					available = { 
-				has_completed_focus = hea_nf_embrace_elite_1
-				}
+
 		prerequisite = {
 			focus = hea_nf_addres_militarism
 		}
-
-
+		mutually_exclusive = {
+			focus = hea_nf_embrace_militarism
+		}
 
 		completion_reward = {
 			if = {
@@ -1188,7 +1195,7 @@ focus_tree = {
 	focus = {
 		id = hea_nf_fight_militarism_1
 		icon = GFX_goal_HEA_focus_declaration_of_sanctuary
-		cost = 60
+		cost = 30
 		x = 1
 		y = 3
 		relative_position_id = hea_nf_age_of_steam
@@ -2323,7 +2330,7 @@ set_country_leader_name = {
 	focus = {
 		id = hea_nf_army
 		icon = GFX_goal_HEA_focus_evolution_of_the_guard
-		cost = 45
+		cost = 30
 		x = 1
 		y = 4
 		prerequisite = {
@@ -2431,7 +2438,7 @@ set_country_leader_name = {
 	focus = {
 		id = hea_nf_army_2
 		icon = GFX_goal_HEA_focus_military_ordos
-		cost = 45
+		cost = 30
 		x = 2
 		y = 3
 		relative_position_id = hea_nf_army
@@ -2475,13 +2482,19 @@ set_country_leader_name = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] hea_nf_air entered"
 			}
-			air_experience = 25
-			add_tech_bonus = {
-				name = air_bonus
-				bonus = 0.75
-				uses = 1
-				category = air_equipment_tech_category
+			if = {
+				limit = { NOT = { has_tech = glider_tech } }
+				set_technology = { glider_tech = 1 }
 			}
+			else = {
+				add_tech_bonus = {
+					name = air_bonus
+					bonus = 0.5
+					uses = 1
+					category = air_equipment_tech_category
+				}
+			}
+			air_experience = 25
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] hea_nf_air exited"
@@ -2500,9 +2513,6 @@ set_country_leader_name = {
 			focus = hea_nf_air
 		}
 
-		available = {
-			has_tech = glider_tech
-		}
 
 		completion_reward = {
 			if = {
@@ -2528,9 +2538,6 @@ set_country_leader_name = {
 			focus = hea_nf_air
 		}
 
-		available = {
-			has_tech = glider_tech
-		}
 
 		completion_reward = {
 			if = {
@@ -2552,10 +2559,11 @@ set_country_leader_name = {
 	focus = {
 		id = hea_nf_air_1
 		icon = GFX_goal_HEA_focus_ascension_achieved
-		cost = 45
+		cost = 30
 		x = -2
 		y = 3
 		relative_position_id = hea_nf_army
+
 		prerequisite = {
 			focus = hea_nf_air_peasant
 			focus = hea_nf_air_knight
@@ -2582,7 +2590,7 @@ set_country_leader_name = {
 	focus = {
 		id = hea_nf_missionary_warriors
 		icon = GFX_goal_HEA_focus_armed_pilgrims
-		cost = 45
+		cost = 30
 		x = 0
 		y = 4
 		relative_position_id = hea_nf_army
@@ -2606,7 +2614,7 @@ set_country_leader_name = {
 focus = {
 		id = hea_nf_machines_of_steam
 		icon = GFX_goal_HEA_focus_steampowered_dreadnaughts
-		cost = 45
+		cost = 30
 		x = -1
 		y = 5
 		relative_position_id = hea_nf_army
@@ -2639,7 +2647,7 @@ focus = {
 	focus = {
 		id = hea_nf_men_of_steam
 		icon = GFX_goal_HEA_focus_steam_power_armor
-		cost = 45
+		cost = 30
 		x = 1
 		y = 5
 		relative_position_id = hea_nf_army
@@ -3208,24 +3216,21 @@ focus = {
 	focus = {
 		id = hea_the_nucleus
 		icon = GFX_goal_HEA_HEA_building_nucleus
-		cost = 60
+		cost = 30
 		x = 14
 		y = 4
 
 		prerequisite = {
 			focus = hea_nf_innocence_lost
 		}
-		available = {
-			has_completed_focus = hea_nf_age_of_steam
-		}
 
-		completion_reward = {
-			every_owned_state = {
-				limit = {
-					is_core_of = HEA
-				}
-				add_extra_state_shared_building_slots = 2
-			}
+		completion_reward = { #Manually inputing the states to save a little bit of performance cost and prevent Stagleap getting the bonus without adding more unnecessary checks - @Deez
+			18 = { add_extra_state_shared_building_slots = 1 }
+			116 = { add_extra_state_shared_building_slots = 1 }
+			278 = { add_extra_state_shared_building_slots = 1 }
+			1384 = { add_extra_state_shared_building_slots = 1 }
+			198 = { add_extra_state_shared_building_slots = 1 }
+			1385 = { add_extra_state_shared_building_slots = 1 }
 		}
 	}
 
@@ -3262,7 +3267,7 @@ focus = {
 		focus = {
 		id = hea_dams
 		icon = GFX_goal_HEA_HEA_building_damconstruct
-		cost = 30
+		cost = 15
 		x = -2
 		y = 1
 		relative_position_id = hea_taming_rivers
@@ -3284,7 +3289,7 @@ focus = {
 	focus = {
 		id = hea_repurposing_wattech
 		icon = GFX_goal_HEA_HEA_building_dam
-		cost = 30
+		cost = 15
 		x = 0
 		y = 1
 		relative_position_id = hea_dams
@@ -3323,7 +3328,7 @@ focus = {
 		focus = {
 		id = hea_bridges
 		icon = GFX_goal_HEA_HEA_building_bridge
-		cost = 30
+		cost = 15
 		x = 2
 		y = 1
 		relative_position_id = hea_taming_rivers
@@ -3346,7 +3351,7 @@ focus = {
 		focus = {
 		id = hea_ferries
 		icon = GFX_goal_HEA_building_ferry
-		cost = 30
+		cost = 15
 		x = 0
 		y = 1
 		relative_position_id = hea_bridges
@@ -3371,16 +3376,10 @@ focus = {
 		focus = {
 		id = hea_priest_barges
 		icon = GFX_goal_HEA_HEA_building_steambarge
-		cost = 60
+		cost = 30
 		x = 0
 		y = 3
 		relative_position_id = hea_taming_rivers
-
-		available = {
-			has_full_control_of_state = 18
-			has_full_control_of_state = 116
-			has_full_control_of_state = 278
-		}
 
 		prerequisite = {
 			focus = hea_ferries
@@ -3452,7 +3451,7 @@ focus = {
 	focus = {
 		id = hea_hothouse
 		icon = GFX_goal_HEA_building_spring
-		cost = 30
+		cost = 15
 		x = -2
 		y = 1
 		relative_position_id = hea_taming_land
@@ -3474,7 +3473,7 @@ focus = {
 		focus = {
 		id = hea_priestcooks
 		icon = GFX_goal_HEA_building_cooks
-		cost = 30
+		cost = 15
 		x = 0
 		y = 1
 		relative_position_id = hea_hothouse
@@ -3515,7 +3514,7 @@ focus = {
 	focus = {
 		id = hea_expanding_pipeways
 		icon = GFX_goal_HEA_building_pipe
-		cost = 30
+		cost = 15
 		x = 2
 		y = 1
 		relative_position_id = hea_taming_land
@@ -3537,7 +3536,7 @@ focus = {
 	focus = {
 		id = hea_heated_homes
 		icon = GFX_goal_HEA_building_steamhome
-		cost = 30
+		cost = 15
 		x = 0
 		y = 1
 		relative_position_id = hea_expanding_pipeways
@@ -3559,16 +3558,10 @@ focus = {
 		focus = {
 		id = hea_anewold_gate
 		icon = GFX_goal_HEA_building_steamwonder
-		cost = 60
+		cost = 30
 		x = 0
 		y = 3
 		relative_position_id = hea_taming_land
-
-		available = {
-			has_full_control_of_state = 1385
-			has_full_control_of_state = 198
-			has_full_control_of_state = 276
-		}
 
 		prerequisite = {
 			focus = hea_heated_homes
@@ -3603,9 +3596,7 @@ focus = {
 			add_to_variable = {
 				hea_land_building_speed = 0.05
 			}
-			hidden_effect = {
-				clr_country_flag = hea_already_taming
-			}
+			clr_country_flag = hea_already_taming
 			custom_effect_tooltip = hea_anewold_gate_tt
 		}
 	}
@@ -3663,7 +3654,7 @@ focus = {
 	focus = {
 		id = hea_mountain_monestaries
 		icon = GFX_goal_HEA_peasantlevy
-		cost = 30
+		cost = 15
 		x = 2
 		y = 1
 		relative_position_id = hea_taming_heavens
@@ -3685,7 +3676,7 @@ focus = {
 	focus = {
 		id = hea_shrines_to_reactor
 		icon = GFX_goal_HEA_knightsofpeasants
-		cost = 30
+		cost = 15
 		x = 0
 		y = 1
 		relative_position_id = hea_mountain_monestaries
@@ -3707,7 +3698,7 @@ focus = {
 	focus = {
 		id = hea_barnabus_reactor
 		icon = GFX_goal_HEA_preparingforwar
-		cost = 30
+		cost = 15
 		x = -2
 		y = 1
 		relative_position_id = hea_taming_heavens
@@ -3733,7 +3724,7 @@ focus = {
 	focus = {
 		id = hea_hollows_bellow
 		icon = GFX_goal_HEA_warcometh
-		cost = 30
+		cost = 15
 		x = 0
 		y = 1
 		relative_position_id = hea_barnabus_reactor
@@ -3758,16 +3749,11 @@ focus = {
 	focus = {
 		id = hea_steam_wonderland
 		icon = GFX_goal_HEA_closertoheaven
-		cost = 60
+		cost = 30
 		x = 0
 		y = 3
 		relative_position_id = hea_taming_heavens
 
-		available = {
-			has_full_control_of_state = 1385
-			has_full_control_of_state = 198
-			has_full_control_of_state = 116
-		}
 		prerequisite = {
 			focus = hea_shrines_to_reactor
 			focus = hea_hollows_bellow
@@ -3809,22 +3795,14 @@ focus = {
 	focus = {
 		id = hea_nf_industry_5
 		icon = GFX_goal_HEA_focus_rebirth_of_the_gate
-		cost = 90
+		cost = 60
 		x = 0
 		y = 5
 		relative_position_id = hea_the_nucleus
-		prerequisite = {
-			focus = hea_steam_wonderland
-		}
-		prerequisite = {
-			focus = hea_anewold_gate
-		}
-		prerequisite = {
-			focus = hea_priest_barges
-		}
-		available = {
-			116 = { is_owned_and_controlled_by = ROOT }
-		}
+
+		prerequisite = { focus = hea_steam_wonderland }
+		prerequisite = { focus = hea_anewold_gate }
+		prerequisite = { focus = hea_priest_barges }
 
 		completion_reward = {
 			if = {

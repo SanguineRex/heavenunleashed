@@ -68,7 +68,7 @@ characters = {
 			legacy_id = 10145
 		}
 	}
-	HEA_bee_pope = { #Waxpontiff Apis
+	HEA_bee_pope = { #Waxpontiff Apis - YO IT'S MY MAN BEEZUS - @Deez
 		name = HEA_bee_pope_name
 		portraits = {
 			army = {
@@ -77,6 +77,7 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
+				HEA_bee_pope_unit_leader_trait
 				perceptive_trait
 				charismatic_trait
 			}

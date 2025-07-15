@@ -1,0 +1,22 @@
+leader_traits = {
+	HEA_bee_pope_unit_leader_trait = {
+		type = all
+		trait_type = personality_trait
+		#gain_xp = { #Recommended by @Tran to just disable these since these cost performance for nothing - @Deez
+        #    always = no
+        #}
+
+		allowed = {
+			FROM = {
+				tag = HEA
+			}
+		}
+		non_shared_modifier = {
+			max_commander_army_size = 6
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

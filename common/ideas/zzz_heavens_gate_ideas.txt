@@ -1497,6 +1497,12 @@ ideas = {
 			picture = pantheon_sun
 			#Lmao Nothing here - @Deez
 		}
+		#hea_fervor_idea_wartime_0 = { #10% war support bonus during wartime
+		#	picture = pantheon_sun
+		#	modifier = {
+		#		war_support_factor = 0.1
+		#	}
+		#}
 		hea_fervor_idea_idle_1 = { #First-Second level of being idle
 			picture = pantheon_sun
 			modifier = {

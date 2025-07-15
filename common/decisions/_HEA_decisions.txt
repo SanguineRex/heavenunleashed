@@ -435,7 +435,7 @@ hea_michael_crusade_cat = {
 hea_monsters_of_the_wastes_cat = {
 	hea_fervor_initial_warning = { #Initial idle warning activated by completed A New Age
 		icon = GFX_decision_tempered_blade
-		days_mission_timeout = 2
+		days_mission_timeout = 200
 		is_good = no
 		allowed = {
 			always = no #Handled by Focus
@@ -479,7 +479,7 @@ hea_monsters_of_the_wastes_cat = {
 	}
 	hea_fervor_idle_1_warning = { #First Stage Idle warning
 		icon = GFX_decision_tempered_blade
-		days_mission_timeout = 2
+		days_mission_timeout = 30
 		is_good = no
 		allowed = {
 			always = no #Handled by on_actions
@@ -512,7 +512,7 @@ hea_monsters_of_the_wastes_cat = {
 	}
 	hea_fervor_idle_2_warning = { #Second Stage Idle warning
 		icon = GFX_decision_tempered_blade
-		days_mission_timeout = 2
+		days_mission_timeout = 30
 		is_good = no
 		allowed = {
 			always = no #Handled by the previous idle warning mission
@@ -554,7 +554,7 @@ hea_monsters_of_the_wastes_cat = {
 	}
 	hea_fervor_idle_3_warning = { #Third Stage Idle warning
 		icon = GFX_decision_tempered_blade
-		days_mission_timeout = 2
+		days_mission_timeout = 30
 		is_good = no
 		allowed = {
 			always = no #Handled by the previous idle warning mission
@@ -775,7 +775,7 @@ hea_monsters_of_the_wastes_cat = {
 		#target_root_trigger = { #Not needed, the check is in the decision category
 		#
 		#}
-		targets = { STC LOI } #Communist nation or nations with communist leaders at start
+		targets = { STC LOI BGR } #Communist nation or nations with communist leaders at start - BGR is also commie so putting them here, but the player can only choose them for communist or robot bonus once - @Deez
 		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
 		target_trigger = { 
 			FROM = {

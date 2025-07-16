@@ -7,9 +7,7 @@ leader_traits = {
         #}
 
 		allowed = {
-			FROM = {
-				tag = HEA
-			}
+			always = no
 		}
 		non_shared_modifier = {
 			max_commander_army_size = 6

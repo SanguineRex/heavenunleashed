@@ -512,7 +512,7 @@ hea_monsters_of_the_wastes_cat = {
 	}
 	hea_fervor_idle_2_warning = { #Second Stage Idle warning
 		icon = GFX_decision_tempered_blade
-		days_mission_timeout = 30
+		days_mission_timeout = 60
 		is_good = no
 		allowed = {
 			always = no #Handled by the previous idle warning mission
@@ -554,7 +554,7 @@ hea_monsters_of_the_wastes_cat = {
 	}
 	hea_fervor_idle_3_warning = { #Third Stage Idle warning
 		icon = GFX_decision_tempered_blade
-		days_mission_timeout = 30
+		days_mission_timeout = 90
 		is_good = no
 		allowed = {
 			always = no #Handled by the previous idle warning mission

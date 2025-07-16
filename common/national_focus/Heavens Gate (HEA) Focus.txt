@@ -642,9 +642,6 @@ focus_tree = {
 		prerequisite = {
 			focus = hea_nf_embrace_militarism_1
 		}
-		available = {
-			has_completed_focus = hea_nf_reject_elite_1
-		}
 
 		completion_reward = {	
 			set_country_flag = HEA_crusader_state
@@ -1174,6 +1171,9 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = hea_nf_embrace_militarism
+		}
+		available = {
+			has_completed_focus = hea_nf_forgive_sins
 		}
 
 		completion_reward = {

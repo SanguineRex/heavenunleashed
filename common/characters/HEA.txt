@@ -8,6 +8,7 @@ characters = {
 		}
 		field_marshal = {
 			traits = {
+				HEA_inner_circle_unit_leader_trait
 				intelligent_trait
 				pain_train_trait
 				strong_trait
@@ -77,6 +78,7 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
+				HEA_inner_circle_unit_leader_trait
 				HEA_bee_pope_unit_leader_trait
 				perceptive_trait
 				charismatic_trait
@@ -86,6 +88,46 @@ characters = {
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 2
+		}
+	}
+	HEA_aegon = { #Sir Aegon Pyrel
+		name = HEA_aegon_name
+		portraits = {
+			army = {
+				large = GFX_Portrait_HEA_aegon_large
+			}
+		}
+		corps_commander = {
+			traits = {
+				HEA_inner_circle_unit_leader_trait
+				built_to_destroy_trait
+				hot_blooded_trait
+				strong_trait
+			}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	HEA_seraphim = {
+		name = HEA_seraphim_name
+		portraits = {
+			army = {
+				large = GFX_Portrait_HEA_Seraphim_large
+				small = GFX_Portrait_HEA_Seraphim_small
+			}
+			civilian = {
+				large = GFX_Portrait_HEA_Seraphim_large
+				small = GFX_Portrait_HEA_Seraphim_small
+			}
+		}
+		advisor = {
+			slot = high_command
+			ledger = army
+			traits = { HEA_omnipotent_advisor_trait }
+			cost = 200
 		}
 	}
 }

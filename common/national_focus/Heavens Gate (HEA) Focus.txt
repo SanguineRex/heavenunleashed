@@ -506,18 +506,19 @@ focus_tree = {
 			}
 			if = {
 				limit = { has_country_flag = hea_vengance_path }
-				set_variable = { var = hea_fervor_stability_factor_var value = 0 } #Initialize the values here
-				set_variable = { var = hea_fervor_war_support_factor_var value = 0 }
-				set_variable = { var = hea_fervor_stability_weekly_var value = 0 }
-				set_variable = { var = hea_fervor_war_support_weekly_var value = 0 }
-				set_variable = { var = hea_fervor_army_attack_factor_var value = 0 }
-				set_variable = { var = hea_fervor_breakthrough_factor_var value = 0 }
-				set_variable = { var = hea_fervor_supply_consumption_factor_var value = 0 }
-				set_variable = { var = hea_fervor_attrition_var value = 0 }
-				set_variable = { var = hea_fervor_army_morale_factor_var value = 0 }
-				set_variable = { var = hea_fervor_army_org_factor_var value = 0 }
-				set_variable = { var = hea_fervor_resistance_target_var value = 0 }
-				set_variable = { var = hea_fervor_resistance_growth_var value = 0 }
+				set_variable = { hea_fervor_stability_factor_var = 0 } #Initialize the values here
+				set_variable = { hea_fervor_war_support_factor_var = 0 }
+				set_variable = { hea_fervor_stability_weekly_var = 0 }
+				set_variable = { hea_fervor_war_support_weekly_var = 0 }
+				set_variable = { hea_fervor_army_attack_factor_var = 0 }
+				set_variable = { hea_fervor_breakthrough_factor_var = 0 }
+				set_variable = { hea_fervor_supply_consumption_factor_var = 0 }
+				set_variable = { hea_fervor_attrition_var = 0 }
+				set_variable = { hea_fervor_army_morale_factor_var = 0 }
+				set_variable = { hea_fervor_army_org_factor_var = 0 }
+				set_variable = { hea_fervor_resistance_target_var = 0 }
+				set_variable = { hea_fervor_resistance_growth_var = 0 }
+				set_variable = { hea_fervor_loc_var = 0 } #for scripted loc
 				hidden_effect = {
 					add_dynamic_modifier = {
 						modifier = hea_fervor_dynamic_modifier
@@ -1964,6 +1965,15 @@ set_country_leader_name = {
 		}
 		
 		completion_reward = {
+			add_to_variable = { hea_fervor_supply_consumption_factor_var = -0.03}
+			add_to_variable = { hea_fervor_attrition_var = -0.03 }
+			add_to_variable = { hea_fervor_loc_var = 1 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_template
+					add_idea = hea_fervor_idea_ghoul_focus
+				}
+			}
 			custom_effect_tooltip = hea_the_dead_walk_tt
 		}
 	}
@@ -1989,6 +1999,14 @@ set_country_leader_name = {
 		}
 		
 		completion_reward = {
+			add_to_variable = { hea_fervor_army_org_factor_var = 0.1 }
+			add_to_variable = { hea_fervor_loc_var = 1 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_template
+					add_idea = hea_fervor_idea_cain_focus
+				}				
+			}
 			custom_effect_tooltip = hea_cains_empire_tt
 			hidden_effect = {
 				WBH = { every_core_state = { add_manpower = -5000 } }
@@ -2022,6 +2040,14 @@ set_country_leader_name = {
 		}
 		
 		completion_reward = {
+			add_to_variable = { hea_fervor_army_attack_factor_var = 0.05 }
+			add_to_variable = { hea_fervor_loc_var = 1 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_template
+					add_idea = hea_fervor_idea_mutant_focus
+				}			
+			}
 			custom_effect_tooltip = hea_nephilim_horde_tt
 		}
 	}
@@ -2052,6 +2078,14 @@ set_country_leader_name = {
 		}
 
 		completion_reward = {
+			add_to_variable = { hea_fervor_army_morale_factor_var = 0.05 }
+			add_to_variable = { hea_fervor_loc_var = 1 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_template
+					add_idea = hea_fervor_idea_leviathan_focus
+				}
+			}
 			custom_effect_tooltip = hea_leviathans_of_the_north_tt
 		}
 	}
@@ -2082,6 +2116,14 @@ set_country_leader_name = {
 		}
 		
 		completion_reward = {
+			add_to_variable = { hea_fervor_breakthrough_factor_var = 0.05 }
+			add_to_variable = { hea_fervor_loc_var = 1 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_template
+					add_idea = hea_fervor_idea_steel_focus
+				}
+			}
 			custom_effect_tooltip = hea_steel_puppets_tt
 		}
 	}
@@ -2112,6 +2154,14 @@ set_country_leader_name = {
 		}
 
 		completion_reward = {
+			add_to_variable = { hea_fervor_stability_factor_var = 0.1 }
+			add_to_variable = { hea_fervor_loc_var = 1 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_template
+					add_idea = hea_fervor_idea_red_focus
+				}				
+			}
 			custom_effect_tooltip = hea_red_devils_of_the_north_tt
 		}
 	}
@@ -2489,9 +2539,15 @@ set_country_leader_name = {
 			else = {
 				add_tech_bonus = {
 					name = air_bonus
-					bonus = 0.5
+					bonus = 0.2
 					uses = 1
 					category = air_equipment_tech_category
+				}
+			}
+			1384 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
 				}
 			}
 			air_experience = 25
@@ -3393,6 +3449,11 @@ focus = {
 					type = dockyard
 					level = 1
 				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					province = 1946
+				}
 			}
 			116 = {
 				add_extra_state_shared_building_slots = 1
@@ -3400,12 +3461,22 @@ focus = {
 					type = dockyard
 					level = 1
 				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					province = 7166
+				}
 			}
 			278 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
 					level = 1
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					province = 4361
 				}
 			}
 			add_to_variable = {
@@ -4882,7 +4953,31 @@ focus = {
 		}
 
 		completion_reward = {
-		set_cosmetic_tag = HEA_content
+			set_cosmetic_tag = HEA_content
+			if = {
+				limit = { has_country_flag = hea_vengance_path } #On Vengance Path
+				if = { #Clear any existing debuffs
+					limit = { has_country_flag = hea_fervor_idle_phase_1 } #At Phase 1 Debuffs
+					clr_country_flag = hea_fervor_idle_phase_1
+					add_to_variable = { hea_fervor_stability_factor_var = 0.1 }
+					add_to_variable = { hea_fervor_war_support_factor_var = 0.1 }	
+				}
+				else_if = {
+					limit = { has_country_flag = hea_fervor_idle_phase_2 } #At Phase 2 Debuffs
+					clr_country_flag = hea_fervor_idle_phase_2
+					add_to_variable = { hea_fervor_stability_factor_var = 0.2 }
+					add_to_variable = { hea_fervor_war_support_factor_var = 0.2 }
+				}
+				else_if = {
+					limit = { has_country_flag = hea_fervor_idle_phase_3 } #At Phase 3 Debuffs
+					clr_country_flag = hea_fervor_idle_phase_3 
+					add_to_variable = { hea_fervor_stability_factor_var = 0.3 }
+					add_to_variable = { hea_fervor_war_support_factor_var = 0.3 }
+					add_to_variable = { hea_fervor_stability_weekly_var = 0.01 }
+					add_to_variable = { hea_fervor_war_support_weekly_var = 0.01 }				
+				}
+				custom_effect_tooltip = hea_servants_of_god_vengance_tt
+			}
 		}
 	}
 

@@ -1494,7 +1494,6 @@ ideas = {
 		##Fervor-Crusdaing Time##
 		#########################
 		hea_fervor_idea_template = { #Base with no real effects
-			picture = pantheon_sun
 			#Lmao Nothing here - @Deez
 		}
 		#hea_fervor_idea_wartime_0 = { #10% war support bonus during wartime
@@ -1504,27 +1503,97 @@ ideas = {
 		#	}
 		#}
 		hea_fervor_idea_idle_1 = { #First-Second level of being idle
-			picture = pantheon_sun
 			modifier = {
 				stability_factor = -0.1
 				war_support_factor = -0.1			
 			}
 		}
 		hea_fervor_idea_idle_2 = { #Second level of being idle
-			picture = pantheon_sun
 			modifier = {
 				stability_factor = -0.2
 				war_support_factor = -0.2			
 			}
 		}
 		hea_fervor_idea_idle_3 = { #Third level of being idle
-			picture = pantheon_sun
 			modifier = {
 				stability_factor = -0.3
 				war_support_factor = -0.3
 				stability_weekly = -0.01
 				war_support_weekly = -0.01
 			}
+		}
+		#Ghoul
+		hea_fervor_idea_ghoul_decision = { #Ghoul-Decision
+			modifier = {
+				supply_consumption_factor = -0.02
+				attrition = -0.02
+				stability_factor = -0.02
+			}
+		}
+		hea_fervor_idea_ghoul_focus = { #Ghoul-focus
+			modifier = {
+				supply_consumption_factor = -0.03
+				attrition = -0.03
+				stability_factor = -0.05
+			}
+		}
+		#Washington Brotherhood-Cain
+		hea_fervor_idea_cain_focus = { #Cain-focus
+			modifier = {
+				army_org_factor = 0.1
+				stability_factor = -0.05
+			}
+		}
+		#Super Mutant
+		hea_fervor_idea_mutant_decision = { #Mutant-Decision
+			modifier = {
+				army_attack_factor = 0.03
+				stability_factor = -0.02
+			}
+		}
+		hea_fervor_idea_mutant_focus = { #Mutant-focus
+			modifier = {
+				army_attack_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+		#Leviathans
+		hea_fervor_idea_leviathan_decision = { #Leviathans-Decision
+			modifier = {
+				army_morale_factor = 0.03
+				stability_factor = -0.02
+			}	
+		}
+		hea_fervor_idea_leviathan_focus = { #Leviathans-focus
+			modifier = {
+				army_morale_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+		#Steel Puppets
+		hea_fervor_idea_steel_decision = { #Steel-Decision
+			modifier = {
+				breakthrough_factor = 0.02
+				stability_factor = -0.02
+			}
+		}
+		hea_fervor_idea_steel_focus = { #Steel-focus
+			modifier = {
+				breakthrough_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+		#Red Devils
+		hea_fervor_idea_red_decision = { #Red-Decision
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = -0.02
+			}
+		}
+		hea_fervor_idea_red_focus = { #Red-focus
+			modifier = {
+				stability_factor = 0.1
+			}	
 		}
 	}
 }

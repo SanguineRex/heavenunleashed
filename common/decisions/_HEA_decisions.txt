@@ -444,7 +444,10 @@ hea_monsters_of_the_wastes_cat = {
 			always = no #Not meant to be completed lol
 		}
 		cancel_trigger = {
-			has_war = yes
+			OR = {
+				has_war = yes #At war
+				has_completed_focus = hea_servants_of_god #Completed the game
+			}
 		}
 
 		timeout_effect = { #Penalties
@@ -488,7 +491,10 @@ hea_monsters_of_the_wastes_cat = {
 			always = no
 		}
 		cancel_trigger = {
-			has_war = yes
+			OR = {
+				has_war = yes #At war
+				has_completed_focus = hea_servants_of_god #Completed the game
+			}
 		}
 		timeout_effect = {
 			clr_country_flag = hea_fervor_idle_phase_0 #Move away from Phase 0 Idle
@@ -521,7 +527,10 @@ hea_monsters_of_the_wastes_cat = {
 			always = no
 		}
 		cancel_trigger = {
-			has_war = yes
+			OR = {
+				has_war = yes #At war
+				has_completed_focus = hea_servants_of_god #Completed the game
+			}
 		}
 		timeout_effect = {
 			clr_country_flag = hea_fervor_idle_phase_1 #Move away from phase 1
@@ -563,7 +572,10 @@ hea_monsters_of_the_wastes_cat = {
 			always = no
 		}
 		cancel_trigger = {
-			has_war = yes
+			OR = {
+				has_war = yes #At war
+				has_completed_focus = hea_servants_of_god #Completed the game
+			}
 		}
 		timeout_effect = {
 			clr_country_flag = hea_fervor_idle_phase_2 #Move away from phase 2
@@ -628,6 +640,36 @@ hea_monsters_of_the_wastes_cat = {
 
 		remove_effect = {
 			add_to_variable = { hea_monsters_ghouls = 1 }
+			add_to_variable = { hea_fervor_supply_consumption_factor_var = -0.02 } #-2% supply consumption
+			add_to_variable = { hea_fervor_attrition_var = -0.02 } #-2% attrition
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_template
+					add_idea = hea_fervor_idea_ghoul_decision
+				}
+			}
+			
+			if = { #Bonus of 20 days for cooldown on the idleness
+				limit = { has_decision = hea_fervor_idle_1_warning }
+				add_days_mission_timeout = {
+					mission = hea_fervor_idle_1_warning
+					days = 20
+				}
+			} #Bonus of 20 days for cooldown on the idleness
+			else_if = {
+				limit = { has_decision = hea_fervor_idle_2_warning }
+				add_days_mission_timeout = {
+					mission = hea_fervor_idle_2_warning
+					days = 20
+				}
+			} #Bonus of 20 days for cooldown on the idleness
+			else_if = {
+				limit = { has_decision = hea_fervor_idle_3_warning }
+				add_days_mission_timeout = {
+					mission = hea_fervor_idle_3_warning
+					days = 20
+				}
+			} #No bonus if the player got into phase 3 idleness debuff, just do some war! - @Deez
 			FROM = {
 				set_country_flag = hea_purged_flag
 				every_core_state = {
@@ -669,6 +711,35 @@ hea_monsters_of_the_wastes_cat = {
 
 		remove_effect = {
 			add_to_variable = { hea_monsters_mutants = 1 }
+			add_to_variable = { hea_fervor_army_attack_factor_var = 0.03 } #3% Army Attack
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_template
+					add_idea = hea_fervor_idea_mutant_decision
+				}
+			}
+
+			if = { #Bonus of 20 days for cooldown on the idleness
+				limit = { has_decision = hea_fervor_idle_1_warning }
+				add_days_mission_timeout = {
+					mission = hea_fervor_idle_1_warning
+					days = 20
+				}
+			} #Bonus of 20 days for cooldown on the idleness
+			else_if = {
+				limit = { has_decision = hea_fervor_idle_2_warning }
+				add_days_mission_timeout = {
+					mission = hea_fervor_idle_2_warning
+					days = 20
+				}
+			} #Bonus of 20 days for cooldown on the idleness
+			else_if = {
+				limit = { has_decision = hea_fervor_idle_3_warning }
+				add_days_mission_timeout = {
+					mission = hea_fervor_idle_3_warning
+					days = 20
+				}
+			} #No bonus if the player got into phase 3 idleness debuff, just do some war! - @Deez
 			FROM = {
 				set_country_flag = hea_purged_flag
 				every_core_state = {
@@ -724,6 +795,35 @@ hea_monsters_of_the_wastes_cat = {
 
 		remove_effect = {
 			add_to_variable = { hea_monsters_mirelurks = 1 }
+			add_to_variable = { hea_fervor_army_morale_factor_var = 0.03 } #3% Army Recovery
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_template
+					add_idea = hea_fervor_idea_leviathan_decision
+				}
+			}
+
+			if = { #Bonus of 20 days for cooldown on the idleness
+				limit = { has_decision = hea_fervor_idle_1_warning }
+				add_days_mission_timeout = {
+					mission = hea_fervor_idle_1_warning
+					days = 20
+				}
+			} #Bonus of 20 days for cooldown on the idleness
+			else_if = {
+				limit = { has_decision = hea_fervor_idle_2_warning }
+				add_days_mission_timeout = {
+					mission = hea_fervor_idle_2_warning
+					days = 20
+				}
+			} #Bonus of 20 days for cooldown on the idleness
+			else_if = {
+				limit = { has_decision = hea_fervor_idle_3_warning }
+				add_days_mission_timeout = {
+					mission = hea_fervor_idle_3_warning
+					days = 20
+				}
+			} #No bonus if the player got into phase 3 idleness debuff, just do some war! - @Deez
 			FROM = {
 				set_country_flag = hea_purged_flag
 				every_core_state = {
@@ -793,6 +893,35 @@ hea_monsters_of_the_wastes_cat = {
 
 		remove_effect = {
 			add_to_variable = { hea_monsters_robots = 1 }
+			add_to_variable = { hea_fervor_breakthrough_factor_var = 0.02 } #2% Breakthrough
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_template
+					add_idea = hea_fervor_idea_steel_decision
+				}				
+			}
+
+			if = { #Bonus of 20 days for cooldown on the idleness
+				limit = { has_decision = hea_fervor_idle_1_warning }
+				add_days_mission_timeout = {
+					mission = hea_fervor_idle_1_warning
+					days = 20
+				}
+			} #Bonus of 20 days for cooldown on the idleness
+			else_if = {
+				limit = { has_decision = hea_fervor_idle_2_warning }
+				add_days_mission_timeout = {
+					mission = hea_fervor_idle_2_warning
+					days = 20
+				}
+			} #Bonus of 20 days for cooldown on the idleness
+			else_if = {
+				limit = { has_decision = hea_fervor_idle_3_warning }
+				add_days_mission_timeout = {
+					mission = hea_fervor_idle_3_warning
+					days = 20
+				}
+			} #No bonus if the player got into phase 3 idleness debuff, just do some war! - @Deez			
 			FROM = {
 				set_country_flag = hea_purged_flag
 				every_core_state = {
@@ -834,6 +963,35 @@ hea_monsters_of_the_wastes_cat = {
 
 		remove_effect = {
 			add_to_variable = { hea_monsters_communists = 1 }
+			add_to_variable = { hea_fervor_war_support_factor_var = 0.05 } #5% War support
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_template
+					add_idea = hea_fervor_idea_red_decision
+				}				
+			}
+
+			if = { #Bonus of 20 days for cooldown on the idleness
+				limit = { has_decision = hea_fervor_idle_1_warning }
+				add_days_mission_timeout = {
+					mission = hea_fervor_idle_1_warning
+					days = 20
+				}
+			} #Bonus of 20 days for cooldown on the idleness
+			else_if = {
+				limit = { has_decision = hea_fervor_idle_2_warning }
+				add_days_mission_timeout = {
+					mission = hea_fervor_idle_2_warning
+					days = 20
+				}
+			} #Bonus of 20 days for cooldown on the idleness
+			else_if = {
+				limit = { has_decision = hea_fervor_idle_3_warning }
+				add_days_mission_timeout = {
+					mission = hea_fervor_idle_3_warning
+					days = 20
+				}
+			} #No bonus if the player got into phase 3 idleness debuff, just do some war! - @Deez			
 			FROM = {
 				set_country_flag = hea_purged_flag
 				every_core_state = {

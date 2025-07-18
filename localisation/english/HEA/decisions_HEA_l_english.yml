@@ -121,10 +121,10 @@ hea_alchemist_final_resource_tt:0 "§YThis will give us 40£resources_strip|5 an
 ########################
 ##Fervor-CrusadingTime##
 ########################
-hea_fervor_initial_warning: "§0Deus vult!§!"
-hea_fervor_idle_1_warning: "§gDeus vult!§!"
-hea_fervor_idle_2_warning: "§LDeus vult!§!"
-hea_fervor_idle_3_warning: "§0Deus vult!§!"
+hea_fervor_initial_warning: "§gDeus vult!§!"
+hea_fervor_idle_1_warning: "§4Deus vult!§!"
+hea_fervor_idle_2_warning: "§0Deus vult!§!"
+hea_fervor_idle_3_warning: "§gDeus vult!§!"
 
 ##########################
 ##Monsters of the Wastes##

@@ -17,4 +17,26 @@ leader_traits = {
 			factor = 0
 		}
 	}
+	HEA_inner_circle_unit_leader_trait = {
+		type = all
+		trait_type = personality_trait
+		#gain_xp = { #Recommended by @Tran to just disable these since these cost performance for nothing - @Deez
+        #    always = no
+        #}
+
+		allowed = {
+			always = no
+		}
+		non_shared_modifier = {
+			experience_gain_factor = -0.15
+			army_morale_factor = 0.05
+			wounded_chance_factor = -0.5
+			sickness_chance = -0.5
+			own_operative_detection_chance_factor = -1
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }

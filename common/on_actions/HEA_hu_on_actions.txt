@@ -10,42 +10,48 @@ on_actions = {
 					has_country_flag = hea_fervor_idle_phase_0 #Phase 0 Idlenesss
 					has_war = no #Only when HEA have no more enemy
 				}
-				activate_mission = hea_fervor_idle_1_warning
-				clr_country_flag = hea_fervor_war_support_bonus #To prevent repeated declaring war getting war support stacked forever
-				add_to_variable = { var = hea_fervor_war_support_factor_var value = -0.1 } #Remove Bonus of 10% War Support
-				add_to_variable = { var = hea_fervor_stability_factor_var value = -0.1 } #Remove Bonus of 10% Stability
-				set_variable = { var = hea_fervor_resistance_target_var value = 0 } #Remove Bonus of resistance target reduced by 15%
-				set_variable = { var = hea_fervor_resistance_growth_var value = 0 } #Remove Bonus of resistance growth reduced by 20%
+				if = {
+					limit = { NOT = { has_completed_focus = hea_servants_of_god } } #Hasn't completed the game so restart the idleness mechanic
+					activate_mission = hea_fervor_idle_1_warning
+				}
+				if = {
+					limit = { has_country_flag = hea_fervor_war_support_bonus } #Having war bonuses
+					clr_country_flag = hea_fervor_war_support_bonus 
+					add_to_variable = { hea_fervor_war_support_factor_var = -0.1 } #Remove Bonus of 10% War Support
+					add_to_variable = { hea_fervor_stability_factor_var = -0.1 } #Remove Bonus of 10% Stability
+					set_variable = { hea_fervor_resistance_target_var = 0 } #Remove Bonus of resistance target reduced by 15%
+					set_variable = { hea_fervor_resistance_growth_var = 0 } #Remove Bonus of resistance growth reduced by 20%
+				}
 			}
 		}
 	}
-	on_declare_war = { #On declare instead of on war so the penalties only can be removed and initial war support bonus given if Heaven's Gate is the aggressor
+	on_war = { #This is way better than declare_war cause it take in account of joining a war, getting war dec on and dec war at the same time, while save on performance and don't do a check everytime HEA's dec a war, just when goes from peace to war status - @Deez
 		effect = {
 			if = {
 				limit = { 
 					original_tag = HEA #Check if ROOT is HEA first
-					has_completed_focus = hea_nf_age_of_steam
 					has_country_flag = hea_vengance_path
+					has_completed_focus = hea_nf_age_of_steam
 				} 
 				if = {
 					limit = { has_country_flag = hea_fervor_idle_phase_1 } #At Phase 1 Debuffs
 					clr_country_flag = hea_fervor_idle_phase_1
-					add_to_variable = { var = hea_fervor_stability_factor_var value = 0.1 }
-					add_to_variable = { var = hea_fervor_war_support_factor_var value = 0.1 }	
+					add_to_variable = { hea_fervor_stability_factor_var = 0.1 }
+					add_to_variable = { hea_fervor_war_support_factor_var = 0.1 }	
 				}
 				else_if = {
 					limit = { has_country_flag = hea_fervor_idle_phase_2 } #At Phase 2 Debuffs
 					clr_country_flag = hea_fervor_idle_phase_2
-					add_to_variable = { var = hea_fervor_stability_factor_var value = 0.2 }
-					add_to_variable = { var = hea_fervor_war_support_factor_var value = 0.2 }
+					add_to_variable = { hea_fervor_stability_factor_var = 0.2 }
+					add_to_variable = { hea_fervor_war_support_factor_var = 0.2 }
 				}
 				else_if = { #Tried to used else for the last argument but it will just lead to the player stacking buff forever
 					limit = { has_country_flag = hea_fervor_idle_phase_3 } #At Phase 3 Debuffs
 					clr_country_flag = hea_fervor_idle_phase_3 
-					add_to_variable = { var = hea_fervor_stability_factor_var value = 0.3 }
-					add_to_variable = { var = hea_fervor_war_support_factor_var value = 0.3 }
-					add_to_variable = { var = hea_fervor_stability_weekly_var value = 0.01 }
-					add_to_variable = { var = hea_fervor_war_support_weekly_var value = 0.01 }				
+					add_to_variable = { hea_fervor_stability_factor_var = 0.3 }
+					add_to_variable = { hea_fervor_war_support_factor_var = 0.3 }
+					add_to_variable = { hea_fervor_stability_weekly_var = 0.01 }
+					add_to_variable = { hea_fervor_war_support_weekly_var = 0.01 }				
 				}
 				#Don't really need a Phase 0 cause it don't give any debuff to revert
 
@@ -53,10 +59,10 @@ on_actions = {
 				if = { #Giving War Bonuses
 					limit = { NOT = { has_country_flag = hea_fervor_war_support_bonus } } #Don't have war support bonus
 					set_country_flag = hea_fervor_war_support_bonus
-					add_to_variable = { var = hea_fervor_war_support_factor_var value = 0.1 } #Bonus of 10% War Support	
-					add_to_variable = { var = hea_fervor_stability_factor_var value = 0.1 } #Bonus of 10% Stability
-					set_variable = { var = hea_fervor_resistance_target_var value = -0.15 } #Resistance target reduced by 15%
-					set_variable = { var = hea_fervor_resistance_growth_var value = -0.2 } #Resistance growth reduced by 20%
+					add_to_variable = { hea_fervor_war_support_factor_var = 0.1 } #Bonus of 10% War Support	
+					add_to_variable = { hea_fervor_stability_factor_var = 0.1 } #Bonus of 10% Stability
+					set_variable = { hea_fervor_resistance_target_var = -0.15 } #Resistance target reduced by 15%
+					set_variable = { hea_fervor_resistance_growth_var = -0.2 } #Resistance growth reduced by 20%
 				}
 			}
 		}

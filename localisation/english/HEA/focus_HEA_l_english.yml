@@ -880,8 +880,9 @@ HEA_foreign_relation_ano_tt: "Completing this §YFocus§! will prevent §R[ANO.G
 #######End of the Billowing Grand
 
 #########Final Focus
-hea_servants_of_god:0 "§2Servants of God"
-hea_servants_of_god_desc:0 "§2Gloria Patri, et Filio, et Spiritui Sancto.\n Sicut erat in principio, et nunc, et semper,\n et in saecula saeculorum.\n "Glory be to the Father, and to the Son, and to the Holy Spirit. \n As it was in the beginning, is now, and ever shall be, world without end. Amen.""
+hea_servants_of_god: "§2Servants of God§!"
+hea_servants_of_god_desc: "§2Gloria Patri, et Filio, et Spiritui Sancto.\n Sicut erat in principio, et nunc, et semper,\n et in saecula saeculorum.\n \"Glory be to the Father, and to the Son, and to the Holy Spirit. \n As it was in the beginning, is now, and ever shall be, world without end. Amen.\"§!"
+hea_servants_of_god_vengance_tt: "§YFervor§! is §Gno longer§! affected by §Ridleness§!."
 
  # Tooltips
  hea_coring_ano:0 "The territories ruled by the §CAnointed Lords§W now fall under the light of Heaven's Gate"

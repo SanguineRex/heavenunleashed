@@ -29,25 +29,66 @@ defined_text = {
     text = {
         trigger = { 
             original_tag = HEA
+            has_completed_focus  = hea_servants_of_god
+        }
+        localization_key = hea_fervor_scripted_loc_final #Fervor: Rapturous
+    }
+    text = {
+        trigger = { 
+            original_tag = HEA
             has_country_flag = hea_fervor_idle_phase_3 
         }
-        localization_key = hea_fervor_scripted_loc_idle_phase_3 #Fervor: Corruptions
+        localization_key = hea_fervor_scripted_loc_idle_phase_3 #Fervor: Blighted
     }
     text = {
         trigger = { 
             original_tag = HEA
             has_country_flag = hea_fervor_idle_phase_2 
         }
-        localization_key = hea_fervor_scripted_loc_idle_phase_2 #Fervor: Degradations
+        localization_key = hea_fervor_scripted_loc_idle_phase_2 #Fervor: Withered
     }
     text = {
         trigger = { 
             original_tag = HEA
             has_country_flag = hea_fervor_idle_phase_1
         }
-        localization_key = hea_fervor_scripted_loc_idle_phase_1 #Fervor: Stagnations
+        localization_key = hea_fervor_scripted_loc_idle_phase_1 #Fervor: Dulled
     }
     text = {
-        localization_key = hea_fervor_scripted_loc_neutral #Fervor: Ordinary
+        trigger = {
+            original_tag = HEA
+            check_variable = { hea_fervor_loc_var > 4 }
+        }
+        localization_key = hea_fervor_scripted_loc_rising_3 #Fervor: Exalted
+    }
+    text = {
+        trigger = {
+            original_tag = HEA
+            check_variable = { hea_fervor_loc_var > 2 }
+        }
+        localization_key = hea_fervor_scripted_loc_rising_2 #Fervor: Kindled
+    }
+    text = {
+        trigger = {
+            original_tag = HEA
+            check_variable = { hea_fervor_loc_var > 0 }
+        }
+        localization_key = hea_fervor_scripted_loc_rising_1 #Fervor: Embered
+    }
+    text = {
+        localization_key = hea_fervor_scripted_loc_neutral #Fervor: Holding Vigil
+    }
+}
+define_text = {
+    name = hea_fervor_desc_scripted_loc
+    text = {
+        trigger = {
+            original_tag = HEA
+            has_war = yes
+        }
+        localization_key = hea_fervor_desc_scripted_loc_war
+    }
+    text = {
+        localization_key = hea_fervor_desc_scripted_loc_neutral
     }
 }

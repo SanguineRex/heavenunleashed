@@ -6,13 +6,23 @@ spriteTypes = {
 	}
 	
 #HEA
+	#Seraphim
 	spriteType = {
-		name = "GFX_Portrait_HEA_Seraphim"
-		textureFile = "gfx/leaders/HEA/Seraphim.dds"
+		name = "GFX_Portrait_HEA_Seraphim_large"
+		textureFile = "gfx/leaders/HEA/portrait_hea_seraphim_large.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_HEA_Seraphim_small"
+		textureFile = "gfx/leaders/HEA/portrait_hea_seraphim_small.dds"
 	}
 	#Bee Pope
 	spriteType = {
 		name = "GFX_Portrait_HEA_bee_pope_large"
 		textureFile = "gfx/leaders/HEA/portrait_hea_bee_pope_large.dds"
+	}
+	#Sir Aegon Pyrel
+	spriteType = {
+		name = "GFX_Portrait_HEA_aegon_large"
+		textureFile = "gfx/leaders/HEA/portrait_hea_aegon_large.dds"
 	}
 }

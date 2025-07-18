@@ -1,0 +1,11 @@
+leader_traits = {
+	HEA_omnipotent_advisor_trait = {
+		sprite = 15
+		resistance_target = -0.1
+		resistance_growth = -0.1
+		intel_network_gain_factor = 0.25
+		recon_factor = 0.2
+		decryption = 0.25
+		operative_slot = 2
+	}
+}

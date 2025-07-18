@@ -1968,6 +1968,7 @@ set_country_leader_name = {
 			add_to_variable = { hea_fervor_supply_consumption_factor_var = -0.03}
 			add_to_variable = { hea_fervor_attrition_var = -0.03 }
 			add_to_variable = { hea_fervor_loc_var = 1 }
+			add_to_variable = { hea_fervor_stability_factor_var = -0.05 } #-5% stability
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_fervor_idea_template
@@ -2001,6 +2002,7 @@ set_country_leader_name = {
 		completion_reward = {
 			add_to_variable = { hea_fervor_army_org_factor_var = 0.1 }
 			add_to_variable = { hea_fervor_loc_var = 1 }
+			add_to_variable = { hea_fervor_stability_factor_var = -0.05 } #-5% stability
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_fervor_idea_template
@@ -2042,6 +2044,7 @@ set_country_leader_name = {
 		completion_reward = {
 			add_to_variable = { hea_fervor_army_attack_factor_var = 0.05 }
 			add_to_variable = { hea_fervor_loc_var = 1 }
+			add_to_variable = { hea_fervor_stability_factor_var = -0.05 } #-5% stability
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_fervor_idea_template
@@ -2080,6 +2083,7 @@ set_country_leader_name = {
 		completion_reward = {
 			add_to_variable = { hea_fervor_army_morale_factor_var = 0.05 }
 			add_to_variable = { hea_fervor_loc_var = 1 }
+			add_to_variable = { hea_fervor_stability_factor_var = -0.05 } #-5% stability
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_fervor_idea_template
@@ -2118,6 +2122,7 @@ set_country_leader_name = {
 		completion_reward = {
 			add_to_variable = { hea_fervor_breakthrough_factor_var = 0.05 }
 			add_to_variable = { hea_fervor_loc_var = 1 }
+			add_to_variable = { hea_fervor_stability_factor_var = -0.05 } #-5% stability
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_fervor_idea_template
@@ -2156,6 +2161,7 @@ set_country_leader_name = {
 		completion_reward = {
 			add_to_variable = { hea_fervor_stability_factor_var = 0.1 }
 			add_to_variable = { hea_fervor_loc_var = 1 }
+			add_to_variable = { hea_fervor_stability_factor_var = -0.05 } #-5% stability
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_fervor_idea_template

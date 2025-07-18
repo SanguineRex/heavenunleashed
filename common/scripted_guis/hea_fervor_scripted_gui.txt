@@ -1,0 +1,9 @@
+scripted_gui = {
+
+	hea_fervor_scripted_gui = {
+		context_type = decision_category
+		window_name = "hea_fervor_ui_window"
+	}
+	
+}
+

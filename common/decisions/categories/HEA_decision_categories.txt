@@ -37,6 +37,7 @@ hea_monsters_of_the_wastes_cat = {
 	}
 	icon = GFX_decision_tempered_blade
 	priority = 998
+	scripted_gui = hea_fervor_scripted_gui
 }
 ##########################
 ##Monsters of the Wastes##

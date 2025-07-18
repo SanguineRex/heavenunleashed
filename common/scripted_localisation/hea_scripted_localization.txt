@@ -92,3 +92,9 @@ define_text = {
         localization_key = hea_fervor_desc_scripted_loc_neutral
     }
 }
+define_text = {
+    name = GetFervorModifiers
+    text = {
+        localization_key = hea_fervor_modifiers_scripted_gui_tt
+    }
+}

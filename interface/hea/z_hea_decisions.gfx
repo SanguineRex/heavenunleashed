@@ -1,0 +1,7 @@
+spriteTypes = {
+	#Fervor Scripted GUI stuff
+    spriteType = {
+        name = "GFX_hea_fervor_scripted_gui"
+        textureFile = "gfx/interface/decisions/hea_fervor_idea_scripted_gui.dds"
+    }
+}

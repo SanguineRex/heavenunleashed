@@ -642,6 +642,7 @@ hea_monsters_of_the_wastes_cat = {
 			add_to_variable = { hea_monsters_ghouls = 1 }
 			add_to_variable = { hea_fervor_supply_consumption_factor_var = -0.02 } #-2% supply consumption
 			add_to_variable = { hea_fervor_attrition_var = -0.02 } #-2% attrition
+			add_to_variable = { hea_fervor_stability_factor_var = -0.02 } #-2% stability
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_fervor_idea_template
@@ -712,6 +713,7 @@ hea_monsters_of_the_wastes_cat = {
 		remove_effect = {
 			add_to_variable = { hea_monsters_mutants = 1 }
 			add_to_variable = { hea_fervor_army_attack_factor_var = 0.03 } #3% Army Attack
+			add_to_variable = { hea_fervor_stability_factor_var = -0.02 } #-2% stability
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_fervor_idea_template
@@ -796,6 +798,7 @@ hea_monsters_of_the_wastes_cat = {
 		remove_effect = {
 			add_to_variable = { hea_monsters_mirelurks = 1 }
 			add_to_variable = { hea_fervor_army_morale_factor_var = 0.03 } #3% Army Recovery
+			add_to_variable = { hea_fervor_stability_factor_var = -0.02 } #-2% stability
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_fervor_idea_template
@@ -894,6 +897,7 @@ hea_monsters_of_the_wastes_cat = {
 		remove_effect = {
 			add_to_variable = { hea_monsters_robots = 1 }
 			add_to_variable = { hea_fervor_breakthrough_factor_var = 0.02 } #2% Breakthrough
+			add_to_variable = { hea_fervor_stability_factor_var = -0.02 } #-2% stability
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_fervor_idea_template
@@ -964,6 +968,7 @@ hea_monsters_of_the_wastes_cat = {
 		remove_effect = {
 			add_to_variable = { hea_monsters_communists = 1 }
 			add_to_variable = { hea_fervor_war_support_factor_var = 0.05 } #5% War support
+			add_to_variable = { hea_fervor_stability_factor_var = -0.02 } #-2% stability
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_fervor_idea_template

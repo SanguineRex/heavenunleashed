@@ -118,6 +118,23 @@ hea_alchemist_final_research_tt:0 "§YThis will give us 7.5% Research Bonus but 
 hea_alchemist_final_resource:0 "§YOR:§!Heaven's Gate Advanced Resources Team"
 hea_alchemist_final_resource_tt:0 "§YThis will give us 40£resources_strip|5 and 40£resources_strip|6 but lock us out of §YHeaven's Gate Research Team§!"
 
+####################
+##State Management##
+####################
+hea_state_manage_decision_cat: "Territorial Management"
+hea_state_manage_decision_cat_desc: ""
+hea_state_manage_gui_idaho_button_tt: "Idaho: Controlled by §W[HEA.GetNameWithFlag]§!"
+state_manage_gui_idaho_button_delay_tt: "Yoo we come from this place"
+
+no_state_manage_gui_oregon_button_tt: "Oregon: §gNo Influence§!"
+hea_state_manage_gui_oregon_button_tt: "Oregon: Controlled by §W[HEA.GetNameWithFlag]§!"
+bdt_state_manage_gui_oregon_button_tt: "Oregon: Controlled by §0[BDT.GetNameWithFlag]§!"
+state_manage_gui_oregon_button_delay_tt: "Oregon Trails"
+
+no_state_manage_gui_washington_button_tt: "Washington: §gNo Influence§!"
+hea_state_manage_gui_washington_button_tt: "Washington: Controlled by §W[HEA.GetNameWithFlag]§!"
+rot_state_manage_gui_washington_button_tt: "Washington: Controlled by §O[ROT.GetNameWithFlag]§!"
+state_manage_gui_washington_button_delay_tt: "Yo it's my man Washington in the hood"
 ########################
 ##Fervor-CrusadingTime##
 ########################
@@ -125,6 +142,11 @@ hea_fervor_initial_warning: "§gDeus vult!§!"
 hea_fervor_idle_1_warning: "§4Deus vult!§!"
 hea_fervor_idle_2_warning: "§0Deus vult!§!"
 hea_fervor_idle_3_warning: "§gDeus vult!§!"
+
+
+
+
+
 
 ##########################
 ##Monsters of the Wastes##

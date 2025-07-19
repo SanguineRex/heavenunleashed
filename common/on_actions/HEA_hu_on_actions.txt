@@ -67,4 +67,73 @@ on_actions = {
 			}
 		}
 	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM.FROM = {
+						OR = {
+							state = 71 #Oregon
+							state = 84 #Washington
+						}
+					}
+				}
+				HEA = { add_to_variable = { hea_state_manage_gui_dirty = 0.01 } } #Update State Management GUI
+			}
+		}
+	}
+	on_join_faction = { #Don't work well in OWB, might remove but leave it here just in case somehow OWB fix this - @Deez
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							original_tag = ROT
+							original_tag = BDT
+						}
+					}
+					FROM = { original_tag = HEA }
+				}
+				FROM = {
+					add_to_variable = { hea_state_manage_gui_dirty = 0.01 }  #Update State Management GUI
+				}
+			}
+		}
+	}
+	on_puppet = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							original_tag = ROT
+							original_tag = BDT
+						}
+					}
+					FROM = { original_tag = HEA }
+				}
+				FROM = {
+					add_to_variable = { hea_state_manage_gui_dirty = 0.01 } #Update State Management GUI
+				}
+			}
+		}
+	}
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							original_tag = ROT
+							original_tag = BDT
+						}
+					}
+					FROM = { original_tag = HEA }
+				}
+				FROM = {
+					add_to_variable = { hea_state_manage_gui_dirty = 0.01 } #Update State Management GUI
+				}
+			}
+		}		
+	}
 }

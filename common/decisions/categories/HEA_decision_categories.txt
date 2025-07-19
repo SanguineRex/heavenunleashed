@@ -23,7 +23,7 @@ hea_michael_crusade_cat = {
 		has_completed_focus = hea_michaels_crusade #The only visible check needed, optimization should be better now - @Deez
 	}
 	icon = GFX_decision_tempered_blade
-	priority = 999
+	priority = 998
 }
 ##########################
 ##Monsters of the Wastes##
@@ -36,11 +36,26 @@ hea_monsters_of_the_wastes_cat = {
 		has_completed_focus = hea_monsters_of_the_wastes
 	}
 	icon = GFX_decision_tempered_blade
-	priority = 998
+	priority = 997
 	scripted_gui = hea_fervor_scripted_gui
 }
+####################
+##State Management##
+####################
+hea_state_manage_decision_cat = {
+	allowed = {
+		original_tag = HEA
+	}
+	visible = {
+		has_completed_focus = hea_nf_age_of_steam
+	}
+	icon = GFX_decision_tempered_blade
+	priority = 999
+	scripted_gui = hea_state_manage_scripted_gui
+	visible_when_empty = yes
+}
 ##########################
-##Monsters of the Wastes##
+##Theological Assembly##
 ##########################
 hea_theological_assembly_sharing_cat = {
 	allowed = {

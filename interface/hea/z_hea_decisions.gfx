@@ -4,4 +4,74 @@ spriteTypes = {
         name = "GFX_hea_fervor_scripted_gui"
         textureFile = "gfx/interface/decisions/hea_fervor_idea_scripted_gui.dds"
     }
+    #HEA State Management stuff
+    spriteType = { #Background
+        name = "GFX_hea_state_manage_gui_background"
+        textureFile = "gfx/interface/decisions/hea_state_management/state_management_background.dds"
+        alwaystransparent = yes
+    }
+	#Idaho
+	spriteType = { #Idaho-HEA
+		name = "GFX_hea_state_manage_gui_idaho"
+		texturefile = "gfx/interface/decisions/hea_state_management/idaho_state_hea.dds"
+		transparencecheck = yes
+	}
+    spriteType = { #HIdaho-HEA-Selected
+		name = "GFX_hea_state_manage_gui_selected_idaho"
+		texturefile = "gfx/interface/decisions/hea_state_management/idaho_state_hea_selected.dds"
+		transparencecheck = yes
+	}
+	#Oregon
+	spriteType = { #Oregon-No Influence
+		name = "GFX_no_state_manage_gui_oregon"
+		texturefile = "gfx/interface/decisions/hea_state_management/oregon_state_no.dds"
+		transparencecheck = yes
+	}
+	spriteType = { #Oregon-HEA
+		name = "GFX_hea_state_manage_gui_oregon"
+		texturefile = "gfx/interface/decisions/hea_state_management/oregon_state_hea.dds"
+		transparencecheck = yes
+	}
+	spriteType = { #Oregon-HEA-Selected
+		name = "GFX_hea_state_manage_gui_selected_oregon"
+		texturefile = "gfx/interface/decisions/hea_state_management/oregon_state_hea_selected.dds"
+		transparencecheck = yes
+	}
+	spriteType = { #Oregon-BDT
+		name = "GFX_bdt_state_manage_gui_oregon"
+		texturefile = "gfx/interface/decisions/hea_state_management/oregon_state_bdt.dds"
+		transparencecheck = yes
+	}
+	spriteType = { #Oregon-BDT-Selected
+		name = "GFX_bdt_state_manage_gui_selected_oregon"
+		texturefile = "gfx/interface/decisions/hea_state_management/oregon_state_bdt_selected.dds"
+		transparencecheck = yes
+	}
+
+	#Washington
+	spriteType = { #Washington-No Influence
+		name = "GFX_no_state_manage_gui_washington"
+		texturefile = "gfx/interface/decisions/hea_state_management/washington_state_no.dds"
+		transparencecheck = yes
+	}
+	spriteType = { #Washington-HEA
+		name = "GFX_hea_state_manage_gui_washington"
+		texturefile = "gfx/interface/decisions/hea_state_management/washington_state_hea.dds"
+		transparencecheck = yes
+	}
+	spriteType = { #Washington-HEA-Selected
+		name = "GFX_hea_state_manage_gui_selected_washington"
+		texturefile = "gfx/interface/decisions/hea_state_management/washington_state_hea_selected.dds"
+		transparencecheck = yes
+	}
+	spriteType = { #Washington-ROT
+		name = "GFX_rot_state_manage_gui_washington"
+		texturefile = "gfx/interface/decisions/hea_state_management/washington_state_rot.dds"
+		transparencecheck = yes
+	}
+	spriteType = { #Washington-ROT-Selected
+		name = "GFX_rot_state_manage_gui_selected_washington"
+		texturefile = "gfx/interface/decisions/hea_state_management/washington_state_rot_selected.dds"
+		transparencecheck = yes
+	}	
 }

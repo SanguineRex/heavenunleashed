@@ -1671,14 +1671,14 @@ focus_tree = {
 		available = {
 			has_war = no
 			OR = {
-				is_neighbor_of = TIM
-				TIM = {
+				is_neighbor_of = PAS
+				PAS = {
 					exists = no
 				}
 			}
 		}
 		bypass = {
-			TIM = {
+			PAS = {
 				all_core_land_owned_by_prev_sphere = yes
 			}
 		}
@@ -1688,9 +1688,9 @@ focus_tree = {
 		relative_position_id = ROT_the_great_crusade_seattle
 		x = 3
 		y = 1
-		will_lead_to_war_with = TIM
+		will_lead_to_war_with = PAS
 		completion_reward = {
-			TIM = {
+			PAS = {
 				ROOT = {
 					grant_wargoals_on_core_states_of_prev = yes
 				}
@@ -1785,7 +1785,8 @@ focus_tree = {
 		x = 0
 		y = 3
 		completion_reward = {
-			ask_to_join_children_of_the_gate = yes
+			create_or_join_children_of_the_gate = yes
+			HEA = { add_to_variable = { hea_state_manage_gui_dirty = 0.01 } }
 			add_ideas = hea_steam_power
 			add_ideas = hea_steam_powered_weapons
 			custom_effect_tooltip = claims_on_oregon_tt

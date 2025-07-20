@@ -2599,9 +2599,7 @@ focus_tree = {
 				remove_idea = bdt_the_seraph_lords_2
 			}
 			create_or_join_children_of_the_gate = yes
-			HEA = {
-				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
-			}
+			HEA = { add_to_variable = { hea_state_manage_gui_dirty = 0.01 } }
 		}
 	}
 

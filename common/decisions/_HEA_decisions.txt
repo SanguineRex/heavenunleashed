@@ -1011,6 +1011,192 @@ hea_monsters_of_the_wastes_cat = {
 	}
 }
 
+##########################
+##Territorial Management##
+##########################
+
+hea_state_manage_decision_cat = {
+	###IDAHO-1###
+	#Demand Northern Idaho
+	hea_state_manage_idaho_demand_rot_decision = { 
+		icon = GFX_decision_infiltrate_state
+		cost = 50
+		fire_only_once = yes
+		days_remove = 20
+		war_with_on_remove = ROT
+		visible = {
+			check_variable = { hea_state_manage_gui_decision = 1 } #Idaho
+			NOT = {
+				52 = { is_owned_and_controlled_by = ROOT }
+				305 = { is_owned_and_controlled_by = ROOT }
+				397 = { is_owned_and_controlled_by = ROOT }
+				418 = { is_owned_and_controlled_by = ROOT }
+				346 = { is_owned_and_controlled_by = ROOT }
+			}
+		}
+		remove_effect = {
+			if = { #ROT still have their ownership of Northern Idaho
+				limit = {
+					52 = { is_owned_and_controlled_by = ROT }
+					305 = { is_owned_and_controlled_by = ROT }
+					397 = { is_owned_and_controlled_by = ROT }
+					418 = { is_owned_and_controlled_by = ROT }
+					346 = { is_owned_and_controlled_by = ROT }
+				}
+				ROT = { country_event = nf_event_hea.901 }
+				custom_effect_tooltip = hea_state_manage_idaho_demand_rot_decision_tt
+			}
+			else = { #ROT likely dead
+				ROT = {
+					ROOT = {
+						grant_wargoals_on_core_states_of_prev = yes
+					}
+				}
+			}
+		}
+	}
+	#Demand Shoshone Nation
+	hea_state_manage_idaho_demand_bdt_decision = { 
+		icon = GFX_decision_infiltrate_state
+		cost = 30
+		fire_only_once = yes
+		days_remove = 20
+		war_with_on_remove = SHO 
+		war_with_on_remove = BDT
+		visible = {
+			check_variable = { hea_state_manage_gui_decision = 1 } #Idaho
+			NOT = {
+				SHO = {
+					all_core_state = {
+						is_owned_by = ROOT #using this instead of OWB's sphere check so you can demand from ally Seraph Lord
+					}
+				}
+			}
+		}
+		remove_effect = {
+			if = { #BDT have ownership of SHO
+				limit = {
+					BDT = {
+						SHO = {
+							all_core_land_owned_by_prev_sphere = yes
+						}						
+					}
+				}
+				BDT = { country_event = nf_event_hea.902 }
+				custom_effect_tooltip = hea_state_manage_idaho_demand_bdt_decision_tt
+			}
+			else = { #BDT don't have ownership of SHO
+				SHO = {
+					ROOT = {
+						grant_wargoals_on_core_states_of_prev = yes
+					}
+				}
+				custom_effect_tooltip = hea_state_manage_idaho_demand_bdt_delay_decision_tt
+			}
+		}
+	}
+	##Integrate Northern Idaho
+	hea_state_manage_idaho_integrate_north_decision = {
+		icon = GFX_decision_generic_police_action
+		cost = 100
+		days_remove = 150
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_state_manage_gui_decision = 1 } #Idaho
+			52 = { is_owned_and_controlled_by = ROOT }
+			305 = { is_owned_and_controlled_by = ROOT }
+			397 = { is_owned_and_controlled_by = ROOT }
+			418 = { is_owned_and_controlled_by = ROOT }
+			346 = { is_owned_and_controlled_by = ROOT }
+		}
+		modifier = {
+			weekly_manpower = -50
+		}
+		remove_effect = {
+			52 = { add_core_of = ROOT }
+			305 = { add_core_of = ROOT }
+			397 = { add_core_of = ROOT }
+			418 = { add_core_of = ROOT }
+			346 = { add_core_of = ROOT }
+			969 = { add_core_of = ROOT }
+			199 = { add_core_of = ROOT }
+		}
+	}
+	##Pacify Southern Idaho
+	hea_state_manage_idaho_pacify_dynamic_decision = {
+		icon = GFX_decision_generic_police_action
+		cost = 50
+		days_remove = 30 
+		days_re_enable = 20
+
+		visible = {
+			check_variable = { hea_state_manage_gui_decision = 1 } #Idaho
+		}
+		#target_root_trigger = { #This shit ain't working properly for checking variables, just gonna use visible check - @Deez
+		#	HEA = { check_variable = { hea_state_manage_gui_decision = 1 } } 
+		#}
+		targets = { HGH SHO MUR ANO } 
+		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
+		target_trigger = { 
+			NOT = {
+				FROM = {
+					all_core_state = {
+						is_core_of = ROOT
+					}
+				}
+			}
+		}
+		target_non_existing = yes #Need this to actually show up the decisions after conquering them
+		available = { 
+			FROM = { all_core_state = { is_owned_and_controlled_by = ROOT } }
+		}
+
+		modifier = {
+			weekly_manpower = -50
+		}
+
+		remove_effect = {
+			FROM = { 
+				every_core_state = {
+					add_manpower = -300
+					add_compliance = 10
+					add_resistance = -20
+				}
+			 }
+		}
+
+		ai_will_do = { #I'm not well verse in AI scripting so just gonna be something basic, at least they will choose the decision instead of ignoring, again idk why anyone would install this mod and play something else, I'm looking at you Beezus - @Deez
+			base = 1
+		}
+	}
+	###OREGON-2###
+	#Giving the Oregon Mandate to BDT
+	bdt_state_manage_idaho_mandate_decision = {
+		icon = GFX_decision_hol_draw_up_staff_plans
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_state_manage_gui_decision = 2 } #Oregon
+			BDT = { is_ally_with = ROOT }
+		}
+		complete_effect = {
+			set_country_flag = hea_oregon_states_to_bdt
+			hidden_effect = {
+				every_owned_state = { #Give every owned states in Oregon to BDT
+					limit = {
+						OR = { 
+							region = 58
+							region = 59
+							region = 11
+						}
+					}
+					transfer_state_to = BDT
+				}
+			}
+			custom_effect_tooltip = bdt_state_manage_idaho_mandate_decision_tt
+		}
+	}
+}
+
 #########################################
 ##Theological Assembly-Forgiveness Path##
 #########################################

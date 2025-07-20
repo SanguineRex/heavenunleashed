@@ -73,12 +73,29 @@ on_actions = {
 				limit = {
 					FROM.FROM = {
 						OR = {
-							state = 71 #Oregon
-							state = 84 #Washington
+							state = 71 #Oregon-Crowshaven
+							state = 84 #Washington-Seattle
 						}
 					}
 				}
 				HEA = { add_to_variable = { hea_state_manage_gui_dirty = 0.01 } } #Update State Management GUI
+			}
+			if = { #Scripting to transfer Oregon state controlled by HEA to ally BDT
+				limit = {
+					ROOT = { original_tag = HEA }
+					HEA = { has_country_flag = hea_oregon_states_to_bdt } #Accepted to transfer Oregon Territories to BDT
+					BDT = { is_ally_with = HEA }
+					FROM.FROM = {
+						OR = { #in Oregon
+							region = 58
+							region = 59
+							region = 11
+						}
+					}
+				}
+				FROM.FROM = {
+					transfer_state_to = BDT
+				}
 			}
 		}
 	}

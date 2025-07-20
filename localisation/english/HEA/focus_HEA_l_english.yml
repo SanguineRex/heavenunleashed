@@ -8,8 +8,9 @@
   hea_nf_tribals:0 "Pagan Conversion"
   hea_nf_tribals_desc:0 "Tribals have come to join our flock time and time again, sometimes individuals, sometimes entire tribes. Their arrival can never be predicted, and often strain our resources."
 
-  hea_nf_innocence_lost:0 "Innocence Lost"
-  hea_nf_innocence_lost_desc:0 "The Tragedy at Innocence Lost can never be understated. The rage of the Pagan fell upon the peaceful pilgrim, and it is said that the blood spilt there stains the ground red to this day. A word of warning to all faithful."
+hea_nf_innocence_lost: "Innocence Lost"
+hea_nf_innocence_lost_desc: "The Tragedy at Innocence Lost can never be understated. The rage of the Pagan fell upon the peaceful pilgrim, and it is said that the blood spilt there stains the ground red to this day. A word of warning to all faithful."
+hea_intelligence_agency_name: "Inner Circle"
 
   hea_nf_pol_action:0 "The Great Debate"
   hea_nf_pol_action_desc:0 "The legacy of the Great Debate is ancient, dating back to the years following the great war, wherein the people feared violence might break out between the people of differing faiths. Instead, on each sunday, all who have faith in God are encouraged to do intellectual and theological battle with one another, where all can see."
@@ -191,8 +192,9 @@ hea_nf_age_of_steam_fervor_tt: "Add §YFervor:§! Grants §g[HEA.GetNameWithFlag
   hea_nf_industry_5:0 "Rebirth of the Gate"
   hea_nf_industry_5_desc:0 "Heaven's Gate is reborn, and from all across the wasteland come those seeking wealth and power. Arms manufacturers travel great distances to sell to us, caravans flow to our capital, and for the first time in ages? The city is larger than the ruins that it was once build within. For the first time since the great war, the city truly grows."
 
-  hea_nf_foreign_ministryA:0 "Embassy of Christ"
-  hea_nf_foreign_ministryA_desc:0 "Our blessed nation lies within the heart of Idaho, centred around the mighty Steam and Heaven's Gate: a place where the children of God can gaze upon four states at once. It is no mistake that the nations which surround worship false gods, with the might invested in our Holy Nation. §YWe will spread our golden dogma to all the corners of the Wasteland."
+hea_nf_foreign_ministryA: "Embassy of Christ"
+hea_nf_foreign_ministryA_desc: "Our blessed nation lies within the heart of Idaho, centred around the mighty Steam and Heaven's Gate: a place where the children of God can gaze upon four states at once. It is no mistake that the nations which surround worship false gods, with the might invested in our Holy Nation. §YWe will spread our golden dogma to all the corners of the Wasteland.§!"
+hea_nf_foreign_ministryA_tt: "Unlock §YThe Sanctified Orders§! decisions."
   
    hea_nf_foreign_ministryD:0 "Embassy of Christ"
   hea_nf_foreign_ministryD_desc:0 "Our blessed nation lies within the heart of Idaho, centred around the mighty Steam and Heaven's Gate: a place where the children of God can gaze upon four states at once. To the South lie two Christian nations that strayed from the path, to the East nations have belief but do not care for our ways. §2We will come, not as conquerors, but as beacons of faith, to uplift our enemies, and banish the wicked."

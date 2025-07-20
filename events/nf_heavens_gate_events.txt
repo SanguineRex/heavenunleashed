@@ -1110,4 +1110,68 @@ country_event = {
 		custom_effect_tooltip = nf_event_hea.502.b_tt
 	}
 }
+	#########################
+	##The Sanctified Orders##
+	#########################
+country_event = {
+	id = nf_event_hea.901 #Demand Northern Idaho Event sent to ROT
+	title = nf_event_hea.901.t
+	desc = nf_event_hea.901.d
 
+	is_triggered_only = yes
+
+	option = { #Gives in
+		name = nf_event_hea.901.a
+		52 = { transfer_state_to = HEA }
+		305 = { transfer_state_to = HEA }
+		397 = { transfer_state_to = HEA }
+		418 = { transfer_state_to = HEA }
+		346 = { transfer_state_to = HEA }
+		969 = { transfer_state_to = HEA }
+		199 = { transfer_state_to = HEA }
+	}
+	option = { #Nah
+		name = nf_event_hea.901.b
+		ai_chance = {
+			modifier = { #When they are on Jacobia Path
+				has_country_flag = ROT_ai_behavior_grand_inquisition
+				factor = 0 #Basically AI will never pick this
+			}
+		}
+		ROT = {
+			HEA = {
+				grant_wargoals_on_core_states_of_prev = yes
+			}
+		}
+	}
+}
+country_event = {
+	id = nf_event_hea.902 #Demand Shoshone event sent to BDT
+	title = nf_event_hea.902.t
+	desc = nf_event_hea.902.d
+
+	is_triggered_only = yes
+
+	option = { #Gives in
+		name = nf_event_hea.902.a
+		SHO = {
+			every_core_state = {
+				transfer_state_to = HEA
+			}
+		}
+	}
+	option = { #Nah
+		name = nf_event_hea.902.b
+		ai_chance = {
+			modifier = { #When they are on Seraph Lord path
+				has_country_flag = bdt_seraph_lords
+				factor = 0 #Basically AI will never pick this
+			}
+		}
+		SHO = {
+			HEA = {
+				grant_wargoals_on_core_states_of_prev = yes
+			}
+		}
+	}
+}

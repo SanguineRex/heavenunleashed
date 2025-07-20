@@ -1,7 +1,16 @@
 intelligence_agency = {
 
 	picture = GFX_agency_logo_HEA
-	names = { "Watching Eye" }
+	names = { hea_intelligence_agency_name }
+	
+	default = { tag = HEA }
+	available = { original_tag = HEA }
+}
+
+intelligence_agency = {
+
+	picture = GFX_agency_logo_HEA2
+	names = { hea_intelligence_agency_name }
 	
 	default = { tag = HEA }
 	available = { original_tag = HEA }
@@ -10,8 +19,18 @@ intelligence_agency = {
 intelligence_agency = {
 
 	picture = GFX_agency_logo_HEA3
-	names = { "Watching Eye" }
+	names = { hea_intelligence_agency_name }
+	
+	default = { tag = HEA }
+	available = { original_tag = HEA }
+}
 
+intelligence_agency = {
+
+	picture = GFX_agency_logo_HEA4
+	names = { hea_intelligence_agency_name }
+
+	default = { tag = HEA }
 	available = { original_tag = HEA }
 }
 

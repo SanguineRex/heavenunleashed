@@ -101,7 +101,11 @@ focus_tree = {
 				add_political_power = 100
 			}
 			else = {
-				create_intelligence_agency = yes
+				#create_intelligence_agency = yes
+				create_intelligence_agency = {
+					name = "Inner Circle" #I hate this so much but owb fuck it up so i have to manually input the name here instead of being in the loc file - @Deez
+					icon = GFX_agency_logo_HEA
+				}
 			}
 			if = {
 				limit = { has_global_flag = debug_logs }
@@ -555,16 +559,25 @@ focus_tree = {
 		prerequisite = {
 			focus = hea_nf_age_of_steam
 		}
+		will_lead_to_war_with = HGH
 		bypass = {
-			NOT = { country_exists = HGH }
+			#NOT = { country_exists = HGH }
+			HGH = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
 		}
 		completion_reward = {
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] hea_nf_addres_militarism entered"
 			}
-			add_political_power = 75
-			country_event = { id = nf_event_hea.100 }
+			#add_political_power = 75
+			#country_event = { id = nf_event_hea.100 }
+			HGH = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] hea_nf_addres_militarism exited"
@@ -729,8 +742,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_variable = { coring_cost_country_factor = -0.25 }
-			custom_effect_tooltip = bdt_25_percent_core_cost_reduction_tt
+			#set_variable = { coring_cost_country_factor = -0.25 }
+			#custom_effect_tooltip = bdt_25_percent_core_cost_reduction_tt
+			custom_effect_tooltip = hea_nf_foreign_ministryA_tt
 		}
 	}
 	focus = {

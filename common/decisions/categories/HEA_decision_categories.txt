@@ -47,9 +47,10 @@ hea_state_manage_decision_cat = {
 		original_tag = HEA
 	}
 	visible = {
-		has_completed_focus = hea_nf_age_of_steam
+		always = yes
+		#has_completed_focus = hea_nf_foreign_ministryA
 	}
-	icon = GFX_decision_tempered_blade
+	icon = GFX_decision_cross
 	priority = 999
 	scripted_gui = hea_state_manage_scripted_gui
 	visible_when_empty = yes

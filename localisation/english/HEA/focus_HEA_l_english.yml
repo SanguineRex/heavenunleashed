@@ -877,6 +877,8 @@ HEA_foreign_relation_bdt_final: "Rise, Seraphim"
 HEA_foreign_relation_bdt_final_desc: "From whisper to word,\nFrom word to fire,\nFrom fire to throne.\n\nThe Seraph Lords have knelt, bled, healed, and preached.\nNow, they are lifted. Crowned not by gold, but by belief.\nThe Bone Dancers do not resist them.\nThey follow.\n\nThe drums have not stopped.\nBut now, they beat to the cadence of scripture.\nThe songs still echo.\n But now, they sing of steam, of sanctity, of salvation.\n\nLet no man doubt their rise.\ntLet the Seraphim stand. Let the Fold rejoice."
 
 ###Lord's Anointed
+HEA_foreign_relation_ano: "§RFor Sow the Whirlwind§!"
+HEA_foreign_relation_ano_desc: "They hoped for peace. We offered prophecy. The faithful have heard sermons against unity, tales of Reformist treachery, rumors of heresy in High Chapel’s halls. One spark is all it takes. §RLet them reap what they dared to sow.§!"
 HEA_foreign_relation_ano_tt: "Completing this §YFocus§! will prevent §R[ANO.GetNameWithFlag]§! from seeking peaceful mediation with §7[MUR.GetNameWithFlag]§!, causing a schism within §4[HGH.GetNameWithFlag]§!'s coalition against us."
 
 #######End of the Billowing Grand

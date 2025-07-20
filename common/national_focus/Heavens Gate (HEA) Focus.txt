@@ -5371,7 +5371,7 @@ focus = {
 				}
 			}
 			has_equipment = { infantry_equipment > 29 }
-			has_equipment = { support_equipment > 299 }
+			has_equipment = { support_equipment > 199 }
 		}
 		bypass = {
 			BDT = { is_in_faction_with = ROOT }
@@ -5386,7 +5386,7 @@ focus = {
 			}
 			send_equipment = {
 				equipment = support_equipment
-				amount = 300
+				amount = 200
 				target = BDT
 			}
 			army_experience = 15

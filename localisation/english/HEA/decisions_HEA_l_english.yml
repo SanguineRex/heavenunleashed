@@ -163,17 +163,17 @@ hea_monsters_communists: "§RCommunists Targets Purged§!"
 hea_state_manage_decision_cat: "§YThe Sanctified Orders§!"
 hea_state_manage_decision_cat_desc: "" #Leave it empty - @Deez
 hea_state_manage_gui_idaho_button_tt: "Idaho: Controlled by §W[HEA.GetNameWithFlag]§!"
-state_manage_gui_idaho_button_delay_tt: "Yoo we come from this place"
+state_manage_gui_idaho_button_delay_tt: "§L\"The Gate was not built—it was revealed.\"\n\nIdaho is not merely land. It is the cradle of Revelation, the land where the first hymns of steam and salvation echoed across pine and ruin. Every inch is sacred, etched by the hands of saints, watered by the blood of pilgrims, and sanctified in the fires of the First Crusade. To surrender it is unthinkable. To partition it, heresy. Those who hold it without blessing must be corrected by prayer or by flame.§!"
 
 no_state_manage_gui_oregon_button_tt: "Oregon: §gNo Influence§!"
 hea_state_manage_gui_oregon_button_tt: "Oregon: Controlled by §W[HEA.GetNameWithFlag]§!"
 bdt_state_manage_gui_oregon_button_tt: "Oregon: Controlled by §0[BDT.GetNameWithFlag]§!"
-state_manage_gui_oregon_button_delay_tt: "Oregon Trails\n\nOregon control requirements:\n - Crowshaven"
+state_manage_gui_oregon_button_delay_tt: "§L\"The land moans. The water seethes. The people devour each other.\"\n\nOregon is a graveyard of false faiths and broken tribes. Mirelurk cults worship titans in the rivers. Cannibals quote scripture as they carve. Nephilim, twisted giants of green muscle, roam in packs beneath shattered billboards. And yet, even here, light may rise. Cain and his ilk have begun carving order from blood and madness. So long as their rites align with purpose, the Gate shall not interfere. But the fires must be kept burning. This land cannot be left to rot.§!\n\nOregon control requirements:\n - Crowshaven"
 
 no_state_manage_gui_washington_button_tt: "Washington: §gNo Influence§!"
 hea_state_manage_gui_washington_button_tt: "Washington: Controlled by §W[HEA.GetNameWithFlag]§!"
 rot_state_manage_gui_washington_button_tt: "Washington: Controlled by §O[ROT.GetNameWithFlag]§!"
-state_manage_gui_washington_button_delay_tt: "Yo it's my man Washington in the hood\n\nWashington control requirements:\n - Seattle"
+state_manage_gui_washington_button_delay_tt: "§L\"Their cities did not fall. They simply forgot to die.\"\n\nWashington is a relic of rot and memory. The Washington Brotherhood claws at Seattle, ghouls rule from crumbling halls, and heresies breed in the cracks of old empires. Only the Rotpurgers offer flame with purpose. If they join the Crusade, the land may heal. If not, judgment must fall. This land cannot be left to fester.§!\n\nWashington control requirements:\n - Seattle"
 
 #Idaho
 hea_state_manage_idaho_demand_rot_decision: "Reclaim Northern Idaho"

@@ -129,6 +129,13 @@ on_actions = {
 					}
 					FROM = { original_tag = HEA }
 				}
+				if = {
+					limit = { ROOT = { original_tag = BDT } } #If it's Bone Dancers switch them to Cain-People
+					ROOT = { set_politics = { ruling_party = people } }
+				}
+				else = {
+					ROOT = { set_politics = { ruling_party = elites } } #else it's Rotpurgers switch them to Jacobia-Elite
+				}
 				FROM = {
 					add_to_variable = { hea_state_manage_gui_dirty = 0.01 } #Update State Management GUI
 				}
@@ -147,10 +154,49 @@ on_actions = {
 					}
 					FROM = { original_tag = HEA }
 				}
+				if = {
+					limit = { ROOT = { original_tag = BDT } } #If it's Bone Dancers switch them to Cain-People
+					ROOT = {
+						set_politics = { ruling_party = people }
+					}
+				}
+				else = {
+					ROOT = { set_politics = { ruling_party = elites } } #else it's Rotpurgers switch them to Jacobia-Elite
+				}
 				FROM = {
 					add_to_variable = { hea_state_manage_gui_dirty = 0.01 } #Update State Management GUI
 				}
 			}
 		}		
+	}
+	on_annex = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = HEA
+						has_country_flag = hea_oregon_states_to_bdt
+					}
+					FROM = { original_tag = BDT }
+				}
+				ROOT = {
+					release_puppet = BDT
+					every_state = {
+						limit = {
+							OR = {
+								region = 58
+								region = 59
+								region = 11
+							}
+							is_owned_by = HEA
+						}
+						transfer_state_to = BDT
+					}
+				}
+				FROM = {
+					set_politics = { ruling_party = people } #Switch Bone Dancers to Cain-People
+				}
+			}
+		}
 	}
 }

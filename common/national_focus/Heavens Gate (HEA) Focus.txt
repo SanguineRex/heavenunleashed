@@ -659,6 +659,15 @@ focus_tree = {
 
 		completion_reward = {	
 			set_country_flag = HEA_crusader_state
+			set_portraits = {
+				character = HEA_saint_michael
+				civilian = {
+					large = GFX_Portrait_HEA_michael_crusade_large
+				}
+				army = {
+					large = GFX_Portrait_HEA_michael_crusade_large
+				}
+			}
 			swap_ideas = {
 				add_idea = archangel_michael1
 				remove_idea = hea_one_prophet

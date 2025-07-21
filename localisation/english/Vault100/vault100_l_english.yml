@@ -684,10 +684,10 @@
   ROT_bounties_of_the_northern_armories:0 "Bounties of the Northern Armories"
   ROT_bounties_of_the_northern_armories_desc:0 ""Well, would you look at that? Guess these idiots had something worth taking after all. Let's tear it apart and see if we can't have a little bit of fun ourselves." --Jacobia"
 
-  ROT_the_great_crusade_bdt:0 "Ending the Bone Dances"
+  ROT_the_great_crusade_bdt:0 "Aging Victoria"
   ROT_the_great_crusade_bdt_desc:0 ""Those bastards out in Oregon, they got whole-ass red forests all made by some hooded ghouly freak. Sounds like it could use a burning or two." --Jacobia"
 
-  ROT_the_great_crusade_timberline:0 "Timbering the Timberline"
+  ROT_the_great_crusade_timberline:0 "Passing the Passkeepers"
   ROT_the_great_crusade_timberline_desc:0 ""Our mission's gonna need a route into Oregon if we want to pull it off. Those lumberjacks we've always heard about sound like they'll make for a great inroads." --Jacobia"
 
   ROT_the_great_crusade_kamlo:0 "Clearing the Rangers"
@@ -696,11 +696,12 @@
   ROT_the_great_crusade_broken_coast:0 "Fjording the River"
   ROT_the_great_crusade_broken_coast_desc:0 ""Broken Coast's got the biggest bads this side of the wastes, and we're looking to take it for ourselves. Let's sink their ships for good." --Jacobia"
 
-  ROT_one_fucked_geck:0 "One Fucked Up GECK"
+ROT_one_fucked_geck: "Burn 'em, Boil 'em, and Let God Sort 'em"
   ROT_one_fucked_geck_desc:0 ""One of the bastards tried to tell us about this thing we found before we burnt his skin into his bones. Judging off what some of the old guard says, it sounds like it's some kind of fucked up GECK. Why don't we throw this thing somewhere and see what it does?" --Jacobia"
 
   ROT_scourge_of_heaven:0 "I Liked Steam Better, Anyway"
   ROT_scourge_of_heaven_desc:0 ""After all of this, you know, I been thinking-- why don't we up our game? Those folks in the mountains, they got steam. We know fire better than anybody else, but steam... That's new. I dunno about all of you, but I've been thinkin'... And I think I just like killing. Doesn't matter for who, or why. Why not for these bastards?" --Jacobia"
+ROT_scourge_of_heaven_tt: "We will gain §Gclaims§! on all of §YCascadia!§!"
 
   #######################################
   ### Rotpurgers ### Lady of the Lake ###

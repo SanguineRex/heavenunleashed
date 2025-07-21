@@ -344,8 +344,8 @@ hea_michael_crusade_cat = {
 		icon = GFX_decision_border_war
 		cost = 30 #PP Cost
 		days_remove = 20 #Duration before granting wargoal so AI can prep
-		days_re_enable = 30 #In case of some fuckery happen, I put this here so the decision can reappear and player fight again (such as a 2 vs target which split the target but the player want ALL territories)
-
+		#days_re_enable = 30 #In case of some fuckery happen, I put this here so the decision can reappear and player fight again (such as a 2 vs target which split the target but the player want ALL territories)
+		fire_only_once = yes
 		#target_root_trigger = { #Put the needed check for ROOT/Heaven's Gate side here - This is like a part of the normal visible = {} check we used before I also disabled these cause I figured out I can just optimize it by putting the check the category itself, check HEA_decision_categories - @Deez
 		#
 		#}
@@ -365,7 +365,6 @@ hea_michael_crusade_cat = {
 		}
 
 		war_with_target_on_remove = yes #A Warning check so AI can prep, and real human players can see the warning notification
-		war_with_target_on_complete = yes #A Warning check so AI can prep, and real human players can see the warning notification, not working for some reason I'll need to talk with OWB's dev - @Deez
 		remove_effect = {
 			FROM = {
 				ROOT = {
@@ -382,8 +381,8 @@ hea_michael_crusade_cat = {
 		icon = GFX_decision_border_war
 		cost = 30 #PP Cost
 		days_remove = 20 #Duration before granting wargoal so AI can prep
-		days_re_enable = 30 #In case of some fuckery happen, I put this here so the decision can reappear and player fight again (such as a 2 vs target which split the target but the player want ALL territories)
-
+		#days_re_enable = 30 #In case of some fuckery happen, I put this here so the decision can reappear and player fight again (such as a 2 vs target which split the target but the player want ALL territories)
+		fire_only_once = yes
 		#target_root_trigger = { #Put the needed check for ROOT/Heaven's Gate side here - This is like a part of the normal visible = {} check we used before - I also disabled these cause I figured out I can just optimize it by putting the check the category itself, check HEA_decision_categories - @Deez
 		#
 		#}
@@ -414,7 +413,6 @@ hea_michael_crusade_cat = {
 			}
 		}
 		war_with_target_on_remove = yes #A Warning check so AI can prep, and real human players can see the warning notification, not working for some reason I'll need to talk with OWB's dev - @Deez
-		war_with_target_on_complete = yes #A Warning check so AI can prep, and real human players can see the warning notification, not working for some reason I'll need to talk with OWB's dev - @Deez
 		remove_effect = {
 			FROM = {
 				ROOT = {
@@ -617,7 +615,7 @@ hea_monsters_of_the_wastes_cat = {
 		icon = GFX_decision_jap_conquer_china
 		cost = 20 #PP Cost
 		days_remove = 20 #Duration before finish purging
-		days_re_enable = 10 #Just incase some fuckery happen mid purging and needed a repurge
+		#days_re_enable = 10 #Just incase some fuckery happen mid purging and needed a repurge
 		fire_only_once = yes
 
 		#target_root_trigger = { #Not needed, the check is in the decision category
@@ -689,7 +687,7 @@ hea_monsters_of_the_wastes_cat = {
 		icon = GFX_decision_jap_conquer_china
 		cost = 20 #PP Cost
 		days_remove = 20 #Duration before finish purging
-		days_re_enable = 10 #Just incase some fuckery happen mid purging and needed a repurge
+		#days_re_enable = 10 #Just incase some fuckery happen mid purging and needed a repurge
 		fire_only_once = yes
 
 		#target_root_trigger = { #Not needed, the check is in the decision category
@@ -760,7 +758,7 @@ hea_monsters_of_the_wastes_cat = {
 		icon = GFX_decision_jap_conquer_china
 		cost = 20 #PP Cost
 		days_remove = 20 #Duration before finish purging
-		days_re_enable = 10 #Just incase some fuckery happen mid purging and needed a repurge
+		#days_re_enable = 10 #Just incase some fuckery happen mid purging and needed a repurge
 		fire_only_once = yes
 
 		#target_root_trigger = { #Not needed, the check is in the decision category
@@ -845,7 +843,7 @@ hea_monsters_of_the_wastes_cat = {
 		icon = GFX_decision_jap_conquer_china
 		cost = 20 #PP Cost
 		days_remove = 20 #Duration before finish purging
-		days_re_enable = 10 #Just incase some fuckery happen mid purging and needed a repurge
+		#days_re_enable = 10 #Just incase some fuckery happen mid purging and needed a repurge
 		fire_only_once = yes
 
 		#target_root_trigger = { #Not needed, the check is in the decision category
@@ -944,7 +942,7 @@ hea_monsters_of_the_wastes_cat = {
 		icon = GFX_decision_jap_conquer_china
 		cost = 20 #PP Cost
 		days_remove = 20 #Duration before finish purging
-		days_re_enable = 10 #Just incase some fuckery happen mid purging and needed a repurge
+		#days_re_enable = 10 #Just incase some fuckery happen mid purging and needed a repurge
 		fire_only_once = yes
 
 		#target_root_trigger = { #Not needed, the check is in the decision category
@@ -1171,7 +1169,7 @@ hea_state_manage_decision_cat = {
 	}
 	###OREGON-2###
 	#Giving the Oregon Mandate to BDT
-	bdt_state_manage_idaho_mandate_decision = {
+	bdt_state_manage_oregon_mandate_decision = {
 		icon = GFX_decision_hol_draw_up_staff_plans
 		fire_only_once = yes
 		visible = {
@@ -1192,7 +1190,118 @@ hea_state_manage_decision_cat = {
 					transfer_state_to = BDT
 				}
 			}
-			custom_effect_tooltip = bdt_state_manage_idaho_mandate_decision_tt
+			custom_effect_tooltip = bdt_state_manage_oregon_mandate_decision_tt
+		}
+	}
+	##Conquest of Oregon
+	state_manage_oregon_conquest_dynamic_decision = {
+		icon = GFX_decision_jap_conquer_china
+		cost = 30 
+		days_remove = 20
+		fire_only_once = yes
+
+		visible = {
+			check_variable = { hea_state_manage_gui_decision = 2 } #Oregon
+		}
+		targets = { CHE MDT TRL CCW RBT PMR MLT DIS KLA ARR } #Oregon nations except for TIM, SHO and BDT cause they already exist in a different focus - @Deez
+		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
+		target_trigger = { 
+			FROM = {
+				NOT = {
+					all_core_land_owned_by_prev_sphere = yes
+				}
+			}
+		}
+		target_non_existing = yes #Need this to actually target the lands even after they're gone
+		available = { 
+			if = {
+				limit = {
+					BDT = { is_ally_with = ROOT }
+					ROOT = { has_country_flag = hea_oregon_states_to_bdt }
+				}
+				FROM = {
+					is_neighbor_of = BDT
+				}
+			}
+			else = {
+				OR = {
+					FROM = { is_neighbor_of = ROOT }
+					any_country = {
+						is_ally_with = ROOT
+						is_neighbor_of = FROM
+					}
+				}
+			}
+		}
+		war_with_target_on_remove = yes
+		remove_effect = {
+			FROM = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+
+		ai_will_do = { #I'm not well verse in AI scripting so just gonna be something basic, at least they will choose the decision instead of ignoring, again idk why anyone would install this mod and play something else, I'm looking at you Beezus - @Deez
+			base = 1
+		}
+	}
+	##Shared Border Fixing Oregon-Washington
+	#Smoothing the Border
+	state_manage_oregon_washington_border_decision = {
+		icon = GFX_decision_hol_draw_up_staff_plans
+		fire_only_once = yes
+		visible = {
+			OR = {
+				check_variable = { hea_state_manage_gui_decision = 2 } #Oregon
+				check_variable = { hea_state_manage_gui_decision = 3 } #Washington
+			}
+			BDT = { is_ally_with = ROOT }
+			ROT = { is_ally_with = ROOT }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = state_manage_oregon_washington_border_decision_trigger_tt
+				all_state = {
+					OR = {
+						NOT = { #Washington and Oregon States
+							region = 58
+							region = 59
+							region = 11
+							region = 37
+							region = 36
+						}
+						OR = {
+							is_owned_and_controlled_by = ROOT
+							controller = { is_ally_with = ROOT }
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				every_state = { #Give every states in Oregon to BDT
+					limit = {
+						OR = { 
+							region = 58
+							region = 59
+							region = 11
+						}
+					}
+					transfer_state_to = BDT
+				}
+				every_state = { #Give every states in Washinton to ROT
+					limit = {
+						OR = { 
+							region = 37
+							region = 36
+						}
+					}
+					transfer_state_to = ROT
+				}
+			}
+			custom_effect_tooltip = state_manage_oregon_washington_border_decision_tt
 		}
 	}
 }

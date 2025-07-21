@@ -178,15 +178,25 @@ state_manage_gui_washington_button_delay_tt: "§L\"Their cities did not fall. Th
 #Idaho
 hea_state_manage_idaho_demand_rot_decision: "Reclaim Northern Idaho"
 hea_state_manage_idaho_demand_rot_decision_tt: "If §O[ROT.GetNameWithFlag]§! are §4friendly§! with us, they will be §Gmore likely§! to return our northern territories."
+
 hea_state_manage_idaho_demand_bdt_decision: "Reclaim Southwest Idaho"
 hea_state_manage_idaho_demand_bdt_decision_tt: "If §0[BDT.GetNameWithFlag]§! are §4friendly§! with us, they will be §Gmore likely§! to return our northern territories."
 hea_state_manage_idaho_demand_bdt_delay_decision_tt: "If §0[BDT.GetNameWithFlag]§! conquered §4[SHO.GetNameWithFlag]§!, we will instead §Yrequest§! the territory from them."
+
 hea_state_manage_idaho_integrate_north_decision: "Integrate Northern Idaho."
+
 hea_state_manage_idaho_pacify_dynamic_decision: "§RSuppress§! [FROM.GetNameWithFlag] heretics!"
 
 #Oregon
-bdt_state_manage_idaho_mandate_decision: "Give the §YOregon Mandate§! to §0[BDT.GetNameWithFlag]§!"
-bdt_state_manage_idaho_mandate_decision_tt: "Any §Ycurrent§! and §Yfuture§! states we owned in Oregon will be §Ytransferred§! to §0[BDT.GetNameWithFlag]§!"
+bdt_state_manage_oregon_mandate_decision: "Give the §YOregon Mandate§! to §0[BDT.GetNameWithFlag]§!"
+bdt_state_manage_oregon_mandate_decision_tt: "Any §Ycurrent§! and §Yfuture§! states we owned in Oregon will be §Ytransferred§! to §0[BDT.GetNameWithFlag]§!\n\n§RThis is irreversible!§!"
+
+state_manage_oregon_conquest_dynamic_decision: "§RCrusades§! against [FROM.GetNameWithFlag]"
+
+#Shared Oregon-Washington:
+state_manage_oregon_washington_border_decision: "Divide the land"
+state_manage_oregon_washington_border_decision_trigger_tt: "Our sphere control all lands in §YOregon§! and §YWashington§!"
+state_manage_oregon_washington_border_decision_tt: "§0[BDT.GetNameWithFlag]§! will take control of all lands in §YOregon§! and §O[ROT.GetNameWithFlag]§! will take control of all lands in §YWashington§!"
 
  # tooltips
   hea_converted_state_tt:0 "The state will be converted"

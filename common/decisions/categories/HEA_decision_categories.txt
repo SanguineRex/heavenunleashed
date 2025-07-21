@@ -47,7 +47,7 @@ hea_state_manage_decision_cat = {
 		original_tag = HEA
 	}
 	visible = {
-		#always = yes
+		#always = yes #For testing
 		has_completed_focus = hea_nf_foreign_ministryA
 	}
 	icon = GFX_decision_cross

@@ -1631,21 +1631,12 @@ focus_tree = {
 		available = {
 			has_war = no
 			OR = {
-				BDT = { exists = no }
-				AND = {
-					is_neighbor_of = BDT
-					BDT = {
-						OR = {
-							has_completed_focus = bdt_hail_to_the_king #Heretics
-							has_completed_focus = bdt_road_warriors_of_the_eighty_four #Heretics
-							has_completed_focus = bdt_excommunication #Got fucking rejected by HEA lmao - @Deez
-						} 
-					}
-				}
+				VIC = { exists = no }
+				is_neighbor_of = VIC
 			}
 		}
 		bypass = {
-			BDT = {
+			VIC = {
 				all_core_land_owned_by_prev_sphere = yes
 			}
 		}
@@ -1655,9 +1646,9 @@ focus_tree = {
 		relative_position_id = ROT_the_great_crusade_seattle
 		x = 1
 		y = 1
-		will_lead_to_war_with = BDT
+		will_lead_to_war_with = VIC
 		completion_reward = {
-			BDT = {
+			VIC = {
 				ROOT = {
 					grant_wargoals_on_core_states_of_prev = yes
 				}
@@ -1736,6 +1727,12 @@ focus_tree = {
 		cost = 40
 		available = {
 			has_war = no
+			84 = {
+				is_owned_and_controlled_by = ROOT
+				owner = {
+					is_ally_with = ROOT
+				}
+			}
 		}
 		prerequisite = {
 			focus = ROT_the_great_crusade_bdt
@@ -1747,13 +1744,16 @@ focus_tree = {
 		x = -1
 		y = 1
 		completion_reward = {
-			country_event = {
-				id = nf_rot.9
+			#country_event = {
+			#	id = nf_rot.9
+			#}
+			#add_to_variable = {
+			#	malfunctioning_geck_count = 1
+			#}
+			#custom_effect_tooltip = corrupted_geck_tt
+			set_technology = {
+				infantry_tech_level_scientific = 1
 			}
-			add_to_variable = {
-				malfunctioning_geck_count = 1
-			}
-			custom_effect_tooltip = corrupted_geck_tt
 		}
 	}
 	focus = {
@@ -1789,7 +1789,7 @@ focus_tree = {
 			HEA = { add_to_variable = { hea_state_manage_gui_dirty = 0.01 } }
 			add_ideas = hea_steam_power
 			add_ideas = hea_steam_powered_weapons
-			custom_effect_tooltip = claims_on_oregon_tt
+			custom_effect_tooltip = ROT_scourge_of_heaven_tt
 			hidden_effect = {
 				every_state = {
 					limit = {

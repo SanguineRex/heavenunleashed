@@ -6,6 +6,13 @@ spriteTypes = {
 	}
 	
 #HEA
+	#Michael Alternatives
+	#Archangle
+	spriteType = {
+		name = "GFX_Portrait_HEA_michael_crusade_large"
+		textureFile = "gfx/leaders/HEA/portrait_hea_michael_crusade_large.dds"
+	}	
+	
 	#Seraphim
 	spriteType = {
 		name = "GFX_Portrait_HEA_Seraphim_large"

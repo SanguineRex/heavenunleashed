@@ -181,7 +181,7 @@ hea_state_manage_idaho_demand_rot_decision_tt: "If §O[ROT.GetNameWithFlag]§! a
 hea_state_manage_idaho_demand_bdt_decision: "Reclaim Southwest Idaho"
 hea_state_manage_idaho_demand_bdt_decision_tt: "If §0[BDT.GetNameWithFlag]§! are §4friendly§! with us, they will be §Gmore likely§! to return our northern territories."
 hea_state_manage_idaho_demand_bdt_delay_decision_tt: "If §0[BDT.GetNameWithFlag]§! conquered §4[SHO.GetNameWithFlag]§!, we will instead §Yrequest§! the territory from them."
-hea_state_manage_idaho_integrate_north_decision: "Integrate northern Idaho."
+hea_state_manage_idaho_integrate_north_decision: "Integrate Northern Idaho."
 hea_state_manage_idaho_pacify_dynamic_decision: "§RSuppress§! [FROM.GetNameWithFlag] heretics!"
 
 #Oregon

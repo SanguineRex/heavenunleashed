@@ -1478,7 +1478,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					OLY = { has_war_with = WBH }
+					OLY = { owns_state = 609 }
 				}
 				OLY = {
 					ROOT = {
@@ -1793,10 +1793,12 @@ focus_tree = {
 			hidden_effect = {
 				every_state = {
 					limit = {
-						OR = {
-							region = 58
-							region = 11
-							region = 59
+						OR = { #Cascadia
+							region = 60
+							region = 35
+							region = 89
+							region = 61
+							region = 14
 						}
 					}
 					add_claim_by = ROOT

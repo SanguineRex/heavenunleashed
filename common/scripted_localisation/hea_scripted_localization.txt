@@ -156,3 +156,42 @@ define_text = {
         localization_key = hea_fervor_modifiers_scripted_gui_tt
     }
 }
+define_text = {
+    name = hea_tame_river_focus_scripted_loc
+    text = {
+        trigger = {
+            original_tag = HEA
+            has_completed_focus = hea_taming_rivers
+        }
+        localization_key = hea_tame_river_focus_scripted_loc_river
+    }
+    text = {
+        localization_key = hea_tame_nothing
+    }
+}
+define_text = {
+    name = hea_tame_land_focus_scripted_loc
+    text = {
+        trigger = {
+            original_tag = HEA
+            has_completed_focus = hea_taming_land
+        }
+        localization_key = hea_tame_land_focus_scripted_loc_land
+    }
+    text = {
+        localization_key = hea_tame_nothing
+    }
+}
+define_text = {
+    name = hea_tame_heaven_focus_scripted_loc
+    text = {
+        trigger = {
+            original_tag = HEA
+            has_completed_focus = hea_taming_heavens
+        }
+        localization_key = hea_tame_heaven_focus_scripted_loc_heaven
+    }
+    text = {
+        localization_key = hea_tame_nothing
+    }
+}

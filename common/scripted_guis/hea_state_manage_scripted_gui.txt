@@ -12,13 +12,11 @@ scripted_gui = {
 		triggers = {
 			#Idaho
 			hea_state_manage_gui_idaho_button_visible = { #Not selected
-				NOT = { 
-					has_country_flag =  hea_state_manage_gui_selected_idaho
-				}
+				always = yes
 			}
 			hea_state_manage_gui_idaho_button_click_enabled = { always = yes } #Can click
 			hea_state_manage_gui_idaho_selected_button_visible = { #Selected-Glowing
-				has_country_flag = hea_state_manage_gui_selected_idaho
+				check_variable = { hea_state_manage_gui_decision = 1 }
 			}
 			hea_state_manage_gui_idaho_selected_button_click_enabled = { always = yes } #Can click
 
@@ -46,7 +44,7 @@ scripted_gui = {
 						}
 					}
 				}
-				HEA = { NOT = { has_country_flag = hea_state_manage_gui_selected_oregon } }
+				HEA = { NOT = { check_variable = { hea_state_manage_gui_decision = 2 } } }
 			}
 			hea_state_manage_gui_oregon_button_click_enabled = { always = yes } #Can always click on cause already handled in visible check
 			hea_state_manage_gui_oregon_selected_button_visible = { #Oregon under HEA's influence but not by BDT-Selected-Glowing
@@ -59,7 +57,7 @@ scripted_gui = {
 						}
 					}
 				}
-				HEA = { has_country_flag = hea_state_manage_gui_selected_oregon }
+				HEA = { check_variable = { hea_state_manage_gui_decision = 2 } }
 			}
 			hea_state_manage_gui_oregon_selected_button_click_enabled = { always = yes } #Can always click on cause already handled in visible check
 
@@ -70,7 +68,7 @@ scripted_gui = {
 						is_ally_with = HEA
 					}
 				}
-				HEA = { NOT = { has_country_flag = bdt_state_manage_gui_selected_oregon } }
+				HEA = { NOT = { check_variable = { hea_state_manage_gui_decision = 2 } } }
 			}
 			bdt_state_manage_gui_oregon_button_click_enabled = { always = yes } #Can always click on cause already handled in visible check
 			bdt_state_manage_gui_oregon_selected_button_visible = { #Oregon under HEA's influence by BDT-Selected-Glowing
@@ -80,7 +78,7 @@ scripted_gui = {
 						is_ally_with = HEA
 					}
 				}
-				HEA = { has_country_flag = bdt_state_manage_gui_selected_oregon }			
+				HEA = { check_variable = { hea_state_manage_gui_decision = 2 } }			
 			}
 			bdt_state_manage_gui_oregon_selected_button_click_enabled = { always = yes } #Can always click on cause already handled in visible check
 
@@ -108,7 +106,7 @@ scripted_gui = {
 						}
 					}
 				}
-				HEA = { NOT = { has_country_flag = hea_state_manage_gui_selected_washington } }
+				HEA = { NOT = { check_variable = { hea_state_manage_gui_decision = 3 } } }
 			}
 			hea_state_manage_gui_washington_button_click_enabled = { always = yes } #Can always click on cause already handled in visible check
 			hea_state_manage_gui_washington_selected_button_visible = { #Washington under HEA's influence but not by ROT-Selected-Glowing
@@ -121,7 +119,7 @@ scripted_gui = {
 						}
 					}
 				}
-				HEA = { has_country_flag = hea_state_manage_gui_selected_washington }
+				HEA = { check_variable = { hea_state_manage_gui_decision = 3 } }
 			}
 			hea_state_manage_gui_washington_selected_button_click_enabled = { always = yes } #Can always click on cause already handled in visible check
 
@@ -132,7 +130,7 @@ scripted_gui = {
 						is_ally_with = HEA
 					}
 				}
-				HEA = { NOT = { has_country_flag = rot_state_manage_gui_selected_washington } }
+				HEA = { NOT = { check_variable = { hea_state_manage_gui_decision = 3 } } }
 			}
 			rot_state_manage_gui_washington_button_click_enabled = { always = yes } #Can always click on cause already handled in visible check
 			rot_state_manage_gui_washington_selected_button_visible = { #Washington under HEA's influence by ROT-Selected-Glowing
@@ -142,7 +140,7 @@ scripted_gui = {
 						is_ally_with = HEA
 					}
 				}
-				HEA = { has_country_flag = rot_state_manage_gui_selected_washington }			
+				HEA = { check_variable = { hea_state_manage_gui_decision = 3 } }			
 			}
 			rot_state_manage_gui_washington_selected_button_click_enabled = { always = yes } #Can always click on cause already handled in visible check
 		}
@@ -151,72 +149,46 @@ scripted_gui = {
 			#Idaho
 			hea_state_manage_gui_idaho_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 1 } #Show Idaho Decisions
-				set_country_flag = hea_state_manage_gui_selected_idaho
-				clr_country_flag = hea_state_manage_gui_selected_oregon
-				clr_country_flag = bdt_state_manage_gui_selected_oregon
-				clr_country_flag = hea_state_manage_gui_selected_washington
-				clr_country_flag = rot_state_manage_gui_selected_washington
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
 			}
 			hea_state_manage_gui_idaho_selected_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 0 } #Close Idaho Decisions
-				clr_country_flag = hea_state_manage_gui_selected_idaho
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
 			}
 
 			#Oregon
 			hea_state_manage_gui_oregon_button_click = { #HEA
 				set_variable = { hea_state_manage_gui_decision = 2 } #Show Oregon Decisions
-				set_country_flag = hea_state_manage_gui_selected_oregon
-				clr_country_flag = hea_state_manage_gui_selected_idaho
-				clr_country_flag = hea_state_manage_gui_selected_washington
-				clr_country_flag = rot_state_manage_gui_selected_washington
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
 			}
 			hea_state_manage_gui_oregon_selected_button_click = { #HEA-selected
 				set_variable = { hea_state_manage_gui_decision = 0 } #Close Oregon Decisions
-				clr_country_flag = hea_state_manage_gui_selected_oregon
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
 			}
 			bdt_state_manage_gui_oregon_button_click = { #BDT
 				set_variable = { hea_state_manage_gui_decision = 2 } #Show Oregon Decisions
-				set_country_flag = bdt_state_manage_gui_selected_oregon
-				clr_country_flag = hea_state_manage_gui_selected_idaho
-				clr_country_flag = hea_state_manage_gui_selected_washington
-				clr_country_flag = rot_state_manage_gui_selected_washington
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
 			}
 			bdt_state_manage_gui_oregon_selected_button_click = { #BDT-selected
 				set_variable = { hea_state_manage_gui_decision = 0 } #Close Oregon Decisions
-				clr_country_flag = bdt_state_manage_gui_selected_oregon
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
 			}
 
 			#Washington
 			hea_state_manage_gui_washington_button_click = { #HEA
 				set_variable = { hea_state_manage_gui_decision = 3 } #Show Washington Decisions
-				set_country_flag = hea_state_manage_gui_selected_washington
-				clr_country_flag = hea_state_manage_gui_selected_idaho
-				clr_country_flag = hea_state_manage_gui_selected_oregon
-				clr_country_flag = bdt_state_manage_gui_selected_oregon
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
 			}
 			hea_state_manage_gui_washington_selected_button_click = { #HEA-selected
 				set_variable = { hea_state_manage_gui_decision = 0 } #Close Washington Decisions
-				clr_country_flag = hea_state_manage_gui_selected_washington
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
 			}
 			rot_state_manage_gui_washington_button_click = { #ROT
 				set_variable = { hea_state_manage_gui_decision = 3 } #Show Washington Decisions
-				set_country_flag = rot_state_manage_gui_selected_washington
-				clr_country_flag = hea_state_manage_gui_selected_idaho
-				clr_country_flag = hea_state_manage_gui_selected_oregon
-				clr_country_flag = bdt_state_manage_gui_selected_oregon
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
 			}
 			rot_state_manage_gui_washington_selected_button_click = { #ROT-selected
 				set_variable = { hea_state_manage_gui_decision = 0 } #Close Washington Decisions
-				clr_country_flag = rot_state_manage_gui_selected_washington
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
 			}
 		}

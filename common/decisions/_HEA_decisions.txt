@@ -1313,25 +1313,22 @@ hea_theological_assembly_sharing_cat = {
 	
 }
 
-###############
-##Water Mills##
-###############
-hea_taming_river_cat = {
+#############################
+##Rivers, Lands and Heavens##
+#############################
+hea_tame_decision_cat = {
+	###Water Mills###
 	#18-Innocence Lost
 	hea_water_mills_18_1 = {
-		icon = x
+		icon = GFX_decision_generic_consumer_goods
 		cost = 30
 		fire_only_once = yes
 
 		available = {
+			has_completed_focus = hea_water_mills
 			has_full_control_of_state = 18
 			num_of_civilian_factories_available_for_projects > 0
-			NOT = {
-				has_country_flag = hea_building_water_mills
-			}
-		}
-		visible = {
-			has_completed_focus = hea_water_mills
+			NOT = { has_country_flag = hea_building_water_mills }
 		}
 
 		days_remove = 30
@@ -1342,31 +1339,24 @@ hea_taming_river_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			add_to_variable = {	hea_river_resource_water = 15}
+			add_to_variable = {	hea_tame_country_resource_water_var = 15}
 			set_country_flag = hea_water_mills_built_18_1
 			clr_country_flag = hea_building_water_mills
 			custom_effect_tooltip = hea_water_mills_18_1_tt
 		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 18
-			}
-		}
 	}
 	hea_water_mills_18_2 = {
-		icon = x
+		icon = GFX_decision_generic_consumer_goods
 		cost = 30
 		fire_only_once = yes
 
 		available = {
 			has_full_control_of_state = 18
 			num_of_civilian_factories_available_for_projects > 0
-			NOT = {
-				has_country_flag = hea_building_water_mills
-			}
+			NOT = { has_country_flag = hea_building_water_mills }
 		}
+
 		visible = {
-			has_completed_focus = hea_water_mills
 			has_country_flag = hea_water_mills_built_18_1
 		}
 
@@ -1378,33 +1368,25 @@ hea_taming_river_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			subtract_from_variable = { hea_river_resource_water = 5}
-			add_to_variable = { hea_river_resource_energy = 8}
+			subtract_from_variable = { hea_tame_country_resource_water_var = 5}
+			add_to_variable = { hea_tame_country_resource_energy_var = 8}
 			clr_country_flag = hea_building_water_mills
-			clr_country_flag = hea_water_mills_built_18_1
 			set_country_flag = hea_water_mills_built_18_2
 			custom_effect_tooltip = hea_water_mills_18_2_tt
 		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 18
-			}
-		}
 	}
 	hea_water_mills_18_3 = {
-		icon = x
+		icon = GFX_decision_generic_consumer_goods
 		cost = 30
 		fire_only_once = yes
 
 		available = {
 			has_full_control_of_state = 18
 			num_of_civilian_factories_available_for_projects > 0
-			NOT = {
-				has_country_flag = hea_building_water_mills
-			}
+			NOT = { has_country_flag = hea_building_water_mills }
 		}
+
 		visible = {
-			has_completed_focus = hea_water_mills
 			has_country_flag = hea_water_mills_built_18_2
 		}
 
@@ -1416,36 +1398,26 @@ hea_taming_river_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			subtract_from_variable = { hea_river_resource_water = 5}
-			subtract_from_variable = { hea_river_resource_energy = 3}
-			add_to_variable = { hea_river_stability = 0.025}
-			add_to_variable = { hea_river_monthly_pop = 0.05}
-			add_to_variable = { hea_river_non_core_manpower = 0.05}
+			subtract_from_variable = { hea_tame_country_resource_water_var = 5}
+			subtract_from_variable = { hea_tame_country_resource_energy_var = 3}
+			add_to_variable = { hea_tame_stability_factor_var = 0.025}
+			add_to_variable = { hea_tame_monthly_population_var = 0.05}
+			add_to_variable = { hea_tame_non_core_manpower_var = 0.05}
 			clr_country_flag = hea_building_water_mills
-			clr_country_flag = hea_water_mills_built_18_2
 			custom_effect_tooltip = hea_water_mills_18_3_tt
-		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 18
-			}
 		}
 	}
 	#116-Eastern Passage
 	hea_water_mills_116_1 = {
-		icon = x
+		icon = GFX_decision_generic_consumer_goods
 		cost = 30
 		fire_only_once = yes
 
 		available = {
+			has_completed_focus = hea_water_mills
 			has_full_control_of_state = 116
 			num_of_civilian_factories_available_for_projects > 0
-			NOT = {
-				has_country_flag = hea_building_water_mills
-			}
-		}
-		visible = {
-			has_completed_focus = hea_water_mills
+			NOT = { has_country_flag = hea_building_water_mills }
 		}
 
 		days_remove = 30
@@ -1456,31 +1428,24 @@ hea_taming_river_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			add_to_variable = {	hea_river_resource_water = 15}
+			add_to_variable = {	hea_tame_country_resource_water_var = 15}
 			set_country_flag = hea_water_mills_built_116_1
 			clr_country_flag = hea_building_water_mills
 			custom_effect_tooltip = hea_water_mills_116_1_tt
 		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 116
-			}
-		}
 	}
 	hea_water_mills_116_2 = {
-		icon = x
+		icon = GFX_decision_generic_consumer_goods
 		cost = 30
 		fire_only_once = yes
 
 		available = {
 			has_full_control_of_state = 116
 			num_of_civilian_factories_available_for_projects > 0
-			NOT = {
-				has_country_flag = hea_building_water_mills
-			}
+			NOT = { has_country_flag = hea_building_water_mills }
 		}
+
 		visible = {
-			has_completed_focus = hea_water_mills
 			has_country_flag = hea_water_mills_built_116_1
 		}
 
@@ -1492,33 +1457,24 @@ hea_taming_river_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			subtract_from_variable = { hea_river_resource_water = 5}
-			add_to_variable = { hea_river_resource_energy = 8}
+			subtract_from_variable = { hea_tame_country_resource_water_var = 5}
+			add_to_variable = { hea_tame_country_resource_energy_var = 8}
 			clr_country_flag = hea_building_water_mills
-			clr_country_flag = hea_water_mills_built_116_1
 			set_country_flag = hea_water_mills_built_116_2
 			custom_effect_tooltip = hea_water_mills_116_2_tt
 		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 116
-			}
-		}
 	}
 	hea_water_mills_116_3 = {
-		icon = x
+		icon = GFX_decision_generic_consumer_goods
 		cost = 30
 		fire_only_once = yes
 
 		available = {
 			has_full_control_of_state = 116
 			num_of_civilian_factories_available_for_projects > 0
-			NOT = {
-				has_country_flag = hea_building_water_mills
-			}
+			NOT = { has_country_flag = hea_building_water_mills }
 		}
 		visible = {
-			has_completed_focus = hea_water_mills
 			has_country_flag = hea_water_mills_built_116_2
 		}
 
@@ -1530,36 +1486,26 @@ hea_taming_river_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			subtract_from_variable = { hea_river_resource_water = 5}
-			subtract_from_variable = { hea_river_resource_energy = 3}
-			add_to_variable = { hea_river_stability = 0.025}
-			add_to_variable = { hea_river_monthly_pop = 0.05}
-			add_to_variable = { hea_river_non_core_manpower = 0.05}
+			subtract_from_variable = { hea_tame_country_resource_water_var = 5}
+			subtract_from_variable = { hea_tame_country_resource_energy_var = 3}
+			add_to_variable = { hea_tame_stability_factor_var = 0.025}
+			add_to_variable = { hea_tame_monthly_population_var = 0.05}
+			add_to_variable = { hea_tame_non_core_manpower_var = 0.05}
 			clr_country_flag = hea_building_water_mills
-			clr_country_flag = hea_water_mills_built_116_2
 			custom_effect_tooltip = hea_water_mills_116_3_tt
-		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 116
-			}
 		}
 	}
 	#278-Windy Isolation
 	hea_water_mills_278_1 = {
-		icon = x
+		icon = GFX_decision_generic_consumer_goods
 		cost = 30
 		fire_only_once = yes
 
 		available = {
+			has_completed_focus = hea_water_mills
 			has_full_control_of_state = 278
 			num_of_civilian_factories_available_for_projects > 0
-			NOT = {
-				has_country_flag = hea_building_water_mills
-			}
-		}
-		visible = {
-			has_completed_focus = hea_water_mills
+			NOT = { has_country_flag = hea_building_water_mills }
 		}
 
 		days_remove = 30
@@ -1570,31 +1516,24 @@ hea_taming_river_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			add_to_variable = {	hea_river_resource_water = 15}
+			add_to_variable = {	hea_tame_country_resource_water_var = 15}
 			set_country_flag = hea_water_mills_built_278_1
 			clr_country_flag = hea_building_water_mills
 			custom_effect_tooltip = hea_water_mills_278_1_tt
 		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 278
-			}
-		}
 	}
 	hea_water_mills_278_2 = {
-		icon = x
+		icon = GFX_decision_generic_consumer_goods
 		cost = 30
 		fire_only_once = yes
 
 		available = {
 			has_full_control_of_state = 278
 			num_of_civilian_factories_available_for_projects > 0
-			NOT = {
-				has_country_flag = hea_building_water_mills
-			}
+			NOT = { has_country_flag = hea_building_water_mills }
 		}
+
 		visible = {
-			has_completed_focus = hea_water_mills
 			has_country_flag = hea_water_mills_built_278_1
 		}
 
@@ -1606,33 +1545,25 @@ hea_taming_river_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			subtract_from_variable = { hea_river_resource_water = 5}
-			add_to_variable = { hea_river_resource_energy = 8}
+			subtract_from_variable = { hea_tame_country_resource_water_var = 5}
+			add_to_variable = { hea_tame_country_resource_energy_var = 8}
 			clr_country_flag = hea_building_water_mills
-			clr_country_flag = hea_water_mills_built_278_1
 			set_country_flag = hea_water_mills_built_278_2
 			custom_effect_tooltip = hea_water_mills_278_2_tt
 		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 278
-			}
-		}
 	}
 	hea_water_mills_278_3 = {
-		icon = x
+		icon = GFX_decision_generic_consumer_goods
 		cost = 30
 		fire_only_once = yes
 
 		available = {
 			has_full_control_of_state = 278
 			num_of_civilian_factories_available_for_projects > 0
-			NOT = {
-				has_country_flag = hea_building_water_mills
-			}
+			NOT = { has_country_flag = hea_building_water_mills }
 		}
+
 		visible = {
-			has_completed_focus = hea_water_mills
 			has_country_flag = hea_water_mills_built_278_2
 		}
 
@@ -1644,36 +1575,26 @@ hea_taming_river_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			subtract_from_variable = { hea_river_resource_water = 5}
-			subtract_from_variable = { hea_river_resource_energy = 3}
-			add_to_variable = { hea_river_stability = 0.025}
-			add_to_variable = { hea_river_monthly_pop = 0.05}
-			add_to_variable = { hea_river_non_core_manpower = 0.05}
+			subtract_from_variable = { hea_tame_country_resource_water_var = 5}
+			subtract_from_variable = { hea_tame_country_resource_energy_var = 3}
+			add_to_variable = { hea_tame_stability_factor_var = 0.025}
+			add_to_variable = { hea_tame_monthly_population_var = 0.05}
+			add_to_variable = { hea_tame_non_core_manpower_var = 0.05}
 			clr_country_flag = hea_building_water_mills
-			clr_country_flag = hea_water_mills_built_278_2
 			custom_effect_tooltip = hea_water_mills_278_3_tt
-		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 278
-			}
 		}
 	}
 	#198-Southern Gate
 	hea_water_mills_198_1 = {
-		icon = x
+		icon = GFX_decision_generic_consumer_goods
 		cost = 30
 		fire_only_once = yes
 
 		available = {
+			has_completed_focus = hea_water_mills
 			has_full_control_of_state = 198
 			num_of_civilian_factories_available_for_projects > 0
-			NOT = {
-				has_country_flag = hea_building_water_mills
-			}
-		}
-		visible = {
-			has_completed_focus = hea_water_mills
+			NOT = { has_country_flag = hea_building_water_mills }
 		}
 
 		days_remove = 30
@@ -1684,31 +1605,23 @@ hea_taming_river_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			add_to_variable = {	hea_river_resource_water = 15}
+			add_to_variable = {	hea_tame_country_resource_water_var = 15}
 			set_country_flag = hea_water_mills_built_198_1
 			clr_country_flag = hea_building_water_mills
 			custom_effect_tooltip = hea_water_mills_198_1_tt
 		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 198
-			}
-		}
 	}
 	hea_water_mills_198_2 = {
-		icon = x
+		icon = GFX_decision_generic_consumer_goods
 		cost = 30
 		fire_only_once = yes
 
 		available = {
 			has_full_control_of_state = 198
 			num_of_civilian_factories_available_for_projects > 0
-			NOT = {
-				has_country_flag = hea_building_water_mills
-			}
+			NOT = { has_country_flag = hea_building_water_mills }
 		}
 		visible = {
-			has_completed_focus = hea_water_mills
 			has_country_flag = hea_water_mills_built_198_1
 		}
 
@@ -1720,33 +1633,24 @@ hea_taming_river_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			subtract_from_variable = { hea_river_resource_water = 5}
-			add_to_variable = { hea_river_resource_energy = 8}
+			subtract_from_variable = { hea_tame_country_resource_water_var = 5}
+			add_to_variable = { hea_tame_country_resource_energy_var = 8}
 			clr_country_flag = hea_building_water_mills
-			clr_country_flag = hea_water_mills_built_198_1
 			set_country_flag = hea_water_mills_built_198_2
 			custom_effect_tooltip = hea_water_mills_198_2_tt
 		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 198
-			}
-		}
 	}
 	hea_water_mills_198_3 = {
-		icon = x
+		icon = GFX_decision_generic_consumer_goods
 		cost = 30
 		fire_only_once = yes
 
 		available = {
 			has_full_control_of_state = 198
 			num_of_civilian_factories_available_for_projects > 0
-			NOT = {
-				has_country_flag = hea_building_water_mills
-			}
+			NOT = { has_country_flag = hea_building_water_mills }
 		}
 		visible = {
-			has_completed_focus = hea_water_mills
 			has_country_flag = hea_water_mills_built_198_2
 		}
 
@@ -1758,40 +1662,262 @@ hea_taming_river_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			subtract_from_variable = { hea_river_resource_water = 5}
-			subtract_from_variable = { hea_river_resource_energy = 3}
-			add_to_variable = { hea_river_stability = 0.025}
-			add_to_variable = { hea_river_monthly_pop = 0.05}
-			add_to_variable = { hea_river_non_core_manpower = 0.05}
+			subtract_from_variable = { hea_tame_country_resource_water_var = 5}
+			subtract_from_variable = { hea_tame_country_resource_energy_var = 3}
+			add_to_variable = { hea_tame_stability_factor_var = 0.025}
+			add_to_variable = { hea_tame_monthly_population_var = 0.05}
+			add_to_variable = { hea_tame_non_core_manpower_var = 0.05}
 			clr_country_flag = hea_building_water_mills
-			clr_country_flag = hea_water_mills_built_198_2
 			custom_effect_tooltip = hea_water_mills_198_3_tt
 		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 198
-			}
-		}
 	}
-}
-######################
-##Taming The Heavens##
-######################
-hea_taming_heaven_cat = {
-	#276-Stagleap
-	hea_alchemist_276 = {
-		icon = x
+###Steam Smiths
+	#1385-Western Tunnel
+	hea_smiths_1385_1 = {
+		icon = GFX_decision_generic_factory
 		cost = 30
 		fire_only_once = yes
 		 
 		available = {
-			has_full_control_of_state = 276
-			NOT = {
-				has_country_flag = hea_capturing_scientists
+			has_completed_focus = hea_steam_smiths
+			1385 = {
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					controller = { is_ally_with = ROOT }
+				}
 			}
+			num_of_civilian_factories_available_for_projects > 1
+			NOT = { has_country_flag = hea_building_smiths }
+		}
+
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 2
+		}
+		complete_effect = {
+			set_country_flag = hea_building_smiths
+		}
+		remove_effect = {
+			add_to_variable = { hea_tame_country_resource_metal_var = 20 }
+			clr_country_flag = hea_building_smiths
+			set_country_flag = hea_smiths_built_1385_1
+			custom_effect_tooltip = hea_smiths_1385_1_tt
+		}
+	}
+	hea_smiths_1385_2 = {
+		icon = GFX_decision_generic_factory
+		cost = 30
+		fire_only_once = yes
+		 
+		available = {
+			1385 = {
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					controller = { is_ally_with = ROOT }
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 1
+			NOT = { has_country_flag = hea_building_smiths }
 		}
 		visible = {
+			has_country_flag = hea_smiths_built_1385_1
+		}
+
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 2
+		}
+		complete_effect = {
+			set_country_flag = hea_building_smiths
+		}
+		remove_effect = {
+			subtract_from_variable = { hea_tame_country_resource_metal_var = 10}
+			add_to_variable = { hea_tame_country_resource_composites_var = 10}
+			clr_country_flag = hea_building_smiths
+			set_country_flag = hea_smiths_built_1385_2
+			custom_effect_tooltip = hea_smiths_1385_2_tt
+		}
+	}
+	#198-Southern Gate
+	hea_smiths_198_1 = {
+		icon = GFX_decision_generic_factory
+		cost = 30
+		fire_only_once = yes
+		 
+		available = {
+			has_completed_focus = hea_steam_smiths
+			198 = {
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					controller = { is_ally_with = ROOT }
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 1
+			NOT = { has_country_flag = hea_building_smiths }	
+		}
+
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 2
+		}
+		complete_effect = {
+			set_country_flag = hea_building_smiths
+		}
+		remove_effect = {
+			add_to_variable = { hea_tame_country_resource_metal_var = 20}
+			clr_country_flag = hea_building_smiths
+			set_country_flag = hea_smiths_built_198_1
+			custom_effect_tooltip = hea_smiths_198_1_tt
+		}
+	}
+	hea_smiths_198_2 = {
+		icon = GFX_decision_generic_factory
+		cost = 30
+		fire_only_once = yes
+		 
+		available = {
+			198 = {
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					controller = { is_ally_with = ROOT }
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 1
+			NOT = { has_country_flag = hea_building_smiths }
+		}
+
+		visible = {
+			has_country_flag = hea_smiths_built_198_1
+		}
+
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 2
+		}
+		complete_effect = {
+			set_country_flag = hea_building_smiths
+		}
+		remove_effect = {
+			subtract_from_variable = { hea_tame_country_resource_metal_var = 10}
+			add_to_variable = { hea_tame_country_resource_composites_var = 10}
+			clr_country_flag = hea_building_smiths
+			set_country_flag = hea_smiths_built_198_2
+			custom_effect_tooltip = hea_smiths_198_2_tt
+		}
+	}
+	#276-Stagleap
+	hea_smiths_276_1 = {
+		icon = GFX_decision_generic_factory
+		cost = 30
+		fire_only_once = yes
+		 
+		available = {
+			has_completed_focus = hea_steam_smiths
+			276 = {
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					controller = { is_ally_with = ROOT }
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 1
+			NOT = { has_country_flag = hea_building_smiths }
+		}
+
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 2
+		}
+		complete_effect = {
+			set_country_flag = hea_building_smiths
+		}
+		remove_effect = {
+			add_to_variable = { hea_tame_country_resource_metal_var = 20}
+			clr_country_flag = hea_building_smiths
+			set_country_flag = hea_smiths_built_276_1
+			custom_effect_tooltip = hea_smiths_276_1_tt
+		}
+	}
+	hea_smiths_276_2 = {
+		icon = GFX_decision_generic_factory
+		cost = 30
+		fire_only_once = yes
+		 
+		available = {
+			276 = {
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					controller = { is_ally_with = ROOT }
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 1
+			NOT = { has_country_flag = hea_building_smiths }
+		}
+
+		visible = {
+			has_country_flag = hea_smiths_built_276_1
+		}
+
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 2
+		}
+		complete_effect = {
+			set_country_flag = hea_building_smiths
+		}
+		remove_effect = {
+			subtract_from_variable = { hea_tame_country_resource_metal_var = 10}
+			add_to_variable = { hea_tame_country_resource_composites_var = 10}
+			clr_country_flag = hea_building_smiths
+			set_country_flag = hea_smiths_built_276_2
+			custom_effect_tooltip = hea_smiths_276_2_tt
+		}
+	}
+	#Final-Steam Smiths
+	hea_smiths_final = {
+		icon = GFX_decision_generic_factory
+		cost = 75
+		fire_only_once = yes
+
+		available = {
+			has_country_flag = hea_smiths_built_1385_2
+			has_country_flag = hea_smiths_built_198_2
+			has_country_flag = hea_smiths_built_276_2
+			num_of_civilian_factories_available_for_projects > 3
+		}
+
+		days_remove = 100
+		modifier = {
+			civilian_factory_use = 4
+		}
+		remove_effect = {
+			subtract_from_variable = { hea_tame_country_resource_composites_var = 15}
+			add_to_variable = { hea_tame_industrial_capacity_factory_var = 0.1}
+			add_ideas = hea_steam_smiths_weapon
+			custom_effect_tooltip = hea_smiths_final_tt
+		}
+	}
+###Capture Scientists###
+	#276-Stagleap
+	hea_alchemist_276 = {
+		icon = GFX_decision_generic_research
+		cost = 30
+		fire_only_once = yes
+		 
+		available = {
 			has_completed_focus = hea_lost_scientists
+			276 = {
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					controller = { is_ally_with = ROOT }
+				}
+			}
+			NOT = { has_country_flag = hea_capturing_scientists }
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 276
+			}
 		}
 
 		days_remove = 30
@@ -1799,31 +1925,33 @@ hea_taming_heaven_cat = {
 			set_country_flag = hea_capturing_scientists
 		}
 		remove_effect = {
-			add_to_variable = { hea_heaven_research = 0.025}
+			add_to_variable = { hea_tame_research_speed_factor_var = 0.025 }
 			clr_country_flag = hea_capturing_scientists
 			set_country_flag = hea_captured_scientists_276
 			custom_effect_tooltip = hea_alchemist_276_tt
 		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 276
-			}
-		}
 	}
 	#30-High Parishes
 	hea_alchemist_30 = {
-		icon = x
+		icon = GFX_decision_generic_research
 		cost = 30
 		fire_only_once = yes
 		 
 		available = {
-			has_full_control_of_state = 30
-			NOT = {
-				has_country_flag = hea_capturing_scientists
-			}
-		}
-		visible = {
 			has_completed_focus = hea_lost_scientists
+			30 = {
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					controller = { is_ally_with = ROOT }
+				}
+			}
+			NOT = { has_country_flag = hea_capturing_scientists }
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 30
+			}
 		}
 
 		days_remove = 30
@@ -1831,31 +1959,33 @@ hea_taming_heaven_cat = {
 			set_country_flag = hea_capturing_scientists
 		}
 		remove_effect = {
-			add_to_variable = { hea_heaven_research = 0.025}
+			add_to_variable = { hea_tame_research_speed_factor_var = 0.025 }
 			clr_country_flag = hea_capturing_scientists
 			set_country_flag = hea_captured_scientists_30
 			custom_effect_tooltip = hea_alchemist_30_tt
 		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 30
-			}
-		}
 	}
 	#700-Elk Ridge
 	hea_alchemist_700 = {
-		icon = x
+		icon = GFX_decision_generic_research
 		cost = 30
 		fire_only_once = yes
 		 
 		available = {
-			has_full_control_of_state = 700
-			NOT = {
-				has_country_flag = hea_capturing_scientists
-			}
-		}
-		visible = {
 			has_completed_focus = hea_lost_scientists
+			700 = {
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					controller = { is_ally_with = ROOT }
+				}
+			}
+			NOT = { has_country_flag = hea_capturing_scientists }
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 700
+			}
 		}
 
 		days_remove = 30
@@ -1863,31 +1993,33 @@ hea_taming_heaven_cat = {
 			set_country_flag = hea_capturing_scientists
 		}
 		remove_effect = {
-			add_to_variable = { hea_heaven_research = 0.025}
+			add_to_variable = { hea_tame_research_speed_factor_var = 0.025 }
 			clr_country_flag = hea_capturing_scientists
 			set_country_flag = hea_captured_scientists_700
 			custom_effect_tooltip = hea_alchemist_700_tt
 		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 700
-			}
-		}
 	}
 	#949-Strawberry Mountain
 	hea_alchemist_949 = {
-		icon = x
+		icon = GFX_decision_generic_research
 		cost = 30
 		fire_only_once = yes
 		 
 		available = {
-			has_full_control_of_state = 949
-			NOT = {
-				has_country_flag = hea_capturing_scientists
-			}
-		}
-		visible = {
 			has_completed_focus = hea_lost_scientists
+			949 = {
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					controller = { is_ally_with = ROOT }
+				}
+			}
+			NOT = { has_country_flag = hea_capturing_scientists }
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 949
+			}
 		}
 
 		days_remove = 30
@@ -1895,31 +2027,33 @@ hea_taming_heaven_cat = {
 			set_country_flag = hea_capturing_scientists
 		}
 		remove_effect = {
-			add_to_variable = { hea_heaven_research = 0.025}
+			add_to_variable = { hea_tame_research_speed_factor_var = 0.025 }
 			clr_country_flag = hea_capturing_scientists
 			set_country_flag = hea_captured_scientists_949
 			custom_effect_tooltip = hea_alchemist_949_tt
 		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 949
-			}
-		}
 	}	
 	#950-Rock Creek
 	hea_alchemist_950 = {
-		icon = x
+		icon = GFX_decision_generic_research
 		cost = 30
 		fire_only_once = yes
 		 
 		available = {
-			has_full_control_of_state = 950
-			NOT = {
-				has_country_flag = hea_capturing_scientists
-			}
-		}
-		visible = {
 			has_completed_focus = hea_lost_scientists
+			950 = {
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					controller = { is_ally_with = ROOT }
+				}
+			}			
+			NOT = { has_country_flag = hea_capturing_scientists }
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 950
+			}
 		}
 
 		days_remove = 30
@@ -1927,20 +2061,15 @@ hea_taming_heaven_cat = {
 			set_country_flag = hea_capturing_scientists
 		}
 		remove_effect = {
-			add_to_variable = { hea_heaven_research = 0.025}
+			add_to_variable = { hea_tame_research_speed_factor_var = 0.025 }
 			clr_country_flag = hea_capturing_scientists
 			set_country_flag = hea_captured_scientists_950
 			custom_effect_tooltip = hea_alchemist_950_tt
 		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 950
-			}
-		}
 	}
 	#Final-Research facility
 	hea_alchemist_final_research = {
-		icon = x
+		icon = GFX_decision_generic_research
 		cost = 150
 		fire_only_once = yes
 		 
@@ -1953,10 +2082,7 @@ hea_taming_heaven_cat = {
 			num_of_civilian_factories_available_for_projects > 3
 		}
 		visible = {
-			has_completed_focus = hea_lost_scientists
-			NOT = {
-				has_country_flag = hea_alchemist_final
-			}
+			NOT = { has_country_flag = hea_alchemist_final }
 		}
 
 		days_remove = 100
@@ -1967,7 +2093,7 @@ hea_taming_heaven_cat = {
 			set_country_flag = hea_alchemist_final
 		}
 		remove_effect = {
-			add_to_variable = { hea_heaven_research = 0.075}
+			add_to_variable = { hea_tame_research_speed_factor_var = 0.075}
 			clr_country_flag = hea_captured_scientists_950
 			clr_country_flag = hea_captured_scientists_949
 			clr_country_flag = hea_captured_scientists_30
@@ -1975,11 +2101,10 @@ hea_taming_heaven_cat = {
 			clr_country_flag = hea_captured_scientists_700
 			custom_effect_tooltip = hea_alchemist_final_research_tt
 		}
-		cancel_trigger = {
-		}
+
 	}
 	hea_alchemist_final_resource = {
-		icon = x
+		icon = GFX_decision_generic_research
 		custom_cost_trigger = {
 			set_temp_variable = { temp_cap_cost = 300 }
 			check_variable = {
@@ -1987,6 +2112,7 @@ hea_taming_heaven_cat = {
 			}
 		}
 		custom_cost_text = "caps_decisions_cost_text"
+
 		fire_only_once = yes
 		 
 		available = {
@@ -1998,10 +2124,7 @@ hea_taming_heaven_cat = {
 			num_of_civilian_factories_available_for_projects > 3
 		}
 		visible = {
-			has_completed_focus = hea_lost_scientists
-			NOT = {
-				has_country_flag = hea_alchemist_final
-			}
+			NOT = { has_country_flag = hea_alchemist_final }
 		}
 
 		days_remove = 100
@@ -2014,275 +2137,14 @@ hea_taming_heaven_cat = {
 			add_caps = yes
 		}
 		remove_effect = {
-			add_to_variable = { hea_heaven_resource_circuitry = 40}
-			add_to_variable = { hea_heaven_resource_advanced = 40}
+			add_to_variable = { country_resource_circuitry = 40}
+			add_to_variable = { country_resource_advanced = 40}
 			clr_country_flag = hea_captured_scientists_950
 			clr_country_flag = hea_captured_scientists_949
 			clr_country_flag = hea_captured_scientists_30
 			clr_country_flag = hea_captured_scientists_276
 			clr_country_flag = hea_captured_scientists_700
 			custom_effect_tooltip = hea_alchemist_final_resource_tt
-		}
-		cancel_trigger = {
-		}
-	}
-}
-################
-##Steam Smiths##
-################
-hea_taming_land_cat = {
-	#1385-Western Tunnel
-	hea_smiths_1385_1 = {
-		icon = x
-		cost = 30
-		fire_only_once = yes
-		 
-		available = {
-			has_full_control_of_state = 1385
-			NOT = {
-				has_country_flag = hea_building_smiths
-			}
-			num_of_civilian_factories_available_for_projects > 1
-		}
-		visible = {
-			has_completed_focus = hea_steam_smiths
-		}
-
-		days_remove = 30
-		modifier = {
-			civilian_factory_use = 2
-		}
-		complete_effect = {
-			set_country_flag = hea_building_smiths
-		}
-		remove_effect = {
-			add_to_variable = { hea_land_resource_metal = 20}
-			clr_country_flag = hea_building_smiths
-			set_country_flag = hea_smiths_built_1385_1
-			custom_effect_tooltip = hea_smiths_1385_1_tt
-		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 1385
-			}
-		}
-	}
-	hea_smiths_1385_2 = {
-		icon = x
-		cost = 30
-		fire_only_once = yes
-		 
-		available = {
-			has_full_control_of_state = 1385
-			NOT = {
-				has_country_flag = hea_building_smiths
-			}
-			num_of_civilian_factories_available_for_projects > 1
-		}
-		visible = {
-			has_completed_focus = hea_steam_smiths
-			has_country_flag = hea_smiths_built_1385_1
-		}
-
-		days_remove = 30
-		modifier = {
-			civilian_factory_use = 2
-		}
-		complete_effect = {
-			set_country_flag = hea_building_smiths
-		}
-		remove_effect = {
-			subtract_from_variable = { hea_land_resource_metal = 10}
-			add_to_variable = { hea_land_resource_composites = 10}
-			clr_country_flag = hea_building_smiths
-			clr_country_flag = hea_smiths_built_1385_1
-			set_country_flag = hea_smiths_built_1385_2
-			custom_effect_tooltip = hea_smiths_1385_2_tt
-		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 1385
-			}
-		}
-	}
-	#198-Southern Gate
-	hea_smiths_198_1 = {
-		icon = x
-		cost = 30
-		fire_only_once = yes
-		 
-		available = {
-			has_full_control_of_state = 198
-			NOT = {
-				has_country_flag = hea_building_smiths
-			}
-			num_of_civilian_factories_available_for_projects > 1
-		}
-		visible = {
-			has_completed_focus = hea_steam_smiths
-		}
-
-		days_remove = 30
-		modifier = {
-			civilian_factory_use = 2
-		}
-		complete_effect = {
-			set_country_flag = hea_building_smiths
-		}
-		remove_effect = {
-			add_to_variable = { hea_land_resource_metal = 20}
-			clr_country_flag = hea_building_smiths
-			set_country_flag = hea_smiths_built_198_1
-			custom_effect_tooltip = hea_smiths_198_1_tt
-		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 198
-			}
-		}
-	}
-	hea_smiths_198_2 = {
-		icon = x
-		cost = 30
-		fire_only_once = yes
-		 
-		available = {
-			has_full_control_of_state = 198
-			NOT = {
-				has_country_flag = hea_building_smiths
-			}
-			num_of_civilian_factories_available_for_projects > 1
-		}
-		visible = {
-			has_completed_focus = hea_steam_smiths
-			has_country_flag = hea_smiths_built_198_1
-		}
-
-		days_remove = 30
-		modifier = {
-			civilian_factory_use = 2
-		}
-		complete_effect = {
-			set_country_flag = hea_building_smiths
-		}
-		remove_effect = {
-			subtract_from_variable = { hea_land_resource_metal = 10}
-			add_to_variable = { hea_land_resource_composites = 10}
-			clr_country_flag = hea_building_smiths
-			clr_country_flag = hea_smiths_built_198_1
-			set_country_flag = hea_smiths_built_198_2
-			custom_effect_tooltip = hea_smiths_198_2_tt
-		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 198
-			}
-		}
-	}
-	#276-Stagleap
-	hea_smiths_276_1 = {
-		icon = x
-		cost = 30
-		fire_only_once = yes
-		 
-		available = {
-			has_full_control_of_state = 276
-			NOT = {
-				has_country_flag = hea_building_smiths
-			}
-			num_of_civilian_factories_available_for_projects > 1
-		}
-		visible = {
-			has_completed_focus = hea_steam_smiths
-		}
-
-		days_remove = 30
-		modifier = {
-			civilian_factory_use = 2
-		}
-		complete_effect = {
-			set_country_flag = hea_building_smiths
-		}
-		remove_effect = {
-			add_to_variable = { hea_land_resource_metal = 20}
-			clr_country_flag = hea_building_smiths
-			set_country_flag = hea_smiths_built_276_1
-			custom_effect_tooltip = hea_smiths_276_1_tt
-		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 198
-			}
-		}
-	}
-	hea_smiths_276_2 = {
-		icon = x
-		cost = 30
-		fire_only_once = yes
-		 
-		available = {
-			has_full_control_of_state = 276
-			NOT = {
-				has_country_flag = hea_building_smiths
-			}
-			num_of_civilian_factories_available_for_projects > 1
-		}
-		visible = {
-			has_completed_focus = hea_steam_smiths
-			has_country_flag = hea_smiths_built_276_1
-		}
-
-		days_remove = 30
-		modifier = {
-			civilian_factory_use = 2
-		}
-		complete_effect = {
-			set_country_flag = hea_building_smiths
-		}
-		remove_effect = {
-			subtract_from_variable = { hea_land_resource_metal = 10}
-			add_to_variable = { hea_land_resource_composites = 10}
-			clr_country_flag = hea_building_smiths
-			clr_country_flag = hea_smiths_built_276_1
-			set_country_flag = hea_smiths_built_276_2
-			custom_effect_tooltip = hea_smiths_276_2_tt
-		}
-		cancel_trigger = {
-			NOT = {
-				has_full_control_of_state = 276
-			}
-		}
-	}
-	#Final-Steam Smiths
-	hea_smiths_final = {
-		icon = x
-		cost = 75
-		fire_only_once = yes
-
-		available = {
-			has_country_flag = hea_smiths_built_1385_2
-			has_country_flag = hea_smiths_built_198_2
-			has_country_flag = hea_smiths_built_276_2
-			num_of_civilian_factories_available_for_projects > 3
-		}
-		visible = {
-			has_completed_focus = hea_steam_smiths
-		}
-
-		days_remove = 100
-		modifier = {
-			civilian_factory_use = 4
-		}
-		complete_effect = {
-			clr_country_flag = hea_smiths_built_1385_2
-			clr_country_flag = hea_smiths_built_198_2
-			clr_country_flag = hea_smiths_built_276_2
-		}
-		remove_effect = {
-			subtract_from_variable = { hea_land_resource_composites = 15}
-			add_to_variable = { hea_land_output = 0.1}
-			add_ideas = hea_steam_smiths_weapon
-			custom_effect_tooltip = hea_smiths_final_tt
 		}
 	}
 }

@@ -1,42 +1,29 @@
 #Heaven's Unleashed: Heaven's Gate dynamic modifiers
-#####################
-##Taming the Rivers##
-#####################
-hea_dynamic_taming_rivers = {
+#############################
+##Rivers, Lands and Heavens##
+#############################
+hea_tame_dynamic_modifier = {
 	icon = GFX_idea_generic_coast_guard
-	country_resource_energy = hea_river_resource_energy
-	country_resource_water = hea_river_resource_water
-	army_speed_factor = hea_river_army_speed
-	production_speed_infrastructure_factor = hea_river_infrastructure_speed
-	stability_factor = hea_river_stability
-	monthly_population = hea_river_monthly_pop
-	non_core_manpower = hea_river_non_core_manpower
-}
-####################
-##Taming the Lands##
-####################
-hea_dynamic_taming_lands = {
-	icon = GFX_idea_mountain_gods
-	country_resource_metal = hea_land_resource_metal
-	country_resource_composites = hea_land_resource_composites
-	industrial_capacity_factory = hea_land_output
-	monthly_population = hea_land_monthly_pop
-	consumer_goods_factor = hea_land_consumer
-	global_building_slots_factor = hea_land_max_building_slot_factor
-	production_speed_buildings_factor = hea_land_building_speed
-}
-######################
-##Taming the Heavens##
-######################
-hea_dynamic_taming_heavens = {
-	icon = GFX_idea_generic_religion
-	research_speed_factor = hea_heaven_research
-	war_support_factor = hea_heaven_war_support
-	army_morale_factor = hea_heaven_recovery_rate_factor
-	breakthrough_factor = hea_heaven_break_through
-	conscription_factor = hea_heaven_conscript_factor
-	country_resource_circuitry = hea_heaven_resource_circuitry
-	country_resource_advanced = hea_heaven_resource_advanced
+	country_resource_energy = hea_tame_country_resource_energy_var
+	country_resource_water = hea_tame_country_resource_water_var
+	country_resource_metal = hea_tame_country_resource_metal_var
+	country_resource_composites = hea_tame_country_resource_composites_var
+	country_resource_circuitry = hea_tame_country_resource_circuitry_var
+	country_resource_advanced = hea_tame_country_resource_advanced_var
+	army_speed_factor = hea_tame_army_speed_factor_var
+	production_speed_infrastructure_factor = hea_tame_production_speed_infrastructure_factor_var
+	stability_factor = hea_tame_stability_factor_var
+	monthly_population = hea_tame_monthly_population_var
+	non_core_manpower = hea_tame_non_core_manpower_var
+	industrial_capacity_factory = hea_tame_industrial_capacity_factory_var
+	consumer_goods_factor = hea_tame_consumer_goods_factor_var
+	global_building_slots_factor = hea_tame_global_building_slots_factor_var
+	production_speed_buildings_factor = hea_tame_production_speed_buildings_factor_var
+	research_speed_factor = hea_tame_research_speed_factor_var
+	war_support_factor = hea_tame_war_support_factor_var
+	army_morale_factor = hea_tame_army_morale_factor_var
+	breakthrough_factor = hea_tame_breakthrough_factor_var
+	conscription_factor = hea_tame_conscription_factor_var
 }
 #########################################
 ##Theological Assembly-Forgiveness Path##

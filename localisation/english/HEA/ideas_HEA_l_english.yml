@@ -319,17 +319,24 @@ mur_skeleton_cathedral_desc:0 "It'll take a long time before the Cathedral is fi
 #######Rotpurger Ideas
 
 ##Heaven's Gate Taming The Rivers, Lands and Heavens
-hea_dynamic_taming_rivers:0 "Taming the §BRivers§!"
-hea_dynamic_taming_rivers_desc:0 "The §BRivers§! of the Wasteland are the lifeblood of any trading empire, truthfully, we aren't one, but if we ever hope to spread the Light of the Lord all across this blightful land, then the waters of §W[HEA.GetNameWithFlag]§! will need to be tamed."
+hea_tame_dynamic_modifier: "§BRivers§!, §8Lands§! and §4Heavens§!"
+hea_tame_dynamic_modifier_desc: "The Nucleus stands prepared to send its men in a grand show of faith in the name of the Lord but our home can be even grander! We'll ensure it is so![hea_tame_river_focus_scripted_loc][hea_tame_land_focus_scripted_loc][hea_tame_heaven_focus_scripted_loc]"
+hea_tame_river_focus_scripted_loc_river: "\n- The Rivers of the Wasteland are the lifeblood of any trading empire, truthfully, we aren't one, but if we ever hope to spread the Light of the Lord all across this blightful land, then the waters of [HEA.GetName] will need to be tamed."
+hea_tame_land_focus_scripted_loc_land: "\n- God gifted us Earth to do what we will and we have conquered it in truth...yet have we tamed it? No, in truth, we simply reside in it but those of Heaven's Gate were chosen by the lord. We will use science, the nucleus, and all of its ardent people to bring the land to heel."
+hea_tame_heaven_focus_scripted_loc_heaven: "\n- How can we say to be close to God when we huddle beneath the mountains? Should we not endeavor to master what was given to us? Of course we should! WE are the chosen of God, WE were gifted the Nucleus, WE are the masters of our minds, and WE shall tame the Heaven's themselves..."
+hea_tame_nothing: ""
 
-hea_dynamic_taming_lands:0 "Taming the §8Lands§!"
-hea_dynamic_taming_lands_desc:0 "Pipelines act as highways and methods to extend the blessing to all of the faithful, crops are planted and harvested by the faithful using ancient skills, and our smiths ensure our warriors can ensure the peace is kept...but why should we stop at adequate?"
-hea_steam_smiths_weapon:0 "Steam Smiths Weapons"
+hea_dynamic_taming_rivers: "Taming the §BRivers§!"
+hea_dynamic_taming_rivers_desc: "The §BRivers§! of the Wasteland are the lifeblood of any trading empire, truthfully, we aren't one, but if we ever hope to spread the Light of the Lord all across this blightful land, then the waters of §W[HEA.GetNameWithFlag]§! will need to be tamed."
 
-hea_dynamic_taming_heavens:0 "Taming the §4Heavens§!"
-hea_dynamic_taming_heavens_desc:0 "The Stagleap Mountains have been our protectors and guardians since our ancestors settled in the Nucleus but even after two hundred years we haven't truly settled the spires and crags, until now..."
+hea_dynamic_taming_lands: "Taming the §8Lands§!"
+hea_dynamic_taming_lands_desc: "Pipelines act as highways and methods to extend the blessing to all of the faithful, crops are planted and harvested by the faithful using ancient skills, and our smiths ensure our warriors can ensure the peace is kept...but why should we stop at adequate?"
+hea_steam_smiths_weapon: "Steam Smiths Weapons"
 
-guard_rebornHEA:0 "Guard Reborn"
+hea_dynamic_taming_heavens: "Taming the §4Heavens§!"
+hea_dynamic_taming_heavens_desc: "The Stagleap Mountains have been our protectors and guardians since our ancestors settled in the Nucleus but even after two hundred years we haven't truly settled the spires and crags, until now..."
+
+guard_rebornHEA: "Guard Reborn"
 
 #####################
 ##Foreign Relations##

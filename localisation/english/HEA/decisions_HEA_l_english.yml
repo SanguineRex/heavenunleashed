@@ -26,6 +26,9 @@ hea_michael_crusade_trees_faithless_dynamic_decision_desc: "They hide in homes o
 hea_michael_savages_heretics_dynamic_decision: "Crusade against §R[FROM.GetNameWithFlag]§!"
 hea_michael_savages_heretics_dynamic_decision_desc: "Amon will fall in line or die. Presbyter will die for starting this entire mess, and if Cain hasn't convinced those accursed heretics to worship the true faith of Steam and Christ, then he too will face our wrath."
 
+hea_tame_decision_cat: "§BRivers§!, §8Lands§! and §4Heavens§!"
+hea_tame_decision_cat_desc: "The Nucleus stands prepared to send its men in a grand show of faith in the name of the Lord but our home can be even grander! We'll ensure it is so!"
+
 ##Decisions-Taming the Rivers
 hea_taming_river_cat:0 "Taming the §BRivers§!"
 hea_taming_river_cat_desc:0 "The §BRivers§! floating near §W[HEA.GetNameWithFlag]§! can be taken advantage of, constructing watermills all along our Eastern territories can help us gather energy, though not strictly necessary, the power from the mills could help future projects..."

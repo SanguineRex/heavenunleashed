@@ -3297,7 +3297,8 @@ focus = {
 	#############Heaven's Roads and Farms#######
 	#############################################
 	
-			###A better Heaven's Gate
+	###A better Heaven's Gate
+	#Enriching the Nucleus
 	focus = {
 		id = hea_the_nucleus
 		icon = GFX_goal_HEA_HEA_building_nucleus
@@ -3316,11 +3317,39 @@ focus = {
 			1384 = { add_extra_state_shared_building_slots = 1 }
 			198 = { add_extra_state_shared_building_slots = 1 }
 			1385 = { add_extra_state_shared_building_slots = 1 }
+			#Initialize the variables
+			set_variable = { hea_tame_country_resource_energy_var = 0 }
+			set_variable = { hea_tame_country_resource_water_var = 0 }
+			set_variable = { hea_tame_country_resource_metal_var = 0 }
+			set_variable = { hea_tame_country_resource_composites_var = 0 }
+			set_variable = { hea_tame_country_resource_circuitry_var = 0 }
+			set_variable = { hea_tame_country_resource_advanced_var = 0 }
+			set_variable = { hea_tame_army_speed_factor_var = 0 }
+			set_variable = { hea_tame_production_speed_infrastructure_factor_var = 0 }
+			set_variable = { hea_tame_stability_factor_var = 0 }
+			set_variable = { hea_tame_monthly_population_var = 0 }
+			set_variable = { hea_tame_non_core_manpower_var = 0 }
+			set_variable = { hea_tame_industrial_capacity_factory_var = 0 }
+			set_variable = { hea_tame_consumer_goods_factor_var = 0 }
+			set_variable = { hea_tame_global_building_slots_factor_var = 0 }
+			set_variable = { hea_tame_production_speed_buildings_factor_var = 0 }
+			set_variable = { hea_tame_research_speed_factor_var = 0 }
+			set_variable = { hea_tame_war_support_factor_var = 0 }
+			set_variable = { hea_tame_army_morale_factor_var = 0 }
+			set_variable = { hea_tame_breakthrough_factor_var = 0 }
+			set_variable = { hea_tame_conscription_factor_var = 0 }
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = hea_tame_dynamic_modifier
+				}		
+			}
+			custom_effect_tooltip = hea_the_nucleus_tt
 		}
 	}
 
 	###Rivers
-		focus = {
+	#Taming the Rivers
+	focus = {
 		id = hea_taming_rivers
 		icon = GFX_goal_HEA_steam_powered_cities
 		cost = 30
@@ -3328,28 +3357,18 @@ focus = {
 		y = 1
 		relative_position_id = hea_the_nucleus
 
-		available = {
-			NOT = {
-				has_country_flag = hea_already_taming
-			}
-		}
 		prerequisite = {
 			focus = hea_the_nucleus
 		}
 
 		completion_reward = {
-			add_to_variable = { hea_river_stability = 0.02}
-			hidden_effect = {
-				add_dynamic_modifier = {
-					modifier = hea_dynamic_taming_rivers
-				}
-				set_country_flag = hea_already_taming
-			}
+			add_to_variable = { hea_tame_stability_factor_var = 0.02}
 			add_political_power = 60
 			custom_effect_tooltip = hea_taming_rivers_tt
 		}
 	}
-		focus = {
+	#Building Dams
+	focus = {
 		id = hea_dams
 		icon = GFX_goal_HEA_HEA_building_damconstruct
 		cost = 15
@@ -3362,15 +3381,12 @@ focus = {
 		}
 
 		completion_reward = {
-			add_to_variable = {
-				hea_river_stability = 0.01
-			}
-			add_to_variable = {
-				hea_river_resource_water = 20
-			}
+			add_to_variable = { hea_tame_stability_factor_var = 0.01 }
+			add_to_variable = { hea_tame_country_resource_water_var = 20 }
 			custom_effect_tooltip = hea_dams_tt
 		}
 	}
+	#Using the Dam for energy?
 	focus = {
 		id = hea_repurposing_wattech
 		icon = GFX_goal_HEA_HEA_building_dam
@@ -3384,15 +3400,12 @@ focus = {
 		}
 
 		completion_reward = {
-			add_to_variable = {
-				hea_river_stability = 0.01
-			}
-			add_to_variable = {
-				hea_river_resource_energy = 20
-			}
+			add_to_variable = { hea_tame_stability_factor_var = 0.01 }
+			add_to_variable = { hea_tame_country_resource_energy_var = 20 }
 			custom_effect_tooltip = hea_repurposing_wattech_tt
 		}
 	}
+	#Water Mills
 	focus = {
 		id = hea_water_mills
 		icon = GFX_goal_HEA_HEA_building_watermills
@@ -3406,11 +3419,12 @@ focus = {
 		}
 
 		completion_reward = {
-			add_to_variable = { hea_river_stability = 0.02 }
+			add_to_variable = { hea_tame_stability_factor_var = 0.02 }
 			custom_effect_tooltip = hea_river_mills_tt
 		}
 	}
-		focus = {
+	#Repairing Old Bridges
+	focus = {
 		id = hea_bridges
 		icon = GFX_goal_HEA_HEA_building_bridge
 		cost = 15
@@ -3423,17 +3437,14 @@ focus = {
 		}
 
 		completion_reward = {
-			add_to_variable = { hea_river_stability = 0.01 }
-			add_to_variable = {
-				hea_river_army_speed = 0.02
-			}
-			add_to_variable = {
-				hea_river_infrastructure_speed = 0.05
-			}
+			add_to_variable = { hea_tame_stability_factor_var = 0.01 }
+			add_to_variable = { hea_tame_army_speed_factor_var = 0.02 }
+			add_to_variable = { hea_tame_production_speed_infrastructure_factor_var = 0.05 }
 			custom_effect_tooltip = hea_bridges_tt
 		}
 	}
-		focus = {
+	#River Ferries
+	focus = {
 		id = hea_ferries
 		icon = GFX_goal_HEA_building_ferry
 		cost = 15
@@ -3446,19 +3457,14 @@ focus = {
 		}
 
 		completion_reward = {
-			add_to_variable = {
-				hea_river_stability = 0.01
-			}
-			add_to_variable = {
-				hea_river_army_speed = 0.03
-			}
-			add_to_variable = {
-				hea_river_infrastructure_speed = 0.05
-			}
+			add_to_variable = { hea_tame_stability_factor_var = 0.01 }
+			add_to_variable = { hea_tame_army_speed_factor_var = 0.03 }
+			add_to_variable = { hea_tame_production_speed_infrastructure_factor_var = 0.05 }
 			custom_effect_tooltip = hea_ferries_tt
 		}
 	}
-		focus = {
+	#Steam Barges
+	focus = {
 		id = hea_priest_barges
 		icon = GFX_goal_HEA_HEA_building_steambarge
 		cost = 30
@@ -3508,14 +3514,12 @@ focus = {
 					province = 4361
 				}
 			}
-			add_to_variable = {
-				hea_river_stability = 0.02
-			}
+			add_to_variable = { hea_tame_stability_factor_var = 0.02 }
 			custom_effect_tooltip = hea_priest_barges_tt
-			clr_country_flag = hea_already_taming
 		}
 	}
-	####Taming the Lands
+	###Lands
+	#Taming the Lands
 	focus = {
 		id = hea_taming_land
 		icon = GFX_goal_HEA_hea_expand_tunnels
@@ -3524,30 +3528,17 @@ focus = {
 		y = 1
 		relative_position_id = hea_the_nucleus
 
-		available = {
-			NOT = {
-				has_country_flag = hea_already_taming
-			}
-		}
-
 		prerequisite = {
 			focus = hea_the_nucleus
 		}
 
 		completion_reward = {
-			hidden_effect = {
-				add_dynamic_modifier = {
-					modifier = hea_dynamic_taming_lands
-				}
-				set_country_flag = hea_already_taming
-			}
-			add_to_variable = {
-				hea_land_max_building_slot_factor = 0.05
-			}
+			add_to_variable = { hea_tame_global_building_slots_factor_var = 0.05 }
 			add_political_power = 60
 			custom_effect_tooltip = hea_taming_land_tt
 		}
 	}
+	#Eternal Spring
 	focus = {
 		id = hea_hothouse
 		icon = GFX_goal_HEA_building_spring
@@ -3561,16 +3552,13 @@ focus = {
 		}
 
 		completion_reward = {
-			add_to_variable = {
-				hea_land_consumer = -0.07
-			}
-			add_to_variable = {
-				hea_land_monthly_pop = 0.05
-			}
+			add_to_variable = { hea_tame_consumer_goods_factor_var = -0.07 }
+			add_to_variable = { hea_tame_monthly_population_var = 0.05 }
 			custom_effect_tooltip = hea_hothouse_tt
 		}
 	}
-		focus = {
+	#Blessed Cooks
+	focus = {
 		id = hea_priestcooks
 		icon = GFX_goal_HEA_building_cooks
 		cost = 15
@@ -3583,16 +3571,13 @@ focus = {
 		}
 
 		completion_reward = {
-			add_to_variable = {
-				hea_land_consumer = -0.03
-			}
-			add_to_variable = {
-				hea_land_monthly_pop = 0.05
-			}
+			add_to_variable = { hea_tame_consumer_goods_factor_var = -0.03 }
+			add_to_variable = { hea_tame_monthly_population_var = 0.05 }
 			custom_effect_tooltip = hea_priestcooks_tt
 		}
 	}
-		focus = {
+	#Smiths blessed by Steam and the Lord
+	focus = {
 		id = hea_steam_smiths
 		icon = GFX_goal_HEA_building_mines
 		cost = 30
@@ -3605,12 +3590,11 @@ focus = {
 		}
 
 		completion_reward = {
-			add_to_variable = {
-				hea_land_output = 0.05
-			}
+			add_to_variable = { hea_tame_industrial_capacity_factory_var = 0.05 }
 			custom_effect_tooltip = hea_steam_smiths_tt
 		}
 	}
+	#Preparing for expansion
 	focus = {
 		id = hea_expanding_pipeways
 		icon = GFX_goal_HEA_building_pipe
@@ -3624,15 +3608,12 @@ focus = {
 		}
 
 		completion_reward = {
-			add_to_variable = {
-				hea_land_max_building_slot_factor = 0.05
-			}
-			add_to_variable = {
-				hea_land_building_speed = 0.02
-			}
+			add_to_variable = { hea_tame_global_building_slots_factor_var = 0.05 }
+			add_to_variable = { hea_tame_production_speed_buildings_factor_var = 0.02 }
 			custom_effect_tooltip = hea_expanding_pipeways_tt
 		}
 	}
+	#Homes blessed by Steam
 	focus = {
 		id = hea_heated_homes
 		icon = GFX_goal_HEA_building_steamhome
@@ -3646,16 +3627,13 @@ focus = {
 		}
 
 		completion_reward = {
-			add_to_variable = {
-				hea_land_max_building_slot_factor = 0.05
-			}
-			add_to_variable = {
-				hea_land_building_speed = 0.03
-			}
+			add_to_variable = { hea_tame_global_building_slots_factor_var = 0.05 }
+			add_to_variable = { hea_tame_production_speed_buildings_factor_var = 0.03 }
 			custom_effect_tooltip = hea_heated_homes_tt
 		}
 	}
-		focus = {
+	#Steam Wonderland
+	focus = {
 		id = hea_anewold_gate
 		icon = GFX_goal_HEA_building_steamwonder
 		cost = 30
@@ -3690,17 +3668,13 @@ focus = {
 					level = 1
 				}
 			}
-			add_to_variable = {
-				hea_land_consumer = -0.05
-			}
-			add_to_variable = {
-				hea_land_building_speed = 0.05
-			}
-			clr_country_flag = hea_already_taming
+			add_to_variable = { hea_tame_consumer_goods_factor_var = -0.05 }
+			add_to_variable = { hea_tame_production_speed_buildings_factor_var = 0.05 }
 			custom_effect_tooltip = hea_anewold_gate_tt
 		}
 	}
 	####Heavens (Mountains)
+	#Taming the Heavens
 	focus = {
 		id = hea_taming_heavens
 		icon = GFX_goal_HEA_hea_taming_heaven
@@ -3709,29 +3683,17 @@ focus = {
 		y = 1
 		relative_position_id = hea_the_nucleus
 
-		available = {
-			NOT = {
-				has_country_flag = hea_already_taming
-			}
-		}
 		prerequisite = {
 			focus = hea_the_nucleus
 		}
 
 		completion_reward = {
-			hidden_effect = {
-				set_country_flag = hea_already_taming
-				add_dynamic_modifier = {
-					modifier = hea_dynamic_taming_heavens
-				}
-				add_to_variable = {
-					hea_heaven_war_support = 0.02
-				}
-			}
+			add_to_variable = { hea_tame_war_support_factor_var = 0.02 }
 			add_political_power = 60
 			custom_effect_tooltip = hea_taming_heavens_tt
 		}
 	}
+	#Astray Alchemists and Hermits
 	focus = {
 		id = hea_lost_scientists
 		icon = GFX_goal_HEA_HEA_building_science
@@ -3745,12 +3707,11 @@ focus = {
 		}
 
 		completion_reward = {
-			add_to_variable = {
-				hea_heaven_war_support = 0.01
-			}
+			add_to_variable = { hea_tame_war_support_factor_var = 0.01 }
 			custom_effect_tooltip = hea_lost_scientists_tt
 		}
 	}
+	#Michael's Vision
 	focus = {
 		id = hea_mountain_monestaries
 		icon = GFX_goal_HEA_peasantlevy
@@ -3764,15 +3725,12 @@ focus = {
 		}
 
 		completion_reward = {
-			add_to_variable = {
-				hea_heaven_war_support = 0.01
-			}
-			add_to_variable = {
-				hea_heaven_conscript_factor = 0.05
-			}
+			add_to_variable = { hea_tame_war_support_factor_var = 0.01 }
+			add_to_variable = { hea_tame_conscription_factor_var = 0.05 }
 			custom_effect_tooltip = hea_mountain_monestaries_tt
 		}
 	}
+	#Soldiers of the Prophet
 	focus = {
 		id = hea_shrines_to_reactor
 		icon = GFX_goal_HEA_knightsofpeasants
@@ -3786,15 +3744,12 @@ focus = {
 		}
 
 		completion_reward = {
-			add_to_variable = {
-				hea_heaven_war_support = 0.01
-			}
-			add_to_variable = {
-				hea_heaven_conscript_factor = 0.05
-			}
+			add_to_variable = { hea_tame_war_support_factor_var = 0.01 }
+			add_to_variable = { hea_tame_conscription_factor_var = 0.05 }
 			custom_effect_tooltip = hea_shrines_to_reactor_tt
 		}
 	}
+	#Funding from Heaven
 	focus = {
 		id = hea_barnabus_reactor
 		icon = GFX_goal_HEA_preparingforwar
@@ -3806,21 +3761,15 @@ focus = {
 		prerequisite = {
 			focus = hea_taming_heavens
 		}
-		available = {
-		}
+
 		completion_reward = {
-			add_to_variable = {
-				hea_heaven_recovery_rate_factor = 0.05
-			}
-			add_to_variable = {
-				hea_heaven_conscript_factor = 0.02
-			}
-			add_to_variable = {
-				hea_heaven_war_support = 0.01
-			}
+			add_to_variable = { hea_tame_army_morale_factor_var = 0.05 }
+			add_to_variable = { hea_tame_conscription_factor_var = 0.02 }
+			add_to_variable = { hea_tame_war_support_factor_var = 0.01 }
 			custom_effect_tooltip = hea_barnabus_reactor_tt
 		}
 	}
+	#It didn't stop there...
 	focus = {
 		id = hea_hollows_bellow
 		icon = GFX_goal_HEA_warcometh
@@ -3834,18 +3783,13 @@ focus = {
 		}
 
 		completion_reward = {
-			add_to_variable = {
-				hea_heaven_recovery_rate_factor = 0.05
-			}
-			add_to_variable = {
-				hea_heaven_break_through = 0.05
-			}
-			add_to_variable = {
-				hea_heaven_war_support = 0.01
-			}
+			add_to_variable = { hea_tame_army_morale_factor_var = 0.05 }
+			add_to_variable = { hea_tame_breakthrough_factor_var = 0.05 }
+			add_to_variable = { hea_tame_war_support_factor_var = 0.01 }
 			custom_effect_tooltip = hea_hollows_bellow_tt
 		}
 	}
+	#Ever closer to Heaven
 	focus = {
 		id = hea_steam_wonderland
 		icon = GFX_goal_HEA_closertoheaven
@@ -3881,13 +3825,8 @@ focus = {
 					level = 1
 				}
 			}
-			add_to_variable = {
-				hea_heaven_war_support = 0.03
-			}
-			add_to_variable = {
-				hea_heaven_conscript_factor = 0.03
-			}
-			clr_country_flag = hea_already_taming
+			add_to_variable = { hea_tame_war_support_factor_var = 0.03 }
+			add_to_variable = { hea_tame_conscription_factor_var = 0.03 }
 			custom_effect_tooltip = hea_steam_wonderland_tt
 		}
 	}

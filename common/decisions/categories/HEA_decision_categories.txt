@@ -65,6 +65,19 @@ hea_theological_assembly_sharing_cat = {
 	icon = x
 	priority = 997
 }
+#############################
+##Rivers, Lands and Heavens##
+#############################
+hea_tame_decision_cat = {
+	allowed = {
+		original_tag = HEA
+	}
+	visible = {
+		has_completed_focus = hea_the_nucleus
+	}
+	icon = GFX_decision_category_generic_industry
+	priority = 899
+}
 ###############
 ##Water Mills##
 ###############

@@ -221,8 +221,10 @@ on_actions = {
 					949 = { #Impassable State, Strawberry Mountain 
 						if = {
 							limit = {
-								is_owned_by = HEA
-								controller = { is_puppet_of = HEA }
+								OR = {
+									is_owned_by = HEA
+									controller = { is_puppet_of = HEA }
+								}
 							}
 							transfer_state_to = BDT 
 						}
@@ -230,8 +232,10 @@ on_actions = {
 					950 = { #Impassable State, Rock Creek Butte
 						if = {
 							limit = {
-								is_owned_by = HEA
-								controller = { is_puppet_of = HEA }
+								OR = {
+									is_owned_by = HEA
+									controller = { is_puppet_of = HEA }
+								}
 							}
 							transfer_state_to = BDT 
 						}
@@ -239,8 +243,10 @@ on_actions = {
 					951 = {  #Impassable State, Wehana Toucannon
 						if = {
 							limit = {
-								is_owned_by = HEA
-								controller = { is_puppet_of = HEA }
+								OR = {
+									is_owned_by = HEA
+									controller = { is_puppet_of = HEA }
+								}
 							}
 							transfer_state_to = BDT 
 						}
@@ -248,8 +254,10 @@ on_actions = {
 					952 = { #Impassable State, Wallowa Whitman
 						if = {
 							limit = {
-								is_owned_by = HEA
-								controller = { is_puppet_of = HEA }
+								OR = {
+									is_owned_by = HEA
+									controller = { is_puppet_of = HEA }
+								}
 							}
 							transfer_state_to = BDT 
 						}

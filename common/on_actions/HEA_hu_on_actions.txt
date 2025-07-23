@@ -212,8 +212,10 @@ on_actions = {
 						array = global.oregon_state_array
 						if = {
 							limit = {
-								is_owned_by = HEA
-								controller = { is_puppet_of = HEA }
+								OR = {
+									is_owned_by = HEA
+									controller = { is_puppet_of = HEA }
+								}
 							}
 							transfer_state_to = BDT
 						}
@@ -262,17 +264,6 @@ on_actions = {
 							transfer_state_to = BDT 
 						}
 					}
-					#every_state = {
-					#	limit = {
-					#		OR = {
-					#			region = 58
-					#			region = 59
-					#			region = 11
-					#		}
-					#		is_owned_by = HEA
-					#	}
-					#	transfer_state_to = BDT
-					#}
 				}
 				FROM = {
 					set_politics = { ruling_party = people } #Switch Bone Dancers to Cain-People

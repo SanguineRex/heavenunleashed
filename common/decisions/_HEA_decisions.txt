@@ -1189,6 +1189,23 @@ hea_state_manage_decision_cat = {
 					}
 					transfer_state_to = BDT
 				}
+				every_allied_country = {
+					if = {
+						limit = { is_puppet_of = HEA }
+						every_owned_state = {
+							if = {
+								limit = {
+									OR = { 
+										region = 58
+										region = 59
+										region = 11
+									}
+								}
+								transfer_state_to = BDT
+							}
+						}
+					}
+				}
 			}
 			custom_effect_tooltip = bdt_state_manage_oregon_mandate_decision_tt
 		}
@@ -1247,7 +1264,7 @@ hea_state_manage_decision_cat = {
 		}
 	}
 	##Shared Border Fixing Oregon-Washington
-	#Smoothing the Border
+	#Divide the lands
 	state_manage_oregon_washington_border_decision = {
 		icon = GFX_decision_hol_draw_up_staff_plans
 		fire_only_once = yes

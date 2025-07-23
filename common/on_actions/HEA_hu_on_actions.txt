@@ -80,9 +80,14 @@ on_actions = {
 				}
 				HEA = { add_to_variable = { hea_state_manage_gui_dirty = 0.01 } } #Update State Management GUI
 			}
-			if = { #Scripting to transfer Oregon state controlled by HEA to ally BDT
+			if = { #Scripting to transfer Oregon state controlled by HEA/HEA's puppet to ally BDT
 				limit = {
-					ROOT = { original_tag = HEA }
+					ROOT = { 
+						OR = {
+							original_tag = HEA
+							is_puppet_of = HEA
+						}
+					}
 					HEA = { has_country_flag = hea_oregon_states_to_bdt } #Accepted to transfer Oregon Territories to BDT
 					BDT = { is_ally_with = HEA }
 					FROM.FROM = {
@@ -140,6 +145,28 @@ on_actions = {
 					add_to_variable = { hea_state_manage_gui_dirty = 0.01 } #Update State Management GUI
 				}
 			}
+			if = {
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_oregon_states_to_bdt
+					}
+				}
+				ROOT = {
+					every_owned_state = {
+						if = {
+							limit = {
+								OR = {
+									region = 58
+									region = 59
+									region = 11
+								}
+							}
+							transfer_state_to = BDT
+						}
+					}
+				}
+			}
 		}
 	}
 	on_release_as_puppet = {
@@ -181,17 +208,63 @@ on_actions = {
 				}
 				ROOT = {
 					release_puppet = BDT
-					every_state = {
-						limit = {
-							OR = {
-								region = 58
-								region = 59
-								region = 11
+					for_each_scope_loop = { #Special thanks to LimonenZitrone for the array idea and Iron Vanguard for the premade arrays - @Deez
+						array = global.oregon_state_array
+						if = {
+							limit = {
+								is_owned_by = HEA
+								controller = { is_puppet_of = HEA }
 							}
-							is_owned_by = HEA
+							transfer_state_to = BDT
 						}
-						transfer_state_to = BDT
 					}
+					949 = { #Impassable State, Strawberry Mountain 
+						if = {
+							limit = {
+								is_owned_by = HEA
+								controller = { is_puppet_of = HEA }
+							}
+							transfer_state_to = BDT 
+						}
+					}
+					950 = { #Impassable State, Rock Creek Butte
+						if = {
+							limit = {
+								is_owned_by = HEA
+								controller = { is_puppet_of = HEA }
+							}
+							transfer_state_to = BDT 
+						}
+					}
+					951 = {  #Impassable State, Wehana Toucannon
+						if = {
+							limit = {
+								is_owned_by = HEA
+								controller = { is_puppet_of = HEA }
+							}
+							transfer_state_to = BDT 
+						}
+					}
+					952 = { #Impassable State, Wallowa Whitman
+						if = {
+							limit = {
+								is_owned_by = HEA
+								controller = { is_puppet_of = HEA }
+							}
+							transfer_state_to = BDT 
+						}
+					}
+					#every_state = {
+					#	limit = {
+					#		OR = {
+					#			region = 58
+					#			region = 59
+					#			region = 11
+					#		}
+					#		is_owned_by = HEA
+					#	}
+					#	transfer_state_to = BDT
+					#}
 				}
 				FROM = {
 					set_politics = { ruling_party = people } #Switch Bone Dancers to Cain-People

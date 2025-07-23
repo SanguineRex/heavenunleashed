@@ -114,53 +114,53 @@ country_event = {
 
 
 
-country_event = { 
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.100" }
-	id = nf_event_hea.100
-	title = nf_event_hea.100.t
-	desc = nf_event_hea.100.desc
-	picture = GFX_event_HEA_crusade
+#country_event = { 
+#	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.100" }
+#	id = nf_event_hea.100
+#	title = nf_event_hea.100.t
+#	desc = nf_event_hea.100.desc
+#	picture = GFX_event_HEA_crusade
+#
+#	is_triggered_only = yes
+#
+#	option = { 
+#		trigger = {
+#		has_completed_focus = hea_nf_fog_of_mercy
+#        }
+#		name = nf_event_hea.100.a
+#		hidden_effect = {
+#		country_event = { id = nf_event_hea.101 days = 2}
+#		}
+#	}
+#	option = { 
+#		trigger = {
+#		has_completed_focus = hea_nf_boilers_of_justice
+#        }
+#		name = nf_event_hea.100.b
+#		create_wargoal = { 
+#			type = annex_everything 
+#			target = HGH
+#		}
+#	}
+#}
 
-	is_triggered_only = yes
-
-	option = { 
-		trigger = {
-		has_completed_focus = hea_nf_fog_of_mercy
-        }
-		name = nf_event_hea.100.a
-		hidden_effect = {
-		country_event = { id = nf_event_hea.101 days = 2}
-		}
-	}
-	option = { 
-		trigger = {
-		has_completed_focus = hea_nf_boilers_of_justice
-        }
-		name = nf_event_hea.100.b
-	create_wargoal =
-				{ 
-				type = annex_everything target = HGH
-				}
-	}
-}
-
-country_event = { 
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.101" }
-	id = nf_event_hea.101
-	title = nf_event_hea.101.t
-	desc = nf_event_hea.101.desc
-	picture = GFX_event_HEA_crusade
-
-	is_triggered_only = yes
-
-	option = { 
-		name = nf_event_hea.101.a
-		create_wargoal =
-				{ type = annex_everything target = HGH }
-		
-	}
-	
-}
+#country_event = { 
+#	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.101" }
+#	id = nf_event_hea.101
+#	title = nf_event_hea.101.t
+#	desc = nf_event_hea.101.desc
+#	picture = GFX_event_HEA_crusade
+#
+#	is_triggered_only = yes
+#
+#	option = { 
+#		name = nf_event_hea.101.a
+#		create_wargoal =
+#				{ type = annex_everything target = HGH }
+#		
+#	}
+#	
+#}
 ####New Canaan
 country_event = { 
 	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_event_hea.266" }
@@ -593,11 +593,6 @@ country_event = {
 	desc = nf_event_hea.600.desc
 	picture = GFX_event_hea_hgh_burning
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		has_completed_focus = hea_nf_reject_elite_1
-		owns_state = 172
-		}
 	
 	option = { 	
 		name = nf_event_hea.600.a
@@ -624,11 +619,7 @@ country_event = {
 	desc = nf_event_hea.602.desc
 	picture = GFX_event_hea_elijahs_flag
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		has_completed_focus = hea_nf_reject_elite_1
-		owns_state = 303
-	}
+
 	option = { 	
 		name = nf_event_hea.602.a
 	}
@@ -641,11 +632,7 @@ country_event = {
 	desc = nf_event_hea.603.desc
 	picture = GFX_event_hea_ezekias_flag
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 484
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.603.a
 	}
@@ -658,12 +645,7 @@ country_event = {
 	desc = nf_event_hea.604.desc
 	picture = GFX_event_hea_schism_fixed
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 484
-		owns_state = 303
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.604.a
 	}
@@ -676,11 +658,7 @@ country_event = {
 	desc = nf_event_hea.605.desc
 	picture = GFX_event_hea_amelia_flag_relic
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 291
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.605.a
 	}
@@ -693,11 +671,7 @@ country_event = {
 	desc = nf_event_hea.606.desc
 	picture = GFX_event_hea_leahs_flag
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 253
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.606.a
 	}
@@ -710,11 +684,7 @@ country_event = {
 	desc = nf_event_hea.607.desc
 	picture = GFX_event_brotherhood_HEA
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 157
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.607.a
 	}
@@ -727,11 +697,7 @@ country_event = {
 	desc = nf_event_hea.608.desc
 	picture = GFX_event_hea_elias_flag
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 551
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.608.a
 	}
@@ -744,11 +710,7 @@ country_event = {
 	desc = nf_event_hea.609.desc
 	picture = GFX_event_hea_junias_flag
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 211
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.609.a
 	}
@@ -761,11 +723,7 @@ country_event = {
 	desc = nf_event_hea.610.desc
 	picture = GFX_event_hea_cassian_flag
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 520
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.610.a
 	}
@@ -778,11 +736,7 @@ country_event = {
 	desc = nf_event_hea.611.desc
 	picture = GFX_event_hea_amelia_flag_relic
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 478
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.611.a
 	}
@@ -795,11 +749,7 @@ country_event = {
 	desc = nf_event_hea.612.desc
 	picture = GFX_event_claras_flag
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 285
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.612.a
 	}
@@ -812,11 +762,7 @@ country_event = {
 	desc = nf_event_hea.613.desc
 	picture = GFX_event_hea_amelia_flag_relic
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 163
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.613.a
 	}
@@ -829,11 +775,7 @@ country_event = {
 	desc = nf_event_hea.614.desc
 	picture = GFX_event_hea_amelia_flag_relic
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 39
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.614.a
 	}
@@ -846,11 +788,7 @@ country_event = {
 	desc = nf_event_hea.615.desc
 	picture = GFX_event_hea_amelia_flag_relic
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 656
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.615.a
 		country_event = { id = nf_event_hea.616 days = 56 }
@@ -875,12 +813,7 @@ country_event = {
 	desc = nf_event_hea.617.desc
 	picture = GFX_event_TTM_repository
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 38
-		owns_state = 554
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.617.a
 	}
@@ -893,11 +826,7 @@ country_event = {
 	desc = nf_event_hea.618.desc
 	picture = GFX_event_hea_amelia_flag_relic
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 525
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.618.a
 	}
@@ -910,11 +839,7 @@ country_event = {
 	desc = nf_event_hea.619.desc
 	picture = GFX_event_assemble_the_legion
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 5
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.619.a
 		country_event = { id = nf_event_hea.6191 }
@@ -939,11 +864,7 @@ country_event = {
 	desc = nf_event_hea.620.desc
 	picture = GFX_event_tex_dont_mess
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 892
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.620.a
 		country_event = { id = nf_event_hea.6201 }
@@ -968,11 +889,7 @@ country_event = {
 	desc = nf_event_hea.621.desc
 	picture = GFX_event_hea_amelia_flag_relic
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 746
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.621.a
 	}
@@ -985,11 +902,7 @@ country_event = {
 	desc = nf_event_hea.622.desc
 	picture = GFX_event_gente_de_sol_villa
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 471
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.622.a
 	}
@@ -1002,11 +915,7 @@ country_event = {
 	desc = nf_event_hea.623.desc
 	picture = GFX_event_firing_sentry_bot
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 755
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.623.a
 		country_event = { id = nf_event_hea.6231 }
@@ -1031,11 +940,7 @@ country_event = {
 	desc = nf_event_hea.624.desc
 	picture = GFX_event_hea_amelia_flag_relic
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 1149
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.624.a
 	}
@@ -1048,11 +953,7 @@ country_event = {
 	desc = nf_event_hea.625.desc
 	picture = GFX_event_hea_washington_husks
 	fire_only_once = yes
-	trigger = {
-		tag = HEA
-		owns_state = 84
-		has_completed_focus = hea_nf_reject_elite_1
-	}
+
 	option = { 	
 		name = nf_event_hea.625.a
 		country_event = { id = nf_event_hea.6251 }

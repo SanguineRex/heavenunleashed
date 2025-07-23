@@ -23,6 +23,400 @@ on_actions = {
 					set_variable = { hea_fervor_resistance_growth_var = 0 } #Remove Bonus of resistance growth reduced by 20%
 				}
 			}
+			#Conquest Events for 10th Crusade
+			if = { #Only check for capital only so it save performance
+				limit = { 
+					original_tag = HEA #Check if ROOT is HEA first
+					has_country_flag = hea_vengance_path #10th crusade path
+				}
+				if = {
+					limit = { #High Chapel
+						NOT = { has_country_flag = hea_conquered_hgh_event_flag } #Prevent event firing again
+						172 = { #High Chapel's capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = { 
+						set_country_flag = hea_conquered_hgh_event_flag
+						country_event = nf_event_hea.600 
+					}
+				}
+				if = {
+					limit = { #Murtaugh
+						NOT = { has_country_flag = hea_conquered_mur_event_flag }
+						303 = { #Capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_mur_event_flag
+						country_event = nf_event_hea.602
+					}
+				}
+				if = {
+					limit = { #Lord Anointed
+						NOT = { has_country_flag = hea_conquered_ano_event_flag }
+						484 = { #Capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_ano_event_flag
+						country_event = nf_event_hea.603
+					}
+				}
+				if = {
+					limit = { #Schism Ended
+						NOT = { has_country_flag = hea_conquered_mur_ano_event_flag }
+						303 = { #MUR
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+						484 = { #ANO
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_mur_ano_event_flag
+						country_event = nf_event_hea.604
+					}
+				}
+				if = {
+					limit = { #Vault City
+						NOT = { has_country_flag = hea_conquered_vlt_event_flag }
+						291 = { #Capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_vlt_event_flag
+						country_event = nf_event_hea.605
+					}
+				}
+				if = {
+					limit = { #NCR
+						NOT = { has_country_flag = hea_conquered_ncr_event_flag }
+						253 = { #Capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_ncr_event_flag
+						country_event = nf_event_hea.606
+					}
+				}
+				if = {
+					limit = { #BOS
+						NOT = { has_country_flag = hea_conquered_bos_event_flag }
+						157 = { #Capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_bos_event_flag
+						country_event = nf_event_hea.607
+					}
+				}
+				if = {
+					limit = { #New Canaan
+						NOT = { has_country_flag = hea_conquered_ncn_event_flag }
+						551 = { #Capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_ncn_event_flag
+						country_event = nf_event_hea.608
+					}
+				}
+				if = {
+					limit = { #New Vegas
+						NOT = { has_country_flag = hea_conquered_veg_event_flag }
+						211 = { #Capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_veg_event_flag
+						country_event = nf_event_hea.609
+					}
+				}
+				if = {
+					limit = { #CES
+						NOT = { has_country_flag = hea_conquered_ces_event_flag }
+						520 = { #Capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_ces_event_flag
+						country_event = nf_event_hea.610
+					}
+				}
+				if = {
+					limit = { #EHT
+						NOT = { has_country_flag = hea_conquered_eht_event_flag }
+						478 = { #Capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_eht_event_flag
+						country_event = nf_event_hea.611
+					}
+				}
+				if = {
+					limit = { #New Reno
+						NOT = { has_country_flag = hea_conquered_new_event_flag }
+						285 = { #Capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_new_event_flag
+						country_event = nf_event_hea.612
+					}
+				}
+				if = {
+					limit = { #Shi
+						NOT = { has_country_flag = hea_conquered_shi_event_flag }
+						163 = { #Capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_shi_event_flag
+						country_event = nf_event_hea.613
+					}
+				}
+				if = {
+					limit = { #Eureka
+						NOT = { has_country_flag = hea_conquered_eur_event_flag }
+						39 = { #Capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_eur_event_flag
+						country_event = nf_event_hea.614
+					}
+				}
+				if = {
+					limit = { #MacArthur
+						NOT = { has_country_flag = hea_conquered_mca_event_flag }
+						656 = { #Capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_mca_event_flag
+						country_event = nf_event_hea.615
+					}
+				}
+				if = {
+					limit = { #Twin Mothers
+						NOT = { has_country_flag = hea_conquered_ttm_event_flag }
+						OR = {
+							38 = { #Capital NEW
+								OR = {
+									is_owned_and_controlled_by = HEA
+									controller = { is_ally_with = HEA }
+								}
+							}
+							554 = { #Capital OLD
+								OR = {
+									is_owned_and_controlled_by = HEA
+									controller = { is_ally_with = HEA }
+								}
+							}
+						}
+						TTM = { exists = no } #Make sure they are really ded
+					}
+					HEA = {
+						set_country_flag = hea_conquered_ttm_event_flag
+						country_event = nf_event_hea.617
+					}
+				}
+				if = {
+					limit = { #Hand Dogs
+						NOT = { has_country_flag = hea_conquered_han_event_flag }
+						525 = { #Capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_han_event_flag
+						country_event = nf_event_hea.618
+					}
+				}
+				if = {
+					limit = { #Lanius Cohort
+						NOT = { has_country_flag = hea_conquered_lac_event_flag }
+						5 = { #Capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_lac_event_flag
+						country_event = nf_event_hea.619
+					}
+				}
+				if = {
+					limit = { #texas
+						NOT = { has_country_flag = hea_conquered_texas_event_flag }
+						892 = { #Dallas
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+						921 = { #Lone Star
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+						915 = { #Lone Star
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_texas_event_flag
+						country_event = nf_event_hea.620
+					}
+				}
+				if = {
+					limit = { #Rio Grande Republic
+						NOT = { has_country_flag = hea_conquered_rrg_event_flag }
+						746 = { #Capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_rrg_event_flag
+						country_event = nf_event_hea.621
+					}
+				}
+				if = {
+					limit = { #Gente Del Sol
+						NOT = { has_country_flag = hea_conquered_gdh_event_flag }
+						471 = { #Capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_gdh_event_flag
+						country_event = nf_event_hea.622
+					}
+				}
+				if = {
+					limit = { #Santa Anna
+						NOT = { has_country_flag = hea_conquered_arm_event_flag }
+						755 = { #Capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_arm_event_flag
+						country_event = nf_event_hea.623
+					}
+				}
+				if = {
+					limit = { #Loid Ministry
+						NOT = { has_country_flag = hea_conquered_loi_event_flag }
+						1149 = { #Capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_loi_event_flag
+						country_event = nf_event_hea.624
+					}
+				}
+				if = {
+					limit = { #Washington Brotherhood
+						NOT = { has_country_flag = hea_conquered_wbh_event_flag }
+						84 = { #Capital
+							OR = {
+								is_owned_and_controlled_by = HEA
+								controller = { is_ally_with = HEA }
+							}
+						}
+					}
+					HEA = {
+						set_country_flag = hea_conquered_wbh_event_flag
+						country_event = nf_event_hea.625
+					}
+				}
+			}
 		}
 	}
 	on_war = { #This is way better than declare_war cause it take in account of joining a war, getting war dec on and dec war at the same time, while save on performance and don't do a check everytime HEA's dec a war, just when goes from peace to war status - @Deez
@@ -69,7 +463,7 @@ on_actions = {
 	}
 	on_state_control_changed = {
 		effect = {
-			if = {
+			if = { #Scripting to update the territory management GUI
 				limit = {
 					FROM.FROM = {
 						OR = {
@@ -89,7 +483,7 @@ on_actions = {
 						}
 					}
 					HEA = { has_country_flag = hea_oregon_states_to_bdt } #Accepted to transfer Oregon Territories to BDT
-					BDT = { is_ally_with = HEA }
+					BDT = { is_ally_with = HEA } #Prevent edge cases when BDT isn't ally for some reason
 					FROM.FROM = {
 						OR = { #in Oregon
 							region = 58
@@ -124,7 +518,7 @@ on_actions = {
 	}
 	on_puppet = {
 		effect = {
-			if = {
+			if = { #Making sure puppeted BDT and ROT have the correct leaders since they have different ideology than HEA
 				limit = {
 					ROOT = {
 						OR = {
@@ -145,12 +539,13 @@ on_actions = {
 					add_to_variable = { hea_state_manage_gui_dirty = 0.01 } #Update State Management GUI
 				}
 			}
-			if = {
+			if = { #If players puppet nations while the mandate is given to BDT, those nations's lands in Oregon will be given to BDT
 				limit = {
 					FROM = { 
 						original_tag = HEA 
 						has_country_flag = hea_oregon_states_to_bdt
 					}
+					BDT = { is_ally_with = HEA } #Prevent edge cases when BDT isn't ally for some reason
 				}
 				ROOT = {
 					every_owned_state = {
@@ -171,7 +566,7 @@ on_actions = {
 	}
 	on_release_as_puppet = {
 		effect = {
-			if = {
+			if = { #Making sure puppeted BDT and ROT have the correct leaders since they have different ideology than HEA
 				limit = {
 					ROOT = {
 						OR = {
@@ -199,7 +594,7 @@ on_actions = {
 	on_annex = {
 		effect = {
 			if = {
-				limit = {
+				limit = { #If player lower a puppeted BDT autonomy with Oregon Mandate and annex them, release them again as puppet and give them Oregon territories HEA's owned
 					ROOT = {
 						original_tag = HEA
 						has_country_flag = hea_oregon_states_to_bdt

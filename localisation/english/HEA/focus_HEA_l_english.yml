@@ -743,91 +743,73 @@ hea_right_hand_of_god_desc: "§R\"However, I will tell you what is inscribed in 
 
 hea_the_nucleus: "Enriching the Nucleus"
 hea_the_nucleus_desc: "The Nucleus stands prepared to send its men in a grand show of faith in the name of the Lord but our home can be even grander! We'll ensure it is so!"
-hea_the_nucleus_tt: "Grant §BRivers§!, §8Lands§! and §4Heavens§!: A §YNational Spirit§! that you can improve upon to grant various §Gbonuses§! to §g[HEA.GetNameWithFlag]§!."
+hea_the_nucleus_tt: "Grant §BRivers§!, §8Lands§! and §4Heavens§!: A §YNational Spirit§! that can be improved upon to grant various §Gbonuses§! to §g[HEA.GetNameWithFlag]§!."
 
 hea_taming_rivers: "Taming the §BRivers§!"
 hea_taming_rivers_desc: "The §BRivers§! of the Wasteland are the lifeblood of any trading empire, truthfully, we aren't one, but if we ever hope to spread the Light of the Lord all across this blightful land, then the waters of [HEA.GetName] will need to be tamed."
-hea_taming_rivers_tt: "§YThis will give us 2% Stability and a National Spirit that can be improved upon§!"
 
 hea_dams: "Building Dams"
 hea_dams_desc: "Every Summer large quantities of water come pouring down, flooding some of our more stubborn children regardless of all the drainage systems we build, and so the higher echelons of the Church have decided to put aside some manpower in the hopes that three great dams will protect the flock."
-hea_dams_tt: "§YThis will give us 1% Stability and 20£resources_strip|1§!"
 
 hea_repurposing_wattech: "Using the Dam for energy?"
 hea_repurposing_wattech_desc: "After unearthing the knowledge needed to build the dams, the workers have come across something very interesting, dams in the Old World could use Hydraulics for power, while interesting, we could divert the water, using it to cool the great Nucleus and perhaps even allowing the Lord Blessed Generator to unleash more energy than it has in the past hundred years."
-hea_repurposing_wattech_tt: "§YThis will give us 1% Stability and 20£resources_strip|2§!"
 
 hea_water_mills: "Water Mills"
 hea_water_mills_desc: "The §BRivers§! floating near [HEA.GetName] can be taken advantage of, constructing watermills all along our Eastern territories can help us gather energy, though not strictly necessary, the power from the mills could help future projects..."
-hea_river_mills_tt: "§YThis will give 2% Stability and unlock Decisions to build water mills§!"
+hea_river_mills_tt: "Unlocks §YDecisions§! to build §YWater Mills§!"
 
 hea_bridges: "Reparing Old Bridges"
 hea_bridges_desc: "Most of the bridges we rely on to traverse our great land are pre-war constructs, great bridges in truth, but with the help of Steam, Learned Priests, Scientists, and Faith, we can improve upon them to ensure that they'll never fall."
-hea_bridges_tt: "§YThis will give us 1% Stability, 2% Division Speed and 5% Infrastructure Construction Speed§!"
 
-hea_ferries:0 "River Ferries"
+hea_ferries: "River Ferries"
 hea_ferries_desc: "As our light shines ever further, the Knights, Priests, and Pilgrims of our great land need to treck ever further; while the strength of [HEA.GetName] has never been its navy, perhaps looking into some plans for ferrying our people would be prudent."
-hea_ferries_tt: "§YThis will give us 1% Stability, 3% Division Speed and 5% Infrastructure Construction Speed§!"
 
 hea_priest_barges: "Steam Barges"
 hea_priest_barges_desc: "With the boats we've already built, some of our Priests have thought of a truly revolutionary idea! Steam Barges that carry churches atop them, spreading the word of the Lord to all!"
-hea_priest_barges_tt: "§YThis will give us 2% Stability and allow us to pursue other development projects§!"
 
 hea_taming_land: "Taming the §8Lands§!"
 hea_taming_land_desc: "God gifted us Earth to do what we will and we have conquered it in truth...yet have we tamed it? No, in truth, we simply reside in it but those of Heaven's Gate were chosen by the lord. We will use science, the nucleus, and all of its ardent people to bring the land to heel."
-hea_taming_land_tt: "§YThis will give us 5% Max Factories in a State and a National Spirit that can be improved upon§!"
 
 hea_hothouse: "Eternal Spring"
 hea_hothouse_desc: "There are ancient schematics that detail how we could use the steam to replicate spring, so that our farmers could toil throughout all seasons, potentially freeing up some of our factories that would originally ensure our people fed."
-hea_hothouse_tt: "§YThis will give us -7% Consumer Goods Factor and 5% Monthly Population Growth§!"
 
 hea_priestcooks: "Blessed Cooks"
 hea_priestcooks_desc: "Unlike other nations, we don't allow our people to starve in the streets. Food cooked is food given freely, after all, everyone works under the light of the Lord!"
-hea_priestcooks_tt: "§YThis will give us -3% Consumer Goods Factor and 5% Monthly Population Growth§!"
 
 hea_steam_smiths: "Smiths blessed by Steam and the Lord"
 hea_steam_smiths_desc: "The smiths in the Nucleus are some of the best smiths around! However as time goes on more and more materials are used in the pursuit of arming our warriors, expanding the smithing quarter means the miners will need to get to work to ensure they can work at full capacity!"
-hea_steam_smiths_tt: "§YThis will give us 5% Factory Output and unlock Decisions to build steam smiths§!"
+hea_steam_smiths_tt: "Unlocks §YDecisions§! to build §YSteam Smiths§!"
 
 hea_expanding_pipeways: "Preparing for expansion"
 hea_expanding_pipeways_desc: "The Pipeways, the lifeblood of our realm, always need to be expanded, with the aid of some of our more zealous construction workers, we can ensure that mountains, hills, and even rivers pose no trouble in any future expansions"
-hea_expanding_pipeways_tt: "§YThis will give us 5% Max Factories in a State and 2% Construction Speed§!"
 
 hea_heated_homes: "Homes blessed by Steam"
 hea_heated_homes_desc: "With the aid of our Scientists, we will ensure that our people never go cold no matter the time of year! (So long as a Steam-Reactor is on hand of course.)"
-hea_heated_homes_tt: "§YThis will give us 5% Max Factories in a State and 3% Construction Speed§!"
 
 hea_anewold_gate: "Steam Wonderland"
 hea_anewold_gate_desc: "In a wasteland where people starve, freeze to death, and die without ever knowing the light of the Lord; the people of [HEA.GetName] were blessed by Holy Steam, and given time, the rest of the world will be as blessed as they are."
-hea_anewold_gate_tt: "§YThis will give us -5% Consumer Goods Factor, 5% Construction Speed and allow us to pursue other development projects§!"
 
 hea_taming_heavens: "Taming the §4Heavens§!"
 hea_taming_heavens_desc: "How can we say to be close to God when we huddle beneath the mountains? Should we not endeavor to master what was given to us? Of course we should! WE are the chosen of God, WE were gifted the Nucleus, WE are the masters of our minds, and WE shall tame the Heaven's themselves..."
-hea_taming_heavens_tt: "§YThis will give us 2% War Support and a National Spirit that can be improved upon§!"
 
 hea_lost_scientists: "Astray Alchemists and Hermits"
 hea_lost_scientists_desc: "Hundreds of scientists have abandoned the fold out of misguided belief or simple greed, thankfully the majority of them have simply fled to live quiet lives in the mountains, let's see if we can't convince them to return."
-hea_lost_scientists_tt: "§YThis will give us 1% War Support and unlock Decisions to 'invites' Scientists around the wasteland§!"
+hea_lost_scientists_tt: "Unlocks §YDecisions§! to §Y'invites' Scientists§! around the wasteland"
 
 hea_mountain_monestaries: "Michael's Vision"
 hea_mountain_monestaries_desc: "Michael has given us a prophecy: \"To defend our faith, our populous will need to be conscripted. It will be a defensive force, meant to deter any and all invaders. We will NOT have another Innocence tragedy!\" The prophet speaks truth, we need to defend our lands. Let us just hope Michael doesn't have any other plans for this 'militia'."
-hea_mountain_monestaries_tt: "§YThis will give us 1% War Support and 5% Recruitable Population Factor§!"
 
 hea_shrines_to_reactor: "Soldiers of the Prophet"
 hea_shrines_to_reactor_desc: "News from Post: \"The Council has now started conscriptions for people outside of the Nucleus. Will anyone be spared?\" Those that work in the Post are scared that the Council and Prophet Michael might be going to the extreme, are we going to war again, they ask. No one knows who might be called up fight next. One thing is for sure, things are changing in Heaven's Gate."
-hea_shrines_to_reactor_tt: "§YThis will give us 1% War Support and 5% Recruitable Population Factor§!"
 
 hea_barnabus_reactor: "Funding from Heaven"
 hea_barnabus_reactor_desc: "News from the Council: \"The mining division has discovered ore within the ceiling of the caves. Prophet Michael has decided to use these to better support our weapon departments. With all this support towards the militia there are bound to be some new recruits\", the papers are going wild with all this talk about the support for the forces, lets just hope it stops there..."
-hea_barnabus_reactor_tt: "§YThis will give us 1% War Support, 2% Recruitable Population Factor and 5% Division Recovery Rate§!"
 
 hea_hollows_bellow: "It didn't stop there..."
 hea_hollows_bellow_desc: "News from Prophet Michael: \"I am but a Prophet, however, I know when we are scared and tired. Our defense consists of men of flesh and bone, but our scholars are prepared to bless them with Atom and technology. When we defend our lands, invaders will find men of flesh and bones with metal and steam to protect them!\" The Prophet seems to hint that our men will have suits of metal and vehicles of destruction, but why would we need that to defend the Steam Core...aren't we safe enough?"
-hea_hollows_bellow_tt: "§YThis will give us 1% War Support, 5% Division Recovery Rate and 5% Division Breakthrough§!"
 
 hea_steam_wonderland: "Ever closer to Heaven"
 hea_steam_wonderland_desc: "News from the Council: \"Men of Metal, Smiths, and Scholars alike, we are proud to call you our Defenders of The Steam. With your support on spreading the news of the creation of the army, we now can expand the factories and get you pious soldiers some well awaited gear. Council Signing off...\" The people are now ready to defend or possibly attack foreign invaders."
-hea_steam_wonderland_tt: "§YThis will give us 3% War Support and 3% Recruitable Population Factor§!"
 
 
 #########The Grand Inquisition

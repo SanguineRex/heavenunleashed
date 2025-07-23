@@ -3364,7 +3364,12 @@ focus = {
 		completion_reward = {
 			add_to_variable = { hea_tame_stability_factor_var = 0.02}
 			add_political_power = 60
-			custom_effect_tooltip = hea_taming_rivers_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_taming_the_river
+				}
+			}
 		}
 	}
 	#Building Dams
@@ -3383,7 +3388,12 @@ focus = {
 		completion_reward = {
 			add_to_variable = { hea_tame_stability_factor_var = 0.01 }
 			add_to_variable = { hea_tame_country_resource_water_var = 20 }
-			custom_effect_tooltip = hea_dams_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_building_dams
+				}
+			}
 		}
 	}
 	#Using the Dam for energy?
@@ -3402,7 +3412,12 @@ focus = {
 		completion_reward = {
 			add_to_variable = { hea_tame_stability_factor_var = 0.01 }
 			add_to_variable = { hea_tame_country_resource_energy_var = 20 }
-			custom_effect_tooltip = hea_repurposing_wattech_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_using_dam_for_energy
+				}
+			}
 		}
 	}
 	#Water Mills
@@ -3420,6 +3435,12 @@ focus = {
 
 		completion_reward = {
 			add_to_variable = { hea_tame_stability_factor_var = 0.02 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_water_mill_focus
+				}
+			}
 			custom_effect_tooltip = hea_river_mills_tt
 		}
 	}
@@ -3440,7 +3461,12 @@ focus = {
 			add_to_variable = { hea_tame_stability_factor_var = 0.01 }
 			add_to_variable = { hea_tame_army_speed_factor_var = 0.02 }
 			add_to_variable = { hea_tame_production_speed_infrastructure_factor_var = 0.05 }
-			custom_effect_tooltip = hea_bridges_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_reparing_old_bridges
+				}
+			}
 		}
 	}
 	#River Ferries
@@ -3460,7 +3486,12 @@ focus = {
 			add_to_variable = { hea_tame_stability_factor_var = 0.01 }
 			add_to_variable = { hea_tame_army_speed_factor_var = 0.03 }
 			add_to_variable = { hea_tame_production_speed_infrastructure_factor_var = 0.05 }
-			custom_effect_tooltip = hea_ferries_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_river_ferries
+				}
+			}
 		}
 	}
 	#Steam Barges
@@ -3515,7 +3546,12 @@ focus = {
 				}
 			}
 			add_to_variable = { hea_tame_stability_factor_var = 0.02 }
-			custom_effect_tooltip = hea_priest_barges_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_steam_barges
+				}
+			}
 		}
 	}
 	###Lands
@@ -3535,7 +3571,12 @@ focus = {
 		completion_reward = {
 			add_to_variable = { hea_tame_global_building_slots_factor_var = 0.05 }
 			add_political_power = 60
-			custom_effect_tooltip = hea_taming_land_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_taming_the_land
+				}				
+			}
 		}
 	}
 	#Eternal Spring
@@ -3554,7 +3595,12 @@ focus = {
 		completion_reward = {
 			add_to_variable = { hea_tame_consumer_goods_factor_var = -0.07 }
 			add_to_variable = { hea_tame_monthly_population_var = 0.05 }
-			custom_effect_tooltip = hea_hothouse_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_eternal_spring
+				}				
+			}
 		}
 	}
 	#Blessed Cooks
@@ -3573,7 +3619,12 @@ focus = {
 		completion_reward = {
 			add_to_variable = { hea_tame_consumer_goods_factor_var = -0.03 }
 			add_to_variable = { hea_tame_monthly_population_var = 0.05 }
-			custom_effect_tooltip = hea_priestcooks_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_blessed_cooks
+				}			
+			}
 		}
 	}
 	#Smiths blessed by Steam and the Lord
@@ -3591,6 +3642,12 @@ focus = {
 
 		completion_reward = {
 			add_to_variable = { hea_tame_industrial_capacity_factory_var = 0.05 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_steam_smith_focus
+				}				
+			}
 			custom_effect_tooltip = hea_steam_smiths_tt
 		}
 	}
@@ -3610,7 +3667,12 @@ focus = {
 		completion_reward = {
 			add_to_variable = { hea_tame_global_building_slots_factor_var = 0.05 }
 			add_to_variable = { hea_tame_production_speed_buildings_factor_var = 0.02 }
-			custom_effect_tooltip = hea_expanding_pipeways_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_preparing_for_expansion			
+				}
+			}
 		}
 	}
 	#Homes blessed by Steam
@@ -3629,7 +3691,12 @@ focus = {
 		completion_reward = {
 			add_to_variable = { hea_tame_global_building_slots_factor_var = 0.05 }
 			add_to_variable = { hea_tame_production_speed_buildings_factor_var = 0.03 }
-			custom_effect_tooltip = hea_heated_homes_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_home_blessed_by_steam
+				}				
+			}
 		}
 	}
 	#Steam Wonderland
@@ -3670,7 +3737,12 @@ focus = {
 			}
 			add_to_variable = { hea_tame_consumer_goods_factor_var = -0.05 }
 			add_to_variable = { hea_tame_production_speed_buildings_factor_var = 0.05 }
-			custom_effect_tooltip = hea_anewold_gate_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_steam_wonderland
+				}				
+			}
 		}
 	}
 	####Heavens (Mountains)
@@ -3690,7 +3762,12 @@ focus = {
 		completion_reward = {
 			add_to_variable = { hea_tame_war_support_factor_var = 0.02 }
 			add_political_power = 60
-			custom_effect_tooltip = hea_taming_heavens_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_taming_the_heaven
+				}
+			}
 		}
 	}
 	#Astray Alchemists and Hermits
@@ -3708,6 +3785,12 @@ focus = {
 
 		completion_reward = {
 			add_to_variable = { hea_tame_war_support_factor_var = 0.01 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_alchemists_focus
+				}
+			}
 			custom_effect_tooltip = hea_lost_scientists_tt
 		}
 	}
@@ -3727,7 +3810,12 @@ focus = {
 		completion_reward = {
 			add_to_variable = { hea_tame_war_support_factor_var = 0.01 }
 			add_to_variable = { hea_tame_conscription_factor_var = 0.05 }
-			custom_effect_tooltip = hea_mountain_monestaries_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_michael_vision_soldier_of_prophept
+				}
+			}
 		}
 	}
 	#Soldiers of the Prophet
@@ -3746,7 +3834,12 @@ focus = {
 		completion_reward = {
 			add_to_variable = { hea_tame_war_support_factor_var = 0.01 }
 			add_to_variable = { hea_tame_conscription_factor_var = 0.05 }
-			custom_effect_tooltip = hea_shrines_to_reactor_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_michael_vision_soldier_of_prophept
+				}
+			}
 		}
 	}
 	#Funding from Heaven
@@ -3766,7 +3859,12 @@ focus = {
 			add_to_variable = { hea_tame_army_morale_factor_var = 0.05 }
 			add_to_variable = { hea_tame_conscription_factor_var = 0.02 }
 			add_to_variable = { hea_tame_war_support_factor_var = 0.01 }
-			custom_effect_tooltip = hea_barnabus_reactor_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_funding_from_heaven
+				}
+			}
 		}
 	}
 	#It didn't stop there...
@@ -3786,7 +3884,12 @@ focus = {
 			add_to_variable = { hea_tame_army_morale_factor_var = 0.05 }
 			add_to_variable = { hea_tame_breakthrough_factor_var = 0.05 }
 			add_to_variable = { hea_tame_war_support_factor_var = 0.01 }
-			custom_effect_tooltip = hea_hollows_bellow_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_it_didnt_stop_there
+				}
+			}
 		}
 	}
 	#Ever closer to Heaven
@@ -3827,7 +3930,12 @@ focus = {
 			}
 			add_to_variable = { hea_tame_war_support_factor_var = 0.03 }
 			add_to_variable = { hea_tame_conscription_factor_var = 0.03 }
-			custom_effect_tooltip = hea_steam_wonderland_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_ever_closer_to_heaven
+				}
+			}
 		}
 	}
 
@@ -3849,38 +3957,27 @@ focus = {
 				log = "[GetDateText]: [Root.GetName] hea_nf_industry_5 entered"
 			}
 			116 = {
-				if = {
-					limit = {
-						is_valid_state_for_4_arms_factories = yes
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
-				if = {
-					limit = {
-						is_valid_state_for_4_civilian_factories = yes
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
 				set_temp_variable = { development_to_add = 2 }
 				add_development_to_node = yes
 			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_industry_5 exited"
-			}
 			swap_ideas = {
 				add_idea = hea_rebirth_steam
 				remove_idea = hea_steam_power
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] hea_nf_industry_5 exited"
 			}
 		}
 	}

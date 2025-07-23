@@ -1,29 +1,29 @@
-########The 10th Crusade
-HEA_the_tenth_crusade = {	#Is this a cheat decision or sth? - @Deez
-	HEA_arming_faithful = {
-		icon = decision_cross
-		
-		visible = { original_tag = HEA }
-
-		fire_only_once = no
-
-		modifier = { }
-
-		days_remove = 60
-		days_re_enable = 30
-
-		cost = 50
-
-		complete_effect = {
-			add_manpower = 500
-		}
-
-		ai_will_do = {
-			base = 0
-		}
-	}
-}
-
+#########The 10th Crusade
+#HEA_the_tenth_crusade = {	#Is this a cheat decision or sth? - @Deez
+#	HEA_arming_faithful = {
+#		icon = decision_cross
+#		
+#		visible = { original_tag = HEA }
+#
+#		fire_only_once = no
+#
+#		modifier = { }
+#
+#		days_remove = 60
+#		days_re_enable = 30
+#
+#		cost = 50
+#
+#		complete_effect = {
+#			add_manpower = 500
+#		}
+#
+#		ai_will_do = {
+#			base = 0
+#		}
+#	}
+#}
+#
 # HEA Conversion Decisions - By HappyNTH #
 # hea_conversion = {
 # 	hea_slow_conversion = { # Converts provinces one by one
@@ -1203,7 +1203,7 @@ hea_state_manage_decision_cat = {
 		visible = {
 			check_variable = { hea_state_manage_gui_decision = 2 } #Oregon
 		}
-		targets = { CHE MDT TRL CCW RBT PMR MLT DIS KLA ARR } #Oregon nations except for TIM, SHO and BDT cause they already exist in a different focus - @Deez
+		targets = { CHE MDT TRL CCW RBT PMR MLT DIS KLA ARR } #Oregon nations except for TIM, SHO and BDT cause they already exist in a different focus/decision - @Deez
 		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
 		target_trigger = { 
 			FROM = {
@@ -1260,44 +1260,38 @@ hea_state_manage_decision_cat = {
 			ROT = { is_ally_with = ROOT }
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = state_manage_oregon_washington_border_decision_trigger_tt
-				all_state = {
-					OR = {
-						NOT = { #Washington and Oregon States
-							region = 58
-							region = 59
-							region = 11
-							region = 37
-							region = 36
-						}
-						OR = {
-							is_owned_and_controlled_by = ROOT
-							controller = { is_ally_with = ROOT }
-						}
-					}
+			#Special thanks to LimonenZitrone for the array idea and Iron Vanguard for the premade arrays - @Deez
+			all_of_scopes = {
+				array = global.oregon_state_array
+				tooltip = state_manage_oregon_control_tt
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+			all_of_scopes = {
+				array = global.washington_state_array
+				tooltip = state_manage_washington_control_tt
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }					
 				}
 			}
 		}
 		complete_effect = {
 			hidden_effect = {
-				every_state = { #Give every states in Oregon to BDT
-					limit = {
-						OR = { 
-							region = 58
-							region = 59
-							region = 11
-						}
-					}
+				#Oregon
+				for_each_scope_loop = {
+					array = global.oregon_state_array
 					transfer_state_to = BDT
 				}
-				every_state = { #Give every states in Washinton to ROT
-					limit = {
-						OR = { 
-							region = 37
-							region = 36
-						}
-					}
+				949 = { transfer_state_to = BDT } #Impassable State, Strawberry Mountain 
+				950 = { transfer_state_to = BDT } #Impassable State, Rock Creek Butte
+				951 = { transfer_state_to = BDT } #Impassable State, Wehana Toucannon
+				952 = { transfer_state_to = BDT } #Impassable State, Wallowa Whitman
+				#Washington
+				for_each_scope_loop = {
+					array = global.washington_state_array
 					transfer_state_to = ROT
 				}
 			}
@@ -1342,7 +1336,13 @@ hea_tame_decision_cat = {
 			add_to_variable = {	hea_tame_country_resource_water_var = 15}
 			set_country_flag = hea_water_mills_built_18_1
 			clr_country_flag = hea_building_water_mills
-			custom_effect_tooltip = hea_water_mills_18_1_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_water_mill_decision_1
+				}
+			}
+			custom_effect_tooltip = hea_water_mills_1_tt
 		}
 	}
 	hea_water_mills_18_2 = {
@@ -1372,7 +1372,13 @@ hea_tame_decision_cat = {
 			add_to_variable = { hea_tame_country_resource_energy_var = 8}
 			clr_country_flag = hea_building_water_mills
 			set_country_flag = hea_water_mills_built_18_2
-			custom_effect_tooltip = hea_water_mills_18_2_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_water_mill_decision_2
+				}
+			}
+			custom_effect_tooltip = hea_water_mills_2_tt
 		}
 	}
 	hea_water_mills_18_3 = {
@@ -1404,7 +1410,12 @@ hea_tame_decision_cat = {
 			add_to_variable = { hea_tame_monthly_population_var = 0.05}
 			add_to_variable = { hea_tame_non_core_manpower_var = 0.05}
 			clr_country_flag = hea_building_water_mills
-			custom_effect_tooltip = hea_water_mills_18_3_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_water_mill_decision_3
+				}
+			}
 		}
 	}
 	#116-Eastern Passage
@@ -1431,7 +1442,13 @@ hea_tame_decision_cat = {
 			add_to_variable = {	hea_tame_country_resource_water_var = 15}
 			set_country_flag = hea_water_mills_built_116_1
 			clr_country_flag = hea_building_water_mills
-			custom_effect_tooltip = hea_water_mills_116_1_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_water_mill_decision_1
+				}
+			}
+			custom_effect_tooltip = hea_water_mills_1_tt
 		}
 	}
 	hea_water_mills_116_2 = {
@@ -1461,7 +1478,13 @@ hea_tame_decision_cat = {
 			add_to_variable = { hea_tame_country_resource_energy_var = 8}
 			clr_country_flag = hea_building_water_mills
 			set_country_flag = hea_water_mills_built_116_2
-			custom_effect_tooltip = hea_water_mills_116_2_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_water_mill_decision_2
+				}
+			}
+			custom_effect_tooltip = hea_water_mills_2_tt
 		}
 	}
 	hea_water_mills_116_3 = {
@@ -1492,7 +1515,12 @@ hea_tame_decision_cat = {
 			add_to_variable = { hea_tame_monthly_population_var = 0.05}
 			add_to_variable = { hea_tame_non_core_manpower_var = 0.05}
 			clr_country_flag = hea_building_water_mills
-			custom_effect_tooltip = hea_water_mills_116_3_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_water_mill_decision_3
+				}
+			}
 		}
 	}
 	#278-Windy Isolation
@@ -1519,7 +1547,13 @@ hea_tame_decision_cat = {
 			add_to_variable = {	hea_tame_country_resource_water_var = 15}
 			set_country_flag = hea_water_mills_built_278_1
 			clr_country_flag = hea_building_water_mills
-			custom_effect_tooltip = hea_water_mills_278_1_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_water_mill_decision_1
+				}
+			}
+			custom_effect_tooltip = hea_water_mills_1_tt
 		}
 	}
 	hea_water_mills_278_2 = {
@@ -1549,7 +1583,13 @@ hea_tame_decision_cat = {
 			add_to_variable = { hea_tame_country_resource_energy_var = 8}
 			clr_country_flag = hea_building_water_mills
 			set_country_flag = hea_water_mills_built_278_2
-			custom_effect_tooltip = hea_water_mills_278_2_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_water_mill_decision_2
+				}
+			}
+			custom_effect_tooltip = hea_water_mills_2_tt
 		}
 	}
 	hea_water_mills_278_3 = {
@@ -1580,8 +1620,13 @@ hea_tame_decision_cat = {
 			add_to_variable = { hea_tame_stability_factor_var = 0.025}
 			add_to_variable = { hea_tame_monthly_population_var = 0.05}
 			add_to_variable = { hea_tame_non_core_manpower_var = 0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_water_mill_decision_3
+				}
+			}
 			clr_country_flag = hea_building_water_mills
-			custom_effect_tooltip = hea_water_mills_278_3_tt
 		}
 	}
 	#198-Southern Gate
@@ -1608,7 +1653,13 @@ hea_tame_decision_cat = {
 			add_to_variable = {	hea_tame_country_resource_water_var = 15}
 			set_country_flag = hea_water_mills_built_198_1
 			clr_country_flag = hea_building_water_mills
-			custom_effect_tooltip = hea_water_mills_198_1_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_water_mill_decision_1
+				}
+			}
+			custom_effect_tooltip = hea_water_mills_1_tt
 		}
 	}
 	hea_water_mills_198_2 = {
@@ -1637,7 +1688,13 @@ hea_tame_decision_cat = {
 			add_to_variable = { hea_tame_country_resource_energy_var = 8}
 			clr_country_flag = hea_building_water_mills
 			set_country_flag = hea_water_mills_built_198_2
-			custom_effect_tooltip = hea_water_mills_198_2_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_water_mill_decision_2
+				}
+			}
+			custom_effect_tooltip = hea_water_mills_2_tt
 		}
 	}
 	hea_water_mills_198_3 = {
@@ -1667,8 +1724,13 @@ hea_tame_decision_cat = {
 			add_to_variable = { hea_tame_stability_factor_var = 0.025}
 			add_to_variable = { hea_tame_monthly_population_var = 0.05}
 			add_to_variable = { hea_tame_non_core_manpower_var = 0.05}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_water_mill_decision_3
+				}
+			}
 			clr_country_flag = hea_building_water_mills
-			custom_effect_tooltip = hea_water_mills_198_3_tt
 		}
 	}
 ###Steam Smiths
@@ -1701,7 +1763,13 @@ hea_tame_decision_cat = {
 			add_to_variable = { hea_tame_country_resource_metal_var = 20 }
 			clr_country_flag = hea_building_smiths
 			set_country_flag = hea_smiths_built_1385_1
-			custom_effect_tooltip = hea_smiths_1385_1_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_steam_smith_decision_1
+				}
+			}
+			custom_effect_tooltip = hea_smiths_1_tt
 		}
 	}
 	hea_smiths_1385_2 = {
@@ -1735,7 +1803,12 @@ hea_tame_decision_cat = {
 			add_to_variable = { hea_tame_country_resource_composites_var = 10}
 			clr_country_flag = hea_building_smiths
 			set_country_flag = hea_smiths_built_1385_2
-			custom_effect_tooltip = hea_smiths_1385_2_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_steam_smith_decision_2
+				}
+			}
 		}
 	}
 	#198-Southern Gate
@@ -1767,7 +1840,13 @@ hea_tame_decision_cat = {
 			add_to_variable = { hea_tame_country_resource_metal_var = 20}
 			clr_country_flag = hea_building_smiths
 			set_country_flag = hea_smiths_built_198_1
-			custom_effect_tooltip = hea_smiths_198_1_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_steam_smith_decision_1
+				}
+			}
+			custom_effect_tooltip = hea_smiths_1_tt
 		}
 	}
 	hea_smiths_198_2 = {
@@ -1802,7 +1881,12 @@ hea_tame_decision_cat = {
 			add_to_variable = { hea_tame_country_resource_composites_var = 10}
 			clr_country_flag = hea_building_smiths
 			set_country_flag = hea_smiths_built_198_2
-			custom_effect_tooltip = hea_smiths_198_2_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_steam_smith_decision_2
+				}
+			}
 		}
 	}
 	#276-Stagleap
@@ -1834,7 +1918,13 @@ hea_tame_decision_cat = {
 			add_to_variable = { hea_tame_country_resource_metal_var = 20}
 			clr_country_flag = hea_building_smiths
 			set_country_flag = hea_smiths_built_276_1
-			custom_effect_tooltip = hea_smiths_276_1_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_steam_smith_decision_1
+				}
+			}
+			custom_effect_tooltip = hea_smiths_1_tt
 		}
 	}
 	hea_smiths_276_2 = {
@@ -1869,7 +1959,12 @@ hea_tame_decision_cat = {
 			add_to_variable = { hea_tame_country_resource_composites_var = 10}
 			clr_country_flag = hea_building_smiths
 			set_country_flag = hea_smiths_built_276_2
-			custom_effect_tooltip = hea_smiths_276_2_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_steam_smith_decision_2
+				}
+			}
 		}
 	}
 	#Final-Steam Smiths
@@ -1892,8 +1987,13 @@ hea_tame_decision_cat = {
 		remove_effect = {
 			subtract_from_variable = { hea_tame_country_resource_composites_var = 15}
 			add_to_variable = { hea_tame_industrial_capacity_factory_var = 0.1}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_steam_smith_decision_3
+				}
+			}
 			add_ideas = hea_steam_smiths_weapon
-			custom_effect_tooltip = hea_smiths_final_tt
 		}
 	}
 ###Capture Scientists###
@@ -1928,7 +2028,12 @@ hea_tame_decision_cat = {
 			add_to_variable = { hea_tame_research_speed_factor_var = 0.025 }
 			clr_country_flag = hea_capturing_scientists
 			set_country_flag = hea_captured_scientists_276
-			custom_effect_tooltip = hea_alchemist_276_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_alchemists_decision_1
+				}
+			}
 		}
 	}
 	#30-High Parishes
@@ -1962,7 +2067,12 @@ hea_tame_decision_cat = {
 			add_to_variable = { hea_tame_research_speed_factor_var = 0.025 }
 			clr_country_flag = hea_capturing_scientists
 			set_country_flag = hea_captured_scientists_30
-			custom_effect_tooltip = hea_alchemist_30_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_alchemists_decision_1
+				}
+			}
 		}
 	}
 	#700-Elk Ridge
@@ -1996,7 +2106,12 @@ hea_tame_decision_cat = {
 			add_to_variable = { hea_tame_research_speed_factor_var = 0.025 }
 			clr_country_flag = hea_capturing_scientists
 			set_country_flag = hea_captured_scientists_700
-			custom_effect_tooltip = hea_alchemist_700_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_alchemists_decision_1
+				}
+			}
 		}
 	}
 	#949-Strawberry Mountain
@@ -2030,7 +2145,12 @@ hea_tame_decision_cat = {
 			add_to_variable = { hea_tame_research_speed_factor_var = 0.025 }
 			clr_country_flag = hea_capturing_scientists
 			set_country_flag = hea_captured_scientists_949
-			custom_effect_tooltip = hea_alchemist_949_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_alchemists_decision_1
+				}
+			}
 		}
 	}	
 	#950-Rock Creek
@@ -2064,7 +2184,12 @@ hea_tame_decision_cat = {
 			add_to_variable = { hea_tame_research_speed_factor_var = 0.025 }
 			clr_country_flag = hea_capturing_scientists
 			set_country_flag = hea_captured_scientists_950
-			custom_effect_tooltip = hea_alchemist_950_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_alchemists_decision_1
+				}
+			}
 		}
 	}
 	#Final-Research facility
@@ -2093,12 +2218,13 @@ hea_tame_decision_cat = {
 			set_country_flag = hea_alchemist_final
 		}
 		remove_effect = {
-			add_to_variable = { hea_tame_research_speed_factor_var = 0.075}
-			clr_country_flag = hea_captured_scientists_950
-			clr_country_flag = hea_captured_scientists_949
-			clr_country_flag = hea_captured_scientists_30
-			clr_country_flag = hea_captured_scientists_276
-			clr_country_flag = hea_captured_scientists_700
+			add_to_variable = { hea_tame_research_speed_factor_var = 0.075 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_alchemists_decision_2
+				}				
+			}
 			custom_effect_tooltip = hea_alchemist_final_research_tt
 		}
 
@@ -2137,13 +2263,14 @@ hea_tame_decision_cat = {
 			add_caps = yes
 		}
 		remove_effect = {
-			add_to_variable = { country_resource_circuitry = 40}
-			add_to_variable = { country_resource_advanced = 40}
-			clr_country_flag = hea_captured_scientists_950
-			clr_country_flag = hea_captured_scientists_949
-			clr_country_flag = hea_captured_scientists_30
-			clr_country_flag = hea_captured_scientists_276
-			clr_country_flag = hea_captured_scientists_700
+			add_to_variable = { hea_tame_country_resource_circuitry_var = 40}
+			add_to_variable = { hea_tame_country_resource_advanced_var = 40}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_alchemists_decision_3 
+				}
+			}
 			custom_effect_tooltip = hea_alchemist_final_resource_tt
 		}
 	}

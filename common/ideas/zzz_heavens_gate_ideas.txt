@@ -1490,9 +1490,188 @@ ideas = {
 				send_volunteer_size = 3
 			}
 		}
-		#########################
-		##Fervor-Crusdaing Time##
-		#########################
+###################################
+##Taming Rivers,Lands and Heavens##
+###################################
+		hea_taming_idea_template = { #Base with no real effects
+			#Don't need anything here
+		}
+		hea_taming_idea_taming_the_river = {
+			modifier = {
+				stability_factor = 0.02
+			}
+		}
+		hea_taming_idea_building_dams = {
+			modifier = {
+				stability_factor = 0.01
+				country_resource_water = 20
+			}
+		}
+		hea_taming_idea_reparing_old_bridges = {
+			modifier = {
+				stability_factor = 0.01
+				army_speed_factor = 0.02
+				production_speed_infrastructure_factor = 0.05
+			}			
+		}
+		hea_taming_idea_river_ferries = {
+			modifier = {
+				stability_factor = 0.01
+				army_speed_factor = 0.03
+				production_speed_infrastructure_factor = 0.05
+			}			
+		}
+		hea_taming_idea_using_dam_for_energy = {
+			modifier = {
+				stability_factor = 0.01
+				country_resource_energy = 20
+			}			
+		}
+		hea_taming_idea_steam_barges = {
+			modifier = {
+				stability_factor = 0.02
+			}			
+		}
+		hea_taming_idea_water_mill_focus = {
+			modifier = {
+				stability_factor = 0.02
+			}			
+		}
+		hea_taming_idea_water_mill_decision_1 = {
+			modifier = {
+				country_resource_water = 15
+			}			
+		}
+		hea_taming_idea_water_mill_decision_2 = {
+			modifier = {
+				country_resource_water = -5
+				country_resource_energy = 8
+			}			
+		}
+		hea_taming_idea_water_mill_decision_3 = {
+			modifier = {
+				country_resource_water = -5
+				country_resource_energy = -3
+				stability_factor = 0.025
+				monthly_population = 0.05
+				non_core_manpower = 0.05
+			}			
+		}
+
+		hea_taming_idea_taming_the_land = {
+			modifier = {
+				global_building_slots_factor = 0.05
+			}
+		}
+		hea_taming_idea_eternal_spring = {
+			modifier = {
+				consumer_goods_factor = -0.07
+				monthly_population = 0.05
+			}
+		}
+		hea_taming_idea_blessed_cooks = {
+			modifier = {
+				consumer_goods_factor = -0.03
+				monthly_population = 0.05
+			}
+		}
+		hea_taming_idea_preparing_for_expansion = {
+			modifier = {
+				global_building_slots_factor = -0.05
+				production_speed_buildings_factor = 0.02
+			}
+		}
+		hea_taming_idea_home_blessed_by_steam = {
+			modifier = {
+				global_building_slots_factor = -0.05
+				production_speed_buildings_factor = 0.03
+			}
+		}
+		hea_taming_idea_steam_wonderland = {
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		hea_taming_idea_steam_smith_focus = {
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		hea_taming_idea_steam_smith_decision_1 = {
+			modifier = {
+				country_resource_metal = 20
+			}
+		}
+		hea_taming_idea_steam_smith_decision_2 = {
+			modifier = {
+				country_resource_metal = -10
+				country_resource_composites = 10
+			}
+		}
+		hea_taming_idea_steam_smith_decision_3 = {
+			modifier = {
+				country_resource_composites = -15
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		hea_taming_idea_taming_the_heaven = {
+			modifier = {
+				war_support_factor = 0.02
+			}
+		}
+		hea_taming_idea_funding_from_heaven = {
+			modifier = {
+				war_support_factor = 0.01
+				conscription_factor = 0.02
+				army_morale_factor = 0.05
+			}
+		}
+		hea_taming_idea_it_didnt_stop_there = {
+			modifier = {
+				war_support_factor = 0.01
+				army_morale_factor = 0.05
+				breakthrough_factor = 0.05
+			}
+		}
+		hea_taming_idea_michael_vision_soldier_of_prophept = {
+			modifier = {
+				war_support_factor = 0.01
+				conscription_factor = 0.05
+			}
+		}
+		hea_taming_idea_ever_closer_to_heaven = {
+			modifier = {
+				war_support_factor = 0.03
+				conscription_factor = 0.03
+			}
+		}
+		hea_taming_idea_alchemists_focus = {
+			modifier = {
+				war_support_factor = 0.01
+			}
+		}
+		hea_taming_idea_alchemists_decision_1 = {
+			modifier = {
+				research_speed_factor = 0.025
+			}
+		}
+		hea_taming_idea_alchemists_decision_2 = {
+			modifier = {
+				research_speed_factor = 0.075
+			}
+		}
+		hea_taming_idea_alchemists_decision_3 = {
+			modifier = {
+				country_resource_circuitry = 40
+				country_resource_advanced = 40
+			}
+		}
+
+#########################
+##Fervor-Crusdaing Time##
+#########################
 		hea_fervor_idea_template = { #Base with no real effects
 			#Lmao Nothing here - @Deez
 		}

@@ -29,76 +29,74 @@ hea_michael_savages_heretics_dynamic_decision_desc: "Amon will fall in line or d
 ########################################
 ##DECISIONS - Rivers,Lands and Heavens##
 ########################################
-hea_tame_decision_cat: "§BRivers§!, §8Lands§! and §4Heavens§!"
-hea_tame_decision_cat_desc: "The Nucleus stands prepared to send its men in a grand show of faith in the name of the Lord but our home can be even grander! We'll ensure it is so!\n\n - §BTaming the Rivers§!: The rivers floating near §W[HEA.GetNameWithFlag]§! can be taken advantage of, constructing watermills all along our Eastern territories can help us gather energy, though not strictly necessary, the power from the mills could help future projects...\n\n - §8Taming the Lands§!: God gifted us Earth to do what we will and we have conquered it in truth...yet have we tamed it? No, in truth, we simply reside in it but those of Heaven's Gate were chosen by the lord. We will use science, the nucleus, and all of its ardent people to bring the land to heel.\n\n - §4Taming the Heavens§!: How can we say to be close to God when we huddle beneath the mountains? Should we not endeavor to master what was given to us? Of course we should! WE are the chosen of God, WE were gifted the Nucleus, WE are the masters of our minds, and WE shall tame the Heaven's themselves..."
+hea_tame_decision_cat: "§2Rivers§!, §8Lands§! and §4Heavens§!"
+hea_tame_decision_cat_desc: "The Nucleus stands prepared to send its men in a grand show of faith in the name of the Lord but our home can be even grander! We'll ensure it is so!\n\n - §2Taming the Rivers§!: The rivers floating near §W[HEA.GetName]§! can be taken advantage of, constructing watermills all along our Eastern territories can help us gather energy, though not strictly necessary, the power from the mills could help future projects...\n\n - §8Taming the Lands§!: God gifted us Earth to do what we will and we have conquered it in truth...yet have we tamed it? No, in truth, we simply reside in it but those of Heaven's Gate were chosen by the lord. We will use science, the nucleus, and all of its ardent people to bring the land to heel.\n\n - §4Taming the Heavens§!: How can we say to be close to God when we huddle beneath the mountains? Should we not endeavor to master what was given to us? Of course we should! WE are the chosen of God, WE were gifted the Nucleus, WE are the masters of our minds, and WE shall tame the Heaven's themselves..."
 ##Decisions-Taming the Rivers
 hea_building_water_mills: "Already constructing water mills"
 #18-Innocence Lost
-hea_water_mills_18_1: "Build water mills in [18.GetName]"
-hea_water_mills_18_2: "Convert the water mills in [18.GetName]"
-hea_water_mills_18_3: "Build bathhouses in [18.GetName]"
+hea_water_mills_18_1: "§2Build water mills in [18.GetName]§!"
+hea_water_mills_18_2: "§2Convert the water mills in [18.GetName]§!"
+hea_water_mills_18_3: "§2Build bathhouses in [18.GetName]§!"
 #116-Eastern Passage
-hea_water_mills_116_1: "Build water mills in [116.GetName]"
-hea_water_mills_116_2: "Convert the water mills in [116.GetName]"
-hea_water_mills_116_3: "Build bathhouses in [116.GetName]"
+hea_water_mills_116_1: "§2Build water mills in [116.GetName]§!"
+hea_water_mills_116_2: "§2Convert the water mills in [116.GetName]§!"
+hea_water_mills_116_3: "§2Build bathhouses in [116.GetName]§!"
 #278-Windy Isolation
-hea_water_mills_278_1: "Build water mills in [278.GetName]"
-hea_water_mills_278_2: "Convert the water mills in [278.GetName]"
-hea_water_mills_278_3: "Build bathhouses in [278.GetName]"
+hea_water_mills_278_1: "§2Build water mills in [278.GetName]§!"
+hea_water_mills_278_2: "§2Convert the water mills in [278.GetName]§!"
+hea_water_mills_278_3: "§2Build bathhouses in [278.GetName]§!"
 #198-Southern Gate
-hea_water_mills_198_1: "Build water mills in [198.GetName]"
-hea_water_mills_198_2: "Convert the water mills in [198.GetName]"
-hea_water_mills_198_3: "Build bathhouses in [198.GetName]"
+hea_water_mills_198_1: "§2Build water mills in [198.GetName]§!"
+hea_water_mills_198_2: "§2Convert the water mills in [198.GetName]§!"
+hea_water_mills_198_3: "§2Build bathhouses in [198.GetName]§!"
 
-hea_water_mills_1_tt: "Unlocks further §YUpgrades§! for the §YWater Mills§!"
-hea_water_mills_2_tt: "Unlocks the final §YUpgrades§! for the §YWater Mills§!"
+hea_water_mills_1_tt: "Unlocks further §YUpgrades§! for the §2Water Mills§!"
+hea_water_mills_2_tt: "Unlocks the final §YUpgrades§! for the §2Water Mills§!"
 
 ##Decisions-Taming the Lands
-hea_taming_land_cat: "Taming the §8Lands§!"
-hea_taming_land_cat_desc: "God gifted us Earth to do what we will and we have conquered it in truth...yet have we tamed it? No, in truth, we simply reside in it but those of Heaven's Gate were chosen by the lord. We will use science, the nucleus, and all of its ardent people to bring the land to heel."
 hea_building_smiths: "Already constructing steam smiths"
 
 #1385-Western Tunnel
-hea_smiths_1385_1: "Build steam smiths in [1385.GetName]"
-hea_smiths_1385_2: "Upgrade the steam smiths in [1385.GetName]"
+hea_smiths_1385_1: "§8Build steam smiths in [1385.GetName]§!"
+hea_smiths_1385_2: "§8Upgrade the steam smiths in [1385.GetName]§!"
 hea_smiths_built_1385_2: "Steam smiths upgraded in [1385.GetName]"
 #198-Southern Gate
-hea_smiths_198_1: "Build steam smiths in [198.GetName]"
-hea_smiths_198_2: "Upgrade the steam smiths in [198.GetName]"
+hea_smiths_198_1: "§8Build steam smiths in [198.GetName]§!"
+hea_smiths_198_2: "§8Upgrade the steam smiths in [198.GetName]§!"
 hea_smiths_built_198_2: "Steam smiths upgraded in [198.GetName]"
 #276-Stagleap
-hea_smiths_276_1: "Build steam smiths in [276.GetName]"
-hea_smiths_276_2: "Upgrade the steam smiths in [276.GetName]"
+hea_smiths_276_1: "§8Build steam smiths in [276.GetName]§!"
+hea_smiths_276_2: "§8Upgrade the steam smiths in [276.GetName]§!"
 hea_smiths_built_276_2: "Steam smiths upgraded in [276.GetName]"
 
-hea_smiths_1_tt: "Unlocks further §YUpgrades§! for the §YSteam Smith§!"
+hea_smiths_1_tt: "Unlocks further §YUpgrades§! for the §8Steam Smith§!"
 
 #Steam smiths-final
-hea_smiths_final: "Construct new steam smiths weapons"
+hea_smiths_final: "§8Construct new steam smiths weapons§!"
 
 ##Decisions-Taming the Heavens
 hea_capturing_scientists: "Already capturing scientists"
 
-hea_alchemist_276: "Scientists from [276.GetName]"
+hea_alchemist_276: "§4Scientists from [276.GetName]§!"
 hea_captured_scientists_276: "Scientists captured from [276.GetName]"
 
-hea_alchemist_30: "Scientists from [30.GetName]"
+hea_alchemist_30: "§4Scientists from [30.GetName]§!"
 hea_captured_scientists_30: "Scientists captured from [30.GetName]"
 
-hea_alchemist_700: "Scientists from [700.GetName]"
+hea_alchemist_700: "§4Scientists from [700.GetName]§!"
 hea_captured_scientists_700: "Scientists captured from [700.GetName]"
 
-hea_alchemist_949: "Scientists from [949.GetName]"
+hea_alchemist_949: "§4Scientists from [949.GetName]§!"
 hea_captured_scientists_949: "Scientists captured from [949.GetName]"
 
-hea_alchemist_950: "Scientists from [950.GetName]"
+hea_alchemist_950: "§4Scientists from [950.GetName]§!"
 hea_captured_scientists_950: "Scientists captured from [950.GetName]"
 
-hea_alchemist_final_research: "§YOR:§!Heaven's Gate Research Team"
-hea_alchemist_final_research_tt: "This will §YLock§! us out of §YHeaven's Gate Advanced Resources Team§!"
+hea_alchemist_final_research: "§4Heaven's Gate Research Team§!"
+hea_alchemist_final_research_tt: "This will §YLock§! us out of §4Heaven's Gate Advanced Resources Team§!"
 
-hea_alchemist_final_resource: "§YOR:§!Heaven's Gate Advanced Resources Team"
-hea_alchemist_final_resource_tt: "This will §YLock§! us out of §YHeaven's Gate Research Team§!"
+hea_alchemist_final_resource: "§4Heaven's Gate Advanced Resources Team§!"
+hea_alchemist_final_resource_tt: "This will §YLock§! us out of §4Heaven's Gate Research Team§!"
 
 ########################
 ##Fervor-CrusadingTime##

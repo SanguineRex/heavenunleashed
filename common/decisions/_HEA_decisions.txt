@@ -670,7 +670,7 @@ hea_monsters_of_the_wastes_cat = {
 				}
 			} #No bonus if the player got into phase 3 idleness debuff, just do some war! - @Deez
 			FROM = {
-				set_country_flag = hea_purged_flag
+				#set_country_flag = hea_purged_flag
 				every_core_state = {
 					add_manpower = -5000
 				}
@@ -741,7 +741,7 @@ hea_monsters_of_the_wastes_cat = {
 				}
 			} #No bonus if the player got into phase 3 idleness debuff, just do some war! - @Deez
 			FROM = {
-				set_country_flag = hea_purged_flag
+				#set_country_flag = hea_purged_flag
 				every_core_state = {
 					add_manpower = -5000
 				}
@@ -826,7 +826,7 @@ hea_monsters_of_the_wastes_cat = {
 				}
 			} #No bonus if the player got into phase 3 idleness debuff, just do some war! - @Deez
 			FROM = {
-				set_country_flag = hea_purged_flag
+				#set_country_flag = hea_purged_flag
 				every_core_state = {
 					add_manpower = -5000
 				}
@@ -925,7 +925,7 @@ hea_monsters_of_the_wastes_cat = {
 				}
 			} #No bonus if the player got into phase 3 idleness debuff, just do some war! - @Deez			
 			FROM = {
-				set_country_flag = hea_purged_flag
+				#set_country_flag = hea_purged_flag
 				every_core_state = {
 					add_manpower = -5000
 				}
@@ -996,7 +996,7 @@ hea_monsters_of_the_wastes_cat = {
 				}
 			} #No bonus if the player got into phase 3 idleness debuff, just do some war! - @Deez			
 			FROM = {
-				set_country_flag = hea_purged_flag
+				#set_country_flag = hea_purged_flag
 				every_core_state = {
 					add_manpower = -5000
 				}

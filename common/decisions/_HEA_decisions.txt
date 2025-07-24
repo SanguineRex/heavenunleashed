@@ -623,13 +623,13 @@ hea_monsters_of_the_wastes_cat = {
 		#}
 		targets = { TLP TOC WHD LUM GLW GLC RES SIN BLO CAF KAM URA } #Ghouls nation or nations with ghoul leaders at start
 		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
-		target_trigger = { 
-			FROM = {
-				NOT = {
-					has_country_flag = hea_purged_flag
-				}
-			}
-		}
+		#target_trigger = { 
+		#	FROM = {
+		#		NOT = {
+		#			has_country_flag = hea_purged_flag
+		#		}
+		#	}
+		#}
 		target_non_existing = yes #Need this to actually purge the non-existing nation after being conquered
 		available = { 
 			FROM = { all_core_land_owned_by_prev_sphere = yes }
@@ -695,13 +695,13 @@ hea_monsters_of_the_wastes_cat = {
 		#}
 		targets = { TRL JCT SHA UOA IMO } #Super Mutant nation or nations with super mutant leaders at start
 		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
-		target_trigger = { 
-			FROM = {
-				NOT = {
-					has_country_flag = hea_purged_flag
-				}
-			}
-		}
+		#target_trigger = { 
+		#	FROM = {
+		#		NOT = {
+		#			has_country_flag = hea_purged_flag
+		#		}
+		#	}
+		#}
 		target_non_existing = yes #Need this to actually purge the non-existing nation after being conquered
 		available = { 
 			FROM = { all_core_land_owned_by_prev_sphere = yes }
@@ -766,13 +766,13 @@ hea_monsters_of_the_wastes_cat = {
 		#}
 		targets = { MLT DIS RRR SLN DED PRO } #Mirelurk nation or nations with mirelurk leaders at start
 		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
-		target_trigger = { 
-			FROM = {
-				NOT = {
-					has_country_flag = hea_purged_flag
-				}
-			}
-		}
+		#target_trigger = { 
+		#	FROM = {
+		#		NOT = {
+		#			has_country_flag = hea_purged_flag
+		#		}
+		#	}
+		#}
 		target_non_existing = yes #Need this to actually purge the non-existing nation after being conquered
 		available = { 
 			if = {
@@ -851,13 +851,13 @@ hea_monsters_of_the_wastes_cat = {
 		#}
 		targets = { TVT MDM TPA BGR RAD ROB TTM TUB ARM TLA PET PSH } #Robot nation or nations with robot leaders at start - WDN or WARDEN should've been on the list too, but they are a dynamic tag which causes some issue within OWB, have to disabled them for now
 		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
-		target_trigger = { 
-			FROM = {
-				NOT = {
-					has_country_flag = hea_purged_flag
-				}
-			}
-		}
+		#target_trigger = { 
+		#	FROM = {
+		#		NOT = {
+		#			has_country_flag = hea_purged_flag
+		#		}
+		#	}
+		#}
 		target_non_existing = yes #Need this to actually purge the non-existing nation after being conquered
 		available = { 
 			if = {
@@ -950,13 +950,13 @@ hea_monsters_of_the_wastes_cat = {
 		#}
 		targets = { STC LOI BGR } #Communist nation or nations with communist leaders at start - BGR is also commie so putting them here, but the player can only choose them for communist or robot bonus once - @Deez
 		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
-		target_trigger = { 
-			FROM = {
-				NOT = {
-					has_country_flag = hea_purged_flag
-				}
-			}
-		}
+		#target_trigger = { 
+		#	FROM = {
+		#		NOT = {
+		#			has_country_flag = hea_purged_flag
+		#		}
+		#	}
+		#}
 		target_non_existing = yes #Need this to actually purge the non-existing nation after being conquered
 		available = { 
 			FROM = { all_core_land_owned_by_prev_sphere = yes }
@@ -1366,7 +1366,6 @@ hea_tame_decision_cat = {
 
 		available = {
 			has_completed_focus = hea_water_mills
-			has_full_control_of_state = 18
 			num_of_civilian_factories_available_for_projects > 0
 			NOT = { has_country_flag = hea_building_water_mills }
 		}
@@ -1397,7 +1396,6 @@ hea_tame_decision_cat = {
 		fire_only_once = yes
 
 		available = {
-			has_full_control_of_state = 18
 			num_of_civilian_factories_available_for_projects > 0
 			NOT = { has_country_flag = hea_building_water_mills }
 		}
@@ -1433,7 +1431,6 @@ hea_tame_decision_cat = {
 		fire_only_once = yes
 
 		available = {
-			has_full_control_of_state = 18
 			num_of_civilian_factories_available_for_projects > 0
 			NOT = { has_country_flag = hea_building_water_mills }
 		}
@@ -1472,7 +1469,6 @@ hea_tame_decision_cat = {
 
 		available = {
 			has_completed_focus = hea_water_mills
-			has_full_control_of_state = 116
 			num_of_civilian_factories_available_for_projects > 0
 			NOT = { has_country_flag = hea_building_water_mills }
 		}
@@ -1503,7 +1499,6 @@ hea_tame_decision_cat = {
 		fire_only_once = yes
 
 		available = {
-			has_full_control_of_state = 116
 			num_of_civilian_factories_available_for_projects > 0
 			NOT = { has_country_flag = hea_building_water_mills }
 		}
@@ -1539,7 +1534,6 @@ hea_tame_decision_cat = {
 		fire_only_once = yes
 
 		available = {
-			has_full_control_of_state = 116
 			num_of_civilian_factories_available_for_projects > 0
 			NOT = { has_country_flag = hea_building_water_mills }
 		}
@@ -1577,7 +1571,6 @@ hea_tame_decision_cat = {
 
 		available = {
 			has_completed_focus = hea_water_mills
-			has_full_control_of_state = 278
 			num_of_civilian_factories_available_for_projects > 0
 			NOT = { has_country_flag = hea_building_water_mills }
 		}
@@ -1608,7 +1601,6 @@ hea_tame_decision_cat = {
 		fire_only_once = yes
 
 		available = {
-			has_full_control_of_state = 278
 			num_of_civilian_factories_available_for_projects > 0
 			NOT = { has_country_flag = hea_building_water_mills }
 		}
@@ -1644,7 +1636,6 @@ hea_tame_decision_cat = {
 		fire_only_once = yes
 
 		available = {
-			has_full_control_of_state = 278
 			num_of_civilian_factories_available_for_projects > 0
 			NOT = { has_country_flag = hea_building_water_mills }
 		}
@@ -1683,7 +1674,6 @@ hea_tame_decision_cat = {
 
 		available = {
 			has_completed_focus = hea_water_mills
-			has_full_control_of_state = 198
 			num_of_civilian_factories_available_for_projects > 0
 			NOT = { has_country_flag = hea_building_water_mills }
 		}
@@ -1714,7 +1704,6 @@ hea_tame_decision_cat = {
 		fire_only_once = yes
 
 		available = {
-			has_full_control_of_state = 198
 			num_of_civilian_factories_available_for_projects > 0
 			NOT = { has_country_flag = hea_building_water_mills }
 		}
@@ -1749,7 +1738,6 @@ hea_tame_decision_cat = {
 		fire_only_once = yes
 
 		available = {
-			has_full_control_of_state = 198
 			num_of_civilian_factories_available_for_projects > 0
 			NOT = { has_country_flag = hea_building_water_mills }
 		}
@@ -1788,12 +1776,6 @@ hea_tame_decision_cat = {
 		 
 		available = {
 			has_completed_focus = hea_steam_smiths
-			1385 = {
-				OR = {
-					is_owned_and_controlled_by = ROOT
-					controller = { is_ally_with = ROOT }
-				}
-			}
 			num_of_civilian_factories_available_for_projects > 1
 			NOT = { has_country_flag = hea_building_smiths }
 		}
@@ -1824,12 +1806,6 @@ hea_tame_decision_cat = {
 		fire_only_once = yes
 		 
 		available = {
-			1385 = {
-				OR = {
-					is_owned_and_controlled_by = ROOT
-					controller = { is_ally_with = ROOT }
-				}
-			}
 			num_of_civilian_factories_available_for_projects > 1
 			NOT = { has_country_flag = hea_building_smiths }
 		}
@@ -1865,12 +1841,6 @@ hea_tame_decision_cat = {
 		 
 		available = {
 			has_completed_focus = hea_steam_smiths
-			198 = {
-				OR = {
-					is_owned_and_controlled_by = ROOT
-					controller = { is_ally_with = ROOT }
-				}
-			}
 			num_of_civilian_factories_available_for_projects > 1
 			NOT = { has_country_flag = hea_building_smiths }	
 		}
@@ -1901,12 +1871,6 @@ hea_tame_decision_cat = {
 		fire_only_once = yes
 		 
 		available = {
-			198 = {
-				OR = {
-					is_owned_and_controlled_by = ROOT
-					controller = { is_ally_with = ROOT }
-				}
-			}
 			num_of_civilian_factories_available_for_projects > 1
 			NOT = { has_country_flag = hea_building_smiths }
 		}
@@ -1943,12 +1907,6 @@ hea_tame_decision_cat = {
 		 
 		available = {
 			has_completed_focus = hea_steam_smiths
-			276 = {
-				OR = {
-					is_owned_and_controlled_by = ROOT
-					controller = { is_ally_with = ROOT }
-				}
-			}
 			num_of_civilian_factories_available_for_projects > 1
 			NOT = { has_country_flag = hea_building_smiths }
 		}
@@ -1979,12 +1937,6 @@ hea_tame_decision_cat = {
 		fire_only_once = yes
 		 
 		available = {
-			276 = {
-				OR = {
-					is_owned_and_controlled_by = ROOT
-					controller = { is_ally_with = ROOT }
-				}
-			}
 			num_of_civilian_factories_available_for_projects > 1
 			NOT = { has_country_flag = hea_building_smiths }
 		}

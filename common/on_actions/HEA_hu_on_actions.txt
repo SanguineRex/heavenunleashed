@@ -471,7 +471,7 @@ on_actions = {
 					FROM.FROM = {
 						OR = {
 							state = 71 #Oregon-Crowshaven
-							state = 84 #Washington-Seattle
+							state = 332 #Washington-Spokane
 						}
 					}
 				}

@@ -84,7 +84,7 @@ scripted_gui = {
 
 			#Washington
 			no_state_manage_gui_washington_button_visible = { #Washington not under HEA's influence
-				84 = {
+				332 = {
 					owner = {
 						NOT = {
 							OR = {
@@ -97,7 +97,7 @@ scripted_gui = {
 			}
 
 			hea_state_manage_gui_washington_button_visible = { #Washington under HEA's influence but not by ROT
-				84 = {
+				332 = {
 					owner = {
 						NOT = { original_tag = ROT }
 						OR = {
@@ -110,7 +110,7 @@ scripted_gui = {
 			}
 			hea_state_manage_gui_washington_button_click_enabled = { always = yes } #Can always click on cause already handled in visible check
 			hea_state_manage_gui_washington_selected_button_visible = { #Washington under HEA's influence but not by ROT-Selected-Glowing
-				84 = {
+				332 = {
 					owner = {
 						NOT = { original_tag = ROT }
 						OR = {
@@ -124,7 +124,7 @@ scripted_gui = {
 			hea_state_manage_gui_washington_selected_button_click_enabled = { always = yes } #Can always click on cause already handled in visible check
 
 			rot_state_manage_gui_washington_button_visible = { #Washington under HEA's influence by ROT
-				84 = {
+				332 = {
 					owner = {
 						original_tag = ROT
 						is_ally_with = HEA
@@ -134,7 +134,7 @@ scripted_gui = {
 			}
 			rot_state_manage_gui_washington_button_click_enabled = { always = yes } #Can always click on cause already handled in visible check
 			rot_state_manage_gui_washington_selected_button_visible = { #Washington under HEA's influence by ROT-Selected-Glowing
-				84 = {
+				332 = {
 					owner = {
 						original_tag = ROT
 						is_ally_with = HEA

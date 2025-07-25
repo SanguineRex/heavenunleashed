@@ -2808,20 +2808,22 @@ focus = {
 
 	
 	########################METAL ANGELS################################################
-	
-				focus = {
+	#High In The Heavens We Rule
+	focus = {
 		id = hea_guard_angel_flight
 		icon = GFX_goal_HEA_heavensmight
 		cost = 30
-		x = 4
+		x = -3
 		y = 1
 		relative_position_id = hea_guard_focuses
+
+		prerequisite = {
+			focus = hea_guard_focuses
+		}
 		available = {
-				has_completed_focus = hea_nf_air_1
-			}
-			prerequisite = {
-				focus = hea_guard_focuses
-			}
+			has_completed_focus = hea_nf_air_1
+		}
+
 		completion_reward = {
 			air_experience = 100
 			add_equipment_to_stockpile = {
@@ -2832,269 +2834,268 @@ focus = {
 		}
 	}
 	####Close Air Support
-			focus = {
+	#Angel's Speed
+	focus = {
 		id = hea_guard_angels_speed
 		icon = GFX_goal_HEA_air_speed
 		cost = 30
-		x = 2
-		y = 2
-		relative_position_id = hea_guard_focuses
-				prerequisite = {
-				focus = hea_guard_angel_flight
-				}
+		x = -2
+		y = 1
+		relative_position_id = hea_guard_angel_flight
+
+		prerequisite = {
+			focus = hea_guard_angel_flight
+		}
+
 		completion_reward = {
-			add_ideas = {
-				hea_close_air1
-			}
-		
+			add_ideas = hea_close_air1
 		}
 	}
-			focus = {
+	#Soaring Judgement
+	focus = {
 		id = hea_guard_angels_of_death
 		icon = GFX_goal_HEA_air_judgement
 		cost = 30
-		x = 2
-		y = 3
-		relative_position_id = hea_guard_focuses
-				prerequisite = {
-				focus = hea_guard_angels_speed
-			}
+		x = 0
+		y = 1
+		relative_position_id = hea_guard_angels_speed
+
+		prerequisite = {
+			focus = hea_guard_angels_speed
+		}
 
 		completion_reward = {
 			swap_ideas = { 
-			remove_idea = hea_close_air1
-		add_idea = hea_close_air2
+				remove_idea = hea_close_air1
+				add_idea = hea_close_air2
 			}
-		
 		}
 	}
-				focus = {
+	#Holy Steam
+	focus = {
 		id = hea_guard_angel_holy_steam
 		icon = GFX_goal_HEA_air_steamdeath
 		cost = 30
-		x = 2
-		y = 4
-			relative_position_id = hea_guard_focuses
-				prerequisite = {
-				focus = hea_guard_angels_of_death
-			}
+		x = 0
+		y = 1
+		relative_position_id = hea_guard_angels_of_death
+
+		prerequisite = {
+			focus = hea_guard_angels_of_death
+		}
 
 		completion_reward = {
 			swap_ideas = { 
-			remove_idea = hea_close_air2
-		add_idea = hea_close_air3
+				remove_idea = hea_close_air2
+				add_idea = hea_close_air3
 			}
-		
 		}
 	}
 
 	##Fighter Planes
-				focus = {
+	#Angel's Grace
+	focus = {
 		id = hea_guard_angels_grace
 		icon = GFX_goal_HEA_air_grace
 		cost = 30
-		x = 4
-		y = 2
-		relative_position_id = hea_guard_focuses	
-				prerequisite = {
-				focus = hea_guard_angel_flight
-			}
+		x = 0
+		y = 1
+		relative_position_id = hea_guard_angel_flight
+
+		prerequisite = {
+			focus = hea_guard_angel_flight
+		}
+
 		completion_reward = {
-		add_ideas = {	hea_air_control1 }
-		
+			add_ideas = hea_air_control1
 		}
 	}
-				focus = {
+	#Soaring Knights
+	focus = {
 		id = hea_guard_angels_haste
 		icon = GFX_goal_HEA_air_knights
 		cost = 30
-		x = 4
-		y = 3
-		relative_position_id = hea_guard_focuses
-				prerequisite = {
-				focus = hea_guard_angels_grace
-			}
+		x = 0
+		y = 1
+		relative_position_id = hea_guard_angels_grace
+
+		prerequisite = {
+			focus = hea_guard_angels_grace
+		}
+
 		completion_reward = {
 			swap_ideas = { 
-			remove_idea = hea_air_control1
-		add_idea = hea_air_control2
+				remove_idea = hea_air_control1
+				add_idea = hea_air_control2
 			}
-		
 		}
 	}
-				focus = {
+	#Dominion over Sky
+	focus = {
 		id = hea_guard_angel_dominion_over_sky
 		icon = GFX_goal_HEA_air_dominion
 		cost = 30
-		x = 4
-		y = 4
-		relative_position_id = hea_guard_focuses
+		x = 0
+		y = 1
+		relative_position_id = hea_guard_angels_haste
 			
-				prerequisite = {
-				focus = hea_guard_angels_haste
-			}
-		completion_reward = {
-			
-		swap_ideas = { 
-			remove_idea = hea_air_control2 
-		add_idea = hea_air_control3
+		prerequisite = {
+			focus = hea_guard_angels_haste
+		}
+
+		completion_reward = {		
+			swap_ideas = { 
+				remove_idea = hea_air_control2 
+				add_idea = hea_air_control3
 			}
 		}
 	}
 	
 	###Bomber Planes
-
-			focus = {
+	#Angel's Farsight
+	focus = {
 		id = hea_guard_angel_farsight
 		icon = GFX_goal_HEA_air_weatherrange
 		cost = 30
-		x = 6
-		y = 2
-		relative_position_id = hea_guard_focuses
+		x = 2
+		y = 1
+		relative_position_id = hea_guard_angel_flight
 			
-				prerequisite = {
-				focus = hea_guard_angel_flight
-			}
+		prerequisite = {
+			focus = hea_guard_angel_flight
+		}
 
 		completion_reward = {
-			add_ideas = {
-				hea_air_death1
-			}
-		
+			add_ideas = hea_air_death1
 		}
 	}
-			focus = {
+	#Invoking The Warth Of God
+	focus = {
 		id = hea_guard_angels_rage
 		icon = GFX_goal_HEA_air_payload
 		cost = 30
-		x = 6
-		y = 3
-		relative_position_id = hea_guard_focuses
-				prerequisite = {
-				focus = hea_guard_angel_farsight
-			}
+		x = 0
+		y = 1
+		relative_position_id = hea_guard_angel_farsight
+
+		prerequisite = {
+			focus = hea_guard_angel_farsight
+		}
+
 		completion_reward = {
 			swap_ideas = { 
-			remove_idea = hea_air_death1 
-		add_idea = hea_air_death2
+				remove_idea = hea_air_death1 
+				add_idea = hea_air_death2
 			}
-		
 		}
 	}
-			focus = {
+	#Holy Bomb Shells
+	focus = {
 		id = hea_guard_angel_holy_grenade
 		icon = GFX_goal_HEA_air_holybombshells
 		cost = 30
-		x = 6
-		y = 4
-			relative_position_id = hea_guard_focuses
-				prerequisite = {
-				focus = hea_guard_angels_rage
-			}
+		x = 0
+		y = 1
+		relative_position_id = hea_guard_angels_rage
+
+		prerequisite = {
+			focus = hea_guard_angels_rage
+		}
+
 		completion_reward = {
 			swap_ideas = { 
-			remove_idea = hea_air_death2 
-		add_idea = hea_air_death3
+				remove_idea = hea_air_death2 
+				add_idea = hea_air_death3
 			}
-		
 		}
 	}
 	####Final Focuses
-
-			focus = {
+	#Hell's Grasp
+	focus = {
 		id = hea_steam_payload
 		icon = GFX_goal_HEA_hellswrath
 		cost = 30
-		x = 5
-		y = 5
-			relative_position_id = hea_guard_focuses
-			mutually_exclusive = {
-				focus = hea_steam_heavensreach
-			}
-				prerequisite = {
-				focus = hea_guard_angel_holy_grenade
-			}
-				prerequisite = {
-				focus = hea_guard_angel_holy_steam
-			}
-				prerequisite = {
-				focus = hea_guard_angel_dominion_over_sky
-			}
+		x = -1
+		y = 1
+		relative_position_id = hea_guard_angel_dominion_over_sky
+
+		prerequisite = { focus = hea_guard_angel_holy_grenade }
+		prerequisite = { focus = hea_guard_angel_holy_steam }
+		prerequisite = { focus = hea_guard_angel_dominion_over_sky }
+		mutually_exclusive = {
+			focus = hea_steam_heavensreach
+		}
+
 		completion_reward = { 
 			remove_ideas = {
-				 hea_air_death3
+				hea_air_death3
 				hea_close_air3
 				hea_air_control3
-				}
-		add_ideas =  { hea_air_death }
 			}
-		
+			add_ideas = hea_air_death
 		}
-	
-			focus = {
+	}
+	#Heaven's Reach
+	focus = {
 		id = hea_steam_heavensreach
 		icon = GFX_goal_HEA_heavensreach
 		cost = 30
-		x = 3
-		y = 5
-			relative_position_id = hea_guard_focuses
-			mutually_exclusive = {
-				focus = hea_steam_payload
-			}
-				prerequisite = {
-				focus = hea_guard_angel_holy_grenade
-			}
-				prerequisite = {
-				focus = hea_guard_angel_holy_steam
-			}
-				prerequisite = {
-				focus = hea_guard_angel_dominion_over_sky
-			}
+		x = 1
+		y = 1
+		relative_position_id = hea_guard_angel_dominion_over_sky
+		
+		prerequisite = { focus = hea_guard_angel_holy_grenade }
+		prerequisite = { focus = hea_guard_angel_holy_steam }
+		prerequisite = { focus = hea_guard_angel_dominion_over_sky }
+		mutually_exclusive = { 
+			focus = hea_steam_payload 
+		}
+
 		completion_reward = {
 			remove_ideas = {
 				hea_air_death3
-			   hea_close_air3
-			   hea_air_control3
-			   }
-	   add_ideas =  { hea_air_reach }
-		
+				hea_close_air3
+				hea_air_control3
+			}
+			add_ideas = hea_air_reach
 		}
 	}
 	########################Standard Guard Focuses################################################
-		focus = {
+	#Reforming the Guard
+	focus = {
 		id = hea_guard_infantry
 		icon = GFX_goal_HEA_hea_the_guard
 		cost = 30
-		x = -4
+		x = 3
 		y = 1
 		relative_position_id = hea_guard_focuses
-			available = {
-				has_completed_focus = hea_nf_army_2
-			}
-				prerequisite = {
-				focus = hea_guard_focuses
-			}
+
+		prerequisite = {
+			focus = hea_guard_focuses
+		}
+		available = {
+			has_completed_focus = hea_nf_army_2
+		}
 
 		completion_reward = {
-			
 			set_technology = {
 				hea_guardone = 1
 			}
-			
-		
 		}
 	}
 	##Swords
-			focus = {
+	#Tempered Blades
+	focus = {
 		id = hea_guard_swords
 		icon = GFX_goal_HEA_hea_sword1
 		cost = 30
-		x = -2
-		y = 2
-		relative_position_id = hea_guard_focuses
-				prerequisite = {
-				focus = hea_guard_infantry
-			}
+		x = 2
+		y = 1
+		relative_position_id = hea_guard_infantry
+
+		prerequisite = {
+			focus = hea_guard_infantry
+		}
 
 		completion_reward = {
 			set_technology = {
@@ -3102,16 +3103,18 @@ focus = {
 			}	
 		}
 	}
-			focus = {
+	#Reliable Arms
+	focus = {
 		id = hea_guard_more_swords
 		icon = GFX_goal_HEA_hea_sword2
 		cost = 30
-		x = -2
-		y = 3
-		relative_position_id = hea_guard_focuses
-				prerequisite = {
-				focus = hea_guard_swords
-			}
+		x = 0
+		y = 1
+		relative_position_id = hea_guard_swords
+
+		prerequisite = {
+			focus = hea_guard_swords
+		}
 
 		completion_reward = {
 			set_technology = {
@@ -3119,17 +3122,18 @@ focus = {
 			}		
 		}
 	}
-				focus = {
+	#Skilled Bladesmiths
+	focus = {
 		id = hea_guard_enough_swords ###For now...
 		icon = GFX_goal_HEA_hea_sword3
 		cost = 30
-		x = -2
-		y = 4
-		relative_position_id = hea_guard_focuses
+		x = 0
+		y = 1
+		relative_position_id = hea_guard_more_swords
 			
-				prerequisite = {
-				focus = hea_guard_more_swords
-			}
+		prerequisite = {
+			focus = hea_guard_more_swords
+		}
 
 		completion_reward = {
 			set_technology = {
@@ -3138,17 +3142,18 @@ focus = {
 		}
 	}
 	##Sword Training 
-			focus = {
+	#Students of the Blade
+	focus = {
 		id = hea_guard_novice
 		icon = GFX_goal_HEA_hea_first_stance
 		cost = 30
-		x = -4
-		y = 2
-		relative_position_id = hea_guard_focuses
+		x = 0
+		y = 1
+		relative_position_id = hea_guard_infantry
 			
-				prerequisite = {
-				focus = hea_guard_infantry
-			}
+		prerequisite = {
+			focus = hea_guard_infantry
+		}
 
 		completion_reward = {
 			set_technology = {
@@ -3156,36 +3161,37 @@ focus = {
 			}	
 		}
 	}
+	#Acolytes of the Blade
 	focus = {
 		id = hea_guard_journeyman
 		icon = GFX_goal_HEA_hea_second_stance
 		cost = 30
-		x = -4
-		y = 3
-		relative_position_id = hea_guard_focuses
+		x = 0
+		y = 1
+		relative_position_id = hea_guard_novice
 			
-				prerequisite = {
-				focus = hea_guard_novice
-			}
+		prerequisite = {
+			focus = hea_guard_novice
+		}
 
 		completion_reward = {
 			set_technology = {
 				hea_skilltwo = 1
 			}
-		
 		}
 	}
-		focus = {
+	#Masters of the Blade
+	focus = {
 		id = hea_guard_expert
 		icon = GFX_goal_HEA_hea_third_stance
 		cost = 30
-		x = -4
-		y = 4
-		relative_position_id = hea_guard_focuses
+		x = 0
+		y = 1
+		relative_position_id = hea_guard_journeyman
 			
-				prerequisite = {
-				focus = hea_guard_journeyman
-			}
+		prerequisite = {
+			focus = hea_guard_journeyman
+		}
 
 		completion_reward = {
 			set_technology = {
@@ -3194,83 +3200,82 @@ focus = {
 		}
 	}
 	##Infantry Armor
-			focus = {
+	#Standardized Armor
+	focus = {
 		id = hea_guard_armor
 		icon = GFX_goal_HEA_hea_armor1
 		cost = 30
-		x = -6
-		y = 2
-		relative_position_id = hea_guard_focuses
-				prerequisite = {
-				focus = hea_guard_infantry
-			}
+		x = -2
+		y = 1
+		relative_position_id = hea_guard_infantry
+
+		prerequisite = {
+			focus = hea_guard_infantry
+		}
 
 		completion_reward = {
 			set_technology = {
 				hea_armorone = 1
 			}		
-		
 		}
 	}
-				focus = {
+	#Reinforced Armor
+	focus = {
 		id = hea_guard_tempered_armor
 		icon = GFX_goal_HEA_hea_armor2
 		cost = 30
-		x = -6
-		y = 3
-			relative_position_id = hea_guard_focuses
-				prerequisite = {
-				focus = hea_guard_armor
-			}
+		x = 0
+		y = 1
+		relative_position_id = hea_guard_armor
+
+		prerequisite = {
+			focus = hea_guard_armor
+		}
 
 		completion_reward = {
-
 			set_technology = {
 				hea_armortwo = 1
 			}	
 		}
 	}
-				focus = {
+	#Plated Guard
+	focus = {
 		id = hea_guard_best_thing_next_to_powerarmor
 		icon = GFX_goal_HEA_hea_armor3
 		cost = 30
-		x = -6
-		y = 4
-			relative_position_id = hea_guard_focuses
-				prerequisite = {
-				focus = hea_guard_tempered_armor
-			}
+		x = 0
+		y = 1
+		relative_position_id = hea_guard_tempered_armor
+
+		prerequisite = {
+			focus = hea_guard_tempered_armor
+		}
 
 		completion_reward = {
 			set_technology = {
 				hea_armorthree = 1
 			}
-		
 		}
 	}
 	##End of Infantry Buffs
-		focus = {
+	#Warriors of God
+	focus = {
 		id = hea_guard_warriors_unparalleled
 		icon = GFX_goal_HEA_hea_guard_reborn
 		cost = 30
-		x = -4
-		y = 5
-			relative_position_id = hea_guard_focuses
-				prerequisite = {
-				focus = hea_guard_best_thing_next_to_powerarmor
-			}
-			prerequisite = {
-				focus = hea_guard_expert
-			}
-			prerequisite = {
-				focus = hea_guard_enough_swords
-			}
+		x = 0
+		y = 1
+		relative_position_id = hea_guard_expert
+
+		prerequisite = { focus = hea_guard_best_thing_next_to_powerarmor }
+		prerequisite = { focus = hea_guard_expert }
+		prerequisite = { focus = hea_guard_enough_swords }
 
 		completion_reward = {
-		custom_effect_tooltip = hea_guardreborn
-		add_war_support = 0.20
-		army_experience = 100
-		add_political_power = 50
+			custom_effect_tooltip = hea_guardreborn
+			add_war_support = 0.20
+			army_experience = 100
+			add_political_power = 50
 			hidden_effect = {
 				set_country_flag = guard_rebornHEA
 			}

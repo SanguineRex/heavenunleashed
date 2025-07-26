@@ -230,143 +230,145 @@ hea_nf_foreign_ministryA_tt: "Unlock §YThe Sanctified Orders§! decisions."
 
 ############Holy Order Focuses
 
-  heavens_holy_orders:0 "§8Holy Orders of Heaven's Gate"
-  heavens_holy_orders_desc:0 "§5 The Vapor Equitum don their holy plate, blessed by Steam and the Father above, preparing to show the world the might of the faithful. \n §8Proclaim this among the nations: Prepare for war! Rouse the warriors! Let all the fighting men draw near and attack. \n - Joel 3:9"
+heavens_holy_orders: "§8Holy Orders of Heaven's Gate§!"
+heavens_holy_orders_desc: "§5The Vapor Equitum don their holy plate, blessed by Steam and the Father above, preparing to show the world the might of the faithful.§!\n §8Proclaim this among the nations: Prepare for war! Rouse the warriors! Let all the fighting men draw near and attack.§!\n - Joel 3:9"
 
-HEA_order_headquarters:0 " §6 High in the Heavens"
-HEA_order_headquarters_desc:0 " §7 Though members of the Holy Orders are well used to dwelling where they are needed, the time has come for them to come together, Peter's Peak has been given the honor of being the bastion for these hallowed men. \n§6I lift up my eyes to the mountains–where does my help come from? \n - Psalm 121:1"
+HEA_order_headquarters: "§6High in the Heavens§!"
+HEA_order_headquarters_desc: "§7Though members of the Holy Orders are well used to dwelling where they are needed, the time has come for them to come together, Peter's Peak has been given the honor of being the bastion for these hallowed men.§!\n§6I lift up my eyes to the mountains–where does my help come from? \n - Psalm 121:1§!"
 
-HEA_peters_retreat:0 "§3Peter's Retreat" 
-HEA_peters_retreat_desc:0 " §9High in the Fortress of Peter's Retreat, great warriors train for battle, for they feel it in their bones, a great change is coming, the Father above has decreed it, and they will ensure his will is carried out. \n §3A time to love and a time to hate, a time for war and a time for peace. \n - Ecclesiastes 3:8"
+HEA_peters_retreat: "§3Peter's Retreat§!" 
+HEA_peters_retreat_desc: " §9High in the Fortress of Peter's Retreat, great warriors train for battle, for they feel it in their bones, a great change is coming, the Father above has decreed it, and they will ensure his will is carried out.§!\n §3A time to love and a time to hate, a time for war and a time for peace.§!\n - Ecclesiastes 3:8"
 
-HEA_wardens_of_christ:0 "§2Shield of the Faithful"
-HEA_wardens_of_christ_desc:0 "§GThe Council has spoken, the knights are to be the shield of the down trodden, and banish the wicked wherever they may tread. \n\n §2Blessed are the peacemakers, for they will be called children of God. \n -Matthew 5:9"
+HEA_wardens_of_christ: "§2Shield of the Faithful§!"
+HEA_wardens_of_christ_desc: "§GThe Council has spoken, the knights are to be the shield of the down trodden, and banish the wicked wherever they may tread.§!\n\n §2Blessed are the peacemakers, for they will be called children of God.\n -Matthew 5:9§!"
 
-HEA_help_refugees:0 "Helping Refugees"
-HEA_help_refugees_desc:0 "There are thousands who want to enter Heaven's Gate, the order will set off, and ensure they comfortably settle in, while stopping any who may wish to do harm to Heaven's Gate..."
+HEA_help_refugees: "Helping Refugees"
+HEA_help_refugees_desc: "There are thousands who want to enter Heaven's Gate, the order will set off, and ensure they comfortably settle in, while stopping any who may wish to do harm to Heaven's Gate..."
 
-HEA_learn_of_monsters:0 "Learning of the Wasteland..."
-HEA_learn_of_monsters_desc:0 "All the refugees we helped settle in had an interesting story to tell...there are monsters in the North, the East, the South, and West. Simply put, they're everywhere, an Immortal monster stalks Washington State, a horde of giants battles with cannibals and twisted creatures of the sea, in the far North a horde of cut-throats sail the seas and kill whomever they please. There are hundreds of such case...the Order is astounded, and tighten their grips on their weapons. The flock was being terrorized, and here they hid...soon, so very soon, they would march and be the Bastion that humanity clearly needed."
+HEA_learn_of_monsters: "Learning of the Wasteland..."
+HEA_learn_of_monsters_desc: "All the refugees we helped settle in had an interesting story to tell...there are monsters in the North, the East, the South, and West. Simply put, they're everywhere, an Immortal monster stalks Washington State, a horde of giants battles with cannibals and twisted creatures of the sea, in the far North a horde of cut-throats sail the seas and kill whomever they please. There are hundreds of such case...the Order is astounded, and tighten their grips on their weapons. The flock was being terrorized, and here they hid...soon, so very soon, they would march and be the Bastion that humanity clearly needed."
 
-HEA_rebuild_innocence:0 "Rebuilding Judas' Shrine"
-HEA_rebuild_innocence_desc:0 "Our losses at the hands of the pagan...were severe, most refuse to visit Innocence again, seeing it as the land where Heaven's Gate hope for a peaceful future was lost. With our Orders arrival, such thoughts can be banished, it will take time, but we will devote funds, manpower, and time to building Judas' Shrine into a great bastion of rebirth."
+HEA_rebuild_innocence: "Rebuilding Judas' Shrine"
+HEA_rebuild_innocence_desc: "Our losses at the hands of the pagan...were severe, most refuse to visit Innocence again, seeing it as the land where Heaven's Gate hope for a peaceful future was lost. With our Orders arrival, such thoughts can be banished, it will take time, but we will devote funds, manpower, and time to building Judas' Shrine into a great bastion of rebirth."
 
-HEA_battle_priests:0 "Battle Priests"
-HEA_battle_priests_desc:0 "When we march into battle, we do so with the Lord at our back, but should our spirits not be watched by those closest to him? Priests will follow us, to help both ailments of the mind, and body."
+HEA_battle_priests: "Battle Priests"
+HEA_battle_priests_desc: "When we march into battle, we do so with the Lord at our back, but should our spirits not be watched by those closest to him? Priests will follow us, to help both ailments of the mind, and body."
 
-HEA_bastions_of_hope:0 "§2Bastion of Hope"
-HEA_bastions_of_hope_desc:0 "§GThe actions of this order propel them into Living Saints for where they tread, so too does the faith of every soul in Heaven's Gate. \n  §2So do not fear, for I am with you; do not be dismayed, for I am your God. I will strengthen you and help you; I will uphold you with my righteous right hand. \n - Isaiah 41:10"
+HEA_bastions_of_hope: "§2Bastion of Hope§!"
+HEA_bastions_of_hope_desc: "§GThe actions of this order propel them into Living Saints for where they tread, so too does the faith of every soul in Heaven's Gate.§!\n  §2So do not fear, for I am with you; do not be dismayed, for I am your God. I will strengthen you and help you; I will uphold you with my righteous right hand.§!\n - Isaiah 41:10"
 
-HEA_executioners_of_sinners:0 "§RBane of Sinners"
-HEA_executioners_of_sinners_desc:0 "§YThe Prophet speaks true, sinners dwell in the wasteland, but they do not hide, they corrupt freely, we will be Saint Michael's Sword, and cleanse the land, as the Prophet and Lord commands \n §R “You are my war club, my weapon for battle— with you I shatter nations, with you I destroy kingdoms " \n -Jeremiah 51:20"
+HEA_executioners_of_sinners: "§RBane of Sinners§!"
+HEA_executioners_of_sinners_desc: "§YThe Prophet speaks true, sinners dwell in the wasteland, but they do not hide, they corrupt freely, we will be Saint Michael's Sword, and cleanse the land, as the Prophet and Lord commands§!\n §R \"You are my war club, my weapon for battle— with you I shatter nations, with you I destroy kingdoms\"\n -Jeremiah 51:20§!"
 
-HEA_preparing_war:0 "New War Foundries"
-HEA_preparing_war_desc:0 "There are thousands willing to fight for Heaven's Gate, hundreds that can actually do so. The Order has sent out a call, they will employ any able bodied smith, and are hunting for those skilled in constrution so to build great foundries worthy of those smiths."
+HEA_preparing_war: "New War Foundries"
+HEA_preparing_war_desc: "There are thousands willing to fight for Heaven's Gate, hundreds that can actually do so. The Order has sent out a call, they will employ any able bodied smith, and are hunting for those skilled in constrution so to build great foundries worthy of those smiths."
 
-HEA_raiding_bunkers:0 "Unsealing Ancient Armories"
-HEA_raiding_bunkers_desc:0 "There are dozens of small holdouts of technology, forgotten by all but the tomes of our ancestors. With these tomes the order will set out, and claim the equipment stored there for their holy crusades."
+HEA_raiding_bunkers: "Unsealing Ancient Armories"
+HEA_raiding_bunkers_desc: "There are dozens of small holdouts of technology, forgotten by all but the tomes of our ancestors. With these tomes the order will set out, and claim the equipment stored there for their holy crusades."
 
-HEA_calling_faithful:0 "Sounding a Rallying Call"
-HEA_calling_faithful_desc:0 "Thousands wish to join our ranks, few are worthy. Nonetheless, we will raise our banner aloft, and allow veteran guard members to join the fold. They will be vigorously tested, but they will be reborn as great Knights who shatter the ranks of pagans and heathens."
+HEA_calling_faithful: "Sounding a Rallying Call"
+HEA_calling_faithful_desc: "Thousands wish to join our ranks, few are worthy. Nonetheless, we will raise our banner aloft, and allow veteran guard members to join the fold. They will be vigorously tested, but they will be reborn as great Knights who shatter the ranks of pagans and heathens."
 
-HEA_battle_smiths:0 "Battle Smiths"
-HEA_battle_smiths_desc:0 "The armor knights wear is heavy, cumbersome, and prone to failure after great conflicts. The Order seeks the aid of any blacksmith who is willing to accompany Knights into their battles in order to maintain their armor. It is not a safe job, but they will be protected and sure to earn a place at the Father's table if they were to die in this holy task."
+HEA_battle_smiths: "Battle Smiths"
+HEA_battle_smiths_desc: "The armor knights wear is heavy, cumbersome, and prone to failure after great conflicts. The Order seeks the aid of any blacksmith who is willing to accompany Knights into their battles in order to maintain their armor. It is not a safe job, but they will be protected and sure to earn a place at the Father's table if they were to die in this holy task."
 
-HEA_juggernauts_of_war:0 "§RJuggernauts of War"
-HEA_juggernauts_of_war_desc:0 "§Y They've beaten their drums, called the faithful, and armed their apprentices, they march so Heaven's Gate will never be afraid again... \n §RAnd I saw heaven opened, and behold, a white horse, and He who sat on it is called Faithful and True, and in righteousness He judges and wages war. \n - Revelation 19:11"
+HEA_juggernauts_of_war: "§RJuggernauts of War§!"
+HEA_juggernauts_of_war_desc: "§Y They've beaten their drums, called the faithful, and armed their apprentices, they march so Heaven's Gate will never be afraid again...§! \n §RAnd I saw heaven opened, and behold, a white horse, and He who sat on it is called Faithful and True, and in righteousness He judges and wages war. \n - Revelation 19:11§!"
 
-HEA_peters_retreat_build:0 "§YPeter's Retreat"
-HEA_peters_retreat_build_desc:0 "§YNow that the Order is established, Peter's Retreat can slowly be turned into the titan of industry it needs to be in order to accommodate the knights that dwell within its walls"
+HEA_peters_retreat_build: "§YPeter's Retreat§!"
+HEA_peters_retreat_build_desc: "§YNow that the Order is established, Peter's Retreat can slowly be turned into the titan of industry it needs to be in order to accommodate the knights that dwell within its walls§!"
 
-HEA_peters_retreat_guns:0 "Finding Gun Artisans"
-HEA_peters_retreat_guns_desc:0 "Our Knights go through guns faster than we can make them! Whether that be because of the steam (blasphemy) or due to the harsh conditions they often find themselves in, employing full-time Gun Artisans will help ease the burdens the regular manufacturers feel."
+HEA_peters_retreat_guns: "Finding Gun Artisans"
+HEA_peters_retreat_guns_desc: "Our Knights go through guns faster than we can make them! Whether that be because of the steam (blasphemy) or due to the harsh conditions they often find themselves in, employing full-time Gun Artisans will help ease the burdens the regular manufacturers feel."
 
-HEA_peters_retreat_armor:0 "Finding Blacksmiths for Power Armor"
-HEA_peters_retreat_armor_desc:0 "Power Armor is meant to withstand great stress, sadly the Lord tests his most faithful with great trials that their armor cannnot withstand, even if their spirits are not found wanting. Spread the word, we are in need of Smiths who can work with Power Armor"
+HEA_peters_retreat_armor: "Finding Blacksmiths for Power Armor"
+HEA_peters_retreat_armor_desc: "Power Armor is meant to withstand great stress, sadly the Lord tests his most faithful with great trials that their armor cannnot withstand, even if their spirits are not found wanting. Spread the word, we are in need of Smiths who can work with Power Armor"
 
-HEA_peters_retreat_defenses:0 "Improving the defenses of Peter's Retreat"
-HEA_peters_retreat_defenses_desc:0 "While some don't understand the desire to improve the defenses of Peter's Retreat, the money we're pouring into the great bastion means that its often seen as a great spoil to take, our knights are happy to disagree, but perhaps taller walls will disaude them? Oh and some really big guns in case they think they can fly over the walls."
+HEA_peters_retreat_defenses: "Improving the defenses of Peter's Retreat"
+HEA_peters_retreat_defenses_desc: "While some don't understand the desire to improve the defenses of Peter's Retreat, the money we're pouring into the great bastion means that its often seen as a great spoil to take, our knights are happy to disagree, but perhaps taller walls will disaude them? Oh and some really big guns in case they think they can fly over the walls."
 
-HEA_peters_retreat_smiths:0 "Master Smiths"
-HEA_peters_retreat_smiths_desc:0 "After spending months working directly with our Knightly order, the smiths we employed now understand what they desire, and how to better improve their craft, some of their skill has even trickled down for the Guard to enjoy!"
+HEA_peters_retreat_smiths: "Master Smiths"
+HEA_peters_retreat_smiths_desc: "After spending months working directly with our Knightly order, the smiths we employed now understand what they desire, and how to better improve their craft, some of their skill has even trickled down for the Guard to enjoy!"
 
-HEA_peters_retreat_drill_masters:0 "Smiths, or Drill Masters?"
-HEA_peters_retreat_drill_masters_desc:0 "In an interesting twist, the Smiths have asked that they be allowed to help train our recruits, we see no reason to refuse their request, who knows, maybe it'll help?"
+HEA_peters_retreat_drill_masters: "Smiths, or Drill Masters?"
+HEA_peters_retreat_drill_masters_desc: "In an interesting twist, the Smiths have asked that they be allowed to help train our recruits, we see no reason to refuse their request, who knows, maybe it'll help?"
 
-HEA_peters_retreat_infrastructure:0 "Building Highway's for Peter's Retreat"
-HEA_peters_retreat_infrastructure_desc:0 "Knights train at Peter's Retreat before going off to ensure that the Lord's work is done, the least we can do, is ensure that the roads into Peter's Retreat are well maintained, if not the best we can build for such a prestigious order"\
+HEA_peters_retreat_infrastructure: "Building Highway's for Peter's Retreat"
+HEA_peters_retreat_infrastructure_desc: "Knights train at Peter's Retreat before going off to ensure that the Lord's work is done, the least we can do, is ensure that the roads into Peter's Retreat are well maintained, if not the best we can build for such a prestigious order"
 
-HEA_peters_retreat_airports:0 "Flying Knights"
-HEA_peters_retreat_airports_desc:0 "In a Holy World, mortals would fight on the earth, and Angels would wage war against demons from the skies, sadly the world is filled with demons and too few angels. Therefore the knightly order will have airways built, so that they may take to the air, and show the world that Angels still yet watch over them."
+HEA_peters_retreat_airports: "Flying Knights"
+HEA_peters_retreat_airports_desc: "In a Holy World, mortals would fight on the earth, and Angels would wage war against demons from the skies, sadly the world is filled with demons and too few angels. Therefore the knightly order will have airways built, so that they may take to the air, and show the world that Angels still yet watch over them."
 
-HEA_peters_retreat_doctors:0 "Hiring trained Clerics"
-HEA_peters_retreat_doctors_desc:0 "Too often do our knights fall in battle, no longer! We will hunt throughout our land, and beyond, for trained clerics (or doctors as wastelanders refer to them) so that our knights need not fear dying after a battle, no greater a shame that a warrior die once the battle ends"
+HEA_peters_retreat_doctors: "Hiring trained Clerics"
+HEA_peters_retreat_doctors_desc: "Too often do our knights fall in battle, no longer! We will hunt throughout our land, and beyond, for trained clerics (or doctors as wastelanders refer to them) so that our knights need not fear dying after a battle, no greater a shame that a warrior die once the battle ends"
 
-HEA_peters_retreat_comfort:0 "Furnishing Peter's Retreat"
-HEA_peters_retreat_comfort_desc:0 "Some may call this a waste of funds and time, but do our warriors not deserve comfort? When they risk their lives for the Lord, they do so expecting nothing in return, but should we not reward the great warriors that pave the way through monstrous hordes and more?"
+HEA_peters_retreat_comfort: "Furnishing Peter's Retreat"
+HEA_peters_retreat_comfort_desc: "Some may call this a waste of funds and time, but do our warriors not deserve comfort? When they risk their lives for the Lord, they do so expecting nothing in return, but should we not reward the great warriors that pave the way through monstrous hordes and more?"
 
-HEA_peters_retreat_beacons:0 "Peter's Retreat Beacons"
-HEA_peters_retreat_beacons_desc:0 "Radars is the correct term for it, but its such a mundane term for such an interesting concept. Nonetheless, there is a proposal to build a series of beacons that will warn the knights of Heaven's Gate when enemies threaten the heart of our kingdom, it's been passed. In an interesting twist, they've employed use of these 'radars' in their own armor, so they could know where their enemies are, and move faster because of it!"
+HEA_peters_retreat_beacons: "Peter's Retreat Beacons"
+HEA_peters_retreat_beacons_desc: "Radars is the correct term for it, but its such a mundane term for such an interesting concept. Nonetheless, there is a proposal to build a series of beacons that will warn the knights of Heaven's Gate when enemies threaten the heart of our kingdom, it's been passed. In an interesting twist, they've employed use of these 'radars' in their own armor, so they could know where their enemies are, and move faster because of it!"
 
-HEA_peters_retreat_rebuilt:0 "§YPeter's Retreat Rebuilt"
-HEA_peters_retreat_rebuilt_desc:0 "§YThough it was once a hall filled with naught but Knights and Priests, it has become a home to those worthy of calling it one, Smiths forge their armor (and train them quite brutally), trained clerics ensure the knights have the best medical expertise we can afford them, and Peter's Retreat is worthy of being called a Bastion to these brave souls. Though it was a long process, the Order is all the stronger for it."
+HEA_peters_retreat_rebuilt: "§YPeter's Retreat Rebuilt§!"
+HEA_peters_retreat_rebuilt_desc: "§YThough it was once a hall filled with naught but Knights and Priests, it has become a home to those worthy of calling it one, Smiths forge their armor (and train them quite brutally), trained clerics ensure the knights have the best medical expertise we can afford them, and Peter's Retreat is worthy of being called a Bastion to these brave souls. Though it was a long process, the Order is all the stronger for it.§!"
 
 ########End of Order Focuses
 
+hea_advanced_guard: "Hammer of God"
+
 #########Tank Focuses (Dreadnought)
 
-hea_guard_tanks:0 "§CSteam Dreadnoughts"
-hea_guard_tanks_desc:0 "§tIn metal behemoths powered by Steam will the faithful march aside, protected by its awesome might, our blessed armies will absolve the Wasteland of Sin.\n§CThe weapons we fight with are not the weapons of the world. On the contrary, they have divine power to demolish strongholds.\n - Corinthians 10:1"
-judas_tankstt:0 "Woe be the children of order"
+hea_guard_tanks: "§CSteam Dreadnoughts§!"
+hea_guard_tanks_desc: "§tIn metal behemoths powered by Steam will the faithful march aside, protected by its awesome might, our blessed armies will absolve the Wasteland of Sin.§!\n§CThe weapons we fight with are not the weapons of the world. On the contrary, they have divine power to demolish strongholds.\n - Corinthians 10:1§!"
+judas_tankstt: "Woe be the children of order"
 
-hea_earths_hell:0 "§LDown in the Mud"
-hea_earths_hell_desc:0 "§8Judas Shrine had a different name a decade ago. It was once a hub where all manner of people could journey to, to learn about the Lord above and share in our prosperity. They betrayed our kindness with fire and steel...\n§L"So whatever you wish that others would do to you, do also to them, for this is the Law and the Prophets." - Matthew 7:12"
+hea_earths_hell: "§LDown in the Mud§!"
+hea_earths_hell_desc: "§8Judas Shrine had a different name a decade ago. It was once a hub where all manner of people could journey to, to learn about the Lord above and share in our prosperity. They betrayed our kindness with fire and steel...§!\n§L\"So whatever you wish that others would do to you, do also to them, for this is the Law and the Prophets.\" - Matthew 7:12§!"
 
-hea_judas_vengeance:0 "§tJudas' Vengeance"
-hea_judas_vengeance_desc:0 "§OJudas' Shrine was a testament to betrayal, hence its name. However, the flames of righteous anger burn brightly within Heaven's Gate over the loss of such a great hub, but it can be rebuilt, greater than ever before. Foundries will be constructed, great dreadnoughts will go forth, and Judas' Shrine will have its vengeance...\n§tO Lord, God of vengeance, O God of vengeance, shine forth! Psalm 94:1"
+hea_judas_vengeance: "§tJudas' Vengeance§!"
+hea_judas_vengeance_desc: "§OJudas' Shrine was a testament to betrayal, hence its name. However, the flames of righteous anger burn brightly within Heaven's Gate over the loss of such a great hub, but it can be rebuilt, greater than ever before. Foundries will be constructed, great dreadnoughts will go forth, and Judas' Shrine will have its vengeance...§!\n§tO Lord, God of vengeance, O God of vengeance, shine forth! - Psalm 94:1§!"
 
-hea_judasfoundrywar:0 "§tJudas, Foundry of War"
-hea_judasfoundrywar_desc:0 "The township of Judas' Foundry has accepted their role, hundreds amongst the community are prepared to construct the vessels their vengeance will be extracted upon.\n§t"Behold, I have created the smith who blows the fire of coals, and brings forth a weapon for his work; and I have created the waster to destroy." - Isaiah 54:16"
+hea_judasfoundrywar: "§tJudas, Foundry of War§!"
+hea_judasfoundrywar_desc: "The township of Judas' Foundry has accepted their role, hundreds amongst the community are prepared to construct the vessels their vengeance will be extracted upon.\n§t\"Behold, I have created the smith who blows the fire of coals, and brings forth a weapon for his work; and I have created the waster to destroy.\" - Isaiah 54:16§!"
 
-hea_judastanks:0 "Judas' Tanks"
-hea_judastanks_desc:0 "Judas' Tanks are a new foundry team that pushed forward some interesting designs that we are all too willing to accept. These technicians are prepared to create as many 'dreadnoughts' as Heaven's Gate needs, though they lean towards the side of bigger and stronger equates to better."
+hea_judastanks: "Judas' Tanks"
+hea_judastanks_desc: "Judas' Tanks are a new foundry team that pushed forward some interesting designs that we are all too willing to accept. These technicians are prepared to create as many 'dreadnoughts' as Heaven's Gate needs, though they lean towards the side of bigger and stronger equates to better."
 
-hea_judas_experiencedtechs:0 "Experienced Tank Engineers"
-hea_judas_experiencedtechs_desc:0 "After a few months of creating Tanks, the foundry team has learned how to push beyond the ordinary doctrines and schematics left behind by pre-war technicians. They're confident that the war machines that they're preparing to unveil will blow away the competition. Literally."
+hea_judas_experiencedtechs: "Experienced Tank Engineers"
+hea_judas_experiencedtechs_desc: "After a few months of creating Tanks, the foundry team has learned how to push beyond the ordinary doctrines and schematics left behind by pre-war technicians. They're confident that the war machines that they're preparing to unveil will blow away the competition. Literally."
 
-hea_aninteresting_schematic:0 "§tInspiration from the Past"
-hea_aninteresting_schematic_desc:0 "The schematics are worn, being labeled as failures outright by the greater world, but where the past saw only ruin, we see Titans. With the technology afforded to us, we can create monsters that will shake the world with its firepower and size."
+hea_aninteresting_schematic: "§tInspiration from the Past§!"
+hea_aninteresting_schematic_desc: "The schematics are worn, being labeled as failures outright by the greater world, but where the past saw only ruin, we see Titans. With the technology afforded to us, we can create monsters that will shake the world with its firepower and size."
 
-hea_guard_bigger_barrels:0 "§tBigger Barrels"
-hea_guard_bigger_barrels_desc:0 "The barrels need to be bigger, greater than ever before, so that the tank may weather the great storm of power that it will wield! \n\n§tFor the weapons of our warfare are not of the flesh but have divine power to destroy strongholds. -  Corinthians 10:4"
+hea_guard_bigger_barrels: "§tBigger Barrels§!"
+hea_guard_bigger_barrels_desc: "The barrels need to be bigger, greater than ever before, so that the tank may weather the great storm of power that it will wield! \n\n§tFor the weapons of our warfare are not of the flesh but have divine power to destroy strongholds. -  Corinthians 10:4§!"
 
-hea_guard_bigger_treads:0 "Bigger Chassis"
-hea_guard_bigger_treads_desc:0 "The chassis was too small for the improvements our clerics had in mind, the barrel alone challenged the tank's integrity, and so we shall improve upon the chassis, making it bigger than before so that our dreams of an unstoppable dreadnought may yet be realized!"
+hea_guard_bigger_treads: "Bigger Chassis"
+hea_guard_bigger_treads_desc: "The chassis was too small for the improvements our clerics had in mind, the barrel alone challenged the tank's integrity, and so we shall improve upon the chassis, making it bigger than before so that our dreams of an unstoppable dreadnought may yet be realized!"
 
-hea_guard_bigger_boom:0 "Bigger Shells"
-hea_guard_bigger_boom_desc:0 "We need shells worthy of the beast we are constructing, though the wasteland may fool around with standard shells, using what stockpiles are left and recreating what their forefathers left behind, we will employ alchemists and artisans to craft a shell that will engulf the horizon in a magnificent holy explosion."
+hea_guard_bigger_boom: "Bigger Shells"
+hea_guard_bigger_boom_desc: "We need shells worthy of the beast we are constructing, though the wasteland may fool around with standard shells, using what stockpiles are left and recreating what their forefathers left behind, we will employ alchemists and artisans to craft a shell that will engulf the horizon in a magnificent holy explosion."
 
-hea_guard_huge_tanks:0 "§tGreat Behemoths of War"
-hea_guard_huge_tanks_desc:0 "Behemoths tread the world once more, tearing apart the ground, knocking aside buildings as though they were ants, and prepared to unleash brutal devestation upon the world in the name of the Father above."
+hea_guard_huge_tanks: "§tGreat Behemoths of War§!"
+hea_guard_huge_tanks_desc: "Behemoths tread the world once more, tearing apart the ground, knocking aside buildings as though they were ants, and prepared to unleash brutal devestation upon the world in the name of the Father above."
 
-hea_shrine_frames:0 "§YConstructing Shrines"
-hea_shrine_frames_desc:0 "Judas' Shrine was famous for the majestic Cathedral it once had, open to pagans, heathens, and faithful alike. They've been instructed to create shrines in the name of the Father above.§Y\nGo therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit. - Matthews 28:19 "
-shrineshea:0 "§YHow to build shrines with reinforced stone..."
+hea_shrine_frames: "§YConstructing Shrines§!"
+hea_shrine_frames_desc: "Judas' Shrine was famous for the majestic Cathedral it once had, open to pagans, heathens, and faithful alike. They've been instructed to create shrines in the name of the Father above.§Y\nGo therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit. - Matthews 28:19§!"
+shrineshea: "§YHow to build shrines with reinforced stone...§!"
 
-hea_stainedglass_and_holyeffigies:0 "Stained Glass and Steam Pipes"
-hea_stainedglass_and_holyeffigies_desc:0 "Our shrines will be beautiful, they will have artworks dedicated to the saints. Steam pipes will course through them, giving it power, and bringing us closer to the holy steam that the Father bestowed upon us."
-stainedglasspipeshea:0 "The pipes are easy, but learning how to make stained glass that can withstand battlegrounds..."
+hea_stainedglass_and_holyeffigies: "Stained Glass and Steam Pipes"
+hea_stainedglass_and_holyeffigies_desc: "Our shrines will be beautiful, they will have artworks dedicated to the saints. Steam pipes will course through them, giving it power, and bringing us closer to the holy steam that the Father bestowed upon us."
+stainedglasspipeshea: "§YThe pipes are easy, but learning how to make stained glass that can withstand battlegrounds...§!"
 
-hea_scripturesandart:0 "Blessed Effigies and Reloading Stations"
-hea_scripturesandart_desc:0 "Blessed effigies honoring the Father, the Son, and all his Saints will decorate the shrine. Alongside them, will be crates of munitions, reloading stations, and reinforced walls in case the shrine is ever breached."
-heaeffigiesreloadhea:0 "Convincing craftsmen that placing munitions next to the effigies took the longest."
+hea_scripturesandart: "Blessed Effigies and Reloading Stations"
+hea_scripturesandart_desc: "Blessed effigies honoring the Father, the Son, and all his Saints will decorate the shrine. Alongside them, will be crates of munitions, reloading stations, and reinforced walls in case the shrine is ever breached."
+heaeffigiesreloadhea: "§YConvincing craftsmen that placing munitions next to the effigies took the longest.§!"
 
-hea_shrinetank:0 "§tNow...put it on a Tank"
-hea_shrinetank_desc:0 "The shrine has been completed, one amongst thousands, it is a creation of war and faith, and it will accompany every dreadnought to the front. Acting as a beacon of hope to our soldiers, and a symbol of dread to our enemies."
+hea_shrinetank: "§tNow...put it on a Tank§!"
+hea_shrinetank_desc: "The shrine has been completed, one amongst thousands, it is a creation of war and faith, and it will accompany every dreadnought to the front. Acting as a beacon of hope to our soldiers, and a symbol of dread to our enemies."
 
-hea_tank_rebirth_of_judas:0 "§LRebirth of Innocence Lost"
-hea_tank_rebirth_of_judas_desc:0 "A town of worship and a foundry of war. Judas' Foundry churns out a shrine for every tank, so that we may spread the word of God to those willing to listen, and a monster of steel and steam for those unwilling.\n§LBeloved, never avenge yourselves, but leave it to the wrath of God, for it is written, “Vengeance is mine, I will repay, says the Lord.” - Romans 12:19"
-HEAWEHAVETANKS:0 "We Got Tanks yall!"
+hea_tank_rebirth_of_judas: "§LRebirth of Innocence Lost§!"
+hea_tank_rebirth_of_judas_desc: "A town of worship and a foundry of war. Judas' Foundry churns out a shrine for every tank, so that we may spread the word of God to those willing to listen, and a monster of steel and steam for those unwilling.\n§LBeloved, never avenge yourselves, but leave it to the wrath of God, for it is written, \"Vengeance is mine, I will repay, says the Lord.\" - Romans 12:19§!"
+HEAWEHAVETANKS: "We Got Tanks yall!"
 
 ##########Center Focuses
 
@@ -595,10 +597,9 @@ hea_guard_tempered_armor_desc:0 "Now that the Guard is wearing standardized armo
 hea_guard_best_thing_next_to_powerarmor:0 "Plated Guard"
 hea_guard_best_thing_next_to_powerarmor_desc:0 "Now comes the hard part! Improving the armor as a whole! It'll take time, of that there's no doubt, but if we could give our stalwart guard plate armor, their armor can match their lack of fear (though it is nice to see our warriors valiantly charge a gun line, its less pleasing to notice that scarcely half the line that does so returns)"
 
-hea_guard_warriors_unparalleled:0 "Warriors of God"
-hea_guard_warriors_unparalleled_desc:0 "The Guard has been armored in platemail, their arms improved, and trained to use them well, they will fight like titans. They are the Children of Heaven's Gate, they are the Warriors of God, the faithful few that will act as the Father above sees fit."
-
-hea_guardreborn:0 "The Guard are reborn!"
+hea_guard_warriors_unparalleled: "Warriors of God"
+hea_guard_warriors_unparalleled_desc: "The Guard has been armored in platemail, their arms improved, and trained to use them well, they will fight like titans. They are the Children of Heaven's Gate, they are the Warriors of God, the faithful few that will act as the Father above sees fit."
+hea_guard_warriors_unparalleled_tt: "The §YGuard§! are §Yreborn§!!"
 
 ####Air Focuses (Guard)
 
@@ -632,11 +633,13 @@ hea_guard_angels_rage_desc:0 "Miles above in the air, our pilots drop death upon
 hea_guard_angel_holy_grenade:0 "Holy Bomb Shells"
 hea_guard_angel_holy_grenade_desc:0 "We can inscribe our bomb shells with holy etchings while reinofrcing their power with that of the holy atom. As God intended."
 
-hea_steam_payload:0 "Hell's Grasp"
-hea_steam_payload_desc:0 "With technology, faith, and blessed atom, our angels will smite down the sinners and cast them down to Hell."
+hea_steam_payload: "Hell's Grasp"
+hea_steam_payload_desc: "With technology, faith, and blessed atom, our angels will smite down the sinners and cast them down to Hell."
+hea_steam_payload_tt: "We will §Mmerge§! our previous §Ynational spirits§! together into a §Gstronger one§!!"
 
-hea_steam_heavensreach:0 "Heaven's Reach"
-hea_steam_heavensreach_desc:0 "With technology, faith, and blessed atom, our angels will soar wherever God demands we fight."
+hea_steam_heavensreach: "Heaven's Reach"
+hea_steam_heavensreach_desc: "With technology, faith, and blessed atom, our angels will soar wherever God demands we fight."
+hea_steam_heavensreach_tt: "We will §Mmerge§! our previous §Ynational spirits§! together into a §Gstronger one§!!"
 
 ###########End of Guard Focuses
 
@@ -875,10 +878,10 @@ hea_servants_of_god_vengance_tt: "§YFervor§! is §Gno longer§! affected by §
  hea_coring_lon:0 "The territories ruled by §CLonetree and Timberline§W now fall under the light of Heaven's Gate"
   hea_coring_ham:0 "The territories ruled by §C New Hammond and Eastport§W now fall under the light of Heaven's Gate"
  hea_coring_bdt:0 "The territories ruled by §CThe Bone Dancers and Marrow Drinkers§W now fall under the light of Heaven's Gate"
-hea_coring_sho:0 "The territories ruled by §CYellowstone Park and Shoshone Nation§W now fall under the light of Heaven's Gate"
- battle_smiths_tt:0 "The Smiths bring vasts amount of knowledge with them, though it will take time to implement it"
- hea_digging_deep_tt:0 "§gWe'll Begin Construction on Heaven's Gate at Once"
- hea_peters_retreat_rebuilt_tt:0 "§YPeter's Retreat: Military Smiths §W and §YPeter's Retreat: Civilian Comfort §W combine to create §YPeter's Retreat: Order's Home"
+hea_coring_sho: "The territories ruled by §CYellowstone Park and Shoshone Nation§!§W now fall under the light of Heaven's Gate"
+battle_smiths_tt: "The Smiths bring vasts amount of knowledge with them, though it will take time to implement it"
+hea_digging_deep_tt: "§gWe'll Begin Construction on Heaven's Gate at Once§!"
+hea_peters_retreat_rebuilt_tt: "We will §Mmerge§! our previous §Ynational spirits§! together into a §Gstronger one§!!"
  hea_forgive_mur:0 "§2We will await Presbyter Ann's Decision..."
  hea_forgive_ano:0 "§2Let us hope Amon sees the light..."
  hea_innocence_lost_tt:0 "§tFor we have none."

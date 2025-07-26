@@ -813,7 +813,7 @@ ideas = {
 				}
 			}
 		}
-			hea_peters_rebuilt = {
+		hea_peters_rebuilt = {
 			picture = peters_retreat
 			allowed = {
 			}
@@ -1226,7 +1226,7 @@ ideas = {
 			}
 			#remove_cost = 1
 			modifier = {
-				recruitable_population = -0.05
+				conscription_factor = -0.1
 				army_armor_attack_factor = 0.10
 				army_armor_defence_factor = 0.10
 			}
@@ -1577,13 +1577,13 @@ ideas = {
 		}
 		hea_taming_idea_preparing_for_expansion = {
 			modifier = {
-				global_building_slots_factor = -0.05
+				global_building_slots_factor = 0.05
 				production_speed_buildings_factor = 0.02
 			}
 		}
 		hea_taming_idea_home_blessed_by_steam = {
 			modifier = {
-				global_building_slots_factor = -0.05
+				global_building_slots_factor = 0.05
 				production_speed_buildings_factor = 0.03
 			}
 		}

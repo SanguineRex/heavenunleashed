@@ -107,47 +107,47 @@ hea_rampant_militarism_3_desc:0 "We have proved to the world that the Lord's str
   hea_orders2A:0 "Holy Order: Sinner's Bane"
   hea_orders2A_desc:0 "We are to banish the wicked, and cleanse the land with Holy Steam, for Michael wills it."
   
-  hea_orders3A:0 "§RHoly Order: Juggernauts of War"
-  hea_orders3A_desc:0 "Our purpose is clear: purge the faithless, cleanse the mutant, and do so with Holy Steam"
+hea_orders3A: "§RHoly Order: Juggernauts of War§!"
+hea_orders3A_desc: "Our purpose is clear: purge the faithless, cleanse the mutant, and do so with Holy Steam"
   
-  hea_orders2D:0 "Holy Order: Faithful's Shield"
-  hea_orders2D_desc:0 "The flock in Heaven's Gate is secure, but there are faithful yet threatened, by monsters and men, we will not allow this to go on!"
+hea_orders2D: "Holy Order: Faithful's Shield"
+hea_orders2D_desc: "The flock in Heaven's Gate is secure, but there are faithful yet threatened, by monsters and men, we will not allow this to go on!"
   
-  hea_orders3D:0 "§2Holy Order: Bastion of Hope"
-  hea_orders3D_desc:0 "Our purpose is clear: protect the innocent, slay the monsters, and ensure the will of the Lord is learned by all."
+hea_orders3D: "§2Holy Order: Bastion of Hope§!"
+hea_orders3D_desc: "Our purpose is clear: protect the innocent, slay the monsters, and ensure the will of the Lord is learned by all."
   
-  hea_peters_retreat:0 "Order's Dwelling"
-  hea_peters_retreat_desc:0 "Peter's Retreat is a mighty bastion, created with technology forbidden to all but the echelons of Heaven's Gate, it is meant to train new warriors for the Order, but it was built to weather monumental attacks. For what is a Knightly Order without a Mighty Fortress to house them?"
+hea_peters_retreat: "Order's Dwelling"
+hea_peters_retreat_desc: "Peter's Retreat is a mighty bastion, created with technology forbidden to all but the echelons of Heaven's Gate, it is meant to train new warriors for the Order, but it was built to weather monumental attacks. For what is a Knightly Order without a Mighty Fortress to house them?"
 
-hea_peters_retreat1A:0 "Order Dwelling: Sinner's Bane"
-hea_peters_retreat1A_desc:0 "To live amongst the knights of Peter's Retreat is considered a great honor, so great that many veteran guard members often attempt fool hardy maneuvers in the desire to impress their knight counterparts. Sadly, while enemy lines rarely stand against assaults made by your ranks, your ranks die in the droves..."
+hea_peters_retreat1A: "Order Dwelling: Sinner's Bane"
+hea_peters_retreat1A_desc: "To live amongst the knights of Peter's Retreat is considered a great honor, so great that many veteran guard members often attempt fool hardy maneuvers in the desire to impress their knight counterparts. Sadly, while enemy lines rarely stand against assaults made by your ranks, your ranks die in the droves..."
 
-hea_peters_retreat1D:0 "Order Dwelling: Faithful's Shield"
-hea_peters_retreat1D_desc:0 "It is not rare to see a bunk in Peter's Retreat without a knight, their virtuous nature often leads them to making valiant sacrifices in the name of their lesser kin. The common folk of Heaven's Gate adore the knights for their actions, and are often seen attempting to enlist so they could aid the great men in this vaunted order."
+hea_peters_retreat1D: "Order Dwelling: Faithful's Shield"
+hea_peters_retreat1D_desc: "It is not rare to see a bunk in Peter's Retreat without a knight, their virtuous nature often leads them to making valiant sacrifices in the name of their lesser kin. The common folk of Heaven's Gate adore the knights for their actions, and are often seen attempting to enlist so they could aid the great men in this vaunted order."
 
-hea_peters_military1:0 "Peter's Retreat: Military Aid"
-hea_peters_military1_desc:0 "Though it took some time, we found artisans skilled in smithing weapons, it'll surely be of aid to the front lines."
+hea_peters_military1: "Peter's Retreat: Military Aid"
+hea_peters_military1_desc: "Though it took some time, we found artisans skilled in smithing weapons, it'll surely be of aid to the front lines."
 
-hea_peters_military2:0 "Peter's Retreat: Military Aid"
-hea_peters_military2_desc:0 "Along with improved Gun manufacturing, the Power Armor our warriors wear now have dedicated teams to producing them!"
+hea_peters_military2: "Peter's Retreat: Military Aid"
+hea_peters_military2_desc: "Along with improved Gun manufacturing, the Power Armor our warriors wear now have dedicated teams to producing them!"
 
-hea_peters_military3:0 "Peter's Retreat: Military Smiths"
-hea_peters_military3_desc:0 "The Smiths we have are masters at their craft! Courtesy of how often they are forced to create new armor for our Knights"
+hea_peters_military3: "Peter's Retreat: Military Smiths"
+hea_peters_military3_desc: "The Smiths we have are masters at their craft! Courtesy of how often they are forced to create new armor for our Knights"
 
-hea_peters_military4:0 "Peter's Retreat: Military Smiths"
-hea_peters_military4_desc:0 "Some of our smiths have taken to helping 'train' the knights, though this does create a bit of a rivalry between the two groups, these new warriors have found their training time cut in half! That and they can get up after a real mean hit faster than before..."
+hea_peters_military4: "Peter's Retreat: Military Smiths"
+hea_peters_military4_desc: "Some of our smiths have taken to helping 'train' the knights, though this does create a bit of a rivalry between the two groups, these new warriors have found their training time cut in half! That and they can get up after a real mean hit faster than before..."
 
-hea_peters_civilians1:0 "Peter's Retreat: Civilian Aid"
-hea_peters_civilians1_desc:0 "Now that we have trained medical professionals directly monitoring our knights, it's far less likely that defeat in battle means death, a welcome boon to warriors who fight for the lord"
+hea_peters_civilians1: "Peter's Retreat: Civilian Aid"
+hea_peters_civilians1_desc: "Now that we have trained medical professionals directly monitoring our knights, it's far less likely that defeat in battle means death, a welcome boon to warriors who fight for the lord"
 
-hea_peters_civilians2:0 "Peter's Retreat: Civilian Aid"
-hea_peters_civilians2_desc:0 "Now that their rooms are furnished, their life expectancy is higher (though not by much), our knights find themselves enjoying returns to Peter's Retreat, and often fight that much harder to ensure that they can indeed return..."
+hea_peters_civilians2: "Peter's Retreat: Civilian Aid"
+hea_peters_civilians2_desc: "Now that their rooms are furnished, their life expectancy is higher (though not by much), our knights find themselves enjoying returns to Peter's Retreat, and often fight that much harder to ensure that they can indeed return..."
 
-hea_peters_civilians3:0 "Peter's Retreat: Civilian Aid"
-hea_peters_civilians3:0 "With the beacons in their armor, clerics on hand, and comfortable rooms to return to, the knights are stronger, faster, and more often to live than ever before!"
+hea_peters_civilians3: "Peter's Retreat: Civilian Aid"
+hea_peters_civilians3: "With the beacons in their armor, clerics on hand, and comfortable rooms to return to, the knights are stronger, faster, and more often to live than ever before!"
 
-hea_peters_rebuilt:0 "Peter's Retreat: Order's Home"
-hea_peters_rebuilt_desc:0 "Peter's Retreat is a home for our knights, where they can rest, train, and be outfitted for their Holy Wars."
+hea_peters_rebuilt: "Peter's Retreat: Order's Home"
+hea_peters_rebuilt_desc: "Peter's Retreat is a home for our knights, where they can rest, train, and be outfitted for their Holy Wars."
 
 angel_of_peace1:0 "Herald of Peace"
 angel_of_peace1_desc:0 "A Prophet needs not allow his skill for war to go unused, but perhaps...it can be used in defense of the faithful?"
@@ -218,8 +218,8 @@ hea_judas_engineersexperienced_desc:0 "The engineers of Judas' Foundry have gott
 hea_shrinetanks:0 "Shrine Tank"
 hea_shrinetanks_desc:0 "Its expensive, it slows down our armored divisions, its costly to repair, but its a damn fine motivation for our frontline troops."
 
-hea_innocencelost_foundry:0 "Foundry of Innocence Lost"
-hea_innocencelost_foundry_desc:0 "It used to be a place of worship, where all who believed who come, now it sends shrines to the heathens and monsters of the waste..."
+hea_innocencelost_foundry: "Foundry of Innocence Lost"
+hea_innocencelost_foundry_desc: "It used to be a place of worship, where all who believed who come, now it sends shrines to the heathens and monsters of the waste..."
 
 hea_biggertank1:0 "Bigger Barrel"
 hea_biggertank2:0 "Bigger Chassis"

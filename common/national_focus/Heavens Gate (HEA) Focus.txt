@@ -3026,11 +3026,14 @@ focus = {
 			focus = hea_steam_heavensreach
 		}
 
-		completion_reward = { 
-			remove_ideas = {
-				hea_air_death3
-				hea_close_air3
-				hea_air_control3
+		completion_reward = {
+			custom_effect_tooltip = hea_steam_payload_tt
+			hidden_effect = { #Ugly tooltip - @Deez
+				remove_ideas = {
+					hea_air_death3
+					hea_close_air3
+					hea_air_control3
+				}
 			}
 			add_ideas = hea_air_death
 		}
@@ -3052,10 +3055,13 @@ focus = {
 		}
 
 		completion_reward = {
-			remove_ideas = {
-				hea_air_death3
-				hea_close_air3
-				hea_air_control3
+			custom_effect_tooltip = hea_steam_heavensreach_tt
+			hidden_effect = { #Ugly tooltip - @Deez
+				remove_ideas = {
+					hea_air_death3
+					hea_close_air3
+					hea_air_control3
+				}				
 			}
 			add_ideas = hea_air_reach
 		}
@@ -3272,8 +3278,8 @@ focus = {
 		prerequisite = { focus = hea_guard_enough_swords }
 
 		completion_reward = {
-			custom_effect_tooltip = hea_guardreborn
-			add_war_support = 0.20
+			custom_effect_tooltip = hea_guard_warriors_unparalleled_tt
+			add_war_support = 0.10
 			army_experience = 100
 			add_political_power = 50
 			hidden_effect = {
@@ -3986,259 +3992,298 @@ focus = {
 			}
 		}
 	}
+	#Hammer of God
+	focus = {
+		id = hea_advanced_guard
+		icon = GFX_goal_HEA_crusading_orders
+		cost = 30
+		x = 0
+		y = 6
+		relative_position_id = hea_guard_focuses
 
+		prerequisite = {
+			focus = hea_guard_focuses
+		}
+		
+		completion_reward = {
+			army_experience = 50
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_land_doctrine
+			}
+		}
+	}
 	#############################################
 	####Steam Dreadnoughts of Faith and Steam####
 	#############################################
-	
-			focus = {
+	#Steam Dreadnoughts
+	focus = {
 		id = hea_guard_tanks
 		icon = GFX_goal_HEA_hea_tankss
-		cost = 25
-		x = -18
-		y = 12
+		cost = 30
+		x = -2
+		y = 1
+		relative_position_id = hea_advanced_guard
+
+		prerequisite = {
+			focus = hea_advanced_guard
+		}
+
 		available = {
 			has_completed_focus = hea_nf_machines_of_steam
-			has_completed_focus = hea_nf_age_of_steam
-		}
-		completion_reward = {
-			add_ideas = {
-			 hea_steamdreadnoughts 	
-			}
 		}
 		mutually_exclusive = {
 			focus = heavens_holy_orders
 		}
+
+		completion_reward = {
+			add_ideas = hea_steamdreadnoughts
+		}
 	}
-			focus = {
+	#Down in the Mud
+	focus = {
 		id = hea_earths_hell
 		icon = GFX_goal_HEA_hea_innocencelost
-		cost = 25
-		x = 0
+		cost = 30
+		x = -2
 		y = 1
 		relative_position_id = hea_guard_tanks
-			prerequisite = {
-				focus = hea_guard_tanks
-			}
-			completion_reward = {
+
+		prerequisite = {
+			focus = hea_guard_tanks
+		}
+
+		completion_reward = {
 			18 = {
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = infrastructure
 					level = 2
 					instant_build = yes
 				}
-					add_building_construction = {
+				add_building_construction = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
-			}
-				18 = {
-				add_extra_state_shared_building_slots = 4
-			}			
-			}
-			}
-			focus = {
+			}		
+		}
+	}
+	#Judas' Vengeance
+	focus = {
 		id = hea_judas_vengeance
 		icon = GFX_goal_HEA_hea_judasvengeance
-		cost = 25
-		x = 0
-		y = 2
-		relative_position_id = hea_guard_tanks
-			prerequisite = {
-				focus = hea_earths_hell
-			}
-			completion_reward = {
+		cost = 30
+		x = -2
+		y = 1
+		relative_position_id = hea_earths_hell
+
+		prerequisite = {
+			focus = hea_earths_hell
+		}
+
+		completion_reward = {
 			set_province_name = { id = 1946 name = "Judas' Foundry"}
 			18 = {
+				add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 2
 			}
-			}
-			}
-		####Roaming Shrines
-			focus = {
-		id = hea_shrine_frames
-		icon = GFX_goal_HEA_hea_constructshrine
-		cost = 25
-		x = 0
-		y = 3
-		relative_position_id = hea_guard_tanks
-			prerequisite = {
-				focus = hea_judas_vengeance
-			}
-			completion_reward = {
-				custom_effect_tooltip = shrineshea
-			}
-			}
-			focus = {
-		id = hea_stainedglass_and_holyeffigies
-		icon = GFX_goal_HEA_hea_stainedglass
-		cost = 25
-		x = -1
-		y = 4
-		relative_position_id = hea_guard_tanks
-			prerequisite = {
-				focus = hea_shrine_frames
-			}
-			completion_reward = {
-				custom_effect_tooltip = stainedglasspipeshea
-			}
-			}
-			focus = {
-		id = hea_scripturesandart
-		icon = GFX_goal_HEA_hea_effigiesandshells
-		cost = 25
-		x = 1
-		y = 4
-		relative_position_id = hea_guard_tanks
-		available = {
-			has_completed_focus = hea_stainedglass_and_holyeffigies
 		}
-			prerequisite = {
-				focus = hea_shrine_frames
-			}
-			completion_reward = {
-				custom_effect_tooltip = heaeffigiesreloadhea
-			}
-			}
-			focus = {
-		id = hea_shrinetank
-		icon = GFX_goal_HEA_hea_slapatank
-		cost = 25
-		x = 0
-		y = 5
-		relative_position_id = hea_guard_tanks
-			prerequisite = {
-				focus = hea_stainedglass_and_holyeffigies
-			}
-			prerequisite = {
-				focus = hea_scripturesandart
-			}
-			completion_reward = {
-				add_ideas = {
-					hea_shrinetanks
-				}
-			}
-			}
-		####rebuildingjudas
-			focus = {
+	}
+	####Rebuilding Judas
+	#Judas,Foundry of War
+	focus = {
 		id = hea_judasfoundrywar
 		icon = GFX_goal_HEA_hea_judasfoundry
-		cost = 25
+		cost = 30
 		x = -4
 		y = 1
 		relative_position_id = hea_judas_vengeance
-			prerequisite = {
-				focus = hea_judas_vengeance
-			}
+
+		prerequisite = {
+			focus = hea_judas_vengeance
+		}
 
 		completion_reward = {
-			add_ideas = {
-				hea_judas_engineers
+			add_ideas = hea_judas_engineers
+			18 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+   					type = arms_factory
+  			  		level = 2
+  			  		instant_build = yes
+				}
 			}
-						18 = {
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-   				type = arms_factory
-  			  level = 2
-  			  instant_build = yes
-				}
-				}
-
 		}
 	}
-				focus = {
+	#Judas' Tank
+	focus = {
 		id = hea_judastanks
 		icon = GFX_goal_HEA_hea_tankline
-		cost = 25
-		x = -5
-		y = 2
-		relative_position_id = hea_judas_vengeance
-			prerequisite = {
-				focus = hea_judasfoundrywar
-			}
+		cost = 30
+		x = -1
+		y = 1
+		relative_position_id = hea_judasfoundrywar
+
+		prerequisite = {
+			focus = hea_judasfoundrywar
+		}
 
 		completion_reward = {
-			add_ideas = {
-				hea_judasfoundrybus
-			}
+			add_ideas = hea_judasfoundrybus
 		}
 	}
-					focus = {
+	#Experienced Tank Engineers
+	focus = {
 		id = hea_judas_experiencedtechs
 		icon = GFX_goal_HEA_hea_experiencedtechs
-		cost = 25
-		x = -3
-		y = 2
-		relative_position_id = hea_judas_vengeance
-			prerequisite = {
-				focus = hea_judasfoundrywar
+		cost = 30
+		x = 1
+		y = 1
+		relative_position_id = hea_judasfoundrywar
+
+		prerequisite = {
+			focus = hea_judasfoundrywar
+		}
+		available = {
+			has_completed_focus = hea_judastanks
+			OR = {
+				has_completed_focus = hea_guard_bigger_boom
+				has_completed_focus = hea_scripturesandart
 			}
-			available = {
-				has_completed_focus = hea_judastanks
-				OR = {
-					has_completed_focus = hea_guard_bigger_boom
-					has_completed_focus = hea_scripturesandart
-				}
-			}
+		}
+
 		completion_reward = {
 			swap_ideas = { 
 				remove_idea = hea_judas_engineers 
 				add_idea = hea_judas_engineersexperienced 
-			  }
+			}
 		}
 	}
-			focus = {
+	#Inspiration from the Past
+	focus = {
 		id = hea_aninteresting_schematic
 		icon = GFX_goal_HEA_hea_inspirationpast
-		cost = 25
-		x = -4
-		y = 3
-		relative_position_id = hea_judas_vengeance
-			prerequisite = {
-				focus = hea_judastanks
-			}
-			prerequisite = {
-				focus = hea_judas_experiencedtechs
-			}
+		cost = 30
+		x = 1
+		y = 1
+		relative_position_id = hea_judastanks
+
+		prerequisite = { focus = hea_judastanks }
+		prerequisite = { focus = hea_judas_experiencedtechs }
 
 		completion_reward = {
-		add_ideas = {
-			hea_pastinspiration
+			add_ideas = hea_pastinspiration
 		}
+	}
+	####Roaming Shrines
+	#Constructing Shrines
+	focus = {
+		id = hea_shrine_frames
+		icon = GFX_goal_HEA_hea_constructshrine
+		cost = 30
+		x = 0
+		y = 1
+		relative_position_id = hea_judas_vengeance
+
+		prerequisite = {
+			focus = hea_judas_vengeance
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = shrineshea
+		}
+	}
+	#Stained Glass and Steam Pipes
+	focus = {
+		id = hea_stainedglass_and_holyeffigies
+		icon = GFX_goal_HEA_hea_stainedglass
+		cost = 30
+		x = -1
+		y = 1
+		relative_position_id = hea_shrine_frames
+
+		prerequisite = {
+			focus = hea_shrine_frames
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = stainedglasspipeshea
+		}
+	}
+	#Blessed Effigies and Reloading Stations
+	focus = {
+		id = hea_scripturesandart
+		icon = GFX_goal_HEA_hea_effigiesandshells
+		cost = 30
+		x = 1
+		y = 1
+		relative_position_id = hea_shrine_frames
+
+		prerequisite = {
+			focus = hea_shrine_frames
+		}
+		available = {
+			has_completed_focus = hea_stainedglass_and_holyeffigies
+		}
+
+
+		completion_reward = {
+			custom_effect_tooltip = heaeffigiesreloadhea
+		}
+	}
+	#Now...put it on a Tank
+	focus = {
+		id = hea_shrinetank
+		icon = GFX_goal_HEA_hea_slapatank
+		cost = 30
+		x = 1
+		y = 1
+		relative_position_id = hea_stainedglass_and_holyeffigies
+
+		prerequisite = { focus = hea_stainedglass_and_holyeffigies }
+		prerequisite = { focus = hea_scripturesandart }
+
+		completion_reward = {
+			add_ideas = hea_shrinetanks
 		}
 	}
 	###Tank Offense/Breakthrough
-			focus = {
+	#Bigger Barrels
+	focus = {
 		id = hea_guard_bigger_barrels
 		icon = GFX_goal_HEA_hea_tank_barrel
-		cost = 25
+		cost = 30
 		x = 4
 		y = 1
 		relative_position_id = hea_judas_vengeance
-			prerequisite = {
-				focus = hea_judas_vengeance
-			}
+
+		prerequisite = {
+			focus = hea_judas_vengeance
+		}
 
 		completion_reward = {
-		add_ideas = hea_biggertank1
+			add_ideas = hea_biggertank1
 		}
 	}
-				focus = {
+	#Bigger Chassis
+	focus = {
 		id = hea_guard_bigger_treads
 		icon = GFX_goal_HEA_hea_tank_treads
-		cost = 25
-		x = 3
-		y = 2
-		relative_position_id = hea_judas_vengeance	
-			prerequisite = {
-				focus = hea_guard_bigger_barrels
-			}
+		cost = 30
+		x = -1
+		y = 1
+		relative_position_id = hea_guard_bigger_barrels
+		
+		prerequisite = {
+			focus = hea_guard_bigger_barrels
+		}
 
 		completion_reward = {
 			swap_ideas = { 
@@ -4247,19 +4292,21 @@ focus = {
 			}
 		}
 	}
-				focus = {
+	#Bigger Shells
+	focus = {
 		id = hea_guard_bigger_boom
 		icon = GFX_goal_HEA_hea_bigger_shells
-		cost = 25
-		x = 5
-		y = 2
-		relative_position_id = hea_judas_vengeance
+		cost = 30
+		x = 1
+		y = 1
+		relative_position_id = hea_guard_bigger_barrels
+
+		prerequisite = {
+			focus = hea_guard_bigger_barrels
+		}
 		available = {
 			has_completed_focus = hea_guard_bigger_treads
 		}
-			prerequisite = {
-				focus = hea_guard_bigger_barrels
-			}
 
 		completion_reward = {
 			swap_ideas = { 
@@ -4268,180 +4315,316 @@ focus = {
 			}	
 		}
 	}
-					focus = {
+	#Great Behemoths of War
+	focus = {
 		id = hea_guard_huge_tanks
 		icon = GFX_goal_HEA_hea_big_tank
-		cost = 25
-		x = 4
-		y = 3
-		relative_position_id = hea_judas_vengeance	
-			prerequisite = {
-				focus = hea_guard_bigger_boom
-			}
-			prerequisite = {
-				focus = hea_guard_bigger_treads
-			}
+		cost = 30
+		x = 1
+		y = 1
+		relative_position_id = hea_guard_bigger_treads
+
+		prerequisite = { focus = hea_guard_bigger_boom }
+		prerequisite = { focus = hea_guard_bigger_treads }
 
 		completion_reward = {
-			swap_ideas = { 
+			swap_ideas = {
 				remove_idea = hea_biggertank3
 				add_idea = hea_biggertank4
-			}			
+			}
 		}
 	}
-	
-
 	###Combination
-
-					focus = {
+	#Rebirth of Innocence Lost
+	focus = {
 		id = hea_tank_rebirth_of_judas
 		icon = GFX_goal_HEA_hea_judasreforged
-		cost = 45
+		cost = 60
 		x = 0
-		y = 4
-		relative_position_id = hea_judas_vengeance
-			prerequisite = {
-				focus = hea_shrinetank
-			}
-			prerequisite = {
-				focus = hea_guard_huge_tanks
-			}
-			prerequisite = {
-				focus = hea_aninteresting_schematic
-			}
+		y = 1
+		relative_position_id = hea_shrinetank
+
+		prerequisite = { focus = hea_aninteresting_schematic }
+		prerequisite = { focus = hea_shrinetank }
+		prerequisite = { focus = hea_guard_huge_tanks }
 			
 		completion_reward = {
 			18 = {
-					add_building_construction = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
 					type = arms_factory
 					level = 4
 					instant_build = yes
 				}
 			}
-				18 = {
-				add_extra_state_shared_building_slots = 4
-			}
-			add_ideas = {
-				hea_innocencelost_foundry
-			}
+			add_ideas = hea_innocencelost_foundry
 			hidden_effect = {
-			set_country_flag = HEAWEHAVETANKS
+				set_country_flag = HEAWEHAVETANKS
 			}
 		}
 	}
-	
 	#############################################
 	#############The Orders of Heaven's Gate#####
 	#############################################
-	
+	#Holy Orders of Heaven's Gate
 	focus = {
 		id = heavens_holy_orders
 		icon = GFX_goal_HEA_crusading_orders
 		cost = 30
-		x = -8
-		y = 12
-			
-			available = { 
-				has_completed_focus = hea_nf_age_of_steam
-				has_completed_focus = hea_nf_men_of_steam
-				}
-				mutually_exclusive = {
+		x = 2
+		y = 1
+		relative_position_id = hea_advanced_guard
+
+		prerequisite = {
+			focus = hea_advanced_guard
+		}
+		available = {
+			has_completed_focus = hea_guard_focuses
+		}
+		mutually_exclusive = {
 			focus = hea_guard_tanks
 		}
+
 		completion_reward = {
-		HEA = { add_ideas = hea_orders1 }
-			
-		
+			add_ideas = hea_orders1
 		}
 	}
-		focus = {
+	#High in the Heavens
+	focus = {
 		id = HEA_order_headquarters
 		icon = GFX_goal_HEA_peters_peak
-		cost = 60
-		x = 0
+		cost = 30
+		x = 2
 		y = 1
 		relative_position_id = heavens_holy_orders
+
 		prerequisite = {
 			focus = heavens_holy_orders
 		}
+
 		completion_reward = {
-				278 = {
+			278 = {
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = infrastructure
 					level = 2
 					instant_build = yes
 				}
-					add_building_construction = {
+				add_building_construction = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
 			}
-				278 = {
-				add_extra_state_shared_building_slots = 4
-			}
-			
-			
-		
 		}
 	}
-		focus = {
+	#Peter's Retreat
+	focus = {
 		id = HEA_peters_retreat
 		icon = GFX_goal_HEA_peters_retreat
-		cost = 90
-		x = 0
-		y = 2
-		relative_position_id = heavens_holy_orders
-			prerequisite = {
+		cost = 30
+		x = 2
+		y = 1
+		relative_position_id = HEA_order_headquarters
+
+		prerequisite = {
 			focus = HEA_order_headquarters
 		}
 
 		completion_reward = {
-		HEA = { add_ideas = hea_peters_retreat }
+			add_ideas = hea_peters_retreat
 			set_province_name = { id = 4070 name = "Peter's Retreat"}
-					278 = {
+			278 = {
 				add_building_construction = {
 					type = bunker
-					province = {
-						all_provinces = yes
-					}
+					province = { all_provinces = yes }
 					level = 2
 					instant_build = yes
 				}
 			}
-		
 		}
 	}
-	####Faithful's Shield####
-			focus = {
-		id = HEA_wardens_of_christ
-		icon = GFX_goal_HEA_hea_sentinel_order
-		cost = 45
-		x = 2
-		y = 3
-		relative_position_id = heavens_holy_orders
-			available = { 
-				has_completed_focus = hea_nf_forgive_sins
-				}
-			prerequisite = {
+	###Sinner's Bane###
+	#Bane of Sinners
+	focus = {
+		id = HEA_executioners_of_sinners
+		icon = GFX_goal_HEA_hea_crusader_order
+		cost = 60
+		x = -2
+		y = 1
+		relative_position_id = HEA_peters_retreat
+
+		prerequisite = {
 			focus = HEA_peters_retreat
+		}
+		available = { 
+			has_completed_focus = hea_nf_vengance
+		}
+		mutually_exclusive = {
+			focus = HEA_wardens_of_christ
 		}
 
 		completion_reward = {
-		swap_ideas = { 
-			remove_idea = hea_orders1 
-		add_idea = hea_orders2D
+			swap_ideas = { 
+				remove_idea = hea_orders1 
+				add_idea = hea_orders2A
 			}
 		}
 	}
-				focus = {
+	#New War Foundries
+	focus = {
+		id = HEA_preparing_war
+		icon = GFX_goal_HEA_foundries
+		cost = 45
+		x = -1
+		y = 1
+		relative_position_id = HEA_executioners_of_sinners
+
+		prerequisite = {
+			focus = HEA_executioners_of_sinners
+		}
+
+		completion_reward = {
+			278 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#Unsealing Ancient Armories
+	focus = {
+		id = HEA_raiding_bunkers
+		icon = GFX_goal_HEA_exploring_vault
+		cost = 45
+		x = 0
+		y = 1
+		relative_position_id = HEA_preparing_war
+
+		prerequisite = {
+			focus = HEA_preparing_war
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = power_armor_equipment_2
+				amount = 150
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 200
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 300
+				producer = USA
+			}
+		}
+	}
+	#Sounding a Rallying Call
+	focus = {
+		id = HEA_calling_faithful
+		icon = GFX_goal_HEA_rallying_horn
+		cost = 45
+		x = 1
+		y = 1
+		relative_position_id = HEA_executioners_of_sinners
+
+		prerequisite = {
+			focus = HEA_executioners_of_sinners
+		}
+
+		completion_reward = {
+			swap_ideas = { 
+				remove_idea = hea_peters_retreat 
+				add_idea = hea_peters_retreat1A
+			}
+		}
+	}
+	#Battle Smiths
+	focus = {
+		id = HEA_battle_smiths
+		icon = GFX_goal_HEA_battle_smiths
+		cost = 45
+		x = 0
+		y = 1
+		relative_position_id = HEA_calling_faithful
+
+		prerequisite = {
+			focus = HEA_calling_faithful
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = battle_smiths_tt
+			add_ideas = hea_battle_smiths
+			add_tech_bonus = {
+				category = support_logistics_tech_category
+				uses = 2
+				bonus = 0.5
+			}
+		}
+	}
+	#Juggernauts of War
+	focus = {
+		id = HEA_juggernauts_of_war
+		icon = GFX_goal_HEA_hea_crusader
+		cost = 60
+		x = 1
+		y = 1
+		relative_position_id = HEA_raiding_bunkers
+
+		prerequisite = { focus = HEA_raiding_bunkers }
+		prerequisite = { focus = HEA_battle_smiths }
+
+		completion_reward = {
+			swap_ideas = { 
+				remove_idea = hea_orders2A
+				add_idea = hea_orders3A
+			}
+		}
+	}
+	####Faithful's Shield####
+	#Shield of the Faithful
+	focus = {
+		id = HEA_wardens_of_christ
+		icon = GFX_goal_HEA_hea_sentinel_order
+		cost = 60
+		x = 2
+		y = 1
+		relative_position_id = HEA_peters_retreat
+
+		prerequisite = {
+			focus = HEA_peters_retreat
+		}
+		available = { 
+			has_completed_focus = hea_nf_forgive_sins
+		}
+		mutually_exclusive = {
+			focus = HEA_executioners_of_sinners
+		}
+
+		completion_reward = {
+			swap_ideas = { 
+				remove_idea = hea_orders1 
+				add_idea = hea_orders2D
+			}
+		}
+	}
+	#Helping Refugees
+	focus = {
 		id = HEA_help_refugees
 		icon = GFX_goal_HEA_helping_refugees
-		cost = 30
-		x = 1
-		y = 4
-		relative_position_id = heavens_holy_orders
-			prerequisite = {
+		cost = 45
+		x = -1
+		y = 1
+		relative_position_id = HEA_wardens_of_christ
+
+		prerequisite = {
 			focus = HEA_wardens_of_christ
 		}
 
@@ -4464,32 +4647,36 @@ focus = {
 			}
 		}
 	}
-				focus = {
+	#Learning of the Wasteland...
+	focus = {
 		id = HEA_learn_of_monsters
 		icon = GFX_goal_HEA_monsters_outside_heaven
-		cost = 30
-		x = 1
-		y = 5
-		relative_position_id = heavens_holy_orders
-			prerequisite = {
+		cost = 45
+		x = 0
+		y = 1
+		relative_position_id = HEA_help_refugees
+
+		prerequisite = {
 			focus = HEA_help_refugees
 		}
 
 		completion_reward = {
 			swap_ideas = { 
-			remove_idea = hea_peters_retreat 
-		add_idea = hea_peters_retreat1D
+				remove_idea = hea_peters_retreat 
+				add_idea = hea_peters_retreat1D
 			}
 		}
 	}
-				focus = {
+	#Rebuilding Judas' Shrine
+	focus = {
 		id = HEA_rebuild_innocence
 		icon = GFX_goal_HEA_rebuilding_innocence
-		cost = 30
-		x = 3
-		y = 4
-		relative_position_id = heavens_holy_orders
-			prerequisite = {
+		cost = 45
+		x = 1
+		y = 1
+		relative_position_id = HEA_wardens_of_christ
+		
+		prerequisite = {
 			focus = HEA_wardens_of_christ
 		}
 
@@ -4497,508 +4684,373 @@ focus = {
 		18 = {
 				set_temp_variable = { pop_add = 2350 }
 				add_state_population_no_state_name = yes
-			}
-				18 =  {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}
-				focus = {
+	#Battle Priests
+	focus = {
 		id = HEA_battle_priests
 		icon = GFX_goal_HEA_battle_doctor
-		cost = 30
-		x = 3
-		y = 5
-		relative_position_id = heavens_holy_orders
-			prerequisite = {
+		cost = 45
+		x = 0
+		y = 1
+		relative_position_id = HEA_rebuild_innocence
+
+		prerequisite = {
 			focus = HEA_rebuild_innocence
 		}
 
 		completion_reward = {
-		add_ideas = hea_battle_priests
-					add_tech_bonus = {
+			add_ideas = hea_battle_priests
+			add_tech_bonus = {
 				category = support_medical_tech_category
 				uses = 2
 				bonus = 0.5
 			}
 		}
 	}
-	
-			focus = {
+	#Bastion of Hope
+	focus = {
 		id = HEA_bastions_of_hope
 		icon = GFX_goal_HEA_hea_sentinel
-		cost = 45
-		x = 2
-		y = 6
-		relative_position_id = heavens_holy_orders
-			prerequisite = {
-			focus = HEA_learn_of_monsters
-		}
-					prerequisite = {
-			focus = HEA_battle_priests
-		}
+		cost = 60
+		x = 1
+		y = 1
+		relative_position_id = HEA_learn_of_monsters
 
-		completion_reward = {
-		swap_ideas = { 
-			remove_idea = hea_orders2D 
-		add_idea = hea_orders3D
-			}
-		}
-	}
-	
-	###Sinner's Bane###
-			focus = {
-		id = HEA_executioners_of_sinners
-		icon = GFX_goal_HEA_hea_crusader_order
-		cost = 45
-		x = -2
-		y = 3
-		relative_position_id = heavens_holy_orders
-			available = { 
-				has_completed_focus = hea_nf_vengance
-				}
-			prerequisite = {
-			focus = HEA_peters_retreat
-		}
+		prerequisite = { focus = HEA_learn_of_monsters }
+		prerequisite = { focus = HEA_battle_priests }
 
 		completion_reward = {
 			swap_ideas = { 
-			remove_idea = hea_orders1 
-		add_idea = hea_orders2A
+				remove_idea = hea_orders2D 
+				add_idea = hea_orders3D
 			}
-			
-		
-		}
-	}
-	focus = {
-		id = HEA_preparing_war
-		icon = GFX_goal_HEA_foundries
-		cost = 30
-		x = -3
-		y = 4
-		relative_position_id = heavens_holy_orders
-			prerequisite = {
-			focus = HEA_executioners_of_sinners
-		}
-
-		completion_reward = {
-			278 = {
-			add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
-			}
-		}
-	}
-	focus = {
-		id = HEA_raiding_bunkers
-		icon = GFX_goal_HEA_exploring_vault
-		cost = 30
-		x = -3
-		y = 5
-		relative_position_id = heavens_holy_orders
-			prerequisite = {
-			focus = HEA_preparing_war
-		}
-
-		completion_reward = {
-			add_equipment_to_stockpile = {
-				type = power_armor_equipment_2
-				amount = 150
-				producer = USA
-			}
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 200
-				producer = USA
-			}
-				add_equipment_to_stockpile = {
-				type = support_equipment
-				amount = 300
-				producer = USA
-			}
-		}
-	}
-					focus = {
-		id = HEA_calling_faithful
-		icon = GFX_goal_HEA_rallying_horn
-		cost = 30
-		x = -1
-		y = 4
-		relative_position_id = heavens_holy_orders
-			prerequisite = {
-			focus = HEA_executioners_of_sinners
-		}
-
-		completion_reward = {
-		
-			swap_ideas = { 
-			remove_idea = hea_peters_retreat 
-		add_idea = hea_peters_retreat1A
-			}
-		
-		}
-	}
-					focus = {
-		id = HEA_battle_smiths
-		icon = GFX_goal_HEA_battle_smiths
-		cost = 30
-		x = -1
-		y = 5
-		relative_position_id = heavens_holy_orders
-			prerequisite = {
-			focus = HEA_calling_faithful
-		}
-
-		completion_reward = {
-		
-		custom_effect_tooltip = battle_smiths_tt
-		
-		add_ideas = hea_battle_smiths
-					add_tech_bonus = {
-				category = support_logistics_tech_category
-				uses = 2
-				bonus = 0.5
-			}
-		
-		}
-	}
-					focus = {
-		id = HEA_juggernauts_of_war
-		icon = GFX_goal_HEA_hea_crusader
-		cost = 45
-		x = -2
-		y = 6
-		relative_position_id = heavens_holy_orders
-			prerequisite = {
-			focus = HEA_battle_smiths
-		}
-		prerequisite = {
-			focus = HEA_raiding_bunkers
-		}
-		
-
-		completion_reward = {
-			swap_ideas = { 
-			remove_idea = hea_orders2A
-		add_idea = hea_orders3A
-			}
-		
 		}
 	}
 	#################Peter's Retreat Focuses############################
-			focus = {
+	#Peter's Retreat
+	focus = {
 		id = HEA_peters_retreat_build
 		icon = GFX_goal_HEA_peters_retreat
 		cost = 60
 		x = 0
-		y = 6
-		relative_position_id = heavens_holy_orders
-			available = {
-				OR = {
-					has_completed_focus = HEA_juggernauts_of_war
-					has_completed_focus = HEA_bastions_of_hope
-				}
-			}
+		y = 4
+		relative_position_id = HEA_peters_retreat
+
+		prerequisite = {
+			focus = HEA_peters_retreat
+		}
 
 		completion_reward = {
 			278 = {
 				add_extra_state_shared_building_slots = 4
 			}
-		
 		}
 	}
-				focus = {
+	#Finding Gun Artisans
+	focus = {
 		id = HEA_peters_retreat_guns
 		icon = GFX_goal_HEA_hea_peter_guns
 		cost = 45
-		x = -1
-		y = 7
-		relative_position_id = heavens_holy_orders
+		x = -3
+		y = 1
+		relative_position_id = HEA_peters_retreat_build
+
 		prerequisite = {
 			focus = HEA_peters_retreat_build
 		}
+
 		completion_reward = {
 			add_ideas = hea_peters_military1
 			278 = {
-		add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}
-				focus = {
-		id = HEA_peters_retreat_armor
-		icon = GFX_goal_HEA_hea_peter_armor
+	#Improving the defenses of Peter's Retreat
+	focus = {
+		id = HEA_peters_retreat_defenses
+		icon = GFX_goal_HEA_hea_artillery
 		cost = 45
-		x = -1
-		y = 8
-		relative_position_id = heavens_holy_orders
+		x = -2
+		y = 1
+		relative_position_id = HEA_peters_retreat_guns
+
 		prerequisite = {
 			focus = HEA_peters_retreat_guns
 		}
 
 		completion_reward = {
-				swap_ideas = { 
-			remove_idea = hea_peters_military1
-		add_idea = hea_peters_military2
-			}
-					278 = {
-		add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
-			}
-		
-		}
-	}
-				focus = {
-		id = HEA_peters_retreat_defenses
-		icon = GFX_goal_HEA_hea_artillery
-		cost = 45
-		x = -1
-		y = 9
-		relative_position_id = heavens_holy_orders
-			prerequisite = {
-			focus = HEA_peters_retreat_armor
-		}
-
-		completion_reward = {
-						278 = {
+			278 = {
 				add_building_construction = {
 					type = bunker
-					province = {
-						all_provinces = yes
-					}
+					province = { all_provinces = yes }
 					level = 2
 					instant_build = yes
 				}
-					add_building_construction = {
+				add_building_construction = {
 					type = anti_air_building
 					level = 2
 					instant_build = yes
 				}
-				
 			}
-		
 		}
 	}
-				focus = {
+	#Finding Blacksmiths for Power Armor
+	focus = {
+		id = HEA_peters_retreat_armor
+		icon = GFX_goal_HEA_hea_peter_armor
+		cost = 45
+		x = 0
+		y = 1
+		relative_position_id = HEA_peters_retreat_guns
+
+		prerequisite = {
+			focus = HEA_peters_retreat_guns
+		}
+
+		completion_reward = {
+			swap_ideas = { 
+				remove_idea = hea_peters_military1
+				add_idea = hea_peters_military2
+			}
+			278 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#Master Smiths
+	focus = {
 		id = HEA_peters_retreat_smiths
 		icon = GFX_goal_HEA_hea_peter_smith
 		cost = 45
-		x = -1
-		y = 10
-		relative_position_id = heavens_holy_orders
+		x = 2
+		y = 1
+		relative_position_id = HEA_peters_retreat_guns
+
 		prerequisite = {
-			focus = HEA_peters_retreat_defenses
+			focus = HEA_peters_retreat_guns
+		}
+		available = {
+			has_completed_focus = HEA_peters_retreat_armor
 		}
 
 		completion_reward = {
-					swap_ideas = { 
-			remove_idea = hea_peters_military2
-		add_idea = hea_peters_military3
+			swap_ideas = { 
+				remove_idea = hea_peters_military2
+				add_idea = hea_peters_military3
 			}
-		
 		}
 	}
-				focus = {
+	#Smiths, or Drill Masters?
+	focus = {
 		id = HEA_peters_retreat_drill_masters
 		icon = GFX_goal_HEA_hea_peter_training
 		cost = 45
-		x = -1
-		y = 11
-		relative_position_id = heavens_holy_orders
-		prerequisite = {
-			focus = HEA_peters_retreat_smiths
-		}
+		x = 0
+		y = 1
+		relative_position_id = HEA_peters_retreat_armor
+
+		prerequisite = { focus = HEA_peters_retreat_defenses }
+		prerequisite = { focus = HEA_peters_retreat_armor }
+		prerequisite = { focus = HEA_peters_retreat_smiths }
 
 		completion_reward = {
-					swap_ideas = { 
-			remove_idea = hea_peters_military3
-		add_idea = hea_peters_military4
+			swap_ideas = { 
+				remove_idea = hea_peters_military3
+				add_idea = hea_peters_military4
 			}
-		
 		}
 	}
-				focus = {
+	#Building Highway's for Peter's Retreat
+	focus = {
 		id = HEA_peters_retreat_infrastructure
 		icon = GFX_goal_HEA_hea_peter_road
 		cost = 45
-		x = 1
-		y = 7
-		relative_position_id = heavens_holy_orders
-			prerequisite = {
+		x = 3
+		y = 1
+		relative_position_id = HEA_peters_retreat_build
+
+		prerequisite = {
 			focus = HEA_peters_retreat_build
 		}
 
 		completion_reward = {
-					278 = {
-		add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
+			278 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
 			}
-		
 		}
 	}
-				focus = {
-		id = HEA_peters_retreat_airports
-		icon = GFX_goal_HEA_hea_peter_air
+	#Furnishing Peter's Retreat
+	focus = {
+		id = HEA_peters_retreat_comfort
+		icon = GFX_goal_HEA_hea_peter_room
 		cost = 45
-		x = 1
-		y = 8
-		relative_position_id = heavens_holy_orders
+		x = -2
+		y = 1
+		relative_position_id = HEA_peters_retreat_infrastructure
+
+		prerequisite = {
+			focus = HEA_peters_retreat_infrastructure
+		}
+		available = {
+			has_completed_focus = HEA_peters_retreat_doctors
+		}
+
+		completion_reward = {
+			swap_ideas = { 
+				remove_idea = hea_peters_civilians1
+				add_idea = hea_peters_civilians2
+			}
+		}
+	}
+	#Hiring Trained Clerics
+	focus = {
+		id = HEA_peters_retreat_doctors
+		icon = GFX_goal_HEA_hea_peter_doctor
+		cost = 45
+		x = 0
+		y = 1
+		relative_position_id = HEA_peters_retreat_infrastructure
+			
 		prerequisite = {
 			focus = HEA_peters_retreat_infrastructure
 		}
 
 		completion_reward = {
-						278 = {
-		add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-			}
-		
-		}
-	}
-				focus = {
-		id = HEA_peters_retreat_doctors
-		icon = GFX_goal_HEA_hea_peter_doctor
-		cost = 45
-		x = 1
-		y = 9
-		relative_position_id = heavens_holy_orders
-			
-	prerequisite = {
-			focus = HEA_peters_retreat_airports
-		}
-
-		completion_reward = {
 			add_ideas = hea_peters_civilians1
-		
 		}
 	}
-				focus = {
-		id = HEA_peters_retreat_comfort
-		icon = GFX_goal_HEA_hea_peter_room
+	#Flying Knights
+	focus = {
+		id = HEA_peters_retreat_airports
+		icon = GFX_goal_HEA_hea_peter_air
 		cost = 45
-		x = 1
-		y = 10
-		relative_position_id = heavens_holy_orders
-	prerequisite = {
-			focus = HEA_peters_retreat_doctors
+		x = 2
+		y = 1
+		relative_position_id = HEA_peters_retreat_infrastructure
+
+		prerequisite = {
+			focus = HEA_peters_retreat_infrastructure
 		}
 
 		completion_reward = {
-				swap_ideas = { 
-			remove_idea = hea_peters_civilians1
-		add_idea = hea_peters_civilians2
+			278 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
 			}
-		
 		}
 	}
-				focus = {
+	#Peter's Retreat Beacons
+	focus = {
 		id = HEA_peters_retreat_beacons
 		icon = GFX_goal_HEA_hea_peter_beacons
 		cost = 45
-		x = 1
-		y = 11
-		relative_position_id = heavens_holy_orders
-		prerequisite = {
-			focus = HEA_peters_retreat_comfort
-		}
+		x = 0
+		y = 1
+		relative_position_id = HEA_peters_retreat_doctors
+
+		prerequisite = { focus = HEA_peters_retreat_comfort }
+		prerequisite = { focus = HEA_peters_retreat_doctors }
+		prerequisite = { focus = HEA_peters_retreat_airports }
 
 		completion_reward = {
-				swap_ideas = { 
-			remove_idea = hea_peters_civilians2
-		add_idea = hea_peters_civilians3
+			swap_ideas = { 
+				remove_idea = hea_peters_civilians2
+				add_idea = hea_peters_civilians3
 			}
 			18 = {
-			add_building_construction = {
-						type = radar_station
-						level = 1
-						instant_build = yes
-					}
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
 			}
-					116 = {
-			add_building_construction = {
-						type = radar_station
-						level = 1
-						instant_build = yes
-					}
+			116 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
 			}
-					278 = {
-			add_building_construction = {
-						type = radar_station
-						level = 1
-						instant_build = yes
-					}
+			278 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
 			}
-					1384 = {
-			add_building_construction = {
-						type = radar_station
-						level = 1
-						instant_build = yes
-					}
+			1384 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
 			}
-					1385 = {
-			add_building_construction = {
-						type = radar_station
-						level = 1
-						instant_build = yes
-					}
+			1385 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
 			}
-						198 = {
-			add_building_construction = {
-						type = radar_station
-						level = 1
-						instant_build = yes
-					}
+			198 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
-				focus = {
+	#Peter's Retreat Rebuilt
+	focus = {
 		id = HEA_peters_retreat_rebuilt
 		icon = GFX_goal_HEA_peters_retreat
 		cost = 60
-		x = 0
-		y = 12
-			relative_position_id = heavens_holy_orders
-		prerequisite = {
-			focus = HEA_peters_retreat_beacons
-		}
-		prerequisite = {
-			focus = HEA_peters_retreat_drill_masters
-		}
+		x = 3
+		y = 1
+		relative_position_id = HEA_peters_retreat_drill_masters
+
+		prerequisite = { focus = HEA_peters_retreat_beacons }
+		prerequisite = { focus = HEA_peters_retreat_drill_masters }
 
 		completion_reward = {
 			custom_effect_tooltip = hea_peters_retreat_rebuilt_tt
-			hidden_effect = {
+			hidden_effect = { #Ugly tooltip - @Deez
 				remove_ideas = {
 					hea_peters_military4
 					hea_peters_civilians2
 				}
-		add_ideas = hea_peters_rebuilt
 			}
+			add_ideas = hea_peters_rebuilt
 		}
 	}
 

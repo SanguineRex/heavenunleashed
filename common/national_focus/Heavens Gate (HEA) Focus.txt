@@ -3087,6 +3087,7 @@ focus = {
 			set_technology = {
 				hea_guardone = 1
 			}
+			custom_effect_tooltip = hea_guard_infantry_tt
 		}
 	}
 	##Swords

@@ -567,8 +567,9 @@ hea_guard_focuses_desc:0 "Though it will take some time, our Guard will be refor
 
 ######Infantry Focuses (Guard)
 
-hea_guard_infantry:0 "Reforming the Guard"
-hea_guard_infantry_desc:0 "The Guard's equipment is long in need of overhaul, though they are willing to fight with as much fervor and tenacity as our knights, they aren't equipped for the battles that are sure to come in the future."
+hea_guard_infantry: "Reforming the Guard"
+hea_guard_infantry_desc: "The Guard's equipment is long in need of overhaul, though they are willing to fight with as much fervor and tenacity as our knights, they aren't equipped for the battles that are sure to come in the future."
+hea_guard_infantry_tt: "§YInfantry Organization:§! §G+5§!"
 
 hea_guard_swords:0 "Tempered Blades"
 hea_guard_swords_desc:0 "The weapons our warriors wield are well forged, but the metal we use could be put to better use, and, reasonably speaking, maybe some of our smiths can look into lessening the effects our steam-powered weaponry has? Though they pack a punch, it does become a bother having to replace them as quickly as we do...oh, and the self-inflicted casualties are a pain too."

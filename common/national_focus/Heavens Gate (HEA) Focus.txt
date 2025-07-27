@@ -3107,7 +3107,8 @@ focus = {
 		completion_reward = {
 			set_technology = {
 				hea_swordone = 1
-			}	
+			}
+			custom_effect_tooltip = hea_guard_swords_tt
 		}
 	}
 	#Reliable Arms
@@ -3126,7 +3127,8 @@ focus = {
 		completion_reward = {
 			set_technology = {
 				hea_swordtwo = 1
-			}		
+			}
+			custom_effect_tooltip = hea_guard_more_swords_tt
 		}
 	}
 	#Skilled Bladesmiths
@@ -3145,7 +3147,8 @@ focus = {
 		completion_reward = {
 			set_technology = {
 				hea_swordthree = 1
-			}		
+			}
+			custom_effect_tooltip = hea_guard_enough_swords_tt
 		}
 	}
 	##Sword Training 
@@ -3165,7 +3168,8 @@ focus = {
 		completion_reward = {
 			set_technology = {
 				hea_skillone = 1
-			}	
+			}
+			custom_effect_tooltip = hea_guard_novice_tt
 		}
 	}
 	#Acolytes of the Blade
@@ -3185,6 +3189,7 @@ focus = {
 			set_technology = {
 				hea_skilltwo = 1
 			}
+			custom_effect_tooltip = hea_guard_journeyman_tt
 		}
 	}
 	#Masters of the Blade
@@ -3204,6 +3209,7 @@ focus = {
 			set_technology = {
 				hea_skillthree = 1
 			}
+			custom_effect_tooltip = hea_guard_expert_tt
 		}
 	}
 	##Infantry Armor
@@ -3223,7 +3229,8 @@ focus = {
 		completion_reward = {
 			set_technology = {
 				hea_armorone = 1
-			}		
+			}
+			custom_effect_tooltip = hea_guard_armor_tt
 		}
 	}
 	#Reinforced Armor
@@ -3242,7 +3249,8 @@ focus = {
 		completion_reward = {
 			set_technology = {
 				hea_armortwo = 1
-			}	
+			}
+			custom_effect_tooltip = hea_guard_tempered_armor_tt
 		}
 	}
 	#Plated Guard
@@ -3262,6 +3270,7 @@ focus = {
 			set_technology = {
 				hea_armorthree = 1
 			}
+			custom_effect_tooltip = hea_guard_best_thing_next_to_powerarmor_tt
 		}
 	}
 	##End of Infantry Buffs

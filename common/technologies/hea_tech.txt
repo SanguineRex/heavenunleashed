@@ -1,7 +1,7 @@
 technologies = {
 	# Used in focuses trees
 	hea_cathedral_tech = {
-	dependencies = {
+		dependencies = {
 			blocked_tech = 1
 		}
 		research_cost = 1
@@ -14,166 +14,173 @@ technologies = {
             level = 1
         }
 	}
-
+	#Soldiers of God
 	hea_guardone = {
 		dependencies = {
-				blocked_tech = 1
-			}
-			research_cost = 1
-	
-			allow = {
-				always = no
-			}
-			category_leg_infantry = {
-				max_organisation = 5
-			}
+			blocked_tech = 1
 		}
+		research_cost = 1
+
+		allow = {
+			always = no
+		}
+		category_leg_infantry = {
+			max_organisation = 5
+		}
+	}
+	#Students of the Blade
 	hea_skillone = {
 		dependencies = {
-				blocked_tech = 1
-			}
-			research_cost = 1
-	
-			allow = {
-				always = no
-			}
-			category_leg_infantry = {
-				maximum_speed = 0.05
-			}
+			blocked_tech = 1
 		}
+		research_cost = 1
+
+		allow = {
+			always = no
+		}
+		category_leg_infantry = {
+			maximum_speed = 0.05
+		}
+	}
+	#Acolytes of the Blade
 	hea_skilltwo = {
 		dependencies = {
-				blocked_tech = 1
-			}
-			research_cost = 1
-	
-			allow = {
-				always = no
-			}
-			category_leg_infantry = {
-	
+			blocked_tech = 1
+		}
+		research_cost = 1
+
+		allow = {
+			always = no
+		}
+		category_leg_infantry = {
 			initiative = 0.05	
 			recon = 0.05
-			}
 		}
+	}
+	#Masters of the Blade
 	hea_skillthree = {
 		dependencies = {
-				blocked_tech = 1
-			}
-			research_cost = 1
-	
-			allow = {
-				always = no
-			}
-			category_leg_infantry = {
-				max_organisation = 5
-				ap_attack = 0.10
-				initiative = 0.05	
-				recon = 0.05
-			}
+			blocked_tech = 1
 		}
+		research_cost = 1
+
+		allow = {
+			always = no
+		}
+		category_leg_infantry = {
+			max_organisation = 5
+			ap_attack = 0.10
+			initiative = 0.05	
+			recon = 0.05
+		}
+	}
+	#Novice Smiths
 	hea_swordone = {
 		dependencies = {
-				blocked_tech = 1
-			}
-			research_cost = 1
-	
-			allow = {
-				always = no
-			}
-			category_leg_infantry = {
-				reliability = -0.05
-				soft_attack = 0.05
-			}
+			blocked_tech = 1
 		}
+		research_cost = 1
+
+		allow = {
+			always = no
+		}
+		category_leg_infantry = {
+			reliability = -0.05
+			soft_attack = 0.05
+		}
+	}
+	#Journeymen Smiths
 	hea_swordtwo = {
 		dependencies = {
-				blocked_tech = 1
-			}
-			research_cost = 1
-	
-			allow = {
-				always = no
-			}
-			category_leg_infantry = {
-				ap_attack = 0.05
-				soft_attack = 0.05
-			}
+			blocked_tech = 1
+		}
+		research_cost = 1
+
+		allow = {
+			always = no
+		}
+		category_leg_infantry = {
+			ap_attack = 0.05
+			soft_attack = 0.05
+		}
 	}
+	#Mastersmiths
 	hea_swordthree = {
 		dependencies = {
-				blocked_tech = 1
-			}
-			research_cost = 1
-	
-			allow = {
-				always = no
-			}
-			category_leg_infantry = {
-				breakthrough = 0.05
-				reliability = -0.05
-				soft_attack = 0.05
-			}
+			blocked_tech = 1
 		}
+		research_cost = 1
+
+		allow = {
+			always = no
+		}
+		category_leg_infantry = {
+			breakthrough = 0.05
+			reliability = -0.05
+			soft_attack = 0.05
+		}
+	}
+	#Standardized Armor
 	hea_armorone = {
 		dependencies = {
-				blocked_tech = 1
-			}
-			research_cost = 1
-	
-			allow = {
-				always = no
-			}
-			category_leg_infantry = {
-				defense = 0.05
-			}
+			blocked_tech = 1
 		}
+		research_cost = 1
+
+		allow = {
+			always = no
+		}
+		category_leg_infantry = {
+			defense = 0.05
+		}
+	}
+	#Tempered Armor
 	hea_armortwo = {
 		dependencies = {
-				blocked_tech = 1
-			}
-			research_cost = 1
-	
-			allow = {
-				always = no
-			}
-			category_leg_infantry = {
-				defense = 0.05
-				armor_value = 0.05
-			}
+			blocked_tech = 1
 		}
+		research_cost = 1
+
+		allow = {
+			always = no
+		}
+		category_leg_infantry = {
+			max_strength = 0.05
+			defense = 0.05
+		}
+	}
+	#Plated Armor
 	hea_armorthree = {
 		dependencies = {
-				blocked_tech = 1
-			}
-			research_cost = 1
+			blocked_tech = 1
+		}
+		research_cost = 1
+
+		allow = {
+			always = no
+		}
+		category_leg_infantry = {
+			max_strength = 0.1
+			defense = 0.05
+		}
+	}
+	hgh_maritimers = {
+		dependencies = {
+			blocked_tech = 1
+		}
+		research_cost = 1
 	
-			allow = {
-				always = no
-			}
-			category_leg_infantry = {
-				max_strength = 0.05
-				armor_value  = 0.05
-				defense = 0.05
+		allow = {
+			always = no
+		}
+		category_leg_infantry = {
+			reliability = 0.05
+			max_organisation  = 1
+			defense = 0.05
+			river = {
+				attack = 0.05
+				defence = 0.10
 			}
 		}
-		hgh_maritimers = {
-			dependencies = {
-					blocked_tech = 1
-				}
-				research_cost = 1
-		
-				allow = {
-					always = no
-				}
-				category_leg_infantry = {
-					reliability = 0.05
-					max_organisation  = 1
-					defense = 0.05
-					river = {
-						attack = 0.05
-						defence = 0.10
-					}
-				}
-			}
+	}
 }

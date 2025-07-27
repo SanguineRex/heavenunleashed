@@ -85,7 +85,7 @@ technologies = {
 			always = no
 		}
 		category_leg_infantry = {
-			reliability = -0.05
+			#reliability = -0.05 #Don't work for unit cat - @Deez
 			soft_attack = 0.05
 		}
 	}
@@ -116,7 +116,7 @@ technologies = {
 		}
 		category_leg_infantry = {
 			breakthrough = 0.05
-			reliability = -0.05
+			#reliability = -0.05 #Don't work for unit cat - @Deez
 			soft_attack = 0.05
 		}
 	}

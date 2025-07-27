@@ -573,7 +573,7 @@ hea_guard_infantry_tt: "§YInfantry Organization:§! §G+5§!"
 
 hea_guard_swords: "Tempered Blades"
 hea_guard_swords_desc: "The weapons our warriors wield are well forged, but the metal we use could be put to better use, and, reasonably speaking, maybe some of our smiths can look into lessening the effects our steam-powered weaponry has? Though they pack a punch, it does become a bother having to replace them as quickly as we do...oh, and the self-inflicted casualties are a pain too."
-hea_guard_swords_tt: "§YInfantry Soft Attack:§! §G+5%§!\n§YInfantry Reliability Bonus:§! §R-5%§!"
+hea_guard_swords_tt: "§YInfantry Soft Attack:§! §G+5%§!"
 
 hea_guard_more_swords: "Reliable Arms"
 hea_guard_more_swords_desc: "With more reliable arms, we can begin looking into how to better use our weapons, along with making sure their payload is great enough to roast other wawrriors who think that armor or vehicles will protect them."
@@ -581,7 +581,7 @@ hea_guard_more_swords_tt: "§YInfantry Soft Attack:§! §G+5%§!\n§YInfantry Ha
 
 hea_guard_enough_swords: "Skilled Bladesmiths"
 hea_guard_enough_swords_desc: "With the skill our smiths have gained in twisting metal, and forging guns, they've even looked into ways to improve upon the weapons they forge of their own volition! Some of them have borne fruit, and, in time, perhaps we can spread their designs to middling smiths, after all, any smith can follow a well documented diagram"
-hea_guard_enough_swords_tt: "§YInfantry Soft Attack:§! §G+5%§!\n§YInfantry Breakthrough:§! §G+5%§!\n§YInfantry Reliability Bonus:§! §R-5%§!"
+hea_guard_enough_swords_tt: "§YInfantry Soft Attack:§! §G+5%§!\n§YInfantry Breakthrough:§! §G+5%§!"
 
 hea_guard_novice: "Students of the Blade"
 hea_guard_novice_desc: "Look at our warriors, can they fight? Sure, but any child with a stick can fight if given enough motivation, we need to teach them how to aim, how to swing their swords if the need be arise! We should not allow our faithful to die simply because we did not think to train them"

@@ -704,7 +704,23 @@ hea_monsters_of_the_wastes_cat = {
 		#}
 		target_non_existing = yes #Need this to actually purge the non-existing nation after being conquered
 		available = { 
-			FROM = { all_core_land_owned_by_prev_sphere = yes }
+			if = {
+				limit = { 
+					FROM = {
+						original_tag = UOA
+						exists = no
+					}
+				}
+				915 = {
+					OR = {
+						is_owned_and_controlled_by = ROOT
+						controller = { is_ally_with = ROOT }
+					}
+				}
+			}
+			else = {
+				FROM = { all_core_land_owned_by_prev_sphere = yes }
+			}
 			has_war = no
 		}
 

@@ -101,9 +101,8 @@ focus_tree = {
 				add_political_power = 100
 			}
 			else = {
-				#create_intelligence_agency = yes
 				create_intelligence_agency = {
-					name = "Inner Circle" #I hate this so much but owb fuck it up so i have to manually input the name here instead of being in the loc file - @Deez
+					name = "Inner Circle"
 					icon = GFX_agency_logo_HEA
 				}
 			}
@@ -662,10 +661,10 @@ focus_tree = {
 			set_portraits = {
 				character = HEA_saint_michael
 				civilian = {
-					large = GFX_Portrait_HEA_michael_crusade_large
+					large = GFX_portrait_hea_michael_crusade_1_large
 				}
 				army = {
-					large = GFX_Portrait_HEA_michael_crusade_large
+					large = GFX_portrait_hea_michael_crusade_1_large
 				}
 			}
 			swap_ideas = {
@@ -872,6 +871,15 @@ focus_tree = {
 
 		completion_reward = {
 			set_cosmetic_tag = HEA_crusade
+			set_portraits = {
+				character = HEA_saint_michael
+				civilian = {
+					large = GFX_portrait_hea_michael_crusade_2_large
+				}
+				army = {
+					large = GFX_portrait_hea_michael_crusade_2_large
+				}
+			}
 			swap_ideas = {
 				add_idea = archangel_michael2
 				remove_idea = archangel_michael1

@@ -135,24 +135,24 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	#Seraphim
-	HEA_seraphim = {
-		name = HEA_seraphim_name
+	#Uriel
+	HEA_uriel = {
+		name = HEA_uriel_name
 		portraits = {
 			civilian = {
-				large = GFX_Portrait_HEA_Seraphim_large
-				small = GFX_Portrait_HEA_Seraphim_small
+				large = GFX_Portrait_HEA_uriel_large
+				small = GFX_Portrait_HEA_uriel_small
 			}
 			army = {
-				large = GFX_Portrait_HEA_Seraphim_large
-				small = GFX_Portrait_HEA_Seraphim_small
+				large = GFX_Portrait_HEA_uriel_large
+				small = GFX_Portrait_HEA_uriel_small
 			}
 		}
 		advisor = {
 			slot = high_command
 			ledger = army
-			traits = { HEA_omnipotent_advisor_trait }
-			cost = 200
+			traits = { HEA_eye_seraphim_advisor_trait }
+			cost = 150
 		}
 	}
 }

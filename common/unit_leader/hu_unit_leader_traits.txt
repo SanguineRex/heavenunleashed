@@ -11,6 +11,7 @@ leader_traits = {
 		}
 		non_shared_modifier = {
 			max_commander_army_size = 6
+			paradrop_organization_factor = 0.5
 		}
 
 		ai_will_do = {

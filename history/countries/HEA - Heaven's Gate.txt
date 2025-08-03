@@ -100,7 +100,6 @@ add_ideas = {
 	hea_steam_power
 	hea_steam_powered_weapons
 	volunteer_militia_conscription
-	
 }
 
 recruit_character = HEA_saint_michael
@@ -111,7 +110,7 @@ recruit_character = HEA_mother_magdalene
 #recruit_character = HEA_canon_phillips #Can't find this character - @Deez
 recruit_character = HEA_bee_pope #BEEZUSSSSSSS
 recruit_character = HEA_aegon #Sir Aegon Pyrel
-recruit_character = HEA_seraphim
+recruit_character = HEA_uriel #Uriel - the spy
 
 create_or_join_children_of_the_gate = yes
 
@@ -120,9 +119,9 @@ if = {
 		has_dlc = "La Resistance"
 	}
 	create_operative_leader = {
-		name = HEA_seraphim_name
-		gfx = GFX_Portrait_HEA_Seraphim_large
-		skill = 5 #Was 50 but 5 actually stronger - @Deez
+		name = HEA_uriel_name
+		gfx = GFX_Portrait_HEA_uriel_large
+		skill = 5 
 		traits = { 
 			operative_heavyweight 
 			operative_speech 

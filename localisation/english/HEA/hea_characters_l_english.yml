@@ -10,13 +10,13 @@ ANGEL_MICHAEL_DESC: "§RThe Crusade needs a leader, and Michael will step forwar
 HEA_bee_pope_name: "Waxpontiff Apis"
 HEA_bee_pope_unit_leader_trait: "Bee Pope"
 HEA_bee_pope_unit_leader_trait_desc: "Yo it's my man Beezus!"
-HEA_bee_pope_advisor_trait: "Bee Pope"
+HEA_bee_pope_advisor_trait: "Inner Circle\n§YBee Pope§!"
 
 HEA_aegon_name: "Sir Aegon Pyrel"
-HEA_the_right_hand_advisor_trait: "The Right Hand"
+HEA_the_right_hand_advisor_trait: "Inner Circle\n§RThe Right Hand§!"
 
-HEA_seraphim_name: "Seraphim"
-HEA_omnipotent_advisor_trait: "Omnipotent"
+HEA_uriel_name: "Uriel"
+HEA_eye_seraphim_advisor_trait: "Inner Circle\n§4Eye of Seraphim§!"
 
 HEA_inner_circle_unit_leader_trait: "Inner Circle"
 HEA_inner_circle_unit_leader_trait_desc: ""

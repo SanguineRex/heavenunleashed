@@ -7,20 +7,25 @@ spriteTypes = {
 	
 #HEA
 	#Michael Alternatives
-	#Archangle
+	#Archangle - 1
 	spriteType = {
-		name = "GFX_Portrait_HEA_michael_crusade_large"
-		textureFile = "gfx/leaders/HEA/portrait_hea_michael_crusade_large.dds"
-	}	
-	
+		name = "GFX_portrait_hea_michael_crusade_1_large"
+		textureFile = "gfx/leaders/HEA/portrait_hea_michael_crusade_1_large.dds"
+	}
+	#Archangle - 2
+	spriteType = {
+		name = "GFX_portrait_hea_michael_crusade_2_large"
+		textureFile = "gfx/leaders/HEA/portrait_hea_michael_crusade_2_large.dds"
+	}
+
 	#Seraphim
 	spriteType = {
-		name = "GFX_Portrait_HEA_Seraphim_large"
-		textureFile = "gfx/leaders/HEA/portrait_hea_seraphim_large.dds"
+		name = "GFX_Portrait_HEA_uriel_large"
+		textureFile = "gfx/leaders/HEA/portrait_hea_uriel_large.dds"
 	}
 	spriteType = {
-		name = "GFX_Portrait_HEA_Seraphim_small"
-		textureFile = "gfx/leaders/HEA/portrait_hea_seraphim_small.dds"
+		name = "GFX_Portrait_HEA_uriel_small"
+		textureFile = "gfx/leaders/HEA/portrait_hea_uriel_small.dds"
 	}
 
 	#Bee Pope

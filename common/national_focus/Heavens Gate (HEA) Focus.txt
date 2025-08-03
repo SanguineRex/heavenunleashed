@@ -2483,7 +2483,24 @@ set_country_leader_name = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] hea_nf_conscription entered"
 			}
-			add_ideas = hea_conscription
+			#add_ideas = hea_conscription
+			if = {
+				limit = {
+					OR = {
+						has_idea = volunteer_militia_conscription
+						has_idea = disarmed_nation
+					}
+					
+				}
+				add_ideas = funded_militia_conscription
+			}
+			else_if = {
+				limit = { has_idea = funded_militia_conscription }
+				add_ideas = two_year_conscription
+			}
+			else = {
+				add_political_power = 100
+			}
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] hea_nf_conscription exited"

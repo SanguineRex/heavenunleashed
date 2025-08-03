@@ -69,11 +69,17 @@ characters = {
 			legacy_id = 10145
 		}
 	}
-	HEA_bee_pope = { #Waxpontiff Apis - YO IT'S MY MAN BEEZUS - @Deez
+	#Waxpontiff Apis - YO IT'S MY MAN BEEZUS - @Deez
+	HEA_bee_pope = { 
 		name = HEA_bee_pope_name
 		portraits = {
+			civilian = {
+				large = GFX_Portrait_HEA_bee_pope_large
+				small = GFX_Portrait_HEA_bee_pope_small				
+			}
 			army = {
 				large = GFX_Portrait_HEA_bee_pope_large
+				small = GFX_Portrait_HEA_bee_pope_small
 			}
 		}
 		corps_commander = {
@@ -89,13 +95,31 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 2
 		}
+		advisor = {
+			slot = high_command
+			ledger = army
+			traits = { HEA_bee_pope_advisor_trait }
+			cost = 100
+		}
 	}
-	HEA_aegon = { #Sir Aegon Pyrel
+	#Sir Aegon Pyrel
+	HEA_aegon = {
 		name = HEA_aegon_name
 		portraits = {
+			civilian = {
+				large = GFX_Portrait_HEA_aegon_large
+				small = GFX_Portrait_HEA_aegon_small				
+			}
 			army = {
 				large = GFX_Portrait_HEA_aegon_large
+				small = GFX_Portrait_HEA_aegon_small
 			}
+		}
+		advisor = {
+			slot = army_chief
+			ledger = army
+			traits = { HEA_the_right_hand_advisor_trait }
+			cost = 200
 		}
 		corps_commander = {
 			traits = {
@@ -111,14 +135,15 @@ characters = {
 			logistics_skill = 1
 		}
 	}
+	#Seraphim
 	HEA_seraphim = {
 		name = HEA_seraphim_name
 		portraits = {
-			army = {
+			civilian = {
 				large = GFX_Portrait_HEA_Seraphim_large
 				small = GFX_Portrait_HEA_Seraphim_small
 			}
-			civilian = {
+			army = {
 				large = GFX_Portrait_HEA_Seraphim_large
 				small = GFX_Portrait_HEA_Seraphim_small
 			}

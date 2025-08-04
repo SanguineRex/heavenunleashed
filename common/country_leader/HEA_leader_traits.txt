@@ -1,4 +1,42 @@
 leader_traits = {
+	#Michael - One Prophet
+	HEA_one_prophet_leader_trait = {
+		random = no
+		political_power_gain = 0.1
+		stability_factor = 0.05
+		war_support_factor = 0.05
+	}
+	#Michael - Archangel
+	HEA_archangel_leader_trait = {
+		random = no
+		political_power_gain = 0.15
+		stability_factor = -0.05
+		war_support_factor = 0.1
+		justify_war_goal_time = -0.25
+		army_morale_factor = 0.05
+	}
+	#Michael - Archangel Michael
+	HEA_archangel_michael_leader_trait = {
+		random = no
+		political_power_gain = 0.2
+		stability_factor = -0.1
+		war_support_factor = 0.2
+		justify_war_goal_time = -0.5
+		army_morale_factor = 0.1
+		army_attack_factor = 0.05
+		breakthrough_factor = 0.05
+	}
+	#Michael - Super Archangel Michael
+	HEA_super_archangel_michael_leader_trait = {
+		random = no
+		political_power_gain = 0.3
+		stability_factor = -0.2
+		war_support_factor = 0.5
+		justify_war_goal_time = -0.75
+		army_morale_factor = 0.1
+		army_attack_factor = 0.1
+		breakthrough_factor = 0.1
+	}
 	#Inner Circle - Eye of Seraphim
 	HEA_eye_seraphim_advisor_trait = {
 		sprite = 15
@@ -23,6 +61,7 @@ leader_traits = {
 	}
 	#Inner Circle - Bee Pope
 	HEA_bee_pope_advisor_trait = {
+		sprite = 5
 		random = no
 		special_forces_attack_factor = 0.05
 		special_forces_defence_factor = 0.05

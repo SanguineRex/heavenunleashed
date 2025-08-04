@@ -6,6 +6,10 @@
 FATHER_MICHAEL_DESC: "§2He was wrong, a bitter pill to swallow, but he was. Forgiveness is preached in the bible countless times, and yet he sought to burn the world of sinners and start anew with the faithful. A mistake, but he will not walk away from his holy task. Not today, instead he will raise his sword, don the holy plate, and ensure that the flock is well defended from all who seeks to harm it.§!"
 ANGEL_MICHAEL_DESC: "§RThe Crusade needs a leader, and Michael will step forward and accept the mantle. God Chose Him. He will not fail the Father above, the Wasteland must be rid of the sinners and monsters, and he is the man to cleanse it.§!"
 
+HEA_one_prophet_leader_trait: "One Prophet"
+HEA_archangel_leader_trait: "Archangel"
+HEA_archangel_michael_leader_trait: "Archangel Michael"
+HEA_super_archangel_michael_leader_trait: "§RArchangel Michael§!"
 
 HEA_bee_pope_name: "Waxpontiff Apis"
 HEA_bee_pope_unit_leader_trait: "Bee Pope"

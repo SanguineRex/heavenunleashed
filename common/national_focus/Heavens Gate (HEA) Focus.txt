@@ -413,7 +413,7 @@ focus_tree = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] hea_nf_reject_elite_1 entered"
 			}
-			add_ideas = hea_one_prophet
+			add_country_leader_trait = HEA_one_prophet_leader_trait
 			swap_ideas = {
 				add_idea = hea_theocratic_elite_marginalized
 				remove_idea = hea_theocratic_elite_contested
@@ -667,9 +667,9 @@ focus_tree = {
 					large = GFX_portrait_hea_michael_crusade_1_large
 				}
 			}
-			swap_ideas = {
-				add_idea = archangel_michael1
-				remove_idea = hea_one_prophet
+			swap_ruler_traits = {
+				remove = HEA_one_prophet_leader_trait
+				add = HEA_archangel_leader_trait
 			}
 			hidden_effect = {
 				news_event = { id = nf_event_hea.300 }
@@ -880,9 +880,9 @@ focus_tree = {
 					large = GFX_portrait_hea_michael_crusade_2_large
 				}
 			}
-			swap_ideas = {
-				add_idea = archangel_michael2
-				remove_idea = archangel_michael1
+			swap_ruler_traits = {
+				remove = HEA_archangel_leader_trait
+				add = HEA_archangel_michael_leader_trait
 			}
 		}
 	}
@@ -1180,9 +1180,9 @@ focus_tree = {
 		prerequisite = { focus = hea_mexico_heretics }
 
 		completion_reward = {
-			swap_ideas = {
-				add_idea = archangel_michael3
-				remove_idea = archangel_michael2
+			swap_ruler_traits = {
+				remove = HEA_archangel_michael_leader_trait
+				add = HEA_super_archangel_michael_leader_trait
 			}
 		}
 	}

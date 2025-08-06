@@ -1039,6 +1039,7 @@ hea_state_manage_decision_cat = {
 		days_remove = 20
 		war_with_on_remove = ROT
 		visible = {
+			check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 			check_variable = { hea_state_manage_gui_decision = 1 } #Idaho
 			NOT = {
 				52 = { is_owned_and_controlled_by = ROOT }
@@ -1078,6 +1079,7 @@ hea_state_manage_decision_cat = {
 		war_with_on_remove = SHO 
 		war_with_on_remove = BDT
 		visible = {
+			check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 			check_variable = { hea_state_manage_gui_decision = 1 } #Idaho
 			NOT = {
 				SHO = {
@@ -1116,6 +1118,7 @@ hea_state_manage_decision_cat = {
 		days_remove = 150
 		fire_only_once = yes
 		visible = {
+			check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 			check_variable = { hea_state_manage_gui_decision = 1 } #Idaho
 			52 = { is_owned_and_controlled_by = ROOT }
 			305 = { is_owned_and_controlled_by = ROOT }
@@ -1144,6 +1147,7 @@ hea_state_manage_decision_cat = {
 		days_re_enable = 20
 
 		visible = {
+			check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 			check_variable = { hea_state_manage_gui_decision = 1 } #Idaho
 		}
 		#target_root_trigger = { #This shit ain't working properly for checking variables, just gonna use visible check - @Deez
@@ -1189,6 +1193,7 @@ hea_state_manage_decision_cat = {
 		icon = GFX_decision_hol_draw_up_staff_plans
 		fire_only_once = yes
 		visible = {
+			check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 			check_variable = { hea_state_manage_gui_decision = 2 } #Oregon
 			BDT = { is_ally_with = ROOT }
 		}
@@ -1263,6 +1268,7 @@ hea_state_manage_decision_cat = {
 		fire_only_once = yes
 
 		visible = {
+			check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 			check_variable = { hea_state_manage_gui_decision = 2 } #Oregon
 		}
 		targets = { CHE MDT TRL CCW RBT PMR MLT DIS KLA ARR } #Oregon nations except for TIM, SHO and BDT cause they already exist in a different focus/decision - @Deez
@@ -1314,6 +1320,7 @@ hea_state_manage_decision_cat = {
 		icon = GFX_decision_hol_draw_up_staff_plans
 		fire_only_once = yes
 		visible = {
+			check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 			OR = {
 				check_variable = { hea_state_manage_gui_decision = 2 } #Oregon
 				check_variable = { hea_state_manage_gui_decision = 3 } #Washington

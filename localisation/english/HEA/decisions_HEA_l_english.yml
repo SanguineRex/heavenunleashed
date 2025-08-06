@@ -142,6 +142,10 @@ hea_monsters_communists: "§RCommunists Targets Purged§!"
 ####################
 hea_state_manage_decision_cat: "§YThe Sanctified Orders§!"
 hea_state_manage_decision_cat_desc: "" #Leave it empty - @Deez
+
+hea_com_manage_gui_northwest_button_tt: "Northwestern Commonwealth"
+
+hea_state_manage_gui_return_button_tt: "Return to Commonwealths View"
 hea_state_manage_gui_idaho_button_tt: "Idaho: Controlled by §W[HEA.GetNameWithFlag]§!"
 state_manage_gui_idaho_button_delay_tt: "§L\"The Gate was not built—it was revealed.\"\n\nIdaho is not merely land. It is the cradle of Revelation, the land where the first hymns of steam and salvation echoed across pine and ruin. Every inch is sacred, etched by the hands of saints, watered by the blood of pilgrims, and sanctified in the fires of the First Crusade. To surrender it is unthinkable. To partition it, heresy. Those who hold it without blessing must be corrected by prayer or by flame.§!"
 

@@ -23,7 +23,7 @@ guiTypes = {
 		}
 	}
 
-	containerWindowType = {
+	containerWindowType = { #States Background
 		name = "hea_state_manage_gui_container"
 		size = { width = 500 height = 360 }
 
@@ -37,11 +37,36 @@ guiTypes = {
 				spriteType = GFX_hea_state_manage_gui_background
 			}
 		}
+		#Commonwealths View
+		containerWindowType = {
+			name = "hea_state_manage_gui_com_container"
+			position = { x = 3 y = -44 }
 
+			#Commonwealth View Background
+			buttonType = {
+				name = "hea_com_manage_gui_background"
+				spriteType = GFX_hea_com_manage_gui_background
+			}
+
+			#Northwestern Commonwealth
+			buttonType = {
+				name = "hea_com_manage_gui_northwest_button"
+				spriteType = GFX_hea_com_manage_gui_northwest_com
+				pdx_tooltip = hea_com_manage_gui_northwest_button_tt
+			}
+		}
+		#States View
 		containerWindowType = {
 			name = "hea_state_manage_gui_states_container"
 			position = { x = 5 y = -20 }
 
+			#Return to Commonwealth View button
+			buttonType = {
+				name = "hea_state_manage_gui_return_button"
+				position = { x = 450 y = 0 }
+				spriteType = GFX_hea_state_manage_gui_return_button
+				pdx_tooltip = hea_state_manage_gui_return_button_tt
+			}
 			#Idaho
 			buttonType = { #Idaho-Hea
 				name = "hea_state_manage_gui_idaho_button"

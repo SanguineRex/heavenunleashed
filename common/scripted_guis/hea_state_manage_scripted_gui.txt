@@ -10,18 +10,35 @@ scripted_gui = {
 		}
 
 		triggers = {
+			#Commonwealth Map
+			hea_com_manage_gui_background_visible = {
+				check_variable = { hea_com_manage_gui_decision = 0 } #Full Commonwealth Map
+			}
+			#Northwestern Commonwealth
+			hea_com_manage_gui_northwest_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 0 }
+			}
+			hea_com_manage_gui_northwest_button_click_enabled = { always = yes }
+
+			#Return to Commonwealths View
+			hea_state_manage_gui_return_button_visible = {
+				NOT = { check_variable = { hea_com_manage_gui_decision = 0 } } #When ain't already in Commonwealth View
+			}
+			hea_state_manage_gui_return_button_click_enabled = { always = yes }
 			#Idaho
 			hea_state_manage_gui_idaho_button_visible = { #Not selected
-				always = yes
+				check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 			}
 			hea_state_manage_gui_idaho_button_click_enabled = { always = yes } #Can click
 			hea_state_manage_gui_idaho_selected_button_visible = { #Selected-Glowing
+				check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 				check_variable = { hea_state_manage_gui_decision = 1 }
 			}
 			hea_state_manage_gui_idaho_selected_button_click_enabled = { always = yes } #Can click
 
 			#Oregon
 			no_state_manage_gui_oregon_button_visible = { #Oregon not under HEA's influence
+				check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 				71 = {
 					owner = {
 						NOT = {
@@ -35,6 +52,7 @@ scripted_gui = {
 			}
 
 			hea_state_manage_gui_oregon_button_visible = { #Oregon under HEA's influence but not by BDT
+				check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 				71 = {
 					owner = {
 						NOT = { original_tag = BDT }
@@ -48,6 +66,7 @@ scripted_gui = {
 			}
 			hea_state_manage_gui_oregon_button_click_enabled = { always = yes } #Can always click on cause already handled in visible check
 			hea_state_manage_gui_oregon_selected_button_visible = { #Oregon under HEA's influence but not by BDT-Selected-Glowing
+				check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 				71 = {
 					owner = {
 						NOT = { original_tag = BDT }
@@ -62,6 +81,7 @@ scripted_gui = {
 			hea_state_manage_gui_oregon_selected_button_click_enabled = { always = yes } #Can always click on cause already handled in visible check
 
 			bdt_state_manage_gui_oregon_button_visible = { #Oregon under HEA's influence by BDT
+				check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 				71 = {
 					owner = {
 						original_tag = BDT
@@ -72,6 +92,7 @@ scripted_gui = {
 			}
 			bdt_state_manage_gui_oregon_button_click_enabled = { always = yes } #Can always click on cause already handled in visible check
 			bdt_state_manage_gui_oregon_selected_button_visible = { #Oregon under HEA's influence by BDT-Selected-Glowing
+				check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 				71 = {
 					owner = {
 						original_tag = BDT
@@ -84,6 +105,7 @@ scripted_gui = {
 
 			#Washington
 			no_state_manage_gui_washington_button_visible = { #Washington not under HEA's influence
+				check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 				332 = {
 					owner = {
 						NOT = {
@@ -97,6 +119,7 @@ scripted_gui = {
 			}
 
 			hea_state_manage_gui_washington_button_visible = { #Washington under HEA's influence but not by ROT
+				check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 				332 = {
 					owner = {
 						NOT = { original_tag = ROT }
@@ -110,6 +133,7 @@ scripted_gui = {
 			}
 			hea_state_manage_gui_washington_button_click_enabled = { always = yes } #Can always click on cause already handled in visible check
 			hea_state_manage_gui_washington_selected_button_visible = { #Washington under HEA's influence but not by ROT-Selected-Glowing
+				check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 				332 = {
 					owner = {
 						NOT = { original_tag = ROT }
@@ -124,6 +148,7 @@ scripted_gui = {
 			hea_state_manage_gui_washington_selected_button_click_enabled = { always = yes } #Can always click on cause already handled in visible check
 
 			rot_state_manage_gui_washington_button_visible = { #Washington under HEA's influence by ROT
+				check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 				332 = {
 					owner = {
 						original_tag = ROT
@@ -134,6 +159,7 @@ scripted_gui = {
 			}
 			rot_state_manage_gui_washington_button_click_enabled = { always = yes } #Can always click on cause already handled in visible check
 			rot_state_manage_gui_washington_selected_button_visible = { #Washington under HEA's influence by ROT-Selected-Glowing
+				check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 				332 = {
 					owner = {
 						original_tag = ROT
@@ -146,6 +172,19 @@ scripted_gui = {
 		}
 
 		effects = {
+			##Commonwealth Selections
+			#Northwestern Commonwealth
+			hea_com_manage_gui_northwest_button_click = {
+				set_variable = { hea_com_manage_gui_decision = 1 } #Show Northwestern Commonweath States View
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+
+			#Return to Commonwealths View
+			hea_state_manage_gui_return_button_click = {
+				set_variable = { hea_com_manage_gui_decision = 0 } #Go back to Commonwealths View
+				set_variable = { hea_state_manage_gui_decision = 0 } #Unselect the States to turn off glowing
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
 			#Idaho
 			hea_state_manage_gui_idaho_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 1 } #Show Idaho Decisions

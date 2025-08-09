@@ -2,8 +2,6 @@ ideas = {
 	country = {
 		hea_startup_militant = {
 			picture = HEA_idea_precursers
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				production_speed_arms_factory_factor = 0.1
@@ -12,8 +10,6 @@ ideas = {
 
 		hea_startup_agriculture = {
 			picture = HEA_idea_precursers
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				production_speed_industrial_complex_factor = 0.1
@@ -22,8 +18,6 @@ ideas = {
 
 		hea_startup_stationary_pilgrims = {
 			picture = HEA_idea_pilgrims
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				MONTHLY_POPULATION = 0.15
@@ -32,8 +26,6 @@ ideas = {
 
 		hea_startup_traveling_pilgrims = {
 			picture = HEA_idea_pilgrims
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.10
@@ -42,8 +34,6 @@ ideas = {
 
 		hea_startup_let_them_in = {
 			picture = HEA_idea_tribals
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				conscription  = 0.02
@@ -52,8 +42,6 @@ ideas = {
 
 		hea_startup_better_be_careful = {
 			picture = HEA_idea_tribals
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.1
@@ -62,8 +50,6 @@ ideas = {
 
 		hea_steam_powered_weapons = {
 			picture = silicon_valley_mainframe
-			allowed = {
-			}
 			removal_cost = -1
 			equipment_bonus = {
 				infantry_equipment = {
@@ -77,8 +63,6 @@ ideas = {
 
 		hea_divided_leadership = {
 			picture = HEA_idea_divided_leadership
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				political_power_gain = -0.2
@@ -88,8 +72,6 @@ ideas = {
 
 		hea_steam_power = {
 			picture = HEA_idea_blessing_of_steam
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				local_resources_factor = 0.10
@@ -100,8 +82,6 @@ ideas = {
 		}
 		hea_rebirth_steam = {
 			picture = HEA_idea_blessing_of_steam
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				local_resources_factor = 0.15
@@ -112,8 +92,6 @@ ideas = {
 		}
 		hea_age_of_steam_idea = {
 			picture = HEA_idea_blessing_of_steam
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				local_resources_factor = 0.20
@@ -125,8 +103,6 @@ ideas = {
 
 		hea_theocratic_elite = {
 			picture = HEA_idea_theocratic_elite
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				consumer_goods_expected_value = 0.05
@@ -138,8 +114,6 @@ ideas = {
 
 		hea_theocratic_elite_good = {
 			picture = HEA_idea_theocratic_elite
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				consumer_goods_expected_value = 0.05
@@ -150,8 +124,6 @@ ideas = {
 
 		hea_theocratic_elite_good_1 = {
 			picture = HEA_idea_theocratic_elite
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				consumer_goods_expected_value = 0.05
@@ -163,8 +135,6 @@ ideas = {
 
 		hea_theocratic_elite_contested = {
 			picture = HEA_idea_theocratic_elite
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				stability_weekly = -0.005
@@ -175,8 +145,6 @@ ideas = {
 
 		hea_theocratic_elite_marginalized = {
 			picture = HEA_idea_theocratic_elite
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				political_power_gain = -0.1
@@ -186,8 +154,6 @@ ideas = {
 
 		hea_one_prophet = {
 			picture = HEA_idea_one_prophet
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.1
@@ -198,8 +164,6 @@ ideas = {
 
 		hea_innocence_lost_idea = {
 			picture = HEA_idea_innocence_lost
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				conscription = -0.01
@@ -210,8 +174,6 @@ ideas = {
 
 		hea_innocence_lost_idea_lessend = {
 			picture = HEA_idea_innocence_lost
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				trade_opinion_factor = 0.10
@@ -222,8 +184,6 @@ ideas = {
 
 		hea_rampant_militarism = {
 			picture = HEA_idea_rampant_militarism
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				stability_factor = -0.1
@@ -233,8 +193,6 @@ ideas = {
 
 		hea_boilers_of_justice = {
 			picture = HEA_idea_boilers_of_justice
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				production_speed_arms_factory_factor = 0.075
@@ -244,8 +202,6 @@ ideas = {
 
 		hea_rampant_militarism_1 = {
 			picture = HEA_idea_rampant_militarism
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				stability_factor = -0.1
@@ -256,8 +212,6 @@ ideas = {
 
 		hea_rampant_militarism_2 = {
 			picture = HEA_idea_rampant_militarism
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				stability_factor = -0.1
@@ -279,8 +233,6 @@ ideas = {
 
 		hea_reconcilliation = {
 			picture = HEA_idea_generic
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				non_core_manpower = 0.05
@@ -291,8 +243,6 @@ ideas = {
 
 		hea_reconcilliation_1 = {
 			picture = HEA_idea_generic
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				non_core_manpower = 0.1
@@ -304,8 +254,6 @@ ideas = {
 
 		hea_school_of_steam = {
 			picture = generic_research_bonus
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				research_speed_factor =0.05
@@ -314,8 +262,6 @@ ideas = {
 
 		hea_air_knight = {
 			picture = HEA_idea_air_knight
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				air_accidents_factor = -0.2
@@ -327,8 +273,6 @@ ideas = {
 
 		hea_general_staff = {
 			picture = HEA_idea_general_staff
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				max_planning = 0.1
@@ -339,8 +283,6 @@ ideas = {
 
 		hea_mobility = {
 			picture = HEA_idea_mobility
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				army_speed_factor = 0.1
@@ -348,12 +290,8 @@ ideas = {
 			}
 		}
 
-
-
 		hea_conscription = {
 			picture = HEA_idea_conscription
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				conscription = 0.03
@@ -362,8 +300,6 @@ ideas = {
 
 		hea_crusaders = {
 			picture = HEA_idea_crusaders
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				army_attack_factor = 0.05
@@ -373,8 +309,6 @@ ideas = {
 
 		hea_grand_cathedral = {
 			picture = HEA_idea_billowing_cathedral
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.05
@@ -383,10 +317,8 @@ ideas = {
 			}
 		}
 		###############Start of Heaven's Wrath idea
-				hea_orders1 = {
+		hea_orders1 = {
 			picture = HEA_idea_mobility
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				special_forces_min = 50
@@ -394,10 +326,8 @@ ideas = {
 				special_forces_defence_factor = 0.05
 			}
 		}
-					hea_orders2D = {
+		hea_orders2D = {
 			picture = hea_sentinel_order
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				special_forces_min = 100
@@ -405,10 +335,8 @@ ideas = {
 				special_forces_defence_factor = 0.10
 			}
 		}
-					hea_orders3D = {
+		hea_orders3D = {
 			picture = hea_sentinel_order
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				special_forces_min = 150
@@ -416,10 +344,8 @@ ideas = {
 				special_forces_defence_factor = 0.20
 			}
 		}
-					hea_orders2A = {
+		hea_orders2A = {
 			picture = hea_crusade_order
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				special_forces_min = 100
@@ -427,10 +353,8 @@ ideas = {
 				special_forces_defence_factor = 0.05
 			}
 		}
-					hea_orders3A = {
+		hea_orders3A = {
 			picture = hea_crusade_order
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				special_forces_min = 150
@@ -440,8 +364,6 @@ ideas = {
 		}
 		hea_peters_retreat= {
 			picture = peters_retreat
-			allowed = {
-			}
 			removal_cost = -1
 				equipment_bonus = {
 				power_armor_equipment = {
@@ -451,15 +373,13 @@ ideas = {
 			}
 			modifier = {
 				special_forces_cap = 0.05
-			conscription_factor = 0.05
+				conscription_factor = 0.05
 			}
 		}
-			hea_peters_retreat1A= {
+		hea_peters_retreat1A= {
 			picture = peters_retreat
-			allowed = {
-			}
 			removal_cost = -1
-					equipment_bonus = {
+			equipment_bonus = {
 				power_armor_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
@@ -470,12 +390,10 @@ ideas = {
 				special_forces_cap = 0.10
 			}
 		}
-			hea_peters_retreat1D= {
+		hea_peters_retreat1D= {
 			picture = peters_retreat
-			allowed = {
-			}
 			removal_cost = -1
-					equipment_bonus = {
+			equipment_bonus = {
 				power_armor_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
@@ -483,19 +401,17 @@ ideas = {
 			}
 			modifier = {
 				army_infantry_defence_factor = 0.10
-			conscription_factor = 0.1
+				conscription_factor = 0.1
 			}
 		}
-				hea_battle_smiths = {
+		hea_battle_smiths = {
 			picture = battle_smith
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
-					modifier_army_sub_unit_category_power_armour_defence_factor = 0.05
+				modifier_army_sub_unit_category_power_armour_defence_factor = 0.05
 				modifier_army_sub_unit_category_logistics_support_attack_factor = -0.50
 			}
-					equipment_bonus = {
+			equipment_bonus = {
 				power_armor_equipment = {
 					build_cost_ic = -0.10
 					reliability = 0.1
@@ -512,14 +428,11 @@ ideas = {
 		}
 		hea_battle_priests = {
 			picture = battle_priests
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				modifier_army_sub_unit_category_power_armour_max_org_factor = 0.1
-			modifier_army_sub_unit_category_medical_support_defence_factor = -0.50
+				modifier_army_sub_unit_category_medical_support_defence_factor = -0.50
 			}
-				
 			equipment_bonus = {
 				power_armor_equipment = {
 					max_strength = 0.10 
@@ -534,29 +447,21 @@ ideas = {
 		}
 		hea_bathhouse = {
 			picture = hea_bathhouse
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
-				   stability_factor = 0.05
+				stability_factor = 0.05
 			}
 		}
 		hea_book = {
 			picture = hea_book
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
-				
 				research_speed_factor = 0.10
-			} 
-			
+			}
 		}
 		
 		angel_of_peace1 = {
 			picture = HEA_idea_one_prophet
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.2
@@ -566,14 +471,11 @@ ideas = {
 				army_morale_factor = 0.05
 				army_defence_factor = 0.05
 				special_forces_cap = 0.05
-			} 
-			
+			}
 		}
 			
 		angel_of_peace2 = {
 			picture = HEA_idea_one_prophet
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.2
@@ -584,13 +486,10 @@ ideas = {
 				army_defence_factor = 0.10
 				special_forces_cap = 0.10
 			} 
-			
 		}
 			
 		angel_of_peace3 = {
 			picture = HEA_idea_one_prophet
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.25
@@ -603,10 +502,8 @@ ideas = {
 			} 
 			
 		}
-				archangel_michael1 = {
+		archangel_michael1 = {
 			picture = HEA_idea_one_prophet
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.15
@@ -617,12 +514,9 @@ ideas = {
 				justify_war_goal_time = -0.25
 				special_forces_cap = 0.05
 			} 
-			
 		}
-				archangel_michael2 = {
+		archangel_michael2 = {
 			picture = HEA_idea_one_prophet
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.20
@@ -632,13 +526,10 @@ ideas = {
 				army_attack_factor = 0.10
 				justify_war_goal_time = -0.50
 				special_forces_cap = 0.10
-			} 
-			
-		}
-				archangel_michael3 = {
-			picture = HEA_idea_one_prophet
-			allowed = {
 			}
+		}
+		archangel_michael3 = {
+			picture = HEA_idea_one_prophet
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.25
@@ -649,27 +540,21 @@ ideas = {
 				army_attack_factor = 0.20
 				army_defence_factor = 0.10
 				special_forces_cap = 0.15
-			} 
-			
+			}
 		}
 		###Wardens of Humanity
 		
-				HEA_wardens_of_humanity1 = {
+		HEA_wardens_of_humanity1 = {
 			picture = hea_wardens_of_humanity
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				army_morale_factor = 0.10
 				army_attack_factor = 0.10
 				army_defence_factor = 0.10
 			} 
-			
 		}
-				HEA_wardens_of_humanity2 = {
+		HEA_wardens_of_humanity2 = {
 			picture = hea_wardens_of_humanity
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				army_morale_factor = 0.25
@@ -679,10 +564,8 @@ ideas = {
 			
 		}
 		###
-			hea_rampant_militarism_3 = {
+		hea_rampant_militarism_3 = {
 			picture = HEA_idea_rampant_militarism
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				stability_factor = -0.15
@@ -692,10 +575,8 @@ ideas = {
 				army_attack_factor = 0.05
 			}
 		}
-			hea_peters_military1 = {
+		hea_peters_military1 = {
 			picture = peters_retreat
-			allowed = {
-			}
 			removal_cost = -1
 				equipment_bonus = {
 				infantry_equipment = {
@@ -704,12 +585,10 @@ ideas = {
 				}
 			}
 		}
-				hea_peters_military2 = {
+		hea_peters_military2 = {
 			picture = peters_retreat
-			allowed = {
-			}
 			removal_cost = -1
-					equipment_bonus = {
+			equipment_bonus = {
 				infantry_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
@@ -720,12 +599,10 @@ ideas = {
 				}
 			}
 		}
-					hea_peters_military3 = {
+		hea_peters_military3 = {
 			picture = peters_retreat
-			allowed = {
-			}
 			removal_cost = -1
-					equipment_bonus = {
+			equipment_bonus = {
 				infantry_equipment = {
 					build_cost_ic = -0.05
 					soft_attack = 0.05
@@ -740,15 +617,13 @@ ideas = {
 				}
 			}
 		}
-					hea_peters_military4 = {
+		hea_peters_military4 = {
 			picture = peters_retreat
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				modifier_army_sub_unit_power_armour_max_org_factor = 0.05
 			}
-						equipment_bonus = {
+			equipment_bonus = {
 				infantry_equipment = {
 					build_cost_ic = -0.05
 					soft_attack = 0.05
@@ -763,25 +638,20 @@ ideas = {
 				}
 			}
 		}
-				hea_peters_civilians1 = {
+		hea_peters_civilians1 = {
 			picture = peters_retreat
-			allowed = {
-			}
 			removal_cost = -1
 			equipment_bonus = {
 				power_armor_equipment = {
 					casualty_trickleback = 0.05
 					experience_loss_factor = 0.05
-					max_strength = 0.10 
-									
+					max_strength = 0.10 			
 					instant = yes
 				}
 			}
 		}
-					hea_peters_civilians2 = {
+		hea_peters_civilians2 = {
 			picture = peters_retreat
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				modifier_army_sub_unit_power_armour_max_org_factor = 0.10
@@ -795,10 +665,8 @@ ideas = {
 				}
 			}
 		}
-						hea_peters_civilians3 = {
+		hea_peters_civilians3 = {
 			picture = peters_retreat
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				modifier_army_sub_unit_power_armour_speed_factor = 0.05
@@ -815,8 +683,6 @@ ideas = {
 		}
 		hea_peters_rebuilt = {
 			picture = peters_retreat
-			allowed = {
-			}
 			removal_cost = -1
 			modifier = {
 				modifier_army_sub_unit_power_armour_speed_factor = 0.05
@@ -844,10 +710,8 @@ ideas = {
 			}
 		}
 		##10th Crusade Buffs
-			HEA_old_world_failures = {
+		HEA_old_world_failures = {
 			picture = outsider_american_flag
-			allowed = {
-			}
 			removal_cost = -1
 			equipment_bonus = {
 				power_armor_equipment = {
@@ -860,284 +724,236 @@ ideas = {
 		}
 		hea_vault_tec = {
 			picture = vault_open_bonus
-			allowed = {
-			}
 			removal_cost = -1
-				research_bonus = {
+			research_bonus = {
 				electronics = 0.10
 				industry = 0.1
 			}
 		}
 		hea_aztec_techniques = {
 			picture = caf_ate
-		allowed = {
-		}
-		removal_cost = -1
+			removal_cost = -1
 			research_bonus = {
-			resource_and_agriculture_category = 0.10
-		}
-	modifier = {
-		monthly_population = 0.10
-	}
-	}
-	hea_cursed_knowledge = {
-			picture = ttm_the_nursery
-		allowed = {
-		}
-		removal_cost = -1
-			research_bonus = {
-			resource_and_agriculture_category = 0.25
-		}
-	modifier = {
-		monthly_population = 0.10
-		research_speed_factor = 0.10
-	}
-	}
-	hea_dead_mars = {
-		picture = hea_dead_legion
-		allowed = {
-		}
-		removal_cost = -1
-	modifier = {
-		experience_gain_army_factor = 0.10
-		war_support_factor = 0.1
-		conscription_factor = 0.05
-	}
-	}
-	hea_bigger_tex = {
-			picture = rrg_texas2
-		allowed = {
-		}
-		removal_cost = -1
-			research_bonus = {
-			energy_weaponry_tech_category = 0.1
-		infantry_weapons_tech_category = 0.1
-		}
-		equipment_bonus = {
-			infantry_equipment = {
-				build_cost_ic = 0.05
-				hard_attack = 0.05
-				soft_attack = 0.10
-				instant = yes
+				resource_and_agriculture_category = 0.10
+			}
+			modifier = {
+				monthly_population = 0.10
 			}
 		}
-	}
-	hea_two_headed_bear = {
-		picture = teddy_bear
-		allowed = {
+		hea_cursed_knowledge = {
+			picture = ttm_the_nursery
+			removal_cost = -1
+				research_bonus = {
+				resource_and_agriculture_category = 0.25
+			}
+			modifier = {
+				monthly_population = 0.10
+				research_speed_factor = 0.10
+			}
 		}
-		removal_cost = -1
-	modifier = {
-	justify_war_goal_time = 0.05
-	monthly_population = 0.05
-	land_reinforce_rate = 0.05
-	planning_speed = 0.05
-	}
-	}
-	hea_frozen_crusaders = {
-				picture = hea_burn
-		allowed = {
+		hea_dead_mars = {
+			picture = hea_dead_legion
+			removal_cost = -1
+			modifier = {
+				experience_gain_army_factor = 0.10
+				war_support_factor = 0.1
+				conscription_factor = 0.05
+			}
 		}
-		removal_cost = -1
-	modifier = {
-	winter_attrition_factor = -0.25
-	out_of_supply_factor = -0.10
-	army_speed_factor = 0.05
-	}
-	}
-	
-
-
-	
+		hea_bigger_tex = {
+			picture = rrg_texas2
+			removal_cost = -1
+			research_bonus = {
+				energy_weaponry_tech_category = 0.1
+				infantry_weapons_tech_category = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = 0.05
+					hard_attack = 0.05
+					soft_attack = 0.10
+					instant = yes
+				}
+			}
+		}
+		hea_two_headed_bear = {
+			picture = teddy_bear
+			removal_cost = -1
+			modifier = {
+				justify_war_goal_time = 0.05
+				monthly_population = 0.05
+				land_reinforce_rate = 0.05
+				planning_speed = 0.05
+			}
+		}
+		hea_frozen_crusaders = {
+			picture = hea_burn
+			removal_cost = -1
+			modifier = {
+				winter_attrition_factor = -0.25
+				out_of_supply_factor = -0.10
+				army_speed_factor = 0.05
+			}
+		}
 	###Air Focuses
 	
 	###Mur Ideas
 	
 		mur_order1 = {
-		picture = hea_sentinel_order
-		allowed = {
+			picture = hea_sentinel_order
+			removal_cost = -1
+			modifier = {
+				special_forces_min = 25
+				special_forces_attack_factor = 0.05
+				special_forces_defence_factor = 0.05
+			}
 		}
-		removal_cost = -1
-		modifier = {
-			special_forces_min = 25
-			special_forces_attack_factor = 0.05
-			special_forces_defence_factor = 0.05
+		mur_order2 = {
+			picture = hea_sentinel_order
+			removal_cost = -1
+			modifier = {
+				special_forces_min = 40
+				special_forces_attack_factor = 0.05
+				special_forces_defence_factor = 0.10
+			}
 		}
-	}
-	mur_order2 = {
-		picture = hea_sentinel_order
-		allowed = {
+		mur_order3 = {
+			picture = hea_sentinel_order
+			removal_cost = -1
+			modifier = {
+				special_forces_min = 50
+				special_forces_defence_factor = 0.15
+			}
 		}
-		removal_cost = -1
-		modifier = {
-			special_forces_min = 40
-			special_forces_attack_factor = 0.05
-			special_forces_defence_factor = 0.10
+		mur_order4 = {
+			picture = hea_sentinel_order
+			removal_cost = -1
+			modifier = {
+				special_forces_min = 75
+				special_forces_attack_factor = 0.05
+				special_forces_defence_factor = 0.20
+			}
 		}
-	}
-	mur_order3 = {
-		picture = hea_sentinel_order
-		allowed = {
+		mur_order5 = {
+			picture = hea_sentinel_order
+			removal_cost = -1
+			modifier = {
+				special_forces_min = 75
+				special_forces_attack_factor = 0.05
+				special_forces_defence_factor = 0.20
+				heat_attrition_factor = -0.2
+			}
 		}
-		removal_cost = -1
-		modifier = {
-			special_forces_min = 50
-			special_forces_defence_factor = 0.15
+		shosho_rebels = {
+			picture = savage_idea
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.01
+				stability_factor = -0.05
+			}
 		}
-	}
-	mur_order4 = {
-		picture = hea_sentinel_order
-		allowed = {
-		}
-		removal_cost = -1
-		modifier = {
-			special_forces_min = 75
-			special_forces_attack_factor = 0.05
-			special_forces_defence_factor = 0.20
-		}
-	}
-	mur_order5 = {
-		picture = hea_sentinel_order
-		allowed = {
-		}
-		removal_cost = -1
-		modifier = {
-			special_forces_min = 75
-			special_forces_attack_factor = 0.05
-			special_forces_defence_factor = 0.20
-			heat_attrition_factor = -0.2
-		}
-	}
-				shosho_rebels = {
-		picture = savage_idea
-		allowed = {
-		}
-		removal_cost = -1
-		modifier = {
-			political_power_gain = -0.01
-			stability_factor = -0.05
-		}
-	}
-					HEA_control_I80 = {
+		HEA_control_I80 = {
 		picture = hea_control_I80
-		allowed = {
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.05
+				monthly_population = 0.1
+				consumer_goods_factor = 0.08
+			}
 		}
-		removal_cost = -1
-		modifier = {
-			political_power_gain = 0.1
-			stability_factor = 0.05
-			monthly_population = 0.1
-			consumer_goods_factor = 0.08
+		HEA_control_I80_trickle = {
+			picture = hea_control_I80
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.05
+				monthly_population = 0.05
+				consumer_goods_factor = 0.04
+			}
 		}
-	}
-				HEA_control_I80_trickle = {
-		picture = hea_control_I80
-		allowed = {
-		}
-		removal_cost = -1
-		modifier = {
-			political_power_gain = 0.05
-			stability_factor = 0.05
-			monthly_population = 0.05
-			consumer_goods_factor = 0.04
-		}
-	}
 		fort_mcdermitt1 = {
-		picture = peters_retreat
-		allowed = {
-		}
-		removal_cost = -1
-		modifier = {
-		special_forces_cap = 0.05
-		conscription_factor = 0.05
-		}
-	}
-				fort_mcdermitt2 = {
-		picture = peters_retreat
-		allowed = {
-		}
-		removal_cost = -1
-		modifier = {
-		special_forces_cap = 0.05
-		conscription_factor = 0.05
-		}
-		equipment_bonus = {
-		power_armor_equipment = {
-				build_cost_ic = -0.05
-				instant = yes
+			picture = peters_retreat
+			removal_cost = -1
+			modifier = {
+				special_forces_cap = 0.05
+				conscription_factor = 0.05
 			}
 		}
-	}
-						fort_mcdermitt3 = {
-		picture = peters_retreat
-		allowed = {
-		}
-		removal_cost = -1
-		modifier = {
-		special_forces_cap = 0.05
-		conscription_factor = 0.05
-		}
-		equipment_bonus = {
-		power_armor_equipment = {
-				build_cost_ic = -0.05
-				casualty_trickleback = 0.05
-				experience_loss_factor = 0.05
-				instant = yes
+		fort_mcdermitt2 = {
+			picture = peters_retreat
+			removal_cost = -1
+			modifier = {
+				special_forces_cap = 0.05
+				conscription_factor = 0.05
+			}
+			equipment_bonus = {
+				power_armor_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
 			}
 		}
-	}
-			murtaugh_order = {
-		picture = hea_sentinel_order
-		allowed = {
-		}
-		removal_cost = -1
-		modifier = {
-		special_forces_cap = 0.05
-		conscription_factor = 0.05
-			special_forces_min = 100
-			special_forces_defence_factor = 0.25
-			heat_attrition_factor = -0.2
-		}
-		equipment_bonus = {
-		power_armor_equipment = {
-				build_cost_ic = -0.05
-				casualty_trickleback = 0.05
-				experience_loss_factor = 0.05
-				reliability = 0.05
-				hardness = 0.05
-				instant = yes
+		fort_mcdermitt3 = {
+			picture = peters_retreat
+			removal_cost = -1
+			modifier = {
+				special_forces_cap = 0.05
+				conscription_factor = 0.05
+			}
+			equipment_bonus = {
+				power_armor_equipment = {
+					build_cost_ic = -0.05
+					casualty_trickleback = 0.05
+					experience_loss_factor = 0.05
+					instant = yes
+				}
 			}
 		}
-	}
+		murtaugh_order = {
+			picture = hea_sentinel_order
+			removal_cost = -1
+			modifier = {
+				special_forces_cap = 0.05
+				conscription_factor = 0.05
+				special_forces_min = 100
+				special_forces_defence_factor = 0.25
+				heat_attrition_factor = -0.2
+			}
+			equipment_bonus = {
+				power_armor_equipment = {
+					build_cost_ic = -0.05
+					casualty_trickleback = 0.05
+					experience_loss_factor = 0.05
+					reliability = 0.05
+					hardness = 0.05
+					instant = yes
+				}
+			}
+		}
 	
-	mur_skeleton_cathedral = {
-		picture = hea_skeleton_cathedral
-		allowed = {
-		}
-		removal_cost = -1
-		modifier = {
-			political_power_gain = -0.05
-			stability_factor = 0.05
-			conscription_factor = 0.05
-		}
-	}
-	hea_steam_smiths_weapon = {
-		picture = generic_chinese_rifle
-		allowed = {
-		}
-		removal_cost = 1
-		equipment_bonus = {
-			infantry_equipment = {
-				reliability = 0.1
-				instant = yes
+		mur_skeleton_cathedral = {
+			picture = hea_skeleton_cathedral
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = 0.05
+				conscription_factor = 0.05
 			}
 		}
-	}
+		hea_steam_smiths_weapon = {
+			picture = generic_chinese_rifle
+			removal_cost = -1
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.1
+					instant = yes
+				}
+			}
+		}
 		hea_judas_engineers = {
 			picture = hea_tanks
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			equipment_bonus = {
 				tank_equipment = {
 					build_cost_ic = -0.05
@@ -1147,37 +963,31 @@ ideas = {
 		}
 		hea_judasfoundrybus = {
 			picture = hea_tanks
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			equipment_bonus = {
 				tank_equipment = {
 					build_cost_ic = 0.05
 					breakthrough = 0.05
 					armor_value = 0.05
-				instant = yes
+					instant = yes
 				}
 			}
 		}
 		hea_judas_engineersexperienced = {
 			picture = hea_tanks
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			equipment_bonus = {
 				tank_equipment = {
 					build_cost_ic = -0.10
 					breakthrough = 0.05
 					reliability = 0.05
-				instant = yes
+					instant = yes
 				}
 			}
 		}
 		hea_shrinetanks = {
 			picture = hea_tanks
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			modifier = {
 				army_morale_factor = 0.25
 				army_org_factor = 0.10
@@ -1195,9 +1005,7 @@ ideas = {
 		}
 		hea_pastinspiration = {
 			picture = hea_tanks
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			research_bonus = {
 				armor = 0.25
 			}
@@ -1206,15 +1014,13 @@ ideas = {
 					build_cost_ic = 0.05
 					maximum_speed = -0.05
 					armor_value = 0.10
-				instant = yes
+					instant = yes
 				}
 			}
 		}
 		hea_steamdreadnoughts = {
 			picture = hea_tanks
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			modifier = {
 				army_armor_attack_factor = 0.05
 				army_armor_defence_factor = 0.05
@@ -1222,9 +1028,7 @@ ideas = {
 		}
 		hea_innocencelost_foundry = {
 			picture = hea_tanks
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			modifier = {
 				conscription_factor = -0.1
 				army_armor_attack_factor = 0.10
@@ -1233,9 +1037,7 @@ ideas = {
 		}
 		hea_biggertank1 = {
 			picture = hea_tanks
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			equipment_bonus = {
 				tank_equipment = {
 					build_cost_ic = 0.05
@@ -1247,9 +1049,7 @@ ideas = {
 		}
 		hea_biggertank2 = {
 			picture = hea_tanks
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			equipment_bonus = {
 				tank_equipment = {
 					build_cost_ic = 0.10
@@ -1263,9 +1063,7 @@ ideas = {
 		}
 		hea_biggertank3 = {
 			picture = hea_tanks
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			equipment_bonus = {
 				tank_equipment = {
 					build_cost_ic = 0.15
@@ -1281,9 +1079,7 @@ ideas = {
 		}
 		hea_biggertank4 = {
 			picture = hea_tanks
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			equipment_bonus = {
 				tank_equipment = {
 					build_cost_ic = 0.20
@@ -1299,9 +1095,7 @@ ideas = {
 		}
 		hea_close_air1 = {
 			picture = hea_air
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			modifier = {
 				air_maximum_speed_factor = 0.10
 				air_agility_factor = 0.10
@@ -1309,9 +1103,7 @@ ideas = {
 		}
 		hea_close_air2 = {
 			picture = hea_air
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			modifier = {
 				air_maximum_speed_factor = 0.10
 				air_agility_factor = 0.10
@@ -1320,9 +1112,7 @@ ideas = {
 		}
 		hea_close_air3 = {
 			picture = hea_air
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			modifier = {
 				air_maximum_speed_factor = 0.10
 				air_agility_factor = 0.10
@@ -1332,9 +1122,7 @@ ideas = {
 		}	
 		hea_air_control1 = {
 			picture = hea_air
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			modifier = {
 				air_superiority_efficiency = 0.10
 				air_accidents_factor = -0.10
@@ -1342,21 +1130,17 @@ ideas = {
 		}	
 		hea_air_control2 = {
 			picture = hea_air
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			modifier = {
-			air_superiority_efficiency = 0.10
-			air_accidents_factor = -0.10
-			paratrooper_weight_factor = -0.25
-			paradrop_organization_factor = 0.10
+				air_superiority_efficiency = 0.10
+				air_accidents_factor = -0.10
+				paratrooper_weight_factor = -0.25
+				paradrop_organization_factor = 0.10
 			}
 		}
 		hea_air_control3 = {
 			picture = hea_air
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			modifier = {
 				air_superiority_efficiency = 0.20
 				air_escort_efficiency = 0.10
@@ -1368,9 +1152,7 @@ ideas = {
 		}
 		hea_air_death1 = {
 			picture = hea_air
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			modifier = {
 				air_night_penalty = -0.10
 				air_range_factor = 0.10
@@ -1379,9 +1161,7 @@ ideas = {
 		}
 		hea_air_death2 = {
 			picture = hea_air
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			modifier = {
 				air_night_penalty = -0.10
 				air_range_factor = 0.10
@@ -1392,9 +1172,7 @@ ideas = {
 		}
 		hea_air_death3 = {
 			picture = hea_air
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			modifier = {
 				air_night_penalty = -0.10
 				air_range_factor = 0.10
@@ -1405,9 +1183,7 @@ ideas = {
 		}
 		hea_air_reach = {
 			picture = hea_air
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			modifier = {
 				air_night_penalty = -0.25
 				air_range_factor = 0.25
@@ -1428,9 +1204,7 @@ ideas = {
 		}
 		hea_air_death = {
 			picture = hea_air
-			allowed = {
-			}
-			#remove_cost = 1
+			removal_cost = -1
 			modifier = {
 				air_night_penalty = -0.10
 				air_range_factor = 0.10
@@ -1451,8 +1225,6 @@ ideas = {
 		}
 		hea_medical_sin = {
 			picture = generic_medicine
-			allowed = {
-			}
 			removal_cost = -1
 				research_bonus = {
 				support_medical_tech_category = 0.25
@@ -1464,7 +1236,7 @@ ideas = {
 				}
 			}
 		}
-		#Foreign Relations ideas
+		###Foreign Relations ideas###
 		hea_foreign_relation_idea_0 = { #Just to show stuff as tooltip, look way better compared to writing the tooltip manually
 			picture = pantheon_sun
 			modifier = {
@@ -1490,6 +1262,40 @@ ideas = {
 				send_volunteer_size = 3
 			}
 		}
+		hea_foreign_relation_idea_order = { #Ebstablishing a new Order/Territory via the State Managements stuff
+			picture = pantheon_sun
+			modifier = {
+				diplomacy_distance = 400
+				send_volunteer_size = 2
+			}
+		}
+###################################
+##Unique Puppets National Spirits##
+###################################
+		###Oregon###
+		hea_oregon_gilded_wings_idea = {
+			picture = HEA_idea_mobility
+			modifier = {
+				compliance_growth = 0.05
+				resistance_growth = -0.1
+				war_support_factor = -0.3
+				stability_factor = 0.1
+				custom_modifier_tooltip = hea_oregon_gilded_wings_idea_tt
+			}
+		}
+		###Oregon###
+		hea_washington_ember_watch_idea = {
+			picture = HEA_idea_mobility
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.3
+				industrial_capacity_factory = 0.1
+				army_core_attack_factor	= 0.1
+				army_core_defence_factor = 0.1
+				stability_factor = -0.2
+				custom_modifier_tooltip = hea_washington_ember_watch_idea_tt
+			}
+		}
+
 ###################################
 ##Taming Rivers,Lands and Heavens##
 ###################################

@@ -1977,10 +1977,6 @@ set_country_leader_name = {
 		x = 0
 		y = 1
 		relative_position_id = hea_monsters_of_the_wastes
-	
-		allow_branch = {
-			has_country_flag = hea_vengance_path
-		}
 
 		prerequisite = {
 			focus = hea_monsters_of_the_wastes
@@ -2018,10 +2014,6 @@ set_country_leader_name = {
 		y = 1
 		relative_position_id = hea_the_dead_walk
 
-		allow_branch = {
-			has_country_flag = hea_vengance_path
-		}
-
 		prerequisite = {
 			focus = hea_monsters_of_the_wastes
 		}
@@ -2054,10 +2046,6 @@ set_country_leader_name = {
 		x = 0
 		y = 1
 		relative_position_id = hea_cains_empire
-
-		allow_branch = {
-			has_country_flag = hea_vengance_path
-		}
 
 		prerequisite = {
 			focus = hea_monsters_of_the_wastes
@@ -2094,10 +2082,6 @@ set_country_leader_name = {
 		y = 1
 		relative_position_id = hea_nephilim_horde
 
-		allow_branch = {
-			has_country_flag = hea_vengance_path
-		}
-
 		prerequisite = {
 			focus = hea_monsters_of_the_wastes
 		}
@@ -2132,10 +2116,6 @@ set_country_leader_name = {
 		x = 0
 		y = 1
 		relative_position_id = hea_leviathans_of_the_north
-		
-		allow_branch = {
-			has_country_flag = hea_vengance_path
-		}
 
 		prerequisite = {
 			focus = hea_monsters_of_the_wastes
@@ -2172,10 +2152,6 @@ set_country_leader_name = {
 		y = 1
 		relative_position_id = hea_steel_puppets
 
-		allow_branch = {
-			has_country_flag = hea_vengance_path
-		}
-
 		prerequisite = {
 			focus = hea_monsters_of_the_wastes
 		}
@@ -2210,10 +2186,6 @@ set_country_leader_name = {
 		x = 0
 		y = 1
 		relative_position_id = hea_red_devils_of_the_north
-
-		allow_branch = {
-			has_country_flag = hea_vengance_path
-		}
 
 		prerequisite = { focus = hea_the_dead_walk }
 		prerequisite = { focus = hea_cains_empire }

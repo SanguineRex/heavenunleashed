@@ -334,6 +334,42 @@
 # 		}
 # 	}
 # }
+###################
+##Debug Decisions##
+###################
+debug_decisions = {
+	hea_vengance_path_country_flag = {
+		allowed = {
+			original_tag = HEA
+		}
+		complete_effect = {
+			set_country_flag = hea_vengance_path
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	annex_oregon = {
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						region = 59
+						region = 58
+						region = 11
+					}
+				}
+				transfer_state_to = ROOT
+			}
+		}
+	}
+	annex_washington = {
+		complete_effect = {
+			for_each_scope_loop = {
+				array = global.washington_state_array
+				transfer_state_to = ROOT
+			}
+		}
+	}
+}
 
 #####################
 ##Michael's Crusade##
@@ -1188,7 +1224,7 @@ hea_state_manage_decision_cat = {
 		}
 	}
 	###OREGON-2###
-	#Giving the Oregon Mandate to BDT
+	#Giving The Order of Oregon to BDT
 	bdt_state_manage_oregon_mandate_decision = {
 		icon = GFX_decision_hol_draw_up_staff_plans
 		fire_only_once = yes
@@ -1196,8 +1232,19 @@ hea_state_manage_decision_cat = {
 			check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 			check_variable = { hea_state_manage_gui_decision = 2 } #Oregon
 			BDT = { is_ally_with = ROOT }
+			NOT = { has_country_flag = hea_oregon_states_to_order }
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
 		}
 		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
 			set_country_flag = hea_oregon_states_to_bdt
 			hidden_effect = {
 				for_each_scope_loop = {
@@ -1260,6 +1307,80 @@ hea_state_manage_decision_cat = {
 			custom_effect_tooltip = bdt_state_manage_oregon_mandate_decision_tt
 		}
 	}
+	##The Order of Oregon
+	state_manage_oregon_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
+			check_variable = { hea_state_manage_gui_decision = 2 } #Oregon
+			NOT = { has_country_flag = hea_oregon_states_to_bdt }
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			all_of_scopes = {
+				array = global.oregon_state_array
+				tooltip = state_manage_oregon_control_tt
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+			BDT = {
+				OR = {
+					is_ai = yes 
+					exists = no
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_oregon_states_to_order
+			custom_effect_tooltip = state_manage_oregon_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = KLA
+				for_each_scope_loop = {
+					array = global.oregon_state_array
+					transfer_state_to = KLA
+				}
+				949 = { transfer_state_to = KLA } #Impassable State, Strawberry Mountain 
+				950 = { transfer_state_to = KLA } #Impassable State, Rock Creek Butte
+				951 = { transfer_state_to = KLA } #Impassable State, Wehana Toucannon
+				952 = { transfer_state_to = KLA } #Impassable State, Wallowa Whitman
+				KLA = { 
+					set_cosmetic_tag = KLA_orders
+					add_state_core = 23 #West Portland
+					set_capital = { state = 23 } #West Portland
+					add_state_core = 37 #East Portland
+					add_state_core = 51 #Walla Walla
+					add_state_core = 71 #Crowshaven
+					add_state_core = 231 #Paisley Pit
+					add_state_core = 337 #Arroyo
+					add_state_core = 493 #Salem
+					add_state_core = 580 #New Chemult
+					add_timed_idea = {
+						idea = oregon_cannibal_fighting_cannibalism
+						days = 2000
+					}
+					remove_ideas = {
+						KLA_gecko_abundance
+						KLA_professional_trappers
+					}
+					set_country_flag = locked_economy_law
+					add_ideas = {
+						free_trade #Open their market for trade
+						hea_oregon_gilded_wings_idea
+					}
+				}	
+			}
+		}
+	}
 	##Conquest of Oregon
 	state_manage_oregon_conquest_dynamic_decision = {
 		icon = GFX_decision_jap_conquer_china
@@ -1271,13 +1392,11 @@ hea_state_manage_decision_cat = {
 			check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 			check_variable = { hea_state_manage_gui_decision = 2 } #Oregon
 		}
-		targets = { CHE MDT TRL CCW RBT PMR MLT DIS KLA ARR } #Oregon nations except for TIM, SHO and BDT cause they already exist in a different focus/decision - @Deez
+		targets = { CHE MDT TRL CCW RBT PMR MLT DIS KLA ARR TCA } #Oregon nations except for TIM, SHO and BDT cause they already exist in a different focus/decision - @Deez
 		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
 		target_trigger = { 
 			FROM = {
-				NOT = {
-					all_core_land_owned_by_prev_sphere = yes
-				}
+				NOT = { all_core_land_owned_by_prev_sphere = yes }
 			}
 		}
 		target_non_existing = yes #Need this to actually target the lands even after they're gone
@@ -1287,26 +1406,19 @@ hea_state_manage_decision_cat = {
 					BDT = { is_ally_with = ROOT }
 					ROOT = { has_country_flag = hea_oregon_states_to_bdt }
 				}
-				FROM = {
-					is_neighbor_of = BDT
-				}
+				FROM = { is_neighbor_of = BDT }
 			}
 			else = {
 				OR = {
 					FROM = { is_neighbor_of = ROOT }
-					any_country = {
-						is_ally_with = ROOT
-						is_neighbor_of = FROM
-					}
+					any_allied_country = { is_neighbor_of = FROM }
 				}
 			}
 		}
 		war_with_target_on_remove = yes
 		remove_effect = {
 			FROM = {
-				ROOT = {
-					grant_wargoals_on_core_states_of_prev = yes
-				}
+				ROOT = { grant_wargoals_on_core_states_of_prev = yes }
 			}
 		}
 
@@ -1314,6 +1426,104 @@ hea_state_manage_decision_cat = {
 			base = 1
 		}
 	}
+	##WASHINGTON-3##
+	#Giving the Order of Washington to ROT
+	rot_state_manage_washington_mandate_decision = {
+		icon = GFX_decision_hol_draw_up_staff_plans
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
+			check_variable = { hea_state_manage_gui_decision = 3 } #Washington
+			ROT = { is_ally_with = ROOT }
+			NOT = { has_country_flag = hea_washington_states_order }
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_washington_states_to_rot
+			hidden_effect = {
+				for_each_scope_loop = {
+					array = global.washington_state_array
+					if = {
+						limit = {
+							OR = {
+								is_owned_by = ROOT
+								controller = { is_puppet_of = HEA }
+							}
+						}
+						transfer_state_to = ROT
+					}
+				}
+			}
+			custom_effect_tooltip = rot_state_manage_washington_mandate_decision_tt
+		}
+	}
+	##The Order of Washington
+	state_manage_washington_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
+			check_variable = { hea_state_manage_gui_decision = 3 } #Washington
+			NOT = { has_country_flag = hea_washington_states_to_rot }
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			all_of_scopes = {
+				array = global.washington_state_array
+				tooltip = state_manage_washington_control_tt
+				OR = {
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+			ROT = {
+				OR = {
+					is_ai = yes 
+					exists = no
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_washington_states_order
+			custom_effect_tooltip = state_manage_washington_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = YAK
+				for_each_scope_loop = {
+					array = global.washington_state_array
+					transfer_state_to = YAK
+				}
+				YAK = {
+					activate_decision = form_northern_federation #Activate their formable before setting the cosmetic tag so our will override theirs - @Deez
+					set_cosmetic_tag = YAK_orders
+					set_capital = { state = 84 } #Seattle
+					remove_ideas = {
+						yak_the_forest_of_the_elders
+						yak_living_from_the_land
+					}
+					add_ideas = {
+						free_trade #Open their market for trade
+						hea_washington_ember_watch_idea
+					}
+				}
+			}
+		}
+	}	
 	##Shared Border Fixing Oregon-Washington
 	#Divide the lands
 	state_manage_oregon_washington_border_decision = {
@@ -1401,7 +1611,7 @@ hea_tame_decision_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			add_to_variable = {	hea_tame_country_resource_water_var = 15}
+			add_to_variable = {	hea_tame_country_resource_water_var = 15 }
 			set_country_flag = hea_water_mills_built_18_1
 			clr_country_flag = hea_building_water_mills
 			effect_tooltip = {
@@ -1435,8 +1645,8 @@ hea_tame_decision_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			subtract_from_variable = { hea_tame_country_resource_water_var = 5}
-			add_to_variable = { hea_tame_country_resource_energy_var = 8}
+			subtract_from_variable = { hea_tame_country_resource_water_var = 5 }
+			add_to_variable = { hea_tame_country_resource_energy_var = 8 }
 			clr_country_flag = hea_building_water_mills
 			set_country_flag = hea_water_mills_built_18_2
 			effect_tooltip = {
@@ -1470,11 +1680,11 @@ hea_tame_decision_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			subtract_from_variable = { hea_tame_country_resource_water_var = 5}
-			subtract_from_variable = { hea_tame_country_resource_energy_var = 3}
-			add_to_variable = { hea_tame_stability_factor_var = 0.025}
-			add_to_variable = { hea_tame_monthly_population_var = 0.05}
-			add_to_variable = { hea_tame_non_core_manpower_var = 0.05}
+			subtract_from_variable = { hea_tame_country_resource_water_var = 5 }
+			subtract_from_variable = { hea_tame_country_resource_energy_var = 3 }
+			add_to_variable = { hea_tame_stability_factor_var = 0.025 }
+			add_to_variable = { hea_tame_monthly_population_var = 0.05 }
+			add_to_variable = { hea_tame_non_core_manpower_var = 0.05 }
 			clr_country_flag = hea_building_water_mills
 			effect_tooltip = {
 				swap_ideas = {
@@ -1504,7 +1714,7 @@ hea_tame_decision_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			add_to_variable = {	hea_tame_country_resource_water_var = 15}
+			add_to_variable = {	hea_tame_country_resource_water_var = 15 }
 			set_country_flag = hea_water_mills_built_116_1
 			clr_country_flag = hea_building_water_mills
 			effect_tooltip = {
@@ -1538,8 +1748,8 @@ hea_tame_decision_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			subtract_from_variable = { hea_tame_country_resource_water_var = 5}
-			add_to_variable = { hea_tame_country_resource_energy_var = 8}
+			subtract_from_variable = { hea_tame_country_resource_water_var = 5 }
+			add_to_variable = { hea_tame_country_resource_energy_var = 8 }
 			clr_country_flag = hea_building_water_mills
 			set_country_flag = hea_water_mills_built_116_2
 			effect_tooltip = {
@@ -1572,11 +1782,11 @@ hea_tame_decision_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			subtract_from_variable = { hea_tame_country_resource_water_var = 5}
-			subtract_from_variable = { hea_tame_country_resource_energy_var = 3}
-			add_to_variable = { hea_tame_stability_factor_var = 0.025}
-			add_to_variable = { hea_tame_monthly_population_var = 0.05}
-			add_to_variable = { hea_tame_non_core_manpower_var = 0.05}
+			subtract_from_variable = { hea_tame_country_resource_water_var = 5 }
+			subtract_from_variable = { hea_tame_country_resource_energy_var = 3 }
+			add_to_variable = { hea_tame_stability_factor_var = 0.025 }
+			add_to_variable = { hea_tame_monthly_population_var = 0.05 }
+			add_to_variable = { hea_tame_non_core_manpower_var = 0.05 }
 			clr_country_flag = hea_building_water_mills
 			effect_tooltip = {
 				swap_ideas = {
@@ -1606,7 +1816,7 @@ hea_tame_decision_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			add_to_variable = {	hea_tame_country_resource_water_var = 15}
+			add_to_variable = {	hea_tame_country_resource_water_var = 15 }
 			set_country_flag = hea_water_mills_built_278_1
 			clr_country_flag = hea_building_water_mills
 			effect_tooltip = {
@@ -1640,8 +1850,8 @@ hea_tame_decision_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			subtract_from_variable = { hea_tame_country_resource_water_var = 5}
-			add_to_variable = { hea_tame_country_resource_energy_var = 8}
+			subtract_from_variable = { hea_tame_country_resource_water_var = 5 }
+			add_to_variable = { hea_tame_country_resource_energy_var = 8 }
 			clr_country_flag = hea_building_water_mills
 			set_country_flag = hea_water_mills_built_278_2
 			effect_tooltip = {
@@ -1675,11 +1885,11 @@ hea_tame_decision_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			subtract_from_variable = { hea_tame_country_resource_water_var = 5}
-			subtract_from_variable = { hea_tame_country_resource_energy_var = 3}
-			add_to_variable = { hea_tame_stability_factor_var = 0.025}
-			add_to_variable = { hea_tame_monthly_population_var = 0.05}
-			add_to_variable = { hea_tame_non_core_manpower_var = 0.05}
+			subtract_from_variable = { hea_tame_country_resource_water_var = 5 }
+			subtract_from_variable = { hea_tame_country_resource_energy_var = 3 }
+			add_to_variable = { hea_tame_stability_factor_var = 0.025 }
+			add_to_variable = { hea_tame_monthly_population_var = 0.05 }
+			add_to_variable = { hea_tame_non_core_manpower_var = 0.05 }
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_taming_idea_template
@@ -1709,7 +1919,7 @@ hea_tame_decision_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			add_to_variable = {	hea_tame_country_resource_water_var = 15}
+			add_to_variable = {	hea_tame_country_resource_water_var = 15 }
 			set_country_flag = hea_water_mills_built_198_1
 			clr_country_flag = hea_building_water_mills
 			effect_tooltip = {
@@ -1742,8 +1952,8 @@ hea_tame_decision_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			subtract_from_variable = { hea_tame_country_resource_water_var = 5}
-			add_to_variable = { hea_tame_country_resource_energy_var = 8}
+			subtract_from_variable = { hea_tame_country_resource_water_var = 5 }
+			add_to_variable = { hea_tame_country_resource_energy_var = 8 }
 			clr_country_flag = hea_building_water_mills
 			set_country_flag = hea_water_mills_built_198_2
 			effect_tooltip = {
@@ -1776,11 +1986,11 @@ hea_tame_decision_cat = {
 			civilian_factory_use = 1
 		}
 		remove_effect = {
-			subtract_from_variable = { hea_tame_country_resource_water_var = 5}
-			subtract_from_variable = { hea_tame_country_resource_energy_var = 3}
-			add_to_variable = { hea_tame_stability_factor_var = 0.025}
-			add_to_variable = { hea_tame_monthly_population_var = 0.05}
-			add_to_variable = { hea_tame_non_core_manpower_var = 0.05}
+			subtract_from_variable = { hea_tame_country_resource_water_var = 5 }
+			subtract_from_variable = { hea_tame_country_resource_energy_var = 3 }
+			add_to_variable = { hea_tame_stability_factor_var = 0.025 }
+			add_to_variable = { hea_tame_monthly_population_var = 0.05 }
+			add_to_variable = { hea_tame_non_core_manpower_var = 0.05 }
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_taming_idea_template
@@ -1844,8 +2054,8 @@ hea_tame_decision_cat = {
 			set_country_flag = hea_building_smiths
 		}
 		remove_effect = {
-			subtract_from_variable = { hea_tame_country_resource_metal_var = 10}
-			add_to_variable = { hea_tame_country_resource_composites_var = 10}
+			subtract_from_variable = { hea_tame_country_resource_metal_var = 10 }
+			add_to_variable = { hea_tame_country_resource_composites_var = 10 }
 			clr_country_flag = hea_building_smiths
 			set_country_flag = hea_smiths_built_1385_2
 			effect_tooltip = {
@@ -1876,7 +2086,7 @@ hea_tame_decision_cat = {
 			set_country_flag = hea_building_smiths
 		}
 		remove_effect = {
-			add_to_variable = { hea_tame_country_resource_metal_var = 20}
+			add_to_variable = { hea_tame_country_resource_metal_var = 20 }
 			clr_country_flag = hea_building_smiths
 			set_country_flag = hea_smiths_built_198_1
 			effect_tooltip = {
@@ -1910,8 +2120,8 @@ hea_tame_decision_cat = {
 			set_country_flag = hea_building_smiths
 		}
 		remove_effect = {
-			subtract_from_variable = { hea_tame_country_resource_metal_var = 10}
-			add_to_variable = { hea_tame_country_resource_composites_var = 10}
+			subtract_from_variable = { hea_tame_country_resource_metal_var = 10 }
+			add_to_variable = { hea_tame_country_resource_composites_var = 10 }
 			clr_country_flag = hea_building_smiths
 			set_country_flag = hea_smiths_built_198_2
 			effect_tooltip = {
@@ -1942,7 +2152,7 @@ hea_tame_decision_cat = {
 			set_country_flag = hea_building_smiths
 		}
 		remove_effect = {
-			add_to_variable = { hea_tame_country_resource_metal_var = 20}
+			add_to_variable = { hea_tame_country_resource_metal_var = 20 }
 			clr_country_flag = hea_building_smiths
 			set_country_flag = hea_smiths_built_276_1
 			effect_tooltip = {
@@ -1976,8 +2186,8 @@ hea_tame_decision_cat = {
 			set_country_flag = hea_building_smiths
 		}
 		remove_effect = {
-			subtract_from_variable = { hea_tame_country_resource_metal_var = 10}
-			add_to_variable = { hea_tame_country_resource_composites_var = 10}
+			subtract_from_variable = { hea_tame_country_resource_metal_var = 10 }
+			add_to_variable = { hea_tame_country_resource_composites_var = 10 }
 			clr_country_flag = hea_building_smiths
 			set_country_flag = hea_smiths_built_276_2
 			effect_tooltip = {
@@ -2006,8 +2216,8 @@ hea_tame_decision_cat = {
 			civilian_factory_use = 4
 		}
 		remove_effect = {
-			subtract_from_variable = { hea_tame_country_resource_composites_var = 15}
-			add_to_variable = { hea_tame_industrial_capacity_factory_var = 0.1}
+			subtract_from_variable = { hea_tame_country_resource_composites_var = 15 }
+			add_to_variable = { hea_tame_industrial_capacity_factory_var = 0.1 }
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_taming_idea_template

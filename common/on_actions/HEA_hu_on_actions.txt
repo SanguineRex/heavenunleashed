@@ -499,6 +499,27 @@ on_actions = {
 					transfer_state_to = BDT
 				}
 			}
+			if = { #Scripting to transfer Oregon state controlled by HEA/HEA's puppet to ally ROT
+				limit = {
+					ROOT = { 
+						OR = {
+							original_tag = HEA
+							is_puppet_of = HEA
+						}
+					}
+					HEA = { has_country_flag = hea_washington_states_to_rot } #Accepted to transfer Washington Territories to ROT
+					ROT = { is_ally_with = HEA } #Prevent edge cases when ROT isn't ally for some reason
+					FROM.FROM = {
+						OR = { #in Washington
+							region = 36
+							region = 37
+						}
+					}
+				}
+				FROM.FROM = {
+					transfer_state_to = ROT
+				}
+			}
 		}
 	}
 	on_join_faction = { #Don't work well in OWB, might remove but leave it here just in case somehow OWB fix this - @Deez
@@ -542,7 +563,7 @@ on_actions = {
 					add_to_variable = { hea_state_manage_gui_dirty = 0.01 } #Update State Management GUI
 				}
 			}
-			if = { #If players puppet nations while the mandate is given to BDT, those nations's lands in Oregon will be given to BDT
+			if = { #If players puppet nations while the Oregon mandate is given to BDT, those nations's lands in Oregon will be given to BDT
 				limit = {
 					FROM = { 
 						original_tag = HEA 
@@ -554,13 +575,35 @@ on_actions = {
 					every_owned_state = {
 						if = {
 							limit = {
-								OR = {
+								OR = { #Washington
 									region = 58
 									region = 59
 									region = 11
 								}
 							}
 							transfer_state_to = BDT
+						}
+					}
+				}
+			}
+			if = { #If players puppet nations while The Order of Washington is given to ROT, those nations's lands in Washington will be given to ROT
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_washington_states_to_rot
+					}
+					ROT = { is_ally_with = HEA } #Prevent edge cases when ROT isn't ally for some reason
+				}
+				ROOT = {
+					every_owned_state = {
+						if = {
+							limit = {
+								OR = {
+									region = 36
+									region = 37
+								}
+							}
+							transfer_state_to = ROT
 						}
 					}
 				}
@@ -594,77 +637,53 @@ on_actions = {
 			}
 		}		
 	}
-	on_annex = {
+	on_subject_autonomy_level_change = { #This is designed so Heaven's Gate important puppets can't be annexed via autonomy or raise their own autonomy and break free - @Deez
 		effect = {
-			if = {
-				limit = { #If player lower a puppeted BDT autonomy with Oregon Mandate and annex them, release them again as puppet and give them Oregon territories HEA's owned
-					ROOT = {
-						original_tag = HEA
-						has_country_flag = hea_oregon_states_to_bdt
+			#Oregon
+			if = { #KLA
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_oregon_states_to_order
 					}
-					FROM = { original_tag = BDT }
-				}
-				ROOT = {
-					release_puppet = BDT
-					for_each_scope_loop = { #Special thanks to LimonenZitrone for the array idea and Iron Vanguard for the premade arrays - @Deez
-						array = global.oregon_state_array
-						if = {
-							limit = {
-								OR = {
-									is_owned_by = HEA
-									controller = { is_puppet_of = HEA }
-								}
-							}
-							transfer_state_to = BDT
-						}
-					}
-					949 = { #Impassable State, Strawberry Mountain 
-						if = {
-							limit = {
-								OR = {
-									is_owned_by = HEA
-									controller = { is_puppet_of = HEA }
-								}
-							}
-							transfer_state_to = BDT 
-						}
-					}
-					950 = { #Impassable State, Rock Creek Butte
-						if = {
-							limit = {
-								OR = {
-									is_owned_by = HEA
-									controller = { is_puppet_of = HEA }
-								}
-							}
-							transfer_state_to = BDT 
-						}
-					}
-					951 = {  #Impassable State, Wehana Toucannon
-						if = {
-							limit = {
-								OR = {
-									is_owned_by = HEA
-									controller = { is_puppet_of = HEA }
-								}
-							}
-							transfer_state_to = BDT 
-						}
-					}
-					952 = { #Impassable State, Wallowa Whitman
-						if = {
-							limit = {
-								OR = {
-									is_owned_by = HEA
-									controller = { is_puppet_of = HEA }
-								}
-							}
-							transfer_state_to = BDT 
-						}
-					}
+					ROOT = { original_tag = KLA }
 				}
 				FROM = {
-					set_politics = { ruling_party = people } #Switch Bone Dancers to Cain-People
+					set_autonomy = {
+					   target = ROOT
+					   autonomous_state = autonomy_convert
+					}
+				}
+			}
+			if = { #BDT
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_oregon_states_to_bdt
+					}
+					ROOT = { original_tag = BDT }
+				}
+				FROM = {
+					set_autonomy = {
+					   target = ROOT
+					   autonomous_state = autonomy_convert
+					}
+				}
+			}
+			#Washington
+			if = { #YAK
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_washington_states_order
+					}
+					ROOT = { original_tag = YAK }
+				}
+				FROM = {
+					set_autonomy = {
+						target = ROOT
+						autonomous_state = autonomy_convert
+					}
 				}
 			}
 		}

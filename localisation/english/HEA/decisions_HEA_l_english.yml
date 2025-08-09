@@ -172,10 +172,20 @@ hea_state_manage_idaho_integrate_north_decision: "Integrate Northern Idaho."
 hea_state_manage_idaho_pacify_dynamic_decision: "§RSuppress§! [FROM.GetNameWithFlag] heretics!"
 
 #Oregon
-bdt_state_manage_oregon_mandate_decision: "Give the §YOregon Mandate§! to §0[BDT.GetNameWithFlag]§!"
-bdt_state_manage_oregon_mandate_decision_tt: "Any §Ycurrent§! and §Yfuture§! states we owned in Oregon will be §Ytransferred§! to §0[BDT.GetNameWithFlag]§!\n\n§RThis is irreversible!§!"
+bdt_state_manage_oregon_mandate_decision: "Give §YThe Order of Oregon§! to §0[BDT.GetNameWithFlag]§!"
+bdt_state_manage_oregon_mandate_decision_tt: "Any §Ycurrent§! and §Yfuture§! states we owned in §YOregon§! will be §Ytransferred§! to §0[BDT.GetNameWithFlag]§!\n\n§RThis is irreversible!§!"
+
+state_manage_oregon_order_creation_decision: "Declare §YThe Order of Oregon§!"
+state_manage_oregon_order_creation_decision_tt: "The lands of §YOregon§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
 
 state_manage_oregon_conquest_dynamic_decision: "§RCrusades§! against [FROM.GetNameWithFlag]"
+
+#Washington
+rot_state_manage_washington_mandate_decision: "Give §YThe Order of Washington§! to §O[ROT.GetNameWithFlag]§!"
+rot_state_manage_washington_mandate_decision_tt: "Any §Ycurrent§! and §Yfuture§! states we owned in §YWashington§! will be §Ytransferred§! to §O[ROT.GetNameWithFlag]§!\n\n§RThis is irreversible!§!"
+
+state_manage_washington_order_creation_decision: "Declare §YThe Order of Washington§!"
+state_manage_washington_order_creation_decision_tt: "The lands of §YWashington§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
 
 #Shared Oregon-Washington:
 state_manage_oregon_washington_border_decision: "Divide the land"

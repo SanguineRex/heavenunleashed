@@ -376,8 +376,17 @@ hea_foreign_relation_dynamic_modifier: "Missionary Missions"
 hea_foreign_relation_idea_0: "Missionary Missions"
 hea_foreign_relation_idea_expand: "Missionary Missions"
 hea_foreign_relation_idea_final: "Missionary Missions"
+hea_foreign_relation_idea_order: "Missionary Missions"
 
-
+###################################
+##Unique Puppets National Spirits##
+###################################
+###Oregon####
+hea_oregon_gilded_wings_idea: "The Gilded Wings"
+hea_oregon_gilded_wings_idea_tt: "§ROur autonomy level cannot be changed!§!"
+###Washington###
+hea_washington_ember_watch_idea: "The Ember Watch"
+hea_washington_ember_watch_idea_tt: "§ROur autonomy level cannot be changed!§!"
 ##########
 ##Fervor##
 ##########

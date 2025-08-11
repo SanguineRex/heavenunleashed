@@ -7,11 +7,14 @@ focus_tree = {
 			tag = HEA
 		}
 	}
-
-	default = no
-######################################################
-	#########Heaven's Gate history#########
-######################################################
+	continuous_focus_position = {
+		x = 2750
+		y = 35
+	}
+###########################
+###Heaven's Gate History###
+###########################
+	#Legacy of Scripture
 	focus = {
 		id = hea_nf_precursers
 		icon = GFX_goal_HEA_focus_precursers
@@ -20,84 +23,53 @@ focus_tree = {
 		y = 0
 
 		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_precursers entered"
-			}
-			country_event = { id = nf_event_hea.1 }
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_precursers exited"
-			}
+			country_event = nf_event_hea.1
 		}
 	}
-
+	#Pilgrims Cometh
 	focus = {
 		id = hea_nf_pilgrims
 		icon = GFX_goal_HEA_focus_pilgrims
 		cost = 7
-		x = 14
+		x = 0
 		y = 1
+		relative_position_id = hea_nf_precursers
 
-		prerequisite = {
-			focus = hea_nf_precursers
-		}
+		prerequisite = { focus = hea_nf_precursers }
 
 		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_pilgrims entered"
-			}
-			country_event = { id = nf_event_hea.2 }
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_pilgrims exited"
-			}
+			country_event = nf_event_hea.2
 		}
 	}
-
+	#Pagan Conversion
 	focus = {
 		id = hea_nf_tribals
 		icon = GFX_goal_HEA_focus_tribals
 		cost = 7
-		x = 14
-		y = 2
+		x = 0
+		y = 1
+		relative_position_id = hea_nf_pilgrims
 
-		prerequisite = {
-			focus = hea_nf_pilgrims
-		}
+		prerequisite = { focus = hea_nf_pilgrims }
 
 		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_tribals entered"
-			}
-			country_event = { id = nf_event_hea.3 }
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_tribals exited"
-			}
+			country_event = nf_event_hea.3
 		}
 	}
-
+	#Innocence Lost
 	focus = {
 		id = hea_nf_innocence_lost
 		icon = GFX_goal_HEA_focus_innocence_lost
 		cost = 7
-		x = 14
-		y = 3
+		x = 0
+		y = 1
+		relative_position_id = hea_nf_tribals
 
-		prerequisite = {
-			focus = hea_nf_tribals
-		}
+		prerequisite = { focus = hea_nf_tribals }
 
 		completion_reward = {
-				if = {
-				limit = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-				}
+			if = {
+				limit = { NOT = { has_dlc = "La Resistance" } }
 				add_political_power = 100
 			}
 			else = {
@@ -106,110 +78,960 @@ focus_tree = {
 					icon = GFX_agency_logo_HEA
 				}
 			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_innocence_lost entered"
+			country_event = nf_event_hea.4
+		}
+	}
+#############################
+###Early Military Focuses####
+#############################
+	#Evolution of the Guard
+	focus = {
+		id = hea_nf_army
+		icon = GFX_goal_HEA_focus_evolution_of_the_guard
+		cost = 30
+		x = -13
+		y = 1
+		relative_position_id = hea_nf_innocence_lost
+
+		prerequisite = { focus = hea_nf_innocence_lost }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.75
+				uses = 1
+				category = cat_land_doctrine
 			}
-			country_event = { id = nf_event_hea.4 }
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_innocence_lost exited"
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				uses = 1
+				category = cat_air_doctrine
 			}
 		}
 	}
-	
-	
+	###Air Branch###
+	#The Race to Heaven
+	focus = {
+		id = hea_nf_air
+		icon = GFX_goal_HEA_focus_race_to_heaven
+		cost = 30
+		x = -2
+		y = 1
+		relative_position_id = hea_nf_army
 
-	###############################################################
-		#########Deciding Heaven's Gate Political Leanings#########
-	###############################################################
-	
+		prerequisite = { focus = hea_nf_army }
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_tech = glider_tech } }
+				set_technology = { glider_tech = 1 }
+			}
+			else = {
+				add_tech_bonus = {
+					name = air_bonus
+					bonus = 0.2
+					uses = 1
+					category = air_equipment_tech_category
+				}
+			}
+			1384 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+				}
+			}
+			air_experience = 25
+		}
+	}
+	#Wing of the Angels
+	focus = {
+		id = hea_nf_air_peasant
+		icon = GFX_goal_HEA_focus_wings_of_the_angels
+		cost = 30
+		x = -1
+		y = 1
+		relative_position_id = hea_nf_air
+
+		prerequisite = { focus = hea_nf_air }
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = fighter_equipment
+				amount = 75
+				producer = HEA
+			}
+		}
+	}
+	#Blessing of the Angels
+	focus = {
+		id = hea_nf_air_knight
+		icon = GFX_goal_HEA_focus_blessing_of_the_angels
+		cost = 30
+		x = 1
+		y = 1
+		relative_position_id = hea_nf_air
+
+		prerequisite = { focus = hea_nf_air }
+
+		completion_reward = {
+			add_ideas = hea_air_knight
+		}
+	}
+	#Ascension Achieved
+	focus = {
+		id = hea_nf_air_1
+		icon = GFX_goal_HEA_focus_ascension_achieved
+		cost = 30
+		x = 0
+		y = 2
+		relative_position_id = hea_nf_air
+
+		prerequisite = {
+			focus = hea_nf_air_peasant
+			focus = hea_nf_air_knight
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_air_doctrine
+			}
+			air_experience = 25
+		}
+	}
+	###Army Branch###
+	#Arming the Clergy
+	focus = {
+		id = hea_nf_army_1
+		icon = GFX_goal_HEA_focus_arming_the_clergy
+		cost = 30
+		x = 2
+		y = 1
+		relative_position_id = hea_nf_army
+
+		prerequisite = { focus = hea_nf_army }
+
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = infantry_weapons_tech_category
+			}
+		}
+	}
+	#Crusader Armies
+	focus = {
+		id = hea_nf_crusaders
+		icon = GFX_goal_HEA_focus_crusader_armies
+		cost = 30
+		x = -1
+		y = 1
+		relative_position_id = hea_nf_army_1
+
+		prerequisite = { focus = hea_nf_army_1 }
+		completion_reward = {
+			add_ideas = hea_crusaders
+		}
+	}
+	#Mandatory Service
+	focus = {
+		id = hea_nf_conscription
+		icon = GFX_goal_HEA_focus_mandatory_service
+		cost = 30
+		x = 1
+		y = 1
+		relative_position_id = hea_nf_army_1
+
+		prerequisite = { focus = hea_nf_army_1 }
+
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						has_idea = volunteer_militia_conscription
+						has_idea = disarmed_nation
+					}
+					
+				}
+				add_ideas = funded_militia_conscription
+			}
+			else_if = {
+				limit = { has_idea = funded_militia_conscription }
+				add_ideas = two_year_conscription
+			}
+			else = {
+				add_political_power = 100
+			}
+		}
+	}
+	#Military Ordos
+	focus = {
+		id = hea_nf_army_2
+		icon = GFX_goal_HEA_focus_military_ordos
+		cost = 30
+		x = 0
+		y = 2
+		relative_position_id = hea_nf_army_1
+
+		prerequisite = {
+			focus = hea_nf_conscription
+			focus = hea_nf_crusaders
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_land_doctrine
+			}
+			army_experience = 25
+		}
+	}
+	###Next Early Army Stage###
+	#Armed Pilgrims
+	focus = {
+		id = hea_nf_missionary_warriors
+		icon = GFX_goal_HEA_focus_armed_pilgrims
+		cost = 30
+		x = 0
+		y = 4
+		relative_position_id = hea_nf_army
+
+		prerequisite = {
+			focus = hea_nf_army_2
+			focus = hea_nf_air_1
+		}
+
+		completion_reward = {
+			add_ideas = hea_general_staff
+		}
+	}
+	#Steam-powered Dreadnoughts
+	focus = {
+		id = hea_nf_machines_of_steam
+		icon = GFX_goal_HEA_focus_steampowered_dreadnaughts
+		cost = 30
+		x = -1
+		y = 1
+		relative_position_id = hea_nf_missionary_warriors
+
+		prerequisite = { focus = hea_nf_missionary_warriors }
+		mutually_exclusive = { focus = hea_nf_men_of_steam }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = hea_nf_machines_of_steam
+				bonus = 0.5
+				ahead_reduction = 2
+				uses = 2
+				category = tank_tech_category
+			}
+		}
+	}
+	#Steam-Power Armor
+	focus = {
+		id = hea_nf_men_of_steam
+		icon = GFX_goal_HEA_focus_steam_power_armor
+		cost = 30
+		x = 1
+		y = 1
+		relative_position_id = hea_nf_missionary_warriors
+
+		prerequisite = { focus = hea_nf_missionary_warriors }
+		mutually_exclusive = { focus = hea_nf_machines_of_steam }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = hea_nf_men_of_steam
+				bonus = 0.5
+				ahead_reduction = 2
+				uses = 2
+				category = power_armor_tech_category
+			}
+		}
+	}
+	#Cleric Generals
+	focus = {
+		id = hea_nf_officer_priests
+		icon = GFX_goal_HEA_focus_cleric_generals
+		cost = 30
+		x = 0
+		y = 2
+		relative_position_id = hea_nf_missionary_warriors
+
+		prerequisite = {
+			focus = hea_nf_machines_of_steam
+			focus = hea_nf_men_of_steam
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_ideas = hea_mobility
+		}
+	}
+############################
+###Early Industry Focuses###
+############################
+	#Enriching the Nucleus
+	focus = {
+		id = hea_the_nucleus
+		icon = GFX_goal_HEA_HEA_building_nucleus
+		cost = 30
+		x = 0
+		y = 1
+		relative_position_id = hea_nf_innocence_lost
+
+		prerequisite = { focus = hea_nf_innocence_lost }
+
+		completion_reward = { #Manually inputing the states to save a little bit of performance cost and prevent Stagleap getting the bonus without adding more unnecessary checks - @Deez
+			18 = { add_extra_state_shared_building_slots = 1 }
+			116 = { add_extra_state_shared_building_slots = 1 }
+			278 = { add_extra_state_shared_building_slots = 1 }
+			1384 = { add_extra_state_shared_building_slots = 1 }
+			198 = { add_extra_state_shared_building_slots = 1 }
+			1385 = { add_extra_state_shared_building_slots = 1 }
+			#Initialize the variables
+			set_variable = { hea_tame_country_resource_energy_var = 0 }
+			set_variable = { hea_tame_country_resource_water_var = 0 }
+			set_variable = { hea_tame_country_resource_metal_var = 0 }
+			set_variable = { hea_tame_country_resource_composites_var = 0 }
+			set_variable = { hea_tame_country_resource_circuitry_var = 0 }
+			set_variable = { hea_tame_country_resource_advanced_var = 0 }
+			set_variable = { hea_tame_army_speed_factor_var = 0 }
+			set_variable = { hea_tame_production_speed_infrastructure_factor_var = 0 }
+			set_variable = { hea_tame_stability_factor_var = 0 }
+			set_variable = { hea_tame_monthly_population_var = 0 }
+			set_variable = { hea_tame_non_core_manpower_var = 0 }
+			set_variable = { hea_tame_industrial_capacity_factory_var = 0 }
+			set_variable = { hea_tame_consumer_goods_factor_var = 0 }
+			set_variable = { hea_tame_global_building_slots_factor_var = 0 }
+			set_variable = { hea_tame_production_speed_buildings_factor_var = 0 }
+			set_variable = { hea_tame_research_speed_factor_var = 0 }
+			set_variable = { hea_tame_war_support_factor_var = 0 }
+			set_variable = { hea_tame_army_morale_factor_var = 0 }
+			set_variable = { hea_tame_breakthrough_factor_var = 0 }
+			set_variable = { hea_tame_conscription_factor_var = 0 }
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = hea_tame_dynamic_modifier
+				}		
+			}
+			custom_effect_tooltip = hea_the_nucleus_tt
+		}
+	}
+
+	##Rivers
+	#Taming the Rivers
+	focus = {
+		id = hea_taming_rivers
+		icon = GFX_goal_HEA_steam_powered_cities
+		cost = 30
+		x = -6
+		y = 1
+		relative_position_id = hea_the_nucleus
+
+		prerequisite = { focus = hea_the_nucleus }
+
+		completion_reward = {
+			add_to_variable = { hea_tame_stability_factor_var = 0.02}
+			add_political_power = 60
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_taming_the_river
+				}
+			}
+		}
+	}
+	#Building Dams
+	focus = {
+		id = hea_dams
+		icon = GFX_goal_HEA_HEA_building_damconstruct
+		cost = 15
+		x = -2
+		y = 1
+		relative_position_id = hea_taming_rivers
+
+		prerequisite = { focus = hea_taming_rivers }
+
+		completion_reward = {
+			add_to_variable = { hea_tame_stability_factor_var = 0.01 }
+			add_to_variable = { hea_tame_country_resource_water_var = 20 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_building_dams
+				}
+			}
+		}
+	}
+	#Using the Dam for energy?
+	focus = {
+		id = hea_repurposing_wattech
+		icon = GFX_goal_HEA_HEA_building_dam
+		cost = 15
+		x = 0
+		y = 1
+		relative_position_id = hea_dams
+
+		prerequisite = { focus = hea_dams }
+
+		completion_reward = {
+			add_to_variable = { hea_tame_stability_factor_var = 0.01 }
+			add_to_variable = { hea_tame_country_resource_energy_var = 20 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_using_dam_for_energy
+				}
+			}
+		}
+	}
+	#Water Mills
+	focus = {
+		id = hea_water_mills
+		icon = GFX_goal_HEA_HEA_building_watermills
+		cost = 30
+		x = 0
+		y = 1
+		relative_position_id = hea_taming_rivers
+
+		prerequisite = { focus = hea_taming_rivers }
+
+		completion_reward = {
+			add_to_variable = { hea_tame_stability_factor_var = 0.02 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_water_mill_focus
+				}
+			}
+			custom_effect_tooltip = hea_river_mills_tt
+		}
+	}
+	#Repairing Old Bridges
+	focus = {
+		id = hea_bridges
+		icon = GFX_goal_HEA_HEA_building_bridge
+		cost = 15
+		x = 2
+		y = 1
+		relative_position_id = hea_taming_rivers
+
+		prerequisite = { focus = hea_taming_rivers }
+
+		completion_reward = {
+			add_to_variable = { hea_tame_stability_factor_var = 0.01 }
+			add_to_variable = { hea_tame_army_speed_factor_var = 0.02 }
+			add_to_variable = { hea_tame_production_speed_infrastructure_factor_var = 0.05 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_reparing_old_bridges
+				}
+			}
+		}
+	}
+	#River Ferries
+	focus = {
+		id = hea_ferries
+		icon = GFX_goal_HEA_building_ferry
+		cost = 15
+		x = 0
+		y = 1
+		relative_position_id = hea_bridges
+
+		prerequisite = { focus = hea_bridges }
+
+		completion_reward = {
+			add_to_variable = { hea_tame_stability_factor_var = 0.01 }
+			add_to_variable = { hea_tame_army_speed_factor_var = 0.03 }
+			add_to_variable = { hea_tame_production_speed_infrastructure_factor_var = 0.05 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_river_ferries
+				}
+			}
+		}
+	}
+	#Steam Barges
+	focus = {
+		id = hea_priest_barges
+		icon = GFX_goal_HEA_HEA_building_steambarge
+		cost = 30
+		x = 0
+		y = 3
+		relative_position_id = hea_taming_rivers
+
+		prerequisite = {
+			focus = hea_ferries
+			focus = hea_repurposing_wattech
+		}
+
+		completion_reward = {
+			18 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					province = 1946
+				}
+			}
+			116 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					province = 7166
+				}
+			}
+			278 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					province = 4361
+				}
+			}
+			add_to_variable = { hea_tame_stability_factor_var = 0.02 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_steam_barges
+				}
+			}
+		}
+	}
+	###Lands
+	#Taming the Lands
+	focus = {
+		id = hea_taming_land
+		icon = GFX_goal_HEA_hea_expand_tunnels
+		cost = 30
+		x = 0
+		y = 1
+		relative_position_id = hea_the_nucleus
+
+		prerequisite = { focus = hea_the_nucleus }
+
+		completion_reward = {
+			add_to_variable = { hea_tame_global_building_slots_factor_var = 0.05 }
+			add_political_power = 60
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_taming_the_land
+				}				
+			}
+		}
+	}
+	#Eternal Spring
+	focus = {
+		id = hea_hothouse
+		icon = GFX_goal_HEA_building_spring
+		cost = 15
+		x = -2
+		y = 1
+		relative_position_id = hea_taming_land
+
+		prerequisite = { focus = hea_taming_land }
+
+		completion_reward = {
+			add_to_variable = { hea_tame_consumer_goods_factor_var = -0.07 }
+			add_to_variable = { hea_tame_monthly_population_var = 0.05 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_eternal_spring
+				}				
+			}
+		}
+	}
+	#Blessed Cooks
+	focus = {
+		id = hea_priestcooks
+		icon = GFX_goal_HEA_building_cooks
+		cost = 15
+		x = 0
+		y = 1
+		relative_position_id = hea_hothouse
+
+		prerequisite = { focus = hea_hothouse }
+
+		completion_reward = {
+			add_to_variable = { hea_tame_consumer_goods_factor_var = -0.03 }
+			add_to_variable = { hea_tame_monthly_population_var = 0.05 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_blessed_cooks
+				}			
+			}
+		}
+	}
+	#Smiths blessed by Steam and the Lord
+	focus = {
+		id = hea_steam_smiths
+		icon = GFX_goal_HEA_building_mines
+		cost = 30
+		x = 0
+		y = 1
+		relative_position_id = hea_taming_land
+
+		prerequisite = { focus = hea_taming_land }
+
+		completion_reward = {
+			add_to_variable = { hea_tame_industrial_capacity_factory_var = 0.05 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_steam_smith_focus
+				}				
+			}
+			custom_effect_tooltip = hea_steam_smiths_tt
+		}
+	}
+	#Preparing for expansion
+	focus = {
+		id = hea_expanding_pipeways
+		icon = GFX_goal_HEA_building_pipe
+		cost = 15
+		x = 2
+		y = 1
+		relative_position_id = hea_taming_land
+
+		prerequisite = { focus = hea_taming_land }
+
+		completion_reward = {
+			add_to_variable = { hea_tame_global_building_slots_factor_var = 0.05 }
+			add_to_variable = { hea_tame_production_speed_buildings_factor_var = 0.02 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_preparing_for_expansion			
+				}
+			}
+		}
+	}
+	#Homes blessed by Steam
+	focus = {
+		id = hea_heated_homes
+		icon = GFX_goal_HEA_building_steamhome
+		cost = 15
+		x = 0
+		y = 1
+		relative_position_id = hea_expanding_pipeways
+
+		prerequisite = { focus = hea_expanding_pipeways }
+
+		completion_reward = {
+			add_to_variable = { hea_tame_global_building_slots_factor_var = 0.05 }
+			add_to_variable = { hea_tame_production_speed_buildings_factor_var = 0.03 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_home_blessed_by_steam
+				}				
+			}
+		}
+	}
+	#Steam Wonderland
+	focus = {
+		id = hea_anewold_gate
+		icon = GFX_goal_HEA_building_steamwonder
+		cost = 30
+		x = 0
+		y = 3
+		relative_position_id = hea_taming_land
+
+		prerequisite = {
+			focus = hea_heated_homes
+			focus = hea_priestcooks
+		}
+
+		completion_reward = {		
+			1385 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			198 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			116 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_to_variable = { hea_tame_consumer_goods_factor_var = -0.05 }
+			add_to_variable = { hea_tame_production_speed_buildings_factor_var = 0.05 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_steam_wonderland
+				}				
+			}
+		}
+	}
+	####Heavens (Mountains)
+	#Taming the Heavens
+	focus = {
+		id = hea_taming_heavens
+		icon = GFX_goal_HEA_hea_taming_heaven
+		cost = 30
+		x = 6
+		y = 1
+		relative_position_id = hea_the_nucleus
+
+		prerequisite = { focus = hea_the_nucleus }
+
+		completion_reward = {
+			add_to_variable = { hea_tame_war_support_factor_var = 0.02 }
+			add_political_power = 60
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_taming_the_heaven
+				}
+			}
+		}
+	}
+	#Astray Alchemists and Hermits
+	focus = {
+		id = hea_lost_scientists
+		icon = GFX_goal_HEA_HEA_building_science
+		cost = 30
+		x = 0
+		y = 1
+		relative_position_id = hea_taming_heavens
+
+		prerequisite = { focus = hea_taming_heavens }
+
+		completion_reward = {
+			add_to_variable = { hea_tame_war_support_factor_var = 0.01 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_alchemists_focus
+				}
+			}
+			custom_effect_tooltip = hea_lost_scientists_tt
+		}
+	}
+	#Michael's Vision
+	focus = {
+		id = hea_mountain_monestaries
+		icon = GFX_goal_HEA_peasantlevy
+		cost = 15
+		x = 2
+		y = 1
+		relative_position_id = hea_taming_heavens
+
+		prerequisite = { focus = hea_taming_heavens }
+
+		completion_reward = {
+			add_to_variable = { hea_tame_war_support_factor_var = 0.01 }
+			add_to_variable = { hea_tame_conscription_factor_var = 0.05 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_michael_vision_soldier_of_prophept
+				}
+			}
+		}
+	}
+	#Soldiers of the Prophet
+	focus = {
+		id = hea_shrines_to_reactor
+		icon = GFX_goal_HEA_knightsofpeasants
+		cost = 15
+		x = 0
+		y = 1
+		relative_position_id = hea_mountain_monestaries
+
+		prerequisite = { focus = hea_mountain_monestaries }
+
+		completion_reward = {
+			add_to_variable = { hea_tame_war_support_factor_var = 0.01 }
+			add_to_variable = { hea_tame_conscription_factor_var = 0.05 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_michael_vision_soldier_of_prophept
+				}
+			}
+		}
+	}
+	#Funding from Heaven
+	focus = {
+		id = hea_barnabus_reactor
+		icon = GFX_goal_HEA_preparingforwar
+		cost = 15
+		x = -2
+		y = 1
+		relative_position_id = hea_taming_heavens
+
+		prerequisite = { focus = hea_taming_heavens }
+
+		completion_reward = {
+			add_to_variable = { hea_tame_army_morale_factor_var = 0.05 }
+			add_to_variable = { hea_tame_conscription_factor_var = 0.02 }
+			add_to_variable = { hea_tame_war_support_factor_var = 0.01 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_funding_from_heaven
+				}
+			}
+		}
+	}
+	#It didn't stop there...
+	focus = {
+		id = hea_hollows_bellow
+		icon = GFX_goal_HEA_warcometh
+		cost = 15
+		x = 0
+		y = 1
+		relative_position_id = hea_barnabus_reactor
+
+		prerequisite = { focus = hea_barnabus_reactor }
+
+		completion_reward = {
+			add_to_variable = { hea_tame_army_morale_factor_var = 0.05 }
+			add_to_variable = { hea_tame_breakthrough_factor_var = 0.05 }
+			add_to_variable = { hea_tame_war_support_factor_var = 0.01 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_it_didnt_stop_there
+				}
+			}
+		}
+	}
+	#Ever closer to Heaven
+	focus = {
+		id = hea_steam_wonderland
+		icon = GFX_goal_HEA_closertoheaven
+		cost = 30
+		x = 0
+		y = 3
+		relative_position_id = hea_taming_heavens
+
+		prerequisite = {
+			focus = hea_shrines_to_reactor
+			focus = hea_hollows_bellow
+		}
+
+		completion_reward = {
+			1385 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			198 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			116 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			add_to_variable = { hea_tame_war_support_factor_var = 0.03 }
+			add_to_variable = { hea_tame_conscription_factor_var = 0.03 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_taming_idea_template
+					add_idea = hea_taming_idea_ever_closer_to_heaven
+				}
+			}
+		}
+	}
+	#Rebirth of the Gate
+	focus = {
+		id = hea_nf_industry_5
+		icon = GFX_goal_HEA_focus_rebirth_of_the_gate
+		cost = 60
+		x = 0
+		y = 5
+		relative_position_id = hea_the_nucleus
+
+		prerequisite = { focus = hea_steam_wonderland }
+		prerequisite = { focus = hea_anewold_gate }
+		prerequisite = { focus = hea_priest_barges }
+
+		completion_reward = {
+			116 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_temp_variable = { development_to_add = 2 }
+				add_development_to_node = yes
+			}
+			swap_ideas = {
+				add_idea = hea_rebirth_steam
+				remove_idea = hea_steam_power
+			}
+		}
+	}
+#############################
+###Early Political Focuses###
+#############################
+	#Memories of Innocence
 	focus = {
 		id = hea_nf_innocence_lost_deal
 		icon = GFX_goal_HEA_focus_memories_of_innocence
 		cost = 30
-		x = 25
-		y = 4
+		x = 11
+		y = 1
+		relative_position_id = hea_nf_innocence_lost
 		
-		prerequisite = {
-			focus = hea_nf_innocence_lost
-		}
-
+		prerequisite = { focus = hea_nf_innocence_lost }
 
 		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_innocence_lost_deal entered"
-			}
-			country_event = { id = nf_event_hea.400 }
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_innocence_lost_deal exited"
-			}
+			country_event = nf_event_hea.400
 		}
 	}
-
-	focus = {
-		id = hea_nf_forgive_sins
-		icon = GFX_goal_HEA_focus_learning_to_forgive
-		cost = 30
-		x = 1
-		y = 1
-		relative_position_id = hea_nf_innocence_lost_deal
-
-		prerequisite = {
-			focus = hea_nf_innocence_lost_deal
-		}
-
-		available = {
-			always = no
-		}
-
-		mutually_exclusive = {
-			focus = hea_nf_vengance
-		}
-
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_forgive_sins entered"
-			}
-			country_event = { id = nf_event_hea.411 }
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_forgive_sins exited"
-			}
-		}
-	}
-
-	focus = {
-		id = hea_nf_fog_of_mercy
-		icon = GFX_goal_HEA_focus_mercy_for_the_wicked
-		cost = 30
-		x = 0
-		y = 1
-		relative_position_id = hea_nf_forgive_sins
-
-		prerequisite = {
-			focus = hea_nf_forgive_sins
-		}
-
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_fog_of_mercy entered"
-			}
-			swap_ideas = {
-				add_idea = hea_innocence_lost_idea_lessend
-				remove_idea = hea_innocence_lost_idea
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_fog_of_mercy exited"
-			}
-		}
-	}
-
+	#An Eye for an Eye - Vengance Path
 	focus = {
 		id = hea_nf_vengance
 		icon = GFX_goal_HEA_focus_an_eye_for_an_eye
@@ -218,28 +1040,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = hea_nf_innocence_lost_deal
 
-		prerequisite = {
-			focus = hea_nf_innocence_lost_deal
-		}
-
-		mutually_exclusive = {
-			focus = hea_nf_forgive_sins
-		}
+		prerequisite = { focus = hea_nf_innocence_lost_deal }
+		mutually_exclusive = { focus = hea_nf_forgive_sins }
 
 		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_vengance entered"
-			}
-			country_event = { id = nf_event_hea.401 }
+			country_event = nf_event_hea.401
 			custom_effect_tooltip = hea_nf_vengance_tt
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_vengance exited"
-			}
 		}
 	}
-
+	#Boiled Alive
 	focus = {
 		id = hea_nf_boilers_of_justice
 		icon = GFX_goal_HEA_focus_boilers_of_justice
@@ -248,30 +1057,55 @@ focus_tree = {
 		y = 1
 		relative_position_id = hea_nf_vengance
 
-		prerequisite = {
-			focus = hea_nf_vengance
-		}
+		prerequisite = { focus = hea_nf_vengance }
 
 		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_boilers_of_justice entered"
-			}
 			add_ideas = hea_boilers_of_justice
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_boilers_of_justice exited"
+		}
+	}
+	#Learning to Forgive - Forgiveness Path
+	focus = {
+		id = hea_nf_forgive_sins
+		icon = GFX_goal_HEA_focus_learning_to_forgive
+		cost = 30
+		x = 1
+		y = 1
+		relative_position_id = hea_nf_innocence_lost_deal
+
+		prerequisite = { focus = hea_nf_innocence_lost_deal }
+		mutually_exclusive = { focus = hea_nf_vengance }
+		available = { always = no } #Disabled due to unfinished content - @Deez
+
+		completion_reward = {
+			country_event = nf_event_hea.411
+		}
+	}
+	#Mercy for the Wicked
+	focus = {
+		id = hea_nf_fog_of_mercy
+		icon = GFX_goal_HEA_focus_mercy_for_the_wicked
+		cost = 30
+		x = 0
+		y = 1
+		relative_position_id = hea_nf_forgive_sins
+
+		prerequisite = { focus = hea_nf_forgive_sins }
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = hea_innocence_lost_idea_lessend
+				remove_idea = hea_innocence_lost_idea
 			}
 		}
 	}
-	
+	#The Great Debate
 	focus = {
 		id = hea_nf_pol_action
 		icon = GFX_goal_HEA_focus_the_great_debate
 		cost = 30
-		x = 1
-		y = 1
-		relative_position_id = hea_nf_boilers_of_justice
+		x = 0
+		y = 3
+		relative_position_id = hea_nf_innocence_lost_deal
 
 		prerequisite = {
 			focus = hea_nf_fog_of_mercy
@@ -279,90 +1113,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_pol_action entered"
-			}	
-			if = {
-			limit = {
-			has_completed_focus = hea_nf_fog_of_mercy 
+			if = { 
+				limit = { has_completed_focus = hea_nf_fog_of_mercy  }
+				country_event = nf_event_hea.412
 			}
-			country_event = { id = nf_event_hea.412 }
-			}
-			
-			else = {
-			country_event = { id = nf_event_hea.402 }
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_pol_action exited"
-			}
+			else = { country_event = nf_event_hea.402 }
 		}
 	}
-
-	focus = {
-		id = hea_nf_embrace_elite
-		icon = GFX_goal_HEA_focus_victory_to_the_clergy
-		cost = 30
-		x = 1
-		y = 1
-		relative_position_id = hea_nf_pol_action
-
-		prerequisite = {
-			focus = hea_nf_pol_action
-		}
-
-		available = {
-
-				has_completed_focus = hea_nf_fog_of_mercy
-
-		}
-
-
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_embrace_elite entered"
-			}
-			swap_ideas = {
-				add_idea = hea_theocratic_elite_good
-				remove_idea = hea_theocratic_elite
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_embrace_elite exited"
-			}
-		}
-	}
-
-	focus = {
-		id = hea_nf_embrace_elite_1
-		icon = GFX_goal_HEA_focus_council_of_christ
-		cost = 30
-		x = 0
-		y = 1
-		relative_position_id = hea_nf_embrace_elite
-
-		prerequisite = {
-			focus = hea_nf_embrace_elite
-		}
-
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_embrace_elite_1 entered"
-			}
-			swap_ideas = {
-				add_idea = hea_theocratic_elite_good_1
-				remove_idea = hea_theocratic_elite_good
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_embrace_elite_1 exited"
-			}
-		}
-	}
-
+	#The Prophet Prevails - Vengance Path
 	focus = {
 		id = hea_nf_reject_elite
 		icon = GFX_goal_HEA_focus_the_prophet_prevails
@@ -371,31 +1129,17 @@ focus_tree = {
 		y = 1
 		relative_position_id = hea_nf_pol_action
 
-		available = {
-			has_completed_focus = hea_nf_boilers_of_justice
-		}
-
-		prerequisite = {
-			focus = hea_nf_pol_action
-		}
-
+		prerequisite = { focus = hea_nf_pol_action }
+		available = { has_completed_focus = hea_nf_boilers_of_justice }
 
 		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_reject_elite entered"
-			}
 			swap_ideas = {
 				add_idea = hea_theocratic_elite_contested
 				remove_idea = hea_theocratic_elite
 			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_reject_elite exited"
-			}
 		}
 	}
-
+	#The Archangel Rises
 	focus = {
 		id = hea_nf_reject_elite_1
 		icon = GFX_goal_HEA_focus_archangel_rises
@@ -404,34 +1148,61 @@ focus_tree = {
 		y = 1
 		relative_position_id = hea_nf_reject_elite
 
-		prerequisite = {
-			focus = hea_nf_reject_elite
-		}
+		prerequisite = { focus = hea_nf_reject_elite }
 
 		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_reject_elite_1 entered"
-			}
 			add_country_leader_trait = HEA_one_prophet_leader_trait
 			swap_ideas = {
 				add_idea = hea_theocratic_elite_marginalized
 				remove_idea = hea_theocratic_elite_contested
 			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_reject_elite_1 exited"
+		}
+	}
+	#Victory to the Clergy - Forgiveness Path
+	focus = {
+		id = hea_nf_embrace_elite
+		icon = GFX_goal_HEA_focus_victory_to_the_clergy
+		cost = 30
+		x = 1
+		y = 1
+		relative_position_id = hea_nf_pol_action
+
+		prerequisite = { focus = hea_nf_pol_action }
+		available = { has_completed_focus = hea_nf_fog_of_mercy }
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = hea_theocratic_elite_good
+				remove_idea = hea_theocratic_elite
 			}
 		}
 	}
+	#Council of Christ
+	focus = {
+		id = hea_nf_embrace_elite_1
+		icon = GFX_goal_HEA_focus_council_of_christ
+		cost = 30
+		x = 0
+		y = 1
+		relative_position_id = hea_nf_embrace_elite
 
+		prerequisite = { focus = hea_nf_embrace_elite }
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = hea_theocratic_elite_good_1
+				remove_idea = hea_theocratic_elite_good
+			}
+		}
+	}
+	#Religious Evolution
 	focus = {
 		id = hea_nf_consolidate_pol
 		icon = GFX_goal_HEA_focus_political_action
 		cost = 30
-		x = 1
-		y = 1
-		relative_position_id = hea_nf_reject_elite_1
+		x = 0
+		y = 3
+		relative_position_id = hea_nf_pol_action
 
 		prerequisite = {
 			focus = hea_nf_reject_elite_1
@@ -439,19 +1210,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_consolidate_pol entered"
-			}
 			remove_ideas = hea_divided_leadership
-			add_political_power = 50
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_consolidate_pol exited"
-			}
 		}
 	}
-
+	#The Billowing Cathedral
 	focus = {
 		id = hea_nf_grand_cathedral
 		icon = GFX_goal_HEA_focus_billowing_cathedral
@@ -460,49 +1222,27 @@ focus_tree = {
 		y = 1
 		relative_position_id = hea_nf_consolidate_pol
 
-		prerequisite = {
-			focus = hea_nf_consolidate_pol
-		}
+		prerequisite = { focus = hea_nf_consolidate_pol }
 
 		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_grand_cathedral entered"
-			}
 			add_ideas = hea_grand_cathedral
-
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_grand_cathedral exited"
-			}
 		}
 	}
-
-	#############################################
-	############Heavens' Gate's Future#########
-	#############################################
-
+######################
+###Mid Game Focuses###
+######################
+	#A New Age
 	focus = {
 		id = hea_nf_age_of_steam
 		icon = GFX_goal_HEA_focus_a_new_age
 		cost = 60
 		x = 14
 		y = 11
-		prerequisite = {
-			focus = hea_nf_consolidate_pol
-		}
-		prerequisite = {
-			focus = hea_nf_officer_priests
-		}
-			prerequisite = {
-			focus = hea_nf_industry_5
-		}
+		prerequisite = { focus = hea_nf_consolidate_pol }
+		prerequisite = { focus = hea_nf_officer_priests }
+		prerequisite = { focus = hea_nf_industry_5 }
 
 		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_age_of_steam entered"
-			}
 			swap_ideas = {
 				add_idea = hea_age_of_steam_idea
 				remove_idea = hea_rebirth_steam
@@ -535,19 +1275,13 @@ focus_tree = {
 					add_to_variable = { var = hea_fervor_stability_factor_var value = 0.1 } #10% stability
 					set_variable = { var = hea_fervor_resistance_target_var value = -0.15 } #Resistance target reduced by 15%
 					set_variable = { var = hea_fervor_resistance_growth_var value = -0.2 } #Resistance growth reduced by 20%
-					#effect_tooltip = { #Faking the 10% war support gain during wartime
-					#	add_ideas = hea_fervor_idea_wartime_0
-					#}
 				}
 				activate_mission = hea_fervor_initial_warning
 				custom_effect_tooltip = hea_nf_age_of_steam_fervor_tt
 			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_age_of_steam exited"
-			}
 		}
 	}
+	#A Culture of War?
 	focus = {
 		id = hea_nf_addres_militarism
 		icon = GFX_goal_HEA_focus_addres_militarism
@@ -555,106 +1289,71 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = hea_nf_age_of_steam
-		prerequisite = {
-			focus = hea_nf_age_of_steam
-		}
+
+		prerequisite = { focus = hea_nf_age_of_steam }
+
 		will_lead_to_war_with = HGH
-		bypass = {
-			#NOT = { country_exists = HGH }
-			HGH = {
-				all_core_land_owned_by_prev_sphere = yes
-			}
-		}
+		bypass = { HGH = { all_core_land_owned_by_prev_sphere = yes } }
 		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_addres_militarism entered"
-			}
-			#add_political_power = 75
 			#country_event = { id = nf_event_hea.100 }
 			HGH = {
-				ROOT = {
-					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
-				}
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_addres_militarism exited"
+				ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes }
 			}
 		}
 	}
-					#############Heaven's Light, Nation of Crusaders#####################
+########################################
+###Main 10th Crusade - Vengance Path####
+########################################
+	#Embracing violence
 	focus = {
 		id = hea_nf_embrace_militarism
 		icon = GFX_goal_HEA_focus_embracing_violence
 		cost = 30
 		x = -1
-		y = 2
-		relative_position_id = hea_nf_age_of_steam
+		y = 1
+		relative_position_id = hea_nf_addres_militarism
 
-		prerequisite = {
-			focus = hea_nf_addres_militarism
-		}
-		mutually_exclusive = {
-			focus = hea_nf_fight_militarism
-		}
+		prerequisite = { focus = hea_nf_addres_militarism }
+		mutually_exclusive = { focus = hea_nf_fight_militarism }
 
 		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_embrace_militarism entered"
-			}
 			swap_ideas = {
 				add_idea = hea_rampant_militarism_1
 				remove_idea = hea_rampant_militarism
 			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_embrace_militarism exited"
-			}
 		}
 	}
-
+	#The Tenth Crusade
 	focus = {
 		id = hea_nf_embrace_militarism_1
 		icon = GFX_goal_HEA_focus_declaration_of_crusade
 		cost = 30
-		x = -1
-		y = 3
-		relative_position_id = hea_nf_age_of_steam
-		prerequisite = {
-			focus = hea_nf_embrace_militarism
-		}
+		x = 0
+		y = 1
+		relative_position_id = hea_nf_embrace_militarism
+
+		prerequisite = { focus = hea_nf_embrace_militarism }
 
 		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_embrace_militarism_1 entered"
-			}
 			swap_ideas = {
 				add_idea = hea_rampant_militarism_2
 				remove_idea = hea_rampant_militarism_1
 			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_embrace_militarism_1 exited"
-			}
 		}
 	}
-	#######################
-	##The Tenth Crusade!!##
-	#######################
+#####################
+##The Tenth Crusade##
+#####################
+	#Proclaiming Michael's Crusade
 	focus = {
-		id = hea_michaels_crusade #Proclaiming Michael's Crusade
+		id = hea_michaels_crusade 
 		icon = GFX_goal_HEA_michaels_crusade
 		cost = 30
-		x = -6
-		y = 4
-		relative_position_id = hea_nf_age_of_steam
+		x = -5
+		y = 1
+		relative_position_id = hea_nf_embrace_militarism_1
 
-		prerequisite = {
-			focus = hea_nf_embrace_militarism_1
-		}
+		prerequisite = { focus = hea_nf_embrace_militarism_1 }
 
 		completion_reward = {	
 			set_country_flag = HEA_crusader_state
@@ -672,7 +1371,7 @@ focus_tree = {
 				add = HEA_archangel_leader_trait
 			}
 			hidden_effect = {
-				news_event = { id = nf_event_hea.300 }
+				news_event = nf_event_hea.300
 				set_country_leader_description = {
 					ideology = ruler
 					desc = ANGEL_MICHAEL_DESC
@@ -684,18 +1383,16 @@ focus_tree = {
 			}
 		}
 	}
-
+	#Trees and Faithless
 	focus = {
-		id = hea_trees_and_faithless #Trees and Faithless
+		id = hea_trees_and_faithless 
 		icon = GFX_goal_HEA_hea_core_lon
 		cost = 30
 		x = -3
 		y = 1
 		relative_position_id = hea_michaels_crusade
 
-		prerequisite = {
-			focus = hea_michaels_crusade
-		}
+		prerequisite = { focus = hea_michaels_crusade }
 
 		bypass = {
 			ROS = { all_core_land_owned_by_prev_sphere = yes }
@@ -710,18 +1407,16 @@ focus_tree = {
 			custom_effect_tooltip = hea_trees_and_faithless_tt
 		}
 	}		
-
+	#Heretics and Failed Conquests
 	focus = {
-		id = hea_savages_and_heretics #Heretics and Failed Conquests
+		id = hea_savages_and_heretics 
 		icon = GFX_goal_HEA_hea_core_mur
 		cost = 30
 		x = 3
 		y = 1
 		relative_position_id = hea_michaels_crusade
 
-		prerequisite = {
-			focus = hea_michaels_crusade
-		}
+		prerequisite = { focus = hea_michaels_crusade }
 
 		bypass = {
 			MUR = { all_core_land_owned_by_prev_sphere = yes }
@@ -736,43 +1431,33 @@ focus_tree = {
 			custom_effect_tooltip = hea_savages_and_heretics_tt
 		}
 	}
-
+	#Embassy of Christ
 	focus = {
-		id = hea_nf_foreign_ministryA #Embassy of Christ
+		id = hea_nf_foreign_ministryA 
 		icon = GFX_goal_HEA_focus_embassy_of_christ
 		cost = 60
 		x = 0
 		y = 2
 		relative_position_id = hea_michaels_crusade
 
-		prerequisite = { 
-			focus = hea_michaels_crusade 
-		}
+		prerequisite = {  focus = hea_michaels_crusade }
 
 		completion_reward = {
-			#set_variable = { coring_cost_country_factor = -0.25 }
-			#custom_effect_tooltip = bdt_25_percent_core_cost_reduction_tt
 			custom_effect_tooltip = hea_nf_foreign_ministryA_tt
 		}
 	}
+	#Claiming New Jerusalem
 	focus = {
-		id = hea_target_canaan #Claiming New Jerusalem
+		id = hea_target_canaan 
 		icon = GFX_goal_HEA_hea_crusade_ncn
 		cost = 20
 		x = 0
-		y = 3
-		relative_position_id = hea_michaels_crusade
+		y = 1
+		relative_position_id = hea_nf_foreign_ministryA
 
-		prerequisite = {
-			focus = hea_nf_foreign_ministryA
-		}
-		available = {
-			ANO = { all_core_land_owned_by_prev_sphere = yes } #This is needed to guarantee the player will border NCN for a proper land invasion - @Deez
-		}
-
-		bypass = {
-			NCN = { all_core_land_owned_by_prev_sphere = yes }
-		}
+		prerequisite = { focus = hea_nf_foreign_ministryA }
+		available = { ANO = { all_core_land_owned_by_prev_sphere = yes } } #This is needed to guarantee the player will border NCN for a proper land invasion - @Deez
+		bypass = { NCN = { all_core_land_owned_by_prev_sphere = yes } }
 		
 		will_lead_to_war_with = NCN
 		completion_reward = {
@@ -781,27 +1466,24 @@ focus_tree = {
 			}
 		}
 	}
+	#New Canaan's Pets
 	focus = {
-		id = hea_target_canaans_pets #New Canaan's Pets
+		id = hea_target_canaans_pets 
 		icon = GFX_goal_HEA_hea_crusade_pets
 		cost = 20
 		x = -1
-		y = 4
-		relative_position_id = hea_michaels_crusade
+		y = 1
+		relative_position_id = hea_target_canaan
 
-		prerequisite = {
-			focus = hea_target_canaan
-		}
-		available = {
-			NCN = { all_core_land_owned_by_prev_sphere = yes }
-		}
-
+		prerequisite = { focus = hea_target_canaan }
+		available = { NCN = { all_core_land_owned_by_prev_sphere = yes } }
 		bypass = {
 			CRZ = { all_core_land_owned_by_prev_sphere = yes }
 			TAR = { all_core_land_owned_by_prev_sphere = yes }
 			UIN = { all_core_land_owned_by_prev_sphere = yes }
 			SOR = { all_core_land_owned_by_prev_sphere = yes }
 			DEA = { all_core_land_owned_by_prev_sphere = yes }
+			LON = { all_core_land_owned_by_prev_sphere = yes }
 		}
 		
 		will_lead_to_war_with = CRZ
@@ -809,29 +1491,27 @@ focus_tree = {
 		will_lead_to_war_with = UIN
 		will_lead_to_war_with = SOR
 		will_lead_to_war_with = DEA
+		will_lead_to_war_with = LON
 		completion_reward = {
 			CRZ = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
 			TAR = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
 			UIN = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
 			SOR = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
 			DEA = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
+			LON = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
 		}
 	}
+	#Road Cults
 	focus = {
-		id = hea_target_tribal_cults #Road Cults
+		id = hea_target_tribal_cults 
 		icon = GFX_goal_HEA_hea_crusade_eht
 		cost = 20
 		x = 1
-		y = 4
-		relative_position_id = hea_michaels_crusade
+		y = 1
+		relative_position_id = hea_target_canaan
 
-		prerequisite = {
-			focus = hea_target_canaan
-		}
-		available = {
-			NCN = { all_core_land_owned_by_prev_sphere = yes }
-		}
-
+		prerequisite = { focus = hea_target_canaan }
+		available = { NCN = { all_core_land_owned_by_prev_sphere = yes } }
 		bypass = {
 			SKY = { all_core_land_owned_by_prev_sphere = yes }
 			WHT = { all_core_land_owned_by_prev_sphere = yes }
@@ -847,13 +1527,14 @@ focus_tree = {
 			EHT = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
 		}
 	}
+	#Archangel Michael
 	focus = {
-		id = hea_archangel_michael #Archangel Michael
+		id = hea_archangel_michael 
 		icon = GFX_goal_HEA_hea_archangel_michael
 		cost = 45
 		x = 0
-		y = 5
-		relative_position_id = hea_michaels_crusade
+		y = 2
+		relative_position_id = hea_target_canaan
 
 		prerequisite = { focus = hea_target_tribal_cults }
 		prerequisite = { focus = hea_target_canaans_pets }
@@ -864,6 +1545,7 @@ focus_tree = {
 			UIN = { all_core_land_owned_by_prev_sphere = yes }
 			SOR = { all_core_land_owned_by_prev_sphere = yes }
 			DEA = { all_core_land_owned_by_prev_sphere = yes }
+			LON = { all_core_land_owned_by_prev_sphere = yes }
 			SKY = { all_core_land_owned_by_prev_sphere = yes }
 			WHT = { all_core_land_owned_by_prev_sphere = yes }
 			EHT = { all_core_land_owned_by_prev_sphere = yes }
@@ -886,18 +1568,16 @@ focus_tree = {
 			}
 		}
 	}
-
+	#Traitors to the Faith
 	focus = {
-		id = hea_vault_tec_calling #Traitors to the Faith
+		id = hea_vault_tec_calling 
 		icon = GFX_goal_HEA_hea_crusader_boy
 		cost = 20
 		x = -4
-		y = 6
-		relative_position_id = hea_michaels_crusade
+		y = 1
+		relative_position_id = hea_archangel_michael
 
-		prerequisite = {
-			focus = hea_archangel_michael
-		}
+		prerequisite = { focus = hea_archangel_michael }
 		available = {
 			OR = {
 				VLT = { all_core_land_owned_by_prev_sphere = yes }
@@ -912,18 +1592,16 @@ focus_tree = {
 			add_ideas = hea_vault_tec
 		}
 	}
-
+	#Cities of Sin
 	focus = {
-		id = hea_cities_of_sin #Cities of Sin
+		id = hea_cities_of_sin 
 		icon = GFX_goal_HEA_hea_city_of_sin
 		cost = 20
 		x = -2
-		y = 6
-		relative_position_id = hea_michaels_crusade
+		y = 1
+		relative_position_id = hea_archangel_michael
 
-		prerequisite = {
-			focus = hea_archangel_michael
-		}
+		prerequisite = { focus = hea_archangel_michael }
 		available = {
 			OR = {
 				TDN = { all_core_land_owned_by_prev_sphere = yes }
@@ -936,17 +1614,16 @@ focus_tree = {
 			add_ideas = hea_medical_sin
 		}
 	}
-
+	#True Crusaders
 	focus = {
-		id = hea_true_crusaders #True Crusaders
+		id = hea_true_crusaders 
 		icon = GFX_goal_HEA_hea_true_crusaders
 		cost = 20
 		x = 0
-		y = 6
-		relative_position_id = hea_michaels_crusade
-		prerequisite = {
-			focus = hea_archangel_michael
-		}
+		y = 1
+		relative_position_id = hea_archangel_michael
+		prerequisite = { focus = hea_archangel_michael }
+
 		completion_reward = {
 			swap_ideas = {
 				add_idea = hea_rampant_militarism_3
@@ -954,18 +1631,16 @@ focus_tree = {
 			}
 		}
 	}
-
+	#Heretics and Savages
 	focus = {
-		id = hea_mexico_heretics #Heretics and Savages
+		id = hea_mexico_heretics 
 		icon = GFX_goal_HEA_hea_mexico_heretics
 		cost = 20
 		x = 2
-		y = 6
-		relative_position_id = hea_michaels_crusade
+		y = 1
+		relative_position_id = hea_archangel_michael
 
-		prerequisite = {
-			focus = hea_archangel_michael
-		}
+		prerequisite = { focus = hea_archangel_michael }
 		available = {
 			OR = {
 				ATE = { all_core_land_owned_by_prev_sphere = yes }
@@ -978,102 +1653,80 @@ focus_tree = {
 			add_ideas = hea_aztec_techniques
 		}
 	}
-
+	#Charge onwards, to Colorado
 	focus = {
-		id = hea_claiming_colorado #Charge onwards, to Colorado
+		id = hea_claiming_colorado 
 		icon = GFX_goal_HEA_hea_charging_colorado
 		cost = 20
 		x = 4
-		y = 6
-		relative_position_id = hea_michaels_crusade
+		y = 1
+		relative_position_id = hea_archangel_michael
 
-		prerequisite = {
-			focus = hea_archangel_michael
-		}
-		available = {
-			HAN = { all_core_land_owned_by_prev_sphere = yes }
-		}
+		prerequisite = { focus = hea_archangel_michael }
+		available = { HAN = { all_core_land_owned_by_prev_sphere = yes } }
 		
 		completion_reward = {
 			country_event = nf_event_hea.525
 		}
 	}
-
+	#False Goddess
 	focus = {
-		id = hea_false_gods #False Goddess
+		id = hea_false_gods 
 		icon = GFX_goal_HEA_hea_false_gods
 		cost = 20
 		x = -3
-		y = 7
-		relative_position_id = hea_michaels_crusade
+		y = 2
+		relative_position_id = hea_archangel_michael
 
-		prerequisite = {
-			focus = hea_archangel_michael
-		}
-		available = {
-			TTM = { all_core_land_owned_by_prev_sphere = yes }
-		}
+		prerequisite = { focus = hea_archangel_michael }
+		available = { TTM = { all_core_land_owned_by_prev_sphere = yes } }
 		
 		completion_reward = {
 			add_ideas = hea_cursed_knowledge
 		}
 	}
-
+	#A God that bleeds?
 	focus = {
-		id = hea_war_god #A God that bleeds?
+		id = hea_war_god 
 		icon = GFX_goal_HEA_hea_war_god
 		cost = 20
 		x = -1
-		y = 7
-		relative_position_id = hea_michaels_crusade
-		available = {
-			CES = { all_core_land_owned_by_prev_sphere = yes }
-		}
-		prerequisite = {
-			focus = hea_archangel_michael
-		}
+		y = 2
+		relative_position_id = hea_archangel_michael
+
+		prerequisite = { focus = hea_archangel_michael }
+		available = { CES = { all_core_land_owned_by_prev_sphere = yes } }
+		
 		completion_reward = {
 			add_ideas = hea_dead_mars
 		}
 	}
-
+	#The two-headed Bear
 	focus = {
-		id = hea_tackling_the_bear #The two-headed Bear
+		id = hea_tackling_the_bear 
 		icon = GFX_goal_HEA_hea_the_bear
 		cost = 20
 		x = 1
-		y = 7
-		relative_position_id = hea_michaels_crusade
+		y = 2
+		relative_position_id = hea_archangel_michael
 
-		prerequisite = {
-			focus = hea_archangel_michael
-		}
-		available = {
-			NCR = { all_core_land_owned_by_prev_sphere = yes }
-		}
+		prerequisite = { focus = hea_archangel_michael }
+		available = { NCR = { all_core_land_owned_by_prev_sphere = yes } }
 		
 		completion_reward = {
 			add_ideas = hea_two_headed_bear
-			#HEA = { #I disabled this cause it felt out of place - @Deez
-			#	add_state_core = 543
-			#	add_state_core = 141
-			#	add_state_core = 548
-			#	add_state_core = 605
-			#}
 		}
 	}
-
+	#Lone Star's Fall
 	focus = {
-		id = hea_lone_star_shines_no_longer #Lone Star's Fall
+		id = hea_lone_star_shines_no_longer 
 		icon = GFX_goal_HEA_hea_lone_star
 		cost = 20
 		x = 3
-		y = 7
-		relative_position_id = hea_michaels_crusade
+		y = 2
+		relative_position_id = hea_archangel_michael
 
-		prerequisite = {
-			focus = hea_archangel_michael
-		}
+		prerequisite = { focus = hea_archangel_michael }
 		available = {
 			OR = {
 				LNS = { all_core_land_owned_by_prev_sphere = yes }
@@ -1085,18 +1738,16 @@ focus_tree = {
 			add_ideas = hea_bigger_tex
 		}
 	}
-
+	#The Frozen North
 	focus = {
-		id = hea_frozen_north #The Frozen North
+		id = hea_frozen_north 
 		icon = GFX_goal_HEA_hea_the_north
 		cost = 20
 		x = -2
-		y = 8
-		relative_position_id = hea_michaels_crusade
+		y = 3
+		relative_position_id = hea_archangel_michael
 
-		prerequisite = {
-			focus = hea_archangel_michael
-		}
+		prerequisite = { focus = hea_archangel_michael }
 		available = {
 			OR = {
 				MTC = { all_core_land_owned_by_prev_sphere = yes }
@@ -1108,18 +1759,16 @@ focus_tree = {
 			add_ideas = hea_frozen_crusaders
 		}
 	}
-
+	#Old World Failures
 	focus = {
-		id = hea_old_world_failures #Old World Failures
+		id = hea_old_world_failures 
 		icon = GFX_goal_HEA_hea_old_world_failures
 		cost = 20
 		x = 0
-		y = 8
-		relative_position_id = hea_michaels_crusade
+		y = 3
+		relative_position_id = hea_archangel_michael
 
-		prerequisite = {
-			focus = hea_archangel_michael
-		}
+		prerequisite = { focus = hea_archangel_michael }
 		available = {
 			OR = {
 				MCA = { all_core_land_owned_by_prev_sphere = yes }
@@ -1130,7 +1779,6 @@ focus_tree = {
 				MOJ = { all_core_land_owned_by_prev_sphere = yes }
 				MXC = { all_core_land_owned_by_prev_sphere = yes }
 				MNC = { all_core_land_owned_by_prev_sphere = yes }
-				#ACH = { all_core_land_owned_by_prev_sphere = yes } #Disabled due Alamo Chapter being a dynamic tag
 			}
 		}
 		
@@ -1138,34 +1786,30 @@ focus_tree = {
 			add_ideas = HEA_old_world_failures
 		}
 	}
-
+	#The Chained Witches
 	focus = {
-		id = hea_the_chained_witches #The Chained Witches
+		id = hea_the_chained_witches 
 		icon = GFX_goal_HEA_hea_burning_witch
 		cost = 20
 		x = 2
-		y = 8
-		relative_position_id = hea_michaels_crusade
+		y = 3
+		relative_position_id = hea_archangel_michael
 
-		prerequisite = {
-			focus = hea_archangel_michael
-		}
-		available = {
-			CHC = { all_core_land_owned_by_prev_sphere = yes }
-		}
+		prerequisite = { focus = hea_archangel_michael }
+		available = { CHC = { all_core_land_owned_by_prev_sphere = yes } }
 
 		completion_reward = {
 			country_event = nf_event_hea.890
 		}
 	}
-	
+	#The Lord's Sword
 	focus = { 
-		id = hea_right_hand_of_god #The Lord's Sword
+		id = hea_right_hand_of_god 
 		icon = GFX_goal_HEA_hea_sword_of_god
 		cost = 60
 		x = 0
-		y = 10
-		relative_position_id = hea_michaels_crusade
+		y = 5
+		relative_position_id = hea_archangel_michael
 
 		prerequisite = { focus = hea_false_gods }
 		prerequisite = { focus = hea_frozen_north }
@@ -1186,106 +1830,347 @@ focus_tree = {
 			}
 		}
 	}
-	
-	#############################################
-	####Bastion to the Flock!!!##################
-	#############################################
+#########################################
+##Monsters of the Wastes-Vengeance Path##
+#########################################
+	##Start
+	#A Terrible Land
+	focus = {
+		id = hea_monsters_of_the_wastes 
+		icon = GFX_goal_HEA_hea_terrible_world
+		cost = 60
+		x = 1
+		y = 1
+		relative_position_id = hea_nf_embrace_militarism_1
+
+		allow_branch = { has_country_flag = hea_vengance_path }
+		prerequisite = { focus = hea_nf_embrace_militarism_1 }
+		available = { has_completed_focus = hea_michaels_crusade }
+
+		completion_reward = {
+			add_ideas = HEA_wardens_of_humanity1
+			hidden_effect = {
+				set_variable = { hea_monsters_ghouls = 0 }
+				set_variable = { hea_monsters_mutants = 0 }
+				set_variable = { hea_monsters_mirelurks = 0 }
+				set_variable = { hea_monsters_robots = 0 }
+				set_variable = { hea_monsters_communists = 0 }
+			}
+			custom_effect_tooltip = hea_monsters_of_the_wastes_tt
+		}
+	}
+	#The Dead are Walking - Ghouls
+	focus = {
+		id = hea_the_dead_walk 
+		icon = GFX_goal_HEA_hea_dead_walking
+		cost = 20
+		x = 0
+		y = 1
+		relative_position_id = hea_monsters_of_the_wastes
+
+		prerequisite = { focus = hea_monsters_of_the_wastes }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = hea_the_dead_walk_trig_tt
+				check_variable = {
+					hea_monsters_ghouls > 1
+				}
+			}
+			has_war = no
+		}
+		
+		completion_reward = {
+			add_to_variable = { hea_fervor_supply_consumption_factor_var = -0.03}
+			add_to_variable = { hea_fervor_attrition_var = -0.03 }
+			add_to_variable = { hea_fervor_loc_var = 1 }
+			add_to_variable = { hea_fervor_stability_factor_var = -0.05 } #-5% stability
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_template
+					add_idea = hea_fervor_idea_ghoul_focus
+				}
+			}
+			custom_effect_tooltip = hea_the_dead_walk_tt
+		}
+	}
+	#Cain's Empire - Washington Brotherhood
+	focus = {
+		id = hea_cains_empire 
+		icon = GFX_goal_HEA_hea_immortal
+		cost = 20
+		x = 0
+		y = 1
+		relative_position_id = hea_the_dead_walk
+
+		prerequisite = { focus = hea_monsters_of_the_wastes }
+		available = {
+			WBH = { all_core_land_owned_by_prev_sphere = yes }
+			has_war = no
+		}
+		
+		completion_reward = {
+			add_to_variable = { hea_fervor_army_org_factor_var = 0.1 }
+			add_to_variable = { hea_fervor_loc_var = 1 }
+			add_to_variable = { hea_fervor_stability_factor_var = -0.05 } #-5% stability
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_template
+					add_idea = hea_fervor_idea_cain_focus
+				}				
+			}
+			custom_effect_tooltip = hea_cains_empire_tt
+			hidden_effect = {
+				WBH = { every_core_state = { add_manpower = -5000 } }
+			}
+		}
+	}
+	#Horde of Nephilim - Mutants
+	focus = {
+		id = hea_nephilim_horde 
+		icon = GFX_goal_HEA_hea_nephilim
+		cost = 20
+		x = 0
+		y = 1
+		relative_position_id = hea_cains_empire
+
+		prerequisite = { focus = hea_monsters_of_the_wastes }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = hea_nephilim_horde_trig_tt
+				check_variable = {
+					hea_monsters_mutants > 1
+				}
+			}
+			has_war = no
+		}
+		
+		completion_reward = {
+			add_to_variable = { hea_fervor_army_attack_factor_var = 0.05 }
+			add_to_variable = { hea_fervor_loc_var = 1 }
+			add_to_variable = { hea_fervor_stability_factor_var = -0.05 } #-5% stability
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_template
+					add_idea = hea_fervor_idea_mutant_focus
+				}			
+			}
+			custom_effect_tooltip = hea_nephilim_horde_tt
+		}
+	}
+	#Leviathans dwelling in the Coast - Mirelurks
+	focus = {
+		id = hea_leviathans_of_the_north
+		icon = GFX_goal_HEA_hea_leviathans
+		cost = 20
+		x = 0
+		y = 1
+		relative_position_id = hea_nephilim_horde
+
+		prerequisite = { focus = hea_monsters_of_the_wastes }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = hea_leviathans_of_the_north_trigg_tt
+				check_variable = {
+					hea_monsters_mirelurks > 0
+				}
+			}
+			has_war = no
+		}
+
+		completion_reward = {
+			add_to_variable = { hea_fervor_army_morale_factor_var = 0.05 }
+			add_to_variable = { hea_fervor_loc_var = 1 }
+			add_to_variable = { hea_fervor_stability_factor_var = -0.05 } #-5% stability
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_template
+					add_idea = hea_fervor_idea_leviathan_focus
+				}
+			}
+			custom_effect_tooltip = hea_leviathans_of_the_north_tt
+		}
+	}
+	#Steel Puppets - Robots
+	focus = {
+		id = hea_steel_puppets
+		icon = GFX_goal_HEA_hea_steel_menace
+		cost = 20
+		x = 0
+		y = 1
+		relative_position_id = hea_leviathans_of_the_north
+
+		prerequisite = { focus = hea_monsters_of_the_wastes }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = hea_steel_puppets_trigg_tt
+				check_variable = {
+					hea_monsters_robots > 1
+				}
+			}
+			has_war = no
+		}
+		
+		completion_reward = {
+			add_to_variable = { hea_fervor_breakthrough_factor_var = 0.05 }
+			add_to_variable = { hea_fervor_loc_var = 1 }
+			add_to_variable = { hea_fervor_stability_factor_var = -0.05 } #-5% stability
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_template
+					add_idea = hea_fervor_idea_steel_focus
+				}
+			}
+			custom_effect_tooltip = hea_steel_puppets_tt
+		}
+	}
+	#The Red Devils - Communists
+	focus = {
+		id = hea_red_devils_of_the_north 
+		icon = GFX_goal_HEA_hea_red_devil
+		cost = 20
+		x = 0
+		y = 1
+		relative_position_id = hea_steel_puppets
+
+		prerequisite = { focus = hea_monsters_of_the_wastes }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = hea_red_devils_of_the_north_trigg_tt
+				check_variable = {
+					hea_monsters_communists > 0
+				}
+			}
+			has_war = no
+		}
+
+		completion_reward = {
+			add_to_variable = { hea_fervor_stability_factor_var = 0.1 }
+			add_to_variable = { hea_fervor_loc_var = 1 }
+			add_to_variable = { hea_fervor_stability_factor_var = -0.05 } #-5% stability
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_template
+					add_idea = hea_fervor_idea_red_focus
+				}				
+			}
+			custom_effect_tooltip = hea_red_devils_of_the_north_tt
+		}
+	}
+	##End
+	#Triumph over the monsters...
+	focus = {
+		id = hea_triumphant_nation
+		icon = GFX_goal_HEA_hea_humanity_protected
+		cost = 30
+		x = 0
+		y = 1
+		relative_position_id = hea_red_devils_of_the_north
+
+		prerequisite = { focus = hea_the_dead_walk }
+		prerequisite = { focus = hea_cains_empire }
+		prerequisite = { focus = hea_nephilim_horde }
+		prerequisite = { focus = hea_leviathans_of_the_north }
+		prerequisite = { focus = hea_steel_puppets }
+		prerequisite = { focus = hea_red_devils_of_the_north }	
+		available = { has_war = no }
+
+		completion_reward = {
+			swap_ideas = { 
+				remove_idea = HEA_wardens_of_humanity1 
+				add_idea = HEA_wardens_of_humanity2
+			}
+		}
+	}	
+######################
+###Forgiveness Path###
+######################
+	#The Rise of Mercy
 	focus = {
 		id = hea_nf_fight_militarism
 		icon = GFX_goal_HEA_focus_the_rise_of_mercy
 		cost = 30
 		x = 1
-		y = 2
-		relative_position_id = hea_nf_age_of_steam
+		y = 1
+		relative_position_id = hea_nf_addres_militarism
 
-		prerequisite = {
-			focus = hea_nf_addres_militarism
-		}
-		mutually_exclusive = {
-			focus = hea_nf_embrace_militarism
-		}
-		available = {
-			has_completed_focus = hea_nf_forgive_sins
-		}
+		prerequisite = { focus = hea_nf_addres_militarism }
+		mutually_exclusive = { focus = hea_nf_embrace_militarism }
+		available = { has_completed_focus = hea_nf_forgive_sins }
 
 		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_fight_militarism entered"
-			}
 			swap_ideas = {
 				add_idea = hea_reconcilliation
 				remove_idea = hea_rampant_militarism
 			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_fight_militarism exited"
-			}
 		}
 	}
-
+	#Sanctuary for All
 	focus = {
 		id = hea_nf_fight_militarism_1
 		icon = GFX_goal_HEA_focus_declaration_of_sanctuary
 		cost = 30
-		x = 1
-		y = 3
-		relative_position_id = hea_nf_age_of_steam
-		prerequisite = {
-			focus = hea_nf_fight_militarism
-		}
+		x = 0
+		y = 1
+		relative_position_id = hea_nf_fight_militarism
+		prerequisite = { focus = hea_nf_fight_militarism }
 
 		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_fight_militarism_1 entered"
-			}
 			swap_ideas = {
 				add_idea = hea_reconcilliation_1
 				remove_idea = hea_reconcilliation
 			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_fight_militarism_1 exited"
-			}
 		}
 	}
-		focus = {
+	#Sanctuary for the Faithful
+	focus = {
 		id = hea_gabriels_forgiveness
 		icon = GFX_goal_HEA_gabriels_forgiveness
 		cost = 60
-		x = 6
-		y = 4
-		relative_position_id = hea_nf_age_of_steam
-		available = {
-			has_completed_focus = hea_nf_embrace_elite_1
-		}
-		prerequisite = {
-			focus = hea_nf_fight_militarism_1
-		}
+		x = 5
+		y = 1
+		relative_position_id = hea_nf_fight_militarism_1
+		
+		prerequisite = { focus = hea_nf_fight_militarism_1 }
 
 		completion_reward = {
-			
 			swap_ideas = {
 				add_idea = angel_of_peace1
 				remove_idea = hea_theocratic_elite_good_1
 				
 			}
-						hidden_effect = {
-							news_event = { id = nf_event_hea.301 }
-set_country_leader_description = {
-	ideology = ruler
-	desc = FATHER_MICHAEL_DESC
-}
-set_country_leader_name = {
-	ideology = ruler
-	name  = "Father Michael"
-}
-    }
+			hidden_effect = {
+				news_event = nf_event_hea.301
+				set_country_leader_description = {
+					ideology = ruler
+					desc = FATHER_MICHAEL_DESC
+				}
+				set_country_leader_name = {
+					ideology = ruler
+					name  = "Father Michael"
+				}
+    		}
 		}
-		
 	}
-	####First Diplomatic Reaches
+	####First Diplomatic Reaches###
+	#Forgiving Amon and his Flock
+	focus = {
+		id = hea_forgiving_ano
+		icon = GFX_goal_HEA_hea_priests_flock
+		cost = 30
+		x = -4
+		y = 1
+		relative_position_id = hea_gabriels_forgiveness
+
+		prerequisite = { focus = hea_gabriels_forgiveness }
+
+		completion_reward = {
+			custom_effect_tooltip = hea_forgive_ano
+			hidden_effect = {
+				add_to_faction = ANO
+			}
+		}
+	}
+	#Forgiving Presbyter Ann and her Flock
 	focus = {
 		id = hea_forgiving_mur
 		icon = GFX_goal_HEA_hea_new_flock
@@ -1293,11 +2178,8 @@ set_country_leader_name = {
 		x = -2
 		y = 1
 		relative_position_id = hea_gabriels_forgiveness
-		prerequisite = {
-			focus = hea_gabriels_forgiveness
-		}
 
-
+		prerequisite = { focus = hea_gabriels_forgiveness }
 
 		completion_reward = {
 			custom_effect_tooltip = hea_forgive_mur
@@ -1306,51 +2188,27 @@ set_country_leader_name = {
 			}
 		}
 	}
-		focus = {
-		id = hea_forgiving_ano
-		icon = GFX_goal_HEA_hea_priests_flock
-		cost = 30
-		x = -4
-		y = 1
-		relative_position_id = hea_gabriels_forgiveness
-		prerequisite = {
-			focus = hea_gabriels_forgiveness
-		}
-
-
-
-		completion_reward = {
-	custom_effect_tooltip = hea_forgive_ano
-			hidden_effect = {
-				add_to_faction = ANO
-			}
-		}
-	}
-
-		focus = {
+	#Mending the Schism
+	focus = {
 		id = hea_mending_the_schism
 		icon = GFX_goal_HEA_hea_theological_debate
 		cost = 90
-		x = -3
-		y = 2
-		relative_position_id = hea_gabriels_forgiveness
-		prerequisite = {
-			focus = hea_forgiving_ano
-		}
-		prerequisite = {
-			focus = hea_forgiving_mur
-		}
+		x = 1
+		y = 1
+		relative_position_id = hea_forgiving_ano
+
+		prerequisite = { focus = hea_forgiving_ano }
+		prerequisite = { focus = hea_forgiving_mur }
 		
-			completion_reward = {
-				custom_effect_tooltip = hea_mending_schism
+		completion_reward = {
+			custom_effect_tooltip = hea_mending_schism
 			hidden_effect = {
-				MUR = {
-				annex_country = { target = ANO transfer_troops = yes }
-				}
+				MUR = { annex_country = { target = ANO transfer_troops = yes } }
 			}
 		}
 	}
-		focus = {
+
+	focus = {
 		id = hea_uplift_mur
 		icon = GFX_goal_HEA_hea_nucleus
 		cost = 60
@@ -1360,28 +2218,26 @@ set_country_leader_name = {
 			prerequisite = {
 			focus = hea_mending_the_schism
 		}
-			completion_reward = {
+		completion_reward = {
 			MUR = {
-
 				add_ideas = hea_steam_powered_weapons
-				custom_effect_tooltip = hea_uplifting_mur
 				hidden_effect = {
-									
-				set_technology = { infantry_tech_level_scientific = 1 }
-				set_technology = { special_forces_tech_level_scientific = 1 }
+					set_technology = { infantry_tech_level_scientific = 1 }
+					set_technology = { special_forces_tech_level_scientific = 1 }
 					set_technology = { power_armour_tech_level_settler = 1 }
-				set_technology = { power_armour_tech_level_scientific = 1 }
-				set_technology = { support_tech_level_scientific = 1 }
-				set_technology = { air_tech_level_scientific = 1 }
-				set_technology = { tools_tech_level_scientific = 1 }
-				set_technology = { habitation_tech_level_scientific = 1 }
-				set_technology = { tools_tech_level_scientific = 1 }
-				set_technology = { electronics_tech_level_scientific = 1 }
+					set_technology = { power_armour_tech_level_scientific = 1 }
+					set_technology = { support_tech_level_scientific = 1 }
+					set_technology = { air_tech_level_scientific = 1 }
+					set_technology = { tools_tech_level_scientific = 1 }
+					set_technology = { habitation_tech_level_scientific = 1 }
+					set_technology = { tools_tech_level_scientific = 1 }
+					set_technology = { electronics_tech_level_scientific = 1 }
 				}
 			}
+			custom_effect_tooltip = hea_uplifting_mur
 		}
 	}
-			focus = {
+	focus = {
 		id = hea_expand_mur
 		icon = GFX_goal_HEA_hea_anns_flock
 		cost = 30
@@ -1929,282 +2785,6 @@ set_country_leader_name = {
 			#PRO, ORO
 		}
 	}
-	
-	
-
-	
-	#########################################
-	##Monsters of the Wastes-Vengeance Path##
-	#########################################
-	##Start
-	focus = {
-		id = hea_monsters_of_the_wastes #A Terrible Land
-		icon = GFX_goal_HEA_hea_terrible_world
-		cost = 60
-		x = 1
-		y = 1
-		relative_position_id = hea_nf_embrace_militarism_1
-
-		allow_branch = {
-			has_country_flag = hea_vengance_path
-		}
-
-		prerequisite = {
-			focus = hea_nf_embrace_militarism_1
-		}
-		available = {
-			has_completed_focus = hea_michaels_crusade
-		}
-
-		completion_reward = {
-			add_ideas = HEA_wardens_of_humanity1
-			hidden_effect = {
-				set_variable = { hea_monsters_ghouls = 0 }
-				set_variable = { hea_monsters_mutants = 0 }
-				set_variable = { hea_monsters_mirelurks = 0 }
-				set_variable = { hea_monsters_robots = 0 }
-				set_variable = { hea_monsters_communists = 0 }
-			}
-			custom_effect_tooltip = hea_monsters_of_the_wastes_tt
-		}
-	}
-
-	#Ghouls
-	focus = {
-		id = hea_the_dead_walk #The Dead are Walking
-		icon = GFX_goal_HEA_hea_dead_walking
-		cost = 20
-		x = 0
-		y = 1
-		relative_position_id = hea_monsters_of_the_wastes
-
-		prerequisite = {
-			focus = hea_monsters_of_the_wastes
-		}
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = hea_the_dead_walk_trig_tt
-				check_variable = {
-					hea_monsters_ghouls > 1
-				}
-			}
-			has_war = no
-		}
-		
-		completion_reward = {
-			add_to_variable = { hea_fervor_supply_consumption_factor_var = -0.03}
-			add_to_variable = { hea_fervor_attrition_var = -0.03 }
-			add_to_variable = { hea_fervor_loc_var = 1 }
-			add_to_variable = { hea_fervor_stability_factor_var = -0.05 } #-5% stability
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_fervor_idea_template
-					add_idea = hea_fervor_idea_ghoul_focus
-				}
-			}
-			custom_effect_tooltip = hea_the_dead_walk_tt
-		}
-	}
-	#Washington Brotherhood
-	focus = {
-		id = hea_cains_empire #Cain's Empire
-		icon = GFX_goal_HEA_hea_immortal
-		cost = 20
-		x = 0
-		y = 1
-		relative_position_id = hea_the_dead_walk
-
-		prerequisite = {
-			focus = hea_monsters_of_the_wastes
-		}
-		available = {
-			WBH = { all_core_land_owned_by_prev_sphere = yes }
-			has_war = no
-		}
-		
-		completion_reward = {
-			add_to_variable = { hea_fervor_army_org_factor_var = 0.1 }
-			add_to_variable = { hea_fervor_loc_var = 1 }
-			add_to_variable = { hea_fervor_stability_factor_var = -0.05 } #-5% stability
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_fervor_idea_template
-					add_idea = hea_fervor_idea_cain_focus
-				}				
-			}
-			custom_effect_tooltip = hea_cains_empire_tt
-			hidden_effect = {
-				WBH = { every_core_state = { add_manpower = -5000 } }
-			}
-		}
-	}
-	#Mutants
-	focus = {
-		id = hea_nephilim_horde #Horde of Nephilim
-		icon = GFX_goal_HEA_hea_nephilim
-		cost = 20
-		x = 0
-		y = 1
-		relative_position_id = hea_cains_empire
-
-		prerequisite = {
-			focus = hea_monsters_of_the_wastes
-		}
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = hea_nephilim_horde_trig_tt
-				check_variable = {
-					hea_monsters_mutants > 1
-				}
-			}
-			has_war = no
-		}
-		
-		completion_reward = {
-			add_to_variable = { hea_fervor_army_attack_factor_var = 0.05 }
-			add_to_variable = { hea_fervor_loc_var = 1 }
-			add_to_variable = { hea_fervor_stability_factor_var = -0.05 } #-5% stability
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_fervor_idea_template
-					add_idea = hea_fervor_idea_mutant_focus
-				}			
-			}
-			custom_effect_tooltip = hea_nephilim_horde_tt
-		}
-	}
-	#Mirelurks
-	focus = {
-		id = hea_leviathans_of_the_north #Leviathans dwelling in the Coast
-		icon = GFX_goal_HEA_hea_leviathans
-		cost = 20
-		x = 0
-		y = 1
-		relative_position_id = hea_nephilim_horde
-
-		prerequisite = {
-			focus = hea_monsters_of_the_wastes
-		}
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = hea_leviathans_of_the_north_trigg_tt
-				check_variable = {
-					hea_monsters_mirelurks > 0
-				}
-			}
-			has_war = no
-		}
-
-		completion_reward = {
-			add_to_variable = { hea_fervor_army_morale_factor_var = 0.05 }
-			add_to_variable = { hea_fervor_loc_var = 1 }
-			add_to_variable = { hea_fervor_stability_factor_var = -0.05 } #-5% stability
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_fervor_idea_template
-					add_idea = hea_fervor_idea_leviathan_focus
-				}
-			}
-			custom_effect_tooltip = hea_leviathans_of_the_north_tt
-		}
-	}
-	#Robots
-	focus = {
-		id = hea_steel_puppets #Steel Puppets
-		icon = GFX_goal_HEA_hea_steel_menace
-		cost = 20
-		x = 0
-		y = 1
-		relative_position_id = hea_leviathans_of_the_north
-
-		prerequisite = {
-			focus = hea_monsters_of_the_wastes
-		}
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = hea_steel_puppets_trigg_tt
-				check_variable = {
-					hea_monsters_robots > 1
-				}
-			}
-			has_war = no
-		}
-		
-		completion_reward = {
-			add_to_variable = { hea_fervor_breakthrough_factor_var = 0.05 }
-			add_to_variable = { hea_fervor_loc_var = 1 }
-			add_to_variable = { hea_fervor_stability_factor_var = -0.05 } #-5% stability
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_fervor_idea_template
-					add_idea = hea_fervor_idea_steel_focus
-				}
-			}
-			custom_effect_tooltip = hea_steel_puppets_tt
-		}
-	}
-	#Communists
-	focus = {
-		id = hea_red_devils_of_the_north #The Red Devils
-		icon = GFX_goal_HEA_hea_red_devil
-		cost = 20
-		x = 0
-		y = 1
-		relative_position_id = hea_steel_puppets
-
-		prerequisite = {
-			focus = hea_monsters_of_the_wastes
-		}
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = hea_red_devils_of_the_north_trigg_tt
-				check_variable = {
-					hea_monsters_communists > 0
-				}
-			}
-			has_war = no
-		}
-
-		completion_reward = {
-			add_to_variable = { hea_fervor_stability_factor_var = 0.1 }
-			add_to_variable = { hea_fervor_loc_var = 1 }
-			add_to_variable = { hea_fervor_stability_factor_var = -0.05 } #-5% stability
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_fervor_idea_template
-					add_idea = hea_fervor_idea_red_focus
-				}				
-			}
-			custom_effect_tooltip = hea_red_devils_of_the_north_tt
-		}
-	}
-	##End
-	focus = {
-		id = hea_triumphant_nation #Triumph over the monsters...
-		icon = GFX_goal_HEA_hea_humanity_protected
-		cost = 30
-		x = 0
-		y = 1
-		relative_position_id = hea_red_devils_of_the_north
-
-		prerequisite = { focus = hea_the_dead_walk }
-		prerequisite = { focus = hea_cains_empire }
-		prerequisite = { focus = hea_nephilim_horde }
-		prerequisite = { focus = hea_leviathans_of_the_north }
-		prerequisite = { focus = hea_steel_puppets }
-		prerequisite = { focus = hea_red_devils_of_the_north }	
-
-		available = {
-			has_war = no
-		}
-
-		completion_reward = {
-			swap_ideas = { 
-				remove_idea = HEA_wardens_of_humanity1 
-				add_idea = HEA_wardens_of_humanity2
-			}
-		}
-	}
 
 	####################
 	##Forgiveness Path##
@@ -2380,408 +2960,6 @@ set_country_leader_name = {
 
 		completion_reward = {
 			
-		}
-	}
-
-	#############################################
-	#############The Guard Focuses##################
-	#############################################
-	focus = {
-		id = hea_nf_army
-		icon = GFX_goal_HEA_focus_evolution_of_the_guard
-		cost = 30
-		x = 1
-		y = 4
-		prerequisite = {
-			focus = hea_nf_innocence_lost
-		}
-
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_army entered"
-			}
-			add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.75
-				uses = 1
-				category = cat_land_doctrine
-			}
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.75
-				uses = 1
-				category = cat_air_doctrine
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_army exited"
-			}
-		}
-	}
-
-	focus = {
-		id = hea_nf_army_1
-		icon = GFX_goal_HEA_focus_arming_the_clergy
-		cost = 30
-		x = 2
-		y = 1
-		relative_position_id = hea_nf_army
-		prerequisite = {
-			focus = hea_nf_army
-		}
-
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_army_1 entered"
-			}
-			army_experience = 25
-			add_tech_bonus = {
-				bonus = 0.75
-				uses = 1
-				category = infantry_weapons_tech_category
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_army_1 exited"
-			}
-		}
-	}
-
-	focus = {
-		id = hea_nf_conscription
-		icon = GFX_goal_HEA_focus_mandatory_service
-		cost = 30
-		x = 3
-		y = 2
-		relative_position_id = hea_nf_army
-		prerequisite = {
-			focus = hea_nf_army_1
-		}
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_conscription entered"
-			}
-			#add_ideas = hea_conscription
-			if = {
-				limit = {
-					OR = {
-						has_idea = volunteer_militia_conscription
-						has_idea = disarmed_nation
-					}
-					
-				}
-				add_ideas = funded_militia_conscription
-			}
-			else_if = {
-				limit = { has_idea = funded_militia_conscription }
-				add_ideas = two_year_conscription
-			}
-			else = {
-				add_political_power = 100
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_conscription exited"
-			}
-		}
-	}
-
-	focus = {
-		id = hea_nf_crusaders
-		icon = GFX_goal_HEA_focus_crusader_armies
-		cost = 30
-		x = 1
-		y = 2
-		relative_position_id = hea_nf_army
-		prerequisite = {
-			focus = hea_nf_army_1
-		}
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_crusaders entered"
-			}
-			add_ideas = hea_crusaders
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_crusaders exited"
-			}
-		}
-	}
-
-	focus = {
-		id = hea_nf_army_2
-		icon = GFX_goal_HEA_focus_military_ordos
-		cost = 30
-		x = 2
-		y = 3
-		relative_position_id = hea_nf_army
-		prerequisite = {
-			focus = hea_nf_conscription
-			focus = hea_nf_crusaders
-		}
-
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_army_2 entered"
-			}
-			add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.5
-				uses = 2
-				category = cat_land_doctrine
-			}
-			army_experience = 50
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_army_2 exited"
-			}
-		}
-	}
-	#################Air Focuses#####################
-	focus = {
-		id = hea_nf_air
-		icon = GFX_goal_HEA_focus_race_to_heaven
-		cost = 30
-		x = -2
-		y = 1
-		relative_position_id = hea_nf_army
-		prerequisite = {
-			focus = hea_nf_army
-		}
-
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_air entered"
-			}
-			if = {
-				limit = { NOT = { has_tech = glider_tech } }
-				set_technology = { glider_tech = 1 }
-			}
-			else = {
-				add_tech_bonus = {
-					name = air_bonus
-					bonus = 0.2
-					uses = 1
-					category = air_equipment_tech_category
-				}
-			}
-			1384 = {
-				add_building_construction = {
-					type = air_base
-					level = 1
-				}
-			}
-			air_experience = 25
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_air exited"
-			}
-		}
-	}
-
-	focus = {
-		id = hea_nf_air_knight
-		icon = GFX_goal_HEA_focus_blessing_of_the_angels
-		cost = 30
-		x = -1
-		y = 2
-		relative_position_id = hea_nf_army
-		prerequisite = {
-			focus = hea_nf_air
-		}
-
-
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_air_knight entered"
-			}
-			add_ideas = hea_air_knight
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_air_knight exited"
-			}
-		}
-	}
-
-	focus = {
-		id = hea_nf_air_peasant
-		icon = GFX_goal_HEA_focus_wings_of_the_angels
-		cost = 30
-		x = -3
-		y = 2
-		relative_position_id = hea_nf_army
-		prerequisite = {
-			focus = hea_nf_air
-		}
-
-
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_air_peasant entered"
-			}
-				 add_equipment_to_stockpile = {
-					type = fighter_equipment
-					amount = 75
-					producer = HEA
-				}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_air_peasant exited"
-			}
-		}
-	}
-
-	focus = {
-		id = hea_nf_air_1
-		icon = GFX_goal_HEA_focus_ascension_achieved
-		cost = 30
-		x = -2
-		y = 3
-		relative_position_id = hea_nf_army
-
-		prerequisite = {
-			focus = hea_nf_air_peasant
-			focus = hea_nf_air_knight
-		}
-
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_air_1 entered"
-			}
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 2
-				category = cat_air_doctrine
-			}
-			air_experience = 50
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_air_1 exited"
-			}
-		}
-	}
-
-	focus = {
-		id = hea_nf_missionary_warriors
-		icon = GFX_goal_HEA_focus_armed_pilgrims
-		cost = 30
-		x = 0
-		y = 4
-		relative_position_id = hea_nf_army
-		prerequisite = {
-			focus = hea_nf_army_2
-			focus = hea_nf_air_1
-		}
-
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_missionary_warriors entered"
-			}
-			add_ideas = hea_general_staff
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_missionary_warriors exited"
-			}
-		}
-	}
-focus = {
-		id = hea_nf_machines_of_steam
-		icon = GFX_goal_HEA_focus_steampowered_dreadnaughts
-		cost = 30
-		x = -1
-		y = 5
-		relative_position_id = hea_nf_army
-		prerequisite = {
-			focus = hea_nf_missionary_warriors
-		}
-		mutually_exclusive = {
-			focus = hea_nf_men_of_steam
-		}
-
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_machines_of_steam entered"
-			}
-			add_tech_bonus = {
-				name = industrial_bonus
-				bonus = 0.5
-				ahead_reduction = 2
-				uses = 2
-				category = tank_tech_category
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_machines_of_steam exited"
-			}
-		}
-	}
-
-	focus = {
-		id = hea_nf_men_of_steam
-		icon = GFX_goal_HEA_focus_steam_power_armor
-		cost = 30
-		x = 1
-		y = 5
-		relative_position_id = hea_nf_army
-		prerequisite = {
-			focus = hea_nf_missionary_warriors
-		}
-	
-		mutually_exclusive = {
-			focus = hea_nf_machines_of_steam
-		}
-
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_men_of_steam entered"
-			}
-			add_tech_bonus = {
-				name = industrial_bonus
-				bonus = 0.5
-				ahead_reduction = 2
-				uses = 2
-				category = power_armor_tech_category
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_men_of_steam exited"
-			}
-		}
-	}
-	focus = {
-		id = hea_nf_officer_priests
-		icon = GFX_goal_HEA_focus_cleric_generals
-		cost = 30
-		x = 0
-		y = 6
-		relative_position_id = hea_nf_army
-		prerequisite = {
-			focus = hea_nf_machines_of_steam
-			focus = hea_nf_men_of_steam
-		}
-
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_officer_priests entered"
-			}
-			add_war_support = 0.05
-			add_ideas = hea_mobility
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_officer_priests exited"
-			}
 		}
 	}
 	################################################################################################
@@ -3314,691 +3492,7 @@ focus = {
 	#############################################
 	#############Heaven's Roads and Farms#######
 	#############################################
-	
-	###A better Heaven's Gate
-	#Enriching the Nucleus
-	focus = {
-		id = hea_the_nucleus
-		icon = GFX_goal_HEA_HEA_building_nucleus
-		cost = 30
-		x = 14
-		y = 4
 
-		prerequisite = {
-			focus = hea_nf_innocence_lost
-		}
-
-		completion_reward = { #Manually inputing the states to save a little bit of performance cost and prevent Stagleap getting the bonus without adding more unnecessary checks - @Deez
-			18 = { add_extra_state_shared_building_slots = 1 }
-			116 = { add_extra_state_shared_building_slots = 1 }
-			278 = { add_extra_state_shared_building_slots = 1 }
-			1384 = { add_extra_state_shared_building_slots = 1 }
-			198 = { add_extra_state_shared_building_slots = 1 }
-			1385 = { add_extra_state_shared_building_slots = 1 }
-			#Initialize the variables
-			set_variable = { hea_tame_country_resource_energy_var = 0 }
-			set_variable = { hea_tame_country_resource_water_var = 0 }
-			set_variable = { hea_tame_country_resource_metal_var = 0 }
-			set_variable = { hea_tame_country_resource_composites_var = 0 }
-			set_variable = { hea_tame_country_resource_circuitry_var = 0 }
-			set_variable = { hea_tame_country_resource_advanced_var = 0 }
-			set_variable = { hea_tame_army_speed_factor_var = 0 }
-			set_variable = { hea_tame_production_speed_infrastructure_factor_var = 0 }
-			set_variable = { hea_tame_stability_factor_var = 0 }
-			set_variable = { hea_tame_monthly_population_var = 0 }
-			set_variable = { hea_tame_non_core_manpower_var = 0 }
-			set_variable = { hea_tame_industrial_capacity_factory_var = 0 }
-			set_variable = { hea_tame_consumer_goods_factor_var = 0 }
-			set_variable = { hea_tame_global_building_slots_factor_var = 0 }
-			set_variable = { hea_tame_production_speed_buildings_factor_var = 0 }
-			set_variable = { hea_tame_research_speed_factor_var = 0 }
-			set_variable = { hea_tame_war_support_factor_var = 0 }
-			set_variable = { hea_tame_army_morale_factor_var = 0 }
-			set_variable = { hea_tame_breakthrough_factor_var = 0 }
-			set_variable = { hea_tame_conscription_factor_var = 0 }
-			hidden_effect = {
-				add_dynamic_modifier = {
-					modifier = hea_tame_dynamic_modifier
-				}		
-			}
-			custom_effect_tooltip = hea_the_nucleus_tt
-		}
-	}
-
-	###Rivers
-	#Taming the Rivers
-	focus = {
-		id = hea_taming_rivers
-		icon = GFX_goal_HEA_steam_powered_cities
-		cost = 30
-		x = -6
-		y = 1
-		relative_position_id = hea_the_nucleus
-
-		prerequisite = {
-			focus = hea_the_nucleus
-		}
-
-		completion_reward = {
-			add_to_variable = { hea_tame_stability_factor_var = 0.02}
-			add_political_power = 60
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_taming_the_river
-				}
-			}
-		}
-	}
-	#Building Dams
-	focus = {
-		id = hea_dams
-		icon = GFX_goal_HEA_HEA_building_damconstruct
-		cost = 15
-		x = -2
-		y = 1
-		relative_position_id = hea_taming_rivers
-
-		prerequisite = {
-			focus = hea_taming_rivers
-		}
-
-		completion_reward = {
-			add_to_variable = { hea_tame_stability_factor_var = 0.01 }
-			add_to_variable = { hea_tame_country_resource_water_var = 20 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_building_dams
-				}
-			}
-		}
-	}
-	#Using the Dam for energy?
-	focus = {
-		id = hea_repurposing_wattech
-		icon = GFX_goal_HEA_HEA_building_dam
-		cost = 15
-		x = 0
-		y = 1
-		relative_position_id = hea_dams
-
-		prerequisite = {
-			focus = hea_dams
-		}
-
-		completion_reward = {
-			add_to_variable = { hea_tame_stability_factor_var = 0.01 }
-			add_to_variable = { hea_tame_country_resource_energy_var = 20 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_using_dam_for_energy
-				}
-			}
-		}
-	}
-	#Water Mills
-	focus = {
-		id = hea_water_mills
-		icon = GFX_goal_HEA_HEA_building_watermills
-		cost = 30
-		x = 0
-		y = 1
-		relative_position_id = hea_taming_rivers
-
-		prerequisite = {
-			focus = hea_taming_rivers
-		}
-
-		completion_reward = {
-			add_to_variable = { hea_tame_stability_factor_var = 0.02 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_water_mill_focus
-				}
-			}
-			custom_effect_tooltip = hea_river_mills_tt
-		}
-	}
-	#Repairing Old Bridges
-	focus = {
-		id = hea_bridges
-		icon = GFX_goal_HEA_HEA_building_bridge
-		cost = 15
-		x = 2
-		y = 1
-		relative_position_id = hea_taming_rivers
-
-		prerequisite = {
-			focus = hea_taming_rivers
-		}
-
-		completion_reward = {
-			add_to_variable = { hea_tame_stability_factor_var = 0.01 }
-			add_to_variable = { hea_tame_army_speed_factor_var = 0.02 }
-			add_to_variable = { hea_tame_production_speed_infrastructure_factor_var = 0.05 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_reparing_old_bridges
-				}
-			}
-		}
-	}
-	#River Ferries
-	focus = {
-		id = hea_ferries
-		icon = GFX_goal_HEA_building_ferry
-		cost = 15
-		x = 0
-		y = 1
-		relative_position_id = hea_bridges
-
-		prerequisite = {
-			focus = hea_bridges
-		}
-
-		completion_reward = {
-			add_to_variable = { hea_tame_stability_factor_var = 0.01 }
-			add_to_variable = { hea_tame_army_speed_factor_var = 0.03 }
-			add_to_variable = { hea_tame_production_speed_infrastructure_factor_var = 0.05 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_river_ferries
-				}
-			}
-		}
-	}
-	#Steam Barges
-	focus = {
-		id = hea_priest_barges
-		icon = GFX_goal_HEA_HEA_building_steambarge
-		cost = 30
-		x = 0
-		y = 3
-		relative_position_id = hea_taming_rivers
-
-		prerequisite = {
-			focus = hea_ferries
-			focus = hea_repurposing_wattech
-		}
-
-		completion_reward = {
-			18 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 1
-					province = 1946
-				}
-			}
-			116 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 1
-					province = 7166
-				}
-			}
-			278 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 1
-					province = 4361
-				}
-			}
-			add_to_variable = { hea_tame_stability_factor_var = 0.02 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_steam_barges
-				}
-			}
-		}
-	}
-	###Lands
-	#Taming the Lands
-	focus = {
-		id = hea_taming_land
-		icon = GFX_goal_HEA_hea_expand_tunnels
-		cost = 30
-		x = 0
-		y = 1
-		relative_position_id = hea_the_nucleus
-
-		prerequisite = {
-			focus = hea_the_nucleus
-		}
-
-		completion_reward = {
-			add_to_variable = { hea_tame_global_building_slots_factor_var = 0.05 }
-			add_political_power = 60
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_taming_the_land
-				}				
-			}
-		}
-	}
-	#Eternal Spring
-	focus = {
-		id = hea_hothouse
-		icon = GFX_goal_HEA_building_spring
-		cost = 15
-		x = -2
-		y = 1
-		relative_position_id = hea_taming_land
-
-		prerequisite = {
-			focus = hea_taming_land
-		}
-
-		completion_reward = {
-			add_to_variable = { hea_tame_consumer_goods_factor_var = -0.07 }
-			add_to_variable = { hea_tame_monthly_population_var = 0.05 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_eternal_spring
-				}				
-			}
-		}
-	}
-	#Blessed Cooks
-	focus = {
-		id = hea_priestcooks
-		icon = GFX_goal_HEA_building_cooks
-		cost = 15
-		x = 0
-		y = 1
-		relative_position_id = hea_hothouse
-
-		prerequisite = {
-			focus = hea_hothouse
-		}
-
-		completion_reward = {
-			add_to_variable = { hea_tame_consumer_goods_factor_var = -0.03 }
-			add_to_variable = { hea_tame_monthly_population_var = 0.05 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_blessed_cooks
-				}			
-			}
-		}
-	}
-	#Smiths blessed by Steam and the Lord
-	focus = {
-		id = hea_steam_smiths
-		icon = GFX_goal_HEA_building_mines
-		cost = 30
-		x = 0
-		y = 1
-		relative_position_id = hea_taming_land
-
-		prerequisite = {
-			focus = hea_taming_land
-		}
-
-		completion_reward = {
-			add_to_variable = { hea_tame_industrial_capacity_factory_var = 0.05 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_steam_smith_focus
-				}				
-			}
-			custom_effect_tooltip = hea_steam_smiths_tt
-		}
-	}
-	#Preparing for expansion
-	focus = {
-		id = hea_expanding_pipeways
-		icon = GFX_goal_HEA_building_pipe
-		cost = 15
-		x = 2
-		y = 1
-		relative_position_id = hea_taming_land
-
-		prerequisite = {
-			focus = hea_taming_land
-		}
-
-		completion_reward = {
-			add_to_variable = { hea_tame_global_building_slots_factor_var = 0.05 }
-			add_to_variable = { hea_tame_production_speed_buildings_factor_var = 0.02 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_preparing_for_expansion			
-				}
-			}
-		}
-	}
-	#Homes blessed by Steam
-	focus = {
-		id = hea_heated_homes
-		icon = GFX_goal_HEA_building_steamhome
-		cost = 15
-		x = 0
-		y = 1
-		relative_position_id = hea_expanding_pipeways
-
-		prerequisite = {
-			focus = hea_expanding_pipeways
-		}
-
-		completion_reward = {
-			add_to_variable = { hea_tame_global_building_slots_factor_var = 0.05 }
-			add_to_variable = { hea_tame_production_speed_buildings_factor_var = 0.03 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_home_blessed_by_steam
-				}				
-			}
-		}
-	}
-	#Steam Wonderland
-	focus = {
-		id = hea_anewold_gate
-		icon = GFX_goal_HEA_building_steamwonder
-		cost = 30
-		x = 0
-		y = 3
-		relative_position_id = hea_taming_land
-
-		prerequisite = {
-			focus = hea_heated_homes
-			focus = hea_priestcooks
-		}
-
-		completion_reward = {		
-			1385 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-			}
-			198 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-			}
-			276 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-			}
-			add_to_variable = { hea_tame_consumer_goods_factor_var = -0.05 }
-			add_to_variable = { hea_tame_production_speed_buildings_factor_var = 0.05 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_steam_wonderland
-				}				
-			}
-		}
-	}
-	####Heavens (Mountains)
-	#Taming the Heavens
-	focus = {
-		id = hea_taming_heavens
-		icon = GFX_goal_HEA_hea_taming_heaven
-		cost = 30
-		x = 6
-		y = 1
-		relative_position_id = hea_the_nucleus
-
-		prerequisite = {
-			focus = hea_the_nucleus
-		}
-
-		completion_reward = {
-			add_to_variable = { hea_tame_war_support_factor_var = 0.02 }
-			add_political_power = 60
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_taming_the_heaven
-				}
-			}
-		}
-	}
-	#Astray Alchemists and Hermits
-	focus = {
-		id = hea_lost_scientists
-		icon = GFX_goal_HEA_HEA_building_science
-		cost = 30
-		x = 0
-		y = 1
-		relative_position_id = hea_taming_heavens
-
-		prerequisite = {
-			focus = hea_taming_heavens
-		}
-
-		completion_reward = {
-			add_to_variable = { hea_tame_war_support_factor_var = 0.01 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_alchemists_focus
-				}
-			}
-			custom_effect_tooltip = hea_lost_scientists_tt
-		}
-	}
-	#Michael's Vision
-	focus = {
-		id = hea_mountain_monestaries
-		icon = GFX_goal_HEA_peasantlevy
-		cost = 15
-		x = 2
-		y = 1
-		relative_position_id = hea_taming_heavens
-
-		prerequisite = {
-			focus = hea_taming_heavens
-		}
-
-		completion_reward = {
-			add_to_variable = { hea_tame_war_support_factor_var = 0.01 }
-			add_to_variable = { hea_tame_conscription_factor_var = 0.05 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_michael_vision_soldier_of_prophept
-				}
-			}
-		}
-	}
-	#Soldiers of the Prophet
-	focus = {
-		id = hea_shrines_to_reactor
-		icon = GFX_goal_HEA_knightsofpeasants
-		cost = 15
-		x = 0
-		y = 1
-		relative_position_id = hea_mountain_monestaries
-
-		prerequisite = {
-			focus = hea_mountain_monestaries
-		}
-
-		completion_reward = {
-			add_to_variable = { hea_tame_war_support_factor_var = 0.01 }
-			add_to_variable = { hea_tame_conscription_factor_var = 0.05 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_michael_vision_soldier_of_prophept
-				}
-			}
-		}
-	}
-	#Funding from Heaven
-	focus = {
-		id = hea_barnabus_reactor
-		icon = GFX_goal_HEA_preparingforwar
-		cost = 15
-		x = -2
-		y = 1
-		relative_position_id = hea_taming_heavens
-
-		prerequisite = {
-			focus = hea_taming_heavens
-		}
-
-		completion_reward = {
-			add_to_variable = { hea_tame_army_morale_factor_var = 0.05 }
-			add_to_variable = { hea_tame_conscription_factor_var = 0.02 }
-			add_to_variable = { hea_tame_war_support_factor_var = 0.01 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_funding_from_heaven
-				}
-			}
-		}
-	}
-	#It didn't stop there...
-	focus = {
-		id = hea_hollows_bellow
-		icon = GFX_goal_HEA_warcometh
-		cost = 15
-		x = 0
-		y = 1
-		relative_position_id = hea_barnabus_reactor
-
-		prerequisite = {
-			focus = hea_barnabus_reactor
-		}
-
-		completion_reward = {
-			add_to_variable = { hea_tame_army_morale_factor_var = 0.05 }
-			add_to_variable = { hea_tame_breakthrough_factor_var = 0.05 }
-			add_to_variable = { hea_tame_war_support_factor_var = 0.01 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_it_didnt_stop_there
-				}
-			}
-		}
-	}
-	#Ever closer to Heaven
-	focus = {
-		id = hea_steam_wonderland
-		icon = GFX_goal_HEA_closertoheaven
-		cost = 30
-		x = 0
-		y = 3
-		relative_position_id = hea_taming_heavens
-
-		prerequisite = {
-			focus = hea_shrines_to_reactor
-			focus = hea_hollows_bellow
-		}
-
-		completion_reward = {
-			1385 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-				}
-			}
-			198 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-				}
-			}
-			116 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-				}
-			}
-			add_to_variable = { hea_tame_war_support_factor_var = 0.03 }
-			add_to_variable = { hea_tame_conscription_factor_var = 0.03 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_ever_closer_to_heaven
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = hea_nf_industry_5
-		icon = GFX_goal_HEA_focus_rebirth_of_the_gate
-		cost = 60
-		x = 0
-		y = 5
-		relative_position_id = hea_the_nucleus
-
-		prerequisite = { focus = hea_steam_wonderland }
-		prerequisite = { focus = hea_anewold_gate }
-		prerequisite = { focus = hea_priest_barges }
-
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_industry_5 entered"
-			}
-			116 = {
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				set_temp_variable = { development_to_add = 2 }
-				add_development_to_node = yes
-			}
-			swap_ideas = {
-				add_idea = hea_rebirth_steam
-				remove_idea = hea_steam_power
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] hea_nf_industry_5 exited"
-			}
-		}
-	}
 	#Hammer of God
 	focus = {
 		id = hea_advanced_guard

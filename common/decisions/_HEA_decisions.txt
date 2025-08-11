@@ -369,6 +369,22 @@ debug_decisions = {
 			}
 		}
 	}
+	hea_open_close_research_gui = {
+		allowed = {
+			original_tag = HEA
+		}
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = hea_research_gui_open }
+				clr_country_flag = hea_research_gui_open
+			}
+			else = {
+				set_country_flag = hea_research_gui_open
+			}
+			add_to_variable = { hea_research_gui_dirty = 0.01 }
+		}
+	}
+
 }
 
 #####################

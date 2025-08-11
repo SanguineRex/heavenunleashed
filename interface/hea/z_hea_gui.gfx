@@ -1,0 +1,67 @@
+spriteTypes = {
+	###Heavengate's Research GUI
+	##Background
+    spriteType = {
+        name = "GFX_hea_research_gui_background"
+        textureFile = "gfx/interface/gui/hea_research_gui/hea_research_background.dds"
+		transparencecheck = yes
+    }
+	##Tech Levels
+	#Placeholder - For Testing
+    spriteType = {
+        name = "GFX_hea_research_level_placeholder"
+        textureFile = "gfx/interface/gui/hea_research_gui/hea_research_level_placeholder.dds"
+		transparencecheck = yes
+    }
+	###Techs###
+    ##Army
+	#Army Tab - Placeholder
+    spriteType = {
+        name = "GFX_hea_research_tab_army_placeholder"
+        textureFile = "gfx/interface/gui/hea_research_gui/hea_research_tab_army_placeholder.dds"
+		alwaystransparent = yes
+    }
+	#Army Button - Placeholder
+    spriteType = {
+        name = "GFX_hea_research_tab_army_button_placeholder"
+        textureFile = "gfx/interface/gui/hea_research_gui/hea_research_tab_army_button_placeholder.dds"
+		transparencecheck = yes
+    }
+    #Test Tech
+    spriteType = {
+        name = "GFX_hea_research_tab_army_test_tech_red"
+        textureFile = "gfx/interface/gui/hea_research_gui/hea_research_tab_army_test_tech_red.dds"
+		transparencecheck = yes
+    }
+    spriteType = {
+        name = "GFX_hea_research_tab_army_test_tech_green"
+        textureFile = "gfx/interface/gui/hea_research_gui/hea_research_tab_army_test_tech_green.dds"
+		transparencecheck = yes
+    }    
+    ##Navy
+	#Navy Tab - Placeholder
+    spriteType = {
+        name = "GFX_hea_research_tab_navy_placeholder"
+        textureFile = "gfx/interface/gui/hea_research_gui/hea_research_tab_navy_placeholder.dds"
+		alwaystransparent = yes
+    }
+	#Navy Button - Placeholder
+    spriteType = {
+        name = "GFX_hea_research_tab_navy_button_placeholder"
+        textureFile = "gfx/interface/gui/hea_research_gui/hea_research_tab_navy_button_placeholder.dds"
+		transparencecheck = yes
+    }
+    ##Air
+	#Air Tab - Placeholder
+    spriteType = {
+        name = "GFX_hea_research_tab_air_placeholder"
+        textureFile = "gfx/interface/gui/hea_research_gui/hea_research_tab_air_placeholder.dds"
+		alwaystransparent = yes
+    }
+	#Air Button - Placeholder
+    spriteType = {
+        name = "GFX_hea_research_tab_air_button_placeholder"
+        textureFile = "gfx/interface/gui/hea_research_gui/hea_research_tab_air_button_placeholder.dds"
+		transparencecheck = yes
+    }
+}

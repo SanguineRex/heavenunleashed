@@ -158,4 +158,67 @@ guiTypes = {
 			}			
 		}
 	}
+	containerWindowType = {
+		name = "hea_research_scripted_gui_window"
+		position = { x = 540 y = 80 }
+		orientation = UPPER_LEFT
+		moveable = yes
+		clipping = no
+		click_to_front = yes
+
+		background = {
+			name = "Background"
+			spriteType = GFX_hea_research_gui_background
+		}
+
+		containerWindowType = {
+			name = "hea_research_tech_levels_container"
+			buttonType = {
+				name = "hea_research_tech_levels_placeholder_button"
+				spriteType = GFX_hea_research_level_placeholder
+			}
+		}
+		containerWindowType = {
+			name = "hea_research_army_container"
+			buttonType = {
+				name = "hea_research_tab_army"
+				spriteType = GFX_hea_research_tab_army_placeholder
+			}
+			buttonType = {
+				name = "hea_research_tab_army_button"
+				spriteType = GFX_hea_research_tab_army_button_placeholder
+			}
+			buttonType = {
+				name = "hea_research_test_tech_red_button"
+				spriteType = GFX_hea_research_tab_army_test_tech_red
+				pdx_tooltip = hea_research_test_tech_red_button_tt
+			}
+			buttonType = {
+				name = "hea_research_test_tech_green_button"
+				spriteType = GFX_hea_research_tab_army_test_tech_green
+			}
+		}
+		containerWindowType = {
+			name = "hea_research_navy_container"
+			buttonType = {
+				name = "hea_research_tab_navy"
+				spriteType = GFX_hea_research_tab_navy_placeholder
+			}
+			buttonType = {
+				name = "hea_research_tab_navy_button"
+				spriteType = GFX_hea_research_tab_navy_button_placeholder
+			}
+		}
+		containerWindowType = {
+			name = "hea_research_air_container"
+			buttonType = {
+				name = "hea_research_tab_air"
+				spriteType = GFX_hea_research_tab_air_placeholder
+			}
+			buttonType = {
+				name = "hea_research_tab_air_button"
+				spriteType = GFX_hea_research_tab_air_button_placeholder
+			}
+		}
+	}
 }

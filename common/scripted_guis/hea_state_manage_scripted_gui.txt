@@ -231,7 +231,5 @@ scripted_gui = {
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
 			}
 		}
-
 	}
-
 }

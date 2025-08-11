@@ -1,0 +1,79 @@
+scripted_gui = {
+
+	hea_research_scripted_gui = {
+		context_type = player_context
+		window_name = "hea_research_scripted_gui_window"
+		dirty = hea_research_gui_dirty #To update the gui
+
+
+		visible = {
+			has_country_flag = hea_research_gui_open
+		}
+
+		triggers = {
+			hea_research_tech_levels_placeholder_button_visible = {
+				always = yes
+			}
+			##Army
+			hea_research_tab_army_visible = {
+				check_variable = { hea_research_tab_selected = 0 } 
+			}
+			hea_research_tab_army_button_visible = {
+				always = yes
+			}
+			hea_research_tab_army_button_click_enabled = {
+				NOT = { check_variable = { hea_research_tab_selected = 0 } }
+			}
+			#Test tech
+			hea_research_test_tech_red_button_visible = {
+				check_variable = { hea_research_tab_selected = 0 }
+				NOT = { has_tech = anti_tank_equipment_tech_1 }
+			}
+			hea_research_test_tech_red_button_click_enabled = {
+				always = yes
+			}
+			hea_research_test_tech_green_button_visible = {
+				check_variable = { hea_research_tab_selected = 0 }
+				has_tech = anti_tank_equipment_tech_1
+			}
+			##Navy
+			hea_research_tab_navy_visible = {
+				check_variable = { hea_research_tab_selected = 1 } 
+			}
+			hea_research_tab_navy_button_visible = {
+				always = yes
+			}
+			hea_research_tab_navy_button_click_enabled = {
+				NOT = { check_variable = { hea_research_tab_selected = 1 } }
+			}
+			##Air
+			hea_research_tab_air_visible = {
+				check_variable = { hea_research_tab_selected = 2 } 
+			}
+			hea_research_tab_air_button_visible = {
+				always = yes
+			}
+			hea_research_tab_air_button_click_enabled = {
+				NOT = { check_variable = { hea_research_tab_selected = 2 } }
+			}
+		}
+		effects = {
+			hea_research_tab_army_button_click = {
+				set_variable = { hea_research_tab_selected = 0 }
+				add_to_variable = { hea_research_gui_dirty = 0.01 }
+			}
+			hea_research_tab_navy_button_click = {
+				set_variable = { hea_research_tab_selected = 1 }
+				add_to_variable = { hea_research_gui_dirty = 0.01 }
+			}
+			hea_research_tab_air_button_click = {
+				set_variable = { hea_research_tab_selected = 2 }
+				add_to_variable = { hea_research_gui_dirty = 0.01 }
+			}
+			hea_research_test_tech_red_button_click = {
+				set_technology = { anti_tank_equipment_tech_1 = 1 }
+				add_to_variable = { hea_research_gui_dirty = 0.01 }
+			}
+		}
+	}
+}

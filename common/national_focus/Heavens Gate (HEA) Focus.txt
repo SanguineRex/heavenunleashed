@@ -4695,19 +4695,18 @@ focus_tree = {
 
 		completion_reward = {
 			capital_scope = { add_manpower = -250 }
-			ROT = { capital_scope = { add_manpower = 250 } }
-			#Modifying AI Behaviour
-			#These are for default settings
-			if = {
-				limit = { ROT = { has_country_flag = ROT_ai_behavior_infinity_knights } }
-				ROT = { 
+			ROT = { 
+				capital_scope = { add_manpower = 250 } 
+			
+				#Modifying AI Behaviour
+				#These are for default settings
+				if = {
+					limit = { has_country_flag = ROT_ai_behavior_infinity_knights }
 					clr_country_flag = ROT_ai_behavior_infinity_knights
 					set_country_flag = ROT_ai_behavior_grand_inquisition
 				}
-			}
-			else_if = {
-				limit = { ROT = { has_country_flag = ROT_ai_behavior_wishmaidens } }
-				ROT = { 
+				else_if = {
+					limit = { has_country_flag = ROT_ai_behavior_wishmaidens }
 					clr_country_flag = ROT_ai_behavior_wishmaidens
 					set_country_flag = ROT_ai_behavior_grand_inquisition
 				}
@@ -4930,17 +4929,17 @@ focus_tree = {
 					popularity = 0.05
 				}
 				capital_scope = { add_manpower = 250 }
-			}
-			#Ai behaviour overriding
-			if = {
-				limit = { BDT = { has_country_flag = bdt_road_warriors } }
-				clr_country_flag = bdt_road_warriors
-				set_country_flag = bdt_seraph_lords
-			}
-			else_if = {
-				limit = { BDT = { has_country_flag = bdt_odious_king } }
-				clr_country_flag = bdt_odious_king
-				set_country_flag = bdt_seraph_lords
+				#Ai behaviour overriding
+				if = {
+					limit = { has_country_flag = bdt_road_warriors }
+					clr_country_flag = bdt_road_warriors
+					set_country_flag = bdt_seraph_lords
+				}
+				else_if = {
+					limit = { has_country_flag = bdt_odious_king }
+					clr_country_flag = bdt_odious_king
+					set_country_flag = bdt_seraph_lords
+				}
 			}
 			#Overriding game rule AI settings
 			if = {

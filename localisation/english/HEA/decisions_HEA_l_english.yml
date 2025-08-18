@@ -143,7 +143,12 @@ hea_monsters_communists: "§RCommunists Targets Purged§!"
 hea_state_manage_decision_cat: "§YThe Sanctified Orders§!"
 hea_state_manage_decision_cat_desc: "" #Leave it empty - @Deez
 
-hea_com_manage_gui_northwest_button_tt: "Northwestern Commonwealth"
+hea_com_manage_gui_northwestern_button_tt: "Northwestern Commonwealth"
+hea_com_manage_gui_southwestern_button_tt: "Southwestern Commonwealth"
+hea_com_manage_gui_fourstates_button_tt: "Fourstates Commonwealth"
+hea_com_manage_gui_northern_button_tt: "Northern Commonwealth"
+hea_com_manage_gui_texan_button_tt: "Texan Commonwealth"
+hea_com_manage_gui_plains_button_tt: "Plains Commonwealth"
 
 hea_state_manage_gui_return_button_tt: "Return to Commonwealths View"
 hea_state_manage_gui_idaho_button_tt: "Idaho: Controlled by §W[HEA.GetNameWithFlag]§!"

@@ -50,9 +50,39 @@ guiTypes = {
 
 			#Northwestern Commonwealth
 			buttonType = {
-				name = "hea_com_manage_gui_northwest_button"
-				spriteType = GFX_hea_com_manage_gui_northwest_com
-				pdx_tooltip = hea_com_manage_gui_northwest_button_tt
+				name = "hea_com_manage_gui_northwestern_button"
+				spriteType = GFX_hea_com_manage_gui_northwestern_com
+				pdx_tooltip = hea_com_manage_gui_northwestern_button_tt
+			}
+			#Southwestern Commonwealth
+			buttonType = {
+				name = "hea_com_manage_gui_southwestern_button"
+				spriteType = GFX_hea_com_manage_gui_southwestern_com
+				pdx_tooltip = hea_com_manage_gui_southwestern_button_tt
+			}
+			#Fourstates Commonwealth
+			buttonType = {
+				name = "hea_com_manage_gui_fourstates_button"
+				spriteType = GFX_hea_com_manage_gui_fourstates_com
+				pdx_tooltip = hea_com_manage_gui_fourstates_button_tt
+			}
+			#Northern Commonwealth
+			buttonType = {
+				name = "hea_com_manage_gui_northern_button"
+				spriteType = GFX_hea_com_manage_gui_northern_com
+				pdx_tooltip = hea_com_manage_gui_northern_button_tt
+			}
+			#Texan Commonwealth
+			buttonType = {
+				name = "hea_com_manage_gui_texan_button"
+				spriteType = GFX_hea_com_manage_gui_texan_com
+				pdx_tooltip = hea_com_manage_gui_texan_button_tt
+			}
+			#Plains Commonwealth
+			buttonType = {
+				name = "hea_com_manage_gui_plains_button"
+				spriteType = GFX_hea_com_manage_gui_plains_com
+				pdx_tooltip = hea_com_manage_gui_plains_button_tt
 			}
 		}
 		#States View

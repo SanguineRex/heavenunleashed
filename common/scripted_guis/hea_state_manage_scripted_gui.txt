@@ -15,11 +15,35 @@ scripted_gui = {
 				check_variable = { hea_com_manage_gui_decision = 0 } #Full Commonwealth Map
 			}
 			#Northwestern Commonwealth
-			hea_com_manage_gui_northwest_button_visible = {
+			hea_com_manage_gui_northwestern_button_visible = {
 				check_variable = { hea_com_manage_gui_decision = 0 }
 			}
-			hea_com_manage_gui_northwest_button_click_enabled = { always = yes }
-
+			hea_com_manage_gui_northwestern_button_click_enabled = { always = yes }
+			#Southwestern Commonwealth
+			hea_com_manage_gui_southwestern_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 0 }
+			}
+			hea_com_manage_gui_southwestern_button_click_enabled = { always = yes }
+			#Fourstates Commonwealth
+			hea_com_manage_gui_fourstates_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 0 }
+			}
+			hea_com_manage_gui_fourstates_button_click_enabled = { always = yes }
+			#Northern Commonwealth
+			hea_com_manage_gui_northern_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 0 }
+			}
+			hea_com_manage_gui_northern_button_click_enabled = { always = yes }
+			#Texas Commonwealth
+			hea_com_manage_gui_texan_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 0 }
+			}
+			hea_com_manage_gui_texan_button_click_enabled = { always = yes }
+			#Plains Commonwealth
+			hea_com_manage_gui_plains_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 0 }
+			}
+			hea_com_manage_gui_plains_button_click_enabled = { always = yes }
 			#Return to Commonwealths View
 			hea_state_manage_gui_return_button_visible = {
 				NOT = { check_variable = { hea_com_manage_gui_decision = 0 } } #When ain't already in Commonwealth View
@@ -173,16 +197,40 @@ scripted_gui = {
 
 		effects = {
 			##Commonwealth Selections
-			#Northwestern Commonwealth
-			hea_com_manage_gui_northwest_button_click = {
-				set_variable = { hea_com_manage_gui_decision = 1 } #Show Northwestern Commonweath States View
-				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
-			}
-
-			#Return to Commonwealths View
+			#Return to Commonwealths View - 0
 			hea_state_manage_gui_return_button_click = {
 				set_variable = { hea_com_manage_gui_decision = 0 } #Go back to Commonwealths View
 				set_variable = { hea_state_manage_gui_decision = 0 } #Unselect the States to turn off glowing
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+			#Northwestern Commonwealth - 1
+			hea_com_manage_gui_northwestern_button_click = {
+				set_variable = { hea_com_manage_gui_decision = 1 } #Show Northwestern Commonweath States View
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+			#Southwestern Commonwealth - 2
+			hea_com_manage_gui_southwestern_button_click = {
+				set_variable = { hea_com_manage_gui_decision = 2 } #Show Southwestern Commonweath States View
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+			#Fourstates Commonwealth - 3
+			hea_com_manage_gui_fourstates_button_click = {
+				set_variable = { hea_com_manage_gui_decision = 3 } #Show Fourstates Commonweath States View
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+			#Northern Commonwealth - 4
+			hea_com_manage_gui_northern_button_click = {
+				set_variable = { hea_com_manage_gui_decision = 4 } #Show Northern Commonweath States View
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+			#Texan Commonwealth - 5
+			hea_com_manage_gui_texan_button_click = {
+				set_variable = { hea_com_manage_gui_decision = 5 } #Show Texan Commonweath States View
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+			#Plains Commonwealth - 6
+			hea_com_manage_gui_plains_button_click = {
+				set_variable = { hea_com_manage_gui_decision = 6 } #Show Plains Commonweath States View
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
 			}
 			#Idaho

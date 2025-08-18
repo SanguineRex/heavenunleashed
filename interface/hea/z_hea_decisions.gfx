@@ -11,24 +11,56 @@ spriteTypes = {
         alwaystransparent = yes
     }
 
-	#Northwest Commonwealth
-	spriteType = {
-		name = "GFX_hea_com_manage_gui_northwest_com"
-		texturefile = "gfx/interface/decisions/hea_state_management/northwest_com.dds"
-		transparencecheck = yes
-	}	
-    #HEA State Management stuff
-    spriteType = { #Background
-        name = "GFX_hea_state_manage_gui_background"
-        textureFile = "gfx/interface/decisions/hea_state_management/state_management_background.dds"
-        alwaystransparent = yes
-    }
 	#Return to Commonwealth View Button
 	spriteType = { 
 		name = "GFX_hea_state_manage_gui_return_button"
 		texturefile = "gfx/interface/decisions/hea_state_management/return_button.dds"
 		transparencecheck = yes
 	}
+	#Northwestern Commonwealth
+	spriteType = {
+		name = "GFX_hea_com_manage_gui_northwestern_com"
+		texturefile = "gfx/interface/decisions/hea_state_management/northwestern_com.dds"
+		transparencecheck = yes
+	}
+	#Southwestern Commonwealth
+	spriteType = {
+		name = "GFX_hea_com_manage_gui_southwestern_com"
+		texturefile = "gfx/interface/decisions/hea_state_management/southwestern_com.dds"
+		transparencecheck = yes
+	}
+	#Fourstates Commonwealth
+	spriteType = {
+		name = "GFX_hea_com_manage_gui_fourstates_com"
+		texturefile = "gfx/interface/decisions/hea_state_management/fourstates_com.dds"
+		transparencecheck = yes
+	}
+	#Northern Commonwealth
+	spriteType = {
+		name = "GFX_hea_com_manage_gui_northern_com"
+		texturefile = "gfx/interface/decisions/hea_state_management/northern_com.dds"
+		transparencecheck = yes
+	}
+	#Texan Commonwealth
+	spriteType = {
+		name = "GFX_hea_com_manage_gui_texan_com"
+		texturefile = "gfx/interface/decisions/hea_state_management/texan_com.dds"
+		transparencecheck = yes
+	}
+	#Plains Commonwealth
+	spriteType = {
+		name = "GFX_hea_com_manage_gui_plains_com"
+		texturefile = "gfx/interface/decisions/hea_state_management/plains_com.dds"
+		transparencecheck = yes
+	}
+
+    #HEA State Management stuff
+    spriteType = { #Background
+        name = "GFX_hea_state_manage_gui_background"
+        textureFile = "gfx/interface/decisions/hea_state_management/state_management_background.dds"
+        alwaystransparent = yes
+    }
+
 	#Idaho
 	spriteType = { #Idaho-HEA
 		name = "GFX_hea_state_manage_gui_idaho"
@@ -92,5 +124,5 @@ spriteTypes = {
 		name = "GFX_rot_state_manage_gui_selected_washington"
 		texturefile = "gfx/interface/decisions/hea_state_management/washington_state_rot_selected.dds"
 		transparencecheck = yes
-	}	
+	}
 }

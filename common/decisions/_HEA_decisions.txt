@@ -338,6 +338,16 @@
 ##Debug Decisions##
 ###################
 debug_decisions = {
+	hea_test_disable_trade_node_decision = {
+		allowed = {
+			original_tag = HEA
+		}
+		complete_effect = {
+			116 = {
+				disable_current_node = yes
+			}
+		}
+	}
 	hea_vengance_path_country_flag = {
 		allowed = {
 			original_tag = HEA
@@ -1077,11 +1087,21 @@ hea_monsters_of_the_wastes_cat = {
 	}
 }
 
-##########################
-##Territorial Management##
-##########################
+#################################################
+##Territorial Management - By yours truly, Deez##
+#################################################
+#Example:
+
+###################################
+#Commonwealth Name-Commonwealth ID#
+###################################
+
+###State Name-State ID###
 
 hea_state_manage_decision_cat = {
+	#############################
+	#Northwestern Commonwealth-1#
+	#############################
 	###IDAHO-1###
 	#Demand Northern Idaho
 	hea_state_manage_idaho_demand_rot_decision = { 
@@ -1593,7 +1613,215 @@ hea_state_manage_decision_cat = {
 			custom_effect_tooltip = state_manage_oregon_washington_border_decision_tt
 		}
 	}
+
+	#############################
+	#Southwestern Commonwealth-2#
+	#############################
+	###North California-1###
+	state_manage_northcali_test_decision = {
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 2 } #Southwestern Commonwealth		
+			check_variable = { hea_state_manage_gui_decision = 1 } #North California
+		}
+		complete_effect = {
+			add_political_power = 1
+		}
+	}
+	###South California-2###
+	state_manage_southcali_test_decision = {
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 2 } #Southwestern Commonwealth		
+			check_variable = { hea_state_manage_gui_decision = 2 } #South California
+		}
+		complete_effect = {
+			add_political_power = 2
+		}
+	}
+	###Nevada-3###
+	state_manage_nevada_test_decision = {
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 2 } #Southwestern Commonwealth		
+			check_variable = { hea_state_manage_gui_decision = 3 } #Nevada
+		}
+		complete_effect = {
+			add_political_power = 3
+		}
+	}
+
+	###########################
+	#Fourstates Commonwealth-3#
+	###########################
+	###Utah-1###
+	state_manage_utah_test_decision = {
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 3 } #Fourstates Commonwealth		
+			check_variable = { hea_state_manage_gui_decision = 1 } #Utah
+		}
+		complete_effect = {
+			add_political_power = 1
+		}
+	}
+	###Arizona-2###
+	state_manage_arizona_test_decision = {
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 3 } #Fourstates Commonwealth		
+			check_variable = { hea_state_manage_gui_decision = 2 } #Arizona
+		}
+		complete_effect = {
+			add_political_power = 2
+		}
+	}
+	###Colorado-3###
+	state_manage_colorado_test_decision = {
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 3 } #Fourstates Commonwealth		
+			check_variable = { hea_state_manage_gui_decision = 3 } #Colorado
+		}
+		complete_effect = {
+			add_political_power = 3
+		}
+	}
+	###New Mexico-4###
+	state_manage_newmexico_test_decision = {
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 3 } #Fourstates Commonwealth		
+			check_variable = { hea_state_manage_gui_decision = 4 } #New Mexico
+		}
+		complete_effect = {
+			add_political_power = 4
+		}
+	}
+	#########################
+	#Northern Commonwealth-4#
+	#########################
+	###Montana-1###
+	state_manage_montana_test_decision = {
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 4 } #Northern Commonwealth		
+			check_variable = { hea_state_manage_gui_decision = 1 } #Montana
+		}
+		complete_effect = {
+			add_political_power = 1
+		}
+	}
+	###Wyoming-2###
+	state_manage_wyoming_test_decision = {
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 4 } #Northern Commonwealth		
+			check_variable = { hea_state_manage_gui_decision = 2 } #Wyoming
+		}
+		complete_effect = {
+			add_political_power = 2
+		}
+	}
+	###North Dakota-3###
+	state_manage_northdakota_test_decision = {
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 4 } #Northern Commonwealth		
+			check_variable = { hea_state_manage_gui_decision = 3 } #North Dakota
+		}
+		complete_effect = {
+			add_political_power = 3
+		}
+	}
+	###South Dakota-4###
+	state_manage_southdakota_test_decision = {
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 4 } #Northern Commonwealth		
+			check_variable = { hea_state_manage_gui_decision = 4 } #South Dakota
+		}
+		complete_effect = {
+			add_political_power = 4
+		}
+	}
+	######################
+	#Texan Commonwealth-5#
+	######################
+	###Oklahoma-1###
+	state_manage_oklahoma_test_decision = {
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 5 } #Texan Commonwealth		
+			check_variable = { hea_state_manage_gui_decision = 1 } #Oklahoma
+		}
+		complete_effect = {
+			add_political_power = 1
+		}
+	}
+	###Texas-2###
+	state_manage_texas_test_decision = {
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 5 } #Texan Commonwealth		
+			check_variable = { hea_state_manage_gui_decision = 2 } #Texas
+		}
+		complete_effect = {
+			add_political_power = 2
+		}
+	}
+	###Arkansas-3###
+	state_manage_arkansas_test_decision = {
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 5 } #Texan Commonwealth		
+			check_variable = { hea_state_manage_gui_decision = 3 } #Arkansas
+		}
+		complete_effect = {
+			add_political_power = 3
+		}
+	}
+	###Louisiana-4###
+	state_manage_louisiana_test_decision = {
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 5 } #Texan Commonwealth		
+			check_variable = { hea_state_manage_gui_decision = 4 } #Louisiana
+		}
+		complete_effect = {
+			add_political_power = 4
+		}
+	}
+	#######################
+	#Plains Commonwealth-6#
+	#######################
+	###Nebraska-1###
+	state_manage_nebraska_test_decision = {
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 6 } #Plains Commonwealth		
+			check_variable = { hea_state_manage_gui_decision = 1 } #Nebraska
+		}
+		complete_effect = {
+			add_political_power = 1
+		}
+	}
+	###Kansas-2###
+	state_manage_kansas_test_decision = {
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 6 } #Plains Commonwealth		
+			check_variable = { hea_state_manage_gui_decision = 2 } #Kansas
+		}
+		complete_effect = {
+			add_political_power = 2
+		}
+	}
+	###Iowa-3###
+	state_manage_iowa_test_decision = {
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 6 } #Plains Commonwealth		
+			check_variable = { hea_state_manage_gui_decision = 3 } #Iowa
+		}
+		complete_effect = {
+			add_political_power = 3
+		}
+	}
+	###Missouri-4###
+	state_manage_missouri_test_decision = {
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 6 } #Plains Commonwealth		
+			check_variable = { hea_state_manage_gui_decision = 4 } #Missouri
+		}
+		complete_effect = {
+			add_political_power = 4
+		}
+	}
 }
+
 
 #########################################
 ##Theological Assembly-Forgiveness Path##

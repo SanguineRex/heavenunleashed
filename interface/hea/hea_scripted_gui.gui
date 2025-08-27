@@ -42,43 +42,43 @@ guiTypes = {
 			name = "hea_state_manage_gui_com_container"
 			position = { x = 3 y = -44 }
 
-			#Commonwealth View Background
+			#Commonwealth View Background-0
 			buttonType = {
 				name = "hea_com_manage_gui_background"
 				spriteType = GFX_hea_com_manage_gui_background
 			}
 
-			#Northwestern Commonwealth
+			#Northwestern Commonwealth-1
 			buttonType = {
 				name = "hea_com_manage_gui_northwestern_button"
 				spriteType = GFX_hea_com_manage_gui_northwestern_com
 				pdx_tooltip = hea_com_manage_gui_northwestern_button_tt
 			}
-			#Southwestern Commonwealth
+			#Southwestern Commonwealth-2
 			buttonType = {
 				name = "hea_com_manage_gui_southwestern_button"
 				spriteType = GFX_hea_com_manage_gui_southwestern_com
 				pdx_tooltip = hea_com_manage_gui_southwestern_button_tt
 			}
-			#Fourstates Commonwealth
+			#Fourstates Commonwealth-3
 			buttonType = {
 				name = "hea_com_manage_gui_fourstates_button"
 				spriteType = GFX_hea_com_manage_gui_fourstates_com
 				pdx_tooltip = hea_com_manage_gui_fourstates_button_tt
 			}
-			#Northern Commonwealth
+			#Northern Commonwealth-4
 			buttonType = {
 				name = "hea_com_manage_gui_northern_button"
 				spriteType = GFX_hea_com_manage_gui_northern_com
 				pdx_tooltip = hea_com_manage_gui_northern_button_tt
 			}
-			#Texan Commonwealth
+			#Texan Commonwealth-5
 			buttonType = {
 				name = "hea_com_manage_gui_texan_button"
 				spriteType = GFX_hea_com_manage_gui_texan_com
 				pdx_tooltip = hea_com_manage_gui_texan_button_tt
 			}
-			#Plains Commonwealth
+			#Plains Commonwealth-6
 			buttonType = {
 				name = "hea_com_manage_gui_plains_button"
 				spriteType = GFX_hea_com_manage_gui_plains_com
@@ -97,7 +97,8 @@ guiTypes = {
 				spriteType = GFX_hea_state_manage_gui_return_button
 				pdx_tooltip = hea_state_manage_gui_return_button_tt
 			}
-			#Idaho
+			##Northwestern Commonwealth States Group-1
+			#Idaho-1
 			buttonType = { #Idaho-Hea
 				name = "hea_state_manage_gui_idaho_button"
 				position = { x = 287 y = 38 }
@@ -113,7 +114,7 @@ guiTypes = {
 				pdx_tooltip_delayed = state_manage_gui_idaho_button_delay_tt
 			}
 
-			#Oregon
+			#Oregon-2
 			buttonType = { #Oregon-No Influence
 				name = "no_state_manage_gui_oregon_button"
 				position = { x = 79 y = 153 }
@@ -150,7 +151,7 @@ guiTypes = {
 				pdx_tooltip_delayed = state_manage_gui_oregon_button_delay_tt
 			}
 
-			#Washington
+			#Washington-3
 			buttonType = { #Washington-No Influence
 				name = "no_state_manage_gui_washington_button"
 				position = { x = 74 y = 38 }
@@ -185,7 +186,131 @@ guiTypes = {
 				spriteType = GFX_rot_state_manage_gui_selected_washington
 				pdx_tooltip = rot_state_manage_gui_washington_button_tt
 				pdx_tooltip_delayed = state_manage_gui_washington_button_delay_tt
-			}			
+			}
+
+			##Southwestern Commonwealth States Group-2
+			buttonType = { #North California-1
+				name = "state_manage_gui_northcali_button"
+				spriteType = GFX_state_manage_gui_northcali
+				pdx_tooltip = state_manage_gui_northcali_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_northcali_button_delay_tt
+			}
+			buttonType = { #South California-2
+				name = "state_manage_gui_southcali_button"
+				spriteType = GFX_state_manage_gui_southcali
+				pdx_tooltip = state_manage_gui_southcali_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_southcali_button_delay_tt
+			}
+			buttonType = { #Nevada-3
+				name = "state_manage_gui_nevada_button"
+				spriteType = GFX_state_manage_gui_nevada
+				pdx_tooltip = state_manage_gui_nevada_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_nevada_button_delay_tt
+			}
+
+			##Fourstates Commonwealth States Group-3
+			buttonType = { #Utah-1
+				name = "state_manage_gui_utah_button"
+				spriteType = GFX_state_manage_gui_utah
+				pdx_tooltip = state_manage_gui_utah_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_utah_button_delay_tt
+			}
+			buttonType = { #Arizona-2
+				name = "state_manage_gui_arizona_button"
+				spriteType = GFX_state_manage_gui_arizona
+				pdx_tooltip = state_manage_gui_arizona_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_arizona_button_delay_tt
+			}
+			buttonType = { #Colorado-3
+				name = "state_manage_gui_colorado_button"
+				spriteType = GFX_state_manage_gui_colorado
+				pdx_tooltip = state_manage_gui_colorado_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_colorado_button_delay_tt
+			}
+			buttonType = { #New Mexico-4
+				name = "state_manage_gui_newmexico_button"
+				spriteType = GFX_state_manage_gui_newmexico
+				pdx_tooltip = state_manage_gui_newmexico_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_newmexico_button_delay_tt
+			}
+
+			##Northern Commonwealth States Group-4
+			buttonType = { #Montana-1
+				name = "state_manage_gui_montana_button"
+				spriteType = GFX_state_manage_gui_montana
+				pdx_tooltip = state_manage_gui_montana_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_montana_button_delay_tt
+			}
+			buttonType = { #Wyoming-2
+				name = "state_manage_gui_wyoming_button"
+				spriteType = GFX_state_manage_gui_wyoming
+				pdx_tooltip = state_manage_gui_wyoming_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_wyoming_button_delay_tt
+			}
+			buttonType = { #North Dakota-3
+				name = "state_manage_gui_northdakota_button"
+				spriteType = GFX_state_manage_gui_northdakota
+				pdx_tooltip = state_manage_gui_northdakota_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_northdakota_button_delay_tt
+			}
+			buttonType = { #South Dakota-4
+				name = "state_manage_gui_southdakota_button"
+				spriteType = GFX_state_manage_gui_southdakota
+				pdx_tooltip = state_manage_gui_southdakota_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_southdakota_button_delay_tt
+			}
+
+			##Texan Commonwealth States Group-5
+			buttonType = { #Oklahoma-1
+				name = "state_manage_gui_oklahoma_button"
+				spriteType = GFX_state_manage_gui_oklahoma
+				pdx_tooltip = state_manage_gui_oklahoma_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_oklahoma_button_delay_tt
+			}
+			buttonType = { #Texas-2
+				name = "state_manage_gui_texas_button"
+				spriteType = GFX_state_manage_gui_texas
+				pdx_tooltip = state_manage_gui_texas_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_texas_button_delay_tt
+			}
+			buttonType = { #Arkansas-3
+				name = "state_manage_gui_arkansas_button"
+				spriteType = GFX_state_manage_gui_arkansas
+				pdx_tooltip = state_manage_gui_arkansas_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_arkansas_button_delay_tt
+			}
+			buttonType = { #Louisiana-4
+				name = "state_manage_gui_louisiana_button"
+				spriteType = GFX_state_manage_gui_louisiana
+				pdx_tooltip = state_manage_gui_louisiana_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_louisiana_button_delay_tt
+			}
+
+			##Plains Commonwealth States Group-6
+			buttonType = { #Nebraska-1
+				name = "state_manage_gui_nebraska_button"
+				spriteType = GFX_state_manage_gui_nebraska
+				pdx_tooltip = state_manage_gui_nebraska_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_nebraska_button_delay_tt
+			}
+			buttonType = { #Kansas-2
+				name = "state_manage_gui_kansas_button"
+				spriteType = GFX_state_manage_gui_kansas
+				pdx_tooltip = state_manage_gui_kansas_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_kansas_button_delay_tt
+			}
+			buttonType = { #Iowa-3
+				name = "state_manage_gui_iowa_button"
+				spriteType = GFX_state_manage_gui_iowa
+				pdx_tooltip = state_manage_gui_iowa_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_iowa_button_delay_tt
+			}
+			buttonType = { #Missouri-4
+				name = "state_manage_gui_missouri_button"
+				spriteType = GFX_state_manage_gui_missouri
+				pdx_tooltip = state_manage_gui_missouri_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_missouri_button_delay_tt
+			}
 		}
 	}
 	containerWindowType = {

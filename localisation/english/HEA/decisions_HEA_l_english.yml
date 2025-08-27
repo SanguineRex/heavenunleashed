@@ -151,64 +151,106 @@ hea_com_manage_gui_texan_button_tt: "Texan Commonwealth"
 hea_com_manage_gui_plains_button_tt: "Plains Commonwealth"
 
 hea_state_manage_gui_return_button_tt: "Return to Commonwealths View"
+
+##Northwestern Commonwealth States Group
+#Idaho
 hea_state_manage_gui_idaho_button_tt: "Idaho: Controlled by §W[HEA.GetNameWithFlag]§!"
 state_manage_gui_idaho_button_delay_tt: "§L\"The Gate was not built—it was revealed.\"\n\nIdaho is not merely land. It is the cradle of Revelation, the land where the first hymns of steam and salvation echoed across pine and ruin. Every inch is sacred, etched by the hands of saints, watered by the blood of pilgrims, and sanctified in the fires of the First Crusade. To surrender it is unthinkable. To partition it, heresy. Those who hold it without blessing must be corrected by prayer or by flame.§!"
+hea_state_manage_idaho_demand_rot_decision: "Reclaim Northern Idaho"
+hea_state_manage_idaho_demand_rot_decision_tt: "If §O[ROT.GetNameWithFlag]§! are §4friendly§! with us, they will be §Gmore likely§! to return our northern territories."
+hea_state_manage_idaho_demand_bdt_decision: "Reclaim Southwest Idaho"
+hea_state_manage_idaho_demand_bdt_decision_tt: "If §0[BDT.GetNameWithFlag]§! are §4friendly§! with us, they will be §Gmore likely§! to return our northern territories."
+hea_state_manage_idaho_demand_bdt_delay_decision_tt: "If §0[BDT.GetNameWithFlag]§! conquered §4[SHO.GetNameWithFlag]§!, we will instead §Yrequest§! the territory from them."
+hea_state_manage_idaho_integrate_north_decision: "Integrate Northern Idaho."
+hea_state_manage_idaho_pacify_dynamic_decision: "§RSuppress§! [FROM.GetNameWithFlag] heretics!"
 
+#Oregon
 no_state_manage_gui_oregon_button_tt: "Oregon: §gNo Influence§!"
 hea_state_manage_gui_oregon_button_tt: "Oregon: Controlled by §W[HEA.GetNameWithFlag]§!"
 bdt_state_manage_gui_oregon_button_tt: "Oregon: Controlled by §0[BDT.GetNameWithFlag]§!"
 state_manage_gui_oregon_button_delay_tt: "§L\"The land moans. The water seethes. The people devour each other.\"\n\nOregon is a graveyard of false faiths and broken tribes. Mirelurk cults worship titans in the rivers. Cannibals quote scripture as they carve. Nephilim, twisted giants of green muscle, roam in packs beneath shattered billboards. And yet, even here, light may rise. Cain and his ilk have begun carving order from blood and madness. So long as their rites align with purpose, the Gate shall not interfere. But the fires must be kept burning. This land cannot be left to rot.§!\n\nOregon control requirement:\n - Crowshaven"
+bdt_state_manage_oregon_mandate_decision: "Give §YThe Order of Oregon§! to §0[BDT.GetNameWithFlag]§!"
+bdt_state_manage_oregon_mandate_decision_tt: "Any §Ycurrent§! and §Yfuture§! states we owned in §YOregon§! will be §Ytransferred§! to §0[BDT.GetNameWithFlag]§!\n\n§RThis is irreversible!§!"
+state_manage_oregon_order_creation_decision: "Declare §YThe Order of Oregon§!"
+state_manage_oregon_order_creation_decision_tt: "The lands of §YOregon§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
+state_manage_oregon_conquest_dynamic_decision: "§RCrusades§! against [FROM.GetNameWithFlag]"
 
+#Washington
 no_state_manage_gui_washington_button_tt: "Washington: §gNo Influence§!"
 hea_state_manage_gui_washington_button_tt: "Washington: Controlled by §W[HEA.GetNameWithFlag]§!"
 rot_state_manage_gui_washington_button_tt: "Washington: Controlled by §O[ROT.GetNameWithFlag]§!"
 state_manage_gui_washington_button_delay_tt: "§L\"Their cities did not fall. They simply forgot to die.\"\n\nWashington is a relic of rot and memory. The Washington Brotherhood claws at Seattle, ghouls rule from crumbling halls, and heresies breed in the cracks of old empires. Only the Rotpurgers offer flame with purpose. If they join the Crusade, the land may heal. If not, judgment must fall. This land cannot be left to fester.§!\n\nWashington control requirement:\n - Spokane"
-
-#Idaho
-hea_state_manage_idaho_demand_rot_decision: "Reclaim Northern Idaho"
-hea_state_manage_idaho_demand_rot_decision_tt: "If §O[ROT.GetNameWithFlag]§! are §4friendly§! with us, they will be §Gmore likely§! to return our northern territories."
-
-hea_state_manage_idaho_demand_bdt_decision: "Reclaim Southwest Idaho"
-hea_state_manage_idaho_demand_bdt_decision_tt: "If §0[BDT.GetNameWithFlag]§! are §4friendly§! with us, they will be §Gmore likely§! to return our northern territories."
-hea_state_manage_idaho_demand_bdt_delay_decision_tt: "If §0[BDT.GetNameWithFlag]§! conquered §4[SHO.GetNameWithFlag]§!, we will instead §Yrequest§! the territory from them."
-
-hea_state_manage_idaho_integrate_north_decision: "Integrate Northern Idaho."
-
-hea_state_manage_idaho_pacify_dynamic_decision: "§RSuppress§! [FROM.GetNameWithFlag] heretics!"
-
-#Oregon
-bdt_state_manage_oregon_mandate_decision: "Give §YThe Order of Oregon§! to §0[BDT.GetNameWithFlag]§!"
-bdt_state_manage_oregon_mandate_decision_tt: "Any §Ycurrent§! and §Yfuture§! states we owned in §YOregon§! will be §Ytransferred§! to §0[BDT.GetNameWithFlag]§!\n\n§RThis is irreversible!§!"
-
-state_manage_oregon_order_creation_decision: "Declare §YThe Order of Oregon§!"
-state_manage_oregon_order_creation_decision_tt: "The lands of §YOregon§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
-
-state_manage_oregon_conquest_dynamic_decision: "§RCrusades§! against [FROM.GetNameWithFlag]"
-
-#Washington
 rot_state_manage_washington_mandate_decision: "Give §YThe Order of Washington§! to §O[ROT.GetNameWithFlag]§!"
 rot_state_manage_washington_mandate_decision_tt: "Any §Ycurrent§! and §Yfuture§! states we owned in §YWashington§! will be §Ytransferred§! to §O[ROT.GetNameWithFlag]§!\n\n§RThis is irreversible!§!"
-
 state_manage_washington_order_creation_decision: "Declare §YThe Order of Washington§!"
 state_manage_washington_order_creation_decision_tt: "The lands of §YWashington§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
 
-#Shared Oregon-Washington:
+#Shared Oregon-Washington
 state_manage_oregon_washington_border_decision: "Divide the land"
 state_manage_oregon_control_tt: "§YOregon§!"
 state_manage_washington_control_tt: "§YWashington§!"
 state_manage_oregon_washington_border_decision_tt: "§0[BDT.GetNameWithFlag]§! will take control of all lands in §YOregon§! and §O[ROT.GetNameWithFlag]§! will take control of all lands in §YWashington§!"
 
- # tooltips
-  hea_converted_state_tt:0 "The state will be converted"
-  hea_not_converted_state_tt:0 "We have not converted a state they own"
-  hea_convert_state_tt:0 "We have converted some or all of their states."
-  hea_bind_to_us_attempt_tt:0 "We will attempt to bind their state to ours!"
-  binding_someone:0 "Not already Binding Another to us."
-  binding_warning_tt:0 "The more of the targets states we have converted, the better the chance we have of success - but be warned, failure will undo our conversion work in a number of states!"
-  impassable_states_dont_matter:0 "§RNote: Impassable states do not matter when converting someone.§!"
-###################################
-# Spreading the Faith
-###################################
+##Southwestern Commonwealth States Group-2
+#North California-1
+state_manage_gui_northcali_button_tt: "North California"
+#South California-2
+state_manage_gui_southcali_button_tt: "South California"
+#Nevada-3
+state_manage_gui_nevada_button_tt: "Nevada"
+
+##Fourstates Commonwealth States Group-3
+#Utah-1
+state_manage_gui_utah_button_tt: "Utah"
+#Arizona-2
+state_manage_gui_arizona_button_tt: "Arizona"
+#Colorado-3
+state_manage_gui_colorado_button_tt: "Colorado"
+#New Mexico-4
+state_manage_gui_newmexico_button_tt: "New Mexico"
+
+##Northern Commonwealth States Group-4
+#Montana-1
+state_manage_gui_montana_button_tt: "Montana"
+#Wyoming-2
+state_manage_gui_wyoming_button_tt: "Wyoming"
+#North Dakota-3
+state_manage_gui_northdakota_button_tt: "North Dakota"
+#South Dakota-4
+state_manage_gui_southdakota_button_tt: "South Dakota"
+
+##Northern Commonwealth States Group-5
+#Oklahoma-1
+state_manage_gui_oklahoma_button_tt: "Oklahoma"
+#Texas-2
+state_manage_gui_texas_button_tt: "Texas"
+#Arkansas-3
+state_manage_gui_arkansas_button_tt: "Arkansas"
+#Louisiana-4
+state_manage_gui_louisiana_button_tt: "Louisiana"
+
+##Plains Commonwealth States Group-6
+#Nebraska-1
+state_manage_gui_nebraska_button_tt: "Nebraska"
+#Kansas-2
+state_manage_gui_kansas_button_tt: "Kansas"
+#Iowa-3
+state_manage_gui_iowa_button_tt: "Iowa"
+#Missouri-4
+state_manage_gui_missouri_button_tt: "Missouri"
+
+##I think this is OWB's, anything below this line - @Deez
+####tooltips 
+hea_converted_state_tt: "The state will be converted"
+hea_not_converted_state_tt: "We have not converted a state they own"
+hea_convert_state_tt: "We have converted some or all of their states."
+hea_bind_to_us_attempt_tt: "We will attempt to bind their state to ours!"
+binding_someone: "Not already Binding Another to us."
+binding_warning_tt: "The more of the targets states we have converted, the better the chance we have of success - but be warned, failure will undo our conversion work in a number of states!"
+impassable_states_dont_matter: "§RNote: Impassable states do not matter when converting someone.§!"
+#####################
+#Spreading the Faith#
+#####################
 
 HEA_findcathedrals: "§YFind Cathedrals§!"
 HEA_findcathedrals_desc: "A Cathedral and its Shepherds are prepared to spread the word by your leave..."

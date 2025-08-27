@@ -10,36 +10,36 @@ scripted_gui = {
 		}
 
 		triggers = {
-			#Commonwealth Map
+			#Commonwealths Map-0
 			hea_com_manage_gui_background_visible = {
 				check_variable = { hea_com_manage_gui_decision = 0 } #Full Commonwealth Map
 			}
-			#Northwestern Commonwealth
+			#Northwestern Commonwealth-1
 			hea_com_manage_gui_northwestern_button_visible = {
 				check_variable = { hea_com_manage_gui_decision = 0 }
 			}
 			hea_com_manage_gui_northwestern_button_click_enabled = { always = yes }
-			#Southwestern Commonwealth
+			#Southwestern Commonwealth-2
 			hea_com_manage_gui_southwestern_button_visible = {
 				check_variable = { hea_com_manage_gui_decision = 0 }
 			}
 			hea_com_manage_gui_southwestern_button_click_enabled = { always = yes }
-			#Fourstates Commonwealth
+			#Fourstates Commonwealth-3
 			hea_com_manage_gui_fourstates_button_visible = {
 				check_variable = { hea_com_manage_gui_decision = 0 }
 			}
 			hea_com_manage_gui_fourstates_button_click_enabled = { always = yes }
-			#Northern Commonwealth
+			#Northern Commonwealth-4
 			hea_com_manage_gui_northern_button_visible = {
 				check_variable = { hea_com_manage_gui_decision = 0 }
 			}
 			hea_com_manage_gui_northern_button_click_enabled = { always = yes }
-			#Texas Commonwealth
+			#Texan Commonwealth-5
 			hea_com_manage_gui_texan_button_visible = {
 				check_variable = { hea_com_manage_gui_decision = 0 }
 			}
 			hea_com_manage_gui_texan_button_click_enabled = { always = yes }
-			#Plains Commonwealth
+			#Plains Commonwealth-6
 			hea_com_manage_gui_plains_button_visible = {
 				check_variable = { hea_com_manage_gui_decision = 0 }
 			}
@@ -49,7 +49,8 @@ scripted_gui = {
 				NOT = { check_variable = { hea_com_manage_gui_decision = 0 } } #When ain't already in Commonwealth View
 			}
 			hea_state_manage_gui_return_button_click_enabled = { always = yes }
-			#Idaho
+			##Northwestern States Group-1
+			#Idaho-1
 			hea_state_manage_gui_idaho_button_visible = { #Not selected
 				check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 			}
@@ -60,7 +61,7 @@ scripted_gui = {
 			}
 			hea_state_manage_gui_idaho_selected_button_click_enabled = { always = yes } #Can click
 
-			#Oregon
+			#Oregon-2
 			no_state_manage_gui_oregon_button_visible = { #Oregon not under HEA's influence
 				check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 				71 = {
@@ -127,7 +128,7 @@ scripted_gui = {
 			}
 			bdt_state_manage_gui_oregon_selected_button_click_enabled = { always = yes } #Can always click on cause already handled in visible check
 
-			#Washington
+			#Washington-3
 			no_state_manage_gui_washington_button_visible = { #Washington not under HEA's influence
 				check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 				332 = {
@@ -193,6 +194,111 @@ scripted_gui = {
 				HEA = { check_variable = { hea_state_manage_gui_decision = 3 } }			
 			}
 			rot_state_manage_gui_washington_selected_button_click_enabled = { always = yes } #Can always click on cause already handled in visible check
+
+			##Southwestern Commonwealth States Group-2
+			#North California-1
+			state_manage_gui_northcali_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 2 } #Southwestern Commonwealth
+			}
+			state_manage_gui_northcali_button_click_enabled = { always = yes } #Can click
+			#South California-2
+			state_manage_gui_southcali_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 2 } #Southwestern Commonwealth
+			}
+			state_manage_gui_southcali_button_click_enabled = { always = yes } #Can click
+			#Nevada-3
+			state_manage_gui_nevada_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 2 } #Southwestern Commonwealth
+			}
+			state_manage_gui_nevada_button_click_enabled = { always = yes } #Can click
+
+			##Fourstates Commonwealth States Group-3
+			#Utah-1
+			state_manage_gui_utah_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 3 } #Fourstates Commonwealth
+			}
+			state_manage_gui_utah_button_click_enabled = { always = yes } #Can click
+			#Arizona-2
+			state_manage_gui_arizona_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 3 } #Fourstates Commonwealth
+			}
+			state_manage_gui_arizona_button_click_enabled = { always = yes } #Can click
+			#Colorado-3
+			state_manage_gui_colorado_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 3 } #Fourstates Commonwealth
+			}
+			state_manage_gui_colorado_button_click_enabled = { always = yes } #Can click
+			#New Mexico-4
+			state_manage_gui_newmexico_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 3 } #Fourstates Commonwealth
+			}
+			state_manage_gui_newmexico_button_click_enabled = { always = yes } #Can click
+
+			##Northern Commonwealth States Group-4
+			#Montana-1
+			state_manage_gui_montana_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 4 } #Northern Commonwealth
+			}
+			state_manage_gui_montana_button_click_enabled = { always = yes } #Can click
+			#Wyoming-2
+			state_manage_gui_wyoming_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 4 } #Northern Commonwealth
+			}
+			state_manage_gui_wyoming_button_click_enabled = { always = yes } #Can click
+			#North Dakota-3
+			state_manage_gui_northdakota_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 4 } #Northern Commonwealth
+			}
+			state_manage_gui_northdakota_button_click_enabled = { always = yes } #Can click
+			#South Dakota-4
+			state_manage_gui_southdakota_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 4 } #Northern Commonwealth
+			}
+			state_manage_gui_southdakota_button_click_enabled = { always = yes } #Can click
+
+			##Texan Commonwealth States Group-5
+			#Oklahoma-1
+			state_manage_gui_oklahoma_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 5 } #Texan Commonwealth
+			}
+			state_manage_gui_oklahoma_button_click_enabled = { always = yes } #Can click
+			#Texas-2
+			state_manage_gui_texas_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 5 } #Texan Commonwealth
+			}
+			state_manage_gui_texas_button_click_enabled = { always = yes } #Can click
+			#Arkansas-3
+			state_manage_gui_arkansas_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 5 } #Texan Commonwealth
+			}
+			state_manage_gui_arkansas_button_click_enabled = { always = yes } #Can click
+			#Louisiana-4
+			state_manage_gui_louisiana_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 5 } #Texan Commonwealth
+			}
+			state_manage_gui_louisiana_button_click_enabled = { always = yes } #Can click
+
+			##Plains Commonwealth States Group-6
+			#Nebraska-1
+			state_manage_gui_nebraska_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 6 } #Plains Commonwealth
+			}
+			state_manage_gui_nebraska_button_click_enabled = { always = yes } #Can click
+			#Kansas-2
+			state_manage_gui_kansas_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 6 } #Plains Commonwealth
+			}
+			state_manage_gui_kansas_button_click_enabled = { always = yes } #Can click
+			#Iowa-3
+			state_manage_gui_iowa_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 6 } #Plains Commonwealth
+			}
+			state_manage_gui_iowa_button_click_enabled = { always = yes } #Can click
+			#Missouri-4
+			state_manage_gui_missouri_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 6 } #Plains Commonwealth
+			}
+			state_manage_gui_missouri_button_click_enabled = { always = yes } #Can click
 		}
 
 		effects = {
@@ -233,7 +339,8 @@ scripted_gui = {
 				set_variable = { hea_com_manage_gui_decision = 6 } #Show Plains Commonweath States View
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
 			}
-			#Idaho
+			##Northwestern Commonwealth States Group-1
+			#Idaho-1
 			hea_state_manage_gui_idaho_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 1 } #Show Idaho Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
@@ -243,7 +350,7 @@ scripted_gui = {
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
 			}
 
-			#Oregon
+			#Oregon-2
 			hea_state_manage_gui_oregon_button_click = { #HEA
 				set_variable = { hea_state_manage_gui_decision = 2 } #Show Oregon Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
@@ -261,7 +368,7 @@ scripted_gui = {
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
 			}
 
-			#Washington
+			#Washington-3
 			hea_state_manage_gui_washington_button_click = { #HEA
 				set_variable = { hea_state_manage_gui_decision = 3 } #Show Washington Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
@@ -276,6 +383,111 @@ scripted_gui = {
 			}
 			rot_state_manage_gui_washington_selected_button_click = { #ROT-selected
 				set_variable = { hea_state_manage_gui_decision = 0 } #Close Washington Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+
+			##Southwestern Commonwealth States Group-2
+			#North California-1
+			state_manage_gui_northcali_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 1 } #Show North California Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+			#South California-2
+			state_manage_gui_southcali_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 2 } #Show South California Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+			#Nevada-3
+			state_manage_gui_nevada_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 3 } #Show Nevada Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+
+			##Fourstates Commonwealth States Group-3
+			#Utah-1
+			state_manage_gui_utah_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 1 } #Show Utah Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+			#Arizona-2
+			state_manage_gui_arizona_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 2 } #Show Arizona Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+			#Colorado-3
+			state_manage_gui_colorado_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 3 } #Show Colorado Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+			#New Mexico-4
+			state_manage_gui_newmexico_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 4 } #Show New Mexico Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+
+			##Northern Commonwealth States Group-4
+			#Montana-1
+			state_manage_gui_montana_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 1 } #Show Montana Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+			#Wyoming-2
+			state_manage_gui_wyoming_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 2 } #Show Wyoming Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+			#North Dakota-3
+			state_manage_gui_northdakota_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 3 } #Show North Dakota Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+			#South Dakota-4
+			state_manage_gui_southdakota_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 4 } #Show South Dakota Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+
+			##Texan Commonwealth States Group-5
+			#Oklahoma-1
+			state_manage_gui_oklahoma_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 1 } #Show Oklahoma Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+			#Texas-2
+			state_manage_gui_texas_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 2 } #Show Texas Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+			#Arkansas-3
+			state_manage_gui_arkansas_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 3 } #Show Arkansas Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+			#Louisiana-4
+			state_manage_gui_louisiana_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 4 } #Show Louisiana Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+
+			##Plains Commonwealth States Group-6
+			#Nebraska-1
+			state_manage_gui_nebraska_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 1 } #Show Nebraska Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+			#Kansas-2
+			state_manage_gui_kansas_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 2 } #Show Kansas Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+			#Iowa-3
+			state_manage_gui_iowa_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 3 } #Show Iowa Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+			}
+			#Missouri-4
+			state_manage_gui_missouri_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 4 } #Show Missouri Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
 			}
 		}

@@ -308,11 +308,19 @@ scripted_gui = {
 				set_variable = { hea_com_manage_gui_decision = 0 } #Go back to Commonwealths View
 				set_variable = { hea_state_manage_gui_decision = 0 } #Unselect the States to turn off glowing
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array #Clear dynamic map array
 			}
 			#Northwestern Commonwealth - 1
 			hea_com_manage_gui_northwestern_button_click = {
 				set_variable = { hea_com_manage_gui_decision = 1 } #Show Northwestern Commonweath States View
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				for_each_scope_loop = { #Input Northwestern Commonwealth states array
+					array = global.real_northwestern_com_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			#Southwestern Commonwealth - 2
 			hea_com_manage_gui_southwestern_button_click = {
@@ -344,46 +352,126 @@ scripted_gui = {
 			hea_state_manage_gui_idaho_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 1 } #Show Idaho Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Idaho states array
+					array = global.real_idaho_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			hea_state_manage_gui_idaho_selected_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 0 } #Close Idaho Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Northwestern Commonwealth states array
+					array = global.real_northwestern_com_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 
 			#Oregon-2
 			hea_state_manage_gui_oregon_button_click = { #HEA
 				set_variable = { hea_state_manage_gui_decision = 2 } #Show Oregon Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Oregon states array
+					array = global.real_oregon_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			hea_state_manage_gui_oregon_selected_button_click = { #HEA-selected
 				set_variable = { hea_state_manage_gui_decision = 0 } #Close Oregon Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Northwestern Commonwealth states array
+					array = global.real_northwestern_com_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			bdt_state_manage_gui_oregon_button_click = { #BDT
 				set_variable = { hea_state_manage_gui_decision = 2 } #Show Oregon Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Oregon states array
+					array = global.real_oregon_state_array
+					add_to_array = { 
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			bdt_state_manage_gui_oregon_selected_button_click = { #BDT-selected
 				set_variable = { hea_state_manage_gui_decision = 0 } #Close Oregon Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Northwestern Commonwealth states array
+					array = global.real_northwestern_com_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 
 			#Washington-3
 			hea_state_manage_gui_washington_button_click = { #HEA
 				set_variable = { hea_state_manage_gui_decision = 3 } #Show Washington Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Washington states array
+					array = global.real_washington_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			hea_state_manage_gui_washington_selected_button_click = { #HEA-selected
 				set_variable = { hea_state_manage_gui_decision = 0 } #Close Washington Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Northwestern Commonwealth states array
+					array = global.real_northwestern_com_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			rot_state_manage_gui_washington_button_click = { #ROT
 				set_variable = { hea_state_manage_gui_decision = 3 } #Show Washington Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Washington states array
+					array = global.real_washington_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			rot_state_manage_gui_washington_selected_button_click = { #ROT-selected
 				set_variable = { hea_state_manage_gui_decision = 0 } #Close Washington Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Northwestern Commonwealth states array
+					array = global.real_northwestern_com_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 
 			##Southwestern Commonwealth States Group-2

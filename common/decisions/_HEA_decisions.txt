@@ -334,6 +334,142 @@
 # 		}
 # 	}
 # }
+hea_test_cat = {
+	hea_test_clear_array_decision = {
+		complete_effect = {
+			add_political_power = 1
+			clear_array = global.real_idaho_state_array
+			clear_array = global.real_oregon_state_array
+			clear_array = global.real_washington_state_array
+			clear_array = global.real_northwestern_com_array
+		}
+	}
+	hea_make_array_idaho_decision = {
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						region = 10 #Idaho Panhandle
+						region = 33 #North-West Idaho
+						region = 4 #South Idaho
+						is_core_of = MUR
+						is_core_of = ANO
+						#SHO
+						state = 447
+						state = 304
+						#ROS
+						state = 595
+						state = 958
+						state = 963
+						#MCA
+						state = 281
+						#PAS
+						state = 972
+						state = 977
+						state = 973
+						state = 976
+					}
+				}
+				add_to_array = {
+					array = global.real_idaho_state_array
+					value = this.id
+				}
+			}	
+		}
+	}
+	hea_make_array_oregon_decision = {
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						region = 11 #West Oregon
+						is_core_of = KLA
+						is_core_of = BDT
+						is_core_of = MDT
+						is_core_of = TRL
+						is_core_of = CCW
+						is_core_of = RBT
+						#CHE
+						state = 426
+						state = 580
+						state = 536
+						#TCA
+						state = 37
+						#TIM
+						state = 345
+						state = 149
+						state = 399
+						state = 178
+						state = 491
+						state = 322
+						state = 434
+						state = 950
+						state = 53
+						state = 952
+						state = 587
+						state = 951
+					}
+				}
+				add_to_array = {
+					array = global.real_oregon_state_array
+					value = this.id
+				}
+			}
+		}
+	}
+	hea_make_array_washington_decision = {
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						region = 37 #West Washington
+						region = 36 #Central Washington
+						#BEL
+						state = 42
+						state = 48
+						state = 564
+						#SYN
+						state = 288
+						state = 338
+						#TIM
+						state = 51
+						state = 277
+					}
+				}
+				add_to_array = {
+					array = global.real_washington_state_array
+					value = this.id
+				}
+			}
+		}
+	}
+	hea_make_array_northwest_com_decision = {
+		complete_effect = {
+			for_each_scope_loop = {
+				array = global.real_idaho_state_array
+				add_to_array = {
+					array = global.real_northwestern_com_array
+					value = this.id
+				}
+			}
+			for_each_scope_loop = {
+				array = global.real_oregon_state_array
+				add_to_array = {
+					array = global.real_northwestern_com_array
+					value = this.id
+				}
+			}
+			for_each_scope_loop = {
+				array = global.real_washington_state_array
+				add_to_array = {
+					array = global.real_northwestern_com_array
+					value = this.id
+				}
+			}
+		}
+	}
+}
+
 ###################
 ##Debug Decisions##
 ###################
@@ -1284,7 +1420,7 @@ hea_state_manage_decision_cat = {
 			set_country_flag = hea_oregon_states_to_bdt
 			hidden_effect = {
 				for_each_scope_loop = {
-					array = global.oregon_state_array
+					array = global.real_oregon_state_array
 					if = {
 						limit = {
 							OR = {
@@ -1293,50 +1429,6 @@ hea_state_manage_decision_cat = {
 							}
 						}
 						transfer_state_to = BDT
-					}
-				}
-				949 = { #Impassable State, Strawberry Mountain 
-					if = {
-						limit = {
-							OR = {
-								is_owned_by = HEA
-								controller = { is_puppet_of = HEA }
-							}
-						}
-						transfer_state_to = BDT 
-					}
-				}
-				950 = { #Impassable State, Rock Creek Butte
-					if = {
-						limit = {
-							OR = {
-								is_owned_by = HEA
-								controller = { is_puppet_of = HEA }
-							}
-						}
-						transfer_state_to = BDT 
-					}
-				}
-				951 = {  #Impassable State, Wehana Toucannon
-					if = {
-						limit = {
-							OR = {
-								is_owned_by = HEA
-								controller = { is_puppet_of = HEA }
-							}
-						}
-						transfer_state_to = BDT 
-					}
-				}
-				952 = { #Impassable State, Wallowa Whitman
-					if = {
-						limit = {
-							OR = {
-								is_owned_by = HEA
-								controller = { is_puppet_of = HEA }
-							}
-						}
-						transfer_state_to = BDT 
 					}
 				}
 			}
@@ -1355,7 +1447,7 @@ hea_state_manage_decision_cat = {
 		available = {
 			has_completed_focus = HEA_foreign_relation_start
 			all_of_scopes = {
-				array = global.oregon_state_array
+				array = global.real_oregon_state_array
 				tooltip = state_manage_oregon_control_tt
 				OR = {
 					is_owned_and_controlled_by = ROOT
@@ -1382,13 +1474,9 @@ hea_state_manage_decision_cat = {
 			hidden_effect = {
 				release_puppet = KLA
 				for_each_scope_loop = {
-					array = global.oregon_state_array
+					array = global.real_oregon_state_array
 					transfer_state_to = KLA
 				}
-				949 = { transfer_state_to = KLA } #Impassable State, Strawberry Mountain 
-				950 = { transfer_state_to = KLA } #Impassable State, Rock Creek Butte
-				951 = { transfer_state_to = KLA } #Impassable State, Wehana Toucannon
-				952 = { transfer_state_to = KLA } #Impassable State, Wallowa Whitman
 				KLA = { 
 					set_cosmetic_tag = KLA_orders
 					add_state_core = 23 #West Portland
@@ -1471,7 +1559,7 @@ hea_state_manage_decision_cat = {
 			check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 			check_variable = { hea_state_manage_gui_decision = 3 } #Washington
 			ROT = { is_ally_with = ROOT }
-			NOT = { has_country_flag = hea_washington_states_order }
+			NOT = { has_country_flag = hea_washington_states_to_order }
 		}
 		available = {
 			has_completed_focus = HEA_foreign_relation_start
@@ -1487,7 +1575,7 @@ hea_state_manage_decision_cat = {
 			set_country_flag = hea_washington_states_to_rot
 			hidden_effect = {
 				for_each_scope_loop = {
-					array = global.washington_state_array
+					array = global.real_washington_state_array
 					if = {
 						limit = {
 							OR = {
@@ -1514,7 +1602,7 @@ hea_state_manage_decision_cat = {
 		available = {
 			has_completed_focus = HEA_foreign_relation_start
 			all_of_scopes = {
-				array = global.washington_state_array
+				array = global.real_washington_state_array
 				tooltip = state_manage_washington_control_tt
 				OR = {
 					is_owned_and_controlled_by = ROOT
@@ -1536,12 +1624,12 @@ hea_state_manage_decision_cat = {
 					add_idea = hea_foreign_relation_idea_order
 				}
 			}
-			set_country_flag = hea_washington_states_order
+			set_country_flag = hea_washington_states_to_order
 			custom_effect_tooltip = state_manage_washington_order_creation_decision_tt
 			hidden_effect = {
 				release_puppet = YAK
 				for_each_scope_loop = {
-					array = global.washington_state_array
+					array = global.real_washington_state_array
 					transfer_state_to = YAK
 				}
 				YAK = {
@@ -1577,7 +1665,7 @@ hea_state_manage_decision_cat = {
 		available = {
 			#Special thanks to LimonenZitrone for the array idea and Iron Vanguard for the premade arrays - @Deez
 			all_of_scopes = {
-				array = global.oregon_state_array
+				array = global.real_oregon_state_array
 				tooltip = state_manage_oregon_control_tt
 				OR = {
 					is_owned_and_controlled_by = ROOT
@@ -1585,7 +1673,7 @@ hea_state_manage_decision_cat = {
 				}
 			}
 			all_of_scopes = {
-				array = global.washington_state_array
+				array = global.real_washington_state_array
 				tooltip = state_manage_washington_control_tt
 				OR = {
 					is_owned_and_controlled_by = ROOT
@@ -1597,16 +1685,12 @@ hea_state_manage_decision_cat = {
 			hidden_effect = {
 				#Oregon
 				for_each_scope_loop = {
-					array = global.oregon_state_array
+					array = global.real_oregon_state_array
 					transfer_state_to = BDT
 				}
-				949 = { transfer_state_to = BDT } #Impassable State, Strawberry Mountain 
-				950 = { transfer_state_to = BDT } #Impassable State, Rock Creek Butte
-				951 = { transfer_state_to = BDT } #Impassable State, Wehana Toucannon
-				952 = { transfer_state_to = BDT } #Impassable State, Wallowa Whitman
 				#Washington
 				for_each_scope_loop = {
-					array = global.washington_state_array
+					array = global.real_washington_state_array
 					transfer_state_to = ROT
 				}
 			}

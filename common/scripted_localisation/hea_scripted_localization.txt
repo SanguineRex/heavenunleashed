@@ -195,3 +195,35 @@ define_text = {
         localization_key = hea_tame_nothing
     }
 }
+#States Manage Stuff
+define_text = {
+    name = hea_state_manage_decision_cat_map_scripted_loc
+    text = { #Northwestern Commonwealth
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 1 }
+            check_variable = { hea_state_manage_gui_decision = 0 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_com_northwestern
+    }
+    text = { #Idaho
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 1 }
+            check_variable = { hea_state_manage_gui_decision = 1 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_idaho
+    }
+    text = { #Oregon
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 1 }
+            check_variable = { hea_state_manage_gui_decision = 2 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_oregon
+    }
+    text = { #Washington
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 1 }
+            check_variable = { hea_state_manage_gui_decision = 3 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_washington
+    }
+}

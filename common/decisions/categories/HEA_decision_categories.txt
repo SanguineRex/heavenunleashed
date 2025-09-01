@@ -13,8 +13,25 @@
 #	}
 #}
 ####################
-#####################
-####################
+
+hea_test_cat = {
+	priority = 10000
+	allowed = {
+		original_tag = HEA
+	}
+	visible = {
+		always = yes
+	}
+	on_map_area = {
+		name = hea_test_cat_on_map_loc
+		#target_array = global.real_idaho_state_array
+		#target_array = global.real_oregon_state_array
+		#target_array = global.real_washington_state_array
+		target_array = global.real_northwestern_com_array
+		zoom = 400
+	}
+}
+
 ####################
 ##State Management##
 ####################
@@ -30,6 +47,11 @@ hea_state_manage_decision_cat = {
 	priority = 999
 	scripted_gui = hea_state_manage_scripted_gui
 	visible_when_empty = yes
+	on_map_area = {
+		target_array = global.hea_state_manage_dynamic_map_array
+		name = hea_state_manage_decision_cat_map_loc
+		zoom = 400
+	}
 }
 #####################
 ##Michael's Crusade##

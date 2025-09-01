@@ -143,6 +143,12 @@ hea_monsters_communists: "§RCommunists Targets Purged§!"
 hea_state_manage_decision_cat: "§YThe Sanctified Orders§!"
 hea_state_manage_decision_cat_desc: "" #Leave it empty - @Deez
 
+hea_state_manage_decision_cat_map_loc: "[hea_state_manage_decision_cat_map_scripted_loc]"
+hea_state_manage_decision_cat_map_scripted_loc_com_northwestern: "Show §YNorthwestern Commonwealth§! states"
+hea_state_manage_decision_cat_map_scripted_loc_state_idaho: "Show §YIdaho§! states"
+hea_state_manage_decision_cat_map_scripted_loc_state_oregon: "Show §YOregon§! states"
+hea_state_manage_decision_cat_map_scripted_loc_state_washington: "Show §YWashington§! states"
+
 hea_com_manage_gui_northwestern_button_tt: "Northwestern Commonwealth"
 hea_com_manage_gui_southwestern_button_tt: "Southwestern Commonwealth"
 hea_com_manage_gui_fourstates_button_tt: "Fourstates Commonwealth"

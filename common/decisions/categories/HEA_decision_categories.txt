@@ -14,23 +14,20 @@
 #}
 ####################
 
-hea_test_cat = {
-	priority = 10000
-	allowed = {
-		original_tag = HEA
-	}
-	visible = {
-		always = yes
-	}
-	on_map_area = {
-		name = hea_test_cat_on_map_loc
-		#target_array = global.real_idaho_state_array
-		#target_array = global.real_oregon_state_array
-		#target_array = global.real_washington_state_array
-		target_array = global.real_northwestern_com_array
-		zoom = 400
-	}
-}
+#hea_test_cat = {
+#	priority = 10000
+#	allowed = {
+#		original_tag = HEA
+#	}
+#	visible = {
+#		always = yes
+#	}
+#	on_map_area = {
+#		name = hea_test_cat_on_map_loc
+#		target_array = global.real_kansas_state_array
+#		zoom = 400
+#	}
+#}
 
 ####################
 ##State Management##

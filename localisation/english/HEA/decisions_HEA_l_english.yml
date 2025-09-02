@@ -148,6 +148,28 @@ hea_state_manage_decision_cat_map_scripted_loc_com_northwestern: "Show §YNorthw
 hea_state_manage_decision_cat_map_scripted_loc_state_idaho: "Show §YIdaho§! states"
 hea_state_manage_decision_cat_map_scripted_loc_state_oregon: "Show §YOregon§! states"
 hea_state_manage_decision_cat_map_scripted_loc_state_washington: "Show §YWashington§! states"
+hea_state_manage_decision_cat_map_scripted_loc_com_southwestern: "Show §YSouthwestern Commonwealth§! states"
+hea_state_manage_decision_cat_map_scripted_loc_state_northcali: "Show §YNorth California§! states"
+hea_state_manage_decision_cat_map_scripted_loc_state_southcali: "Show §YSouth California§! states"
+hea_state_manage_decision_cat_map_scripted_loc_state_nevada: "Show §YNevada§! states"
+hea_state_manage_decision_cat_map_scripted_loc_com_fourstates: "Show §YFourstates Commonwealth§! states" 
+hea_state_manage_decision_cat_map_scripted_loc_state_utah: "Show §YUtah§! states" 
+hea_state_manage_decision_cat_map_scripted_loc_state_arizona: "Show §YArizona§! states" 
+hea_state_manage_decision_cat_map_scripted_loc_state_colorado: "Show §YColorado§! states" 
+hea_state_manage_decision_cat_map_scripted_loc_state_newmexico: "Show §YNew Mexico§! states" 
+hea_state_manage_decision_cat_map_scripted_loc_com_northern: "Show §YNorthern Commonwealth§! states"
+hea_state_manage_decision_cat_map_scripted_loc_state_montana: "Show §YMontana§! states"
+hea_state_manage_decision_cat_map_scripted_loc_state_wyoming: "Show §YWyoming§! states"
+hea_state_manage_decision_cat_map_scripted_loc_state_northdakota: "Show §YNorth Dakota§! states"
+hea_state_manage_decision_cat_map_scripted_loc_state_southdakota: "Show §YSouth Dakota§! states"
+hea_state_manage_decision_cat_map_scripted_loc_com_texan: "Show §YTexan Commonwealth§! states"
+hea_state_manage_decision_cat_map_scripted_loc_state_oklahoma: "Show §YOklahoma§! states"
+hea_state_manage_decision_cat_map_scripted_loc_state_texas: "Show §YTexas§! states"
+hea_state_manage_decision_cat_map_scripted_loc_state_arkansas: "Show §YArkansas§! states"
+hea_state_manage_decision_cat_map_scripted_loc_state_louisiana: "Show §YLouisiana§! states"
+hea_state_manage_decision_cat_map_scripted_loc_com_plains: "Show §YPlains Commonwealth§! states"
+hea_state_manage_decision_cat_map_scripted_loc_state_nebraska: "Show §YNebraska§! states"
+hea_state_manage_decision_cat_map_scripted_loc_state_kansas: "Show §YKansas§! states"
 
 hea_com_manage_gui_northwestern_button_tt: "Northwestern Commonwealth"
 hea_com_manage_gui_southwestern_button_tt: "Southwestern Commonwealth"
@@ -200,46 +222,99 @@ state_manage_oregon_washington_border_decision_tt: "§0[BDT.GetNameWithFlag]§! 
 ##Southwestern Commonwealth States Group-2
 #North California-1
 state_manage_gui_northcali_button_tt: "North California"
+state_manage_northcali_control_tt: "§YNorth California§!"
+state_manage_northcali_order_creation_decision: "Declare §YThe Order of North California§!"
+state_manage_northcali_order_creation_decision_tt: "The lands of §YNorth California§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
+
 #South California-2
 state_manage_gui_southcali_button_tt: "South California"
+state_manage_southcali_control_tt: "§YSouth California§!"
+state_manage_southcali_order_creation_decision: "Declare §YThe Order of South California§!"
+state_manage_southcali_order_creation_decision_tt: "The lands of §YSouth California§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
+
 #Nevada-3
 state_manage_gui_nevada_button_tt: "Nevada"
+state_manage_nevada_control_tt: "§YNevada§!"
+state_manage_nevada_order_creation_decision: "Declare §YThe Order of Nevada§!"
+state_manage_nevada_order_creation_decision_tt: "The lands of §YNevada§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
 
 ##Fourstates Commonwealth States Group-3
 #Utah-1
 state_manage_gui_utah_button_tt: "Utah"
+state_manage_utah_control_tt: "§YUtah§!"
+state_manage_utah_order_creation_decision: "Declare §YThe Order of Utah§!"
+state_manage_utah_order_creation_decision_tt: "The lands of §YUtah§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
 #Arizona-2
 state_manage_gui_arizona_button_tt: "Arizona"
+state_manage_arizona_control_tt: "§YArizona§!"
+state_manage_arizona_order_creation_decision: "Declare §YThe Order of Arizona§!"
+state_manage_arizona_order_creation_decision_tt: "The lands of §YArizona§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
 #Colorado-3
 state_manage_gui_colorado_button_tt: "Colorado"
+state_manage_colorado_control_tt: "§YColorado§!"
+state_manage_colorado_order_creation_decision: "Declare §YThe Order of Colorado§!"
+state_manage_colorado_order_creation_decision_tt: "The lands of §YColorado§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
 #New Mexico-4
 state_manage_gui_newmexico_button_tt: "New Mexico"
+state_manage_newmexico_control_tt: "§YNew Mexico§!"
+state_manage_newmexico_order_creation_decision: "Declare §YThe Order of New Mexico§!"
+state_manage_newmexico_order_creation_decision_tt: "The lands of §YNew Mexico§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
 
 ##Northern Commonwealth States Group-4
 #Montana-1
 state_manage_gui_montana_button_tt: "Montana"
+state_manage_montana_control_tt: "§YMontana§!"
+state_manage_montana_order_creation_decision: "Declare §YThe Order of Montana§!"
+state_manage_montana_order_creation_decision_tt: "The lands of §YMontana§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
 #Wyoming-2
 state_manage_gui_wyoming_button_tt: "Wyoming"
+state_manage_wyoming_control_tt: "§YWyoming§!"
+state_manage_wyoming_order_creation_decision: "Declare §YThe Order of Wyoming§!"
+state_manage_wyoming_order_creation_decision_tt: "The lands of §YWyoming§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
 #North Dakota-3
 state_manage_gui_northdakota_button_tt: "North Dakota"
+state_manage_northdakota_control_tt: "§YNorth Dakota§!"
+state_manage_northdakota_order_creation_decision: "Declare §YThe Order of North Dakota§!"
+state_manage_northdakota_order_creation_decision_tt: "The lands of §YNorth Dakota§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
 #South Dakota-4
 state_manage_gui_southdakota_button_tt: "South Dakota"
+state_manage_southdakota_control_tt: "§YSouth Dakota§!"
+state_manage_southdakota_order_creation_decision: "Declare §YThe Order of South Dakota§!"
+state_manage_southdakota_order_creation_decision_tt: "The lands of §YSouth Dakota§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
 
 ##Northern Commonwealth States Group-5
 #Oklahoma-1
 state_manage_gui_oklahoma_button_tt: "Oklahoma"
+state_manage_oklahoma_control_tt: "§YOklahoma§!"
+state_manage_oklahoma_order_creation_decision: "Declare §YThe Order of Oklahoma§!"
+state_manage_oklahoma_order_creation_decision_tt: "The lands of §YOklahoma§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
 #Texas-2
 state_manage_gui_texas_button_tt: "Texas"
+state_manage_texas_control_tt: "§YTexas§!"
+state_manage_texas_order_creation_decision: "Declare §YThe Order of Texas§!"
+state_manage_texas_order_creation_decision_tt: "The lands of §YTexas§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
 #Arkansas-3
 state_manage_gui_arkansas_button_tt: "Arkansas"
+state_manage_arkansas_control_tt: "§YArkansas§!"
+state_manage_arkansas_order_creation_decision: "Declare §YThe Order of Arkansas§!"
+state_manage_arkansas_order_creation_decision_tt: "The lands of §YArkansas§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
 #Louisiana-4
 state_manage_gui_louisiana_button_tt: "Louisiana"
+state_manage_louisiana_control_tt: "§YLouisiana§!"
+state_manage_louisiana_order_creation_decision: "Declare §YThe Order of Louisiana§!"
+state_manage_louisiana_order_creation_decision_tt: "The lands of §YLouisiana§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
 
 ##Plains Commonwealth States Group-6
 #Nebraska-1
 state_manage_gui_nebraska_button_tt: "Nebraska"
+state_manage_nebraska_control_tt: "§YNebraska§!"
+state_manage_nebraska_order_creation_decision: "Declare §YThe Order of Nebraska§!"
+state_manage_nebraska_order_creation_decision_tt: "The lands of §YNebraska§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
 #Kansas-2
 state_manage_gui_kansas_button_tt: "Kansas"
+state_manage_kansas_control_tt: "§YKansas§!"
+state_manage_kansas_order_creation_decision: "Declare §YThe Order of Kansas§!"
+state_manage_kansas_order_creation_decision_tt: "The lands of §YKansas§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
 #Iowa-3
 state_manage_gui_iowa_button_tt: "Iowa"
 #Missouri-4

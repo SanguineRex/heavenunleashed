@@ -334,141 +334,41 @@
 # 		}
 # 	}
 # }
-hea_test_cat = {
-	hea_test_clear_array_decision = {
-		complete_effect = {
-			add_political_power = 1
-			clear_array = global.real_idaho_state_array
-			clear_array = global.real_oregon_state_array
-			clear_array = global.real_washington_state_array
-			clear_array = global.real_northwestern_com_array
-		}
-	}
-	hea_make_array_idaho_decision = {
-		complete_effect = {
-			every_state = {
-				limit = {
-					OR = {
-						region = 10 #Idaho Panhandle
-						region = 33 #North-West Idaho
-						region = 4 #South Idaho
-						is_core_of = MUR
-						is_core_of = ANO
-						#SHO
-						state = 447
-						state = 304
-						#ROS
-						state = 595
-						state = 958
-						state = 963
-						#MCA
-						state = 281
-						#PAS
-						state = 972
-						state = 977
-						state = 973
-						state = 976
-					}
-				}
-				add_to_array = {
-					array = global.real_idaho_state_array
-					value = this.id
-				}
-			}	
-		}
-	}
-	hea_make_array_oregon_decision = {
-		complete_effect = {
-			every_state = {
-				limit = {
-					OR = {
-						region = 11 #West Oregon
-						is_core_of = KLA
-						is_core_of = BDT
-						is_core_of = MDT
-						is_core_of = TRL
-						is_core_of = CCW
-						is_core_of = RBT
-						#CHE
-						state = 426
-						state = 580
-						state = 536
-						#TCA
-						state = 37
-						#TIM
-						state = 345
-						state = 149
-						state = 399
-						state = 178
-						state = 491
-						state = 322
-						state = 434
-						state = 950
-						state = 53
-						state = 952
-						state = 587
-						state = 951
-					}
-				}
-				add_to_array = {
-					array = global.real_oregon_state_array
-					value = this.id
-				}
-			}
-		}
-	}
-	hea_make_array_washington_decision = {
-		complete_effect = {
-			every_state = {
-				limit = {
-					OR = {
-						region = 37 #West Washington
-						region = 36 #Central Washington
-						#BEL
-						state = 42
-						state = 48
-						state = 564
-						#SYN
-						state = 288
-						state = 338
-						#TIM
-						state = 51
-						state = 277
-					}
-				}
-				add_to_array = {
-					array = global.real_washington_state_array
-					value = this.id
-				}
-			}
-		}
-	}
-	hea_make_array_northwest_com_decision = {
-		complete_effect = {
-			for_each_scope_loop = {
-				array = global.real_idaho_state_array
-				add_to_array = {
-					array = global.real_northwestern_com_array
-					value = this.id
-				}
-			}
-			for_each_scope_loop = {
-				array = global.real_oregon_state_array
-				add_to_array = {
-					array = global.real_northwestern_com_array
-					value = this.id
-				}
-			}
-			for_each_scope_loop = {
-				array = global.real_washington_state_array
-				add_to_array = {
-					array = global.real_northwestern_com_array
-					value = this.id
-				}
-			}
-		}
-	}
-}
+#hea_test_cat = {
+#	hea_make_array_idaho_decision = {
+#		complete_effect = {
+#			every_state = {
+#				limit = {
+#					OR = {
+#						region = 10 #Idaho Panhandle
+#						region = 33 #North-West Idaho
+#						region = 4 #South Idaho
+#						is_core_of = MUR
+#						is_core_of = ANO
+#						#SHO
+#						state = 447
+#						state = 304
+#						#ROS
+#						state = 595
+#						state = 958
+#						state = 963
+#						#MCA
+#						state = 281
+#						#PAS
+#						state = 972
+#						state = 977
+#						state = 973
+#						state = 976
+#					}
+#				}
+#				add_to_array = {
+#					array = global.real_idaho_state_array
+#					value = this.id
+#				}
+#			}	
+#		}
+#	}
+#}
 
 ###################
 ##Debug Decisions##
@@ -1711,6 +1611,64 @@ hea_state_manage_decision_cat = {
 			add_political_power = 1
 		}
 	}
+	##The Order of North California
+	state_manage_northcali_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 2 } #Southwestern Commonwealth	
+			check_variable = { hea_state_manage_gui_decision = 1 } #North California
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			all_of_scopes = {
+				array = global.real_northcali_state_array
+				tooltip = state_manage_northcali_control_tt
+				OR = {
+					impassable = yes
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_northcali_states_to_order
+			custom_effect_tooltip = state_manage_northcali_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = FOU
+				for_each_scope_loop = {
+					array = global.real_northcali_state_array
+					transfer_state_to = FOU
+				}
+				FOU = { 
+					#set_cosmetic_tag = FOU_orders
+					add_state_core = 163 #San Francisco
+					set_capital = { state = 163 } #San Francisco
+					add_state_core = 141 #Redding
+					add_state_core = 548 #Navarro
+					add_state_core = 135 #Sac-City
+					add_state_core = 253 #Shady Sands
+					add_state_core = 489 #Junktown
+					add_state_core = 245 #Maxson
+					remove_ideas = {
+						FOU_trading_crossroad
+						arr_rock_and_a_hard_place
+					}
+					set_country_flag = locked_economy_law
+					add_ideas = {
+						free_trade #Open their market for trade
+					}
+				}	
+			}
+		}
+	}
 	###South California-2###
 	state_manage_southcali_test_decision = {
 		visible = {
@@ -1721,6 +1679,62 @@ hea_state_manage_decision_cat = {
 			add_political_power = 2
 		}
 	}
+	##The Order of South California
+	state_manage_southcali_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 2 } #Southwestern Commonwealth	
+			check_variable = { hea_state_manage_gui_decision = 2 } #South California
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			all_of_scopes = {
+				array = global.real_southcali_state_array
+				tooltip = state_manage_southcali_control_tt
+				OR = {
+					impassable = yes
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_southcali_states_to_order
+			custom_effect_tooltip = state_manage_southcali_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = MOS
+				for_each_scope_loop = {
+					array = global.real_southcali_state_array
+					transfer_state_to = MOS
+				}
+				MOS = { 
+					#set_cosmetic_tag = MOS_orders
+					add_state_core = 211 #New Vegas
+					set_capital = { state = 211 } #New Vegas
+					add_state_core = 350 #The Boneyard
+					add_state_core = 252 #Hoover Dam
+					add_state_core = 63 #Greater Dayglow
+					remove_ideas = {
+						mos_storms_of_the_divide
+						mos_old_world_heritage
+						MOS_one_of_two
+					}
+					set_country_flag = locked_economy_law
+					add_ideas = {
+						free_trade #Open their market for trade
+					}
+				}	
+			}
+		}
+	}
 	###Nevada-3###
 	state_manage_nevada_test_decision = {
 		visible = {
@@ -1729,6 +1743,62 @@ hea_state_manage_decision_cat = {
 		}
 		complete_effect = {
 			add_political_power = 3
+		}
+	}
+	##The Order of Nevada
+	state_manage_nevada_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 2 } #Southwestern Commonwealth	
+			check_variable = { hea_state_manage_gui_decision = 3 } #Nevada
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			all_of_scopes = {
+				array = global.real_nevada_state_array
+				tooltip = state_manage_nevada_control_tt
+				OR = {
+					impassable = yes
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_nevada_states_to_order
+			custom_effect_tooltip = state_manage_nevada_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = RUB
+				for_each_scope_loop = {
+					array = global.real_nevada_state_array
+					transfer_state_to = RUB
+				}
+				RUB = { 
+					#set_cosmetic_tag = RUB_orders
+					add_state_core = 291 #Vault City
+					set_capital = { state = 291 } #Vault City
+					add_state_core = 614 #New Reno Outskirts
+					add_state_core = 285 #New Reno
+					add_state_core = 210 #Guardian Citadel
+					add_state_core = 389 #Area 51
+					add_state_core = 478 #Wendover
+					remove_ideas = {
+						RUB_the_red_jewels
+					}
+					set_country_flag = locked_economy_law
+					add_ideas = {
+						free_trade #Open their market for trade
+					}
+				}	
+			}
 		}
 	}
 
@@ -1745,6 +1815,62 @@ hea_state_manage_decision_cat = {
 			add_political_power = 1
 		}
 	}
+	##The Order of Utah
+	state_manage_utah_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 3 } #Fourstates Commonwealth	
+			check_variable = { hea_state_manage_gui_decision = 1 } #Utah
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			all_of_scopes = {
+				array = global.real_utah_state_array
+				tooltip = state_manage_utah_control_tt
+				OR = {
+					impassable = yes
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_utah_states_to_order
+			custom_effect_tooltip = state_manage_utah_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = BRI
+				for_each_scope_loop = {
+					array = global.real_utah_state_array
+					transfer_state_to = BRI
+				}
+				BRI = { 
+					#set_cosmetic_tag = BRI_orders
+					add_state_core = 266 #New Jerusalem
+					set_capital = { state = 266 } #New Jerusalem
+					add_state_core = 488 #Frisco City
+					add_state_core = 496 #Vault 24
+					add_state_core = 456 #Dead Horse Point
+					add_state_core = 43 #Zion
+					add_state_core = 457 #Farfield
+					remove_ideas = {
+						utah_BRI_tungsten_production
+					}
+					set_country_flag = locked_economy_law
+					add_ideas = {
+						free_trade #Open their market for trade
+					}
+				}	
+			}
+		}
+	}
 	###Arizona-2###
 	state_manage_arizona_test_decision = {
 		visible = {
@@ -1753,6 +1879,57 @@ hea_state_manage_decision_cat = {
 		}
 		complete_effect = {
 			add_political_power = 2
+		}
+	}
+	##The Order of Arizona
+	state_manage_arizona_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 3 } #Fourstates Commonwealth	
+			check_variable = { hea_state_manage_gui_decision = 2 } #Arizona
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			all_of_scopes = {
+				array = global.real_arizona_state_array
+				tooltip = state_manage_arizona_control_tt
+				OR = {
+					impassable = yes
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_arizona_states_to_order
+			custom_effect_tooltip = state_manage_arizona_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = PHR
+				for_each_scope_loop = {
+					array = global.real_arizona_state_array
+					transfer_state_to = PHR
+				}
+				PHR = { 
+					#set_cosmetic_tag = PHR_orders
+					add_state_core = 520 #Flagstaff
+					add_state_core = 381 #Quartz Site
+					remove_ideas = {
+						PHR_the_phoenix_rises
+					}
+					set_country_flag = locked_economy_law
+					add_ideas = {
+						free_trade #Open their market for trade
+					}
+				}	
+			}
 		}
 	}
 	###Colorado-3###
@@ -1765,6 +1942,62 @@ hea_state_manage_decision_cat = {
 			add_political_power = 3
 		}
 	}
+	##The Order of Colorado
+	state_manage_colorado_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 3 } #Fourstates Commonwealth	
+			check_variable = { hea_state_manage_gui_decision = 3 } #Colorado
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			all_of_scopes = {
+				array = global.real_colorado_state_array
+				tooltip = state_manage_colorado_control_tt
+				OR = {
+					impassable = yes
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_colorado_states_to_order
+			custom_effect_tooltip = state_manage_colorado_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = CLJ
+				for_each_scope_loop = {
+					array = global.real_colorado_state_array
+					transfer_state_to = CLJ
+				}
+				CLJ = { 
+					#set_cosmetic_tag = CLJ_orders
+					add_state_core = 525 #Dog City
+					set_capital = { state = 525 } #Dog City
+					add_state_core = 90 #Ouroboros
+					add_state_core = 203 #New Navajo
+					add_state_core = 554 #Twin Mothers
+					add_state_core = 586 #Pueblo City
+					add_state_core = 572 #The Penitentiary
+					remove_ideas = {
+						CLJ_explosive_lust
+					}
+					set_country_flag = locked_economy_law
+					add_ideas = {
+						free_trade #Open their market for trade
+					}
+				}	
+			}
+		}
+	}
 	###New Mexico-4###
 	state_manage_newmexico_test_decision = {
 		visible = {
@@ -1773,6 +2006,64 @@ hea_state_manage_decision_cat = {
 		}
 		complete_effect = {
 			add_political_power = 4
+		}
+	}
+	##The Order of New Mexico
+	state_manage_newmexico_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 3 } #Fourstates Commonwealth	
+			check_variable = { hea_state_manage_gui_decision = 4 } #New Mexico
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			all_of_scopes = {
+				array = global.real_newmexico_state_array
+				tooltip = state_manage_newmexico_control_tt
+				OR = {
+					impassable = yes
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_newmexico_states_to_order
+			custom_effect_tooltip = state_manage_newmexico_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = ASF
+				for_each_scope_loop = {
+					array = global.real_newmexico_state_array
+					transfer_state_to = ASF
+				}
+				ASF = { 
+					#set_cosmetic_tag = ASF_orders
+					add_state_core = 522 #Red Sun City
+					set_capital = { state = 522 } #Red Sun City
+					add_state_core = 5 #Castra Sol Rubrum
+					add_state_core = 546 #Fort Summer
+					add_state_core = 634 #Los Alamos
+					add_state_core = 566 #Plainsrunners
+					add_state_core = 234 #The Pass
+					remove_ideas = {
+						asf_the_memorabilia
+						asf_legacy_of_saint_leibowitz
+						lac_legacy_of_pallus
+					}
+					set_country_flag = locked_economy_law
+					add_ideas = {
+						free_trade #Open their market for trade
+					}
+				}	
+			}
 		}
 	}
 	#########################
@@ -1788,6 +2079,62 @@ hea_state_manage_decision_cat = {
 			add_political_power = 1
 		}
 	}
+	##The Order of Montana
+	state_manage_montana_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 4 } #Northern Commonwealth	
+			check_variable = { hea_state_manage_gui_decision = 1 } #Montana
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			all_of_scopes = {
+				array = global.real_montana_state_array
+				tooltip = state_manage_montana_control_tt
+				OR = {
+					impassable = yes
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_montana_states_to_order
+			custom_effect_tooltip = state_manage_montana_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = CPK
+				for_each_scope_loop = {
+					array = global.real_montana_state_array
+					transfer_state_to = CPK
+				}
+				CPK = { 
+					#set_cosmetic_tag = CPK_orders
+					add_state_core = 1046 #Rosebud
+					add_state_core = 1013 #Magic City
+					add_state_core = 653 #Great Falls
+					add_state_core = 989 #Gibson Flats
+					add_state_core = 965 #Missoula
+					add_state_core = 1023 #Fairview
+					remove_ideas = {
+						CPK_stand_your_ground
+						CPK_traders_fee
+					}
+					set_country_flag = locked_economy_law
+					add_ideas = {
+						free_trade #Open their market for trade
+					}
+				}	
+			}
+		}
+	}
 	###Wyoming-2###
 	state_manage_wyoming_test_decision = {
 		visible = {
@@ -1796,6 +2143,63 @@ hea_state_manage_decision_cat = {
 		}
 		complete_effect = {
 			add_political_power = 2
+		}
+	}
+	##The Order of Wyoming
+	state_manage_wyoming_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 4 } #Northern Commonwealth	
+			check_variable = { hea_state_manage_gui_decision = 2 } #Wyoming
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			all_of_scopes = {
+				array = global.real_wyoming_state_array
+				tooltip = state_manage_wyoming_control_tt
+				OR = {
+					impassable = yes
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_wyoming_states_to_order
+			custom_effect_tooltip = state_manage_wyoming_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = GLC
+				for_each_scope_loop = {
+					array = global.real_wyoming_state_array
+					transfer_state_to = GLC
+				}
+				GLC = { 
+					#set_cosmetic_tag = GLC_orders
+					add_state_core = 1040 #Baileytown
+					add_state_core = 129 #Cheyenne Ruins
+					add_state_core = 1032 #Rock Springs
+					add_state_core = 1036 #Rawlins
+					add_state_core = 590 #Yellowstone
+					add_state_core = 1030 #Warland
+					remove_ideas = {
+						glc_guides_of_the_cradle
+						glc_pilgrim_path
+						glc_glowing_rebels
+					}
+					set_country_flag = locked_economy_law
+					add_ideas = {
+						free_trade #Open their market for trade
+					}
+				}	
+			}
 		}
 	}
 	###North Dakota-3###
@@ -1808,6 +2212,63 @@ hea_state_manage_decision_cat = {
 			add_political_power = 3
 		}
 	}
+	##The Order of North Dakota
+	state_manage_northdakota_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 4 } #Northern Commonwealth	
+			check_variable = { hea_state_manage_gui_decision = 3 } #North Dakota
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			all_of_scopes = {
+				array = global.real_northdakota_state_array
+				tooltip = state_manage_northdakota_control_tt
+				OR = {
+					impassable = yes
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_northdakota_states_to_order
+			custom_effect_tooltip = state_manage_northdakota_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = ATM
+				for_each_scope_loop = {
+					array = global.real_northdakota_state_array
+					transfer_state_to = ATM
+				}
+				ATM = {
+					#set_cosmetic_tag = ATM_orders
+					add_state_core = 1111 #Bismark
+					set_capital = { state = 1111 } #Bismark
+					add_state_core = 1201 #Vault 37
+					add_state_core = 1085 #Wetford City
+					add_state_core = 1082 #Alexandertown
+					add_state_core = 1309 #Grifton
+					add_state_core = 1250 #Sheyenne Valley
+					add_state_core = 1079 #Pick City
+					remove_ideas = {
+						ATM_deluge_of_fire
+					}
+					set_country_flag = locked_economy_law
+					add_ideas = {
+						free_trade #Open their market for trade
+					}
+				}	
+			}
+		}
+	}
 	###South Dakota-4###
 	state_manage_southdakota_test_decision = {
 		visible = {
@@ -1816,6 +2277,64 @@ hea_state_manage_decision_cat = {
 		}
 		complete_effect = {
 			add_political_power = 4
+		}
+	}
+	##The Order of South Dakota
+	state_manage_southdakota_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 4 } #Northern Commonwealth	
+			check_variable = { hea_state_manage_gui_decision = 4 } #South Dakota
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			all_of_scopes = {
+				array = global.real_southdakota_state_array
+				tooltip = state_manage_southdakota_control_tt
+				OR = {
+					impassable = yes
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_southdakota_states_to_order
+			custom_effect_tooltip = state_manage_southdakota_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = LAP
+				for_each_scope_loop = {
+					array = global.real_southdakota_state_array
+					transfer_state_to = LAP
+				}
+				LAP = {
+					#set_cosmetic_tag = LAP_orders
+					add_state_core = 169 #Fort Pierre
+					set_capital = { state = 169 } #Fort Pierre
+					add_state_core = 1071 #Whitehorse
+					add_state_core = 1068 #Buffalo Pastures
+					add_state_core = 1044 #Rapid City
+					add_state_core = 1002 #The Scrapyard
+					add_state_core = 1003 #Arrival
+					remove_ideas = {
+						lap_idea_ghost_dance
+						lap_idea_beastlord_migrants
+						lap_idea_lakota_faith
+					}
+					set_country_flag = locked_economy_law
+					add_ideas = {
+						free_trade #Open their market for trade
+					}
+				}	
+			}
 		}
 	}
 	######################
@@ -1831,6 +2350,61 @@ hea_state_manage_decision_cat = {
 			add_political_power = 1
 		}
 	}
+	##The Order of Oklahoma
+	state_manage_oklahoma_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 5 } #Texan Commonwealth	
+			check_variable = { hea_state_manage_gui_decision = 1 } #Oklahoma
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			all_of_scopes = {
+				array = global.real_oklahoma_state_array
+				tooltip = state_manage_oklahoma_control_tt
+				OR = {
+					impassable = yes
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_oklahoma_states_to_order
+			custom_effect_tooltip = state_manage_oklahoma_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = SCA
+				for_each_scope_loop = {
+					array = global.real_oklahoma_state_array
+					transfer_state_to = SCA
+				}
+				SCA = {
+					#set_cosmetic_tag = SCA_orders
+					add_state_core = 868 #Oak City
+					set_capital = { state = 868 } #Oak City
+					add_state_core = 617 #Tulsa
+					add_state_core = 869 #Poteau
+					add_state_core = 103 #First People's Junction
+					remove_ideas = {
+						sca_ineffectual_government
+						sca_scrapyard_heritage
+					}
+					set_country_flag = locked_economy_law
+					add_ideas = {
+						free_trade #Open their market for trade
+					}
+				}	
+			}
+		}
+	}
 	###Texas-2###
 	state_manage_texas_test_decision = {
 		visible = {
@@ -1839,6 +2413,62 @@ hea_state_manage_decision_cat = {
 		}
 		complete_effect = {
 			add_political_power = 2
+		}
+	}
+	##The Order of Texas
+	state_manage_texas_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 5 } #Texan Commonwealth	
+			check_variable = { hea_state_manage_gui_decision = 2 } #Texas
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			all_of_scopes = {
+				array = global.real_texas_state_array
+				tooltip = state_manage_texas_control_tt
+				OR = {
+					impassable = yes
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_texas_states_to_order
+			custom_effect_tooltip = state_manage_texas_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = HRO
+				for_each_scope_loop = {
+					array = global.real_texas_state_array
+					transfer_state_to = HRO
+				}
+				HRO = {
+					#set_cosmetic_tag = HRO_orders
+					add_state_core = 915 #Austin
+					set_capital = { state = 915 } #Austin
+					add_state_core = 892 #Dallas
+					add_state_core = 921 #Lone Star
+					add_state_core = 908 #San Antonio
+					add_state_core = 795 #T.A.A. Estate
+					add_state_core = 677 #Los
+					remove_ideas = {
+						HRO_ussa_headquarters
+					}
+					set_country_flag = locked_economy_law
+					add_ideas = {
+						free_trade #Open their market for trade
+					}
+				}	
+			}
 		}
 	}
 	###Arkansas-3###
@@ -1851,6 +2481,65 @@ hea_state_manage_decision_cat = {
 			add_political_power = 3
 		}
 	}
+	##The Order of Arkansas
+	state_manage_arkansas_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 5 } #Texan Commonwealth	
+			check_variable = { hea_state_manage_gui_decision = 3 } #Arkansas
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			DSP = { #Special check due to DSP have more than 1 core outside of Arkansas - @Deez
+				all_core_state = {
+					OR = {
+						is_owned_and_controlled_by = ROOT
+						controller = {
+							is_ally_with = ROOT
+						}
+					}
+				}
+			}
+			all_of_scopes = {
+				array = global.real_arkansas_state_array
+				tooltip = state_manage_arkansas_control_tt
+				OR = {
+					impassable = yes
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_arkansas_states_to_order
+			custom_effect_tooltip = state_manage_arkansas_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = DSP
+				for_each_scope_loop = {
+					array = global.real_arkansas_state_array
+					transfer_state_to = DSP
+				}
+				DSP = {
+					#set_cosmetic_tag = DSP_orders
+					remove_ideas = {
+						highwaymen_of_louisiana
+					}
+					set_country_flag = locked_economy_law
+					add_ideas = {
+						free_trade #Open their market for trade
+					}
+				}	
+			}
+		}
+	}
 	###Louisiana-4###
 	state_manage_louisiana_test_decision = {
 		visible = {
@@ -1859,6 +2548,58 @@ hea_state_manage_decision_cat = {
 		}
 		complete_effect = {
 			add_political_power = 4
+		}
+	}
+	##The Order of Louisiana
+	state_manage_louisiana_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 5 } #Texan Commonwealth	
+			check_variable = { hea_state_manage_gui_decision = 4 } #Louisiana
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			all_of_scopes = {
+				array = global.real_louisiana_state_array
+				tooltip = state_manage_louisiana_control_tt
+				OR = {
+					impassable = yes
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_louisiana_states_to_order
+			custom_effect_tooltip = state_manage_louisiana_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = BAM
+				for_each_scope_loop = {
+					array = global.real_louisiana_state_array
+					transfer_state_to = BAM
+				}
+				BAM = {
+					#set_cosmetic_tag = BAM_orders
+					add_state_core = 875 #Lafayette
+					add_state_core = 874 #Alexandria
+					remove_ideas = {
+						BAM_canning_our_food
+						bam_obvious_target
+					}
+					set_country_flag = locked_economy_law
+					add_ideas = {
+						free_trade #Open their market for trade
+					}
+				}	
+			}
 		}
 	}
 	#######################
@@ -1874,6 +2615,59 @@ hea_state_manage_decision_cat = {
 			add_political_power = 1
 		}
 	}
+	##The Order of Nebraska
+	state_manage_nebraska_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 6 } #Plains Commonwealth	
+			check_variable = { hea_state_manage_gui_decision = 1 } #Nebraska
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			all_of_scopes = {
+				array = global.real_nebraska_state_array
+				tooltip = state_manage_nebraska_control_tt
+				OR = {
+					impassable = yes
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_nebraska_states_to_order
+			custom_effect_tooltip = state_manage_nebraska_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = OST
+				for_each_scope_loop = {
+					array = global.real_nebraska_state_array
+					transfer_state_to = OST
+				}
+				OST = {
+					#set_cosmetic_tag = OST_orders
+					add_state_core = 158 #Newton
+					add_state_core = 995 #Hanged Man's Landing
+					add_state_core = 1004 #The Last Redoubt
+					remove_ideas = {
+						ost_idea_bastionofpurity
+						ost_idea_thepriests
+					}
+					set_country_flag = locked_economy_law
+					add_ideas = {
+						free_trade #Open their market for trade
+					}
+				}	
+			}
+		}
+	}
 	###Kansas-2###
 	state_manage_kansas_test_decision = {
 		visible = {
@@ -1882,6 +2676,56 @@ hea_state_manage_decision_cat = {
 		}
 		complete_effect = {
 			add_political_power = 2
+		}
+	}
+	##The Order of Kansas
+	state_manage_kansas_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 6 } #Plains Commonwealth	
+			check_variable = { hea_state_manage_gui_decision = 2 } #Kansas
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			all_of_scopes = {
+				array = global.real_kansas_state_array
+				tooltip = state_manage_kansas_control_tt
+				OR = {
+					impassable = yes
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_kansas_states_to_order
+			custom_effect_tooltip = state_manage_kansas_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = ROB
+				for_each_scope_loop = {
+					array = global.real_kansas_state_array
+					transfer_state_to = ROB
+				}
+				ROB = {
+					#set_cosmetic_tag = ROB_orders
+					remove_ideas = {
+						machine_commune
+						ROB_city_of_vagrants
+					}
+					set_country_flag = locked_economy_law
+					add_ideas = {
+						free_trade #Open their market for trade
+					}
+				}	
+			}
 		}
 	}
 	###Iowa-3###

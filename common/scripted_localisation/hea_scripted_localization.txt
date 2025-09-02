@@ -198,7 +198,7 @@ define_text = {
 #States Manage Stuff
 define_text = {
     name = hea_state_manage_decision_cat_map_scripted_loc
-    text = { #Northwestern Commonwealth
+    text = { ###Northwestern Commonwealth###
         trigger = {
             check_variable = { hea_com_manage_gui_decision = 1 }
             check_variable = { hea_state_manage_gui_decision = 0 }
@@ -225,5 +225,159 @@ define_text = {
             check_variable = { hea_state_manage_gui_decision = 3 }
         }
         localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_washington
+    }
+    text = { ###Southwestern Commonwealth###
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 2 }
+            check_variable = { hea_state_manage_gui_decision = 0 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_com_southwestern
+    }
+    text = { #North California
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 2 }
+            check_variable = { hea_state_manage_gui_decision = 1 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_northcali
+    }
+    text = { #South California
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 2 }
+            check_variable = { hea_state_manage_gui_decision = 2 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_southcali
+    }
+    text = { #Nevada
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 2 }
+            check_variable = { hea_state_manage_gui_decision = 3 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_nevada
+    }
+    text = { ###Fourstates Commonwealth###
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 3 }
+            check_variable = { hea_state_manage_gui_decision = 0 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_com_fourstates
+    }
+    text = { #Utah
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 3 }
+            check_variable = { hea_state_manage_gui_decision = 1 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_utah
+    }
+    text = { #Arizona
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 3 }
+            check_variable = { hea_state_manage_gui_decision = 2 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_arizona
+    }
+    text = { #Colorado
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 3 }
+            check_variable = { hea_state_manage_gui_decision = 3 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_colorado
+    }
+    text = { #New Mexico
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 3 }
+            check_variable = { hea_state_manage_gui_decision = 4 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_newmexico
+    }
+    text = { ###Northern Commonwealth###
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 4 }
+            check_variable = { hea_state_manage_gui_decision = 0 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_com_northern
+    }
+    text = { #Montana
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 4 }
+            check_variable = { hea_state_manage_gui_decision = 1 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_montana
+    }
+    text = { #Wyoming
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 4 }
+            check_variable = { hea_state_manage_gui_decision = 2 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_wyoming
+    }
+    text = { #North Dakota
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 4 }
+            check_variable = { hea_state_manage_gui_decision = 3 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_northdakota
+    }
+    text = { #South Dakota
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 4 }
+            check_variable = { hea_state_manage_gui_decision = 4 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_southdakota
+    }
+    text = { ###Texan Commonwealth###
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 5 }
+            check_variable = { hea_state_manage_gui_decision = 0 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_com_texan
+    }
+    text = { #Oklahoma
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 5 }
+            check_variable = { hea_state_manage_gui_decision = 1 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_oklahoma
+    }
+    text = { #Texas
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 5 }
+            check_variable = { hea_state_manage_gui_decision = 2 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_texas
+    }
+    text = { #Arkansas
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 5 }
+            check_variable = { hea_state_manage_gui_decision = 3 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_arkansas
+    }
+    text = { #Louisiana
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 5 }
+            check_variable = { hea_state_manage_gui_decision = 4 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_louisiana
+    }
+    text = { ###Plains Commonwealth###
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 6 }
+            check_variable = { hea_state_manage_gui_decision = 0 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_com_plains
+    }
+    text = { #Nebraska
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 6 }
+            check_variable = { hea_state_manage_gui_decision = 1 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_nebraska
+    }
+    text = { #Kansas
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 6 }
+            check_variable = { hea_state_manage_gui_decision = 2 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_kansas
     }
 }

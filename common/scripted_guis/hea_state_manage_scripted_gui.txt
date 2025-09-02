@@ -326,26 +326,61 @@ scripted_gui = {
 			hea_com_manage_gui_southwestern_button_click = {
 				set_variable = { hea_com_manage_gui_decision = 2 } #Show Southwestern Commonweath States View
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				for_each_scope_loop = { #Input Southwestern Commonwealth states array
+					array = global.real_southwestern_com_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			#Fourstates Commonwealth - 3
 			hea_com_manage_gui_fourstates_button_click = {
 				set_variable = { hea_com_manage_gui_decision = 3 } #Show Fourstates Commonweath States View
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				for_each_scope_loop = { #Input Fourstates Commonwealth states array
+					array = global.real_fourstates_com_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			#Northern Commonwealth - 4
 			hea_com_manage_gui_northern_button_click = {
 				set_variable = { hea_com_manage_gui_decision = 4 } #Show Northern Commonweath States View
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				for_each_scope_loop = { #Input Northern Commonwealth states array
+					array = global.real_northern_com_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			#Texan Commonwealth - 5
 			hea_com_manage_gui_texan_button_click = {
 				set_variable = { hea_com_manage_gui_decision = 5 } #Show Texan Commonweath States View
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				for_each_scope_loop = { #Input Texan Commonwealth states array
+					array = global.real_texan_com_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			#Plains Commonwealth - 6
 			hea_com_manage_gui_plains_button_click = {
 				set_variable = { hea_com_manage_gui_decision = 6 } #Show Plains Commonweath States View
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				for_each_scope_loop = { #Input Plains Commonwealth states array
+					array = global.real_plains_com_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			##Northwestern Commonwealth States Group-1
 			#Idaho-1
@@ -479,16 +514,40 @@ scripted_gui = {
 			state_manage_gui_northcali_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 1 } #Show North California Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input North California states array
+					array = global.real_northcali_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			#South California-2
 			state_manage_gui_southcali_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 2 } #Show South California Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input South California states array
+					array = global.real_southcali_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			#Nevada-3
 			state_manage_gui_nevada_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 3 } #Show Nevada Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Nevada states array
+					array = global.real_nevada_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 
 			##Fourstates Commonwealth States Group-3
@@ -496,21 +555,53 @@ scripted_gui = {
 			state_manage_gui_utah_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 1 } #Show Utah Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Utah states array
+					array = global.real_utah_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			#Arizona-2
 			state_manage_gui_arizona_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 2 } #Show Arizona Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Arizona states array
+					array = global.real_arizona_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			#Colorado-3
 			state_manage_gui_colorado_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 3 } #Show Colorado Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Colorado states array
+					array = global.real_colorado_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			#New Mexico-4
 			state_manage_gui_newmexico_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 4 } #Show New Mexico Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input New Mexico states array
+					array = global.real_newmexico_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 
 			##Northern Commonwealth States Group-4
@@ -518,21 +609,53 @@ scripted_gui = {
 			state_manage_gui_montana_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 1 } #Show Montana Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Montana states array
+					array = global.real_montana_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			#Wyoming-2
 			state_manage_gui_wyoming_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 2 } #Show Wyoming Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Wyoming states array
+					array = global.real_wyoming_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			#North Dakota-3
 			state_manage_gui_northdakota_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 3 } #Show North Dakota Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input North Dakota states array
+					array = global.real_northdakota_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			#South Dakota-4
 			state_manage_gui_southdakota_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 4 } #Show South Dakota Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input South Dakota states array
+					array = global.real_southdakota_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 
 			##Texan Commonwealth States Group-5
@@ -540,21 +663,53 @@ scripted_gui = {
 			state_manage_gui_oklahoma_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 1 } #Show Oklahoma Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Oklahoma states array
+					array = global.real_oklahoma_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			#Texas-2
 			state_manage_gui_texas_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 2 } #Show Texas Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Texas states array
+					array = global.real_texas_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			#Arkansas-3
 			state_manage_gui_arkansas_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 3 } #Show Arkansas Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Arkansas states array
+					array = global.real_arkansas_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			#Louisiana-4
 			state_manage_gui_louisiana_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 4 } #Show Louisiana Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Louisiana states array
+					array = global.real_louisiana_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 
 			##Plains Commonwealth States Group-6
@@ -562,21 +717,39 @@ scripted_gui = {
 			state_manage_gui_nebraska_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 1 } #Show Nebraska Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Nebraska states array
+					array = global.real_nebraska_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			#Kansas-2
 			state_manage_gui_kansas_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 2 } #Show Kansas Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
+				for_each_scope_loop = { #Input Kansas states array
+					array = global.real_kansas_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
 			}
 			#Iowa-3
 			state_manage_gui_iowa_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 3 } #Show Iowa Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
 			}
 			#Missouri-4
 			state_manage_gui_missouri_button_click = {
 				set_variable = { hea_state_manage_gui_decision = 4 } #Show Missouri Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				clear_array = global.hea_state_manage_dynamic_map_array
 			}
 		}
 	}

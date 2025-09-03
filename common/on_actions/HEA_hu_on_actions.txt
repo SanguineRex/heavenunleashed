@@ -747,6 +747,230 @@ on_actions = {
 					}
 				}
 			}
+			#Utah
+			if = { #BRI
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_utah_states_to_order
+					}
+					ROOT = { original_tag = BRI }
+				}
+				FROM = {
+					set_autonomy = {
+						target = ROOT
+						autonomous_state = autonomy_convert
+					}
+				}
+			}
+			#Arizona
+			if = { #PHR
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_arizona_states_to_order
+					}
+					ROOT = { original_tag = PHR }
+				}
+				FROM = {
+					set_autonomy = {
+						target = ROOT
+						autonomous_state = autonomy_convert
+					}
+				}
+			}
+			#Colorado
+			if = { #CLJ
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_colorado_states_to_order
+					}
+					ROOT = { original_tag = CLJ }
+				}
+				FROM = {
+					set_autonomy = {
+						target = ROOT
+						autonomous_state = autonomy_convert
+					}
+				}
+			}
+			#New Mexico
+			if = { #ASF
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_newmexico_states_to_order
+					}
+					ROOT = { original_tag = ASF }
+				}
+				FROM = {
+					set_autonomy = {
+						target = ROOT
+						autonomous_state = autonomy_convert
+					}
+				}
+			}
+			#Montana
+			if = { #CPK
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_montana_states_to_order
+					}
+					ROOT = { original_tag = CPK }
+				}
+				FROM = {
+					set_autonomy = {
+						target = ROOT
+						autonomous_state = autonomy_convert
+					}
+				}
+			}
+			#Wyoming
+			if = { #GLC
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_wyoming_states_to_order
+					}
+					ROOT = { original_tag = GLC }
+				}
+				FROM = {
+					set_autonomy = {
+						target = ROOT
+						autonomous_state = autonomy_convert
+					}
+				}
+			}
+			#North Dakota
+			if = { #ATM
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_northdakota_states_to_order
+					}
+					ROOT = { original_tag = ATM }
+				}
+				FROM = {
+					set_autonomy = {
+						target = ROOT
+						autonomous_state = autonomy_convert
+					}
+				}
+			}
+			#South Dakota
+			if = { #LAP
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_southdakota_states_to_order
+					}
+					ROOT = { original_tag = LAP }
+				}
+				FROM = {
+					set_autonomy = {
+						target = ROOT
+						autonomous_state = autonomy_convert
+					}
+				}
+			}
+			#Oklahoma
+			if = { #SCA
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_oklahoma_states_to_order
+					}
+					ROOT = { original_tag = SCA }
+				}
+				FROM = {
+					set_autonomy = {
+						target = ROOT
+						autonomous_state = autonomy_convert
+					}
+				}
+			}
+			#Texas
+			if = { #HRO
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_texas_states_to_order
+					}
+					ROOT = { original_tag = HRO }
+				}
+				FROM = {
+					set_autonomy = {
+						target = ROOT
+						autonomous_state = autonomy_convert
+					}
+				}
+			}
+			#Arkansas
+			if = { #DSP
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_arkansas_states_to_order
+					}
+					ROOT = { original_tag = DSP }
+				}
+				FROM = {
+					set_autonomy = {
+						target = ROOT
+						autonomous_state = autonomy_convert
+					}
+				}
+			}
+			#Louisiana
+			if = { #BAM
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_louisiana_states_to_order
+					}
+					ROOT = { original_tag = BAM }
+				}
+				FROM = {
+					set_autonomy = {
+						target = ROOT
+						autonomous_state = autonomy_convert
+					}
+				}
+			}
+			#Nebraska
+			if = { #OST
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_nebraska_states_to_order
+					}
+					ROOT = { original_tag = OST }
+				}
+				FROM = {
+					set_autonomy = {
+						target = ROOT
+						autonomous_state = autonomy_convert
+					}
+				}
+			}
+			#Kansas
+			if = { #ROB
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_kansas_states_to_order
+					}
+					ROOT = { original_tag = ROB }
+				}
+				FROM = {
+					set_autonomy = {
+						target = ROOT
+						autonomous_state = autonomy_convert
+					}
+				}
+			}
 		}
 	}
 	on_startup = {

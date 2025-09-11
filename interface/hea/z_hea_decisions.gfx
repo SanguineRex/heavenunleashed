@@ -53,6 +53,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/hea_state_management/plains_com.dds"
 		transparencecheck = yes
 	}
+	#Canadian Commonwealth-14
+	spriteType = {
+		name = "GFX_hea_com_manage_gui_canadian_com"
+		texturefile = "gfx/interface/decisions/hea_state_management/canadian_com.dds"
+		transparencecheck = yes
+	}
+	#Mexican Commonwealth-15
+	spriteType = {
+		name = "GFX_hea_com_manage_gui_mexican_com"
+		texturefile = "gfx/interface/decisions/hea_state_management/mexican_com.dds"
+		transparencecheck = yes
+	}
 
     #HEA State Management stuff
     spriteType = { #Background
@@ -242,6 +254,20 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_state_manage_gui_missouri"
 		texturefile = "gfx/interface/decisions/hea_state_management/missouri_state.dds"
+		transparencecheck = yes
+	}
+	##Canadian Territories States Group-14
+	#Canada-1
+	spriteType = {
+		name = "GFX_state_manage_gui_canada"
+		texturefile = "gfx/interface/decisions/hea_state_management/canada_state.dds"
+		transparencecheck = yes
+	}
+	##Mexican Territories States Group-15
+	#Mexico-1
+	spriteType = {
+		name = "GFX_state_manage_gui_mexico"
+		texturefile = "gfx/interface/decisions/hea_state_management/mexico_state.dds"
 		transparencecheck = yes
 	}
 }

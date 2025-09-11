@@ -334,41 +334,98 @@
 # 		}
 # 	}
 # }
-#hea_test_cat = {
-#	hea_make_array_idaho_decision = {
-#		complete_effect = {
-#			every_state = {
-#				limit = {
-#					OR = {
-#						region = 10 #Idaho Panhandle
-#						region = 33 #North-West Idaho
-#						region = 4 #South Idaho
-#						is_core_of = MUR
-#						is_core_of = ANO
-#						#SHO
-#						state = 447
-#						state = 304
-#						#ROS
-#						state = 595
-#						state = 958
-#						state = 963
-#						#MCA
-#						state = 281
-#						#PAS
-#						state = 972
-#						state = 977
-#						state = 973
-#						state = 976
-#					}
-#				}
-#				add_to_array = {
-#					array = global.real_idaho_state_array
-#					value = this.id
-#				}
-#			}	
-#		}
-#	}
-#}
+hea_test_cat = {
+	hea_make_array_canada_decision = {
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						region = 171 #Central Manitoba
+						region = 169 #Western Manitoba
+						region = 168 #Northern Manitoba
+						region = 170 #Monkatchewan Expanse
+						region = 166 #Expanse of the Unknown Border
+						region = 167 #The Katch
+						region = 185 #Eastern Great White Wall
+						region = 186 #Great Green Glow
+						region = 184 #Haze of American Hatred
+						region = 163 #Northeast Alberta
+						region = 165 #The Alvertan 'Steppe'
+						region = 158 #Southern Alberta
+						region = 164 #Central Alberta
+						region = 162 #Northwest Alberta
+						region = 161 #Western Great White Wall
+						region = 84 #Canadian Rockies
+						region = 60 #South Columbia
+						region = 35 #Eastern Columbia
+						region = 61 #Northwest Columbia
+						region = 89 #Northeast Columbia
+						region = 14 #Columbian Outlying Islands
+						region = 183 #Gulliver's Run
+					}
+					NOT = {
+						state = 1304
+						state = 1296
+						state = 1300
+						state = 1297
+						is_core_of = UNB
+						state = 1294
+						state = 1292
+						state = 1293
+						state = 972
+						state = 977
+						state = 973
+						state = 976
+						state = 338
+						state = 288
+						state = 564
+						state = 48
+						state = 42
+					}
+				}
+				add_to_array = {
+					array = global.real_canada_state_array
+					value = this.id
+				}
+			}	
+		}
+	}
+	hea_make_array_mexico_decision = {
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						region = 8 #Baja California
+						region = 13 #West Sonora
+						region = 50 #East Sonora
+						is_core_of = RBD
+						is_core_of = LGS
+						is_core_of = SIN
+						is_core_of = FFI
+						is_core_of = RRG
+						is_core_of = BLO
+						is_core_of = TVR
+						is_core_of = TLA
+						is_core_of = ARM
+						is_core_of = PET
+						is_core_of = ATE
+						is_core_of = ITZ
+						is_core_of = CAF
+						is_core_of = TDT
+						is_core_of = GRH
+					}
+					NOT = {
+						is_core_of = TAA
+					}
+				}
+				add_to_array = {
+					array = global.real_mexico_state_array
+					value = this.id
+				}
+			}	
+		}
+	}
+}
 
 ###################
 ##Debug Decisions##
@@ -2746,6 +2803,138 @@ hea_state_manage_decision_cat = {
 		}
 		complete_effect = {
 			add_political_power = 4
+		}
+	}
+	#########################
+	#Canadian Territories-14#
+	#########################
+	##The Order of Canada
+	state_manage_canada_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 14 } #Canadian Territories
+			check_variable = { hea_state_manage_gui_decision = 1 } #Canada
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			all_of_scopes = {
+				array = global.real_canada_state_array
+				tooltip = state_manage_canada_control_tt
+				OR = {
+					impassable = yes
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_canada_states_to_order
+			custom_effect_tooltip = state_manage_canada_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = MJW
+				for_each_scope_loop = {
+					array = global.real_canada_state_array
+					transfer_state_to = MJW
+				}
+				MJW = {
+					#set_cosmetic_tag = MJW_orders
+					add_state_core = 21 #Koover
+					add_state_core = 420 #New Victoria
+					add_state_core = 1206 #Calgary
+					add_state_core = 1161 #Red Deer
+					add_state_core = 1110 #North Redmond
+					add_state_core = 1109 #South Redmond
+					add_state_core = 1263 #Grey Stable
+					add_state_core = 1319 #Regina
+					add_state_core = 1105 #Brandon
+					set_capital = { state = 1105 } #Brandon
+					add_state_core = 1188 #Stoon
+					add_state_core = 1108 #The North End
+					add_state_core = 1101 #Fort Garry
+					add_state_core = 1100 #Transcona
+					remove_ideas = {
+						MJW_resolute_pacifists
+					}
+					set_country_flag = locked_economy_law
+					add_ideas = {
+						free_trade #Open their market for trade
+					}
+				}	
+			}
+		}
+	}
+	########################
+	#Mexican Territories-15#
+	########################
+	##The Order of Mexico
+	state_manage_mexico_order_creation_decision = {
+		icon = GFX_decision_generic_colonial_administration
+		fire_only_once = yes
+		visible = {
+			check_variable = { hea_com_manage_gui_decision = 15 } #Mexican Territories
+			check_variable = { hea_state_manage_gui_decision = 1 } #Mexico
+		}
+		available = {
+			has_completed_focus = HEA_foreign_relation_start
+			all_of_scopes = {
+				array = global.real_mexico_state_array
+				tooltip = state_manage_mexico_control_tt
+				OR = {
+					impassable = yes
+					is_owned_and_controlled_by = ROOT
+					owner = { is_ally_with = ROOT }
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = { hea_diplomacy_distance_var = 200 }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_foreign_relation_idea_0
+					add_idea = hea_foreign_relation_idea_order
+				}
+			}
+			set_country_flag = hea_mexico_states_to_order
+			custom_effect_tooltip = state_manage_mexico_order_creation_decision_tt
+			hidden_effect = {
+				release_puppet = TVR
+				for_each_scope_loop = {
+					array = global.real_mexico_state_array
+					transfer_state_to = TVR
+				}
+				TVR = {
+					#set_cosmetic_tag = TVR_orders
+					add_state_core = 746 #Gloria
+					add_state_core = 769 #Tlaloc's Lair
+					add_state_core = 755 #Reynosa
+					add_state_core = 471 #Gente City
+					add_state_core = 681 #Colmena del Distribuidor
+					add_state_core = 687 #Los Mochis
+					add_state_core = 739 #Mazatlan
+					add_state_core = 863 #Xochicalco
+					add_state_core = 803 #Mexico City
+					set_capital = { state = 803 } #Mexico City
+					add_state_core = 788 #Chichen Itza
+					add_state_core = 828 #Oaxaca
+					add_state_core = 863 #San Pedro Sula
+					remove_ideas = {
+						tvr_protected_by_the_rio_lerma
+						tvr_the_merchant_class
+					}
+					set_country_flag = locked_economy_law
+					add_ideas = {
+						free_trade #Open their market for trade
+					}
+				}	
+			}
 		}
 	}
 }

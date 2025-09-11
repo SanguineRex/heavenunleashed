@@ -44,6 +44,16 @@ scripted_gui = {
 				check_variable = { hea_com_manage_gui_decision = 0 }
 			}
 			hea_com_manage_gui_plains_button_click_enabled = { always = yes }
+			#Canadian Commonwealth-14
+			hea_com_manage_gui_canadian_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 0 }
+			}
+			hea_com_manage_gui_canadian_button_click_enabled = { always = yes }
+			#Mexican Commonwealth-15
+			hea_com_manage_gui_mexican_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 0 }
+			}
+			hea_com_manage_gui_mexican_button_click_enabled = { always = yes }
 			#Return to Commonwealths View
 			hea_state_manage_gui_return_button_visible = {
 				NOT = { check_variable = { hea_com_manage_gui_decision = 0 } } #When ain't already in Commonwealth View
@@ -299,6 +309,20 @@ scripted_gui = {
 				check_variable = { hea_com_manage_gui_decision = 6 } #Plains Commonwealth
 			}
 			state_manage_gui_missouri_button_click_enabled = { always = yes } #Can click
+
+			##Canadian Commonwealth States Group-14
+			#Canada-1
+			state_manage_gui_canada_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 14 } #Canadian Commonwealth
+			}
+			state_manage_gui_canada_button_click_enabled = { always = yes } #Can click
+
+			##Mexican Commonwealth States Group-15
+			#Mexico-1
+			state_manage_gui_mexico_button_visible = {
+				check_variable = { hea_com_manage_gui_decision = 15 } #Mexican Commonwealth
+			}
+			state_manage_gui_mexico_button_click_enabled = { always = yes } #Can click
 		}
 
 		effects = {
@@ -376,6 +400,30 @@ scripted_gui = {
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
 				for_each_scope_loop = { #Input Plains Commonwealth states array
 					array = global.real_plains_com_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
+			}
+			#Canadian Territories - 14
+			hea_com_manage_gui_canadian_button_click = {
+				set_variable = { hea_com_manage_gui_decision = 14 } #Show Canadian Commonweath States View
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				for_each_scope_loop = { #Input Canadian Territories states array
+					array = global.real_canada_state_array
+					add_to_array = {
+						array = global.hea_state_manage_dynamic_map_array
+						value = this.id
+					}
+				}
+			}
+			#Mexican Territories - 15
+			hea_com_manage_gui_mexican_button_click = {
+				set_variable = { hea_com_manage_gui_decision = 15 } #Show Mexican Commonweath States View
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				for_each_scope_loop = { #Input Mexican Territories states array
+					array = global.real_mexico_state_array
 					add_to_array = {
 						array = global.hea_state_manage_dynamic_map_array
 						value = this.id
@@ -750,6 +798,36 @@ scripted_gui = {
 				set_variable = { hea_state_manage_gui_decision = 4 } #Show Missouri Decisions
 				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
 				clear_array = global.hea_state_manage_dynamic_map_array
+			}
+
+			##Canadian Territories States Group-14
+			#Canada-1
+			state_manage_gui_canada_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 1 } #Show Canada Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				#clear_array = global.hea_state_manage_dynamic_map_array
+				#for_each_scope_loop = { #Input Canada states array
+				#	array = global.real_canada_state_array
+				#	add_to_array = {
+				#		array = global.hea_state_manage_dynamic_map_array
+				#		value = this.id
+				#	}
+				#}
+			}
+
+			##Mexican Territories States Group-15
+			#Mexico-1
+			state_manage_gui_mexico_button_click = {
+				set_variable = { hea_state_manage_gui_decision = 1 } #Show Mexico Decisions
+				add_to_variable = { hea_state_manage_gui_dirty = 0.01 }
+				#clear_array = global.hea_state_manage_dynamic_map_array
+				#for_each_scope_loop = { #Input Mexico states array
+				#	array = global.real_mexico_state_array
+				#	add_to_array = {
+				#		array = global.hea_state_manage_dynamic_map_array
+				#		value = this.id
+				#	}
+				#}
 			}
 		}
 	}

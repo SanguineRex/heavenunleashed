@@ -971,6 +971,38 @@ on_actions = {
 					}
 				}
 			}
+			#Canada
+			if = { #MJW
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_canada_states_to_order
+					}
+					ROOT = { original_tag = MJW }
+				}
+				FROM = {
+					set_autonomy = {
+						target = ROOT
+						autonomous_state = autonomy_convert
+					}
+				}
+			}
+			#Mexico
+			if = { #TVR
+				limit = {
+					FROM = { 
+						original_tag = HEA 
+						has_country_flag = hea_mexico_states_to_order
+					}
+					ROOT = { original_tag = TVR }
+				}
+				FROM = {
+					set_autonomy = {
+						target = ROOT
+						autonomous_state = autonomy_convert
+					}
+				}
+			}
 		}
 	}
 	on_startup = {
@@ -1710,6 +1742,92 @@ on_actions = {
 				array = global.real_kansas_state_array
 				add_to_array = {
 					array = global.real_plains_com_array
+					value = this.id
+				}
+			}
+			###Canadian Territories-14###
+			#Canada-1
+			every_state = {
+				limit = {
+					OR = {
+						region = 171 #Central Manitoba
+						region = 169 #Western Manitoba
+						region = 168 #Northern Manitoba
+						region = 170 #Monkatchewan Expanse
+						region = 166 #Expanse of the Unknown Border
+						region = 167 #The Katch
+						region = 185 #Eastern Great White Wall
+						region = 186 #Great Green Glow
+						region = 184 #Haze of American Hatred
+						region = 163 #Northeast Alberta
+						region = 165 #The Alvertan 'Steppe'
+						region = 158 #Southern Alberta
+						region = 164 #Central Alberta
+						region = 162 #Northwest Alberta
+						region = 161 #Western Great White Wall
+						region = 84 #Canadian Rockies
+						region = 60 #South Columbia
+						region = 35 #Eastern Columbia
+						region = 61 #Northwest Columbia
+						region = 89 #Northeast Columbia
+						region = 14 #Columbian Outlying Islands
+						is_core_of = WPG
+					}
+					NOT = {
+						state = 1304
+						state = 1296
+						state = 1300
+						state = 1297
+						is_core_of = UNB
+						state = 1294
+						state = 1292
+						state = 1293
+						state = 972
+						state = 977
+						state = 973
+						state = 976
+						state = 338
+						state = 288
+						state = 564
+						state = 48
+						state = 42
+					}
+				}
+				add_to_array = {
+					array = global.real_canada_state_array
+					value = this.id
+				}
+			}
+			###Mexican Territories-15###
+			#Mexico-1
+			every_state = {
+				limit = {
+					OR = {
+						region = 8 #Baja California
+						region = 13 #West Sonora
+						region = 50 #East Sonora
+						is_core_of = RBD
+						is_core_of = LGS
+						is_core_of = SIN
+						is_core_of = FFI
+						is_core_of = RRG
+						is_core_of = BLO
+						is_core_of = TVR
+						is_core_of = TLA
+						is_core_of = ARM
+						is_core_of = PET
+						is_core_of = ATE
+						is_core_of = ITZ
+						is_core_of = CAF
+						is_core_of = TDT
+						is_core_of = GRH
+					}
+					NOT = {
+						is_core_of = TAA
+					}
+				}
+				add_to_array = {
+					array = global.real_mexico_state_array
 					value = this.id
 				}
 			}

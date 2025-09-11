@@ -170,6 +170,10 @@ hea_state_manage_decision_cat_map_scripted_loc_state_louisiana: "Show §YLouisia
 hea_state_manage_decision_cat_map_scripted_loc_com_plains: "Show §YPlains Commonwealth§! states"
 hea_state_manage_decision_cat_map_scripted_loc_state_nebraska: "Show §YNebraska§! states"
 hea_state_manage_decision_cat_map_scripted_loc_state_kansas: "Show §YKansas§! states"
+hea_state_manage_decision_cat_map_scripted_loc_com_canadian: "Show §YCanadian Territories§! states"
+hea_state_manage_decision_cat_map_scripted_loc_state_canada: "Show §YCanada§! states"
+hea_state_manage_decision_cat_map_scripted_loc_com_mexican: "Show §YMexican Territories§! states"
+hea_state_manage_decision_cat_map_scripted_loc_state_mexico: "Show §YMexico§! states"
 
 hea_com_manage_gui_northwestern_button_tt: "Northwestern Commonwealth"
 hea_com_manage_gui_southwestern_button_tt: "Southwestern Commonwealth"
@@ -177,6 +181,8 @@ hea_com_manage_gui_fourstates_button_tt: "Fourstates Commonwealth"
 hea_com_manage_gui_northern_button_tt: "Northern Commonwealth"
 hea_com_manage_gui_texan_button_tt: "Texan Commonwealth"
 hea_com_manage_gui_plains_button_tt: "Plains Commonwealth"
+hea_com_manage_gui_canadian_button_tt: "Canadian Territories"
+hea_com_manage_gui_mexican_button_tt: "Mexican Territories"
 
 hea_state_manage_gui_return_button_tt: "Return to Commonwealths View"
 
@@ -319,6 +325,20 @@ state_manage_kansas_order_creation_decision_tt: "The lands of §YKansas§! will 
 state_manage_gui_iowa_button_tt: "Iowa"
 #Missouri-4
 state_manage_gui_missouri_button_tt: "Missouri"
+
+##Canadian Commonwealth States Group-14
+#Canada-1
+state_manage_gui_canada_button_tt: "Canada"
+state_manage_canada_control_tt: "§YCanada§!"
+state_manage_canada_order_creation_decision: "Declare §YThe Order of Canada§!"
+state_manage_canada_order_creation_decision_tt: "The lands of §YCanada§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
+
+##Mexican Commonwealth States Group-15
+#Mexico-1
+state_manage_gui_mexico_button_tt: "Mexico"
+state_manage_mexico_control_tt: "§YMexico§!"
+state_manage_mexico_order_creation_decision: "Declare §YThe Order of Mexico§!"
+state_manage_mexico_order_creation_decision_tt: "The lands of §YMexico§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
 
 ##I think this is OWB's, anything below this line - @Deez
 ####tooltips 

@@ -380,4 +380,32 @@ define_text = {
         }
         localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_kansas
     }
+    text = { ###Canadian Territories###
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 14 }
+            check_variable = { hea_state_manage_gui_decision = 0 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_com_canadian
+    }
+    text = { #Canada
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 14 }
+            check_variable = { hea_state_manage_gui_decision = 1 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_canada
+    }
+    text = { ###Mexican Territories###
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 15 }
+            check_variable = { hea_state_manage_gui_decision = 0 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_com_mexican
+    }
+    text = { #Mexico
+        trigger = {
+            check_variable = { hea_com_manage_gui_decision = 15 }
+            check_variable = { hea_state_manage_gui_decision = 1 }
+        }
+        localization_key = hea_state_manage_decision_cat_map_scripted_loc_state_mexico
+    }
 }

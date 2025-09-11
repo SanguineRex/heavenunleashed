@@ -84,6 +84,18 @@ guiTypes = {
 				spriteType = GFX_hea_com_manage_gui_plains_com
 				pdx_tooltip = hea_com_manage_gui_plains_button_tt
 			}
+			#Canadian Commonwealth-14
+			buttonType = {
+				name = "hea_com_manage_gui_canadian_button"
+				spriteType = GFX_hea_com_manage_gui_canadian_com
+				pdx_tooltip = hea_com_manage_gui_canadian_button_tt
+			}
+			#Mexican Commonwealth-15
+			buttonType = {
+				name = "hea_com_manage_gui_mexican_button"
+				spriteType = GFX_hea_com_manage_gui_mexican_com
+				pdx_tooltip = hea_com_manage_gui_mexican_button_tt
+			}
 		}
 		#States View
 		containerWindowType = {
@@ -310,6 +322,22 @@ guiTypes = {
 				spriteType = GFX_state_manage_gui_missouri
 				pdx_tooltip = state_manage_gui_missouri_button_tt
 				#pdx_tooltip_delayed = state_manage_gui_missouri_button_delay_tt
+			}
+
+			##Canadian Territories States Group-14
+			buttonType = { #Canada-1
+				name = "state_manage_gui_canada_button"
+				spriteType = GFX_state_manage_gui_canada
+				pdx_tooltip = state_manage_gui_canada_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_canada_button_delay_tt
+			}
+
+			##Mexican Territories States Group-15
+			buttonType = { #Mexico-1
+				name = "state_manage_gui_mexico_button"
+				spriteType = GFX_state_manage_gui_mexico
+				pdx_tooltip = state_manage_gui_mexico_button_tt
+				#pdx_tooltip_delayed = state_manage_gui_mexico_button_delay_tt
 			}
 		}
 	}

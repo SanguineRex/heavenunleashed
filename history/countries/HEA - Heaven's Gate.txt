@@ -97,9 +97,16 @@ set_popularities = {
 add_ideas = {
 	hea_divided_leadership
 	hea_theocratic_elite
-	hea_steam_power
+	#hea_steam_power
 	hea_steam_powered_weapons
 	volunteer_militia_conscription
+	hea_the_core_1_hidden_idea
+}
+
+1384 = {
+	add_dynamic_modifier = {
+		modifier = hea_the_nucleus_dynamic_modifier
+	}
 }
 
 recruit_character = HEA_saint_michael

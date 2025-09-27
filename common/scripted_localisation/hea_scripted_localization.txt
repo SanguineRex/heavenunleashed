@@ -25,6 +25,21 @@ defined_text = {
 }
 
 defined_text = {
+    name = hea_the_nucleus_dynamic_modifier_scripted_loc
+    text = {
+        trigger = { HEA = {has_completed_focus = hea_nf_age_of_steam } }
+        localization_key = hea_the_nucleus_dynamic_modifier_age
+    }
+    text = {
+        trigger = { HEA = { has_completed_focus = hea_nf_industry_5 } }
+        localization_key = hea_the_nucleus_dynamic_modifier_rebirth
+    }
+    text = {
+        localization_key = hea_the_nucleus_dynamic_modifier_blessing
+    }
+}
+
+defined_text = {
     name = hea_fervor_scripted_loc
     text = {
         trigger = { 

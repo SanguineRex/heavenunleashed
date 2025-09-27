@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_embed_hea_the_nucleus"
+		textureFile = "gfx/texticons/embeds/hea_the_nucleus.dds"
+		legacy_lazy_load = no
+	}
+}

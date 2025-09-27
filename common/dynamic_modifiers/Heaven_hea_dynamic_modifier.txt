@@ -72,4 +72,10 @@ hea_fervor_dynamic_modifier = {
 	resistance_growth = hea_fervor_resistance_growth_var
 }
 
-
+###############
+##The Nucleus##
+###############
+hea_the_nucleus_dynamic_modifier = {
+	icon = GFX_idea_HEA_idea_blessing_of_steam
+	custom_modifier_tooltip = hea_the_nucleus_dynamic_modifier_tt
+}

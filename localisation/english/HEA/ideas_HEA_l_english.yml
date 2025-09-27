@@ -5,14 +5,17 @@
   hea_divided_leadership:0 "Divided Leadership"
   hea_divided_leadership_desc:0 "Saint Michael stands above all others as a leader, a mouthpiece for God himself who can not lead us astray!"
 
-  hea_steam_power:0 "Blessing of Steam"
-  hea_steam_power_desc:0 "Steam is a blessing, a blessing that has allowed us to survive where so many other have failed."
+
+
+
+hea_steam_power:0 "Blessing of Steam"
+hea_steam_power_desc:0 "Steam is a blessing, a blessing that has allowed us to survive where so many other have failed."
 
 hea_rebirth_steam:0 "Rebirth of the Gate"
 hea_rebirth_steam_desc:0 "The Gate is reborn! With its renewal, the blessing of Steam grows stronger!"
 
-  hea_startup_militant:0 "Ephesians 6:11"
-  hea_startup_militant_desc:0 "Put on the full armour of God, so that you can take your stand against the Devil's schemes."
+hea_startup_militant:0 "Ephesians 6:11"
+hea_startup_militant_desc:0 "Put on the full armour of God, so that you can take your stand against the Devil's schemes."
 
   hea_startup_agriculture:0 "Isaiah 1:19"
   hea_startup_agriculture_desc:0 "If you are willing and obedient, you will eat the good things of the land;"
@@ -368,6 +371,21 @@ hea_dynamic_taming_heavens: "Taming the §4Heavens§!"
 hea_dynamic_taming_heavens_desc: "The Stagleap Mountains have been our protectors and guardians since our ancestors settled in the Nucleus but even after two hundred years we haven't truly settled the spires and crags, until now..."
 
 guard_rebornHEA: "Guard Reborn"
+
+###################
+##State Modifiers##
+###################
+##The Nucleus
+hea_the_nucleus_dynamic_modifier: "The Core"
+hea_the_nucleus_dynamic_modifier_desc: "\n\n£GFX_embed_hea_the_nucleus \n\n\n\nWOW FROSTPUNK REFERENCES!!!!!!!"
+hea_the_nucleus_dynamic_modifier_tt: "[hea_the_nucleus_dynamic_modifier_scripted_loc]"
+hea_the_nucleus_dynamic_modifier_blessing: "Resource Gain Efficiency: §G+10.00%§!\nMax Factories in a State: §G+10%§!\nConstruction Speed: §G+10.00%§!\nFree repair: §G+30.00%§!"
+hea_the_nucleus_dynamic_modifier_rebirth: "Resource Gain Efficiency: §G+15.00%§!\nMax Factories in a State: §G+15%§!\nConstruction Speed: §G+15.00%§!\nFree repair: §G+40.00%§!"
+hea_the_nucleus_dynamic_modifier_age: "Resource Gain Efficiency: §G+20.00%§!\nMax Factories in a State: §G+20%§!\nConstruction Speed: §G+20.00%§!\nFree repair: §G+50.00%§!"
+
+hea_the_core_1_hidden_idea: "The Core"
+hea_the_core_2_hidden_idea: "The Core"
+hea_the_core_3_hidden_idea: "The Core"
 
 #####################
 ##Foreign Relations##

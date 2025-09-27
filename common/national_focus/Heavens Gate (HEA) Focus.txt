@@ -992,6 +992,20 @@ focus_tree = {
 		prerequisite = { focus = hea_priest_barges }
 
 		completion_reward = {
+			effect_tooltip = { #For tooltip so it act like the Core upgraded on The Nucleus State
+				1384 = {
+					swap_ideas = {
+						remove_idea = hea_the_core_1_hidden_idea
+						add_idea = hea_the_core_2_hidden_idea
+					}
+				}
+			}
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = hea_the_core_1_hidden_idea
+					add_idea = hea_the_core_2_hidden_idea
+				}
+			}
 			116 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
@@ -1006,10 +1020,6 @@ focus_tree = {
 				}
 				set_temp_variable = { development_to_add = 2 }
 				add_development_to_node = yes
-			}
-			swap_ideas = {
-				add_idea = hea_rebirth_steam
-				remove_idea = hea_steam_power
 			}
 		}
 	}
@@ -1243,9 +1253,19 @@ focus_tree = {
 		prerequisite = { focus = hea_nf_industry_5 }
 
 		completion_reward = {
-			swap_ideas = {
-				add_idea = hea_age_of_steam_idea
-				remove_idea = hea_rebirth_steam
+			effect_tooltip = { #For tooltip so it act like the Core upgraded on The Nucleus State
+				1384 = {
+					swap_ideas = {
+						remove_idea = hea_the_core_2_hidden_idea
+						add_idea = hea_the_core_3_hidden_idea
+					}
+				}
+			}
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = hea_the_core_2_hidden_idea
+					add_idea = hea_the_core_3_hidden_idea
+				}
 			}
 			if = {
 				limit = { has_country_flag = hea_vengance_path }

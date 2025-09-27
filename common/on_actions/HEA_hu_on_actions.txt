@@ -1,8 +1,36 @@
 on_actions = {
 	# ROOT is winner, FROM is loser
-	on_peaceconference_ended = { #Idle mechanic when HEA finishes wars
+	on_peaceconference_ended = { 
 		effect = {
-			if = {
+			if = { #Heaven Gate Rage Quit
+				limit = { 
+					FROM = { original_tag = HEA }
+					1384 = { NOT = { is_owned_and_controlled_by = HEA } }
+				}
+				HEA = { 
+					remove_ideas = hea_the_core_1_hidden_idea
+					remove_ideas = hea_the_core_2_hidden_idea
+					remove_ideas = hea_the_core_3_hidden_idea
+				}
+				1384 = { remove_dynamic_modifier = { modifier = hea_the_nucleus_dynamic_modifier } }
+				goto_province = 4489
+				if = {
+					limit = { has_dlc = Gotterdammerung }
+					launch_nuke = {
+						province = 4489
+						use_nuke = no
+						nuke_type = thermonuclear_bomb
+					}
+				}
+				else = {
+					launch_nuke = {
+						province = 4489
+						use_nuke = no
+						nuke_type = nuclear_bomb
+					}
+				}
+			}
+			if = { #Idle mechanic when HEA finishes wars
 				limit = {
 					original_tag = HEA #Check if ROOT is HEA first
 					has_country_flag = hea_vengance_path #10th crusade path

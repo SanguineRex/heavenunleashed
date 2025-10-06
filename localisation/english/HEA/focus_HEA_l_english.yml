@@ -770,7 +770,7 @@ hea_repurposing_wattech_desc: "After unearthing the knowledge needed to build th
 
 hea_water_mills: "Water Mills"
 hea_water_mills_desc: "The rivers floating near [HEA.GetName] can be taken advantage of, constructing watermills all along our Eastern territories can help us gather energy, though not strictly necessary, the power from the mills could help future projects..."
-hea_river_mills_tt: "Unlocks §YDecisions§! to build §2Water Mills§!"
+hea_river_mills_tt: "Unlocks £GFX_decision_icon_small §YDecisions§! to build £GFX_resources_strip|1 §2Water Mills§!"
 
 hea_bridges: "Reparing Old Bridges"
 hea_bridges_desc: "Most of the bridges we rely on to traverse our great land are pre-war constructs, great bridges in truth, but with the help of Steam, Learned Priests, Scientists, and Faith, we can improve upon them to ensure that they'll never fall."
@@ -792,7 +792,7 @@ hea_priestcooks_desc: "Unlike other nations, we don't allow our people to starve
 
 hea_steam_smiths: "Smiths blessed by Steam and the Lord"
 hea_steam_smiths_desc: "The smiths in the Nucleus are some of the best smiths around! However as time goes on more and more materials are used in the pursuit of arming our warriors, expanding the smithing quarter means the miners will need to get to work to ensure they can work at full capacity!"
-hea_steam_smiths_tt: "Unlocks §YDecisions§! to build §8Steam Smiths§!"
+hea_steam_smiths_tt: "Unlocks £GFX_decision_icon_small §YDecisions§! to build £GFX_resources_strip|3 §8Steam Smiths§!"
 
 hea_expanding_pipeways: "Preparing for expansion"
 hea_expanding_pipeways_desc: "The Pipeways, the lifeblood of our realm, always need to be expanded, with the aid of some of our more zealous construction workers, we can ensure that mountains, hills, and even rivers pose no trouble in any future expansions"
@@ -808,7 +808,7 @@ hea_taming_heavens_desc: "How can we say to be close to God when we huddle benea
 
 hea_lost_scientists: "Astray Alchemists and Hermits"
 hea_lost_scientists_desc: "Hundreds of scientists have abandoned the fold out of misguided belief or simple greed, thankfully the majority of them have simply fled to live quiet lives in the mountains, let's see if we can't convince them to return."
-hea_lost_scientists_tt: "Unlocks §YDecisions§! to §4'Invites' Scientists§! around the wasteland"
+hea_lost_scientists_tt: "Unlocks £GFX_decision_icon_small §YDecisions§! to £GFX_research_icon §4'Invites' Scientists§! around the wasteland"
 
 hea_mountain_monestaries: "Michael's Vision"
 hea_mountain_monestaries_desc: "Michael has given us a prophecy: \"To defend our faith, our populous will need to be conscripted. It will be a defensive force, meant to deter any and all invaders. We will NOT have another Innocence tragedy!\" The prophet speaks truth, we need to defend our lands. Let us just hope Michael doesn't have any other plans for this 'militia'."

@@ -355,18 +355,13 @@ hea_the_nucleus_dynamic_modifier_blessing: "Resource Gain Efficiency: §G+10.00%
 hea_the_nucleus_dynamic_modifier_rebirth: "Resource Gain Efficiency: §G+15.00%§!\nMax Factories in a State: §G+15%§!\nConstruction Speed: §G+15.00%§!\nFree repair: §G+40.00%§!"
 hea_the_nucleus_dynamic_modifier_age: "Resource Gain Efficiency: §G+20.00%§!\nMax Factories in a State: §G+20%§!\nConstruction Speed: §G+20.00%§!\nFree repair: §G+50.00%§!"
 
-hea_the_core_1_hidden_idea: "The Core"
-hea_the_core_2_hidden_idea: "The Core"
-hea_the_core_3_hidden_idea: "The Core"
+hea_the_core_hidden_idea_name: "The Core"
 
 #####################
 ##Foreign Relations##
 #####################
 hea_foreign_relation_dynamic_modifier: "Missionary Missions"
-hea_foreign_relation_idea_0: "Missionary Missions"
-hea_foreign_relation_idea_expand: "Missionary Missions"
-hea_foreign_relation_idea_final: "Missionary Missions"
-hea_foreign_relation_idea_order: "Missionary Missions"
+hea_foreign_relation_idea_name: "Missionary Missions"
 
 ###################################
 ##Unique Puppets National Spirits##

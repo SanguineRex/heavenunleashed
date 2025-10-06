@@ -1,6 +1,7 @@
 ideas = {
 	hidden_ideas = {
 		hea_the_core_1_hidden_idea = {
+			name = hea_the_core_hidden_idea_name
 			modifier = {
 				local_resources_factor = 0.10
 				global_building_slots_factor = 0.10
@@ -9,6 +10,7 @@ ideas = {
 			}
 		}
 		hea_the_core_2_hidden_idea = {
+			name = hea_the_core_hidden_idea_name
 			modifier = {
 				local_resources_factor = 0.15
 				global_building_slots_factor = 0.15
@@ -17,6 +19,7 @@ ideas = {
 			}
 		}
 		hea_the_core_3_hidden_idea = {
+			name = hea_the_core_hidden_idea_name
 			modifier = {
 				local_resources_factor = 0.20
 				global_building_slots_factor = 0.20
@@ -1264,6 +1267,7 @@ ideas = {
 		}
 		###Foreign Relations ideas###
 		hea_foreign_relation_idea_0 = { #Just to show stuff as tooltip, look way better compared to writing the tooltip manually
+			name = hea_foreign_relation_idea_name
 			picture = pantheon_sun
 			modifier = {
 				diplomacy_distance = 200
@@ -1271,6 +1275,7 @@ ideas = {
 			}
 		}
 		hea_foreign_relation_idea_expand = { #Use swap_idea to display tooltip when expand to new foreign target
+			name = hea_foreign_relation_idea_name
 			picture = pantheon_sun
 			modifier = {
 				experience_gain_army = 0.03
@@ -1280,6 +1285,7 @@ ideas = {
 			}
 		}
 		hea_foreign_relation_idea_final = { #Use swap_idea to display tooltip when finish applying a target into faction
+			name = hea_foreign_relation_idea_name
 			picture = pantheon_sun
 			modifier = {
 				experience_gain_army = 0.02
@@ -1289,6 +1295,7 @@ ideas = {
 			}
 		}
 		hea_foreign_relation_idea_order = { #Ebstablishing a new Order/Territory via the State Managements stuff
+			name = hea_foreign_relation_idea_name
 			picture = pantheon_sun
 			modifier = {
 				diplomacy_distance = 400

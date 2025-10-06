@@ -1326,20 +1326,24 @@ ideas = {
 ##Taming Rivers,Lands and Heavens##
 ###################################
 		hea_taming_idea_template = { #Base with no real effects
+			name = hea_taming_idea_name
 			#Don't need anything here
 		}
 		hea_taming_idea_taming_the_river = {
+			name = hea_taming_idea_name
 			modifier = {
 				stability_factor = 0.02
 			}
 		}
 		hea_taming_idea_building_dams = {
+			name = hea_taming_idea_name
 			modifier = {
 				stability_factor = 0.01
 				country_resource_water = 20
 			}
 		}
 		hea_taming_idea_reparing_old_bridges = {
+			name = hea_taming_idea_name
 			modifier = {
 				stability_factor = 0.01
 				army_speed_factor = 0.02
@@ -1347,6 +1351,7 @@ ideas = {
 			}			
 		}
 		hea_taming_idea_river_ferries = {
+			name = hea_taming_idea_name
 			modifier = {
 				stability_factor = 0.01
 				army_speed_factor = 0.03
@@ -1354,33 +1359,39 @@ ideas = {
 			}			
 		}
 		hea_taming_idea_using_dam_for_energy = {
+			name = hea_taming_idea_name
 			modifier = {
 				stability_factor = 0.01
 				country_resource_energy = 20
 			}			
 		}
 		hea_taming_idea_steam_barges = {
+			name = hea_taming_idea_name
 			modifier = {
 				stability_factor = 0.02
 			}			
 		}
 		hea_taming_idea_water_mill_focus = {
+			name = hea_taming_idea_name
 			modifier = {
 				stability_factor = 0.02
 			}			
 		}
 		hea_taming_idea_water_mill_decision_1 = {
+			name = hea_taming_idea_name
 			modifier = {
 				country_resource_water = 15
 			}			
 		}
 		hea_taming_idea_water_mill_decision_2 = {
+			name = hea_taming_idea_name
 			modifier = {
 				country_resource_water = -5
 				country_resource_energy = 8
 			}			
 		}
 		hea_taming_idea_water_mill_decision_3 = {
+			name = hea_taming_idea_name
 			modifier = {
 				country_resource_water = -5
 				country_resource_energy = -3
@@ -1391,69 +1402,80 @@ ideas = {
 		}
 
 		hea_taming_idea_taming_the_land = {
+			name = hea_taming_idea_name
 			modifier = {
 				global_building_slots_factor = 0.05
 			}
 		}
 		hea_taming_idea_eternal_spring = {
+			name = hea_taming_idea_name
 			modifier = {
 				consumer_goods_factor = -0.07
 				monthly_population = 0.05
 			}
 		}
 		hea_taming_idea_blessed_cooks = {
+			name = hea_taming_idea_name
 			modifier = {
 				consumer_goods_factor = -0.03
 				monthly_population = 0.05
 			}
 		}
 		hea_taming_idea_preparing_for_expansion = {
+			name = hea_taming_idea_name
 			modifier = {
 				global_building_slots_factor = 0.05
 				production_speed_buildings_factor = 0.02
 			}
 		}
 		hea_taming_idea_home_blessed_by_steam = {
+			name = hea_taming_idea_name
 			modifier = {
 				global_building_slots_factor = 0.05
 				production_speed_buildings_factor = 0.03
 			}
 		}
 		hea_taming_idea_steam_wonderland = {
+			name = hea_taming_idea_name
 			modifier = {
 				consumer_goods_factor = -0.05
 				production_speed_buildings_factor = 0.05
 			}
 		}
 		hea_taming_idea_steam_smith_focus = {
+			name = hea_taming_idea_name
 			modifier = {
 				industrial_capacity_factory = 0.05
 			}
 		}
 		hea_taming_idea_steam_smith_decision_1 = {
+			name = hea_taming_idea_name
 			modifier = {
 				country_resource_metal = 20
 			}
 		}
 		hea_taming_idea_steam_smith_decision_2 = {
+			name = hea_taming_idea_name
 			modifier = {
 				country_resource_metal = -10
 				country_resource_composites = 10
 			}
 		}
 		hea_taming_idea_steam_smith_decision_3 = {
+			name = hea_taming_idea_name
 			modifier = {
 				country_resource_composites = -15
 				industrial_capacity_factory = 0.1
 			}
 		}
-
 		hea_taming_idea_taming_the_heaven = {
+			name = hea_taming_idea_name
 			modifier = {
 				war_support_factor = 0.02
 			}
 		}
 		hea_taming_idea_funding_from_heaven = {
+			name = hea_taming_idea_name
 			modifier = {
 				war_support_factor = 0.01
 				conscription_factor = 0.02
@@ -1461,6 +1483,7 @@ ideas = {
 			}
 		}
 		hea_taming_idea_it_didnt_stop_there = {
+			name = hea_taming_idea_name
 			modifier = {
 				war_support_factor = 0.01
 				army_morale_factor = 0.05
@@ -1468,33 +1491,39 @@ ideas = {
 			}
 		}
 		hea_taming_idea_michael_vision_soldier_of_prophept = {
+			name = hea_taming_idea_name
 			modifier = {
 				war_support_factor = 0.01
 				conscription_factor = 0.05
 			}
 		}
 		hea_taming_idea_ever_closer_to_heaven = {
+			name = hea_taming_idea_name
 			modifier = {
 				war_support_factor = 0.03
 				conscription_factor = 0.03
 			}
 		}
 		hea_taming_idea_alchemists_focus = {
+			name = hea_taming_idea_name
 			modifier = {
 				war_support_factor = 0.01
 			}
 		}
 		hea_taming_idea_alchemists_decision_1 = {
+			name = hea_taming_idea_name
 			modifier = {
 				research_speed_factor = 0.025
 			}
 		}
 		hea_taming_idea_alchemists_decision_2 = {
+			name = hea_taming_idea_name
 			modifier = {
 				research_speed_factor = 0.075
 			}
 		}
 		hea_taming_idea_alchemists_decision_3 = {
+			name = hea_taming_idea_name
 			modifier = {
 				country_resource_circuitry = 40
 				country_resource_advanced = 40
@@ -1505,6 +1534,7 @@ ideas = {
 ##Fervor-Crusdaing Time##
 #########################
 		hea_fervor_idea_template = { #Base with no real effects
+			name = hea_fervor_idea_name
 			#Lmao Nothing here - @Deez
 		}
 		#hea_fervor_idea_wartime_0 = { #10% war support bonus during wartime
@@ -1514,18 +1544,21 @@ ideas = {
 		#	}
 		#}
 		hea_fervor_idea_idle_1 = { #First-Second level of being idle
+			name = hea_fervor_idea_name
 			modifier = {
 				stability_factor = -0.1
 				war_support_factor = -0.1			
 			}
 		}
 		hea_fervor_idea_idle_2 = { #Second level of being idle
+			name = hea_fervor_idea_name
 			modifier = {
 				stability_factor = -0.2
 				war_support_factor = -0.2			
 			}
 		}
 		hea_fervor_idea_idle_3 = { #Third level of being idle
+			name = hea_fervor_idea_name
 			modifier = {
 				stability_factor = -0.3
 				war_support_factor = -0.3
@@ -1535,6 +1568,7 @@ ideas = {
 		}
 		#Ghoul
 		hea_fervor_idea_ghoul_decision = { #Ghoul-Decision
+			name = hea_fervor_idea_name
 			modifier = {
 				supply_consumption_factor = -0.02
 				attrition = -0.02
@@ -1542,6 +1576,7 @@ ideas = {
 			}
 		}
 		hea_fervor_idea_ghoul_focus = { #Ghoul-focus
+			name = hea_fervor_idea_name
 			modifier = {
 				supply_consumption_factor = -0.03
 				attrition = -0.03
@@ -1550,6 +1585,7 @@ ideas = {
 		}
 		#Washington Brotherhood-Cain
 		hea_fervor_idea_cain_focus = { #Cain-focus
+			name = hea_fervor_idea_name
 			modifier = {
 				army_org_factor = 0.1
 				stability_factor = -0.05
@@ -1557,12 +1593,14 @@ ideas = {
 		}
 		#Super Mutant
 		hea_fervor_idea_mutant_decision = { #Mutant-Decision
+			name = hea_fervor_idea_name
 			modifier = {
 				army_attack_factor = 0.03
 				stability_factor = -0.02
 			}
 		}
 		hea_fervor_idea_mutant_focus = { #Mutant-focus
+			name = hea_fervor_idea_name
 			modifier = {
 				army_attack_factor = 0.05
 				stability_factor = -0.05
@@ -1570,12 +1608,14 @@ ideas = {
 		}
 		#Leviathans
 		hea_fervor_idea_leviathan_decision = { #Leviathans-Decision
+			name = hea_fervor_idea_name
 			modifier = {
 				army_morale_factor = 0.03
 				stability_factor = -0.02
 			}	
 		}
 		hea_fervor_idea_leviathan_focus = { #Leviathans-focus
+			name = hea_fervor_idea_name
 			modifier = {
 				army_morale_factor = 0.05
 				stability_factor = -0.05
@@ -1583,12 +1623,14 @@ ideas = {
 		}
 		#Steel Puppets
 		hea_fervor_idea_steel_decision = { #Steel-Decision
+			name = hea_fervor_idea_name
 			modifier = {
 				breakthrough_factor = 0.02
 				stability_factor = -0.02
 			}
 		}
 		hea_fervor_idea_steel_focus = { #Steel-focus
+			name = hea_fervor_idea_name
 			modifier = {
 				breakthrough_factor = 0.05
 				stability_factor = -0.05
@@ -1596,12 +1638,14 @@ ideas = {
 		}
 		#Red Devils
 		hea_fervor_idea_red_decision = { #Red-Decision
+			name = hea_fervor_idea_name
 			modifier = {
 				war_support_factor = 0.05
 				stability_factor = -0.02
 			}
 		}
 		hea_fervor_idea_red_focus = { #Red-focus
+			name = hea_fervor_idea_name
 			modifier = {
 				stability_factor = 0.1
 			}	

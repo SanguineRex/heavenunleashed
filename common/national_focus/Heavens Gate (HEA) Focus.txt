@@ -992,12 +992,11 @@ focus_tree = {
 		prerequisite = { focus = hea_priest_barges }
 
 		completion_reward = {
-			effect_tooltip = { #For tooltip so it act like the Core upgraded on The Nucleus State
-				1384 = {
-					swap_ideas = {
-						remove_idea = hea_the_core_1_hidden_idea
-						add_idea = hea_the_core_2_hidden_idea
-					}
+			custom_effect_tooltip = hea_nf_improve_core_tt #For tooltip so it act like the Core upgraded on The Nucleus State
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = hea_the_core_1_hidden_idea
+					add_idea = hea_the_core_2_hidden_idea
 				}
 			}
 			hidden_effect = {
@@ -1253,12 +1252,11 @@ focus_tree = {
 		prerequisite = { focus = hea_nf_industry_5 }
 
 		completion_reward = {
-			effect_tooltip = { #For tooltip so it act like the Core upgraded on The Nucleus State
-				1384 = {
-					swap_ideas = {
-						remove_idea = hea_the_core_2_hidden_idea
-						add_idea = hea_the_core_3_hidden_idea
-					}
+			custom_effect_tooltip = hea_nf_improve_core_tt #For tooltip so it act like the Core upgraded on The Nucleus State
+			effect_tooltip = { 
+				swap_ideas = {
+					remove_idea = hea_the_core_2_hidden_idea
+					add_idea = hea_the_core_3_hidden_idea
 				}
 			}
 			hidden_effect = {
@@ -3279,10 +3277,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_technology = {
-				hea_guardone = 1
-			}
-			custom_effect_tooltip = hea_guard_infantry_tt
+			enable_tech_hea_guardone = yes
 		}
 	}
 	##Swords
@@ -3300,10 +3295,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_technology = {
-				hea_swordone = 1
-			}
-			custom_effect_tooltip = hea_guard_swords_tt
+			enable_tech_hea_swordone = yes
 		}
 	}
 	#Reliable Arms
@@ -3320,10 +3312,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_technology = {
-				hea_swordtwo = 1
-			}
-			custom_effect_tooltip = hea_guard_more_swords_tt
+			enable_tech_hea_swordtwo = yes
 		}
 	}
 	#Skilled Bladesmiths
@@ -3340,10 +3329,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_technology = {
-				hea_swordthree = 1
-			}
-			custom_effect_tooltip = hea_guard_enough_swords_tt
+			enable_tech_hea_swordthree = yes
 		}
 	}
 	##Sword Training 
@@ -3361,10 +3347,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_technology = {
-				hea_skillone = 1
-			}
-			custom_effect_tooltip = hea_guard_novice_tt
+			enable_tech_hea_skillone = yes
 		}
 	}
 	#Acolytes of the Blade
@@ -3381,10 +3364,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_technology = {
-				hea_skilltwo = 1
-			}
-			custom_effect_tooltip = hea_guard_journeyman_tt
+			enable_tech_hea_skilltwo = yes
 		}
 	}
 	#Masters of the Blade
@@ -3401,10 +3381,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_technology = {
-				hea_skillthree = 1
-			}
-			custom_effect_tooltip = hea_guard_expert_tt
+			enable_tech_hea_skillthree = yes
 		}
 	}
 	##Infantry Armor
@@ -3422,10 +3399,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_technology = {
-				hea_armorone = 1
-			}
-			custom_effect_tooltip = hea_guard_armor_tt
+			enable_tech_hea_armorone = yes
 		}
 	}
 	#Reinforced Armor
@@ -3442,10 +3416,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_technology = {
-				hea_armortwo = 1
-			}
-			custom_effect_tooltip = hea_guard_tempered_armor_tt
+			enable_tech_hea_armortwo = yes
 		}
 	}
 	#Plated Guard
@@ -3462,10 +3433,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_technology = {
-				hea_armorthree = 1
-			}
-			custom_effect_tooltip = hea_guard_best_thing_next_to_powerarmor_tt
+			enable_tech_hea_armorthree = yes
 		}
 	}
 	##End of Infantry Buffs

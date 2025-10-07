@@ -1,0 +1,109 @@
+enable_tech_hea_guardone = {
+	custom_override_tooltip = {
+		tooltip = {
+			localization_key = tooltip_enable_hidden_tech
+			TECH = country_culture|hea_guardone
+			EFFECT = tech_effect|hea_guardone
+		}
+		set_technology = { hea_guardone = 1 popup = no }
+	}
+}
+
+enable_tech_hea_swordone = {
+	custom_override_tooltip = {
+		tooltip = {
+			localization_key = tooltip_enable_hidden_tech
+			TECH = country_culture|hea_swordone
+			EFFECT = tech_effect|hea_swordone
+		}
+		set_technology = { hea_swordone = 1 popup = no }
+	}
+}
+
+enable_tech_hea_swordtwo = {
+	custom_override_tooltip = {
+		tooltip = {
+			localization_key = tooltip_enable_hidden_tech
+			TECH = country_culture|hea_swordtwo
+			EFFECT = tech_effect|hea_swordtwo
+		}
+		set_technology = { hea_swordtwo = 1 popup = no }
+	}
+}
+
+enable_tech_hea_swordthree = {
+	custom_override_tooltip = {
+		tooltip = {
+			localization_key = tooltip_enable_hidden_tech
+			TECH = country_culture|hea_swordthree
+			EFFECT = tech_effect|hea_swordthree
+		}
+		set_technology = { hea_swordthree = 1 popup = no }
+	}
+}
+
+enable_tech_hea_skillone = {
+	custom_override_tooltip = {
+		tooltip = {
+			localization_key = tooltip_enable_hidden_tech
+			TECH = country_culture|hea_skillone
+			EFFECT = tech_effect|hea_skillone
+		}
+		set_technology = { hea_skillone = 1 popup = no }
+	}
+}
+
+enable_tech_hea_skilltwo = {
+	custom_override_tooltip = {
+		tooltip = {
+			localization_key = tooltip_enable_hidden_tech
+			TECH = country_culture|hea_skilltwo
+			EFFECT = tech_effect|hea_skilltwo
+		}
+		set_technology = { hea_skilltwo = 1 popup = no }
+	}
+}
+
+enable_tech_hea_skillthree = {
+	custom_override_tooltip = {
+		tooltip = {
+			localization_key = tooltip_enable_hidden_tech
+			TECH = country_culture|hea_skillthree
+			EFFECT = tech_effect|hea_skillthree
+		}
+		set_technology = { hea_skillthree = 1 popup = no }
+	}
+}
+
+enable_tech_hea_armorone = {
+	custom_override_tooltip = {
+		tooltip = {
+			localization_key = tooltip_enable_hidden_tech
+			TECH = country_culture|hea_armorone
+			EFFECT = tech_effect|hea_armorone
+		}
+		set_technology = { hea_armorone = 1 popup = no }
+	}
+}
+
+enable_tech_hea_armortwo = {
+	custom_override_tooltip = {
+		tooltip = {
+			localization_key = tooltip_enable_hidden_tech
+			TECH = country_culture|hea_armortwo
+			EFFECT = tech_effect|hea_armortwo
+		}
+		set_technology = { hea_armortwo = 1 popup = no }
+	}
+}
+
+enable_tech_hea_armorthree = {
+	custom_override_tooltip = {
+		tooltip = {
+			localization_key = tooltip_enable_hidden_tech
+			TECH = country_culture|hea_armorthree
+			EFFECT = tech_effect|hea_armorthree
+		}
+		set_technology = { hea_armorthree = 1 popup = no }
+	}
+}

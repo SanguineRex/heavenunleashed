@@ -226,6 +226,35 @@ define_text = {
         localization_key = hea_tame_nothing
     }
 }
+
+define_text = {
+    name = hea_state_manage_oregon_conquest_scripted_loc
+    text = {
+        trigger = {
+            original_tag = HEA
+            FROM = { original_tag = TRL }
+        }
+        localization_key = hea_state_manage_oregon_conquest_scripted_loc_TRL
+    }
+    text = {
+        trigger = {
+            original_tag = HEA
+            FROM = { original_tag = MLT }
+        }
+        localization_key = hea_state_manage_oregon_conquest_scripted_loc_MLT
+    }
+    text = {
+        trigger = {
+            original_tag = HEA
+            FROM = { original_tag = ARR }
+        }
+        localization_key = hea_state_manage_oregon_conquest_scripted_loc_ARR
+    }
+    text = {
+        localization_key = hea_state_manage_oregon_conquest_scripted_loc_default
+    }
+}
+
 #States Manage Stuff
 define_text = {
     name = hea_state_manage_decision_cat_map_scripted_loc

@@ -1492,7 +1492,7 @@ hea_state_manage_decision_cat = {
 			else = {
 				OR = {
 					FROM = { is_neighbor_of = ROOT }
-					any_allied_country = { is_neighbor_of = FROM }
+					FROM = { any_neighbor_country = { is_ally_with = ROOT } }
 				}
 			}
 		}
@@ -1705,7 +1705,7 @@ hea_state_manage_decision_cat = {
 					transfer_state_to = FOU
 				}
 				FOU = { 
-					#set_cosmetic_tag = FOU_orders
+					set_cosmetic_tag = FOU_orders
 					add_state_core = 163 #San Francisco
 					set_capital = { state = 163 } #San Francisco
 					add_state_core = 141 #Redding
@@ -1773,7 +1773,7 @@ hea_state_manage_decision_cat = {
 					transfer_state_to = MOS
 				}
 				MOS = { 
-					#set_cosmetic_tag = MOS_orders
+					set_cosmetic_tag = MOS_orders
 					add_state_core = 211 #New Vegas
 					set_capital = { state = 211 } #New Vegas
 					add_state_core = 350 #The Boneyard
@@ -1839,7 +1839,7 @@ hea_state_manage_decision_cat = {
 					transfer_state_to = RUB
 				}
 				RUB = { 
-					#set_cosmetic_tag = RUB_orders
+					set_cosmetic_tag = RUB_orders
 					add_state_core = 291 #Vault City
 					set_capital = { state = 291 } #Vault City
 					add_state_core = 614 #New Reno Outskirts

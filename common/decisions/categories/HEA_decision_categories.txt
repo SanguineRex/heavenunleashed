@@ -20,7 +20,7 @@ hea_test_cat = {
 		original_tag = HEA
 	}
 	visible = {
-		always = yes
+		is_debug = yes
 	}
 	on_map_area = {
 		name = hea_test_cat_on_map_loc
@@ -37,8 +37,10 @@ hea_state_manage_decision_cat = {
 		original_tag = HEA
 	}
 	visible = {
-		#always = yes #For testing
-		has_completed_focus = hea_nf_foreign_ministryA
+		OR = {
+			has_completed_focus = hea_nf_foreign_ministryA
+			is_debug = yes
+		}
 	}
 	icon = GFX_decision_cross
 	priority = 999
@@ -58,7 +60,10 @@ hea_michael_crusade_cat = {
 		original_tag = HEA
 	}
 	visible = {
-		has_completed_focus = hea_michaels_crusade #The only visible check needed, optimization should be better now - @Deez
+		OR = {
+			has_completed_focus = hea_michaels_crusade #The only visible check needed, optimization should be better now - @Deez
+			is_debug = yes
+		}
 	}
 	icon = GFX_decision_tempered_blade
 	priority = 998
@@ -71,7 +76,10 @@ hea_monsters_of_the_wastes_cat = {
 		original_tag = HEA
 	}
 	visible = {
-		has_completed_focus = hea_monsters_of_the_wastes
+		OR = {
+			has_completed_focus = hea_monsters_of_the_wastes
+			is_debug = yes
+		}
 	}
 	icon = GFX_decision_tempered_blade
 	priority = 997
@@ -95,7 +103,10 @@ hea_tame_decision_cat = {
 		original_tag = HEA
 	}
 	visible = {
-		has_completed_focus = hea_the_nucleus
+		OR = {
+			has_completed_focus = hea_the_nucleus
+			is_debug = yes
+		}
 	}
 	icon = GFX_decision_category_generic_industry
 	priority = 899

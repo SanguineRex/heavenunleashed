@@ -348,14 +348,14 @@ guard_rebornHEA: "Guard Reborn"
 ##State Modifiers##
 ###################
 ##The Nucleus
-hea_the_nucleus_dynamic_modifier: "The Core"
-hea_the_nucleus_dynamic_modifier_desc: "\n\n£GFX_embed_hea_the_nucleus \n\n\n\nWOW FROSTPUNK REFERENCES!!!!!!!"
+hea_the_nucleus_dynamic_modifier: "The Crucible"
+hea_the_nucleus_dynamic_modifier_desc: "\n\n£GFX_embed_hea_the_nucleus \n\n\n\nThe heart of the Nucleus. The breath of the Machine-Saint. The flame that sanctifies all things through labor, heat, and will."
 hea_the_nucleus_dynamic_modifier_tt: "[hea_the_nucleus_dynamic_modifier_scripted_loc]"
 hea_the_nucleus_dynamic_modifier_blessing: "Resource Gain Efficiency: §G+10.00%§!\nMax Factories in a State: §G+10%§!\nConstruction Speed: §G+10.00%§!\nFree repair: §G+30.00%§!"
 hea_the_nucleus_dynamic_modifier_rebirth: "Resource Gain Efficiency: §G+15.00%§!\nMax Factories in a State: §G+15%§!\nConstruction Speed: §G+15.00%§!\nFree repair: §G+40.00%§!"
 hea_the_nucleus_dynamic_modifier_age: "Resource Gain Efficiency: §G+20.00%§!\nMax Factories in a State: §G+20%§!\nConstruction Speed: §G+20.00%§!\nFree repair: §G+50.00%§!"
 
-hea_the_core_hidden_idea_name: "The Core"
+hea_the_core_hidden_idea_name: "The Crucible"
 
 #####################
 ##Foreign Relations##

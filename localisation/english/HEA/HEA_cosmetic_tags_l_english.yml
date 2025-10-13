@@ -138,10 +138,22 @@ MUR_peace_intellectuals_DEF: "Children of Eden"
 
 ###Sanctified Orders
 #Oregon
-KLA_orders: "The Gilded Wings"
+KLA_orders: "Gilded Wings"
 KLA_orders_ADJ: "Oregonians"
 KLA_orders_DEF: "The Gilded Wings"
 #Washington
-YAK_orders: "The Ember Watch"
+YAK_orders: "Ember Watch"
 YAK_orders_ADJ: "Washingtonians"
 YAK_orders_DEF: "The Ember Watch"
+#North California
+FOU_orders: "Caladon"
+FOU_orders_ADJ: "North Californians"
+FOU_orders_DEF: "The March of Caladon"
+#South California
+MOS_orders: "Dustmere"
+MOS_orders_ADJ: "South Californians"
+MOS_orders_DEF: "Dustmere"
+#Nevada
+RUB_orders: "Auravale"
+RUB_orders_ADJ: "Nevadans"
+RUB_orders_DEF: "Communion of Auravale"

@@ -30,73 +30,99 @@ hea_michael_savages_heretics_dynamic_decision_desc: "Amon will fall in line or d
 ##DECISIONS - Rivers,Lands and Heavens##
 ########################################
 hea_tame_decision_cat: "§2Rivers§!, §8Lands§! and §4Heavens§!"
-hea_tame_decision_cat_desc: "The Nucleus stands prepared to send its men in a grand show of faith in the name of the Lord but our home can be even grander! We'll ensure it is so!\n\n - §2Taming the Rivers§!: The rivers floating near §W[HEA.GetName]§! can be taken advantage of, constructing watermills all along our Eastern territories can help us gather energy, though not strictly necessary, the power from the mills could help future projects...\n\n - §8Taming the Lands§!: God gifted us Earth to do what we will and we have conquered it in truth...yet have we tamed it? No, in truth, we simply reside in it but those of Heaven's Gate were chosen by the lord. We will use science, the nucleus, and all of its ardent people to bring the land to heel.\n\n - §4Taming the Heavens§!: How can we say to be close to God when we huddle beneath the mountains? Should we not endeavor to master what was given to us? Of course we should! WE are the chosen of God, WE were gifted the Nucleus, WE are the masters of our minds, and WE shall tame the Heaven's themselves..."
+hea_tame_decision_cat_desc: "\n\n\n\n\n\n\n\n\n\n\n\n £GFX_embed_hea_taming_decision_texticon \n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Nucleus stirs. The faithful rise.\nWith steam, stone, and scripture, we shall reshape our holy lands; rivers harnessed, mountains hollowed, and even the heavens brought low. The Gate must be worthy of God's gaze.\n\n§W\"To us He gave the rivers, that we might guide their flow.\nTo us He gave the stone, that we might build upon it with care.\nTo us He gave the flame; not to burn, but to warm, to shape, to serve.\nWe are not kings of the earth, but its keepers.\"§!\n§8 - Vapor 3:6,from the Book of Vapor§!"
 ##Decisions-Taming the Rivers
 hea_building_water_mills: "Already constructing water mills"
 #18-Innocence Lost
 hea_water_mills_18_1: "§2Build water mills in [18.GetName]§!"
+hea_water_mills_18_1_desc: "\n§W\"The rivers run, but only the faithful give them purpose.\"§!\n\nWater mills are raised to capture the flow of nearby rivers, purifying what the land provides and turning it to the needs of the Gate. Clean water sustains industry, the faithful, and the march of holy progress. A tamed river is a living prayer."
 hea_water_mills_18_2: "§2Convert the water mills in [18.GetName]§!"
+hea_water_mills_18_2_desc: "\n§W\"Let the rivers no longer wander. Let them serve.\"§!\n\nWater once used for cleansing is now redirected for greater work. These mills are converted to generate power, fueling expansion and industry. The river is not conquered, it is commissioned."
 hea_water_mills_18_3: "§2Build bathhouses in [18.GetName]§!"
+hea_water_mills_18_3_desc: "\n§W\"Even the weary must be made whole.\"§!\n\nBathhouses provide warmth, restoration, and dignity for the faithful. Not luxury, but stability. In the steam that rises from tiled halls, the Gate proves that faith is not only fire, but rest between flames."
 #116-Eastern Passage
 hea_water_mills_116_1: "§2Build water mills in [116.GetName]§!"
+hea_water_mills_116_1_desc: "\n§W\"The rivers run, but only the faithful give them purpose.\"§!\n\nWater mills are raised to capture the flow of nearby rivers, purifying what the land provides and turning it to the needs of the Gate. Clean water sustains industry, the faithful, and the march of holy progress. A tamed river is a living prayer."
 hea_water_mills_116_2: "§2Convert the water mills in [116.GetName]§!"
+hea_water_mills_116_2_desc: "\n§W\"Let the rivers no longer wander. Let them serve.\"§!\n\nWater once used for cleansing is now redirected for greater work. These mills are converted to generate power, fueling expansion and industry. The river is not conquered, it is commissioned."
 hea_water_mills_116_3: "§2Build bathhouses in [116.GetName]§!"
+hea_water_mills_116_3_desc: "\n§W\"Even the weary must be made whole.\"§!\n\nBathhouses provide warmth, restoration, and dignity for the faithful. Not luxury, but stability. In the steam that rises from tiled halls, the Gate proves that faith is not only fire, but rest between flames."
 #278-Windy Isolation
 hea_water_mills_278_1: "§2Build water mills in [278.GetName]§!"
+hea_water_mills_278_1_desc: "\n§W\"The rivers run, but only the faithful give them purpose.\"§!\n\nWater mills are raised to capture the flow of nearby rivers, purifying what the land provides and turning it to the needs of the Gate. Clean water sustains industry, the faithful, and the march of holy progress. A tamed river is a living prayer."
 hea_water_mills_278_2: "§2Convert the water mills in [278.GetName]§!"
+hea_water_mills_278_desc: "\n§W\"Let the rivers no longer wander. Let them serve.\"§!\n\nWater once used for cleansing is now redirected for greater work. These mills are converted to generate power, fueling expansion and industry. The river is not conquered, it is commissioned."
 hea_water_mills_278_3: "§2Build bathhouses in [278.GetName]§!"
+hea_water_mills_278_3_desc: "\n§W\"Even the weary must be made whole.\"§!\n\nBathhouses provide warmth, restoration, and dignity for the faithful. Not luxury, but stability. In the steam that rises from tiled halls, the Gate proves that faith is not only fire, but rest between flames."
 #198-Southern Gate
 hea_water_mills_198_1: "§2Build water mills in [198.GetName]§!"
+hea_water_mills_198_1_desc: "\n§W\"The rivers run, but only the faithful give them purpose.\"§!\n\nWater mills are raised to capture the flow of nearby rivers, purifying what the land provides and turning it to the needs of the Gate. Clean water sustains industry, the faithful, and the march of holy progress. A tamed river is a living prayer."
 hea_water_mills_198_2: "§2Convert the water mills in [198.GetName]§!"
+hea_water_mills_198_2_desc: "\n§W\"Let the rivers no longer wander. Let them serve.\"§!\n\nWater once used for cleansing is now redirected for greater work. These mills are converted to generate power, fueling expansion and industry. The river is not conquered, it is commissioned."
 hea_water_mills_198_3: "§2Build bathhouses in [198.GetName]§!"
+hea_water_mills_198_3_desc: "\n§W\"Even the weary must be made whole.\"§!\n\nBathhouses provide warmth, restoration, and dignity for the faithful. Not luxury, but stability. In the steam that rises from tiled halls, the Gate proves that faith is not only fire, but rest between flames."
 
-hea_water_mills_1_tt: "Unlocks further §YUpgrades§! for the §2Water Mills§!"
-hea_water_mills_2_tt: "Unlocks the final §YUpgrades§! for the §2Water Mills§!"
+hea_water_mills_1_tt: "Unlocks further £GFX_decision_icon_small §YUpgrades§! for the §2Water Mills§!"
+hea_water_mills_2_tt: "Unlocks the final £GFX_decision_icon_small §YUpgrade§! for the §2Water Mills§!"
 
 ##Decisions-Taming the Lands
 hea_building_smiths: "Already constructing steam smiths"
 
 #1385-Western Tunnel
 hea_smiths_1385_1: "§8Build steam smiths in [1385.GetName]§!"
+hea_smiths_1385_1_desc: "\n§W\"Beneath the soil lies what God has buried for the faithful to find.\"§!\n\nSmithing sites are raised to draw ore and pressure-stone from the deep and begin their shaping. What the land yields, the Gate turns toward purpose, fire, metal, and work in proper order."
 hea_smiths_1385_2: "§8Upgrade the steam smiths in [1385.GetName]§!"
-hea_smiths_built_1385_2: "Steam smiths upgraded in [1385.GetName]"
+hea_smiths_1385_2_desc: "\n§W\"Raw ore is not enough, purity is earned in heat.\"§!\n\nForges are retooled for finer work: heat tempered, pressure balanced, slag driven out. Rough metal becomes true stock, uniform, dependable, ready for higher craft."
+hea_smiths_built_1385_2: "£GFX_decision_icon_small Steam smiths §Yupgraded§! in §Y[1385.GetName]§!"
 #198-Southern Gate
 hea_smiths_198_1: "§8Build steam smiths in [198.GetName]§!"
+hea_smiths_198_1_desc: "\n§W\"Beneath the soil lies what God has buried for the faithful to find.\"§!\n\nSmithing sites are raised to draw ore and pressure-stone from the deep and begin their shaping. What the land yields, the Gate turns toward purpose, fire, metal, and work in proper order."
 hea_smiths_198_2: "§8Upgrade the steam smiths in [198.GetName]§!"
-hea_smiths_built_198_2: "Steam smiths upgraded in [198.GetName]"
+hea_smiths_198_2_desc: "\n§W\"Raw ore is not enough, purity is earned in heat.\"§!\n\nForges are retooled for finer work: heat tempered, pressure balanced, slag driven out. Rough metal becomes true stock, uniform, dependable, ready for higher craft."
+hea_smiths_built_198_2: "£GFX_decision_icon_small Steam smiths §Yupgraded§! in §Y[198.GetName]§!"
 #276-Stagleap
 hea_smiths_276_1: "§8Build steam smiths in [276.GetName]§!"
+hea_smiths_276_1_desc: "\n§W\"Beneath the soil lies what God has buried for the faithful to find.\"§!\n\nSmithing sites are raised to draw ore and pressure-stone from the deep and begin their shaping. What the land yields, the Gate turns toward purpose, fire, metal, and work in proper order."
 hea_smiths_276_2: "§8Upgrade the steam smiths in [276.GetName]§!"
-hea_smiths_built_276_2: "Steam smiths upgraded in [276.GetName]"
+hea_smiths_276_2_desc: "\n§W\"Raw ore is not enough, purity is earned in heat.\"§!\n\nForges are retooled for finer work: heat tempered, pressure balanced, slag driven out. Rough metal becomes true stock, uniform, dependable, ready for higher craft."
+hea_smiths_built_276_2: "£GFX_decision_icon_small Steam smiths §Yupgraded§! in §Y[276.GetName]§!"
 
-hea_smiths_1_tt: "Unlocks further §YUpgrades§! for the §8Steam Smith§!"
+hea_smiths_1_tt: "Unlocks further £GFX_decision_icon_small §YUpgrade§! for the §8Steam Smith§!"
 
 #Steam smiths-final
 hea_smiths_final: "§8Construct new steam smiths weapons§!"
+hea_smiths_final_desc: "\n§W\"The weapon is not merely a tool, it is a testament.\"§!\n\nWith better stock and steadier hands, designs are corrected and failures pared away. Steam engines sear true, seals hold, and the Gate's arms endure the heat of war."
 
 ##Decisions-Taming the Heavens
 hea_capturing_scientists: "Already capturing scientists"
 
 hea_alchemist_276: "§4Scientists from [276.GetName]§!"
-hea_captured_scientists_276: "Scientists captured from [276.GetName]"
+hea_alchemist_276_desc: "\n§W\"The flame of insight does not always burn in the open.\"§!\n\nAcross the wastes, hidden thinkers and reclusive savants still cling to ancient truths. By bringing them into the fold, whether by scripture or steel, we strengthen the Gate's grasp on the world's forgotten knowledge. Let their wisdom be redeemed."
+hea_captured_scientists_276: "£GFX_decision_icon_small Scientists §Ycaptured§! from §Y[276.GetName]§!"
 
 hea_alchemist_30: "§4Scientists from [30.GetName]§!"
-hea_captured_scientists_30: "Scientists captured from [30.GetName]"
+hea_alchemist_30_desc: "\n§W\"The flame of insight does not always burn in the open.\"§!\n\nAcross the wastes, hidden thinkers and reclusive savants still cling to ancient truths. By bringing them into the fold, whether by scripture or steel, we strengthen the Gate's grasp on the world's forgotten knowledge. Let their wisdom be redeemed."
+hea_captured_scientists_30: "£GFX_decision_icon_small Scientists §Ycaptured§! from §Y[30.GetName]§!"
 
 hea_alchemist_700: "§4Scientists from [700.GetName]§!"
-hea_captured_scientists_700: "Scientists captured from [700.GetName]"
+hea_alchemist_700_desc: "\n§W\"The flame of insight does not always burn in the open.\"§!\n\nAcross the wastes, hidden thinkers and reclusive savants still cling to ancient truths. By bringing them into the fold, whether by scripture or steel, we strengthen the Gate's grasp on the world's forgotten knowledge. Let their wisdom be redeemed."
+hea_captured_scientists_700: "£GFX_decision_icon_small Scientists §Ycaptured§! from §Y[700.GetName]§!"
 
 hea_alchemist_949: "§4Scientists from [949.GetName]§!"
-hea_captured_scientists_949: "Scientists captured from [949.GetName]"
+hea_alchemist_949_desc: "\n§W\"The flame of insight does not always burn in the open.\"§!\n\nAcross the wastes, hidden thinkers and reclusive savants still cling to ancient truths. By bringing them into the fold, whether by scripture or steel, we strengthen the Gate's grasp on the world's forgotten knowledge. Let their wisdom be redeemed."
+hea_captured_scientists_949: "£GFX_decision_icon_small Scientists §Ycaptured§! from §Y[949.GetName]§!"
 
 hea_alchemist_950: "§4Scientists from [950.GetName]§!"
-hea_captured_scientists_950: "Scientists captured from [950.GetName]"
+hea_alchemist_950_desc: "\n§W\"The flame of insight does not always burn in the open.\"§!\n\nAcross the wastes, hidden thinkers and reclusive savants still cling to ancient truths. By bringing them into the fold, whether by scripture or steel, we strengthen the Gate's grasp on the world's forgotten knowledge. Let their wisdom be redeemed."
+hea_captured_scientists_950: "£GFX_decision_icon_small Scientists §Ycaptured§! from §Y[950.GetName]§!"
 
 hea_alchemist_final_research: "§4Heaven's Gate Research Team§!"
-hea_alchemist_final_research_tt: "This will §YLock§! us out of §4Heaven's Gate Advanced Resources Team§!"
+hea_alchemist_final_research_desc: "\n§W\"To know is to serve. To serve is to know.\"§!\n\nWith minds gathered and facilities expanded, Heaven's Gate prepares to sanctify science. Let no invention go unexamined, no theory unbound. Through structure and discipline, we shall shape discovery into doctrine."
+hea_alchemist_final_research_tt: "§RThis will Locks§! £GFX_decision_icon_small §4Heaven's Gate Advanced Resources Team§!"
 
 hea_alchemist_final_resource: "§4Heaven's Gate Advanced Resources Team§!"
-hea_alchemist_final_resource_tt: "This will §YLock§! us out of §4Heaven's Gate Research Team§!"
+hea_alchemist_final_resource_desc: "\n§W\"There is knowledge beyond flame, rarer, purer, earned.\"§!\n\nThe brightest minds of the Gate are given free reign, and the vaults are opened. Bottle Caps flow like blood through copper veins, and in return, they offer miracles: impossible alloys, sacred matter, tools of final purpose. Let the world tremble, we are the stewards of what comes next."
+hea_alchemist_final_resource_tt: "§RThis will Locks§! £GFX_decision_icon_small §4Heaven's Gate Research Team§!"
 
 ########################
 ##Fervor-CrusadingTime##
@@ -191,7 +217,7 @@ hea_state_manage_gui_return_button_tt: "Return to Commonwealths View"
 hea_state_manage_gui_idaho_button_tt: "Idaho: Controlled by §W[HEA.GetNameWithFlag]§!"
 state_manage_gui_idaho_button_delay_tt: "§L\"The Gate was not built—it was revealed.\"\n\nIdaho is not merely land. It is the cradle of Revelation, the land where the first hymns of steam and salvation echoed across pine and ruin. Every inch is sacred, etched by the hands of saints, watered by the blood of pilgrims, and sanctified in the fires of the First Crusade. To surrender it is unthinkable. To partition it, heresy. Those who hold it without blessing must be corrected by prayer or by flame.§!"
 hea_state_manage_idaho_demand_rot_decision: "For the Stewardship of the Holy Land"
-hea_state_manage_idaho_demand_rot_decision_desc: "Our support for §O[ROT.GetNameWithFlag]§! was not given lightly. We offered flame and steel, faith and blood, and together we cast down the cursed remnants of Vault 100. Now that their war is won, it is time to tend the flame. Coeur d'Alene, northern Idaho, is holy land. Not to them, perhaps. But to us, it always has been.\n\nWe ask not in conquest, but in covenant: Let the stewards of the Revelation guide what was is theirs."
+hea_state_manage_idaho_demand_rot_decision_desc: "The valleys of Coeur d'Alene and the northern ranges of Idaho are holy land. Their soil remembers the first pilgrims, their rivers the ashes of the fallen. Not all see it as sacred. But to §W[HEA.GetNameWithFlag]§!, it has ever been hallowed ground.\n\nWe come not as conquerors, but as caretakers, to guard what was bought in faith, and to let the stewards of Revelation guide what was always theirs to keep."
 hea_state_manage_idaho_demand_rot_decision_tt: "If §O[ROT.GetNameWithFlag]§! are §4friendly§! with us, they will be §Gmore likely§! to return our northern territories."
 hea_state_manage_idaho_demand_bdt_decision: "By Right of Flame"
 hea_state_manage_idaho_demand_bdt_decision_desc: "The land remembers the hymns once sung upon it. Southwest Idaho is not just soil, it is sacred ground, trod by saints, watered with pilgrim blood, and scorched in the fires of Revelation. We will not leave it in the hands of heretics or the hesitant.\n\nWe reclaim what was lost. By covenant, if possible. By flame, if not."
@@ -214,7 +240,7 @@ state_manage_oregon_order_creation_decision: "Declare §YThe Order of Oregon§!"
 state_manage_oregon_order_creation_decision_tt: "The lands of §YOregon§! will become a §Ytributary state§!, providing §Gtithes§! to [HEA.GetNameWithFlag]."
 state_manage_oregon_conquest_dynamic_decision: "§RCrusades§! against [FROM.GetNameWithFlag]"
 state_manage_oregon_conquest_dynamic_decision_desc: "[hea_state_manage_oregon_conquest_scripted_loc]"
-hea_state_manage_oregon_conquest_scripted_loc_default: "The heretic stands in the way of the faithful. We shall remove him. We take up sword and psalm. The Seraph Lords lead, and the Gate will follow, fire for idols, law for the broken. Let the false gods fall; let the fold be made right."
+hea_state_manage_oregon_conquest_scripted_loc_default: "Heretic stands where the faithful should kneel. We will unmake them. With psalm and spear we march; flame on false altars, iron on the obstinate. Let the idols crack and the flock be mended."
 hea_state_manage_oregon_conquest_scripted_loc_TRL: "They were not monsters when they were made.\n\nThe Nephilim were born of God's light, children of radiance and strength, shaped to protect and guide. But they turned from purpose and sought dominion instead, twisting His gift into mockery.\n\nNow they drown men in FEV and call it rebirth. They claim to forge a new Eden from flesh. We shall answer this blasphemy with sanctified fire and show them the fate of false angels.\n\n§tLet the Nephilim remember the sin of their fathers.§!"
 hea_state_manage_oregon_conquest_scripted_loc_MLT: "Idols of shell and tide, prophets of hunger and rot.\n\nThe Mirelurk Tribe kneels before a beast and names it god. Their \"Coral Court\" speaks with voices not their own, and their queen, M'lulu, spawns blasphemy in the dark.\n\nThey feast upon the flesh of men and call it sacrament. Their tunnels spread like infection, their faith like mold upon holy waters. We march to cleanse the coast and cast down the false goddess beneath the tide.\n\n§tLet the sea boil, and the faithful stand firm.§!"
 hea_state_manage_oregon_conquest_scripted_loc_ARR: "Eden bloomed once, and man forgot Who gave it.\n\nArroyo stands as a garden in the waste, a city of light and unity, built by the faithful labor of vault and tribe alike. They were chosen. They were blessed. They were given a Saint, blessed by the almighty.\n\nBut the Chosen is gone, and the Garden wilts in his shadow. Prosperity has dulled their spirit, and beauty has bred pride. They preach harmony, yet have forgotten reverence. We do not march to destroy them, but to remind them.\n\n§tFor even Eden must kneel before its Creator.§!"

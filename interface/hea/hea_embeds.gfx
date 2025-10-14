@@ -4,4 +4,9 @@ spriteTypes = {
 		textureFile = "gfx/texticons/embeds/hea_the_nucleus.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = { #FROSTPUNK WOOHOOO
+		name = "GFX_embed_hea_taming_decision_texticon" 
+		textureFile = "gfx/texticons/embeds/hea_taming_decision_texticon.dds"
+		legacy_lazy_load = no
+	}
 }

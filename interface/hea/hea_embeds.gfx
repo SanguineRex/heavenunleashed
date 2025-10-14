@@ -9,4 +9,14 @@ spriteTypes = {
 		textureFile = "gfx/texticons/embeds/hea_taming_decision_texticon.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = { #FROSTPUNK WOOHOOO
+		name = "GFX_embed_hea_state_idaho_texticon" 
+		textureFile = "gfx/texticons/embeds/hea_state_idaho_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { #For Debug Reasons, DO NOT REMOVE - @Deez
+		name = "GFX_embed_test_embed" 
+		textureFile = "gfx/texticons/embeds/test_embed.dds"
+		legacy_lazy_load = no
+	}
 }

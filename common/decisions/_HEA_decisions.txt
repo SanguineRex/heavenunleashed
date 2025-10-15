@@ -1227,11 +1227,7 @@ hea_state_manage_decision_cat = {
 				custom_effect_tooltip = hea_state_manage_idaho_demand_rot_decision_tt
 			}
 			else = { #ROT likely dead
-				ROT = {
-					ROOT = {
-						grant_wargoals_on_core_states_of_prev = yes
-					}
-				}
+				ROT = { ROOT = { grant_wargoals_on_core_states_of_prev = yes } }
 			}
 		}
 	}
@@ -1246,32 +1242,16 @@ hea_state_manage_decision_cat = {
 		visible = {
 			check_variable = { hea_com_manage_gui_decision = 1 } #Northwestern Commonwealth
 			check_variable = { hea_state_manage_gui_decision = 1 } #Idaho
-			NOT = {
-				SHO = {
-					all_core_state = {
-						is_owned_by = ROOT #using this instead of OWB's sphere check so you can demand from ally Seraph Lord
-					}
-				}
-			}
+			NOT = { SHO = { all_core_state = { is_owned_by = ROOT } } } #Using this instead of OWB's sphere check so you can demand from ally Seraph Lord - @Deez
 		}
 		remove_effect = {
 			if = { #BDT have ownership of SHO
-				limit = {
-					BDT = {
-						SHO = {
-							all_core_land_owned_by_prev_sphere = yes
-						}						
-					}
-				}
+				limit = { BDT = { SHO = { all_core_land_owned_by_prev_sphere = yes } } }
 				BDT = { country_event = nf_event_hea.902 }
 				custom_effect_tooltip = hea_state_manage_idaho_demand_bdt_decision_tt
 			}
 			else = { #BDT don't have ownership of SHO
-				SHO = {
-					ROOT = {
-						grant_wargoals_on_core_states_of_prev = yes
-					}
-				}
+				SHO = { ROOT = { grant_wargoals_on_core_states_of_prev = yes } }
 				custom_effect_tooltip = hea_state_manage_idaho_demand_bdt_delay_decision_tt
 			}
 		}
@@ -1321,13 +1301,7 @@ hea_state_manage_decision_cat = {
 		targets = { HGH SHO MUR ANO } 
 		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
 		target_trigger = { 
-			NOT = {
-				FROM = {
-					all_core_state = {
-						is_core_of = ROOT
-					}
-				}
-			}
+			NOT = { FROM = { all_core_state = { is_core_of = ROOT } } }
 		}
 		target_non_existing = yes #Need this to actually show up the decisions after conquering them
 		available = { 
@@ -1476,31 +1450,45 @@ hea_state_manage_decision_cat = {
 		targets = { CHE MDT TRL CCW RBT PMR MLT DIS KLA ARR TCA } #Oregon nations except for TIM, SHO and BDT cause they already exist in a different focus/decision - @Deez
 		#targets_dynamic = yes #OWB do did some weird dynamic tags thing, so can't use this
 		target_trigger = { 
-			FROM = {
-				NOT = { all_core_land_owned_by_prev_sphere = yes }
-			}
+			FROM = { NOT = { all_core_land_owned_by_prev_sphere = yes } }
 		}
 		target_non_existing = yes #Need this to actually target the lands even after they're gone
-		available = { 
+		available = {
 			if = {
+				limit = { country_exists = FROM }
+				if = {
+					limit = {
+						BDT = { is_ally_with = ROOT }
+						ROOT = { has_country_flag = hea_oregon_states_to_bdt }
+					}
+					FROM = { is_neighbor_of = BDT }
+				}
+				else = {
+					OR = {
+						FROM = { is_neighbor_of = ROOT }
+						FROM = { any_neighbor_country = { is_ally_with = ROOT } }
+					}
+				}
+			}
+			else_if = {
 				limit = {
 					BDT = { is_ally_with = ROOT }
 					ROOT = { has_country_flag = hea_oregon_states_to_bdt }
 				}
-				FROM = { is_neighbor_of = BDT }
+				BDT = { any_neighbor_country = { any_owned_state = { is_core_of = ROOT } } }
 			}
 			else = {
-				OR = {
-					FROM = { is_neighbor_of = ROOT }
-					FROM = { any_neighbor_country = { is_ally_with = ROOT } }
+				ROOT = {
+					OR = {
+						any_neighbor_country = { any_owned_state = { is_core_of = FROM } }
+						any_allied_country = { any_neighbor_country = { any_owned_state = { is_core_of = FROM } } }
+					}
 				}
 			}
 		}
 		war_with_target_on_remove = yes
 		remove_effect = {
-			FROM = {
-				ROOT = { grant_wargoals_on_core_states_of_prev = yes }
-			}
+			FROM = { ROOT = { grant_wargoals_on_core_states_of_prev = yes } }
 		}
 
 		ai_will_do = { #I'm not well verse in AI scripting so just gonna be something basic, at least they will choose the decision instead of ignoring, again idk why anyone would install this mod and play something else, I'm looking at you Beezus - @Deez
@@ -1659,15 +1647,6 @@ hea_state_manage_decision_cat = {
 	#Southwestern Commonwealth-2#
 	#############################
 	###North California-1###
-	state_manage_northcali_test_decision = {
-		visible = {
-			check_variable = { hea_com_manage_gui_decision = 2 } #Southwestern Commonwealth		
-			check_variable = { hea_state_manage_gui_decision = 1 } #North California
-		}
-		complete_effect = {
-			add_political_power = 1
-		}
-	}
 	##The Order of North California
 	state_manage_northcali_order_creation_decision = {
 		icon = GFX_decision_generic_colonial_administration
@@ -1727,15 +1706,6 @@ hea_state_manage_decision_cat = {
 		}
 	}
 	###South California-2###
-	state_manage_southcali_test_decision = {
-		visible = {
-			check_variable = { hea_com_manage_gui_decision = 2 } #Southwestern Commonwealth		
-			check_variable = { hea_state_manage_gui_decision = 2 } #South California
-		}
-		complete_effect = {
-			add_political_power = 2
-		}
-	}
 	##The Order of South California
 	state_manage_southcali_order_creation_decision = {
 		icon = GFX_decision_generic_colonial_administration
@@ -1793,15 +1763,6 @@ hea_state_manage_decision_cat = {
 		}
 	}
 	###Nevada-3###
-	state_manage_nevada_test_decision = {
-		visible = {
-			check_variable = { hea_com_manage_gui_decision = 2 } #Southwestern Commonwealth		
-			check_variable = { hea_state_manage_gui_decision = 3 } #Nevada
-		}
-		complete_effect = {
-			add_political_power = 3
-		}
-	}
 	##The Order of Nevada
 	state_manage_nevada_order_creation_decision = {
 		icon = GFX_decision_generic_colonial_administration
@@ -1863,15 +1824,6 @@ hea_state_manage_decision_cat = {
 	#Fourstates Commonwealth-3#
 	###########################
 	###Utah-1###
-	state_manage_utah_test_decision = {
-		visible = {
-			check_variable = { hea_com_manage_gui_decision = 3 } #Fourstates Commonwealth		
-			check_variable = { hea_state_manage_gui_decision = 1 } #Utah
-		}
-		complete_effect = {
-			add_political_power = 1
-		}
-	}
 	##The Order of Utah
 	state_manage_utah_order_creation_decision = {
 		icon = GFX_decision_generic_colonial_administration
@@ -1929,15 +1881,6 @@ hea_state_manage_decision_cat = {
 		}
 	}
 	###Arizona-2###
-	state_manage_arizona_test_decision = {
-		visible = {
-			check_variable = { hea_com_manage_gui_decision = 3 } #Fourstates Commonwealth		
-			check_variable = { hea_state_manage_gui_decision = 2 } #Arizona
-		}
-		complete_effect = {
-			add_political_power = 2
-		}
-	}
 	##The Order of Arizona
 	state_manage_arizona_order_creation_decision = {
 		icon = GFX_decision_generic_colonial_administration
@@ -1990,15 +1933,6 @@ hea_state_manage_decision_cat = {
 		}
 	}
 	###Colorado-3###
-	state_manage_colorado_test_decision = {
-		visible = {
-			check_variable = { hea_com_manage_gui_decision = 3 } #Fourstates Commonwealth		
-			check_variable = { hea_state_manage_gui_decision = 3 } #Colorado
-		}
-		complete_effect = {
-			add_political_power = 3
-		}
-	}
 	##The Order of Colorado
 	state_manage_colorado_order_creation_decision = {
 		icon = GFX_decision_generic_colonial_administration
@@ -2056,15 +1990,6 @@ hea_state_manage_decision_cat = {
 		}
 	}
 	###New Mexico-4###
-	state_manage_newmexico_test_decision = {
-		visible = {
-			check_variable = { hea_com_manage_gui_decision = 3 } #Fourstates Commonwealth		
-			check_variable = { hea_state_manage_gui_decision = 4 } #New Mexico
-		}
-		complete_effect = {
-			add_political_power = 4
-		}
-	}
 	##The Order of New Mexico
 	state_manage_newmexico_order_creation_decision = {
 		icon = GFX_decision_generic_colonial_administration
@@ -2127,15 +2052,6 @@ hea_state_manage_decision_cat = {
 	#Northern Commonwealth-4#
 	#########################
 	###Montana-1###
-	state_manage_montana_test_decision = {
-		visible = {
-			check_variable = { hea_com_manage_gui_decision = 4 } #Northern Commonwealth		
-			check_variable = { hea_state_manage_gui_decision = 1 } #Montana
-		}
-		complete_effect = {
-			add_political_power = 1
-		}
-	}
 	##The Order of Montana
 	state_manage_montana_order_creation_decision = {
 		icon = GFX_decision_generic_colonial_administration
@@ -2193,15 +2109,6 @@ hea_state_manage_decision_cat = {
 		}
 	}
 	###Wyoming-2###
-	state_manage_wyoming_test_decision = {
-		visible = {
-			check_variable = { hea_com_manage_gui_decision = 4 } #Northern Commonwealth		
-			check_variable = { hea_state_manage_gui_decision = 2 } #Wyoming
-		}
-		complete_effect = {
-			add_political_power = 2
-		}
-	}
 	##The Order of Wyoming
 	state_manage_wyoming_order_creation_decision = {
 		icon = GFX_decision_generic_colonial_administration
@@ -2260,15 +2167,6 @@ hea_state_manage_decision_cat = {
 		}
 	}
 	###North Dakota-3###
-	state_manage_northdakota_test_decision = {
-		visible = {
-			check_variable = { hea_com_manage_gui_decision = 4 } #Northern Commonwealth		
-			check_variable = { hea_state_manage_gui_decision = 3 } #North Dakota
-		}
-		complete_effect = {
-			add_political_power = 3
-		}
-	}
 	##The Order of North Dakota
 	state_manage_northdakota_order_creation_decision = {
 		icon = GFX_decision_generic_colonial_administration
@@ -2327,15 +2225,6 @@ hea_state_manage_decision_cat = {
 		}
 	}
 	###South Dakota-4###
-	state_manage_southdakota_test_decision = {
-		visible = {
-			check_variable = { hea_com_manage_gui_decision = 4 } #Northern Commonwealth		
-			check_variable = { hea_state_manage_gui_decision = 4 } #South Dakota
-		}
-		complete_effect = {
-			add_political_power = 4
-		}
-	}
 	##The Order of South Dakota
 	state_manage_southdakota_order_creation_decision = {
 		icon = GFX_decision_generic_colonial_administration
@@ -2398,15 +2287,6 @@ hea_state_manage_decision_cat = {
 	#Texan Commonwealth-5#
 	######################
 	###Oklahoma-1###
-	state_manage_oklahoma_test_decision = {
-		visible = {
-			check_variable = { hea_com_manage_gui_decision = 5 } #Texan Commonwealth		
-			check_variable = { hea_state_manage_gui_decision = 1 } #Oklahoma
-		}
-		complete_effect = {
-			add_political_power = 1
-		}
-	}
 	##The Order of Oklahoma
 	state_manage_oklahoma_order_creation_decision = {
 		icon = GFX_decision_generic_colonial_administration
@@ -2463,15 +2343,6 @@ hea_state_manage_decision_cat = {
 		}
 	}
 	###Texas-2###
-	state_manage_texas_test_decision = {
-		visible = {
-			check_variable = { hea_com_manage_gui_decision = 5 } #Texan Commonwealth		
-			check_variable = { hea_state_manage_gui_decision = 2 } #Texas
-		}
-		complete_effect = {
-			add_political_power = 2
-		}
-	}
 	##The Order of Texas
 	state_manage_texas_order_creation_decision = {
 		icon = GFX_decision_generic_colonial_administration
@@ -2529,15 +2400,6 @@ hea_state_manage_decision_cat = {
 		}
 	}
 	###Arkansas-3###
-	state_manage_arkansas_test_decision = {
-		visible = {
-			check_variable = { hea_com_manage_gui_decision = 5 } #Texan Commonwealth		
-			check_variable = { hea_state_manage_gui_decision = 3 } #Arkansas
-		}
-		complete_effect = {
-			add_political_power = 3
-		}
-	}
 	##The Order of Arkansas
 	state_manage_arkansas_order_creation_decision = {
 		icon = GFX_decision_generic_colonial_administration
@@ -2598,15 +2460,6 @@ hea_state_manage_decision_cat = {
 		}
 	}
 	###Louisiana-4###
-	state_manage_louisiana_test_decision = {
-		visible = {
-			check_variable = { hea_com_manage_gui_decision = 5 } #Texan Commonwealth		
-			check_variable = { hea_state_manage_gui_decision = 4 } #Louisiana
-		}
-		complete_effect = {
-			add_political_power = 4
-		}
-	}
 	##The Order of Louisiana
 	state_manage_louisiana_order_creation_decision = {
 		icon = GFX_decision_generic_colonial_administration
@@ -2663,15 +2516,6 @@ hea_state_manage_decision_cat = {
 	#Plains Commonwealth-6#
 	#######################
 	###Nebraska-1###
-	state_manage_nebraska_test_decision = {
-		visible = {
-			check_variable = { hea_com_manage_gui_decision = 6 } #Plains Commonwealth		
-			check_variable = { hea_state_manage_gui_decision = 1 } #Nebraska
-		}
-		complete_effect = {
-			add_political_power = 1
-		}
-	}
 	##The Order of Nebraska
 	state_manage_nebraska_order_creation_decision = {
 		icon = GFX_decision_generic_colonial_administration
@@ -2726,15 +2570,6 @@ hea_state_manage_decision_cat = {
 		}
 	}
 	###Kansas-2###
-	state_manage_kansas_test_decision = {
-		visible = {
-			check_variable = { hea_com_manage_gui_decision = 6 } #Plains Commonwealth		
-			check_variable = { hea_state_manage_gui_decision = 2 } #Kansas
-		}
-		complete_effect = {
-			add_political_power = 2
-		}
-	}
 	##The Order of Kansas
 	state_manage_kansas_order_creation_decision = {
 		icon = GFX_decision_generic_colonial_administration
@@ -2792,7 +2627,6 @@ hea_state_manage_decision_cat = {
 			check_variable = { hea_state_manage_gui_decision = 3 } #Iowa
 		}
 		complete_effect = {
-			add_political_power = 3
 		}
 	}
 	###Missouri-4###
@@ -2802,7 +2636,6 @@ hea_state_manage_decision_cat = {
 			check_variable = { hea_state_manage_gui_decision = 4 } #Missouri
 		}
 		complete_effect = {
-			add_political_power = 4
 		}
 	}
 	#########################

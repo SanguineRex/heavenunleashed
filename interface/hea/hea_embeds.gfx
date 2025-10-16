@@ -14,6 +14,16 @@ spriteTypes = {
 		textureFile = "gfx/texticons/embeds/hea_state_idaho_texticon.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = { #Fallout Extreme Concept Art
+		name = "GFX_embed_hea_state_washington_texticon" 
+		textureFile = "gfx/texticons/embeds/hea_state_washington_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { #Fallout Online - PV13 Concept Art
+		name = "GFX_embed_hea_state_oregon_texticon" 
+		textureFile = "gfx/texticons/embeds/hea_state_oregon_texticon.dds"
+		legacy_lazy_load = no
+	}
 	spriteType = { #For Debug Reasons, DO NOT REMOVE - @Deez
 		name = "GFX_embed_test_embed" 
 		textureFile = "gfx/texticons/embeds/test_embed.dds"

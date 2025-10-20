@@ -1,0 +1,13 @@
+spriteTypes = {
+	#Inner Circle
+	spriteType = {
+		name = "GFX_trait_HEA_inner_circle_unit_leader_trait"
+		texturefile = "gfx/interface/traits/hu_inner_circle_trait.dds"
+	}
+
+	#Bee Pope
+	spriteType = {
+		name = "GFX_trait_HEA_bee_pope_unit_leader_trait"
+		texturefile = "gfx/interface/traits/hu_bee_pope_trait.dds"
+	}
+}

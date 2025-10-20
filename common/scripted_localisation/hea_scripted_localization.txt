@@ -9,20 +9,20 @@
 # that'll be used if trigger passes
 ###Calcualte per battalion in division designer. Depricated
 
-defined_text = {
-    name = HEA_steam_heat_color_scripted_localization
-    text = {
-        trigger = { check_variable = { HEA.steam_heat > 8 } }
-        localization_key = steam_heat_red
-    }
-    text = {
-        trigger = { check_variable = { HEA.steam_heat > 4 } }
-        localization_key = steam_heat_yellow
-    }
-    text = {
-        localization_key = steam_heat_green
-    }
-}
+#defined_text = {
+#    name = HEA_steam_heat_color_scripted_localization
+#    text = {
+#        trigger = { check_variable = { HEA.steam_heat > 8 } }
+#        localization_key = steam_heat_red
+#    }
+#    text = {
+#        trigger = { check_variable = { HEA.steam_heat > 4 } }
+#        localization_key = steam_heat_yellow
+#    }
+#    text = {
+#        localization_key = steam_heat_green
+#    }
+#}
 
 defined_text = {
     name = hea_the_nucleus_dynamic_modifier_scripted_loc
@@ -165,12 +165,12 @@ define_text = {
         localization_key = hea_fervor_desc_war_scripted_loc_neutral
     }
 }
-define_text = {
-    name = GetFervorModifiers
-    text = {
-        localization_key = hea_fervor_modifiers_scripted_gui_tt
-    }
-}
+#define_text = {
+#    name = GetFervorModifiers
+#    text = {
+#        localization_key = hea_fervor_modifiers_scripted_gui_tt
+#    }
+#}
 define_text = {
     name = hea_tame_focus_scripted_loc
     text = {

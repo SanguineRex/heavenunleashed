@@ -1,0 +1,12 @@
+spriteTypes = {
+
+	###########################
+	####### Heavens Gate #####
+	###########################
+	
+	#######Placeholder Focuses
+	spriteType = {
+		name = "GFX_goal_ROT_passing_the_passkeepers"
+		texturefile = "gfx/interface/goals/unique/ROT/ROT_passing_the_passkeepers.dds"
+	}
+}

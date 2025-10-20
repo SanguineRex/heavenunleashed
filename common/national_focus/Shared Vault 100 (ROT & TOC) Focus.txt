@@ -1657,7 +1657,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROT_the_great_crusade_timberline
-		icon = GFX_goal_ROT_timber_timberline
+		icon = GFX_goal_ROT_passing_the_passkeepers
 		cost = 40
 		available = {
 			has_war = no

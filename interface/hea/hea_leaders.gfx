@@ -37,6 +37,10 @@ spriteTypes = {
 		name = "GFX_Portrait_HEA_bee_pope_small"
 		textureFile = "gfx/leaders/HEA/portrait_hea_bee_pope_small.dds"
 	}
+	spriteType = {
+		name = "GFX_trait_charismatic_trait"
+		texturefile = "gfx/interface/traits/charismatic_trait.dds"
+	}
 
 	#Sir Aegon Pyrel
 	spriteType = {

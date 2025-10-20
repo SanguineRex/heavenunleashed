@@ -1,8 +1,14 @@
 spriteTypes = {
-	#Fervor Scripted GUI stuff
-    spriteType = {
-        name = "GFX_hea_fervor_scripted_gui"
-        textureFile = "gfx/interface/decisions/hea_fervor_idea_scripted_gui.dds"
+	##Fervor Scripted GUI stuff
+    #spriteType = {
+    #    name = "GFX_hea_fervor_scripted_gui"
+    #    textureFile = "gfx/interface/decisions/hea_fervor_idea_scripted_gui.dds"
+    #}
+	#Monster of the Waste Triump of Chirst GUI
+	spriteType = {
+        name = "GFX_hea_triump_of_christ_gui"
+        textureFile = "gfx/interface/decisions/hea_monsters_of_the_wastes/triump_of_christ.dds"
+		transparencecheck = yes
     }
     #HEA Commonwealth Management stuff
     spriteType = { #Background

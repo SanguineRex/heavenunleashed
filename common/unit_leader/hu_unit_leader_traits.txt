@@ -10,7 +10,7 @@ leader_traits = {
 			always = no
 		}
 		non_shared_modifier = {
-			max_commander_army_size = 6
+			max_commander_army_size = 7
 			paradrop_organization_factor = 0.5
 		}
 

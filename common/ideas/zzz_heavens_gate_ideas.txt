@@ -824,9 +824,9 @@ ideas = {
 				army_speed_factor = 0.05
 			}
 		}
-	###Air Focuses
+		###Air Focuses
 	
-	###Mur Ideas
+		###Mur Ideas
 	
 		mur_order1 = {
 			picture = hea_sentinel_order
@@ -1302,9 +1302,9 @@ ideas = {
 				send_volunteer_size = 2
 			}
 		}
-###################################
-##Unique Puppets National Spirits##
-###################################
+		###################################
+		##Unique Puppets National Spirits##
+		###################################
 		###Oregon###
 		hea_oregon_gilded_wings_idea = {
 			picture = HEA_idea_mobility
@@ -1329,9 +1329,9 @@ ideas = {
 			}
 		}
 
-###################################
-##Taming Rivers,Lands and Heavens##
-###################################
+		###################################
+		##Taming Rivers,Lands and Heavens##
+		###################################
 		hea_taming_idea_template = { #Base with no real effects
 			name = hea_taming_idea_name
 			#Don't need anything here
@@ -1537,9 +1537,44 @@ ideas = {
 			}
 		}
 
-#########################
-##Fervor-Crusdaing Time##
-#########################
+		#########################
+		##Fervor-Crusdaing Time##
+		#########################
+		###Used to swap different GFXs
+		hea_fervor_idea_tier_0 = { #Blighted
+			name = hea_fervor_idea_name
+			modifier = { custom_modifier_tooltip = hea_fervor_modifiers_tt }
+		}
+		hea_fervor_idea_tier_1 = { #Withered
+			name = hea_fervor_idea_name
+			modifier = { custom_modifier_tooltip = hea_fervor_modifiers_tt }
+		}
+		hea_fervor_idea_tier_2 = { #Dulled
+			name = hea_fervor_idea_name
+			modifier = { custom_modifier_tooltip = hea_fervor_modifiers_tt }
+		}
+		hea_fervor_idea_tier_3 = { #Holding Vigil
+			name = hea_fervor_idea_name
+			modifier = { custom_modifier_tooltip = hea_fervor_modifiers_tt }
+		}
+		hea_fervor_idea_tier_4 = { #Embered
+			name = hea_fervor_idea_name
+			modifier = { custom_modifier_tooltip = hea_fervor_modifiers_tt }
+		}
+		hea_fervor_idea_tier_5 = { #Kindled
+			name = hea_fervor_idea_name
+			modifier = { custom_modifier_tooltip = hea_fervor_modifiers_tt }
+		}
+		hea_fervor_idea_tier_6 = { #Exalted
+			name = hea_fervor_idea_name
+			modifier = { custom_modifier_tooltip = hea_fervor_modifiers_tt }
+		}
+		hea_fervor_idea_tier_7 = { #Rapturous
+			name = hea_fervor_idea_name
+			modifier = { custom_modifier_tooltip = hea_fervor_modifiers_tt }
+		}
+
+		###Used to create tooltips
 		hea_fervor_idea_template = { #Base with no real effects
 			name = hea_fervor_idea_name
 			#Lmao Nothing here - @Deez

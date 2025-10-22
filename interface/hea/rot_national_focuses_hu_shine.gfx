@@ -1,7 +1,7 @@
 # Shiny version of icons setup by Mechano via script
 spriteTypes = {
 	spriteType = {
-		name = "GFX_goal_ROT_passing_the_passkeepersshine"
+		name = "GFX_goal_ROT_passing_the_passkeepers_shine"
 		texturefile = "gfx/interface/goals/unique/ROT/ROT_passing_the_passkeepers.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {

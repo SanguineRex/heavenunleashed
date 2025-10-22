@@ -1,0 +1,227 @@
+#Used to swap GFX to stage 1 idle
+hea_fervor_idle_stage_1_idle_scripted_effects = {
+	if = {
+		limit = { 
+			has_idea = hea_fervor_idea_tier_3 #Holding Vigil
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_3
+			add_idea = hea_fervor_idea_tier_2
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = hea_fervor_idea_tier_4 #Embered
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_4 
+			add_idea = hea_fervor_idea_tier_2
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = hea_fervor_idea_tier_5 #Kindled
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_5
+			add_idea = hea_fervor_idea_tier_2
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = hea_fervor_idea_tier_6 #Exalted
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_6
+			add_idea = hea_fervor_idea_tier_2
+		}
+	}
+}
+#Used to swap GFX for cancelling stage 1 - Dulled idleness
+hea_fervor_idle_stage_1_idle_cancel_scripted_effects = {
+	if = {
+		limit = { 
+			check_variable = { hea_fervor_loc_var > 4 } #Exalted
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_2
+			add_idea = hea_fervor_idea_tier_6
+		}
+	}
+	else_if = {
+		limit = { 
+			check_variable = { hea_fervor_loc_var > 2 } #Kindled
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_2
+			add_idea = hea_fervor_idea_tier_5
+		}
+	}
+	else_if = {
+		limit = { 
+			check_variable = { hea_fervor_loc_var > 0 } #Embered
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_2
+			add_idea = hea_fervor_idea_tier_4
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { hea_fervor_loc_var = 0 } #Holding Vigil
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_2
+			add_idea = hea_fervor_idea_tier_3
+		}
+	}
+}
+
+#Used to swap GFX for cancelling stage 2 - Withered idleness
+hea_fervor_idle_stage_2_idle_cancel_scripted_effects = {
+	if = {
+		limit = { 
+			check_variable = { hea_fervor_loc_var > 4 } #Exalted
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_1
+			add_idea = hea_fervor_idea_tier_6
+		}
+	}
+	else_if = {
+		limit = { 
+			check_variable = { hea_fervor_loc_var > 2 } #Kindled
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_1
+			add_idea = hea_fervor_idea_tier_5
+		}
+	}
+	else_if = {
+		limit = { 
+			check_variable = { hea_fervor_loc_var > 0 } #Embered
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_1
+			add_idea = hea_fervor_idea_tier_4
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { hea_fervor_loc_var = 0 } #Holding Vigil
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_1
+			add_idea = hea_fervor_idea_tier_3
+		}
+	}
+}
+
+#Used to swap GFX for cancelling stage 3 - Blighted idleness
+hea_fervor_idle_stage_3_idle_cancel_scripted_effects = {
+	if = {
+		limit = { 
+			check_variable = { hea_fervor_loc_var > 4 } #Exalted
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_0
+			add_idea = hea_fervor_idea_tier_6
+		}
+	}
+	else_if = {
+		limit = { 
+			check_variable = { hea_fervor_loc_var > 2 } #Kindled
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_0
+			add_idea = hea_fervor_idea_tier_5
+		}
+	}
+	else_if = {
+		limit = { 
+			check_variable = { hea_fervor_loc_var > 0 } #Embered
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_0
+			add_idea = hea_fervor_idea_tier_4
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { hea_fervor_loc_var = 0 } #Holding Vigil
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_0
+			add_idea = hea_fervor_idea_tier_3
+		}
+	}
+}
+
+#Used to update the GFX between tiers
+hea_fervor_update_tier_scripted_effects = {
+	if = {
+		limit = { 
+			check_variable = { hea_fervor_loc_var > 4 } #Exalted
+			has_idea = hea_fervor_idea_tier_5 #Only change GFX when player isn't in idle stages of Fervor
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_5
+			add_idea = hea_fervor_idea_tier_6
+		}
+	}
+	else_if = {
+		limit = { 
+			check_variable = { hea_fervor_loc_var > 2 } #Kindled
+			has_idea = hea_fervor_idea_tier_4 #Only change GFX when player isn't in idle stages of Fervor
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_4
+			add_idea = hea_fervor_idea_tier_5
+		}
+	}
+	else_if = {
+		limit = { 
+			check_variable = { hea_fervor_loc_var > 0 } #Embered
+			has_idea = hea_fervor_idea_tier_3 #Only change GFX when player isn't in idle stages of Fervor
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_3
+			add_idea = hea_fervor_idea_tier_4
+		}
+	}
+}
+
+#Used to swap GFX to Rapturous - Final Stage
+hea_fervor_final_scripted_effects = {
+	if = {
+		limit = { has_idea = hea_fervor_idea_tier_6 } #Exalted
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_6 
+			add_idea = hea_fervor_idea_tier_7
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = hea_fervor_idea_tier_2 #Dulled
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_2
+			add_idea = hea_fervor_idea_tier_7
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = hea_fervor_idea_tier_1 #Withered
+		}
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_1
+			add_idea = hea_fervor_idea_tier_7
+		}
+	}
+	else = { #The less likely one, put at bottom - @Deez
+		swap_ideas = {
+			remove_idea = hea_fervor_idea_tier_0 #Blighted
+			add_idea = hea_fervor_idea_tier_7
+		}
+	}
+}

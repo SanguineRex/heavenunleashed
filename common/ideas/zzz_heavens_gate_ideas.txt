@@ -564,7 +564,7 @@ ideas = {
 				political_power_gain = 0.25
 				war_support_factor = 0.25
 				stability_factor = 0.25
-					justify_war_goal_time = -0.75
+				justify_war_goal_time = -0.75
 				army_morale_factor = 0.20
 				army_attack_factor = 0.20
 				army_defence_factor = 0.10
@@ -577,18 +577,19 @@ ideas = {
 			picture = hea_wardens_of_humanity
 			removal_cost = -1
 			modifier = {
-				army_morale_factor = 0.10
-				army_attack_factor = 0.10
-				army_defence_factor = 0.10
+				army_morale_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
 			} 
 		}
 		HEA_wardens_of_humanity2 = {
 			picture = hea_wardens_of_humanity
 			removal_cost = -1
 			modifier = {
-				army_morale_factor = 0.25
-				army_attack_factor = 0.25
-				army_defence_factor = 0.25
+				stability_factor = 0.1
+				army_morale_factor = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
 			} 
 			
 		}
@@ -1541,36 +1542,44 @@ ideas = {
 		##Fervor-Crusdaing Time##
 		#########################
 		###Used to swap different GFXs
-		hea_fervor_idea_tier_0 = { #Blighted
+		hea_fervor_idea_tier_0 = { #Blighted - Idle 3
 			name = hea_fervor_idea_name
+			picture = hea_fervor_blighted
 			modifier = { custom_modifier_tooltip = hea_fervor_modifiers_tt }
 		}
-		hea_fervor_idea_tier_1 = { #Withered
+		hea_fervor_idea_tier_1 = { #Withered - Idle 2
 			name = hea_fervor_idea_name
+			picture = hea_fervor_withered
 			modifier = { custom_modifier_tooltip = hea_fervor_modifiers_tt }
 		}
-		hea_fervor_idea_tier_2 = { #Dulled
+		hea_fervor_idea_tier_2 = { #Dulled - Idle 1
 			name = hea_fervor_idea_name
+			picture = hea_fervor_dulled
 			modifier = { custom_modifier_tooltip = hea_fervor_modifiers_tt }
 		}
 		hea_fervor_idea_tier_3 = { #Holding Vigil
 			name = hea_fervor_idea_name
+			picture = hea_fervor_holdingvigil
 			modifier = { custom_modifier_tooltip = hea_fervor_modifiers_tt }
 		}
 		hea_fervor_idea_tier_4 = { #Embered
 			name = hea_fervor_idea_name
+			picture = hea_fervor_embered
 			modifier = { custom_modifier_tooltip = hea_fervor_modifiers_tt }
 		}
 		hea_fervor_idea_tier_5 = { #Kindled
 			name = hea_fervor_idea_name
+			picture = hea_fervor_kindled
 			modifier = { custom_modifier_tooltip = hea_fervor_modifiers_tt }
 		}
 		hea_fervor_idea_tier_6 = { #Exalted
 			name = hea_fervor_idea_name
+			picture = hea_fervor_exalted
 			modifier = { custom_modifier_tooltip = hea_fervor_modifiers_tt }
 		}
 		hea_fervor_idea_tier_7 = { #Rapturous
 			name = hea_fervor_idea_name
+			picture = hea_fervor_rapturous
 			modifier = { custom_modifier_tooltip = hea_fervor_modifiers_tt }
 		}
 

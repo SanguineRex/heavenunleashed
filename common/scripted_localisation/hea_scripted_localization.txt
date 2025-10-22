@@ -27,7 +27,7 @@
 defined_text = {
     name = hea_the_nucleus_dynamic_modifier_scripted_loc
     text = {
-        trigger = { HEA = {has_completed_focus = hea_nf_age_of_steam } }
+        trigger = { HEA = { has_completed_focus = hea_nf_age_of_steam } }
         localization_key = hea_the_nucleus_dynamic_modifier_age
     }
     text = {
@@ -36,6 +36,151 @@ defined_text = {
     }
     text = {
         localization_key = hea_the_nucleus_dynamic_modifier_blessing
+    }
+}
+
+defined_text = {
+    name = hea_fervor_army_org_scripted_loc
+    text = {
+        trigger = { 
+            NOT = { HEA = { check_variable = { hea_fervor_army_org_factor_var = 0 } } }
+        }
+        localization_key = hea_fervor_modifiers_army_org_factor
+    }
+    text = {
+        localization_key = hea_fervor_modifiers_nothing
+    }
+}
+defined_text = {
+    name = hea_fervor_attrition_scripted_loc
+    text = {
+        trigger = { 
+            NOT = { HEA = { check_variable = { hea_fervor_attrition_var = 0 } } }
+        }
+        localization_key = hea_fervor_modifiers_attrition
+    }
+    text = {
+        localization_key = hea_fervor_modifiers_nothing
+    }
+}
+defined_text = {
+    name = hea_fervor_supply_consumption_factor
+    text = {
+        trigger = { 
+            NOT = { HEA = { check_variable = { hea_fervor_supply_consumption_factor_var = 0 } } }
+        }
+        localization_key = hea_fervor_modifiers_supply_consumption_factor
+    }
+    text = {
+        localization_key = hea_fervor_modifiers_nothing
+    }
+}
+defined_text = {
+    name = hea_fervor_army_morale_factor
+    text = {
+        trigger = { 
+            NOT = { HEA = { check_variable = { hea_fervor_army_morale_factor_var = 0 } } }
+        }
+        localization_key = hea_fervor_modifiers_army_morale_factor
+    }
+    text = {
+        localization_key = hea_fervor_modifiers_nothing
+    }
+}
+defined_text = {
+    name = hea_fervor_stability_factor
+    text = {
+        trigger = { 
+            NOT = { HEA = { check_variable = { hea_fervor_stability_factor_var = 0 } } }
+        }
+        localization_key = hea_fervor_modifiers_stability_factor
+    }
+    text = {
+        localization_key = hea_fervor_modifiers_nothing
+    }
+}
+defined_text = {
+    name = hea_fervor_war_support_factor
+    text = {
+        trigger = { 
+            NOT = { HEA = { check_variable = { hea_fervor_war_support_factor_var = 0 } } }
+        }
+        localization_key = hea_fervor_modifiers_war_support_factor
+    }
+    text = {
+        localization_key = hea_fervor_modifiers_nothing
+    }
+}
+defined_text = {
+    name = hea_fervor_stability_weekly
+    text = {
+        trigger = { 
+            NOT = { HEA = { check_variable = { hea_fervor_stability_weekly_var = 0 } } }
+        }
+        localization_key = hea_fervor_modifiers_stability_weekly
+    }
+    text = {
+        localization_key = hea_fervor_modifiers_nothing
+    }
+}
+defined_text = {
+    name = hea_fervor_war_support_weekly
+    text = {
+        trigger = { 
+            NOT = { HEA = { check_variable = { hea_fervor_war_support_weekly_var = 0 } } }
+        }
+        localization_key = hea_fervor_modifiers_war_support_weekly
+    }
+    text = {
+        localization_key = hea_fervor_modifiers_nothing
+    }
+}
+defined_text = {
+    name = hea_fervor_army_attack_factor
+    text = {
+        trigger = { 
+            NOT = { HEA = { check_variable = { hea_fervor_army_attack_factor_var = 0 } } }
+        }
+        localization_key = hea_fervor_modifiers_army_attack_factor
+    }
+    text = {
+        localization_key = hea_fervor_modifiers_nothing
+    }
+}
+defined_text = {
+    name = hea_fervor_breakthrough_factor
+    text = {
+        trigger = { 
+            NOT = { HEA = { check_variable = { hea_fervor_breakthrough_factor_var = 0 } } }
+        }
+        localization_key = hea_fervor_modifiers_breakthrough_factor
+    }
+    text = {
+        localization_key = hea_fervor_modifiers_nothing
+    }
+}
+defined_text = {
+    name = hea_fervor_resistance_target
+    text = {
+        trigger = { 
+            NOT = { HEA = { check_variable = { hea_fervor_resistance_target_var = 0 } } }
+        }
+        localization_key = hea_fervor_modifiers_resistance_target
+    }
+    text = {
+        localization_key = hea_fervor_modifiers_nothing
+    }
+}
+defined_text = {
+    name = hea_fervor_resistance_growth
+    text = {
+        trigger = { 
+            NOT = { HEA = { check_variable = { hea_fervor_resistance_growth_var = 0 } } }
+        }
+        localization_key = hea_fervor_modifiers_resistance_growth
+    }
+    text = {
+        localization_key = hea_fervor_modifiers_nothing
     }
 }
 

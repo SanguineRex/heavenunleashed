@@ -462,13 +462,15 @@ on_actions = {
 					limit = { has_country_flag = hea_fervor_idle_phase_1 } #At Phase 1 Debuffs
 					clr_country_flag = hea_fervor_idle_phase_1
 					add_to_variable = { hea_fervor_stability_factor_var = 0.1 }
-					add_to_variable = { hea_fervor_war_support_factor_var = 0.1 }	
+					add_to_variable = { hea_fervor_war_support_factor_var = 0.1 }
+					hea_fervor_idle_stage_1_idle_cancel_scripted_effects = yes #GFX Swap
 				}
 				else_if = {
 					limit = { has_country_flag = hea_fervor_idle_phase_2 } #At Phase 2 Debuffs
 					clr_country_flag = hea_fervor_idle_phase_2
 					add_to_variable = { hea_fervor_stability_factor_var = 0.2 }
 					add_to_variable = { hea_fervor_war_support_factor_var = 0.2 }
+					hea_fervor_idle_stage_2_idle_cancel_scripted_effects = yes #GFX Swap
 				}
 				else_if = { #Tried to used else for the last argument but it will just lead to the player stacking buff forever
 					limit = { has_country_flag = hea_fervor_idle_phase_3 } #At Phase 3 Debuffs
@@ -476,7 +478,8 @@ on_actions = {
 					add_to_variable = { hea_fervor_stability_factor_var = 0.3 }
 					add_to_variable = { hea_fervor_war_support_factor_var = 0.3 }
 					add_to_variable = { hea_fervor_stability_weekly_var = 0.01 }
-					add_to_variable = { hea_fervor_war_support_weekly_var = 0.01 }				
+					add_to_variable = { hea_fervor_war_support_weekly_var = 0.01 }
+					hea_fervor_idle_stage_3_idle_cancel_scripted_effects = yes #GFX Swap
 				}
 				#Don't really need a Phase 0 cause it don't give any debuff to revert
 

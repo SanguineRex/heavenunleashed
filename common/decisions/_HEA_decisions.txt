@@ -588,6 +588,7 @@ hea_michael_crusade_cat = {
 hea_monsters_of_the_wastes_cat = {
 	hea_fervor_initial_warning = { #Initial idle warning activated by completed A New Age
 		icon = GFX_decision_tempered_blade
+		priority = 10
 		days_mission_timeout = 200
 		is_good = no
 		allowed = {
@@ -621,20 +622,27 @@ hea_monsters_of_the_wastes_cat = {
 				var = hea_fervor_war_support_weekly_var #War Support Weekly -0.01
 				value = -0.01
 			}
-			effect_tooltip = {
+			effect_tooltip = { #For the stat tooltips
 				swap_ideas = {
 					remove_idea = hea_fervor_idea_template
 					add_idea = hea_fervor_idea_idle_3
 				}
 			}
+			hidden_effect = { #For the GFX swap
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_tier_3 #Holding Vigil
+					add_idea = hea_fervor_idea_tier_0 #Blighted
+				}
+			}
 		}
 
 		cancel_effect = {
-			set_country_flag = hea_fervor_idle_phase_0 #Which mean HEA went to war, set the idle phase back to 0- @Deez
+			set_country_flag = hea_fervor_idle_phase_0 #Which mean HEA went to war, set the idle phase back to 0 - @Deez
 		}
 	}
 	hea_fervor_idle_1_warning = { #First Stage Idle warning
 		icon = GFX_decision_tempered_blade
+		priority = 10
 		days_mission_timeout = 30
 		is_good = no
 		allowed = {
@@ -667,10 +675,14 @@ hea_monsters_of_the_wastes_cat = {
 					add_idea = hea_fervor_idea_idle_1
 				}
 			}
+			hidden_effect = { #For the GFX swap to stage 1 idleness - @Deez
+				hea_fervor_idle_stage_1_idle_scripted_effects = yes
+			}
 		}
 	}
 	hea_fervor_idle_2_warning = { #Second Stage Idle warning
 		icon = GFX_decision_tempered_blade
+		priority = 10
 		days_mission_timeout = 60
 		is_good = no
 		allowed = {
@@ -703,6 +715,12 @@ hea_monsters_of_the_wastes_cat = {
 					add_idea = hea_fervor_idea_idle_2
 				}
 			}
+			hidden_effect = { #For the GFX swap - @Deez
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_tier_2 #Dulled
+					add_idea = hea_fervor_idea_tier_1 #Withered
+				}
+			}
 		}
 
 		cancel_effect = {
@@ -716,6 +734,7 @@ hea_monsters_of_the_wastes_cat = {
 	}
 	hea_fervor_idle_3_warning = { #Third Stage Idle warning
 		icon = GFX_decision_tempered_blade
+		priority = 10
 		days_mission_timeout = 90
 		is_good = no
 		allowed = {
@@ -753,6 +772,12 @@ hea_monsters_of_the_wastes_cat = {
 				swap_ideas = { 
 					remove_idea = hea_fervor_idea_idle_2
 					add_idea = hea_fervor_idea_idle_3
+				}
+			}
+			hidden_effect = { #For the GFX swap - @Deez
+				swap_ideas = {
+					remove_idea = hea_fervor_idea_tier_1 #Withered
+					add_idea = hea_fervor_idea_tier_0 #Blighted
 				}
 			}
 		}

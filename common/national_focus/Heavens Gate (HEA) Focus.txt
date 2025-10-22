@@ -1281,9 +1281,8 @@ focus_tree = {
 				set_variable = { hea_fervor_resistance_growth_var = 0 }
 				set_variable = { hea_fervor_loc_var = 0 } #for scripted loc
 				hidden_effect = {
-					add_dynamic_modifier = {
-						modifier = hea_fervor_dynamic_modifier
-					}
+					add_dynamic_modifier = { modifier = hea_fervor_dynamic_modifier }
+					add_ideas = hea_fervor_idea_tier_3
 				}
 				if = {
 					limit = { has_war = yes } #In case HEA already at war when this focus complete, issue raised by Beez - @Deez
@@ -1909,6 +1908,9 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = hea_the_dead_walk_tt
+			hidden_effect = {
+				hea_fervor_update_tier_scripted_effects = yes #For updating the GFX - @Deez
+			}
 		}
 	}
 	#Cain's Empire - Washington Brotherhood
@@ -1939,6 +1941,7 @@ focus_tree = {
 			custom_effect_tooltip = hea_cains_empire_tt
 			hidden_effect = {
 				WBH = { every_core_state = { add_manpower = -5000 } }
+				hea_fervor_update_tier_scripted_effects = yes #For updating the GFX - @Deez
 			}
 		}
 	}
@@ -1973,6 +1976,9 @@ focus_tree = {
 				}			
 			}
 			custom_effect_tooltip = hea_nephilim_horde_tt
+			hidden_effect = {
+				hea_fervor_update_tier_scripted_effects = yes #For updating the GFX - @Deez
+			}
 		}
 	}
 	#Leviathans dwelling in the Coast - Mirelurks
@@ -2006,6 +2012,9 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = hea_leviathans_of_the_north_tt
+			hidden_effect = {
+				hea_fervor_update_tier_scripted_effects = yes #For updating the GFX - @Deez
+			}
 		}
 	}
 	#Steel Puppets - Robots
@@ -2039,6 +2048,9 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = hea_steel_puppets_tt
+			hidden_effect = {
+				hea_fervor_update_tier_scripted_effects = yes #For updating the GFX - @Deez
+			}
 		}
 	}
 	#The Red Devils - Communists
@@ -2072,6 +2084,9 @@ focus_tree = {
 				}				
 			}
 			custom_effect_tooltip = hea_red_devils_of_the_north_tt
+			hidden_effect = {
+				hea_fervor_update_tier_scripted_effects = yes #For updating the GFX - @Deez
+			}
 		}
 	}
 	##End
@@ -4567,7 +4582,7 @@ focus_tree = {
 			set_cosmetic_tag = HEA_content
 			if = {
 				limit = { has_country_flag = hea_vengance_path } #On Vengance Path
-				if = { #Clear any existing debuffs
+				if = { #Clear any existing debuffs from Fervor's idleness
 					limit = { has_country_flag = hea_fervor_idle_phase_1 } #At Phase 1 Debuffs
 					clr_country_flag = hea_fervor_idle_phase_1
 					add_to_variable = { hea_fervor_stability_factor_var = 0.1 }
@@ -4588,6 +4603,9 @@ focus_tree = {
 					add_to_variable = { hea_fervor_war_support_weekly_var = 0.01 }				
 				}
 				custom_effect_tooltip = hea_servants_of_god_vengance_tt
+				hidden_effect = { #For GFX Swap - @Deez
+					hea_fervor_final_scripted_effects = yes
+				}
 			}
 		}
 	}

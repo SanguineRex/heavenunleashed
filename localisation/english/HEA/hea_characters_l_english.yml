@@ -11,6 +11,9 @@ HEA_archangel_leader_trait: "Archangel"
 HEA_archangel_michael_leader_trait: "Archangel Michael"
 HEA_super_archangel_michael_leader_trait: "§RArchangel Michael§!"
 
+HEA_warden_of_humanity_1_leader_trait: "Warden of Humanity"
+HEA_warden_of_humanity_2_leader_trait: "Warden of Humanity"
+
 HEA_bee_pope_name: "Waxpontiff Apis"
 HEA_bee_pope_unit_leader_trait: "Bee Pope"
 HEA_bee_pope_unit_leader_trait_desc: "Bees on their own is easy but a swarm? Have fun with that."

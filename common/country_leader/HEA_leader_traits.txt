@@ -37,6 +37,20 @@ leader_traits = {
 		army_attack_factor = 0.1
 		breakthrough_factor = 0.1
 	}
+	#Warden of Humanity 1
+	HEA_warden_of_humanity_1_leader_trait = {
+		random = no
+		army_morale_factor = 0.05
+		army_defence_factor = 0.05
+	}
+	#Warden of Humanity 2
+	HEA_warden_of_humanity_2_leader_trait = {
+		random = no
+		stability_factor = 0.1
+		army_morale_factor = 0.1
+		army_defence_factor = 0.05
+}
+
 	#Inner Circle - Eye of Seraphim
 	HEA_eye_seraphim_advisor_trait = {
 		sprite = 15

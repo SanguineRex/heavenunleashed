@@ -1865,7 +1865,8 @@ focus_tree = {
 		available = { has_completed_focus = hea_michaels_crusade }
 
 		completion_reward = {
-			add_ideas = HEA_wardens_of_humanity1
+			#add_ideas = HEA_wardens_of_humanity1
+			add_country_leader_trait = HEA_warden_of_humanity_1_leader_trait
 			hidden_effect = {
 				set_variable = { hea_monsters_ghouls = 0 }
 				set_variable = { hea_monsters_mutants = 0 }
@@ -2108,9 +2109,15 @@ focus_tree = {
 		available = { has_war = no }
 
 		completion_reward = {
-			swap_ideas = { 
-				remove_idea = HEA_wardens_of_humanity1 
-				add_idea = HEA_wardens_of_humanity2
+			#swap_ideas = { 
+			#	remove_idea = HEA_wardens_of_humanity1 
+			#	add_idea = HEA_wardens_of_humanity2
+			#}
+			HEA_saint_michael = {
+				swap_country_leader_traits = {
+					remove = HEA_warden_of_humanity_1_leader_trait
+					add = HEA_warden_of_humanity_2_leader_trait
+				}
 			}
 		}
 	}	

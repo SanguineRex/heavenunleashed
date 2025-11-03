@@ -827,7 +827,7 @@ hea_steam_wonderland_desc: "News from the Council: \"Men of Metal, Smiths, and S
 #######################
 
 HEA_foreign_relation_start: "§4The Flock and the Flame§!"
-HEA_foreign_relation_start_desc: "§4We bring two gifts to the Wasteland: the warmth of the Fold, and the cleansing fire of revelation.§!\nTo the lost and the broken, we offer belonging. To the misguided and the proud, we offer correction. Missionaries go forth bearing scripture and sacrament, yet behind them ride knights bearing sword and fire.\n§4Let all who remain hear the call: join the Flock, or face the Flame.§!"
+HEA_foreign_relation_start_desc: "§4We bring two gifts to the Wasteland: the warmth of the Fold, and the cleansing fire of revelation.§!\nTo the lost and the broken, we offer belonging. To the misguided and the proud, we offer correction. Missionaries go forth bearing scripture and sacrament, and behind them ride knights bearing sword and fire.\n§4Let all who remain hear the call: join the Flock, or face the Flame.§!"
 
 ###Rotpurgers
 HEA_foreign_relation_rot: "§OScripture for the Scorned§!"
@@ -835,7 +835,7 @@ HEA_foreign_relation_rot_desc: "§OThe Rotpurgers§! wage a holy war of their ow
 HEA_foreign_relation_rot_tt: "Completing this §YFocus§! will put §O[ROT.GetNameWithFlag]§! on the path to become our §4ally§!."
 
 HEA_foreign_relation_rot_equipment: "The Gospel and the Gun"
-HEA_foreign_relation_rot_equipment_desc: "Lo, the Fold did not send only preachers.\nWe sent fire to warm the cold hands of the faithful.\nWe sent lead to answer the heretic’s howl.\n We sent steel, and powder, and promise.\n\nThe Rotpurgers rise, not as orphans of a broken vault,\nbut as crusaders anointed in smoke and scripture.\nTheir wrath is no longer their own.\nIt is ours: sharpened, loaded, and unleashed.\n\nLet the Old Country tremble.\nFor the Word now walks beside the gun."
+HEA_foreign_relation_rot_equipment_desc: "Lo, the Fold did not send only preachers.\nWe sent fire to warm the cold hands of the faithful.\nWe sent lead to answer the heretic's howl.\n We sent steel, and powder, and promise.\n\nThe Rotpurgers rise, not as orphans of a broken vault,\nbut as crusaders anointed in smoke and scripture.\nTheir wrath is no longer their own.\nIt is ours: sharpened, loaded, and unleashed.\n\nLet the Old Country tremble.\nFor the Word now walks beside the gun."
 HEA_foreign_relation_rot_equipment_tt: "Completing this §YFocus§! will speed up §O[ROT.GetNameWithFlag]§!'s progress of becoming our §4ally§!."
 
 HEA_foreign_relation_rot_manpower: "Let the Faithful Bleed Together"

@@ -831,7 +831,7 @@ HEA_foreign_relation_start_desc: "§4We bring two gifts to the Wasteland: the wa
 
 ###Rotpurgers
 HEA_foreign_relation_rot: "§OScripture for the Scorned§!"
-HEA_foreign_relation_rot_desc: "§OThe Rotpurgers§! wage a holy war of their own, guided by prophets of vengeance and blood-soaked ritual. But zeal without truth is only madness by another name. Our missionaries march not unguarded, nor unarmed. The Vault may have cast them out, but we offer something greater: purpose, purity, and a cause that burns brighter than revenge. §OLet them kneel, not to us, but to the Truth we bring.§!"
+HEA_foreign_relation_rot_desc: "§OThe Rotpurgers§! wage a holy war of their own, guided by prophets of vengeance and blood-soaked ritual. But zeal without truth is only madness by another name. The Vault may have cast them out, but we offer something greater: purpose, purity, and a cause that burns brighter than revenge. §OLet them kneel, not to us, but to the Truth we bring.§!"
 HEA_foreign_relation_rot_tt: "Completing this §YFocus§! will put §O[ROT.GetNameWithFlag]§! on the path to become our §4ally§!."
 
 HEA_foreign_relation_rot_equipment: "The Gospel and the Gun"

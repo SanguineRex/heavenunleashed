@@ -795,7 +795,27 @@ spriteTypes = {
 		name = "GFX_goal_HEA_foreign_start"
 		texturefile = "gfx/interface/goals/unique/HEA/HEA_foreign_start.dds"
 	}
-	
+	spriteType = {
+		name = "GFX_goal_HEA_foreign_rot"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_foreign_rot.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_foreign_rot_equipment"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_foreign_rot_equipment.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_foreign_rot_manpower"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_foreign_rot_manpower.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_foreign_rot_final"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_foreign_rot_final.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_foreign_bdt"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_foreign_bdt.dds"
+	}
+
 	#####Rotpurgers
 	spriteType = {
 		name = "GFX_goal_rot_northern_knights"

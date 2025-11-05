@@ -4687,7 +4687,7 @@ focus_tree = {
 	###Rotpurgers###
 	focus = {
 		id = HEA_foreign_relation_rot
-		icon = GFX_goal_HEA_peters_retreat
+		icon = GFX_goal_HEA_foreign_rot
 		cost = 30
 		x = -2
 		y = 1
@@ -4753,7 +4753,7 @@ focus_tree = {
 
 	focus = {
 		id = HEA_foreign_relation_rot_equipment
-		icon = GFX_goal_HEA_peters_retreat
+		icon = GFX_goal_HEA_foreign_rot_equipment
 		cost = 15
 		x = -1
 		y = 1
@@ -4806,7 +4806,7 @@ focus_tree = {
 
 	focus = {
 		id = HEA_foreign_relation_rot_manpower
-		icon = GFX_goal_HEA_peters_retreat
+		icon = GFX_goal_HEA_foreign_rot_manpower
 		cost = 15
 		x = 1
 		y = 1
@@ -4852,7 +4852,7 @@ focus_tree = {
 
 	focus = {
 		id = HEA_foreign_relation_rot_final
-		icon = GFX_goal_HEA_peters_retreat
+		icon = GFX_goal_HEA_foreign_rot_final
 		cost = 30
 		x = 0
 		y = 2
@@ -4900,7 +4900,7 @@ focus_tree = {
 	###Bone Dancers###
 		focus = {
 		id = HEA_foreign_relation_bdt
-		icon = GFX_goal_HEA_peters_retreat
+		icon = GFX_goal_HEA_foreign_bdt
 		cost = 30
 		x = 2
 		y = 1

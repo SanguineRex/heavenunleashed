@@ -804,16 +804,24 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/unique/HEA/HEA_foreign_rot_equipment.dds"
 	}
 	spriteType = {
-		name = "GFX_goal_HEA_foreign_rot_manpower"
-		texturefile = "gfx/interface/goals/unique/HEA/HEA_foreign_rot_manpower.dds"
-	}
-	spriteType = {
 		name = "GFX_goal_HEA_foreign_rot_final"
 		texturefile = "gfx/interface/goals/unique/HEA/HEA_foreign_rot_final.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_HEA_foreign_bdt"
 		texturefile = "gfx/interface/goals/unique/HEA/HEA_foreign_bdt.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_foreign_bdt_equipment"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_foreign_bdt_equipment.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_foreign_bdt_manpower"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_foreign_bdt_manpower.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_foreign_ano"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_foreign_ano.dds"
 	}
 
 	#####Rotpurgers

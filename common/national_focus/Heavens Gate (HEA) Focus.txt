@@ -4806,7 +4806,7 @@ focus_tree = {
 
 	focus = {
 		id = HEA_foreign_relation_rot_manpower
-		#icon = 
+		icon = GFX_goal_HEA_foreign_rot_manpower
 		cost = 15
 		x = 1
 		y = 1

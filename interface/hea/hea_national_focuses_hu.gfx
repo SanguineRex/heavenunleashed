@@ -804,6 +804,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/unique/HEA/HEA_foreign_rot_equipment.dds"
 	}
 	spriteType = {
+		name = "GFX_goal_HEA_foreign_rot_manpower"
+		texturefile = "gfx/interface/goals/unique/HEA/HEA_foreign_rot_manpower.dds"
+	}
+	spriteType = {
 		name = "GFX_goal_HEA_foreign_rot_final"
 		texturefile = "gfx/interface/goals/unique/HEA/HEA_foreign_rot_final.dds"
 	}

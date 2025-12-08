@@ -828,10 +828,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/unique/HEA/HEA_foreign_bdt_final.dds"
 	}
 	spriteType = {
-		name = "GFX_goal_HEA_rise2"
-		texturefile = "gfx/interface/goals/unique/HEA/HEA_rise2.dds"
-	}
-	spriteType = {
 		name = "GFX_goal_HEA_foreign_ano"
 		texturefile = "gfx/interface/goals/unique/HEA/HEA_foreign_ano.dds"
 	}

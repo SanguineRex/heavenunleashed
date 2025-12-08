@@ -5060,7 +5060,8 @@ focus_tree = {
 
 	focus = {
 		id = HEA_foreign_relation_bdt_final
-		#icon = GFX_goal_HEA_peters_retreat
+		icon = GFX_goal_HEA_foreign_bdt_final
+		#icon = GFX_goal_HEA_rise2
 		cost = 30
 		x = 0
 		y = 2

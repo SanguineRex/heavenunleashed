@@ -522,7 +522,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = nf_bonedancers.14.a
+		name = nf_bonedancers.14.b
 		ai_chance = {
 			base = 1
 			modifier = {

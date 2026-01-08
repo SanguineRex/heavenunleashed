@@ -65,7 +65,7 @@ ideas = {
 			picture = HEA_idea_tribals
 			removal_cost = -1
 			modifier = {
-				conscription = 0.005
+				conscription = 0.01
 			}
 		}
 
@@ -195,7 +195,7 @@ ideas = {
 			picture = HEA_idea_innocence_lost
 			removal_cost = -1
 			modifier = {
-				conscription = -0.01
+				conscription = -0.005
 				encryption_factor = 0.5
 				decryption_factor = -0.5
 			}

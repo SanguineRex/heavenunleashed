@@ -24,6 +24,12 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = nf_event_hea.1
+			custom_effect_tooltip = event_insight_tt
+			custom_effect_tooltip = event_insight1_tt
+			effect_tooltip = { add_ideas = hea_startup_militant }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = event_insight2_tt
+			effect_tooltip = { add_ideas = hea_startup_agriculture }
 		}
 	}
 	#Pilgrims Cometh
@@ -39,6 +45,12 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = nf_event_hea.2
+			custom_effect_tooltip = event_insight_tt
+			custom_effect_tooltip = event_insight1_tt
+			effect_tooltip = { add_ideas = hea_startup_stationary_pilgrims }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = event_insight2_tt
+			effect_tooltip = { add_ideas = hea_startup_traveling_pilgrims }
 		}
 	}
 	#Pagan Conversion
@@ -54,6 +66,12 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = nf_event_hea.3
+			custom_effect_tooltip = event_insight_tt
+			custom_effect_tooltip = event_insight1_tt
+			effect_tooltip = { add_ideas = hea_startup_let_them_in }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = event_insight2_tt
+			effect_tooltip = { add_ideas = hea_startup_better_be_careful }
 		}
 	}
 	#Innocence Lost
@@ -78,6 +96,7 @@ focus_tree = {
 					icon = GFX_agency_logo_HEA
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			country_event = nf_event_hea.4
 		}
 	}
@@ -1038,6 +1057,9 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = nf_event_hea.400
+			custom_effect_tooltip = event_insight_tt
+			custom_effect_tooltip = event_insight1_tt
+			effect_tooltip = { add_political_power = 75 }
 		}
 	}
 	#An Eye for an Eye - Vengance Path
@@ -1054,6 +1076,14 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = nf_event_hea.401
+			custom_effect_tooltip = event_insight_tt
+			custom_effect_tooltip = event_insight1_tt
+			effect_tooltip = {
+				swap_ideas = {
+					add_idea = hea_rampant_militarism
+					remove_idea = hea_innocence_lost_idea
+				}
+			}
 			custom_effect_tooltip = hea_nf_vengance_tt
 		}
 	}
@@ -1684,6 +1714,14 @@ focus_tree = {
 		
 		completion_reward = {
 			country_event = nf_event_hea.525
+			custom_effect_tooltip = event_insight_tt
+			custom_effect_tooltip = event_insight1_tt
+			effect_tooltip = {
+				525 = {
+					add_core_of = HEA
+					add_manpower = -27859
+				}
+			}
 		}
 	}
 	#False Goddess
@@ -1817,6 +1855,15 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = nf_event_hea.890
+			custom_effect_tooltip = event_insight_tt
+			custom_effect_tooltip = event_insight1_tt
+			effect_tooltip = {
+				890 = {
+					add_core_of = HEA
+					add_manpower = -17638
+				}
+				set_province_name = { id = 12215 name = "Deus Vult"}
+			}
 		}
 	}
 	#The Lord's Sword

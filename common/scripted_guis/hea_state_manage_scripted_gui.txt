@@ -5,10 +5,6 @@ scripted_gui = {
 		window_name = "hea_state_manage_gui_container"
 		dirty = hea_state_manage_gui_dirty #To update the gui
 
-		visible = {
-			always = yes
-		}
-
 		triggers = {
 			#Commonwealths Map-0
 			hea_com_manage_gui_background_visible = {

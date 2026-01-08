@@ -281,14 +281,11 @@ country_event = {
 
 	option = { 
 		name = nf_event_hea.525.a
-		HEA = {
-				add_state_core = 525
-				}
-				custom_effect_tooltip = hea_colorado_tt
-				525 = {
-				set_temp_variable = { pop_add = -27859 }
-				add_state_population_no_state_name = yes
-			}
+		custom_effect_tooltip = hea_colorado_tt
+		525 = {
+			add_core_of = HEA
+			add_manpower = -27859
+		}
 	}
 
 }
@@ -304,15 +301,11 @@ country_event = {
 
 	option = { 
 		name = nf_event_hea.890.a
-		HEA = {
-				add_state_core = 890
-				}
-		add_manpower = 10000
-			890 = {
-				set_temp_variable = { pop_add = -17638 }
-				add_state_population_no_state_name = yes
-			}
-				set_province_name = { id = 12215 name = "Deus Vult"}
+		890 = {
+			add_core_of = HEA
+			add_manpower = -17638
+		}
+		set_province_name = { id = 12215 name = "Deus Vult"}
 	}
 }
 #####Approaching Utah Tribes

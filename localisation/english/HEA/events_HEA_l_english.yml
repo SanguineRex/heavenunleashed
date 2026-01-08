@@ -151,8 +151,8 @@
     
     ######Uriel Quest Line
     
-  nf_event_hea.400.t:0 "§tUriel, the Shadow of Innocence"
-  nf_event_hea.400.desc:0 "He had journeyed into the war-torn city of Couer d'Alene, spoken with its leader Jacobia, and learned of the a world beyond Heaven's Gate, rife with madness. Journeyed further still into a land of blizzards, before breaking way into a city ruled by mutts. It took years, but he was close. He ignored the phantom pain, the scars that littered his body when before there were none. Some of the pagans had thought to ambush him, others though to pay the avarice-ridden wastelander to stop him, they all failed and his journey was coming to an end. \n\n He was Uriel and he would see justice done."
+nf_event_hea.400.t: "§tUriel, the Shadow of Innocence§!"
+nf_event_hea.400.desc: "He had journeyed into the war-torn city of Couer d'Alene, spoken with its leader Jacobia, and learned of the a world beyond Heaven's Gate, rife with madness. Journeyed further still into a land of blizzards, before breaking way into a city ruled by mutts. It took years, but he was close. He ignored the phantom pain, the scars that littered his body when before there were none. Some of the pagans had thought to ambush him, others though to pay the avarice-ridden wastelander to stop him, they all failed and his journey was coming to an end. \n\n He was Uriel and he would see justice done."
   nf_event_hea.400.a:0 "§2For the people he failed"
 
   nf_event_hea.401.t:0 "There was only one thing left to do...."

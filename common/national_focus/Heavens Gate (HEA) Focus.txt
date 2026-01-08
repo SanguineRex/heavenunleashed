@@ -8,7 +8,7 @@ focus_tree = {
 		}
 	}
 	continuous_focus_position = {
-		x = 2750
+		x = 2400
 		y = 35
 	}
 ###########################
@@ -3009,11 +3009,12 @@ focus_tree = {
 		id = hea_guard_focuses
 		icon = GFX_goal_HEA_reformingtheguard
 		cost = 30
-		x = -13
-		y = 5
-			available = { 
-				has_completed_focus = hea_nf_age_of_steam
-				}
+		x = -10
+		y = 4
+
+		available = { 
+			has_completed_focus = hea_nf_age_of_steam
+		}
 
 		completion_reward = {
 		air_experience = 50
@@ -4624,35 +4625,17 @@ focus_tree = {
 		id = HEA_foreign_relation_start
 		icon = GFX_goal_HEA_foreign_start
 		cost = 20
-		x = 35
-		y = 5
+		x = 18
+		y = 1
+		relative_position_id = hea_nf_innocence_lost
 
-		available = {
-			has_completed_focus = hea_nf_innocence_lost
+		prerequisite = {
+			focus = hea_nf_innocence_lost
 		}
 
 		completion_reward = {
 			capital_scope = { add_manpower = -2000 }
-			ROT = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = large_increase
-				}
-				reverse_add_opinion_modifier = {
-					target = ROOT
-					modifier = large_increase
-				}
-			}
-			BDT = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = large_increase
-				}
-				reverse_add_opinion_modifier = {
-					target = ROOT
-					modifier = large_increase
-				}
-			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			effect_tooltip = { #Just for showing due to the variable not being set before completing this focus
 				add_ideas = hea_foreign_relation_idea_0
 			}
@@ -4679,6 +4662,27 @@ focus_tree = {
 				}
 				add_dynamic_modifier = {
 					modifier = hea_foreign_relation_dynamic_modifier
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			ROT = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
+				}
+			}
+			BDT = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
 				}
 			}
 		}
@@ -4724,6 +4728,7 @@ focus_tree = {
 					set_country_flag = ROT_ai_behavior_grand_inquisition
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			#Edge cases to override game rule settings
 			if = {
 				limit = { has_global_flag = ROT_ai_behavior_infinity_knights_global_flag }
@@ -4779,6 +4784,7 @@ focus_tree = {
 		completion_reward = {
 			capital_scope = { add_manpower = -250 }
 			ROT = { capital_scope = { add_manpower = 250 } }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			send_equipment = {
 				equipment = infantry_equipment
 				amount = 300
@@ -4800,6 +4806,7 @@ focus_tree = {
 					}
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = HEA_foreign_relation_rot_equipment_tt
 		}
 	}
@@ -4830,11 +4837,10 @@ focus_tree = {
 
 		completion_reward = {
 			capital_scope = { add_manpower = -250 }
+			ROT = { capital_scope = { add_manpower = 250 } }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_manpower = -200
-			ROT = {
-				add_manpower = 200
-				capital_scope = { add_manpower = 250 }
-			}
+			ROT = { add_manpower = 200 }
 			if = { #If ROT already have the spirit this focus will reduce the timed idea time
 				limit = {
 					ROT = { has_idea = rot_rage_against_the_dying_of_the_light }
@@ -4846,6 +4852,7 @@ focus_tree = {
 					}
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = HEA_foreign_relation_rot_manpower_tt
 		}
 	}
@@ -4858,17 +4865,18 @@ focus_tree = {
 		y = 2
 		relative_position_id = HEA_foreign_relation_rot
 
-		prerequisite = { focus = HEA_foreign_relation_rot_equipment }
-		prerequisite = { focus = HEA_foreign_relation_rot_manpower }
+		prerequisite = {
+			focus = HEA_foreign_relation_rot_equipment
+			focus = HEA_foreign_relation_rot_manpower
+		}
 		available = {
 			ROT = { is_in_faction_with = ROOT }
 		}
 
 		completion_reward = {
 			capital_scope = { add_manpower = -250 }
-			ROT = {
-				capital_scope = { add_manpower = 250 }
-			}
+			ROT = { capital_scope = { add_manpower = 250 } }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_to_variable = {
 				var = hea_volunteer_size_var
 				value = 1
@@ -4881,7 +4889,6 @@ focus_tree = {
 				var = hea_diplomacy_distance_factor_var
 				value = 0.2
 			}
-			add_political_power = 30
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_foreign_relation_idea_0
@@ -4921,6 +4928,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			capital_scope = { add_manpower = -250 }
+			BDT = { capital_scope = { add_manpower = 250 } }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_to_variable = {
 				var = hea_experience_gain_army_var
 				value = 0.03
@@ -4935,13 +4945,8 @@ focus_tree = {
 					add_idea = hea_foreign_relation_idea_expand
 				}
 			}
-			capital_scope = { add_manpower = -250 }
+
 			BDT = {
-				add_popularity = {
-					ideology = People
-					popularity = 0.05
-				}
-				capital_scope = { add_manpower = 250 }
 				#Ai behaviour overriding
 				if = {
 					limit = { has_country_flag = bdt_road_warriors }
@@ -4994,6 +4999,8 @@ focus_tree = {
 
 		completion_reward = {
 			capital_scope = { add_manpower = -250 }
+			BDT = { capital_scope = { add_manpower = 250 } }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			send_equipment = {
 				equipment = infantry_equipment
 				amount = 30
@@ -5004,14 +5011,7 @@ focus_tree = {
 				amount = 200
 				target = BDT
 			}
-			army_experience = 15
-			BDT = {
-				add_popularity = {
-					ideology = People
-					popularity = 0.05
-				}
-				capital_scope = { add_manpower = 250 }
-			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = HEA_foreign_relation_bdt_equipment_tt
 		}
 	}
@@ -5042,18 +5042,11 @@ focus_tree = {
 
 		completion_reward = {
 			capital_scope = { add_manpower = -250 }
+			BDT = { capital_scope = { add_manpower = 250 } }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_manpower = -200
-			BDT = {
-				add_manpower = 200
-				capital_scope = { add_manpower = 250 }
-			}
-			army_experience = 15
-			BDT = {
-				add_popularity = {
-					ideology = People
-					popularity = 0.05
-				}
-			}
+			BDT = { add_manpower = 200 }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = HEA_foreign_relation_bdt_manpower_tt
 		}
 	}
@@ -5066,17 +5059,18 @@ focus_tree = {
 		y = 2
 		relative_position_id = HEA_foreign_relation_bdt
 
-		prerequisite = { focus = HEA_foreign_relation_bdt_equipment }
-		prerequisite = { focus = HEA_foreign_relation_bdt_manpower }
+		prerequisite = {
+			focus = HEA_foreign_relation_bdt_equipment
+			focus = HEA_foreign_relation_bdt_manpower
+		}
 		available = {
 			BDT = { is_in_faction_with = ROOT }
 		}
 
 		completion_reward = {
 			capital_scope = { add_manpower = -250 }
-			BDT = {
-				capital_scope = { add_manpower = 250 }
-			}
+			BDT = { capital_scope = { add_manpower = 250 } }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_to_variable = {
 				var = hea_volunteer_size_var
 				value = 1
@@ -5089,7 +5083,6 @@ focus_tree = {
 				var = hea_diplomacy_distance_factor_var
 				value = 0.2
 			}
-			add_political_power = 30
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_foreign_relation_idea_0
@@ -5125,6 +5118,7 @@ focus_tree = {
 		completion_reward = {
 			capital_scope = { add_manpower = -250 }
 			ANO = { capital_scope = { add_manpower = 250 } }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_to_variable = {
 				var = hea_experience_gain_army_var
 				value = 0.03

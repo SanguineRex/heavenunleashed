@@ -1,6 +1,6 @@
 ﻿l_english:
 
-event_insight_tt: "\n§GEvent Insight:§!"
+event_insight_tt: "\n£GFX_inspect_texticon §GEvent Insight:§!"
 event_insight_tab_tt: ""
 event_insight1_tt: "§OOption 1§!"
 event_insight2_tt: "§ROption 2§!"

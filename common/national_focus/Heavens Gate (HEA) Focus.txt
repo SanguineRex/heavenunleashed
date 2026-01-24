@@ -87,17 +87,26 @@ focus_tree = {
 
 		completion_reward = {
 			if = {
-				limit = { NOT = { has_dlc = "La Resistance" } }
-				add_political_power = 100
-			}
-			else = {
-				create_intelligence_agency = {
-					name = "Inner Circle"
-					icon = GFX_agency_logo_HEA
+				limit = { 
+					has_dlc = "La Resistance"
+					has_intelligence_agency = no
 				}
+				hidden_effect = { create_intelligence_agency = yes }
+				custom_effect_tooltip = hea_nf_innocence_lost_tt
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			country_event = nf_event_hea.4
+			if = {
+				limit = { has_completed_focus = hea_nf_tribals }
+				custom_effect_tooltip = event_insight_tt
+				effect_tooltip = {
+					if = {
+						limit = { has_idea = hea_startup_let_them_in }
+						add_ideas = hea_innocence_lost_idea
+					}
+					else = { add_ideas = hea_innocence_lost_idea_lessend }
+				}
+			}
 		}
 	}
 #############################

@@ -1,15 +1,17 @@
 ﻿l_english:
-  hea_nf_precursers:0 "Legacy of Scripture"
-  hea_nf_precursers_desc:0 "The word of God has always been the supreme law of the land, even in times where Heaven's Gate has been lead by more moderate leaders. These divine writings have always inspired our people, generation after generation."
+hea_nf_precursers: "Legacy of Scripture"
+hea_nf_precursers_desc: "The word of God has always been the supreme law of the land, even in times where Heaven's Gate has been lead by more moderate leaders. These divine writings have always inspired our people, generation after generation."
 
-  hea_nf_pilgrims:0 "Pilgrims Cometh"
-  hea_nf_pilgrims_desc:0 "Pilgrims have travelled to our lands, whether intentionally or unintentionally, for the better part of several decades. For these people, churches and shrines have been built, yet one has always been more popular than the other!"
+hea_nf_pilgrims: "Pilgrims Cometh"
+hea_nf_pilgrims_desc: "Pilgrims have travelled to our lands, whether intentionally or unintentionally, for the better part of several decades. For these people, churches and shrines have been built, yet one has always been more popular than the other!"
 
-  hea_nf_tribals:0 "Pagan Conversion"
-  hea_nf_tribals_desc:0 "Tribals have come to join our flock time and time again, sometimes individuals, sometimes entire tribes. Their arrival can never be predicted, and often strain our resources."
+hea_nf_tribals: "Pagan Conversion"
+hea_nf_tribals_desc: "Tribals have come to join our flock time and time again, sometimes individuals, sometimes entire tribes. Their arrival can never be predicted, and often strain our resources."
 
 hea_nf_innocence_lost: "Innocence Lost"
 hea_nf_innocence_lost_desc: "The Tragedy at Innocence Lost can never be understated. The rage of the Pagan fell upon the peaceful pilgrim, and it is said that the blood spilt there stains the ground red to this day. A word of warning to all faithful."
+hea_nf_innocence_lost_tt: "Create Intelligence Agency: §Y$hea_intelligence_agency_name$§!"
+
 hea_intelligence_agency_name: "Inner Circle"
 
   hea_nf_pol_action:0 "The Great Debate"

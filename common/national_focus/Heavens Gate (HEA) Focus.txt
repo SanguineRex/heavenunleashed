@@ -1068,7 +1068,6 @@ focus_tree = {
 		completion_reward = {
 			country_event = nf_event_hea.400
 			custom_effect_tooltip = event_insight_tt
-			custom_effect_tooltip = event_insight1_tt
 			event_option_tooltip = nf_event_hea.400.a
 		}
 	}
@@ -1087,7 +1086,6 @@ focus_tree = {
 		completion_reward = {
 			country_event = nf_event_hea.401
 			custom_effect_tooltip = event_insight_tt
-			custom_effect_tooltip = event_insight1_tt
 			event_option_tooltip = nf_event_hea.401.a
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = hea_nf_vengance_tt
@@ -1722,7 +1720,6 @@ focus_tree = {
 		completion_reward = {
 			country_event = nf_event_hea.525
 			custom_effect_tooltip = event_insight_tt
-			custom_effect_tooltip = event_insight1_tt
 			event_option_tooltip = nf_event_hea.525.a
 		}
 	}
@@ -1858,7 +1855,6 @@ focus_tree = {
 		completion_reward = {
 			country_event = nf_event_hea.890
 			custom_effect_tooltip = event_insight_tt
-			custom_effect_tooltip = event_insight1_tt
 			event_option_tooltip = nf_event_hea.890.a
 		}
 	}

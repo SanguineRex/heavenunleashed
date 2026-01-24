@@ -26,10 +26,10 @@ focus_tree = {
 			country_event = nf_event_hea.1
 			custom_effect_tooltip = event_insight_tt
 			custom_effect_tooltip = event_insight1_tt
-			effect_tooltip = { add_ideas = hea_startup_militant }
+			event_option_tooltip = nf_event_hea.1.a
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = event_insight2_tt
-			effect_tooltip = { add_ideas = hea_startup_agriculture }
+			event_option_tooltip = nf_event_hea.1.b
 		}
 	}
 	#Pilgrims Cometh
@@ -47,10 +47,10 @@ focus_tree = {
 			country_event = nf_event_hea.2
 			custom_effect_tooltip = event_insight_tt
 			custom_effect_tooltip = event_insight1_tt
-			effect_tooltip = { add_ideas = hea_startup_stationary_pilgrims }
+			event_option_tooltip = nf_event_hea.2.a
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = event_insight2_tt
-			effect_tooltip = { add_ideas = hea_startup_traveling_pilgrims }
+			event_option_tooltip = nf_event_hea.2.b
 		}
 	}
 	#Pagan Conversion
@@ -68,10 +68,10 @@ focus_tree = {
 			country_event = nf_event_hea.3
 			custom_effect_tooltip = event_insight_tt
 			custom_effect_tooltip = event_insight1_tt
-			effect_tooltip = { add_ideas = hea_startup_let_them_in }
+			event_option_tooltip = nf_event_hea.3.a
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = event_insight2_tt
-			effect_tooltip = { add_ideas = hea_startup_better_be_careful }
+			event_option_tooltip = nf_event_hea.3.b
 		}
 	}
 	#Innocence Lost
@@ -86,26 +86,20 @@ focus_tree = {
 		prerequisite = { focus = hea_nf_tribals }
 
 		completion_reward = {
-			if = {
-				limit = { 
-					has_dlc = "La Resistance"
-					has_intelligence_agency = no
-				}
+			#if = {
+			#	limit = { 
+			#		has_dlc = "La Resistance"
+			#		has_intelligence_agency = no
+			#	}
 				hidden_effect = { create_intelligence_agency = yes }
 				custom_effect_tooltip = hea_nf_innocence_lost_tt
-			}
+			#}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			country_event = nf_event_hea.4
 			if = {
 				limit = { has_completed_focus = hea_nf_tribals }
 				custom_effect_tooltip = event_insight_tt
-				effect_tooltip = {
-					if = {
-						limit = { has_idea = hea_startup_let_them_in }
-						add_ideas = hea_innocence_lost_idea
-					}
-					else = { add_ideas = hea_innocence_lost_idea_lessend }
-				}
+				event_option_tooltip = nf_event_hea.4.a
 			}
 		}
 	}
@@ -447,6 +441,7 @@ focus_tree = {
 					modifier = hea_tame_dynamic_modifier
 				}		
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = hea_the_nucleus_tt
 		}
 	}
@@ -466,6 +461,7 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { hea_tame_stability_factor_var = 0.02}
 			add_political_power = 60
+			custom_effect_tooltip = generic_skip_one_line_tt
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_taming_idea_template
@@ -638,6 +634,7 @@ focus_tree = {
 				}
 			}
 			add_to_variable = { hea_tame_stability_factor_var = 0.02 }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_taming_idea_template
@@ -661,6 +658,7 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { hea_tame_global_building_slots_factor_var = 0.05 }
 			add_political_power = 60
+			custom_effect_tooltip = generic_skip_one_line_tt
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_taming_idea_template
@@ -817,6 +815,7 @@ focus_tree = {
 			}
 			add_to_variable = { hea_tame_consumer_goods_factor_var = -0.05 }
 			add_to_variable = { hea_tame_production_speed_buildings_factor_var = 0.05 }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_taming_idea_template
@@ -840,6 +839,7 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { hea_tame_war_support_factor_var = 0.02 }
 			add_political_power = 60
+			custom_effect_tooltip = generic_skip_one_line_tt
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_taming_idea_template
@@ -998,6 +998,7 @@ focus_tree = {
 			}
 			add_to_variable = { hea_tame_war_support_factor_var = 0.03 }
 			add_to_variable = { hea_tame_conscription_factor_var = 0.03 }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = hea_taming_idea_template
@@ -1068,7 +1069,7 @@ focus_tree = {
 			country_event = nf_event_hea.400
 			custom_effect_tooltip = event_insight_tt
 			custom_effect_tooltip = event_insight1_tt
-			effect_tooltip = { add_political_power = 75 }
+			event_option_tooltip = nf_event_hea.400.a
 		}
 	}
 	#An Eye for an Eye - Vengance Path
@@ -1087,12 +1088,8 @@ focus_tree = {
 			country_event = nf_event_hea.401
 			custom_effect_tooltip = event_insight_tt
 			custom_effect_tooltip = event_insight1_tt
-			effect_tooltip = {
-				swap_ideas = {
-					add_idea = hea_rampant_militarism
-					remove_idea = hea_innocence_lost_idea
-				}
-			}
+			event_option_tooltip = nf_event_hea.401.a
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = hea_nf_vengance_tt
 		}
 	}
@@ -1609,6 +1606,7 @@ focus_tree = {
 
 		completion_reward = {
 			set_cosmetic_tag = HEA_crusade
+			custom_effect_tooltip = generic_skip_one_line_tt
 			set_portraits = {
 				character = HEA_saint_michael
 				civilian = {
@@ -1725,12 +1723,7 @@ focus_tree = {
 			country_event = nf_event_hea.525
 			custom_effect_tooltip = event_insight_tt
 			custom_effect_tooltip = event_insight1_tt
-			effect_tooltip = {
-				525 = {
-					add_core_of = HEA
-					add_manpower = -27859
-				}
-			}
+			event_option_tooltip = nf_event_hea.525.a
 		}
 	}
 	#False Goddess
@@ -1866,13 +1859,7 @@ focus_tree = {
 			country_event = nf_event_hea.890
 			custom_effect_tooltip = event_insight_tt
 			custom_effect_tooltip = event_insight1_tt
-			effect_tooltip = {
-				890 = {
-					add_core_of = HEA
-					add_manpower = -17638
-				}
-				set_province_name = { id = 12215 name = "Deus Vult"}
-			}
+			event_option_tooltip = nf_event_hea.890.a
 		}
 	}
 	#The Lord's Sword

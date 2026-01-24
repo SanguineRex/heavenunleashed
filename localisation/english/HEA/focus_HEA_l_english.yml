@@ -10,7 +10,7 @@ hea_nf_tribals_desc: "Tribals have come to join our flock time and time again, s
 
 hea_nf_innocence_lost: "Innocence Lost"
 hea_nf_innocence_lost_desc: "The Tragedy at Innocence Lost can never be understated. The rage of the Pagan fell upon the peaceful pilgrim, and it is said that the blood spilt there stains the ground red to this day. A word of warning to all faithful."
-hea_nf_innocence_lost_tt: "Create Intelligence Agency: §Y$hea_intelligence_agency_name$§!"
+hea_nf_innocence_lost_tt: "Create Intelligence Agency: £GFX_counter_intelligence  §Y$hea_intelligence_agency_name$§!"
 
 hea_intelligence_agency_name: "Inner Circle"
 

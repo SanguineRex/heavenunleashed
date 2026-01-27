@@ -740,7 +740,7 @@ ideas = {
 			}
 		}
 		##10th Crusade Buffs
-		HEA_old_world_failures = {
+		HEA_old_world_failures_idea = {
 			picture = outsider_american_flag
 			removal_cost = -1
 			equipment_bonus = {
@@ -807,7 +807,7 @@ ideas = {
 			}
 		}
 		hea_two_headed_bear = {
-			picture = teddy_bear
+			picture = generic_teddy_bear
 			removal_cost = -1
 			modifier = {
 				justify_war_goal_time = 0.05

@@ -1837,7 +1837,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_ideas = HEA_old_world_failures
+			add_ideas = HEA_old_world_failures_idea
 		}
 	}
 	#The Chained Witches
@@ -2495,33 +2495,22 @@ focus_tree = {
 	focus = {
 		id = hea_forming_zion
 		icon = GFX_goal_HEA_hea_foundingzion
-		cost = 60
 		x = 4
 		y = 4
 		relative_position_id = hea_gabriels_forgiveness
+
+		cost = 60
+		prerequisite = { focus = hea_approach_outliers }
 		available = {
-			326 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			SOR = {
-			is_in_faction_with = HEA
-			}
-			
-		}
-			prerequisite = {
-			focus = hea_approach_outliers
+			326 = { is_owned_and_controlled_by = ROOT }
+			SOR = { is_in_faction_with = HEA }
 		}
 
-
-
-
-		completion_reward = {
-
-		}
+		completion_reward = { }
 	}
-	#################################################################
+	################################################################
 	####################Spreading the Faith#########################
-	#################################################################
+	################################################################
 		focus = {
 		id = hea_nf_foreign_ministryD
 		icon = GFX_goal_HEA_focus_embassy_of_christ
@@ -2723,18 +2712,18 @@ focus_tree = {
 
 
 		completion_reward = {
-			create_wargoal =
-				{ type = annex_everything target = CES }
-				create_wargoal =
-				{ type = annex_everything target = LAC }
-				create_wargoal =
-				{ type = annex_everything target = RES }
-				create_wargoal =
-				{ type = annex_everything target = NAV }
-				create_wargoal =
-				{ type = annex_everything target = TWO }
-				create_wargoal =
-				{ type = annex_everything target = RES }
+			create_wargoal = { type = annex_everything target = CES }
+				
+			create_wargoal = { type = annex_everything target = LAC }
+			
+			create_wargoal = { type = annex_everything target = RES }
+			
+			create_wargoal = { type = annex_everything target = NAV }
+			
+			create_wargoal = { type = annex_everything target = TWO }
+			
+			create_wargoal ={ type = annex_everything target = RES }
+				
 		}
 	}
 	focus = {

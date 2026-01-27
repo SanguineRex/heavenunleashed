@@ -182,8 +182,8 @@ hea_book_desc:0 "Hey were these books just sitting there...there's a lot of stuf
 hea_battle_smiths:0 "Battle Smiths"
 hea_battle_smiths_desc:0 "These smiths ensure that equipment doesn't malfunction, break, and even provide a few bullets now and there to help keep the army fighting until long after their original supplies run out. Sadly they aren't skilled at fighting, but their aid to the standard army more than makes up for their faults..."
 
-HEA_old_world_failures:0 "Old World Technology"
-HEA_old_world_failures_desc:0 "Thanks to the secrets we uncovered, after defeating the primary remnants of the Old World, though the Old World had its failures, they were the original creators of Power Armor..."
+HEA_old_world_failures_idea:0 "Old World Technology"
+HEA_old_world_failures_idea_desc:0 "Thanks to the secrets we uncovered, after defeating the primary remnants of the Old World, though the Old World had its failures, they were the original creators of Power Armor..."
 
 hea_vault_tec:0 "Vault-Tec's Tech!"
 hea_vault_tec_desc:0 "With examples from some of the few vaults that still yet see use, before our arrival at least, we can begin dismantling them and discover just how these people managed to survive underground..."

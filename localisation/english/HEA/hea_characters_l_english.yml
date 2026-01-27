@@ -6,7 +6,12 @@
 FATHER_MICHAEL_DESC: "§2He was wrong, a bitter pill to swallow, but he was. Forgiveness is preached in the bible countless times, and yet he sought to burn the world of sinners and start anew with the faithful. A mistake, but he will not walk away from his holy task. Not today, instead he will raise his sword, don the holy plate, and ensure that the flock is well defended from all who seeks to harm it.§!"
 ANGEL_MICHAEL_DESC: "§RThe Crusade needs a leader, and Michael will step forward and accept the mantle. God Chose Him. He will not fail the Father above, the Wasteland must be rid of the sinners and monsters, and he is the man to cleanse it.§!"
 
+HEA_isolationist_leader_trait: "Isolationist"
+HEA_isolationist_leader_trait_tt: "§gSaint Michael knew betrayal, like his Lord; he knew that the spirit of Judas lived freely in the waste. Michael, hallowed be his name, ordained in ashes, baptized in the steam of the Crucible, could not forgive. Would not forgive. He ordered the Gate to Heaven shut, and prepared to spread salvation to the wasteland: for the lost, for the afraid, and for the wolves ever lurking...\n\nMatthew 7:6§!"
+
 HEA_one_prophet_leader_trait: "One Prophet"
+HEA_one_prophet_leader_trait_tt: "§gThe future is bleak. Thousands...no, millions will die, faithful and sinner alike. To be good is to be weak. That is the law of the wasteland. The flock has strayed; it has withered. Wolves bay, and sheep snarl. It is time to cull the excess, so that the pure may flourish.\n\nJohn 15:2§!"
+
 HEA_archangel_leader_trait: "Archangel"
 HEA_archangel_michael_leader_trait: "Archangel Michael"
 HEA_super_archangel_michael_leader_trait: "§RArchangel Michael§!"

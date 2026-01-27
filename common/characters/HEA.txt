@@ -24,7 +24,7 @@ characters = {
 			desc = MICHAEL_DESC
 			ideology = benevolent_dictatorship
 			traits = {
-				isolationist_trait
+				HEA_isolationist_leader_trait
 			}
 			expire = "3000.01.01.01"
 			id = 10141

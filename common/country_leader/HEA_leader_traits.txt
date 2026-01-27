@@ -1,10 +1,17 @@
 leader_traits = {
+	#Michael - Isolationist
+	HEA_isolationist_leader_trait = {
+		random = no
+		join_faction_tension = 0.5
+		custom_modifier_tooltip = HEA_isolationist_leader_trait_tt
+	}
 	#Michael - One Prophet
 	HEA_one_prophet_leader_trait = {
 		random = no
 		political_power_gain = 0.1
 		stability_factor = 0.05
 		war_support_factor = 0.05
+		custom_modifier_tooltip = HEA_one_prophet_leader_trait_tt
 	}
 	#Michael - Archangel
 	HEA_archangel_leader_trait = {

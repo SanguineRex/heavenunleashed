@@ -3535,7 +3535,7 @@ focus_tree = {
 	#Hammer of God
 	focus = {
 		id = hea_advanced_guard
-		icon = GFX_goal_HEA_crusading_orders
+		icon = GFX_goal_HEA_advanced_guard
 		cost = 30
 		x = 0
 		y = 6

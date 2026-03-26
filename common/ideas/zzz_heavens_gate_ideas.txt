@@ -807,7 +807,7 @@ ideas = {
 			}
 		}
 		hea_two_headed_bear = {
-			picture = generic_teddy_bear
+			picture = hea_ncr_teachings
 			removal_cost = -1
 			modifier = {
 				justify_war_goal_time = 0.05

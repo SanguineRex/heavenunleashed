@@ -442,8 +442,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/unique/HEA/hea_peter_great_order.dds"
 	}
 	spriteType = {
-		name = "GFX_goal_HEA_hea_peter_charge"
-		texturefile = "gfx/interface/goals/unique/HEA/hea_peter_charge.dds"
+		name = "GFX_goal_HEA_advanced_guard"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_advanced_guard.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_HEA_hea_new_cathedral"
+		texturefile = "gfx/interface/goals/unique/HEA/hea_new_cathedral.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_HEA_hea_new_cathedral"

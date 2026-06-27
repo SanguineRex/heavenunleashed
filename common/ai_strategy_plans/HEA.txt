@@ -1,0 +1,225 @@
+### Disabled by Heaven's Unleashed ###
+#HEA_default = {
+#	name = "HEA default plan"
+#	desc = "HEA startup"
+#
+#	enable = {
+#		original_tag = HEA
+#		NOT = { has_completed_focus = hea_decision_time }
+#	}
+#
+#	abort = { has_completed_focus = hea_decision_time }
+#
+#	ai_national_focuses = {
+#		hea_land_of_the_chosen
+#		hea_finding_the_nucleus
+#		hea_the_conclave
+#		hea_war_in_heaven
+#		hea_innocence_lost
+#		hea_innocence_decision
+#		hea_conclave_warning
+#		hea_conclave_old_ways
+#		hea_nucleus_warning
+#		hea_nucleus_new_ways
+#		hea_decision_time
+#	}
+#}
+#
+#HEA_michael = {
+#	name = "Faiths Heart Michael plan"
+#	desc = "Michael will seize power"
+#
+#	enable = {
+#		original_tag = HEA
+#		HEA_has_ai_behavior_michael = yes
+#	}
+#
+#	ai_national_focuses = {
+#		hea_backed_michael
+#
+#		hea_military_branch_init
+#		hea_military_women
+#
+#		hea_michael_volunteers
+#		hea_stoke_memories
+#		hea_michael_find_allies
+#		hea_michael_instigate_revolution
+#
+#		hea_serfdom_branch_init
+#		hea_michael_serfdom_branch
+#
+#		hea_michael_arm_the_masses
+#		hea_michael_fund_coup
+#		hea_michael_fire_and_brimstone
+#		hea_michael_travel_sermons
+#		hea_michael_legitimacy
+#		hea_michael_sabotage_conclave
+#
+#		hea_great_reunification
+#		hea_massacre_of_meadowopolis
+#
+#		hea_military_branch_pa
+#		hea_expand_priory
+#		hea_exemplar_doctrine
+#
+#		hea_attack_murtaugh
+#		hea_attack_anointed
+#		hea_rule_idaho
+#
+#		hea_more_priories
+#		hea_appeal_serfs
+#		hea_seize_landowners
+#		hea_education_drive
+#		hea_lay_clergy
+#		hea_military_education
+#		hea_middle_class
+#
+#		hea_michael_true_voice
+#		hea_michael_release_truth
+#		hea_michael_sunday_coup
+#
+#		hea_michael_crusade
+#		hea_attack_utah
+#		hea_attack_montana
+#		hea_core_new_jerusalem
+#
+#		hea_cloud_walkers_program
+#		hea_peak_pa
+#		hea_crusader_units
+#		hea_military_women_guns
+#		hea_military_women_specialists
+#
+#		hea_attack_yellowstone
+#		hea_address_toc
+#	}
+#}
+#
+#HEA_conclave = {
+#	name = "Faiths Heart Conclave plan"
+#	desc = "The Conclave remains"
+#
+#	enable = {
+#		original_tag = HEA
+#		HEA_has_ai_behavior_conclave = yes
+#	}
+#
+#	ai_national_focuses = {
+#		hea_backed_conclave
+#		hea_conclave_reform
+#
+#		hea_military_branch_init
+#		hea_military_branch_vehicles
+#
+#		hea_serfdom_branch_init
+#		hea_conclave_serfdom_branch
+#		hea_cooperate_elite
+#		hea_varied_work
+#		hea_serf_informants
+#		hea_amenities
+#		hea_manipulative_preachers
+#		hea_extend_serfdom
+#
+#		hea_military_women
+#		hea_military_women_guns
+#		hea_military_women_specialists
+#		hea_establish_garage
+#
+#		hea_conclave_securing_position
+#		hea_conclave_reminders
+#		hea_conclave_michael
+#		hea_conclave_disband_militias
+#		hea_conclave_denounce_michael
+#		hea_conclave_purge_allies
+#		hea_conclave_madman
+#
+#		hea_great_reunification
+#		hea_mending_the_schism
+#		hea_attack_anointed
+#		hea_attack_murtaugh
+#		hea_rule_idaho
+#
+#		hea_conclave_rally_the_gate
+#		hea_conclave_execution
+#		hea_conclave_supreme
+#
+#		hea_vehicle_doctrine
+#		hea_source_vehicles
+#		hea_terrain_adaptation
+#		hea_steam_engine
+#		hea_carroccio_vehicles
+#		hea_peak_vehicles
+#
+#		hea_holy_league
+#		hea_conclave_embassies
+#		hea_ncn_embassy
+#		hea_wyr_embassy
+#		hea_hammond_embassy
+#		hea_stm_allies
+#		hea_soph_air
+#		hea_attack_yellowstone
+#
+#	}
+#}
+#
+#HEA_gideon = {
+#	name = "Faiths Heart gideon plan"
+#	desc = "Gideon will lead the way"
+#
+#	enable = {
+#		original_tag = HEA
+#		HEA_has_ai_behavior_gideon = yes
+#	}
+#
+#	ai_national_focuses = {
+#		hea_backed_gideon
+#		hea_prioritize_nucleus
+#		hea_nucleus_requisition
+#		hea_nucleus_optimization
+#		hea_nucleus_repair
+#		hea_nucleus_training
+#
+#		hea_military_branch_init
+#		hea_military_women
+#		hea_military_women_guns
+#
+#		hea_serfdom_branch_init
+#		hea_gideon_serfdom_branch
+#		hea_gideon_is_serf
+#		hea_educate_serfs
+#		hea_anti_abuse
+#		hea_freeholder_support
+#		hea_placate_interests
+#		hea_gradual_freedom
+#
+#		hea_nucleus_back_on_track
+#		hea_nucleus_lessons
+#		hea_nucleus_propose_plan
+#		hea_nucleus_giving_back
+#		hea_nucleus_integrate_engineers
+#		hea_nucleus_archminister_lukas
+#		hea_nucleus_seize_the_oppurtunity
+#		hea_nucleus_new_steam_age
+#
+#		hea_military_branch_pa
+#		hea_expand_priory
+#		hea_exemplar_doctrine
+#		hea_more_priories
+#		hea_cloud_walkers_program
+#		hea_expand_proving
+#		hea_peak_pa
+#		hea_crusader_units
+#
+#		hea_great_reunification
+#		hea_forgive_not_forget
+#		hea_attack_anointed
+#		hea_attack_murtaugh
+#		hea_rule_idaho
+#		hea_holy_league
+#		hea_gideon_embassies
+#		hea_dln_embassy
+#		hea_ncn_embassy
+#		hea_wyr_embassy
+#		hea_loi_embassy
+#		hea_loi_ally
+#	}
+#}

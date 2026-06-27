@@ -101,17 +101,17 @@ recruit_character = HEA_bee_pope #BEEZUSSSSSSS
 recruit_character = HEA_aegon #Sir Aegon Pyrel
 recruit_character = HEA_uriel #Uriel - the spy
 
+set_cosmetic_tag = HEA_hu
+
 create_or_join_children_of_the_gate = yes
 
 if = {
-	limit = {
-		has_dlc = "La Resistance"
-	}
+	limit = { has_dlc = "La Resistance" }
 	create_operative_leader = {
 		name = HEA_uriel_name
 		gfx = GFX_Portrait_HEA_uriel_large
-		skill = 5 
-		traits = { 
+		skill = 3
+		traits = {
 			operative_heavyweight 
 			operative_speech 
 			HEA_inner_circle_unit_leader_trait

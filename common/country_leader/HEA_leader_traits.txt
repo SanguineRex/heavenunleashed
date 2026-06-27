@@ -68,7 +68,7 @@ leader_traits = {
 		recon_factor = 0.2
 		decryption = 0.2
 		operative_slot = 2
-		political_power_gain = -0.2
+		political_power_gain = -0.1
 	}
 	#Inner Circle - The Right Hand
 	HEA_the_right_hand_advisor_trait = {
@@ -78,7 +78,7 @@ leader_traits = {
 		breakthrough_factor = 0.1
 		justify_war_goal_time = -0.25
 		compliance_gain = -0.3
-		political_power_gain = -0.2
+		political_power_gain = -0.1
 	}
 	#Inner Circle - Bee Pope
 	HEA_bee_pope_advisor_trait = {

@@ -8,14 +8,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/non_converted_state_hea.dds"
 	}
 
-	spriteType = {
-		name = "GFX_faction_logo_CTG"
-		texturefile = "gfx/interface/factions/faction_logos/faction_logo_ctg.dds"
-		noOfFrames = 2
-	}
+	#spriteType = { # Unused #
+	#	name = "GFX_faction_logo_CTG"
+	#	texturefile = "gfx/interface/factions/faction_logos/faction_logo_ctg.dds"
+	#	noOfFrames = 2
+	#}
 
-	spriteType = {
-		name = "GFX_faction_logo_CTG_miniature"
-		texturefile = "gfx/interface/factions/faction_logos/faction_logo_ctg_miniature.dds"
-	}
+	#spriteType = { # Unused #
+	#	name = "GFX_faction_logo_CTG_miniature"
+	#	texturefile = "gfx/interface/factions/faction_logos/faction_logo_ctg_miniature.dds"
+	#}
 }

@@ -5,6 +5,7 @@ scripted_gui = {
 		window_name = "hea_research_scripted_gui_window"
 		dirty = hea_research_gui_dirty #To update the gui
 
+		ai_enabled = { always = no }
 
 		visible = {
 			has_country_flag = hea_research_gui_open

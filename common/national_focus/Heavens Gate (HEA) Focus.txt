@@ -2860,7 +2860,7 @@ focus_tree = {
 	##Start
 	focus = {
 		id = hea_nf_forgive_start
-		icon = x
+		#icon = x
 		cost = 60
 		x = -1
 		y = 1
@@ -2884,7 +2884,7 @@ focus_tree = {
 	#1-Ghouls-Our forefather walk among us
 	focus = {
 		id = hea_nf_forgive_1
-		icon = x
+		#icon = x
 		cost = 30
 		x = 0
 		y = 1
@@ -2907,7 +2907,7 @@ focus_tree = {
 	#2-Ebstablish Theological Assembly across the wasteland?-Lambs Astray
 	focus = {
 		id = hea_nf_forgive_2
-		icon = x
+		#icon = x
 		cost = 30
 		x = 0
 		y = 1
@@ -2928,7 +2928,7 @@ focus_tree = {
 	#3
 	focus = {
 		id = hea_nf_forgive_3
-		icon = x
+		#icon = x
 		cost = 30
 		x = 0
 		y = 1
@@ -2948,7 +2948,7 @@ focus_tree = {
 	#4
 	focus = {
 		id = hea_nf_forgive_4
-		icon = x
+		#icon = x
 		cost = 30
 		x = 0
 		y = 1
@@ -2968,7 +2968,7 @@ focus_tree = {
 	#5
 	focus = {
 		id = hea_nf_forgive_5
-		icon = x
+		#icon = x
 		cost = 30
 		x = 0
 		y = 1
@@ -2988,7 +2988,7 @@ focus_tree = {
 	#6
 	focus = {
 		id = hea_nf_forgive_6
-		icon = x
+		#icon = x
 		cost = 30
 		x = 0
 		y = 1
@@ -3008,7 +3008,7 @@ focus_tree = {
 	#End
 	focus = {
 		id = hea_nf_forgive_end
-		icon = x
+		#icon = x
 		cost = 30
 		x = 0
 		y = 1

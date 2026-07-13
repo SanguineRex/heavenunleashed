@@ -1,8 +1,8 @@
 ﻿l_english:
-  nf_event_hea.1.t:0 "Legacy of Scripture"
-  nf_event_hea.1.d:0 "The Heaven's Gate has always heeded the word of God, being directed by various prophets and leaders throughout its long history. Preachers have come and gone, speaking the good word to desperate people. Many verses have always held great weight with us, but none more so than the following."
-  nf_event_hea.1.a:0 "Ephesians 6:11"
-  nf_event_hea.1.b:0 "Isaiah 1:19"
+nf_event_hea.1.t: "Legacy of Scripture"
+nf_event_hea.1.d: "The Heaven's Gate has always heeded the word of God, being directed by various prophets and leaders throughout its long history. Preachers have come and gone, speaking the good word to desperate people. Many verses have always held great weight with us, but none more so than the following."
+nf_event_hea.1.a: "Ephesians 6:11"
+nf_event_hea.1.b: "Isaiah 1:19"
 
   nf_event_hea.2.t:0 "Pilgrims Cometh"
   nf_event_hea.2.d:0 "Those who make the journey to Heaven's Gate often travel great distances, knowing in their heart of hearts that somewhere past the horizon is the last true bastion of godliness in this forlorn and forgotten wasteland. Yet when they arrive, there is always the question. Has their pilgrimage ended, or are they now duty bound to seek out and lead the faithful here? What does the bible say of such things?"

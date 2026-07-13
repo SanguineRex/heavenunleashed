@@ -310,10 +310,11 @@ ideas = {
 			}
 		}
 
+		## School of Mobility ##
 		hea_mobility = {
 			picture = HEA_idea_mobility
-			removal_cost = -1
 			modifier = {
+				war_support_factor = 0.05
 				army_speed_factor = 0.1
 				org_loss_when_moving = -0.1
 			}

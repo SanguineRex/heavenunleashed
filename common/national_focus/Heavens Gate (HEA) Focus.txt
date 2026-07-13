@@ -11,23 +11,23 @@ focus_tree = {
 		x = 2400
 		y = 35
 	}
-###########################
-###Heaven's Gate History###
-###########################
+	###########################
+	###Heaven's Gate History###
+	###########################
 	#Legacy of Scripture
 	focus = {
 		id = hea_nf_precursers
 		icon = GFX_goal_HEA_focus_precursers
-		cost = 7
 		x = 14
 		y = 0
+
+		cost = 7
 
 		completion_reward = {
 			country_event = nf_event_hea.1
 			custom_effect_tooltip = event_insight_tt
 			custom_effect_tooltip = event_insight1_tt
 			event_option_tooltip = nf_event_hea.1.a
-			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = event_insight2_tt
 			event_option_tooltip = nf_event_hea.1.b
 		}
@@ -36,11 +36,11 @@ focus_tree = {
 	focus = {
 		id = hea_nf_pilgrims
 		icon = GFX_goal_HEA_focus_pilgrims
-		cost = 7
 		x = 0
 		y = 1
 		relative_position_id = hea_nf_precursers
 
+		cost = 7
 		prerequisite = { focus = hea_nf_precursers }
 
 		completion_reward = {
@@ -48,7 +48,6 @@ focus_tree = {
 			custom_effect_tooltip = event_insight_tt
 			custom_effect_tooltip = event_insight1_tt
 			event_option_tooltip = nf_event_hea.2.a
-			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = event_insight2_tt
 			event_option_tooltip = nf_event_hea.2.b
 		}
@@ -57,11 +56,11 @@ focus_tree = {
 	focus = {
 		id = hea_nf_tribals
 		icon = GFX_goal_HEA_focus_tribals
-		cost = 7
 		x = 0
 		y = 1
 		relative_position_id = hea_nf_pilgrims
 
+		cost = 7
 		prerequisite = { focus = hea_nf_pilgrims }
 
 		completion_reward = {
@@ -69,7 +68,6 @@ focus_tree = {
 			custom_effect_tooltip = event_insight_tt
 			custom_effect_tooltip = event_insight1_tt
 			event_option_tooltip = nf_event_hea.3.a
-			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = event_insight2_tt
 			event_option_tooltip = nf_event_hea.3.b
 		}
@@ -78,23 +76,23 @@ focus_tree = {
 	focus = {
 		id = hea_nf_innocence_lost
 		icon = GFX_goal_HEA_focus_innocence_lost
-		cost = 7
 		x = 0
 		y = 1
 		relative_position_id = hea_nf_tribals
 
+		cost = 7
 		prerequisite = { focus = hea_nf_tribals }
 
 		completion_reward = {
-			#if = {
-			#	limit = { 
-			#		has_dlc = "La Resistance"
-			#		has_intelligence_agency = no
-			#	}
+			if = {
+				limit = { 
+					has_dlc = "La Resistance"
+					has_intelligence_agency = no
+				}
 				hidden_effect = { create_intelligence_agency = yes }
 				custom_effect_tooltip = hea_nf_innocence_lost_tt
-			#}
-			custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
 			country_event = nf_event_hea.4
 			if = {
 				limit = { has_completed_focus = hea_nf_tribals }
@@ -103,28 +101,29 @@ focus_tree = {
 			}
 		}
 	}
-#############################
-###Early Military Focuses####
-#############################
+	#############################
+	###Early Military Focuses####
+	#############################
 	#Evolution of the Guard
 	focus = {
 		id = hea_nf_army
 		icon = GFX_goal_HEA_focus_evolution_of_the_guard
-		cost = 30
 		x = -13
 		y = 1
 		relative_position_id = hea_nf_innocence_lost
 
+		cost = 30
 		prerequisite = { focus = hea_nf_innocence_lost }
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = land_doc_bonus
+				name = cat_land_doctrine
 				bonus = 0.75
 				uses = 1
 				category = cat_land_doctrine
 			}
 			add_doctrine_cost_reduction = {
+				name = cat_air_doctrine
 				cost_reduction = 0.75
 				uses = 1
 				category = cat_air_doctrine
@@ -136,44 +135,41 @@ focus_tree = {
 	focus = {
 		id = hea_nf_air
 		icon = GFX_goal_HEA_focus_race_to_heaven
-		cost = 30
 		x = -2
 		y = 1
 		relative_position_id = hea_nf_army
 
+		cost = 30
 		prerequisite = { focus = hea_nf_army }
 
 		completion_reward = {
+			air_experience = 25
+			1384 = { add_building_construction = { type = air_base level = 1 } }
+			custom_effect_tooltip = spacer_tt
 			if = {
 				limit = { NOT = { has_tech = glider_tech } }
 				set_technology = { glider_tech = 1 }
+				custom_effect_tooltip = tech_effect|glider_tech
 			}
 			else = {
 				add_tech_bonus = {
-					name = air_bonus
+					name = air_equipment_tech_category
 					bonus = 0.2
 					uses = 1
 					category = air_equipment_tech_category
 				}
 			}
-			1384 = {
-				add_building_construction = {
-					type = air_base
-					level = 1
-				}
-			}
-			air_experience = 25
 		}
 	}
 	#Wing of the Angels
 	focus = {
 		id = hea_nf_air_peasant
-		icon = GFX_goal_HEA_focus_wings_of_the_angels
-		cost = 30
 		x = -1
 		y = 1
 		relative_position_id = hea_nf_air
 
+		icon = GFX_goal_HEA_focus_wings_of_the_angels
+		cost = 30
 		prerequisite = { focus = hea_nf_air }
 
 		completion_reward = {
@@ -188,11 +184,11 @@ focus_tree = {
 	focus = {
 		id = hea_nf_air_knight
 		icon = GFX_goal_HEA_focus_blessing_of_the_angels
-		cost = 30
 		x = 1
 		y = 1
 		relative_position_id = hea_nf_air
 
+		cost = 30
 		prerequisite = { focus = hea_nf_air }
 
 		completion_reward = {
@@ -203,23 +199,24 @@ focus_tree = {
 	focus = {
 		id = hea_nf_air_1
 		icon = GFX_goal_HEA_focus_ascension_achieved
-		cost = 30
 		x = 0
 		y = 2
 		relative_position_id = hea_nf_air
 
+		cost = 30
 		prerequisite = {
 			focus = hea_nf_air_peasant
 			focus = hea_nf_air_knight
 		}
 
 		completion_reward = {
+			air_experience = 25
 			add_doctrine_cost_reduction = {
+				name = cat_air_doctrine
 				cost_reduction = 0.5
 				uses = 2
 				category = cat_air_doctrine
 			}
-			air_experience = 25
 		}
 	}
 	###Army Branch###
@@ -227,16 +224,17 @@ focus_tree = {
 	focus = {
 		id = hea_nf_army_1
 		icon = GFX_goal_HEA_focus_arming_the_clergy
-		cost = 30
 		x = 2
 		y = 1
 		relative_position_id = hea_nf_army
 
+		cost = 30
 		prerequisite = { focus = hea_nf_army }
 
 		completion_reward = {
 			army_experience = 25
 			add_tech_bonus = {
+				name = infantry_weapons_tech_category
 				bonus = 0.75
 				uses = 1
 				category = infantry_weapons_tech_category
@@ -247,12 +245,13 @@ focus_tree = {
 	focus = {
 		id = hea_nf_crusaders
 		icon = GFX_goal_HEA_focus_crusader_armies
-		cost = 30
 		x = -1
 		y = 1
 		relative_position_id = hea_nf_army_1
 
+		cost = 30
 		prerequisite = { focus = hea_nf_army_1 }
+
 		completion_reward = {
 			add_ideas = hea_crusaders
 		}
@@ -261,55 +260,60 @@ focus_tree = {
 	focus = {
 		id = hea_nf_conscription
 		icon = GFX_goal_HEA_focus_mandatory_service
-		cost = 30
 		x = 1
 		y = 1
 		relative_position_id = hea_nf_army_1
 
+		cost = 30
 		prerequisite = { focus = hea_nf_army_1 }
 
 		completion_reward = {
 			if = {
-				limit = {
-					OR = {
-						has_idea = volunteer_militia_conscription
-						has_idea = disarmed_nation
-					}
-					
+				limit = { has_idea = volunteer_militia_conscription }
+				swap_ideas = {
+					remove_idea = volunteer_militia_conscription
+					add_idea = funded_militia_conscription
 				}
-				add_ideas = funded_militia_conscription
+			}
+			else_if = {
+				limit = { has_idea = disarmed_nation }
+				swap_ideas = {
+					remove_idea = disarmed_nation
+					add_idea = funded_militia_conscription
+				}
 			}
 			else_if = {
 				limit = { has_idea = funded_militia_conscription }
-				add_ideas = two_year_conscription
+				swap_ideas = {
+					remove_idea = funded_militia_conscription
+					add_idea = two_year_conscription
+				}
 			}
-			else = {
-				add_political_power = 100
-			}
+			else = { add_political_power = 100 }
 		}
 	}
 	#Military Ordos
 	focus = {
 		id = hea_nf_army_2
 		icon = GFX_goal_HEA_focus_military_ordos
-		cost = 30
 		x = 0
 		y = 2
 		relative_position_id = hea_nf_army_1
 
+		cost = 30
 		prerequisite = {
 			focus = hea_nf_conscription
 			focus = hea_nf_crusaders
 		}
 
 		completion_reward = {
+			army_experience = 25
 			add_tech_bonus = {
-				name = land_doc_bonus
+				name = cat_land_doctrine
 				bonus = 0.5
 				uses = 2
 				category = cat_land_doctrine
 			}
-			army_experience = 25
 		}
 	}
 	###Next Early Army Stage###
@@ -335,17 +339,17 @@ focus_tree = {
 	focus = {
 		id = hea_nf_machines_of_steam
 		icon = GFX_goal_HEA_focus_steampowered_dreadnaughts
-		cost = 30
 		x = -1
 		y = 1
 		relative_position_id = hea_nf_missionary_warriors
 
+		cost = 30
 		prerequisite = { focus = hea_nf_missionary_warriors }
 		mutually_exclusive = { focus = hea_nf_men_of_steam }
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = hea_nf_machines_of_steam
+				name = tank_tech_category
 				bonus = 0.5
 				ahead_reduction = 2
 				uses = 2
@@ -357,17 +361,17 @@ focus_tree = {
 	focus = {
 		id = hea_nf_men_of_steam
 		icon = GFX_goal_HEA_focus_steam_power_armor
-		cost = 30
 		x = 1
 		y = 1
 		relative_position_id = hea_nf_missionary_warriors
 
+		cost = 30
 		prerequisite = { focus = hea_nf_missionary_warriors }
 		mutually_exclusive = { focus = hea_nf_machines_of_steam }
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = hea_nf_men_of_steam
+				name = power_armor_tech_category
 				bonus = 0.5
 				ahead_reduction = 2
 				uses = 2
@@ -390,13 +394,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_war_support = 0.05
 			add_ideas = hea_mobility
 		}
 	}
-############################
-###Early Industry Focuses###
-############################
+	############################
+	###Early Industry Focuses###
+	############################
 	#Enriching the Nucleus
 	focus = {
 		id = hea_the_nucleus
@@ -408,13 +411,11 @@ focus_tree = {
 
 		prerequisite = { focus = hea_nf_innocence_lost }
 
-		completion_reward = { #Manually inputing the states to save a little bit of performance cost and prevent Stagleap getting the bonus without adding more unnecessary checks - @Deez
-			18 = { add_extra_state_shared_building_slots = 1 }
-			116 = { add_extra_state_shared_building_slots = 1 }
-			278 = { add_extra_state_shared_building_slots = 1 }
-			1384 = { add_extra_state_shared_building_slots = 1 }
-			198 = { add_extra_state_shared_building_slots = 1 }
-			1385 = { add_extra_state_shared_building_slots = 1 }
+		completion_reward = {
+			every_owned_state = {
+				limit = { OR = { state = 18 state = 116 state = 278 state = 1384 state = 198 state = 1385 } } ## Core Heaven's Gate States ##
+				add_extra_state_shared_building_slots = 1
+			}
 			#Initialize the variables
 			set_variable = { hea_tame_country_resource_energy_var = 0 }
 			set_variable = { hea_tame_country_resource_water_var = 0 }
@@ -439,7 +440,7 @@ focus_tree = {
 			hidden_effect = {
 				add_dynamic_modifier = {
 					modifier = hea_tame_dynamic_modifier
-				}		
+				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = hea_the_nucleus_tt

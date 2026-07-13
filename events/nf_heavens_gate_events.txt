@@ -12,18 +12,16 @@ country_event = {
 	option = {
 		name = nf_event_hea.1.a
 		add_ideas = hea_startup_militant
+		custom_effect_tooltip = spacer_tt
 		custom_effect_tooltip = Ephesians
-		ai_chance = {
-			base = 50
-		}
+		ai_chance = { base = 50 }
 	}
 	option = {
 		name = nf_event_hea.1.b
 		add_ideas = hea_startup_agriculture
+		custom_effect_tooltip = spacer_tt
 		custom_effect_tooltip = Isaiah
-		ai_chance = {
-			base = 50
-		}
+		ai_chance = { base = 50 }
 	}
 }
 country_event = {
@@ -38,18 +36,16 @@ country_event = {
 	option = {
 		name = nf_event_hea.2.a
 		add_ideas = hea_startup_stationary_pilgrims
+		custom_effect_tooltip = spacer_tt
 		custom_effect_tooltip = Genesis
-		ai_chance = {
-			base = 50
-		}
+		ai_chance = { base = 50 }
 	}
 	option = {
 		name = nf_event_hea.2.b
 		add_ideas = hea_startup_traveling_pilgrims
+		custom_effect_tooltip = spacer_tt
 		custom_effect_tooltip = Psalm
-		ai_chance = {
-			base = 50
-		}
+		ai_chance = { base = 50 }
 	}
 }
 
@@ -65,18 +61,16 @@ country_event = {
 	option = {
 		name = nf_event_hea.3.a
 		add_ideas = hea_startup_let_them_in
+		custom_effect_tooltip = spacer_tt
 		custom_effect_tooltip = Corinthians
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 	}
 	option = {
 		name = nf_event_hea.3.b
 		add_ideas = hea_startup_better_be_careful
+		custom_effect_tooltip = spacer_tt
 		custom_effect_tooltip = Luke
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 	}
 }
 

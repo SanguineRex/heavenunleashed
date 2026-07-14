@@ -1343,26 +1343,6 @@ ideas = {
 			#Don't need anything here
 		}
 
-		hea_taming_idea_taming_the_land = {
-			name = hea_taming_idea_name
-			modifier = {
-				global_building_slots_factor = 0.05
-			}
-		}
-		hea_taming_idea_eternal_spring = {
-			name = hea_taming_idea_name
-			modifier = {
-				consumer_goods_factor = -0.07
-				monthly_population = 0.05
-			}
-		}
-		hea_taming_idea_blessed_cooks = {
-			name = hea_taming_idea_name
-			modifier = {
-				consumer_goods_factor = -0.03
-				monthly_population = 0.05
-			}
-		}
 		hea_taming_idea_preparing_for_expansion = {
 			name = hea_taming_idea_name
 			modifier = {
@@ -1382,32 +1362,6 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.05
 				production_speed_buildings_factor = 0.05
-			}
-		}
-		hea_taming_idea_steam_smith_focus = {
-			name = hea_taming_idea_name
-			modifier = {
-				industrial_capacity_factory = 0.05
-			}
-		}
-		hea_taming_idea_steam_smith_decision_1 = {
-			name = hea_taming_idea_name
-			modifier = {
-				country_resource_metal = 20
-			}
-		}
-		hea_taming_idea_steam_smith_decision_2 = {
-			name = hea_taming_idea_name
-			modifier = {
-				country_resource_metal = -10
-				country_resource_composites = 10
-			}
-		}
-		hea_taming_idea_steam_smith_decision_3 = {
-			name = hea_taming_idea_name
-			modifier = {
-				country_resource_composites = -15
-				industrial_capacity_factory = 0.1
 			}
 		}
 		hea_taming_idea_taming_the_heaven = {

@@ -432,7 +432,9 @@ focus_tree = {
 
 			hidden_effect = {
 				## Setup Water Mills States ##
-				hea_tame_water_state_setup = yes
+				hea_tame_water_state_setup_scripted_effect = yes
+				## Setup Steam Smiths States ##
+				hea_tame_smith_state_setup_scripted_effect = yes
 			}
 		}
 	}
@@ -639,44 +641,46 @@ focus_tree = {
 	focus = {
 		id = hea_taming_land
 		icon = GFX_goal_HEA_hea_expand_tunnels
-		cost = 30
 		x = 0
 		y = 1
 		relative_position_id = hea_the_nucleus
 
+		cost = 30
 		prerequisite = { focus = hea_the_nucleus }
 
 		completion_reward = {
-			add_to_variable = { hea_tame_global_building_slots_factor_var = 0.05 }
-			add_political_power = 60
-			custom_effect_tooltip = generic_skip_one_line_tt
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_taming_the_land
-				}				
+			custom_effect_tooltip = hea_tame_modify_tt
+			add_to_variable = {
+				var = hea_tame_global_building_slots_factor_var
+				value = 0.05
+				tooltip = global_building_slots_factor_tt
 			}
+			custom_effect_tooltip = spacer_tt
+			add_political_power = 60
 		}
 	}
 	#Eternal Spring
 	focus = {
 		id = hea_hothouse
 		icon = GFX_goal_HEA_building_spring
-		cost = 15
 		x = -2
 		y = 1
 		relative_position_id = hea_taming_land
 
+		cost = 15
 		prerequisite = { focus = hea_taming_land }
 
 		completion_reward = {
-			add_to_variable = { hea_tame_consumer_goods_factor_var = -0.07 }
-			add_to_variable = { hea_tame_monthly_population_var = 0.05 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_eternal_spring
-				}				
+			custom_effect_tooltip = hea_tame_modify_tt
+			add_to_variable = {
+				var = hea_tame_consumer_goods_factor_var
+				value = -0.07
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				var = hea_tame_monthly_population_var
+				value = 0.05
+				tooltip = hu_monthly_population_tt
 			}
 		}
 	}
@@ -684,21 +688,24 @@ focus_tree = {
 	focus = {
 		id = hea_priestcooks
 		icon = GFX_goal_HEA_building_cooks
-		cost = 15
 		x = 0
 		y = 1
 		relative_position_id = hea_hothouse
 
+		cost = 15
 		prerequisite = { focus = hea_hothouse }
 
 		completion_reward = {
-			add_to_variable = { hea_tame_consumer_goods_factor_var = -0.03 }
-			add_to_variable = { hea_tame_monthly_population_var = 0.05 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_blessed_cooks
-				}			
+			custom_effect_tooltip = hea_tame_modify_tt
+			add_to_variable = {
+				var = hea_tame_consumer_goods_factor_var
+				value = -0.03
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				var = hea_tame_monthly_population_var
+				value = 0.05
+				tooltip = hu_monthly_population_tt
 			}
 		}
 	}
@@ -714,14 +721,17 @@ focus_tree = {
 		prerequisite = { focus = hea_taming_land }
 
 		completion_reward = {
-			add_to_variable = { hea_tame_industrial_capacity_factory_var = 0.05 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_steam_smith_focus
-				}				
+			custom_effect_tooltip = hea_tame_modify_tt
+			add_to_variable = {
+				var = hea_tame_industrial_capacity_factory_var
+				value = 0.05
+				tooltip = industrial_capacity_factory_tt
 			}
-			custom_effect_tooltip = hea_steam_smiths_tt
+			custom_effect_tooltip = spacer_tt
+			unlock_decision_tooltip = {
+				decision = hea_tame_steam_smiths_1_dummy_decision
+				show_effect_tooltip = yes
+			}
 		}
 	}
 	#Preparing for expansion

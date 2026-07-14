@@ -55,30 +55,23 @@ hea_tame_water_mills_3_targeted_decision_desc: "§W\"Even the weary must be made
 ##Decisions-Taming the Lands
 hea_building_smiths: "Already constructing steam smiths"
 
-#1385-Western Tunnel
-hea_smiths_1385_1: "§8Build steam smiths in [1385.GetName]§!"
-hea_smiths_1385_1_desc: "\n§W\"Beneath the soil lies what God has buried for the faithful to find.\"§!\n\nSmithing sites are raised to draw ore and pressure-stone from the deep and begin their shaping. What the land yields, the Gate turns toward purpose, fire, metal, and work in proper order."
-hea_smiths_1385_2: "§8Upgrade the steam smiths in [1385.GetName]§!"
-hea_smiths_1385_2_desc: "\n§W\"Raw ore is not enough, purity is earned in heat.\"§!\n\nForges are retooled for finer work: heat tempered, pressure balanced, slag driven out. Rough metal becomes true stock, uniform, dependable, ready for higher craft."
-hea_smiths_built_1385_2: "£GFX_decision_icon_small Steam smiths §Yupgraded§! in §Y[1385.GetName]§!"
-#198-Southern Gate
-hea_smiths_198_1: "§8Build steam smiths in [198.GetName]§!"
-hea_smiths_198_1_desc: "\n§W\"Beneath the soil lies what God has buried for the faithful to find.\"§!\n\nSmithing sites are raised to draw ore and pressure-stone from the deep and begin their shaping. What the land yields, the Gate turns toward purpose, fire, metal, and work in proper order."
-hea_smiths_198_2: "§8Upgrade the steam smiths in [198.GetName]§!"
-hea_smiths_198_2_desc: "\n§W\"Raw ore is not enough, purity is earned in heat.\"§!\n\nForges are retooled for finer work: heat tempered, pressure balanced, slag driven out. Rough metal becomes true stock, uniform, dependable, ready for higher craft."
-hea_smiths_built_198_2: "£GFX_decision_icon_small Steam smiths §Yupgraded§! in §Y[198.GetName]§!"
-#276-Stagleap
-hea_smiths_276_1: "§8Build steam smiths in [276.GetName]§!"
-hea_smiths_276_1_desc: "\n§W\"Beneath the soil lies what God has buried for the faithful to find.\"§!\n\nSmithing sites are raised to draw ore and pressure-stone from the deep and begin their shaping. What the land yields, the Gate turns toward purpose, fire, metal, and work in proper order."
-hea_smiths_276_2: "§8Upgrade the steam smiths in [276.GetName]§!"
-hea_smiths_276_2_desc: "\n§W\"Raw ore is not enough, purity is earned in heat.\"§!\n\nForges are retooled for finer work: heat tempered, pressure balanced, slag driven out. Rough metal becomes true stock, uniform, dependable, ready for higher craft."
-hea_smiths_built_276_2: "£GFX_decision_icon_small Steam smiths §Yupgraded§! in §Y[276.GetName]§!"
+hea_tame_steam_smiths_1_dummy_decision: "§8Build Steam Smiths£GFX_resources_strip|3 §!"
+hea_tame_steam_smiths_1_dummy_decision_tt: "§gWe can begin constructing steam mills to provide resources for war productions.§!"
 
-hea_smiths_1_tt: "Unlocks further £GFX_decision_icon_small §YUpgrade§! for the §8Steam Smith§!"
+hea_tame_steam_smiths_2_dummy_decision: "§8Upgrade Steam Smiths£GFX_resources_strip|3 §!"
+hea_tame_steam_smiths_2_dummy_decision_tt: "§gWe can begin upgrading steam mills to produce composite materials£GFX_resources_strip|4 for war productions.§!"
+
+hea_tame_steam_smiths_1_targetted_decision: "§8Build steam smiths in §Y[FROM.GetName]§!§!"
+hea_tame_steam_smiths_1_targetted_decision_desc: "§W\"Beneath the soil lies what God has buried for the faithful to find.\"§!\n\nSmithing sites are raised to draw ore and pressure-stone from the deep and begin their shaping. What the land yields, the Gate turns toward purpose, fire, metal, and work in proper order."
+
+hea_tame_steam_smiths_2_targetted_decision: "§8Upgrade the steam smiths in §Y[FROM.GetName]§!§!"
+hea_tame_steam_smiths_2_targetted_decision_desc: "§W\"Raw ore is not enough, purity is earned in heat.\"§!\n\nForges are retooled for finer work: heat tempered, pressure balanced, slag driven out. Rough metal becomes true stock, uniform, dependable, ready for higher craft."
+
+hea_tame_smith_upgraded_flag: "Upgraded §8Steam Smiths§!"
 
 #Steam smiths-final
 hea_smiths_final: "§8Construct new steam smiths weapons§!"
-hea_smiths_final_desc: "\n§W\"The weapon is not merely a tool, it is a testament.\"§!\n\nWith better stock and steadier hands, designs are corrected and failures pared away. Steam engines sear true, seals hold, and the Gate's arms endure the heat of war."
+hea_smiths_final_desc: "§W\"The weapon is not merely a tool, it is a testament.\"§!\n\nWith better stock and steadier hands, designs are corrected and failures pared away. Steam engines sear true, seals hold, and the Gate's arms endure the heat of war."
 
 ##Decisions-Taming the Heavens
 hea_capturing_scientists: "Already capturing scientists"

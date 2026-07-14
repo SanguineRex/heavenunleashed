@@ -782,7 +782,6 @@ hea_priestcooks_desc: "Unlike other nations, we don't allow our people to starve
 
 hea_steam_smiths: "Smiths blessed by Steam and the Lord"
 hea_steam_smiths_desc: "The smiths in the Nucleus are some of the best smiths around! However as time goes on more and more materials are used in the pursuit of arming our warriors, expanding the smithing quarter means the miners will need to get to work to ensure they can work at full capacity!"
-hea_steam_smiths_tt: "Unlocks £GFX_decision_icon_small §YDecisions§! to build £GFX_resources_strip|3 §8Steam Smiths§!"
 
 hea_expanding_pipeways: "Preparing for expansion"
 hea_expanding_pipeways_desc: "The Pipeways, the lifeblood of our realm, always need to be expanded, with the aid of some of our more zealous construction workers, we can ensure that mountains, hills, and even rivers pose no trouble in any future expansions"

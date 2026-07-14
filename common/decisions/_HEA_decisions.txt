@@ -2812,7 +2812,6 @@ hea_tame_decision_cat = {
 	### Build Water Mills ###
 	hea_tame_water_mills_1_dummy_decision = {
 		icon = GFX_decision_generic_consumer_goods
-		priority = 1
 		allowed = { always = no } # Not Meant To Be Seen, Used For Tooltips #
 		complete_effect = {
 			custom_effect_tooltip = hea_tame_water_mills_1_dummy_decision_tt
@@ -2830,7 +2829,6 @@ hea_tame_decision_cat = {
 	### Build Bathhouses ###
 	hea_tame_water_mills_3_dummy_decision = {
 		icon = GFX_decision_generic_consumer_goods
-		priority = 1
 		allowed = { always = no } # Not Meant To Be Seen, Used For Tooltips #
 		complete_effect = {
 			custom_effect_tooltip = hea_tame_water_mills_3_dummy_decision_tt
@@ -2840,12 +2838,12 @@ hea_tame_decision_cat = {
 	### Build Water Mills in STATE ###
 	hea_tame_water_mills_1_targeted_decision = {
 		icon = GFX_decision_generic_consumer_goods
-		priority = 1
+		priority = 5
 
 		state_target = yes
 		target_array = root.hea_tame_water_state_array
 		target_trigger = {
-			FROM = { is_owned_and_controlled_by = ROOT }
+			FROM = { is_fully_controlled_by = ROOT }
 		}
 		available = {
 			has_completed_focus = hea_water_mills
@@ -2890,14 +2888,14 @@ hea_tame_decision_cat = {
 	### Convert the Water Mills in STATE ###
 	hea_tame_water_mills_2_targeted_decision = {
 		icon = GFX_decision_generic_consumer_goods
-		priority = 1
+		priority = 5
 
 		state_target = yes
 		target_array = root.hea_tame_water_state_array
 		target_trigger = {
 			FROM = {
 				has_state_flag = hea_tame_water_mills_built_1_flag
-				is_owned_and_controlled_by = ROOT
+				is_fully_controlled_by = ROOT
 			}
 		}
 		available = { num_of_civilian_factories_available_for_projects > 2 }
@@ -2945,14 +2943,14 @@ hea_tame_decision_cat = {
 	### Build Bathhouses in STATE ###
 	hea_tame_water_mills_3_targeted_decision = {
 		icon = GFX_decision_generic_consumer_goods
-		priority = 1
+		priority = 5
 
 		state_target = yes
 		target_array = root.hea_tame_water_state_array
 		target_trigger = {
 			FROM = {
 				has_state_flag = hea_tame_water_mills_built_2_flag
-				is_owned_and_controlled_by = ROOT
+				is_fully_controlled_by = ROOT
 			}
 		}
 		available = { num_of_civilian_factories_available_for_projects > 3 }
@@ -3009,231 +3007,162 @@ hea_tame_decision_cat = {
 		}
 	}
 
-
-###Steam Smiths
-	#1385-Western Tunnel
-	hea_smiths_1385_1 = {
+	### Build Steam Smiths ###
+	hea_tame_steam_smiths_1_dummy_decision = {
 		icon = GFX_decision_generic_factory
-		cost = 30
-		fire_only_once = yes
-
-		available = {
-			has_completed_focus = hea_steam_smiths
-			num_of_civilian_factories_available_for_projects > 1
-			NOT = { has_country_flag = hea_building_smiths }
-		}
-
-		days_remove = 30
-		modifier = {
-			civilian_factory_use = 2
-		}
+		allowed = { always = no } # Not Meant To Be Seen, Used For Tooltips #
 		complete_effect = {
-			set_country_flag = hea_building_smiths
-		}
-		remove_effect = {
-			add_to_variable = { hea_tame_country_resource_metal_var = 20 }
-			clr_country_flag = hea_building_smiths
-			set_country_flag = hea_smiths_built_1385_1
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_steam_smith_decision_1
-				}
-			}
-			custom_effect_tooltip = hea_smiths_1_tt
+			custom_effect_tooltip = hea_tame_steam_smiths_1_dummy_decision_tt
 		}
 	}
-	hea_smiths_1385_2 = {
+	### Upgrade Steam Smiths ###
+	hea_tame_steam_smiths_2_dummy_decision = {
 		icon = GFX_decision_generic_factory
-		cost = 30
-		fire_only_once = yes
-		 
-		available = {
-			num_of_civilian_factories_available_for_projects > 1
-			NOT = { has_country_flag = hea_building_smiths }
+		allowed = { always = no } # Not Meant To Be Seen, Used For Tooltips #
+		complete_effect = {
+			custom_effect_tooltip = hea_tame_steam_smiths_2_dummy_decision_tt
 		}
-		visible = {
-			has_country_flag = hea_smiths_built_1385_1
+	}
+
+	### Build Steam Smiths in STATE ###
+	hea_tame_steam_smiths_1_targetted_decision = {
+		icon = GFX_decision_generic_factory
+		priority = 4
+
+		state_target = yes
+		target_array = root.hea_tame_steam_state_array
+		target_trigger = {
+			FROM = { is_fully_controlled_by = ROOT }
+		}
+		available = { num_of_civilian_factories_available_for_projects > 3 }
+		custom_cost_trigger = {
+			set_temp_variable = { temp_cap_cost = 30 }
+			custom_caps_cost_trigger = yes
+		}
+		custom_cost_text = "caps_decisions_cost_text"
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				set_temp_variable = { caps_to_add = -30 }
+				add_caps = yes
+			}
 		}
 
-		days_remove = 30
-		modifier = {
-			civilian_factory_use = 2
-		}
-		complete_effect = {
-			set_country_flag = hea_building_smiths
-		}
+		days_remove = 60
+		modifier = { civilian_factory_use = 4 }
 		remove_effect = {
-			subtract_from_variable = { hea_tame_country_resource_metal_var = 10 }
-			add_to_variable = { hea_tame_country_resource_composites_var = 10 }
-			clr_country_flag = hea_building_smiths
-			set_country_flag = hea_smiths_built_1385_2
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_steam_smith_decision_2
+			ROOT = {
+				custom_effect_tooltip = hea_tame_modify_tt
+				add_to_variable = {
+					var = hea_tame_country_resource_metal_var
+					value = 20
+					tooltip = state_resource_metal_tt
 				}
+				custom_effect_tooltip = spacer_tt
+				unlock_decision_tooltip = {
+					decision = hea_tame_steam_smiths_2_dummy_decision
+					show_effect_tooltip = yes
+				}
+			}
+			FROM = {
+				set_state_flag = hea_tame_smith_built_flag
 			}
 		}
 	}
-	#198-Southern Gate
-	hea_smiths_198_1 = {
+
+	### Upgrade Steam Smiths in STATE ###
+	hea_tame_steam_smiths_2_targetted_decision = {
 		icon = GFX_decision_generic_factory
-		cost = 30
+		priority = 4
+
+		state_target = yes
+		target_array = root.hea_tame_steam_state_array
+		target_trigger = {
+			FROM = {
+				has_state_flag = hea_tame_smith_built_flag
+				is_fully_controlled_by = ROOT
+			}
+		}
+		available = { num_of_civilian_factories_available_for_projects > 4 }
+		custom_cost_trigger = {
+			set_temp_variable = { temp_cap_cost = 40 }
+			custom_caps_cost_trigger = yes
+		}
+		custom_cost_text = "caps_decisions_cost_text"
 		fire_only_once = yes
-		 
-		available = {
-			has_completed_focus = hea_steam_smiths
-			num_of_civilian_factories_available_for_projects > 1
-			NOT = { has_country_flag = hea_building_smiths }	
+
+		complete_effect = {
+			hidden_effect = {
+				set_temp_variable = { caps_to_add = -40 }
+				add_caps = yes
+			}
 		}
 
-		days_remove = 30
-		modifier = {
-			civilian_factory_use = 2
-		}
-		complete_effect = {
-			set_country_flag = hea_building_smiths
-		}
+		days_remove = 60
+		modifier = { civilian_factory_use = 5 }
 		remove_effect = {
-			add_to_variable = { hea_tame_country_resource_metal_var = 20 }
-			clr_country_flag = hea_building_smiths
-			set_country_flag = hea_smiths_built_198_1
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_steam_smith_decision_1
+			ROOT = {
+				custom_effect_tooltip = hea_tame_modify_tt
+				add_to_variable = {
+					var = hea_tame_country_resource_metal_var
+					value = -10
+					tooltip = state_resource_metal_tt
+				}
+				add_to_variable = {
+					var = hea_tame_country_resource_composites_var
+					value = 10
+					tooltip = state_resource_composites_tt
 				}
 			}
-			custom_effect_tooltip = hea_smiths_1_tt
-		}
-	}
-	hea_smiths_198_2 = {
-		icon = GFX_decision_generic_factory
-		cost = 30
-		fire_only_once = yes
-		 
-		available = {
-			num_of_civilian_factories_available_for_projects > 1
-			NOT = { has_country_flag = hea_building_smiths }
-		}
-
-		visible = {
-			has_country_flag = hea_smiths_built_198_1
-		}
-
-		days_remove = 30
-		modifier = {
-			civilian_factory_use = 2
-		}
-		complete_effect = {
-			set_country_flag = hea_building_smiths
-		}
-		remove_effect = {
-			subtract_from_variable = { hea_tame_country_resource_metal_var = 10 }
-			add_to_variable = { hea_tame_country_resource_composites_var = 10 }
-			clr_country_flag = hea_building_smiths
-			set_country_flag = hea_smiths_built_198_2
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_steam_smith_decision_2
-				}
+			FROM = {
+				clr_state_flag = hea_tame_smith_built_flag
+				set_state_flag = hea_tame_smith_upgraded_flag
+				ROOT = { remove_from_array = { array = root.hea_tame_steam_state_array value = PREV.ID } }
 			}
 		}
 	}
-	#276-Stagleap
-	hea_smiths_276_1 = {
-		icon = GFX_decision_generic_factory
-		cost = 30
-		fire_only_once = yes
-		 
-		available = {
-			has_completed_focus = hea_steam_smiths
-			num_of_civilian_factories_available_for_projects > 1
-			NOT = { has_country_flag = hea_building_smiths }
-		}
 
-		days_remove = 30
-		modifier = {
-			civilian_factory_use = 2
-		}
-		complete_effect = {
-			set_country_flag = hea_building_smiths
-		}
-		remove_effect = {
-			add_to_variable = { hea_tame_country_resource_metal_var = 20 }
-			clr_country_flag = hea_building_smiths
-			set_country_flag = hea_smiths_built_276_1
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_steam_smith_decision_1
-				}
-			}
-			custom_effect_tooltip = hea_smiths_1_tt
-		}
-	}
-	hea_smiths_276_2 = {
-		icon = GFX_decision_generic_factory
-		cost = 30
-		fire_only_once = yes
-		 
-		available = {
-			num_of_civilian_factories_available_for_projects > 1
-			NOT = { has_country_flag = hea_building_smiths }
-		}
-
-		visible = {
-			has_country_flag = hea_smiths_built_276_1
-		}
-
-		days_remove = 30
-		modifier = {
-			civilian_factory_use = 2
-		}
-		complete_effect = {
-			set_country_flag = hea_building_smiths
-		}
-		remove_effect = {
-			subtract_from_variable = { hea_tame_country_resource_metal_var = 10 }
-			add_to_variable = { hea_tame_country_resource_composites_var = 10 }
-			clr_country_flag = hea_building_smiths
-			set_country_flag = hea_smiths_built_276_2
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_steam_smith_decision_2
-				}
-			}
-		}
-	}
 	#Final-Steam Smiths
 	hea_smiths_final = {
 		icon = GFX_decision_generic_factory
-		cost = 75
-		fire_only_once = yes
+		priority = 3
 
 		available = {
-			has_country_flag = hea_smiths_built_1385_2
-			has_country_flag = hea_smiths_built_198_2
-			has_country_flag = hea_smiths_built_276_2
-			num_of_civilian_factories_available_for_projects > 3
+			1385 = { has_state_flag = hea_tame_smith_upgraded_flag }
+			198 = { has_state_flag = hea_tame_smith_upgraded_flag }
+			276 = { has_state_flag = hea_tame_smith_upgraded_flag }
+			num_of_civilian_factories_available_for_projects > 7
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { temp_cap_cost = 100 }
+			custom_caps_cost_trigger = yes
+		}
+		custom_cost_text = "caps_decisions_cost_text"
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				set_temp_variable = { caps_to_add = -100 }
+				add_caps = yes
+			}
 		}
 
 		days_remove = 100
-		modifier = {
-			civilian_factory_use = 4
-		}
+		modifier = { civilian_factory_use = 8 }
 		remove_effect = {
-			subtract_from_variable = { hea_tame_country_resource_composites_var = 15 }
-			add_to_variable = { hea_tame_industrial_capacity_factory_var = 0.1 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = hea_taming_idea_template
-					add_idea = hea_taming_idea_steam_smith_decision_3
-				}
+			custom_effect_tooltip = hea_tame_modify_tt
+			add_to_variable = {
+				var = hea_tame_country_resource_composites_var
+				value = -15
+				tooltip = state_resource_composites_tt
 			}
+			add_to_variable = {
+				var = hea_tame_industrial_capacity_factory_var
+				value = 0.1
+				tooltip = hu_industrial_capacity_factory_tt
+			}
+			custom_effect_tooltip = spacer_tt
 			add_ideas = hea_steam_smiths_weapon
 		}
 	}

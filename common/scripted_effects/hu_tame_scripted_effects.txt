@@ -1,7 +1,13 @@
 ### Setup Water Mills States ###
-hea_tame_water_state_setup = {
+hea_tame_water_state_setup_scripted_effect = {
 	18 = { add_to_array = { array = root.hea_tame_water_state_array value = this.ID } }
 	116 = { add_to_array = { array = root.hea_tame_water_state_array value = this.ID } }
 	278 = { add_to_array = { array = root.hea_tame_water_state_array value = this.ID } }
 	198 = { add_to_array = { array = root.hea_tame_water_state_array value = this.ID } }
+}
+### Setup Steam Smiths States ###
+hea_tame_smith_state_setup_scripted_effect = {
+	1385 = { add_to_array = { array = root.hea_tame_steam_state_array value = this.ID } }
+	198 = { add_to_array = { array = root.hea_tame_steam_state_array value = this.ID } }
+	276 = { add_to_array = { array = root.hea_tame_steam_state_array value = this.ID } }
 }

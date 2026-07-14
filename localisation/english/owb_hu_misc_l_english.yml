@@ -11,6 +11,10 @@ children_of_the_gate: "Children of the Gate"
 
 state_resource_water_tt: " $state_resource_water$: $RIGHT|+=0$\n"
 state_resource_energy_tt: " $state_resource_energy$: $RIGHT|+=0$\n"
+state_resource_metal_tt: " $state_resource_metal$: $RIGHT|+=0$\n"
+state_resource_composites_tt: " $state_resource_composites$: $RIGHT|+=0$\n"
+
 hu_non_core_manpower_tt: " $MODIFIER_GLOBAL_NON_CORE_MANPOWER$: $RIGHT|+=%2$\n"
 hu_monthly_population_tt: " $MODIFIER_GLOBAL_MONTHLY_POPULATION$: $RIGHT|+=%1$\n"
 hu_stability_factor_tt: " $MODIFIER_STABILITY_FACTOR$ $RIGHT|+=%2$\n"
+hu_industrial_capacity_factory_tt: " $MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: $RIGHT|+=%2$\n"

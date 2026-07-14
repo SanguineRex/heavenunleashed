@@ -56,7 +56,7 @@ set_technology = {
 	#waterproof_sealing_tech = 1
 }
 
-set_stability = 0.5
+set_stability = 0.3
 set_war_support = 0.2
 set_research_slots = 5
 set_country_flag = is_settler_nation

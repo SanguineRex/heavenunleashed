@@ -749,7 +749,6 @@ hea_right_hand_of_god_desc: "§R\"However, I will tell you what is inscribed in 
 
 hea_the_nucleus: "Enriching the Nucleus"
 hea_the_nucleus_desc: "The Nucleus stands prepared to send its men in a grand show of faith in the name of the Lord but our home can be even grander! We'll ensure it is so!"
-hea_the_nucleus_tt: "Grant §BRivers§!, §8Lands§! and §4Heavens§!: A §YNational Spirit§! that can be improved upon to grant various §Gbonuses§! to §g[HEA.GetNameWithFlag]§!."
 
 hea_taming_rivers: "Taming the §2Rivers§!"
 hea_taming_rivers_desc: "The rivers of the Wasteland are the lifeblood of any trading empire, truthfully, we aren't one, but if we ever hope to spread the Light of the Lord all across this blightful land, then the waters of [HEA.GetName] will need to be tamed."
@@ -762,7 +761,6 @@ hea_repurposing_wattech_desc: "After unearthing the knowledge needed to build th
 
 hea_water_mills: "Water Mills"
 hea_water_mills_desc: "The rivers floating near [HEA.GetName] can be taken advantage of, constructing watermills all along our Eastern territories can help us gather energy, though not strictly necessary, the power from the mills could help future projects..."
-hea_river_mills_tt: "Unlocks £GFX_decision_icon_small §YDecisions§! to build £GFX_resources_strip|1 §2Water Mills§!"
 
 hea_bridges: "Reparing Old Bridges"
 hea_bridges_desc: "Most of the bridges we rely on to traverse our great land are pre-war constructs, great bridges in truth, but with the help of Steam, Learned Priests, Scientists, and Faith, we can improve upon them to ensure that they'll never fall."

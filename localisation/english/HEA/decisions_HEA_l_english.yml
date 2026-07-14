@@ -31,39 +31,26 @@ hea_michael_savages_heretics_dynamic_decision_desc: "Amon will fall in line or d
 ########################################
 hea_tame_decision_cat: "§2Rivers§!, §8Lands§! and §4Heavens§!"
 hea_tame_decision_cat_desc: "\n\n\n\n\n\n\n\n\n\n\n\n £GFX_embed_hea_taming_decision_texticon \n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Nucleus stirs. The faithful rise.\nWith steam, stone, and scripture, we shall reshape our holy lands; rivers harnessed, mountains hollowed, and even the heavens brought low. The Gate must be worthy of God's gaze.\n\n§W\"To us He gave the rivers, that we might guide their flow.\nTo us He gave the stone, that we might build upon it with care.\nTo us He gave the flame; not to burn, but to warm, to shape, to serve.\nWe are not kings of the earth, but its keepers.\"§!\n§8 - Vapor 3:6,from the Book of Vapor§!"
-##Decisions-Taming the Rivers
-hea_building_water_mills: "Already constructing water mills"
-#18-Innocence Lost
-hea_water_mills_18_1: "§2Build water mills in [18.GetName]§!"
-hea_water_mills_18_1_desc: "\n§W\"The rivers run, but only the faithful give them purpose.\"§!\n\nWater mills are raised to capture the flow of nearby rivers, purifying what the land provides and turning it to the needs of the Gate. Clean water sustains industry, the faithful, and the march of holy progress. A tamed river is a living prayer."
-hea_water_mills_18_2: "§2Convert the water mills in [18.GetName]§!"
-hea_water_mills_18_2_desc: "\n§W\"Let the rivers no longer wander. Let them serve.\"§!\n\nWater once used for cleansing is now redirected for greater work. These mills are converted to generate power, fueling expansion and industry. The river is not conquered, it is commissioned."
-hea_water_mills_18_3: "§2Build bathhouses in [18.GetName]§!"
-hea_water_mills_18_3_desc: "\n§W\"Even the weary must be made whole.\"§!\n\nBathhouses provide warmth, restoration, and dignity for the faithful. Not luxury, but stability. In the steam that rises from tiled halls, the Gate proves that faith is not only fire, but rest between flames."
-#116-Eastern Passage
-hea_water_mills_116_1: "§2Build water mills in [116.GetName]§!"
-hea_water_mills_116_1_desc: "\n§W\"The rivers run, but only the faithful give them purpose.\"§!\n\nWater mills are raised to capture the flow of nearby rivers, purifying what the land provides and turning it to the needs of the Gate. Clean water sustains industry, the faithful, and the march of holy progress. A tamed river is a living prayer."
-hea_water_mills_116_2: "§2Convert the water mills in [116.GetName]§!"
-hea_water_mills_116_2_desc: "\n§W\"Let the rivers no longer wander. Let them serve.\"§!\n\nWater once used for cleansing is now redirected for greater work. These mills are converted to generate power, fueling expansion and industry. The river is not conquered, it is commissioned."
-hea_water_mills_116_3: "§2Build bathhouses in [116.GetName]§!"
-hea_water_mills_116_3_desc: "\n§W\"Even the weary must be made whole.\"§!\n\nBathhouses provide warmth, restoration, and dignity for the faithful. Not luxury, but stability. In the steam that rises from tiled halls, the Gate proves that faith is not only fire, but rest between flames."
-#278-Windy Isolation
-hea_water_mills_278_1: "§2Build water mills in [278.GetName]§!"
-hea_water_mills_278_1_desc: "\n§W\"The rivers run, but only the faithful give them purpose.\"§!\n\nWater mills are raised to capture the flow of nearby rivers, purifying what the land provides and turning it to the needs of the Gate. Clean water sustains industry, the faithful, and the march of holy progress. A tamed river is a living prayer."
-hea_water_mills_278_2: "§2Convert the water mills in [278.GetName]§!"
-hea_water_mills_278_desc: "\n§W\"Let the rivers no longer wander. Let them serve.\"§!\n\nWater once used for cleansing is now redirected for greater work. These mills are converted to generate power, fueling expansion and industry. The river is not conquered, it is commissioned."
-hea_water_mills_278_3: "§2Build bathhouses in [278.GetName]§!"
-hea_water_mills_278_3_desc: "\n§W\"Even the weary must be made whole.\"§!\n\nBathhouses provide warmth, restoration, and dignity for the faithful. Not luxury, but stability. In the steam that rises from tiled halls, the Gate proves that faith is not only fire, but rest between flames."
-#198-Southern Gate
-hea_water_mills_198_1: "§2Build water mills in [198.GetName]§!"
-hea_water_mills_198_1_desc: "\n§W\"The rivers run, but only the faithful give them purpose.\"§!\n\nWater mills are raised to capture the flow of nearby rivers, purifying what the land provides and turning it to the needs of the Gate. Clean water sustains industry, the faithful, and the march of holy progress. A tamed river is a living prayer."
-hea_water_mills_198_2: "§2Convert the water mills in [198.GetName]§!"
-hea_water_mills_198_2_desc: "\n§W\"Let the rivers no longer wander. Let them serve.\"§!\n\nWater once used for cleansing is now redirected for greater work. These mills are converted to generate power, fueling expansion and industry. The river is not conquered, it is commissioned."
-hea_water_mills_198_3: "§2Build bathhouses in [198.GetName]§!"
-hea_water_mills_198_3_desc: "\n§W\"Even the weary must be made whole.\"§!\n\nBathhouses provide warmth, restoration, and dignity for the faithful. Not luxury, but stability. In the steam that rises from tiled halls, the Gate proves that faith is not only fire, but rest between flames."
 
-hea_water_mills_1_tt: "Unlocks further £GFX_decision_icon_small §YUpgrades§! for the §2Water Mills§!"
-hea_water_mills_2_tt: "Unlocks the final £GFX_decision_icon_small §YUpgrade§! for the §2Water Mills§!"
+hea_tame_water_mills_1_dummy_decision: "§2Build Water Mills£GFX_resources_strip|1 §!"
+hea_tame_water_mills_1_dummy_decision_tt: "§gWe can begin constructing water mills and harness additional boons from the lands.§!"
+
+hea_tame_water_mills_2_dummy_decision: "§2Convert the Water Mills£GFX_resources_strip|1 §!"
+hea_tame_water_mills_2_dummy_decision_tt: "§gWe can begin converting water mills to provide energy£GFX_resources_strip|2 for our own use.§!"
+
+hea_tame_water_mills_3_dummy_decision: "§2Build Bathhouses£GFX_resources_strip|1 §!"
+hea_tame_water_mills_3_dummy_decision_tt: "§gWe can begin constructing bathhouses to provide for the people.§!"
+
+##Decisions-Taming the Rivers
+
+hea_tame_water_mills_1_targeted_decision: "§2Build water mills in §Y[FROM.GetName]§!§!"
+hea_tame_water_mills_1_targeted_decision_desc: "§W\"The rivers run, but only the faithful give them purpose.\"§!\n\nWater mills are raised to capture the flow of nearby rivers, purifying what the land provides and turning it to the needs of the Gate. Clean water sustains industry, the faithful, and the march of holy progress. A tamed river is a living prayer."
+
+hea_tame_water_mills_2_targeted_decision: "§2Convert the water mills in §Y[FROM.GetName]§!§!"
+hea_tame_water_mills_2_targeted_decision_desc: "§W\"Let the rivers no longer wander. Let them serve.\"§!\n\nWater once used for cleansing is now redirected for greater work. These mills are converted to generate power, fueling expansion and industry. The river is not conquered, it is commissioned."
+
+hea_tame_water_mills_3_targeted_decision: "§2Build bathhouses in §Y[FROM.GetName]§!§!"
+hea_tame_water_mills_3_targeted_decision_desc: "§W\"Even the weary must be made whole.\"§!\n\nBathhouses provide warmth, restoration, and dignity for the faithful. Not luxury, but stability. In the steam that rises from tiled halls, the Gate proves that faith is not only fire, but rest between flames."
 
 ##Decisions-Taming the Lands
 hea_building_smiths: "Already constructing steam smiths"

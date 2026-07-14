@@ -1,0 +1,7 @@
+### Setup Water Mills States ###
+hea_tame_water_state_setup = {
+	18 = { add_to_array = { array = root.hea_tame_water_state_array value = this.ID } }
+	116 = { add_to_array = { array = root.hea_tame_water_state_array value = this.ID } }
+	278 = { add_to_array = { array = root.hea_tame_water_state_array value = this.ID } }
+	198 = { add_to_array = { array = root.hea_tame_water_state_array value = this.ID } }
+}

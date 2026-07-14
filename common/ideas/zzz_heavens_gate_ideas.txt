@@ -1334,80 +1334,13 @@ ideas = {
 		###################################
 		##Taming Rivers,Lands and Heavens##
 		###################################
+		hea_tame_start_idea = {
+			name = hea_taming_idea_name
+			modifier = { stability_factor = 0.05 }
+		}
 		hea_taming_idea_template = { #Base with no real effects
 			name = hea_taming_idea_name
 			#Don't need anything here
-		}
-		hea_taming_idea_taming_the_river = {
-			name = hea_taming_idea_name
-			modifier = {
-				stability_factor = 0.02
-			}
-		}
-		hea_taming_idea_building_dams = {
-			name = hea_taming_idea_name
-			modifier = {
-				stability_factor = 0.01
-				country_resource_water = 20
-			}
-		}
-		hea_taming_idea_reparing_old_bridges = {
-			name = hea_taming_idea_name
-			modifier = {
-				stability_factor = 0.01
-				army_speed_factor = 0.02
-				production_speed_infrastructure_factor = 0.05
-			}			
-		}
-		hea_taming_idea_river_ferries = {
-			name = hea_taming_idea_name
-			modifier = {
-				stability_factor = 0.01
-				army_speed_factor = 0.03
-				production_speed_infrastructure_factor = 0.05
-			}			
-		}
-		hea_taming_idea_using_dam_for_energy = {
-			name = hea_taming_idea_name
-			modifier = {
-				stability_factor = 0.01
-				country_resource_energy = 20
-			}			
-		}
-		hea_taming_idea_steam_barges = {
-			name = hea_taming_idea_name
-			modifier = {
-				stability_factor = 0.02
-			}			
-		}
-		hea_taming_idea_water_mill_focus = {
-			name = hea_taming_idea_name
-			modifier = {
-				stability_factor = 0.02
-			}			
-		}
-		hea_taming_idea_water_mill_decision_1 = {
-			name = hea_taming_idea_name
-			modifier = {
-				country_resource_water = 15
-			}			
-		}
-		hea_taming_idea_water_mill_decision_2 = {
-			name = hea_taming_idea_name
-			modifier = {
-				country_resource_water = -5
-				country_resource_energy = 8
-			}			
-		}
-		hea_taming_idea_water_mill_decision_3 = {
-			name = hea_taming_idea_name
-			modifier = {
-				country_resource_water = -5
-				country_resource_energy = -3
-				stability_factor = 0.025
-				monthly_population = 0.05
-				non_core_manpower = 0.05
-			}			
 		}
 
 		hea_taming_idea_taming_the_land = {

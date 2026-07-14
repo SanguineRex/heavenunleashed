@@ -322,6 +322,9 @@ mur_skeleton_cathedral_desc:0 "It'll take a long time before the Cathedral is fi
 #######Rotpurger Ideas
 
 ##Heaven's Gate Taming The Rivers, Lands and Heavens
+hea_tame_start_idea_tt: "§gCan be further improved upon to provide various bonuses§!"
+hea_tame_modify_tt: "Modify §Y$hea_tame_dynamic_modifier$§! by\n"
+
 hea_tame_dynamic_modifier: "§2Rivers§!, §8Lands§! and §4Heavens§!"
 hea_tame_dynamic_modifier_desc: "The Nucleus stands prepared to send its men in a grand show of faith in the name of the Lord but our home can be even grander! We'll ensure it is so![hea_tame_focus_scripted_loc][hea_tame_river_focus_scripted_loc][hea_tame_land_focus_scripted_loc][hea_tame_heaven_focus_scripted_loc]\n\n§g\"The earth is the Lord's, and the fulness thereof;\nthe world, and they that dwell therein.\nFor he hath founded it upon the seas,\nand established it upon the floods.\" - Psalm 24:1-2§!"
 hea_tame_focus_scripted_loc_full: "\n\n§W - The waters flow as we command, the land yields without complaint, and the minds of our people burn with sanctified brilliance. Heaven's Gate has refined every gift of God into strength.§!"
